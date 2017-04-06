@@ -1,0 +1,129 @@
+#настройка wifi
+wifi-menu
+
+#Разметка
+//Смотрим разделы
+fdisk -l
+//Запускаем утилиту для редактирования разделов и указываем физический диск   
+cfdisk /dev/sdX           
+
+#LVM
+//Загружаем модуль ядра
+modprobe dm-mod
+//Помещаем заголовок на разделы
+pvcreate /dev/sdaX
+//Выводим разделы для LVM
+pvdisplay
+//Создаем логические тома
+vgcreate "имя_LVM" /dev/sdaX
+//Создание логического раздела
+lvcreate –L "размер" "имя_LVM" –n "имя_раздела"         #обычные разделы
+lvcreate –C y –L "размер" "имя_LVM" –n имя_раздела      #swap раздел
+lvcreate –l +100%FREE "имя_LVM" –n имя_раздела          #остальное место
+//Отображаем логические тома
+vgdisplay
+//Отображаем логические тома
+lvdisplay
+//Делаем группы доступными
+vgscan
+vgchange –ay
+
+#Файловые системы
+//Фаорматируем обычный раздел
+mkfs.extX /dev/sdaX
+//Форматируем раздел тома
+mkfs.extX /dev/"имя_LVM"/"имя_раздела"
+//Форматируем раздел под SWAP
+mkswap /dev/имя_LVM/"имя_раздела"
+
+//Монтируем корень
+mount /dev/"имя_LVM"/"имя_раздела" /mnt
+//Создаем директории и монтируем туда разделы
+mkdir -p /mnt/"имя_раздела" && mount /dev/"имя_LVM|раздела" /mnt/"имя_раздела"
+//Монтируем SWAP
+swapon /dev/"имя_LVM"/"имя_раздела"
+//Отображаем смонтированные разделы
+mount | grep \/mnt
+
+#Базавая установка
+//Выбираем зеркало
+nano /etc/pacman.d/mirrorlist
+//Установка системы
+pacstrap /mnt base base-devel
+//Генерируем файл fstab
+genfstab -U -p  /mnt >> /mnt/etc/fstab
+//Отображаем fstab
+cat /mnt/etc/fstab
+//Открываем сеанс в нашей системе
+arch-chroot /mnt
+//Делаем ссылку на временную зону
+ln -***REMOVED*** /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+//Генерируем файл /etc/adjtime
+hwclock --systohc --utc
+// Устанавливаем имя узла
+echo мое_имя_узла > /etc/hostname
+//Вносим имя узла в hosts
+nano /etc/hosts
+//Устанавливаем пароль для root
+passwd
+//Создаем пользователя
+useradd -m -G wheel "имя_пользоввателя"
+//Задаем для пользователя пароль
+passwd "имя_пользоввателя"
+//Отображаем настройки /etc/sudoers
+cat /etc/sudoers
+//Выбираем локаль
+nano /etc/locale.gen
+//Генерируем локаль
+locale-gen
+//Определяем раскладку клавиатуры
+echo KEYMAP=ru >> /etc/vconsole.conf
+//Отображаем настройки vconsole.conf
+cat /etc/vconsole.conf
+//Редактируем хуки для LVM
+nano /etc/mkinitcpio.conf 
+#HOOKS="base udev autodetect modconf block pata lvm2 scsi sata keyboard filesystems usbinput fsck shutdown"
+//Генерируем образ initramfs
+mkinitcpio -p linux
+
+#Grub
+//Установка grub
+pacman -S grub
+//Устанавливаем загрузчик
+grub-install --target=i386-pc --recheck /dev/sdx
+//Копипастим что-то важное
+cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+//Генерируем конфиг
+grub-mkconfig -o /boot/grub/grub.cfg
+//Отображаем 
+cat /boot/grub/grub.cfg
+#/boot/grub/menu.lst
+# (0) Arch Linux
+#title  Arch Linux
+#root   (hd0,0)
+#kernel /vmlinuz26 root=/dev/mapper/VolGroup00-lvolroot resume=/dev/mapper/VolGroup00-lvolswap ro
+#initrd /kernel26.img
+
+
+#Установка KDE
+//Устанавливаем x-сервер плазму и консоль
+pacman -S xorg /xorg-xinit/ plasma konsole kate dolphin
+//Устанавливаем тему
+nano /etc/sddm.conf
+#Current=breeze
+//Ставим на автозапуск sddm
+systemctl enable sddm
+
+//Устанавливаем dialog для wifi-menu
+pacman -S dialog
+//Устанавливаем менеджер подкючений
+pacman networkmanager
+//Ставим менеджер подключений на автозупуск
+systemctl enable networkmanager
+//Создаем попку для кэша KDE
+mkdir ~/.compose-cache/
+//Драйвер для видео карты
+pacman -S xf86-video-intel 
+
+//Размантируем разделы
+unmount /mnt{имя_раздела,}
