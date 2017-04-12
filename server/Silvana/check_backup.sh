@@ -14,7 +14,7 @@ SN=${DIR}/supernova_${NAME}.sql.gz;
 REDMINE=${DIR}/redmine_${NAME}.sql.gz;
 
 if [ -e $ETC ] && [ -e $MYSQL ] && [ -e $WD ] && [ -e $OPT ] && [ -e $HOME ] && [ -e $MODX ] && [ -e $ZABBIX ] && [ -e $SN ] && [ -e $REDMINE ]; then 
-	echo "0"
-else
 	echo "1"
+else
+	echo "0"
 fi
