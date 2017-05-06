@@ -1,6 +1,6 @@
 #!/bin/bash
 DIR=/opt/backup/`date +%Y.%m.%d`;
-NAME=`date +%Y.%m.%d_%H_%M`;
+NAME=`date +%Y.%m.%d_%H:%M`;
 
 mkdir ${DIR};
 tar cvpzf ${DIR}/mysql_${NAME}.tar.gz /var/lib/mysql;

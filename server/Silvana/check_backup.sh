@@ -1,7 +1,7 @@
 #! /bin/bash
 
 DIR=/opt/backup/`date +%Y.%m.%d`;
-NAME=`date +%Y.%m.%d_%*_%*`;
+NAME=`date +%Y.%m.%d_*:*`;
 
 ETC=${DIR}/etc_${NAME}.tar.gz;
 MYSQL=${DIR}/mysql_${NAME}.tar.gz;
