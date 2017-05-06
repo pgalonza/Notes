@@ -10,8 +10,6 @@ tar cvpzf ${DIR}/opt_${NAME}.tar.gz --exclude=/opt/backup /opt;
 tar cvpzf ${DIR}/home_${NAME}.tar.gz --exclude=/home/www-data /home;
 mysqldump  --skip-extended-insert modx | gzip > ${DIR}/modx_${NAME}.sql.gz;
 mysqldump  --skip-extended-insert zabbix | gzip > ${DIR}/zabbix_${NAME}.sql.gz;
-mysqldump  --skip-extended-insert supernova | gzip > ${DIR}/supernova_${NAME}.sql.gz;
-mysqldump  --skip-extended-insert redmine | gzip > ${DIR}/redmine_${NAME}.sql.gz;
 echo `date +%Y.%m.%d_%H_%M` "backup - OK" >> /opt/backup/backup.log;
 (echo  "Subject: BACKUP"; echo `date +%Y.%m.%d` `date +%H:%M` "backup DONE";)|sendmail -f ***REMOVED*** ***REMOVED***;
 chown -R backup:backup /opt/backup;

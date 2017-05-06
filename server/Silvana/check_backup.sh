@@ -10,10 +10,8 @@ OPT=${DIR}/opt_${NAME}.tar.gz;
 HOME=${DIR}/home_${NAME}.tar.gz;
 MODX=${DIR}/modx_${NAME}.sql.gz;
 ZABBIX=${DIR}/zabbix_${NAME}.sql.gz;
-SN=${DIR}/supernova_${NAME}.sql.gz;
-REDMINE=${DIR}/redmine_${NAME}.sql.gz;
 
-if [ -e $ETC ] && [ -e $MYSQL ] && [ -e $WD ] && [ -e $OPT ] && [ -e $HOME ] && [ -e $MODX ] && [ -e $ZABBIX ] && [ -e $SN ] && [ -e $REDMINE ]; then 
+if [ -e $ETC ] && [ -e $MYSQL ] && [ -e $WD ] && [ -e $OPT ] && [ -e $HOME ] && [ -e $MODX ] && [ -e $ZABBIX ]; then 
 	echo "1"
 else
 	echo "0"
