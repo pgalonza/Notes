@@ -1,0 +1,4 @@
+conv -f cp1251 -t utf8
+find -name *.c -type f | xargs grep open
+grep -R open --include="*.c".
+pv -tpreb /dev/sdb | dd of=~/sdb.img bs=1M
