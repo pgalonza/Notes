@@ -1,0 +1,7 @@
+docker run --rm  --name nginx  -p 80:80 -v /home/www-data/evaron-js.ru:/code ***REMOVED***/nginx:latest
+
+docker build -t ***REMOVED***/nginx:latest -f DockerFileNginx .
+
+docker exec -it nginx bash
+
+docker rmi $(docker images -q -f dangling=true)
