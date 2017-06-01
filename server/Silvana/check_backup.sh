@@ -1,6 +1,6 @@
 #! /bin/bash
 
-DIR=/opt/backup/`date +%Y.%m.%d`;
+DIR=/data/backup/`date +%Y.%m.%d`;
 NAME=`date +%Y.%m.%d_*:*`;
 
 ETC=${DIR}/etc_${NAME}.tar.gz;
