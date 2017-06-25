@@ -10,8 +10,10 @@ OPT=${DIR}/opt_${NAME}.tar.gz;
 HOME=${DIR}/home_${NAME}.tar.gz;
 MODX=${DIR}/modx_${NAME}.sql.gz;
 ZABBIX=${DIR}/zabbix_${NAME}.sql.gz;
+LOG=${DIR}/log_${NAME}.sql.gz
 
-if [ -e $ETC ] && [ -e $MYSQL ] && [ -e $WD ] && [ -e $OPT ] && [ -e $HOME ] && [ -e $MODX ] && [ -e $ZABBIX ]; then 
+if [ -e $ETC ] && [ -e $MYSQL ] && [ -e $WD ] && [ -e $OPT ] && [ -e $HOME ] && [ -e $MODX ] && [ -e $ZABBIX ] \
+	&& [ -e $LOG ]; then 
 	echo "1"
 else
 	echo "0"
