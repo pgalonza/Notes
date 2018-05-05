@@ -5,8 +5,8 @@ wifi-menu
 //Смотрим разделы
 fdisk -l
 //Запускаем утилиту для редактирования разделов и указываем физический диск
-cfdisk /dev/sdX
-//Создаем разделы. Для UEFI раздел 100M
+//Для UEFI создаем раздел 100M вне LVM в vfat   
+cfdisk /dev/sdX           
 
 #LVM
 //Загружаем модуль ядра
@@ -23,7 +23,7 @@ lvcreate –C y –L "размер" "имя_LVM" –n имя_раздела     
 lvcreate –l +100%FREE "имя_LVM" –n имя_раздела          #остальное место
 //Отображаем логические тома
 vgdisplay
-//Отображаем логические тома
+//Отображаем логические раздела
 lvdisplay
 //Делаем группы доступными
 vgscan
@@ -65,20 +65,20 @@ hwclock --systohc --utc
 echo мое_имя_узла > /etc/hostname
 //Вносим имя узла в hosts
 nano /etc/hosts
-
 #<ip-address>	<hostname.domain.org>	      <hostname>
 127.0.0.1	localhost.localdomain	      localhost
 127.0.1.1       мое_имя_узла.localdomain      мое_имя_узла
 ::1		localhost.localdomain	      localhost
+
 //Устанавливаем пароль для root
 passwd
 //Создаем пользователя
 useradd -m -G wheel "имя_пользоввателя"
 //Задаем для пользователя пароль
 passwd "имя_пользоввателя"
-//Отображаем настройки /etc/sudoers
+//Отображаем настройки /etc/sudoers, активировать группу wheel
 cat /etc/sudoers
-//Выбираем локаль UTF-8
+//Выбираем локаль ru_UTF en_UTF
 nano /etc/locale.gen
 //Генерируем локаль
 locale-gen
@@ -94,12 +94,12 @@ mkinitcpio -p linux
 
 #Grub
 //Установка grub
-pacman -S grub
-//Устанавливаем загрузчик для MBR
+pacman -S grub || efibootmgr
+//Устанавливаем загрузчик
 grub-install --target=i386-pc --recheck /dev/sdx
-//Устанавливаем загрузчик для GPT
-grub-install --target=x86_64-efi --bootloader-id=grub --removable
-//Копипастим что-то важное для MBR
+grub-install --recheck /dev/sda
+grub-install --efi-directory=/boot/efi --boot-directory=/boot/efi/EFI --bootloader-id=grub --target=x86_64-efi --removable
+//Копипастим что-то важное
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 //Для Windows UEFI /etc/grub.d/40_custom
 menuentry 'Windows 10' {
@@ -110,6 +110,16 @@ menuentry 'Windows 10' {
 grub-mkconfig -o /boot/grub/grub.cfg
 //Отображаем
 cat /boot/grub/grub.cfg
+
+#/boot/grub/menu.lst
+# (0) Arch Linux
+#title  Arch Linux
+#root   (hd0,0)
+#kernel /vmlinuz26 root=/dev/mapper/VolGroup00-lvolroot resume=/dev/mapper/VolGroup00-lvolswap ro
+#initrd /kernel26.img
+
+//UEFI windows
+nano /etc/grub/40_customc
 
 #Установка KDE
 //Устанавливаем x-сервер плазму и консоль

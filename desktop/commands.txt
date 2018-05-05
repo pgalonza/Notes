@@ -27,6 +27,8 @@ groupmod -g 3000 foo
 find / -group 2000 -exec chgrp -h foo {} \;
 find / -user 1005 -exec chown -h foo {} \;
 
+usermod -g <NEWGID> <LOGIN>
+
 NATSTAT
 ----------
 Список всех открытых портов (TCP)
@@ -61,7 +63,7 @@ tar -xvf /path/to/archive.tar.bz2
 TMUX
 ----------
 Запуск
-tmux attach || tmux new
+tmux attach || tmux new -s session1
 
 Ctrl+b c — создать окошко;
 Ctrl+b 0...9 — перейти в такое-то окошко;
