@@ -4,8 +4,9 @@ wifi-menu
 #Разметка
 //Смотрим разделы
 fdisk -l
-//Запускаем утилиту для редактирования разделов и указываем физический диск   
-cfdisk /dev/sdX           
+//Запускаем утилиту для редактирования разделов и указываем физический диск
+cfdisk /dev/sdX
+//Создаем разделы. Для UEFI раздел 100M
 
 #LVM
 //Загружаем модуль ядра
@@ -46,7 +47,7 @@ swapon /dev/"имя_LVM"/"имя_раздела"
 mount | grep \/mnt
 
 #Базавая установка
-//Выбираем зеркало
+//Выбираем зеркало. Указываем 5ть зеркал в начале файла.
 nano /etc/pacman.d/mirrorlist
 //Установка системы
 pacstrap /mnt base base-devel
@@ -64,6 +65,11 @@ hwclock --systohc --utc
 echo мое_имя_узла > /etc/hostname
 //Вносим имя узла в hosts
 nano /etc/hosts
+
+#<ip-address>	<hostname.domain.org>	      <hostname>
+127.0.0.1	localhost.localdomain	      localhost
+127.0.1.1       мое_имя_узла.localdomain      мое_имя_узла
+::1		localhost.localdomain	      localhost
 //Устанавливаем пароль для root
 passwd
 //Создаем пользователя
@@ -72,7 +78,7 @@ useradd -m -G wheel "имя_пользоввателя"
 passwd "имя_пользоввателя"
 //Отображаем настройки /etc/sudoers
 cat /etc/sudoers
-//Выбираем локаль
+//Выбираем локаль UTF-8
 nano /etc/locale.gen
 //Генерируем локаль
 locale-gen
@@ -81,33 +87,33 @@ echo KEYMAP=ru >> /etc/vconsole.conf
 //Отображаем настройки vconsole.conf
 cat /etc/vconsole.conf
 //Редактируем хуки для LVM
-nano /etc/mkinitcpio.conf 
-#HOOKS="base udev autodetect modconf block pata lvm2 scsi sata keyboard filesystems usbinput fsck shutdown"
+nano /etc/mkinitcpio.conf
+#HOOKS="base udev autodetect modconf block lvm2 scsi keyboard filesystems fsck shutdown"
 //Генерируем образ initramfs
 mkinitcpio -p linux
 
 #Grub
 //Установка grub
 pacman -S grub
-//Устанавливаем загрузчик
+//Устанавливаем загрузчик для MBR
 grub-install --target=i386-pc --recheck /dev/sdx
-//Копипастим что-то важное
+//Устанавливаем загрузчик для GPT
+grub-install --target=x86_64-efi --bootloader-id=grub --removable
+//Копипастим что-то важное для MBR
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+//Для Windows UEFI /etc/grub.d/40_custom
+menuentry 'Windows 10' {
+    search --fs-uuid --no-floppy --set=root "UUID"
+    chainloader (${root})/EFI/Microsoft/Boot/bootmgfw.efi
+}
 //Генерируем конфиг
 grub-mkconfig -o /boot/grub/grub.cfg
-//Отображаем 
+//Отображаем
 cat /boot/grub/grub.cfg
-#/boot/grub/menu.lst
-# (0) Arch Linux
-#title  Arch Linux
-#root   (hd0,0)
-#kernel /vmlinuz26 root=/dev/mapper/VolGroup00-lvolroot resume=/dev/mapper/VolGroup00-lvolswap ro
-#initrd /kernel26.img
-
 
 #Установка KDE
 //Устанавливаем x-сервер плазму и консоль
-pacman -S xorg /xorg-xinit/ plasma konsole kate dolphin
+pacman -S xorg xorg-xinit plasma konsole kate dolphin
 //Устанавливаем тему
 nano /etc/sddm.conf
 #Current=breeze
@@ -119,11 +125,13 @@ pacman -S dialog
 //Устанавливаем менеджер подкючений
 pacman networkmanager
 //Ставим менеджер подключений на автозупуск
-systemctl enable networkmanager
+systemctl enable NetworkManager
 //Создаем попку для кэша KDE
 mkdir ~/.compose-cache/
 //Драйвер для видео карты
-pacman -S xf86-video-intel 
+pacman -S xf86-video-intel
+
+//Ставим остальной софт
 
 //Размантируем разделы
 unmount /mnt{имя_раздела,}
