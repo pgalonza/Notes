@@ -1,0 +1,6 @@
+sudo yum install epel-release net-tools wget vim htop
+
+echo "PermitRootLogin no" >> /etc/ssh/sshd_config
+hostnamectl set-hostname
+sudo firewall-cmd --set-default=internali
+/etc/sysconfig/selinux
