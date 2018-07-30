@@ -1,0 +1,9 @@
+[client]
+default-character-set = utf8
+user = zabbix
+password = aw73VgYVH2
+
+[mysqladmin]
+default-character-set = utf8
+user = zabbix
+password = aw73VgYVH2

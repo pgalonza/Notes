@@ -1,6 +1,29 @@
-sudo yum install epel-release net-tools wget vim htop
+sudo yum install epel-release net-tools wget vim htop tmux
 
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config
 hostnamectl set-hostname
-sudo firewall-cmd --set-default=internali
+sudo firewall-cmd --set-default=internal
 /etc/sysconfig/selinux
+
+rpm -ivh http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-1.el7.centos.noarch.rpm
+
+GRANT USAGE ON *.* TO 'zabbix'@'%' IDENTIFIED BY 'superpassword';
+
+dhclient -v
+
+mkdir /var/lib/zabbix
+
+/etc/sysctl.conf
+vm.swappiness=10
+
+/etc/fstab
+defaults,noatime,nosuid,noexec,nodev 0 0
+
+/etc/yum.repos.d/MariaDB.repo
+# MariaDB 10.3 CentOS repository list - created 2018-07-30 12:11 UTC
+# http://downloads.mariadb.org/mariadb/repositories/
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.3/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1

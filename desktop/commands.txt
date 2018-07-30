@@ -1,7 +1,9 @@
 ATHER
 ----------
 Кодировка
-conv -f cp1251 -t utf8
+iconv -f cp1251 -t utf8
+file -bi
+ISO-8859-1
 
 Поиск по файлам
 find -name *.c -type f | xargs grep open

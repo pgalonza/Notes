@@ -13,16 +13,16 @@ function convertto-encoding ([string]$from, [string]$to){
 
 #Задаем переменные для подключение к MSSQL. $uid и $pwd нужны для проверки подлинности windows / We define the variables for connecting to MS SQL. $uid и $pwd need to authenticate windows
 $SQLServer = $(hostname.exe)
-#$uid = "Login" 
-#$pwd = "Password"
+$uid = "Login" 
+$pwd = "Password"
 
 #Создаем подключение к MSSQL / Create a connection to MSSQL
 
 #Если проверка подлинности windows / If windows authentication
-#$connectionString = "Server = $SQLServer; User ID = $uid; Password = $pwd;"
+$connectionString = "Server = $SQLServer; User ID = $uid; Password = $pwd;"
 
 #Если Интегрированная проверка подлинности / If integrated authentication
-$connectionString = "Server = $SQLServer; Integrated Security = True;"
+#$connectionString = "Server = $SQLServer; Integrated Security = True;"
 
 $connection = New-Object System.Data.SqlClient.SqlConnection
 $connection.ConnectionString = $connectionString

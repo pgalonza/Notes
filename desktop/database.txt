@@ -6,3 +6,4 @@ echo "FLUSH PRIVILEGES;" | mysql
 echo "RENAME USER 'modx'@'localhost' TO 'modx'@'%';" | mysql
 echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';" | mysql
 echo "DROP USER 'jeffrey'@'localhost';" | mysql
+echo "GRANT ALL ON *.* TO 'root'@'%' with GRANT OPTION;" | mysql

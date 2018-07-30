@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-07-13T12:17:23Z</date>
+    <date>2018-07-17T14:06:33Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -235,7 +235,9 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description>Indicates the percentage of pages found in the buffer cache without having to read from disk. The ratio is the total number of cache hits divided by the total number of cache lookups over the last few thousand page accesses. After a long period of time, the ratio moves very little. Because reading from the cache is much less expensive than reading from disk, you want this ratio to be high. Generally, you can increase the buffer cache hit ratio by increasing the amount of memory available to SQL Server or by using the buffer pool extension feature.</description>
+                    <description>Indicates the percentage of pages found in the buffer cache without having to read from disk. The ratio is the total number of cache hits divided by the total number of cache lookups over the last few thousand page accesses. After a long period of time, the ratio moves very little. Because reading from the cache is much less expensive than reading from disk, you want this ratio to be high. Generally, you can increase the buffer cache hit ratio by increasing the amount of memory available to SQL Server or by using the buffer pool extension feature.&#13;
+&#13;
+Указывает процент страниц, найденных в буферном кэше без необходимости чтения с диска. Коэффициент-это общее число обращений к кэшу, деленное на общее число обращений к кэшу за последние несколько тысяч обращений к страницам. После долгого периода времени, соотношение изменяется очень мало. Поскольку чтение из кэша намного дешевле, чем чтение с диска, это соотношение должно быть высоким. Как правило можно увеличить коэффициент попадания буферного кэша путем увеличения объема памяти, доступной для SQL Server или с помощью функции расширения пула буферов.</description>
                     <inventory_link>0</inventory_link>
                     <applications>
                         <application>
@@ -3112,7 +3114,7 @@
                     <snmp_community/>
                     <snmp_oid/>
                     <key>mssql.db.discovery</key>
-                    <delay>12h</delay>
+                    <delay>1h</delay>
                     <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
@@ -3864,8 +3866,147 @@
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
-                            <status>1</status>
+                            <status>0</status>
                             <priority>4</priority>
+                            <description/>
+                            <type>0</type>
+                            <manual_close>0</manual_close>
+                            <dependencies/>
+                            <tags/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                    <jmx_endpoint/>
+                </discovery_rule>
+                <discovery_rule>
+                    <name>SQL Error Log</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>mssql.errorlog</key>
+                    <delay>1h</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions/>
+                    </filter>
+                    <lifetime>30d</lifetime>
+                    <description/>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>SQL Server, Instance {#INST}: Error Log File (LOGCount)</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>log.count[{#ERRORLOG},Error|Failed,&amp;quot;UTF-16&amp;quot;]</key>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>MS SQL Error Log</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>SQL Server, Instance {#INST}: Error Log File (LOG)</name>
+                            <type>7</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>log[{#ERRORLOG},Error|Failed,&quot;UTF-16&quot;]</key>
+                            <delay>1m</delay>
+                            <history>90d</history>
+                            <trends>365d</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications/>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes>
+                                <application_prototype>
+                                    <name>MS SQL Error Log</name>
+                                </application_prototype>
+                            </application_prototypes>
+                            <master_item_prototype/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template App MS SQL:log.count[{#ERRORLOG},Error|Failed,&amp;quot;UTF-16&amp;quot;].sum(5m)}&gt;0</expression>
+                            <recovery_mode>0</recovery_mode>
+                            <recovery_expression/>
+                            <name>Errors in {#IINST} ERRORLOG</name>
+                            <correlation_mode>0</correlation_mode>
+                            <correlation_tag/>
+                            <url/>
+                            <status>0</status>
+                            <priority>3</priority>
                             <description/>
                             <type>0</type>
                             <manual_close>0</manual_close>
@@ -3941,7 +4082,7 @@
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
-            <status>1</status>
+            <status>0</status>
             <priority>4</priority>
             <description/>
             <type>0</type>
@@ -3973,8 +4114,8 @@
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
-            <status>1</status>
-            <priority>5</priority>
+            <status>0</status>
+            <priority>4</priority>
             <description/>
             <type>0</type>
             <manual_close>0</manual_close>
@@ -4110,7 +4251,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template App MS SQL:perf_counter[\2556\2608].last()}&lt;5</expression>
+            <expression>{Template App MS SQL:perf_counter[\2556\2608].last()}&lt;15</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>SQL Server, Buffer Manager: Page life expectancy</name>
@@ -4213,7 +4354,7 @@
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
-            <status>1</status>
+            <status>0</status>
             <priority>3</priority>
             <description/>
             <type>0</type>
@@ -4229,7 +4370,7 @@
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
-            <status>1</status>
+            <status>0</status>
             <priority>1</priority>
             <description/>
             <type>0</type>
@@ -4245,8 +4386,8 @@
             <correlation_mode>0</correlation_mode>
             <correlation_tag/>
             <url/>
-            <status>1</status>
-            <priority>5</priority>
+            <status>0</status>
+            <priority>4</priority>
             <description/>
             <type>0</type>
             <manual_close>0</manual_close>
