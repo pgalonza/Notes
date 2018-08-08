@@ -1,0 +1,7 @@
+Backup
+=====================
+### Read only
+grant select,lock tables on database_name.* to 'read-only_user_name'@'%'
+
+### Lock tables
+FLUSH TABLES WITH READ LOCK

@@ -50,3 +50,10 @@ name = MariaDB
 baseurl = http://yum.mariadb.org/10.3/centos7-amd64
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
+
+***
+
+MOUNT
+=====================
+### cifs
+//"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,gid="" 0 0

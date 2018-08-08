@@ -1,0 +1,2 @@
+### Memmory
+/etc/sysconfig/openfire
