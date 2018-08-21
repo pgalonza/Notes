@@ -22,15 +22,15 @@ def main():
                 i = i + 1
                 l_line = "<contact display_name=\"{name}\" office_number=\"{number}\" mobile_number=\"\" " \
                          "other_number=\"\" line=\"{numeric}\" ring=\"\" group_id_name=\"Центральное управление\" />\n".format(numeric=str(i), name=name, number=extension)
-                w_line = '''                                <tr class="row100 body">
-                                    <td class="cell100 column1">{name}</td>
-                                    <td class="cell100 column2">{number}</td>
-                                </tr>\n'''.format(numeric=str(i), name=name, number=extension)
+                w_line = '''        <tr>
+            <th>{name}</th>
+            <th>{number}</th>
+        </tr>\n'''.format(name=name, number=extension)
 
                 lFile.write(l_line)
                 wFile.write(w_line)
 
-        structure_file('bottom')
+    structure_file('bottom')
 
 
 def structure_file(position):
@@ -50,54 +50,38 @@ def structure_file(position):
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="Bootstrap-4-4.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+    <script type="text/javascript" src="jQuery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="DataTables-1.10.18/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="DataTables-1.10.18/js/dataTables.bootstrap4.min.js"></script>
 </head>
 <body>
-    <div class="limiter">
-        <div class="container-table100">
-            <div class="wrap-table100">
-                <div class="table100 ver1 m-b-110">
-                    <div class="table100-head">
-                        <table>
-                            <thead>
-                                <tr class="row100 head">
-                                    <th class="cell100 column1">ФИО</th>
-                                    <th class="cell100 column2">Внутренний номер</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <div class="table100-body js-pscroll">
-                        <table>
-                            <tbody>\n'''
-    _web_bottom = '''                           </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-    <script src="vendor/bootstrap/js/popper.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="vendor/select2/select2.min.js"></script>
-    <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script>
-        $('.js-pscroll').each(function(){
-            var ps = new PerfectScrollbar(this);
-        
-            $(window).on('resize', function(){
-                ps.update();
-            })
-        });
-    </script>
-    <script src="js/main.js"></script>
+    <table id="table_cu" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>ФИО</th>
+                <th>Внутренний номер</th>
+            </tr>
+        </thead>
+        <tbody>\n'''
+    _web_bottom = '''       </tbody>
+        <tfoot>
+            <tr>
+                <th>ФИО</th>
+                <th>Внутренний номер</th>
+            </tr>
+        </tfoot>
+    </table>
+<script>
+    $(document).ready(function() {
+        $('#table_cu').DataTable( {
+        scrollY:        '50vh',
+        scrollCollapse: true,
+        paging:         false
+        } );
+    } );
+</script>
 </body>
 </html>'''
 
