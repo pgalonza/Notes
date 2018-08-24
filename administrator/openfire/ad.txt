@@ -1,2 +1,3 @@
-(&(objectClass=group)(|(cn=co_xmpp)))
+(&(objectClass=group)(|(cn=co_xmpp)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)))
+
 (objectClass=user)(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2))

@@ -2,6 +2,6 @@
 ## The header above must appear as-is in the first line
 
 include:config "y000000000044.cfg"
-include:config "$mac.cfg"
+include:config "{$mac}.cfg"
 
 overwrite_mode = {$yealink_overwrite_mode}

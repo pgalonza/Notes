@@ -10,7 +10,7 @@ _web_list_name = "index.html"
 
 def main():
     structure_file('head')
-    mariadb_connection = mariadb.connect(user='***REMOVED***', password='***REMOVED***exe2011', database='asterisk', host='***REMOVED***')
+    mariadb_connection = mariadb.connect(user='', password='', database='asterisk', host='')
     cursor = mariadb_connection.cursor()
 
     cursor.execute("SELECT extension, name FROM users ORDER BY name ASC")
