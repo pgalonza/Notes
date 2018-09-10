@@ -1,64 +1,32 @@
-#
-# These groups are read by MariaDB server.
-# Use it for options that only the server (but not clients) should see
-#
-# See the examples of server my.cnf files in /usr/share/mysql/
-#
-
-# this is read by the standalone daemon and embedded servers
-[server]
-
-# this is only for the mysqld standalone daemon
 [mysqld]
 character-set-server=utf8
 collation-server=utf8_general_ci
 init-connect="SET NAMES utf8"
 
-#slow_query_log_file     = /var/log/mysql/mariadb-slow.log
-#long_query_time = 10
-
-log_bin                 = /var/log/mysql/mysql_bin.log
-expire_logs_days        = 3
-max_binlog_size         = 500M
+skip-name-resolve       = 1
+server-id=mMariadb1
 
 log_error               = /var/log/mysql/mysql_error.log
+log_bin                 = /var/log/mysql/mysql_bin.log
+expire_logs_days        = 5
+max_binlog_size         = 1G
 
-innodb_file_per_table=1
+innodb_file_per_table   = 1
+innodb_buffer_pool_size = 500M
+innodb_log_file_size    = 16M
+innodb_flush_log_at_trx_commit = 1
+innodb_flush_method     = O_DIRECT
 
-#
-max_allowed_packet = 48M
-connect_timeout = 30
+wait_timeout            = 32400
+interactive_timeout     = 32400
+max_allowed_packet      = 8M
+connect_timeout         = 30
 
-#
-# * Galera-related settings
-#
-[galera]
-# Mandatory settings
-#wsrep_on=ON
-#wsrep_provider=
-#wsrep_cluster_address=
-#binlog_format=row
-#default_storage_engine=InnoDB
-#innodb_autoinc_lock_mode=2
-#
-# Allow server to accept connections on all interfaces.
-#
-#bind-address=0.0.0.0
-#
-# Optional setting
-#wsrep_slave_threads=1
-#innodb_flush_log_at_trx_commit=0
+query_cache_size        = 0
+query_cache_type        = 0
+query_cache_limit       = 5M
+join_buffer_size        = 5M
 
-# this is only for embedded server
-[embedded]
+performance_schema      = 1
 
-# This group is only read by MariaDB servers, not by MySQL.
-# If you use the same .cnf file for MySQL and MariaDB,
-# you can put MariaDB-only options here
-[mariadb]
-
-# This group is only read by MariaDB-10.3 servers.
-# If you use the same .cnf file for MariaDB of different versions,
-# use this group for options that older servers don't understand
-[mariadb-10.3]
 

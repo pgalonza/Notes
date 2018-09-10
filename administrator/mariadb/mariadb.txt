@@ -5,3 +5,24 @@ grant select,lock tables on database_name.* to 'read-only_user_name'@'%'
 
 ### Lock tables
 FLUSH TABLES WITH READ LOCK
+
+***
+
+Optimization
+=====================
+### The number of open files
+/etc/security/limits.conf
+*         hard    nofile      35000
+*         soft    nofile      35000
+root      hard    nofile      35000
+root      soft    nofile      35000
+
+###  Swappiness
+/etc/sysctl.conf
+vm.swappiness=10
+
+### Mount
+/etc/fstab
+defaults,noatime,nosuid,noexec,nodev 0 0
+
+
