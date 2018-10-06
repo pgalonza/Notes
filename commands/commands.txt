@@ -63,10 +63,11 @@ netstat -lantp | grep ESTABLISHED |awk '{print $5}' | awk -F: '{print $1}' | sor
 TAR
 =====================
 ### Создание архива
-tar -cf txt.tar *.txt
+tar cfvz archive.tar.gz /forpack
 
 ### Распаковка архива
-tar -xvf /path/to/archive.tar.bz2
+tar xfvz archive.tar.gz 
+tar xfvj archive.tar.bz2 -C /var/www
 
 ***
 
@@ -92,4 +93,11 @@ Ctrl+b x — закрыть панель (а можно просто набра�
 DHCP
 =====================
 ### Get dhcp
-dhclient -v  
+dhclient -v
+
+***
+
+sha1
+=====================
+### Take sum
+echo -n "***REMOVED***1151" | sha1sum | tr [:lower:] [:upper:]
