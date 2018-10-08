@@ -4,24 +4,28 @@ import mysql.connector as mariadb
 import sys
 import xml.etree.ElementTree as xml
 
+#путь и имена файлов
 _contact_list_name = "contacts.xml"
 _web_list_name = "index.html"
 
 
 def main():
+    #Запись шапки файлов
     structure_file('head')
-    mariadb_connection = mariadb.connect(user='', password='', database='asterisk', host='')
+    mariadb_connection = mariadb.connect(user='', password='', database='asterisk', host='***REMOVED***')
     cursor = mariadb_connection.cursor()
 
     cursor.execute("SELECT extension, name FROM users ORDER BY name ASC")
 
     with open(_contact_list_name, 'a') as lFile:
         with open(_web_list_name, 'a') as wFile:
+            # номер аккаунта
             i = 0
             for extension, name in cursor:
-                i = i + 1
+                #формирование xml
                 l_line = "<contact display_name=\"{name}\" office_number=\"{number}\" mobile_number=\"\" " \
                          "other_number=\"\" line=\"{numeric}\" ring=\"\" group_id_name=\"Центральное управление\" />\n".format(numeric=str(i), name=name, number=extension)
+                #формирование xml
                 w_line = '''        <tr>
             <th>{name}</th>
             <th>{number}</th>

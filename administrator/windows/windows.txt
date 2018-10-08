@@ -1,0 +1,4 @@
+MaxShadowCopies
+===================== 
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VSS\Settings
+MaxShadowCopies DWORD

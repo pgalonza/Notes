@@ -1,0 +1,47 @@
+ad_sender_login_maps.cf
+ 
+server_host     = ***REMOVED***
+server_port     = 389
+version         = 3
+bind            = yes
+start_tls       = no
+bind_dn         = ***REMOVED***
+bind_pw         = ***REMOVED***
+search_base     = dc=corp,dc=***REMOVED***,dc=ru
+scope           = sub
+query_filter    = (&(userPrincipalName=%s)(objectClass=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
+result_attribute= userPrincipalName
+debuglevel      = 0
+
+ad_virtual_group_maps.cf
+
+server_host     = ***REMOVED***
+server_port     = 389
+version         = 3
+bind            = yes
+start_tls       = no
+bind_dn         = ***REMOVED***
+bind_pw         = ***REMOVED***
+search_base     = dc=corp,dc=***REMOVED***,dc=ru
+scope           = sub
+query_filter    = (&(objectClass=group)(cn=%u))
+special_result_attribute = member
+#leaf_result_attribute = mail
+result_attribute= userPrincipalName
+debuglevel      = 0
+
+ad_virtual_mailbox_maps.cf
+
+server_host     = ***REMOVED***
+server_port     = 389
+version         = 3
+bind            = yes
+start_tls       = no
+bind_dn         = ***REMOVED***
+bind_pw         = ***REMOVED***
+search_base     = dc=corp,dc=***REMOVED***,dc=ru
+scope           = sub
+query_filter    = (&(objectclass=person)(userPrincipalName=%s))
+result_attribute= userPrincipalName
+result_format   = %d/%u/Maildir/
+debuglevel      = 0
