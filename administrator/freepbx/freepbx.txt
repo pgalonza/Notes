@@ -1,5 +1,6 @@
 ### Number of characters in the display name field
 /var/www/html/admin/assets/js/pbxlib*
+function isCorrectLengthExtensions(s)
 
 ### Activation of text messages
 sip_general_custom.conf
