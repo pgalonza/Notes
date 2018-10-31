@@ -1,0 +1,46 @@
+userdb {
+    args = /etc/dovecot/dovecot-ldap-ou.conf
+    driver = ldap
+}
+passdb {
+    args = /etc/dovecot/dovecot-ldap-ou.conf
+    driver = ldap
+}
+
+mailbox Отправленные {
+        auto = subscribe
+        special_use = \Sent
+    }
+mailbox Черновики {
+        auto = subscribe
+        special_use = \Drafts
+    }
+mailbox Удаленные {
+        auto = subscribe
+        special_use = \Trash
+    }
+mailbox "Нежелательная почта" {
+        auto = no
+        special_use = \Junk
+    }
+    
+quota = dict:user::proxy::quotadict
+quota = maildir:User quota
+quota_rule = *:storage=2G
+
+hosts           = ***REMOVED***:389
+ldap_version    = 3
+auth_bind       = yes
+auth_bind_userdn = %u
+dn              = ***REMOVED***
+dnpass          = ***REMOVED***
+base            = ou=,dc=corp,dc=***REMOVED***,dc=ru
+scope           = subtree
+deref           = never
+
+user_filter     = (&(mail=%u)(objectClass=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
+pass_filter     = (&(mail=%u)(objectClass=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
+user_attrs      = =home=/var/vmail/vmail1/%Ld/%Ln/Maildir/,=mail=maildir:/var/vmail/vmail1/%Ld/%Ln/Maildir/:UTF-8
+pass_attrs      = userPassword=password, mail=user
+
+default_pass_scheme = CRYPT

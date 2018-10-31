@@ -9,8 +9,8 @@ bind_dn         = ***REMOVED***
 bind_pw         = ***REMOVED***
 search_base     = dc=corp,dc=***REMOVED***,dc=ru
 scope           = sub
-query_filter    = (&(userPrincipalName=%s)(objectClass=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
-result_attribute= userPrincipalName
+query_filter    = (&(|(mail=%s)(userPrincipalName=%s))(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
+result_attribute= mail
 debuglevel      = 0
 
 ad_virtual_group_maps.cf
@@ -24,10 +24,10 @@ bind_dn         = ***REMOVED***
 bind_pw         = ***REMOVED***
 search_base     = dc=corp,dc=***REMOVED***,dc=ru
 scope           = sub
-query_filter    = (&(objectClass=group)(cn=%u))
+query_filter    = (&(objectCategory=group)(mail=%s))
 special_result_attribute = member
-#leaf_result_attribute = mail
-result_attribute= userPrincipalName
+leaf_result_attribute = mail
+#result_attribute= userPrincipalName
 debuglevel      = 0
 
 ad_virtual_mailbox_maps.cf
@@ -41,7 +41,25 @@ bind_dn         = ***REMOVED***
 bind_pw         = ***REMOVED***
 search_base     = dc=corp,dc=***REMOVED***,dc=ru
 scope           = sub
-query_filter    = (&(objectclass=person)(userPrincipalName=%s))
-result_attribute= userPrincipalName
+query_filter    = (&(objectCategory=person)(mail=%s))
+result_attribute= mail
 result_format   = %d/%u/Maildir/
 debuglevel      = 0
+
+main.cf
+
+myhostname = ***REMOVED***
+myorigin = $mydomain
+mydomain = ***REMOVED***
+mydestination = $myhostname, localhost.$mydomain, localhost, localhost.localdomain
+virtual_mailbox_domains = ***REMOVED***
+dovecot_destination_recipient_limit = 1
+smtpd_sasl_local_domain = ***REMOVED***
+message_size_limit = 52428800
+inet_protocols = ipv4
+
+transport
+
+.***REMOVED*** dovecot
+***REMOVED*** dovecot
+*      error:mail for local use only

@@ -101,3 +101,17 @@ sha1
 =====================
 ### Take sum
 echo -n "***REMOVED***1151" | sha1sum | tr [:lower:] [:upper:]
+
+SSL/TLS
+=====================
+### Import
+/etc/pki/ca-trust/source/anchors/
+update-ca-trust
+### Check
+openssl s_client -tls1_1 -starttls imap -connect ***REMOVED***:143 -servername ***REMOVED***
+
+Network
+=====================
+### Change interface speed 
+ethtool -s eth0 speed 100 duplex full
+

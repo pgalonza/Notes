@@ -19,6 +19,9 @@ firewall-cmd --set-default=internal
 echo net.ipv6.conf.all.disable_ipv6 = 1 >> /etc/sysctl.conf
 echo net.ipv6.conf.default.disable_ipv6 = 1 >> /etc/sysctl.conf
 
+###Java
+yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
+
 ***
 
 Zabbix agent
@@ -61,3 +64,10 @@ MOUNT
 =====================
 ### cifs
 //"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,gid="" 0 0
+
+***
+
+NGINX
+=====================
+### Disable ignore invalid headers
+echo "ignore_invalid_headers off;" >> /etc/nginx/nginx.conf

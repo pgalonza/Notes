@@ -1,0 +1,1 @@
+^.+(vk|odnoklassniki|ok|facebook|love.mail|edarling|badoo|topdating|twitter|instagram|ask|meetme).(com|ru|su|ua|net|fm).*$
