@@ -21,6 +21,9 @@ echo "ls -l" | at midnight
 ### Выполнение предыдущей команды
 sudo !!
 
+### IO priority
+ionice -c3
+
 ***
 
 PERMISSION
@@ -63,11 +66,14 @@ netstat -lantp | grep ESTABLISHED |awk '{print $5}' | awk -F: '{print $1}' | sor
 TAR
 =====================
 ### Создание архива
-tar cfvz archive.tar.gz /forpack
+tar cvpzf archive.tar.gz /forpack
 
 ### Распаковка архива
 tar xfvz archive.tar.gz 
 tar xfvj archive.tar.bz2 -C /var/www
+
+### Просмотр содержимого
+tar -tf archive.tar
 
 ***
 
@@ -102,6 +108,8 @@ sha1
 ### Take sum
 echo -n "***REMOVED***1151" | sha1sum | tr [:lower:] [:upper:]
 
+***
+
 SSL/TLS
 =====================
 ### Import
@@ -110,8 +118,26 @@ update-ca-trust
 ### Check
 openssl s_client -tls1_1 -starttls imap -connect ***REMOVED***:143 -servername ***REMOVED***
 
+***
+
 Network
 =====================
 ### Change interface speed 
 ethtool -s eth0 speed 100 duplex full
 
+***
+
+TREE
+=====================
+tree -d -L 2
+
+***
+
+Open files, sockets
+=====================
+### View
+cat /proc/sys/fs/file-max
+cat /proc/sys/fs/file-nr
+/etc/security/limits.conf
+lsof | wc -l
+lsof | grep 29384
