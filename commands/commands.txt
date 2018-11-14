@@ -103,7 +103,7 @@ dhclient -v
 
 ***
 
-sha1
+SHA1
 =====================
 ### Take sum
 echo -n "***REMOVED***1151" | sha1sum | tr [:lower:] [:upper:]
@@ -141,3 +141,27 @@ cat /proc/sys/fs/file-nr
 /etc/security/limits.conf
 lsof | wc -l
 lsof | grep 29384
+
+***
+
+TIME
+=====================
+### View
+timedatectl status
+
+***
+
+FAIL2BAN
+=====================
+### View
+fail2ban-client status
+fail2ban-client status asterisk-udp
+### Unban
+fail2ban-client set asterisk-udp unbanip ***REMOVED***
+
+***
+
+IPTABLES
+=====================
+### View
+iptables -n -L -v --line-numbers
