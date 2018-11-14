@@ -2,6 +2,7 @@
 import atexit
 import ssl
 import sys
+import time
 
 import pyVmomi
 from pyVim.connect import SmartConnect, Disconnect
@@ -9,7 +10,7 @@ from pyVim.connect import SmartConnect, Disconnect
 
 def main():
 
-    vmNotSuspend = ('co_app1', 'co_app2', 'co_app3', 'co_app4', 'co_db1', 'co_db2', 'co_db3', 'co_db4')
+    vmNotSuspend = ('co_app1', 'co_app2', 'co_app3', 'co_app4', 'co_db1', 'co_db2', 'co_db3', 'co_db4', 'co_srv_dev')
     context = None
     if hasattr(ssl, '_create_unverified_context'):
         context = ssl._create_unverified_context()
@@ -22,12 +23,21 @@ def main():
     datacenter = my_cluster.content.rootFolder.childEntity[0]
     vms = datacenter.vmFolder.childEntity
 
-    for i in vms:
-        print("Virtual Machine Name:        " + i.config.name)
-        print("Virtual Machine OS:          " + i.config.guestFullName)
-        print("")
-        #i.PowerOffVM_Task()
+    for vm in vms:
+        if vm.config.name in vmNotSuspend:
+            continue
 
+        print("Suspend:        " + vm.config.name)
+        #print("Virtual Machine Name:        " + vm.config.name)
+        #print("Virtual Machine OS:          " + vm.config.guestFullName)
+        #print("Virtual Machine UUID:        " + vm.config.uuid)
+        #print("")
+        #i.PowerOffVM_Task()
+        #i.SuspendVM_Task()
+
+    #datacenter.ShutdownHost_Task()
+    time.sleep(10)
+    print("PowerOff: " + str(datacenter))
     Disconnect(my_cluster)
 
 

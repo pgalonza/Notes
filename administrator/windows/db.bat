@@ -1,0 +1,2 @@
+rem @ECHO OFF
+net stop MSSQLSERVER
