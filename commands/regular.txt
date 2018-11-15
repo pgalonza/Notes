@@ -1,1 +1,7 @@
+REGULAR
+=====================
+### Mikrotik social
 ^.+(vk|odnoklassniki|ok|facebook|love.mail|edarling|badoo|topdating|twitter|instagram|ask|meetme).(com|ru|su|ua|net|fm).*$
+
+### IP
+grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'
