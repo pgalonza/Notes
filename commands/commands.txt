@@ -142,9 +142,9 @@ cat /proc/sys/fs/file-nr
 ### Show the number of open files on your system,
 lsof | wc -l
 lsof | grep 29384
-### Show maximum of start instance per user
+### Show maximum of objects inotify per user
 /proc/sys/fs/inotify/max_user_instances
-### Show maximum of watch files per user
+### Show maximum of watch files and directories per object inotify
 /proc/sys/fs/inotify/max_user_watches
 ### Show maximum of events in queued
 /proc/sys/fs/inotify/max_queued_events
