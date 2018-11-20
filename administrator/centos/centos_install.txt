@@ -86,9 +86,9 @@ sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
 File limit
 =====================
 ### /etc/sysctl.conf
-### Maximum of start instance per user
+### Maximum of objects inotify per user
 fs.inotify.max_user_instances=
-### Maximum of watchfiles per user
+### Maximum of watch files and directories per object inotify
 fs.inotify.max_user_watches=
 ### Maximum of events in queued
 fs.inotify.max_queued_events=
