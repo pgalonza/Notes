@@ -14,7 +14,7 @@ def main():
     context = None
     if hasattr(ssl, '_create_unverified_context'):
         context = ssl._create_unverified_context()
-        my_cluster = SmartConnect(host='***REMOVED***', user='***REMOVED***', pwd='***REMOVED***exe20!!', port=443, sslContext=context)
+        my_cluster = SmartConnect(host='***REMOVED***', user='***REMOVED***', pwd='***REMOVED***', port=443, sslContext=context)
     if not my_cluster:
         print("Could not connect to the specified host using specified "
               "username and password")
@@ -36,7 +36,7 @@ def main():
         #i.SuspendVM_Task()
 
     #datacenter.ShutdownHost_Task()
-    time.sleep(10)
+    #time.sleep(10)
     print("PowerOff: " + str(datacenter))
     Disconnect(my_cluster)
 
