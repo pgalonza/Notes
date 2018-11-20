@@ -36,3 +36,4 @@ Swap
 =====================
 ### /etc/sysctl.conf
 vm.swappiness=10
+sysctl -p
