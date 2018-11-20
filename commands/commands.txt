@@ -69,7 +69,7 @@ TAR
 tar cvpzf archive.tar.gz /forpack
 
 ### Распаковка архива
-tar xfvz archive.tar.gz 
+tar xfvz archive.tar.gz
 tar xfvj archive.tar.bz2 -C /var/www
 
 ### Просмотр содержимого
@@ -122,7 +122,7 @@ openssl s_client -tls1_1 -starttls imap -connect ***REMOVED***:143 -servername *
 
 Network
 =====================
-### Change interface speed 
+### Change interface speed
 ethtool -s eth0 speed 100 duplex full
 
 ***
@@ -135,12 +135,24 @@ tree -d -L 2
 
 Open files, sockets
 =====================
-### View
+### Show maximum of open files
 cat /proc/sys/fs/file-max
+### Show allocated file descriptors, not use file descriptors, maximum of file descriptors
 cat /proc/sys/fs/file-nr
-/etc/security/limits.conf
+### Show the number of open files on your system,
 lsof | wc -l
 lsof | grep 29384
+### Show maximum of start instance per user
+/proc/sys/fs/inotify/max_user_instances
+### Show maximum of watch files per user
+/proc/sys/fs/inotify/max_user_watches
+### Show maximum of events in queued
+/proc/sys/fs/inotify/max_queued_events
+### Show shell limits
+ulimit -a
+### Accept changes
+sysctl -p
+
 
 ***
 
