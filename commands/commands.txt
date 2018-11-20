@@ -177,3 +177,10 @@ IPTABLES
 =====================
 ### View
 iptables -n -L -v --line-numbers
+
+***
+
+Make files
+=====================
+### Make emty files with size
+dd if=/dev/zero of=output.dat  bs=24M  count=1
