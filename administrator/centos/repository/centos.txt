@@ -1,0 +1,38 @@
+MOUNT
+=====================
+### cifs
+//"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,gid="" 0 0
+
+***
+
+NGINX
+=====================
+### Disable ignore invalid headers
+echo "ignore_invalid_headers off;" >> /etc/nginx/nginx.conf
+
+***
+
+File limit
+=====================
+### /etc/sysctl.conf
+### Maximum of objects inotify per user
+fs.inotify.max_user_instances=
+### Maximum of watch files and directories per object inotify
+fs.inotify.max_user_watches=
+### Maximum of events in queued
+fs.inotify.max_queued_events=
+### Maximum of open descriptors
+fs.file-max=
+
+### PAM limits configuration
+###/etc/security/limits.conf
+###/etc/security/
+* soft nproc 65535
+* hard nproc 65535
+* soft nofile 65535
+* hard nofile 65535
+
+Swap
+=====================
+### /etc/sysctl.conf
+vm.swappiness=10
