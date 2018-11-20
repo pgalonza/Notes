@@ -81,3 +81,24 @@ sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 ### Install packages
 sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
 
+***
+
+File limit
+=====================
+### /etc/sysctl.conf
+### Maximum of start instance per user
+fs.inotify.max_user_instances=
+### Maximum of watchfiles per user
+fs.inotify.max_user_watches=
+### Maximum of events in queued
+fs.inotify.max_queued_events=
+### Maximum of open descriptors
+fs.file-max=
+
+### PAM limits configuration
+###/etc/security/limits.conf
+###/etc/security/
+* soft nproc 65535
+* hard nproc 65535
+* soft nofile 65535
+* hard nofile 65535
