@@ -1,5 +1,8 @@
 config.inc.php
 
+// PLUGINS
+$config['plugins'] = array('managesieve', 'enigma');
+
 // Global LDAP address book.
 $config['ldap_public']["global_ldap_abook"] = array(
     'name'              => 'Global LDAP Address Book',
