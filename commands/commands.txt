@@ -139,16 +139,18 @@ Open files, sockets
 cat /proc/sys/fs/file-max
 ### Show allocated file descriptors, not use file descriptors, maximum of file descriptors
 cat /proc/sys/fs/file-nr
-### Show the number of open files on your system,
+### Show the number of open files on your system
 lsof | wc -l
 lsof | grep 29384
+### Show limits of process start by user
+cat /proc/PID/limits
 ### Show maximum of objects inotify per user
 /proc/sys/fs/inotify/max_user_instances
 ### Show maximum of watch files and directories per object inotify
 /proc/sys/fs/inotify/max_user_watches
 ### Show maximum of events in queued
 /proc/sys/fs/inotify/max_queued_events
-### Show shell limits
+### Show shell process of user limits
 ulimit -a
 ### Accept changes
 sysctl -p
@@ -189,5 +191,5 @@ dd if=/dev/zero of=output.dat  bs=24M  count=1
 
 Mail
 =====================
-### Mail console client 
+### Mail console client
 mutt -f

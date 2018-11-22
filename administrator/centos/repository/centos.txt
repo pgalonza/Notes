@@ -24,9 +24,8 @@ fs.inotify.max_queued_events=
 ### Maximum of open descriptors
 fs.file-max=
 
-### PAM limits configuration
+### Set file limits per process of user
 ###/etc/security/limits.conf
-###/etc/security/
 * soft nproc 65535
 * hard nproc 65535
 * soft nofile 65535
