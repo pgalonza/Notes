@@ -1,10 +1,8 @@
-rcmail_output_html.php
+### rcmail_output_html.php
 
-// set atocomplete attribute
-        $user_attrib = $autocomplete > 0 ? array() : array('autocomplete' => 'on');
-        $host_attrib = $autocomplete > 0 ? array() : array('autocomplete' => 'on');
-        $pass_attrib = $autocomplete > 1 ? array() : array('autocomplete' => 'on');
-        
-config.inc.php
+$user_attrib = $autocomplete > 0 ? array() : array('autocomplete' => 'on');
+$host_attrib = $autocomplete > 0 ? array() : array('autocomplete' => 'on');
+$pass_attrib = $autocomplete > 1 ? array() : array('autocomplete' => 'on');
 
+### config.inc.php
 $config['login_autocomplete'] = 2;

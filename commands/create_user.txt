@@ -1,7 +1,0 @@
-useradd -m -N -g administrator -G wheel "user name" 
-groupadd "group name"
-delgroup "group name"
-usermod -a -G "group name" "user name"
-usermod -g "group name" "user name"
-usermod -R "group name" "user name"
-

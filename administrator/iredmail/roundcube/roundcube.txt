@@ -1,9 +1,9 @@
-config.inc.php
-
-// PLUGINS
+### PLUGINS
+### config.inc.php
 $config['plugins'] = array('managesieve', 'enigma');
 
-// Global LDAP address book.
+### Global LDAP address book.
+### config.inc.php
 $config['ldap_public']["global_ldap_abook"] = array(
     'name'              => 'Global LDAP Address Book',
     'hosts'             => array('***REMOVED***'),
@@ -66,26 +66,10 @@ $config['ldap_public']["global_ldap_abook"] = array(
 );
 $config['autocomplete_addressbooks'] = array('sql', 'global_ldap_abook');
 
-defaults.inc.php
-
-// store draft message is this mailbox
-// leave blank if draft messages should not be stored
-// NOTE: Use folder names with namespace prefix (INBOX. on Courier-IMAP)
-#$config['drafts_mbox'] = 'Drafts';
+### defaults.inc.php
+### config.inc.php
 $config['drafts_mbox'] = 'Черновики';
-// store spam messages in this mailbox
-// NOTE: Use folder names with namespace prefix (INBOX. on Courier-IMAP)
-#$config['junk_mbox'] = 'Junk';
 $config['junk_mbox'] = 'Нежелательная почта';
-// store sent message is this mailbox
-// leave blank if sent messages should not be stored
-// NOTE: Use folder names with namespace prefix (INBOX. on Courier-IMAP)
-#$config['sent_mbox'] = 'Sent';
 $config['sent_mbox'] = 'Отправленные';
-// move messages to this folder when deleting them
-// leave blank if they should be deleted directly
-// NOTE: Use folder names with namespace prefix (INBOX. on Courier-IMAP)
-#$config['trash_mbox'] = 'Trash';
 $config['trash_mbox'] = 'Удаленные';
-// automatically create the above listed default folders on user login
 $config['create_default_folders'] = yes;

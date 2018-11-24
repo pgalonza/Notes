@@ -1,2 +1,7 @@
-Время в гостевых ос
-1с фризит после хард ребута 
+General
+=====================
+### Linux virtual machine with lost network
+Set current time
+
+### 1c aplication server is freeze after hard reboot
+re-register the virtual machine

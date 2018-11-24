@@ -1,5 +1,5 @@
-ad_sender_login_maps.cf
- 
+### ad_sender_login_maps.cf
+
 server_host     = ***REMOVED***
 server_port     = 389
 version         = 3
@@ -13,7 +13,7 @@ query_filter    = (&(|(mail=%s)(userPrincipalName=%s))(objectCategory=person)(!(
 result_attribute= mail
 debuglevel      = 0
 
-ad_virtual_group_maps.cf
+### ad_virtual_group_maps.cf
 
 server_host     = ***REMOVED***
 server_port     = 389
@@ -30,7 +30,7 @@ leaf_result_attribute = mail
 #result_attribute= userPrincipalName
 debuglevel      = 0
 
-ad_virtual_mailbox_maps.cf
+### ad_virtual_mailbox_maps.cf
 
 server_host     = ***REMOVED***
 server_port     = 389
@@ -46,7 +46,7 @@ result_attribute= mail
 result_format   = %d/%u/Maildir/
 debuglevel      = 0
 
-main.cf
+### main.cf
 
 myhostname = ***REMOVED***
 myorigin = $mydomain
@@ -57,8 +57,9 @@ dovecot_destination_recipient_limit = 1
 smtpd_sasl_local_domain = ***REMOVED***
 message_size_limit = 52428800
 inet_protocols = ipv4
+mynetworks = 127.0.0.1 [::1] 10.0.0.0/16 172.16.0.0/12
 
-transport
+### transport
 
 .***REMOVED*** dovecot
 ***REMOVED*** dovecot

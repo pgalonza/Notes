@@ -1,3 +1,4 @@
+### dovecot.conf
 userdb {
     args = /etc/dovecot/dovecot-ldap-ou.conf
     driver = ldap
@@ -7,6 +8,7 @@ passdb {
     driver = ldap
 }
 
+### dovecot.conf
 mailbox Отправленные {
         auto = subscribe
         special_use = \Sent
@@ -23,15 +25,17 @@ mailbox "Нежелательная почта" {
         auto = no
         special_use = \Junk
     }
-    
+
+### dovecot.conf
 quota = dict:user::proxy::quotadict
 quota = maildir:User quota
 quota_rule = *:storage=2G
 
+### dovecot-ldap.conf
 hosts           = ***REMOVED***:389
 ldap_version    = 3
 auth_bind       = yes
-auth_bind_userdn = %u
+#auth_bind_userdn = %u
 dn              = ***REMOVED***
 dnpass          = ***REMOVED***
 base            = ou=,dc=corp,dc=***REMOVED***,dc=ru

@@ -1,5 +1,10 @@
+LDAP filters
+=====================
+### Users in group
 (&(objectClass=group)(|(cn=co_xmpp)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)(cn=***REMOVED***)))
 
+### Users
 (objectClass=user)(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2))
 
+### Groups
 (&(objectClass=user)(objectCategory=person)(|(memberOf=cn=co_xmpp,ou=Группы безопасности,ou=Отдел информационного обеспечения,ou=Организационное управление,ou=Заместитель по организационной и кадровой работе,ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru))(!(userAccountControl:1.2.840.113556.1.4.803:=2)))

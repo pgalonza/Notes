@@ -1,9 +1,23 @@
-#!/bin/bash
+### Create database
 echo "CREATE DATABASE `my_db` CHARACTER SET utf8 ***REMOVED***LLATE utf8_general_ci;" | mysql
+
+### Create user
 echo "CREATE USER 'name'@'localhost' IDENTIFIED BY 'password';" | mysql
+
+### Give privileges for user
 echo "GRANT ALL PRIVILEGES ON `db`.* TO 'name'@'localhost';" | mysql
+
+### Reloads the privileges
 echo "FLUSH PRIVILEGES;" | mysql
+
+### Edit user account
 echo "RENAME USER 'modx'@'localhost' TO 'modx'@'%';" | mysql
+
+### Set password for user
 echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';" | mysql
+
+### Delete user
 echo "DROP USER 'jeffrey'@'localhost';" | mysql
+
+### User as root privileges
 echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' with GRANT OPTION;" | mysql
