@@ -5,24 +5,26 @@ MOUNT
 
 ***
 
-NGINX
-=====================
-### Disable ignore invalid headers
-echo "ignore_invalid_headers off;" >> /etc/nginx/nginx.conf
-
-***
-
-File limit
+File, socket limits
 =====================
 ### /etc/sysctl.conf
 ### Maximum of objects inotify per user
 fs.inotify.max_user_instances=
+
 ### Maximum of watch files and directories per object inotify
 fs.inotify.max_user_watches=
+
 ### Maximum of events in queued
 fs.inotify.max_queued_events=
+
 ### Maximum of open descriptors
 fs.file-max=
+
+### Maximum queue size of packet
+net.core.netdev_max_backlog =
+
+### Maximum number of open sockets waiting to be connected
+net.core.somaxconn =
 
 ### PAM limits configuration
 ###/etc/security/limits.conf
@@ -32,8 +34,9 @@ fs.file-max=
 * soft nofile 65535
 * hard nofile 65535
 
+***
+
 Swap
 =====================
 ### /etc/sysctl.conf
 vm.swappiness=10
-sysctl -p
