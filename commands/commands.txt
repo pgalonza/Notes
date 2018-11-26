@@ -152,6 +152,8 @@ cat /proc/PID/limits
 /proc/sys/fs/inotify/max_queued_events
 ### Show shell process of user limits
 ulimit -a
+### Show settings
+sysctl -a
 ### Accept changes
 sysctl -p
 
