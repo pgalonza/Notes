@@ -1,0 +1,4 @@
+FastCGI
+=====================
+### Time out
+fastcgi_read_timeout = 60
