@@ -41,7 +41,7 @@ bind_dn         = ***REMOVED***
 bind_pw         = ***REMOVED***
 search_base     = dc=corp,dc=***REMOVED***,dc=ru
 scope           = sub
-query_filter    = (&(objectCategory=person)(mail=%s))
+query_filter    = (&(objectCategory=person)(mail=%s)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
 result_attribute= mail
 result_format   = %d/%u/Maildir/
 debuglevel      = 0
