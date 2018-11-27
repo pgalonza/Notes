@@ -44,7 +44,7 @@ deref           = never
 
 user_filter     = (&(mail=%u)(objectClass=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
 pass_filter     = (&(mail=%u)(objectClass=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
-user_attrs      = =home=/var/vmail/vmail1/%Ld/%Ln/Maildir/,=mail=maildir:/var/vmail/vmail1/%Ld/%Ln/Maildir/:UTF-8
+user_attrs      = =home=/var/vmail/vmail1/%Ld/%Ln/Maildir/,=mail=maildir:/var/vmail/vmail1/%Ld/%Ln/Maildir/:UTF-8,=quota_rule=*:bytes=%{ldap:postOfficeBox}
 pass_attrs      = userPassword=password, mail=user
 
 default_pass_scheme = CRYPT
