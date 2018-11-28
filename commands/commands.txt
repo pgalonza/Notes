@@ -182,6 +182,19 @@ IPTABLES
 ### View
 iptables -n -L -v --line-numbers
 
+**
+
+Dovecot
+=====================
+# Quota
+dovecot set quota
+# Reload the dovecot
+doveadm reload
+# Show who connected
+doveadm who -1
+# Authorization cache
+doveadm auth cache
+
 ***
 
 Make files
