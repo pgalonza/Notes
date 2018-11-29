@@ -24,6 +24,21 @@ sudo !!
 ### IO priority
 ionice -c3
 
+### Сommand replay
+while true
+do
+command
+done;
+
+### Automatic answer
+yes/no | command
+
+### Share directory http://$HOSTNAME:8000/
+python -m SimpleHTTPServer
+
+### Execute the command, without history.
+space command
+
 ***
 
 PERMISSION
@@ -156,6 +171,8 @@ ulimit -a
 sysctl -a
 ### Accept changes
 sysctl -p
+### Change process limits
+prlimit --pid PID --nofile=1024:1024
 
 
 ***
@@ -201,6 +218,7 @@ Make files
 =====================
 ### Make emty files with size
 dd if=/dev/zero of=output.dat  bs=24M  count=1
+dd if=/dev/zero of=output.dat  bs=1M  count=24
 
 ***
 
@@ -208,3 +226,36 @@ Mail
 =====================
 ### Mail console client
 mutt -f
+
+***
+
+Reboot
+=====================
+### Problems with software
+reboot -f
+### Problems with kernel, mount, libc
+echo b>/proc/sysrq-trigger
+### Problems with kernel and hardware
+ipmitool chassis power cycle
+### Problems with kernel and hardware without open console
+ipmitool -H ipmi.server.local chassis power cycle
+
+***
+
+PS
+=====================
+### Sort by RAM
+ps aux | sort -nk 4
+### Sort by CPU
+ps aux | sort -nk 3
+
+RAM, SWAP
+=====================
+### Memory use
+cat /proc/meminfo
+
+ps axo rss,comm,pid \
+| awk '{ proc_list[$2]++; proc_list[$2 "," 1] += $1; } \
+END { for (proc in proc_list) { printf("%d\t%s\n", \
+proc_list[proc "," 1],proc); }}' | sort -n | tail -n 10 | sort -rn \
+| awk '{$1/=1024;printf "%.0fMB\t",$1}{print $2}'
