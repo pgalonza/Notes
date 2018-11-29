@@ -34,6 +34,14 @@ net.core.somaxconn =
 * soft nofile 65535
 * hard nofile 65535
 
+### /etc/systemd/system.conf, /etc/systemd/user.conf, /etc/systemd/<systemd_unit>/override.conf
+DefaultLimitNOFILE=
+
+### /lib/systemd/system/<service>, /etc/systemd/*, /usr/lib/systemd/system/
+[service]
+
+LimitNOFILE=
+
 ***
 
 Swap
