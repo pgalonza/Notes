@@ -55,7 +55,6 @@ mail_max_userip_connections =
 auth_cache_verify_password_with_worker =
 
 ### dovecot.conf
-quota = dict:user::proxy::quotadict
 quota = maildir:User quota
 quota_rule = *:storage=2G
 
