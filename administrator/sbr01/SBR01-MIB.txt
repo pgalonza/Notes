@@ -1,0 +1,501 @@
+SBR01-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    OBJECT-TYPE, MODULE-IDENTITY,
+    Integer32, Opaque, enterprises, Counter32
+    FROM SNMPv2-SMI
+
+    TEXTUAL-***REMOVED***NVENTION, DisplayString, TruthValue
+	FROM SNMPv2-TC;
+
+
+cityron MODULE-IDENTITY
+    LAST-UPDATED "201707240000Z"
+    ORGANIZATION "CITYRON"
+    ***REMOVED***NTACT-INFO
+	".."
+    DESCRIPTION
+	"Some stuff MIB definitions."	
+	REVISION	 "201707240000Z"
+    DESCRIPTION
+	"Some stuff MIB definitions."	
+    ::= { enterprises 47777 }
+
+
+products     	OBJECT IDENTIFIER ::= { cityron 1 }
+sbr01      		OBJECT IDENTIFIER ::= { products 1 }
+system	      	OBJECT IDENTIFIER ::= { sbr01 1 }
+conditioners    OBJECT IDENTIFIER ::= { sbr01 2 }
+
+conditioner1    OBJECT IDENTIFIER ::= { conditioners 1 }
+conditioner2    OBJECT IDENTIFIER ::= { conditioners 2 }
+conditioner3    OBJECT IDENTIFIER ::= { conditioners 3 }
+conditioner4    OBJECT IDENTIFIER ::= { conditioners 4 }
+conditioner5    OBJECT IDENTIFIER ::= { conditioners 5 }
+conditioner6    OBJECT IDENTIFIER ::= { conditioners 6 }
+conditioner7    OBJECT IDENTIFIER ::= { conditioners 7 }
+conditioner8    OBJECT IDENTIFIER ::= { conditioners 8 }
+
+
+error OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Error"
+    ::= { system 1 }
+
+tempRoom OBJECT-TYPE
+    SYNTAX	Integer32 ( 0 .. 7 )
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Room temperature"
+    ::= { system 2 }
+
+setTemp OBJECT-TYPE
+    SYNTAX	Integer32 (160..300)
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Temperature of activation of additional air conditionerss"
+    ::= { system 3 }
+alarmTemp OBJECT-TYPE
+    SYNTAX	Integer32 (160..400)
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Emergency temperature"
+    ::= { system 4 }
+minCondCnt OBJECT-TYPE
+    SYNTAX	Integer32 (1..8)
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Minimum number of air conditioners in operation"
+    ::= { system 5 }
+rotTime OBJECT-TYPE
+    SYNTAX	Integer32 (4..24)
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Rotation time, in hours"
+    ::= { system 6 }
+timeError OBJECT-TYPE
+    SYNTAX	Integer32 (3..15)
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Error response time, in minutes"
+    ::= { system 7 }
+localTimeSec OBJECT-TYPE
+    SYNTAX	Integer32
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"The operating time of the controller, in seconds"
+    ::= { system 8 }	
+--------------------------------------------------------
+addr1 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Air Conditioner Number 1"
+    ::= { conditioner1 1 }
+addr2 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Air Conditioner Number 2"
+    ::= { conditioner2 1 }
+addr3 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Air Conditioner Number 3"
+    ::= { conditioner3 1 }
+addr4 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Air Conditioner Number 4"
+    ::= { conditioner4 1 }
+addr5 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Air Conditioner Number 5"
+    ::= { conditioner5 1 }
+addr6 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Air Conditioner Number 6"
+    ::= { conditioner6 1 }
+addr7 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Air Conditioner Number 7"
+    ::= { conditioner7 1 }
+addr8 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Air Conditioner Number 8"
+    ::= { conditioner8 1 }
+--------------------------------------------------------
+errorC1 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Error"
+    ::= { conditioner1 2 }
+errorC2 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Error"
+    ::= { conditioner2 2 }
+errorC3 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Error"
+    ::= { conditioner3 2 }
+errorC4 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Error"
+    ::= { conditioner4 2 }
+errorC5 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Error"
+    ::= { conditioner5 2 }
+errorC6 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Error"
+    ::= { conditioner6 2 }
+errorC7 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Error"
+    ::= { conditioner7 2 }
+errorC8 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Error"
+    ::= { conditioner8 2 }
+	
+--------------------------------------------------------
+tempInC1 OBJECT-TYPE
+    SYNTAX	Integer32 (0..16)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner IN"
+    ::= { conditioner1 3 }
+tempInC2 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner IN"
+    ::= { conditioner2 3 }
+tempInC3 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner IN"
+    ::= { conditioner3 3 }
+tempInC4 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner IN"
+    ::= { conditioner4 3 }
+tempInC5 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner IN"
+    ::= { conditioner5 3 }
+tempInC6 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner IN"
+    ::= { conditioner6 3 }
+tempInC7 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner IN"
+    ::= { conditioner7 3 }
+tempInC8 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner IN"
+    ::= { conditioner8 3 }
+--------------------------------------------------------
+tempOutC1 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner OUT"
+    ::= { conditioner1 4 }
+tempOutC2 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner OUT"
+    ::= { conditioner2 4 }
+tempOutC3 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner OUT"
+    ::= { conditioner3 4 }
+tempOutC4 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner OUT"
+    ::= { conditioner4 4 }
+tempOutC5 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner OUT"
+    ::= { conditioner5 4 }
+tempOutC6 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner OUT"
+    ::= { conditioner6 4 }
+tempOutC7 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner OUT"
+    ::= { conditioner7 4 }
+tempOutC8 OBJECT-TYPE
+    SYNTAX	Integer32 (0..32)
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Temperature at the air conditioner OUT"
+    ::= { conditioner8 4 }	
+--------------------------------------------------------
+stateC1 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(0), cool(1), stop(3)}
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Condition of air conditioner"
+    ::= { conditioner1 5 }
+stateC2 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(0), cool(1), stop(3)}
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Condition of air conditioner"
+    ::= { conditioner2 5 }
+stateC3 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(0), cool(1), stop(3)}
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Condition of air conditioner"
+    ::= { conditioner3 5 }
+stateC4 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(0), cool(1), stop(3)}
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Condition of air conditioner"
+    ::= { conditioner4 5 }
+stateC5 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(0), cool(1), stop(3)}
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Condition of air conditioner"
+    ::= { conditioner5 5 }
+stateC6 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(0), cool(1), stop(3)}
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Condition of air conditioner"
+    ::= { conditioner6 5 }
+stateC7 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(0), cool(1), stop(3)}
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Condition of air conditioner"
+    ::= { conditioner7 5 }
+stateC8 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(0), cool(1), stop(3)}
+    MAX-ACCESS	read-write
+    STATUS	current
+    DESCRIPTION
+	"Condition of air conditioner"
+    ::= { conditioner8 5 }
+--------------------------------------------------------
+autoOnC1 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(1), manual(0)}
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Manual / Automatic control"
+    ::= { conditioner1 6 }
+autoOnC2 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(1), manual(0)}
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Manual / Automatic control"
+    ::= { conditioner2 6 }
+autoOnC3 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(1), manual(0)}
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Manual / Automatic control"
+    ::= { conditioner3 6 }
+autoOnC4 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(1), manual(0)}
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Manual / Automatic control"
+    ::= { conditioner4 6 }
+autoOnC5 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(1), manual(0)}
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Manual / Automatic control"
+    ::= { conditioner5 6 }
+autoOnC6 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(1), manual(0)}
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Manual / Automatic control"
+    ::= { conditioner6 6 }
+autoOnC7 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(1), manual(0)}
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Manual / Automatic control"
+    ::= { conditioner7 6 }
+autoOnC8 OBJECT-TYPE
+    SYNTAX	INTEGER { auto(1), manual(0)}
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Manual / Automatic control"
+    ::= { conditioner8 6 }
+--------------------------------------------------------
+coolTimeC1 OBJECT-TYPE
+    SYNTAX	Integer32
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Continuous operation of the air conditioner, in sec."
+    ::= { conditioner1 7 }
+coolTimeC2 OBJECT-TYPE
+    SYNTAX	Integer32
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Continuous operation of the air conditioner, in sec.."
+    ::= { conditioner2 7 }
+coolTimeC3 OBJECT-TYPE
+    SYNTAX	Integer32
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Continuous operation of the air conditioner, in sec."
+    ::= { conditioner3 7 }
+coolTimeC4 OBJECT-TYPE
+    SYNTAX	Integer32 
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Continuous operation of the air conditioner, in sec."
+    ::= { conditioner4 7 }
+coolTimeC5 OBJECT-TYPE
+    SYNTAX	Integer32 
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Continuous operation of the air conditioner, in sec."
+    ::= { conditioner5 7 }
+coolTimeC6 OBJECT-TYPE
+    SYNTAX	Integer32
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Continuous operation of the air conditioner, in sec."
+    ::= { conditioner6 7 }
+coolTimeC7 OBJECT-TYPE
+    SYNTAX	Integer32
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Continuous operation of the air conditioner, in sec."
+    ::= { conditioner7 7 }
+coolTimeC8 OBJECT-TYPE
+    SYNTAX	Integer32
+    MAX-ACCESS	read-only
+    STATUS	current
+    DESCRIPTION
+	"Continuous operation of the air conditioner, in sec."
+    ::= { conditioner8 7 }
+--------------------------------------------------------
+
+END
+
