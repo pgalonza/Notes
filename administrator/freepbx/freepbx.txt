@@ -3,7 +3,7 @@
 function isCorrectLengthExtensions(s)
 
 ### Activation of text messages
-sip_general_custom.conf
+#sip_general_custom.conf
 accept_ou***REMOVED***call_message = yes
 ou***REMOVED***call_message_context = messages
 auth_message_requests = no
