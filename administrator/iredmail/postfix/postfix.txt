@@ -59,6 +59,13 @@ message_size_limit = 52428800
 inet_protocols = ipv4
 mynetworks = 127.0.0.1 [::1] 10.0.0.0/16 172.16.0.0/12
 
+### queue
+bounce_queue_lifetime = 7d
+maximal_queue_lifetime = 7d
+minimal_backoff_time = 3h
+maximal_backoff_time = 9h
+queue_run_delay = 3m
+
 ### transport
 
 .***REMOVED*** dovecot
