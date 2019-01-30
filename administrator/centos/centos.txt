@@ -48,3 +48,9 @@ Swap
 =====================
 ### /etc/sysctl.conf
 vm.swappiness=10
+
+***
+
+Environment
+=====================
+/etc/environment
