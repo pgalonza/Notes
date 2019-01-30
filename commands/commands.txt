@@ -109,6 +109,9 @@ Ctrl+b " — разделить текущую панель на две, по г
 Ctrl+b →←↑↓ — переходить между панелями;
 Ctrl+b x — закрыть панель (а можно просто набрать exit в терминале).
 
+### Воспроизводить нажатия клавиш во всех открытых окнах
+tmux set synchronize-panes on
+
 ***
 
 DHCP
@@ -118,10 +121,12 @@ dhclient -v
 
 ***
 
-SHA1
+HASH
 =====================
-### Take sum
+### Take sum sha1
 echo -n "***REMOVED***1151" | sha1sum | tr [:lower:] [:upper:]
+### Take sum like shadow
+python -c 'import crypt; print crypt.crypt("actual password here", "$6$random_salt")'
 
 ***
 
@@ -266,3 +271,47 @@ systemctl
 =====================
 ### Systemd reload
 systemctl daemon-reload
+
+***
+
+Environment
+=====================
+export var=
+export var=$var
+
+***
+
+POSTFIX
+=====================
+postfix check
+postconf
+
+### Queue view
+mailq | less
+postqueue -p | less
+mailq | grep Request
+find /var/spool/postfix/deferred -type f | wc -l
+find /var/spool/postfix/active -type f | wc -l
+find /var/spool/postfix/incoming -type f | wc –l
+
+### Queue send
+postqueue -f
+mailq -q
+postsuper -r ALL
+postqueue -i <ID-mail>
+postsuper -r <ID-mail>
+postqueue -s <domain>
+
+### Queue drop
+postsuper -d ALL
+postsuper -d deferred
+postsuper -d <ID-mail>
+
+### Queue halt
+postsuper -h <ID-mail>
+postsuper -h ALL
+postsuper -h deferred
+
+### Queue run
+postsuper -H <ID-mail>
+postsuper -H ALL
