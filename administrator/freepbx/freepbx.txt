@@ -11,3 +11,6 @@ auth_message_requests = no
 ### extensions_custom.conf
 [messages]
 exten => _XXXXX,1,MessageSend(sip:${EXTEN},"${CALLERID(name)}"${MESSAGE(from)})
+
+###Sounds
+http://downloads.asterisk.org/pub/telephony/sounds/
