@@ -2,13 +2,13 @@
 
 import sys
 
-import lm-auth
+import lm_auth
 from ldap3 import SUBTREE
 
 
 def main():
     for ou, origin in lm_auth.ad_ou_tree.items():
-        user_list = get_information(origin)
+        user_list = get_information(origin[0])
         path_to_file = ou + '.html'
         create_html_file(user_list, path_to_file)
 
@@ -31,7 +31,7 @@ def get_information(origin):
     user_list = {}
 
     for entry in conn.entries:
-        user_list[str(entry.displayName)] = [entry.ipPhone, entry.mobile, entry.mail, entry.title, entry.department,
+        user_list[str(entry.displayName)] = [str(entry.ipPhone).replace('-', ''), entry.mobile, entry.mail, entry.title, entry.department,
                                              entry.physicalDeliveryOfficeName, entry.company]
 
     conn.unbind()
@@ -40,21 +40,23 @@ def get_information(origin):
 
 
 def create_html_file(user_info, file_name):
-    html_structure_file('head', file_name)
-
     line = ''
-    with open(file_name, 'a') as index_file:
-        for name, user_items in sorted(user_info.items()):
-            line += '''                <tr>
+    line += html_structure_file('head', file_name)
+
+    for name, user_items in sorted(user_info.items()):
+        line += '''                <tr>
                     <th>{}</th>\n'''.format(name)
-            for i in range(0, 7):
-                if not user_items[i]:
-                    line += '                    <th></th>\n'
-                    continue
-                line += '                    <th>{}</th>\n'.format(user_items[i])
-            line += '                </tr>\n'
+        for field in user_items:
+            if not field or field == '[]':
+                line += '                    <th></th>\n'
+                continue
+            line += '                    <th>{}</th>\n'.format(field)
+        line += '                </tr>\n'
+
+    line += html_structure_file('bottom', file_name)
+
+    with open(file_name, 'w') as index_file:
         index_file.write(line)
-    html_structure_file('bottom', file_name)
 
 
 def html_structure_file(position, file_name):
@@ -103,11 +105,9 @@ def html_structure_file(position, file_name):
     </html>'''
 
     if position == 'head':
-        with open(file_name, 'w') as web_list:
-            web_list.write(_web_header)
+        return _web_header
     elif position == 'bottom':
-        with open(file_name, 'a') as web_list:
-            web_list.write(_web_bottom)
+        return _web_bottom
 
 
 if __name__ == "__main__":
