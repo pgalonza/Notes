@@ -54,3 +54,10 @@ vm.swappiness=10
 Environment
 =====================
 /etc/environment
+
+***
+
+TFTP
+=====================
+server_args             = -u tftpd -s /var/lib/tftpboot --verbose/-vvv
+disable                 = no
