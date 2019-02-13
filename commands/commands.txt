@@ -315,3 +315,16 @@ postsuper -h deferred
 ### Queue run
 postsuper -H <ID-mail>
 postsuper -H ALL
+
+***
+
+ACL
+=====================
+umask
+### View premissions
+getfacl
+### Add default permission
+setfacl -d -m u::rwx,g::r-x,o::r-x /home/test/
+### Remove default permission
+setfacl -k /home/test/
+setfacl -R -k /home/test/
