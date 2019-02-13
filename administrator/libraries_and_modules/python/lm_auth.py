@@ -4,16 +4,16 @@ import sys
 from ldap3 import Server, Connection
 
 _ad_server = '***REMOVED***'
-_ad_user = '***REMOVED***@***REMOVED***'
+_ad_user = '***REMOVED***'
 _ad_password = '***REMOVED***'
-ad_ou_tree = {'all': 'dc=corp,dc=***REMOVED***,dc=ru', 'co': 'ou=co,dc=corp,dc=***REMOVED***,dc=ru',
-               '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru',
-               '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru',
-               '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru',
-               '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru',
-               '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru',
-               '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru',
-               '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***': 'ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru'}
+ad_ou_tree = {'all': ('dc=corp,dc=***REMOVED***,dc=ru','Все'), 'co': ('ou=co,dc=corp,dc=***REMOVED***,dc=ru', '.ЦУ'),
+               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
+               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
+               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
+               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
+               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
+               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
+               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***')}
 
 
 def active_derectory_connector():
