@@ -20,7 +20,7 @@ def get_information(origin, group_name):
     conn = lm_auth.active_derectory_connector()
 
     conn.search(origin,
-                '(&(objectCategory=person)(displayName=*)(givenName=*)(sn=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                 SUBTREE,
                 attributes=['ipPhone', 'displayName'])
 
@@ -31,7 +31,7 @@ def get_information(origin, group_name):
 
     if not group_name == 'Все' and not group_name == 'ЦУ':
         conn.search('ou=co,dc=corp,dc=***REMOVED***,dc=ru',
-                    '(&(objectCategory=person)(displayName=*)(givenName=*)(sn=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                    '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                     SUBTREE,
                     attributes=['ipPhone', 'displayName'])
 
@@ -52,7 +52,7 @@ def get_all_information():
         if ou == 'all':
             continue
         conn.search(origin[0],
-                    '(&(objectCategory=person)(displayName=*)(givenName=*)(sn=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                    '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                     SUBTREE,
                     attributes=['ipPhone', 'displayName'])
         ou_list += '   <group display_name=\"{}\" />\n'.format(origin[1])
