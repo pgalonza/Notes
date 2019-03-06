@@ -328,3 +328,10 @@ setfacl -d -m u::rwx,g::r-x,o::r-x /home/test/
 ### Remove default permission
 setfacl -k /home/test/
 setfacl -R -k /home/test/
+
+***
+
+SED
+=====================
+### Replace in all files
+sed 's/10.0.226.250/10.0.230.4/g' *
