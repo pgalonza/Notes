@@ -7,8 +7,8 @@ wifi-menu
 fdisk -l
 
 ### Запускаем утилиту для редактирования разделов и указываем физический диск
-### Для UEFI создаем раздел 100M вне LVM в vfat   
-cfdisk /dev/sdX           
+### Для UEFI создаем раздел 100M вне LVM в vfat
+cfdisk /dev/sdX
 
 ***
 
@@ -113,7 +113,7 @@ passwd "имя_пользоввателя"
 ### Отображаем настройки /etc/sudoers, активировать группу wheel
 cat /etc/sudoers
 
-### Выбираем локаль ru_UTF en_UTF
+### Выбираем локаль en_US.UTF-8, ru_RU.UTF-8
 nano /etc/locale.gen
 
 ### Генерируем локаль
