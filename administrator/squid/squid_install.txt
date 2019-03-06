@@ -1,0 +1,20 @@
+wget www.openssl.org/source/openssl-1.0.0k.tar.gz
+wget http://www.squid-cache.org/Versions/v3/3.5/squid-3.5.26.tar.gz
+
+### Install tools and pachages
+yum install -y perl gcc autoconf automake make sudo wget
+yum install libxml2-devel libcap-devel
+yum install libtool-ltdl-devel openssl-devel
+
+### Extract source
+tar xvf squid-3.4.6.tar.gz
+tar -zxf openssl-1.0.0k.tar.gz
+
+### Show configuration options
+./configure -help | less
+
+### Configure openssl and install
+./config shared --prefix=/opt/squid/openssl --openssldir=/opt/squid/openssl
+./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl shared zlib
+make
+make install
