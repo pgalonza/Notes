@@ -2,7 +2,7 @@
 
 import sys
 import lm_auth
-from ldap3 import SUBTREE
+from ldap3 import SUBTREE, Server, Connection
 import xml.etree.ElementTree as xml
 
 
@@ -17,12 +17,18 @@ def main():
 
 
 def get_information(origin, group_name):
-    conn = lm_auth.active_derectory_connector()
-
-    conn.search(origin,
-                '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
-                SUBTREE,
-                attributes=['ipPhone', 'displayName'])
+    if group_name == "***REMOVED***":
+        conn = lm_auth.active_derectory_connector_***REMOVED***()
+        conn.search('dc=***REMOVED***,dc=***REMOVED***,dc=ru',
+                    '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                    SUBTREE,
+                    attributes=['ipPhone', 'displayName'])
+    else:
+        conn = lm_auth.active_derectory_connector()
+        conn.search(origin,
+                    '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                    SUBTREE,
+                    attributes=['ipPhone', 'displayName'])
 
     user_list = {}
 
@@ -44,17 +50,26 @@ def get_information(origin, group_name):
 
 
 def get_all_information():
-    conn = lm_auth.active_derectory_connector()
     ou_list = ''
     user_list = ''
 
     for ou, origin in lm_auth.ad_ou_tree.items():
         if ou == 'all':
             continue
-        conn.search(origin[0],
-                    '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
-                    SUBTREE,
-                    attributes=['ipPhone', 'displayName'])
+
+        if origin[1] == "***REMOVED***":
+            conn = lm_auth.active_derectory_connector_***REMOVED***()
+            conn.search('dc=***REMOVED***,dc=***REMOVED***,dc=ru',
+                        '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                        SUBTREE,
+                        attributes=['ipPhone', 'displayName'])
+        else:
+            conn = lm_auth.active_derectory_connector()
+            conn.search(origin[0],
+                        '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                        SUBTREE,
+                        attributes=['ipPhone', 'displayName'])
+
         ou_list += '   <group display_name=\"{}\" />\n'.format(origin[1])
         for entry in conn.entries:
             user_list += "  <contact display_name=\"{}\" office_number=\"{}\" mobile_number=\"\" other_number=\"\" line=\"1\" " \
