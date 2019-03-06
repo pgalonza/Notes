@@ -8,23 +8,32 @@ from ldap3 import SUBTREE
 
 def main():
     for ou, origin in lm_auth.ad_ou_tree.items():
-        user_list = get_information(origin[0])
+        user_list = get_information(origin[0], origin[1])
         path_to_file = ou + '.html'
         create_html_file(user_list, path_to_file)
 
 
-def get_information(origin):
-    conn = lm_auth.active_derectory_connector()
+def get_information(origin, group_name):
 
-    '''(&(objectCategory=person)(displayName=*)(givenName=*)(sn=*)(|(ipPhone= *)(mobile=*)(mail=*)(title=*)(
-        department=*)(physicalDeliveryOfficeName=*)(company=*))(!(userAccountControl:1.2.840.113556.1.4.803:=2)))'''
+    if group_name == "***REMOVED***":
+        conn = lm_auth.active_derectory_connector_***REMOVED***()
+        conn.search('dc=***REMOVED***,dc=***REMOVED***,dc=ru',
+                    '(&(objectCategory=person)(displayName=*)(givenName=*)(sn=*)(|(ipPhone= *)(mobile=*)(mail=*)('
+                    'title=*)(department=*)(physicalDeliveryOfficeName=*)(company=*))(!('
+                    'userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                    SUBTREE,
+                    attributes=['company', 'department', 'ipPhone', 'mobile', 'mail', 'mobile', 'title',
+                            'physicalDeliveryOfficeName',
+                            'displayName'])
 
-    conn.search(origin,
-                '(&(objectCategory=person)(displayName=*)(givenName=*)(sn=*)(|(ipPhone= *)(mobile=*)(mail=*)('
-                'title=*)(department=*)(physicalDeliveryOfficeName=*)(company=*))(!('
-                'userAccountControl:1.2.840.113556.1.4.803:=2)))',
-                SUBTREE,
-                attributes=['company', 'department', 'ipPhone', 'mobile', 'mail', 'mobile', 'title',
+    else:
+        conn = lm_auth.active_derectory_connector()
+        conn.search(origin,
+                    '(&(objectCategory=person)(displayName=*)(givenName=*)(sn=*)(|(ipPhone= *)(mobile=*)(mail=*)('
+                    'title=*)(department=*)(physicalDeliveryOfficeName=*)(company=*))(!('
+                    'userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                    SUBTREE,
+                    attributes=['company', 'department', 'ipPhone', 'mobile', 'mail', 'mobile', 'title',
                             'physicalDeliveryOfficeName',
                             'displayName'])
 
