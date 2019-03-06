@@ -37,9 +37,7 @@ net.core.somaxconn =
 ### /etc/systemd/system.conf, /etc/systemd/user.conf, /etc/systemd/<systemd_unit>/override.conf
 DefaultLimitNOFILE=
 
-### /lib/systemd/system/<service>, /etc/systemd/*, /usr/lib/systemd/system/
-[service]
-
+### /lib/systemd/system/<service>, /etc/systemd/*, /usr/lib/systemd/system/<service>
 LimitNOFILE=
 
 ***
@@ -61,3 +59,28 @@ TFTP
 =====================
 server_args             = -u tftpd -s /var/lib/tftpboot --verbose/-vvv
 disable                 = no
+
+***
+
+Django/CMS
+=====================
+pip install --upgrade virtualenv
+virtualenv env
+source env/bin/activate
+(env) $ pip install djangocms-installer
+(env) $ djangocms mysite
+yum install python3-devel mysql-devel
+pip3.6 install mysqlclient
+python3.6 manage.py migrate
+python3.6 manage.py runserver
+python3.6 manage.py startapp firstapp
+
+***
+
+PHP-FPM
+=====================
+rpm -Uhv http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+yum install yum-utils
+yum-config-manager --enable remi-php71
+yum install php71
+yum install -y php-mysql php-mbstring php-mcrypt php-devel php-xml php-gd
