@@ -332,6 +332,13 @@ setfacl -R -k /home/test/
 ***
 
 SED
-=====================
+
 ### Replace in all files
 sed 's/10.0.226.250/10.0.230.4/g' *
+
+***
+
+Mount
+=====================
+### Cifs
+mount.cifs //192.168.1.10/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
