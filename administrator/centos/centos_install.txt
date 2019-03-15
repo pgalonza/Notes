@@ -63,7 +63,7 @@ gpgcheck=1
 MOUNT
 =====================
 ### cifs
-//"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,gid="" 0 0
+//"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,vers=3.0,gid="" 0 0
 
 ***
 
