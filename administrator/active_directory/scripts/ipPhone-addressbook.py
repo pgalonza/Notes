@@ -75,7 +75,7 @@ def get_all_information():
             user_list += "  <contact display_name=\"{}\" office_number=\"{}\" mobile_number=\"\" other_number=\"\" line=\"1\" " \
                          "ring=\"\" group_id_name=\"{}\" />\n".format(entry.displayName, str(entry.ipPhone).replace('-', ''), origin[1])
 
-    return create_all_xml_file(ou_list, user_list)
+    create_all_xml_file(ou_list, user_list)
 
 
 def create_xml_file(user_info, file_name, group_name):
