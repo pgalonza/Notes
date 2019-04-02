@@ -1,11 +1,16 @@
 ### Create a user with defaul group administrator and add him to the wheel group.
 useradd -m -N -g administrator -G wheel "user name"
 
+useradd -s /sbin/nologin -d /usr/lib/"service"  "user name"
+
 ### Create group
 groupadd "group name"
 
-### Delete groop
-delgroup "group name"
+### Delete user
+userdel squid
+
+### Delete group
+groupdel "group name"
 
 ### Add user to group
 usermod -a -G "group name" "user name"
