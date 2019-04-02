@@ -52,6 +52,7 @@ vm.swappiness=10
 Environment
 =====================
 /etc/environment
+export PYTHONPATH=/data/libraries_and_modules/python
 
 ***
 
@@ -83,4 +84,4 @@ rpm -Uhv http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum install yum-utils
 yum-config-manager --enable remi-php71
 yum install php71
-yum install -y php-mysql php-mbstring php-mcrypt php-devel php-xml php-gd
+yum install -y php-mysql php-mbstring php-mcrypt php-devel php-xml php-gd php-fpm
