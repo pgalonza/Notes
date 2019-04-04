@@ -5,8 +5,8 @@ import sys
 from ldap3 import Connection, Server, SUBTREE
 
 _ad_server = '***REMOVED***'
-_ad_user = '***REMOVED***@***REMOVED***'
-_ad_password = '***REMOVED***'
+_ad_user = ''
+_ad_password = ''
 _ad_search_tree = 'dc=corp,dc=***REMOVED***,dc=ru'
 _ad_ou = ('***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***')
 

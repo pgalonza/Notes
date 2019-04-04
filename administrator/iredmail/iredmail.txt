@@ -35,8 +35,8 @@ telnet localhost 143
 USE_EXISTING_MYSQL='YES' \
     MYSQL_SERVER_ADDRESS='***REMOVED***' \
     MYSQL_SERVER_PORT='3306' \
-    MYSQL_ROOT_USER='***REMOVED***' \
-    MYSQL_ROOT_PASSWD='***REMOVED***exe2011' \
+    MYSQL_ROOT_USER='' \
+    MYSQL_ROOT_PASSWD='' \
     MYSQL_GRANT_HOST='***REMOVED***' \
     bash iRedMail.sh
 
