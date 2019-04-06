@@ -84,3 +84,15 @@ yum install yum-utils
 yum-config-manager --enable remi-php71
 yum install php71
 yum install -y php-mysql php-mbstring php-mcrypt php-devel php-xml php-gd
+
+***
+
+Kernels
+=====================
+### Remove old kernels
+yum install yum-utils
+package-cleanup --oldkernels --count=2
+
+### Automatic remove old kernels
+/etc/yum.conf
+installonly_limit=3
