@@ -24,7 +24,7 @@ def get_information(file_name, mac):
 
     line = '#!version:1.0.0.1\n'
 
-    for i in range(0, 20):
+    for i in range(0, 30):
         number = config.get(mac, "linekey.{}.value".format(i + 1), fallback=False)
 
         if not number:
@@ -46,7 +46,7 @@ def get_information(file_name, mac):
         line += 'linekey.{}.line = 1\n'.format(i + 1)
         line += 'linekey.{}.value = {}\n'.format(i + 1, number)
 
-    for i in range(0, 20):
+    for i in range(0, 40):
         number = config.get(mac, "expansion_module.{}.value".format(i + 1), fallback=False)
 
         if not number:

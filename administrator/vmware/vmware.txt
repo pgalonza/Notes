@@ -1,3 +1,5 @@
+***
+
 General
 =====================
 Linux virtual machine with lost network

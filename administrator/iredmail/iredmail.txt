@@ -26,17 +26,20 @@ postmap -q testgroup@example.com ldap:/etc/postfix/ad_virtual_group_maps.cf
 telnet localhost 143
 
 
+* POP3 service: port 110 over TLS (recommended), or port 995 with SSL.
 * IMAP service: port 143 over TLS (recommended), or port 993 with SSL.
-* SMTP service: port 587 over TLS.
+* SMTP service: port 587 over TLS (recommended), or port 465 with SSL
+* CalDAV and CardDAV server addresses: https://<server>/SOGo/dav/<full email address>
+
 
 USE_EXISTING_MYSQL='YES' \
     MYSQL_SERVER_ADDRESS='***REMOVED***' \
     MYSQL_SERVER_PORT='3306' \
-    MYSQL_ROOT_USER='***REMOVED***' \
-    MYSQL_ROOT_PASSWD='***REMOVED***exe2011' \
+    MYSQL_ROOT_USER='' \
+    MYSQL_ROOT_PASSWD='' \
     MYSQL_GRANT_HOST='***REMOVED***' \
     bash iRedMail.sh
-    
+
 # Dovecot
 # %u - полное имя пользователя(с доменной частью: user@domail.local)
 # %n - короткое имя пользователя(без доменной части: user)

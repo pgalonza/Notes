@@ -25,6 +25,10 @@ echo "DROP USER 'name'@'localhost';" | mysql
 ### User as root privileges
 echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' with GRANT OPTION;" | mysql
 
+
+### Give backup privileges for user
+echo "GRANT RELOAD, PROCESS, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'backup'@'localhost'" | mysql
+
 ### Import dump
 gunzip < DUMP_FILE.sql.gz | mysql my_db --user= --password= --host=
 

@@ -49,14 +49,7 @@ defaults,noatime,nosuid,noexec,nodev 0 0
 
 MariaDB
 =====================
-/etc/yum.repos.d/MariaDB.repo
-# MariaDB 10.3 CentOS repository list - created 2018-07-30 12:11 UTC
-# http://downloads.mariadb.org/mariadb/repositories/
-[mariadb]
-name = MariaDB
-baseurl = http://yum.mariadb.org/10.3/centos7-amd64
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1
+yum install MariaDB-backup MariaDB-server MariaDB-client
 
 ***
 

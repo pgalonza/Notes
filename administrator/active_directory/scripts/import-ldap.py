@@ -10,13 +10,13 @@ _data = {'domain': '***REMOVED***'}
 _url = 'http://pddimp.yandex.ru/api2/admin/email/list'
 _headers = {'PddToken': '***REMOVED***'}
 _ad_server = '***REMOVED***'
-_ad_user = '***REMOVED***@***REMOVED***'
-_ad_password = '***REMOVED***'
+_ad_user = ''
+_ad_password = ''
 _ad_search_tree = 'ou=ЖКО № 25 (г. МО-3), ou=ZHKO28,dc=corp,dc=***REMOVED***,dc=ru'
 _mysql_server = '***REMOVED***'
 _mysql_database = 'asterisk'
-_mysql_user = '***REMOVED***'
-_mysql_password = '***REMOVED***exe2011'
+_mysql_user = ''
+_mysql_password = ''
 _csv_file = '/home/***REMOVED***/Documents/ldap-info.csv'
 
 

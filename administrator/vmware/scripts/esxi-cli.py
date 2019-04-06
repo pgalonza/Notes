@@ -6,7 +6,7 @@ import paramiko
 def main():
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect('***REMOVED***', username='***REMOVED***', password='***REMOVED***exe20!!')
+    ssh.connect('***REMOVED***', username='', password='')
     stdin, stdout, stderr = ssh .exec_command("vim-cmd vmsvc/getallvms")
     print(stdout.readlines())
 

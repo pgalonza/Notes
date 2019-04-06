@@ -52,6 +52,7 @@ vm.swappiness=10
 Environment
 =====================
 /etc/environment
+export PYTHONPATH=/data/libraries_and_modules/python
 
 ***
 
