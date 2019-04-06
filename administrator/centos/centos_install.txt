@@ -102,3 +102,11 @@ fs.file-max=
 * hard nproc 65535
 * soft nofile 65535
 * hard nofile 65535
+
+***
+
+Repository
+=====================
+### Exclude packages
+/etc/yum.repos.d/
+Exclude= 
