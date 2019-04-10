@@ -6,9 +6,9 @@ import requests
 from ldap3 import Connection, Server, SUBTREE, MODIFY_ADD, MODIFY_REPLACE
 import mysql.connector as mariadb
 
-_data = {'domain': '***REMOVED***'}
-_url = 'http://pddimp.yandex.ru/api2/admin/email/list'
-_headers = {'PddToken': '***REMOVED***'}
+_data_connect = {'fields': 'name, email, is_dismissed', 'per_page': 1500}
+_url_connect = 'https://api.directory.yandex.net/v6/users/'
+_headers_connect = {'Authorization': 'OAuth ', 'X-Org-ID': '', 'Accept': 'application/json'}
 _ad_server = '***REMOVED***'
 _ad_user = ''
 _ad_password = ''
@@ -27,14 +27,19 @@ def main():
     # active_directory_csv()
 
 def yandex_email():
-    r = requests.get(_url, headers=_headers, params=_data)
-    # print(r.url)
-    print(r.text)
-    parsed_string = json.loads(r.text)
-    accounts = parsed_string['accounts']
-
+    r_get = requests.get(_url_connect, headers=_headers_connect, params=_data_connect)
+    parsed_string = r_get.json()
+    print(parsed_string['per_page'], parsed_string['total'], parsed_string['pages'])
+    accounts = parsed_string['result']
+    i = 0
     for account in accounts:
-        print(account['login'], account['fio'])
+        i = i + 1
+        print(i, account['email'],  account['id'])
+        headers_connect = {'Authorization': 'OAuth ', 'X-Org-ID': '', 'Content-type': 'application/json'}
+        print('https://api.directory.yandex.net/v6/users/'+str(account['id'])+'/')
+        r_patch = requests.patch('https://api.directory.yandex.net/v6/users/'+str(account['id'])+'/', headers=headers_connect, json={'is_enabled': False})
+        print(r_patch)
+        print(r_patch.json())
 
 
 def active_directory_connector():
