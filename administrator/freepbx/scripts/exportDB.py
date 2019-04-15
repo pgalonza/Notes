@@ -12,7 +12,7 @@ _web_list_name = "index.html"
 def main():
     #Запись шапки файлов
     structure_file('head')
-    mariadb_connection = mariadb.connect(user='', password='', database='asterisk', host='***REMOVED***')
+    mariadb_connection = mariadb.connect(user='', password='', database='asterisk', host='')
     cursor = mariadb_connection.cursor()
 
     cursor.execute("SELECT extension, name FROM users ORDER BY name ASC")

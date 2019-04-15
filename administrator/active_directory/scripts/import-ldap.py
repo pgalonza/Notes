@@ -6,14 +6,14 @@ import requests
 from ldap3 import Connection, Server, SUBTREE, MODIFY_ADD, MODIFY_REPLACE
 import mysql.connector as mariadb
 
-_data = {'domain': '***REMOVED***'}
+_data = {'domain': ''}
 _url = 'http://pddimp.yandex.ru/api2/admin/email/list'
-_headers = {'PddToken': '***REMOVED***'}
-_ad_server = '***REMOVED***'
+_headers = {'PddToken': ''}
+_ad_server = ''
 _ad_user = ''
 _ad_password = ''
-_ad_search_tree = 'ou=ЖКО № 25 (г. МО-3), ou=ZHKO28,dc=corp,dc=***REMOVED***,dc=ru'
-_mysql_server = '***REMOVED***'
+_ad_search_tree = 'ou=, ou=,dc=,dc=,dc='
+_mysql_server = ''
 _mysql_database = 'asterisk'
 _mysql_user = ''
 _mysql_password = ''
@@ -62,9 +62,9 @@ def active_directory():
         dn = (json.loads(entry.entry_to_json())['dn'])
         login = entry.sAMAccountName
         print(login)
-        print(conn.modify(dn, {'mail': [(MODIFY_REPLACE, [str(login)+'@25***REMOVED***.***REMOVED***'])]}))
-        # print(conn.modify(dn, {'mail': [(MODIFY_DELETE, [str(login) + '@***REMOVED***'])]}))
-        # print(conn.modify(dn, {'mail': [(MODIFY_ADD, [str(login) + '@***REMOVED***.***REMOVED***'])]}))
+        print(conn.modify(dn, {'mail': [(MODIFY_REPLACE, [str(login)+'@'])]}))
+        # print(conn.modify(dn, {'mail': [(MODIFY_DELETE, [str(login) + '@'])]}))
+        # print(conn.modify(dn, {'mail': [(MODIFY_ADD, [str(login) + '@'])]}))
 
 
 def active_directory_mysql():

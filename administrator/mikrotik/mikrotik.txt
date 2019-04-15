@@ -8,5 +8,5 @@ chain=forward action=change-mss new-mss=clamp-to-pmtu passthrough=yes protocol=t
 
 ### Local network access to an external IP address
 /ip firewall nat
-add action=dst-nat chain=dstnat dst-address=***REMOVED*** dst-port=80,443 in-interface-list=LAN protocol=tcp src-address=10.0.192.0/20 to-addresses=***REMOVED***
-add action=masquerade chain=srcnat dst-address=***REMOVED*** dst-port=80,443 out-interface-list=LAN protocol=tcp src-address=10.0.192.0/20
+add action=dst-nat chain=dstnat dst-address=***REMOVED***_host dst-port=80,443 in-interface-list=LAN protocol=tcp src-address=10.0.192.0/20 to-addresses=local_host
+add action=masquerade chain=srcnat dst-address=local_host dst-port=80,443 out-interface-list=LAN protocol=tcp src-address=10.0.192.0/20

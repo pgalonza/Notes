@@ -4,10 +4,10 @@ import json
 import sys
 from ldap3 import Connection, Server, SUBTREE
 
-_ad_server = '***REMOVED***'
+_ad_server = ''
 _ad_user = ''
 _ad_password = ''
-_ad_search_tree = 'dc=corp,dc=***REMOVED***,dc=ru'
+_ad_search_tree = 'dc=,dc=,dc='
 _ad_ou = ('***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***')
 
 
@@ -26,7 +26,7 @@ def active_directory():
     conn = active_directory_connector()
     print(conn)
     for ou in _ad_ou:
-        _ad_search_tree = 'ou='+ou+',dc=corp,dc=***REMOVED***,dc=ru'
+        _ad_search_tree = 'ou='+ou+',dc=,dc=,dc='
         conn.search(_ad_search_tree,
                     '(&(mail=*)(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                     SUBTREE, attributes=['sAMAccountName', 'division', 'mail'])

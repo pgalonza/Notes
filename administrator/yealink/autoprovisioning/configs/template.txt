@@ -1,14 +1,14 @@
 #!version:1.0.0.1
 account.1.enable = 1
-account.1.sip_server.1.address = co_asterisk1.***REMOVED***
+account.1.sip_server.1.address = host
 account.1.sip_server.1.port = 5160
 auto_provision.mode = 1
-auto_provision.server.url = ***REMOVED***
-features.action_uri_limit_ip = ***REMOVED***
-security.user_password = admin:***REMOVED***
+auto_provision.server.url = host
+features.action_uri_limit_ip = host
+security.user_password = admin:admin
 local_time.time_zone=+3
 local_time.time_zone_name = Russia(Moscow)
-local_time.ntp_server1 = ***REMOVED***
+local_time.ntp_server1 = host
 local_time.ntp_server2 = 0.pool.ntp.org
 lang.gui = Russian
 lang.wui = Russian
@@ -17,5 +17,5 @@ auto_provision.weekly.mask = 12345
 auto_provision.weekly.begin_time = 7:00
 auto_provision.weekly.end_time = 9:00
 push_xml.sip_notify = 1
-local_contact.data.url =  http://***REMOVED***/contacts.xml
+local_contact.data.url =  http://host/contacts.xml
 voice_mail.number.1 = *97

@@ -5,9 +5,9 @@ import sys
 import pyVmomi
 from pyVim.connect import SmartConnect, Disconnect
 
-_vmware_host = '***REMOVED***'
-_vmeare_user = '***REMOVED***'
-_vmware_password = '***REMOVED***'
+_vmware_host = ''
+_vmeare_user = ''
+_vmware_password = ''
 
 def main():
     my_cluster = vmware_connector()

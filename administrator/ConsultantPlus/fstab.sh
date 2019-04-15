@@ -1,6 +1,4 @@
 #!/bin/bash
-# by p***REMOVED***
-# настройки
 
 firstStart=1ststart
 start=ConsultantPlus
@@ -40,7 +38,7 @@ echo '[ "$PLAYONLINUX" = "" ] && exit 0' >> $homeDir/.PlayOnLinux/shortcuts/$fir
 echo 'source "$PLAYONLINUX/lib/sources"' >> $homeDir/.PlayOnLinux/shortcuts/$firstStart
 echo "export WINEPREFIX=\"$homeDir/.PlayOnLinux/wineprefix/$virtDisk\"" >> $homeDir/.PlayOnLinux/shortcuts/$firstStart
 echo 'export WINEDEBUG="-all"' >> $homeDir/.PlayOnLinux/shortcuts/$firstStart
-echo "cd \"/home/***REMOVED***/.PlayOnLinux/wineprefix/$virtDisk/dosdevices/$diskName:\"" >> $homeDir/.PlayOnLinux/shortcuts/$firstStart
+echo "cd \"/home/name/.PlayOnLinux/wineprefix/$virtDisk/dosdevices/$diskName:\"" >> $homeDir/.PlayOnLinux/shortcuts/$firstStart
 echo 'POL_Wine cons.exe /linux /group /sprocess=0 "$@"' >> $homeDir/.PlayOnLinux/shortcuts/$firstStart
 
 touch $homeDir/.PlayOnLinux/shortcuts/$start
@@ -49,7 +47,7 @@ echo '[ "$PLAYONLINUX" = "" ] && exit 0' >> $homeDir/.PlayOnLinux/shortcuts/$sta
 echo 'source "$PLAYONLINUX/lib/sources"' >> $homeDir/.PlayOnLinux/shortcuts/$start
 echo "export WINEPREFIX=\"$homeDir/.PlayOnLinux/wineprefix/$virtDisk\"" >> $homeDir/.PlayOnLinux/shortcuts/$start
 echo 'export WINEDEBUG="-all"' >> $homeDir/.PlayOnLinux/shortcuts/$start
-echo "cd \"/home/***REMOVED***/.PlayOnLinux/wineprefix/$virtDisk/dosdevices/$diskName:\""  >> $homeDir/.PlayOnLinux/shortcuts/$start
+echo "cd \"/home/name/.PlayOnLinux/wineprefix/$virtDisk/dosdevices/$diskName:\""  >> $homeDir/.PlayOnLinux/shortcuts/$start
 echo 'POL_Wine cons.exe /linux "$@"' >> $homeDir/.PlayOnLinux/shortcuts/$start
 
 sudo chmod -R 755 $homeDir/.PlayOnLinux/shortcuts/

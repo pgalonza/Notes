@@ -6,7 +6,7 @@ $config['plugins'] = array('managesieve', 'enigma');
 ### config.inc.php
 $config['ldap_public']["global_ldap_abook"] = array(
     'name'              => 'Global LDAP Address Book',
-    'hosts'             => array('***REMOVED***'),
+    'hosts'             => array('host'),
     'port'              => 389,
     'use_tls'           => false,
     'ldap_version'      => '3',
@@ -14,11 +14,11 @@ $config['ldap_public']["global_ldap_abook"] = array(
     'user_specific'     => true,
 
     // Search mail users under same domain.
-    //'base_dn'       => 'domainName=%d,o=domains,dc=corp,dc=***REMOVED***,dc=ru',
-    //'bind_dn'       => 'mail=%u@%d,ou=Users,domainName=%d,o=domains,dc=corp,dc=***REMOVED***,dc=ru',
-    'base_dn'       => 'dc=corp,dc=***REMOVED***,dc=ru',
-    'bind_dn'       => '***REMOVED***',
-    'bind_pass'     => '***REMOVED***',
+    //'base_dn'       => 'domainName=%d,o=domains,dc=,dc=,dc=',
+    //'bind_dn'       => 'mail=%u@%d,ou=Users,domainName=%d,o=domains,dc=,dc=,dc=',
+    'base_dn'       => 'dc=,dc=,dc=',
+    'bind_dn'       => 'user',
+    'bind_pass'     => 'password',
     'hidden'        => false,
     'searchonly'    => false,
     'writable'      => false,
@@ -56,8 +56,8 @@ $config['ldap_public']["global_ldap_abook"] = array(
         'departments' => array(
             'name'    => 'Mailing Lists',
             'scope'   => 'sub',
-            //'base_dn' => 'domainName=%d,o=domains,dc=corp,dc=***REMOVED***,dc=ru',
-            'base_dn' => 'dc=corp,dc=***REMOVED***,dc=ru',
+            //'base_dn' => 'domainName=%d,o=domains,dc=,dc=,dc=',
+            'base_dn' => 'dc=,dc=,dc=',
             'filter'  => '(&(objectClass=group)(mail=*))',
             'name_attr' => 'cn',
             'email'     => 'mail',

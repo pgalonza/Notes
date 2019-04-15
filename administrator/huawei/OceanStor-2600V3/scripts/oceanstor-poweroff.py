@@ -5,10 +5,10 @@ import urllib3
 
 urllib3.disable_warnings()
 
-_nas_server = '***REMOVED***'
+_nas_server = 'host'
 _nas_port = '8088'
-_nas_user = '***REMOVED***'
-_nas_password = '***REMOVED***exe20!!'
+_nas_user = ''
+_nas_password = ''
 _nas_user_type = '0'
 _headers = None
 _nas_device_id = None

@@ -7,9 +7,9 @@ import time
 import pyVmomi
 from pyVim.connect import SmartConnect, Disconnect
 
-_vmware_host = '***REMOVED***'
-_vmeare_user = '***REMOVED***'
-_vmware_password = '***REMOVED***'
+_vmware_host = ''
+_vmeare_user = ''
+_vmware_password = ''
 #_vm_not_suspend = ('co_app1', 'co_app2', 'co_app3', 'co_app4', 'co_db1', 'co_db2', 'co_db3', 'co_db4', 'co_srv_dev')
 _vm_suspend = ('co_device1', 'co_elasticsearch1', 'co_helpdesk2', 'co_kibana1', 'co_logstash1', 'co_proxy1', 'Server_test', 'co_test1', 'co_helpdesk1', 'co_rusguard1', 'co_test_win7', 'co_srv_av')
 #_vm_suspend = ('co_device1')

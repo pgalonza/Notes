@@ -90,13 +90,13 @@ auth_cache_negative_ttl = 300
 auth_worker_max_count = 30
 
 ### dovecot-ldap.conf
-hosts           = ***REMOVED***:389
+hosts           = host:389
 ldap_version    = 3
 auth_bind       = yes
 #auth_bind_userdn = %u
-dn              = ***REMOVED***
-dnpass          = ***REMOVED***
-base            = ou=,dc=corp,dc=***REMOVED***,dc=ru
+dn              = user
+dnpass          = password
+base            = ou=,dc=,dc=,dc=
 scope           = subtree
 deref           = never
 

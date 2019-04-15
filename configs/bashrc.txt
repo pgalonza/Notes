@@ -9,7 +9,4 @@ alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ '
 PS1="[\[\e[38;5;81m\]\u\[\e[m\]@\[\e[38;5;82m\]\h\[\e[m\] \W]\\$ "
 
-alias ssh_silvana="ssh ***REMOVED***@192.168.0.230"
-alias ssh_darkness="ssh ***REMOVED***@192.168.0.109"
-alias ssh_mikrotik="ssh ***REMOVED***@192.168.0.1"
-alias ssh_wirless="ssh ***REMOVED***@192.168.0.2"
+alias ssh_mikrotik="ssh name@host"

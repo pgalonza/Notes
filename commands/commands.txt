@@ -136,7 +136,7 @@ SSL/TLS
 /etc/pki/ca-trust/source/anchors/
 update-ca-trust
 ### Check
-openssl s_client -tls1_1 -starttls imap -connect ***REMOVED***:143 -servername ***REMOVED***
+openssl s_client -tls1_1 -starttls imap -connect host:143 -servername host
 
 ***
 

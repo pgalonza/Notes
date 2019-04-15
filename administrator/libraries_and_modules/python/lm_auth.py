@@ -3,13 +3,13 @@
 import sys
 from ldap3 import Server, Connection
 
-_ad_server = '***REMOVED***'
-_ad_user = '***REMOVED***'
-_ad_password = '***REMOVED***'
+_ad_server = ''
+_ad_user = ''
+_ad_password = ''
 
-_ad_server_***REMOVED*** = '***REMOVED***'
-_ad_user_***REMOVED*** = '***REMOVED***@***REMOVED***.***REMOVED***'
-_ad_password_***REMOVED*** = '***REMOVED***'
+_ad_server_***REMOVED*** = ''
+_ad_user_***REMOVED*** = ''
+_ad_password_***REMOVED*** = ''
 _ad_ou_tree_***REMOVED*** = 'dc=***REMOVED***,dc=***REMOVED***,dc=ru'
 
 ad_ou_tree = {'all': ('dc=corp,dc=***REMOVED***,dc=ru','Все'), 'co': ('ou=co,dc=corp,dc=***REMOVED***,dc=ru', '.ЦУ'),
