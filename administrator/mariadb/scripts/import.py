@@ -4,9 +4,9 @@ import copy
 import mysql.connector as mariadb
 
 _mysql_server = ''
-_mysql_database = 'menagerie'
-_mysql_user = 'root'
-_mysql_password = 'root'
+_mysql_database = ''
+_mysql_user = ''
+_mysql_password = ''
 
 
 def main():

@@ -1,4 +1,8 @@
-### torrc
+# Tor config files
+
+_torrc_
+
+```
 ControlSocket /run/tor/control
 ControlSocketsGroupWritable 1
 CookieAuthentication 1
@@ -29,9 +33,12 @@ IPv6Exit 0
 BridgeRelay 1
 
 ExcludeNodes {ru}
+```
 
-### torsocks.conf
+_torsocks.conf_
+```
 TorAddress 0.0.0.0
 TorPort 9050
 OnionAddrRange 127.42.42.0/24
 AllowInbound 1
+```

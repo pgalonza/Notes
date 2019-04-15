@@ -1,48 +1,67 @@
-ATHER
-=====================
-### Кодировка
+# ATHER
+###### Кодировка
+```
 iconv -f cp1251 -t utf8
+
 file -bi
-ISO-8859-1
+```
 
-### Поиск по файлам
+###### Поиск по файлам
+```
 find -name *.c -type f | xargs grep open
+
 grep -R open --include="*.c".
-
-### dd c отображением статуса
+```
+###### dd c отображением статуса
+```
 pv -tpreb /dev/sdb | dd of=~/sdb.img bs=1M
+```
 
-### Выполнение команды в другой директории и возврат
+###### Выполнение команды в другой директории и возврат
+```
 (cd /tmp && ls)
+```
 
-### Команда в указанное время
+###### Команда в указанное время
+```
 echo "ls -l" | at midnight
+```
 
-### Выполнение предыдущей команды
+###### Выполнение предыдущей команды
+```
 sudo !!
+```
 
-### IO priority
+###### IO priority
+```
 ionice -c3
+```
 
-### Сommand replay
+###### Сommand replay
+```
 while true
 do
 command
 done;
+```
 
-### Automatic answer
+###### Automatic answer
+```
 yes/no | command
+```
 
-### Share directory http://$HOSTNAME:8000/
+###### Share directory http://$HOSTNAME:8000/
+```
 python -m SimpleHTTPServer
+```
 
-### Execute the command, without history.
+###### Execute the command, without history.
+```
 space command
+```
 
-***
-
-PERMISSION
-=====================
+# PERMISSION
+```
 usermod -u 2005 foo
 groupmod -g 3000 foo
 
@@ -50,53 +69,69 @@ find / -group 2000 -exec chgrp -h foo {} \;
 find / -user 1005 -exec chown -h foo {} \;
 
 usermod -g <NEWGID> <LOGIN>
+```
 
-***
+# NETSTAT
 
-NATSTAT
-=====================
-### Список всех открытых портов (TCP)
+###### Список всех открытых портов (TCP)
+```
 netstat -at
+```
 
-### Список всех открытых портов (UDP)
+###### Список всех открытых портов (UDP)
+```
 netstat -au
+```
 
-### Список только прослушиваемых портов (TCP)
+###### Список только прослушиваемых портов (TCP)
+```
 netstat -lt
+```
 
-### Статистика по всем открытым портам
+###### Статистика по всем открытым портам
+```
 netstat -s
+```
 
-### Подробное отображение списка с открытыми портами - добавлен PID и имя процессов
+###### Подробное отображение списка с открытыми портами - добавлен PID и имя процессов
+```
 netstat -p
-
-### Объединим все ключи в полезную команду для просмотра открытых TCP/UDP портов с именами процессов (может понадобиться root-доступ)
+```
+###### Объединим все ключи в полезную команду для просмотра открытых TCP/UDP портов с именами процессов (может понадобиться root-доступ)
+```
 netstat -ltupn
+```
 
-### Список подключенных хостов
+###### Список подключенных хостов
+```
 netstat -lantp | grep ESTABLISHED |awk '{print $5}' | awk -F: '{print $1}' | sort -u
+```
 
-***
+# TAR
 
-TAR
-=====================
-### Создание архива
+###### Создание архива
+```
 tar cvpzf archive.tar.gz /forpack
+```
 
-### Распаковка архива
+###### Распаковка архива
+```
 tar xfvz archive.tar.gz
 tar xfvj archive.tar.bz2 -C /var/www
+```
 
-### Просмотр содержимого
+###### Просмотр содержимого
+```
 tar -tf archive.tar
+```
 
-***
+# TMUX
 
-TMUX
-=====================
-### Запуск
+###### Запуск
+```
 tmux attach || tmux new -s session1
-
+```
+```
 Ctrl+b c — создать окошко;
 Ctrl+b 0...9 — перейти в такое-то окошко;
 Ctrl+b p — перейти в предыдущее окошко;
@@ -108,155 +143,214 @@ Ctrl+b % — разделить текущую панель на две, по в
 Ctrl+b " — разделить текущую панель на две, по горизонтали (это кавычка, которая около Enter, а не Shift+2);
 Ctrl+b →←↑↓ — переходить между панелями;
 Ctrl+b x — закрыть панель (а можно просто набрать exit в терминале).
+```
 
-### Воспроизводить нажатия клавиш во всех открытых окнах
+###### Воспроизводить нажатия клавиш во всех открытых окнах
+```
 tmux set synchronize-panes on
+```
 
-***
+# DHCP
 
-DHCP
-=====================
-### Get dhcp
+###### Get dhcp
+```
 dhclient -v
+```
 
-***
+# HASH
 
-HASH
-=====================
-### Take sum sha1
+###### Take sum sha1
+```
 echo -n "***REMOVED***1151" | sha1sum | tr [:lower:] [:upper:]
-### Take sum like shadow
+```
+###### Take sum like shadow
+```
 python -c 'import crypt; print crypt.crypt("actual password here", "$6$random_salt")'
+```
 
-***
+# SSL/TLS
 
-SSL/TLS
-=====================
-### Import
+###### Import
 /etc/pki/ca-trust/source/anchors/
+```
 update-ca-trust
-### Check
-openssl s_client -tls1_1 -starttls imap -connect host:143 -servername host
+```
 
-***
+###### Check
+```
+openssl s_client -tls1_1 -starttls imap -connect ***REMOVED***:143 -servername ***REMOVED***
+```
 
-Network
-=====================
-### Change interface speed
+# Network
+
+###### Change interface speed
+```
 ethtool -s eth0 speed 100 duplex full
+```
 
-***
-
-TREE
-=====================
+# TREE
+```
 tree -d -L 2
+```
 
-***
+# Open files, sockets
 
-Open files, sockets
-=====================
-### Show maximum of open files
+###### Show maximum of open files
+```
 cat /proc/sys/fs/file-max
-### Show allocated file descriptors, not use file descriptors, maximum of file descriptors
+```
+
+###### Show allocated file descriptors, not use file descriptors, maximum of file descriptors
+```
 cat /proc/sys/fs/file-nr
-### Show the number of open files on your system
+```
+
+###### Show the number of open files on your system
+```
 lsof | wc -l
 lsof | grep 29384
-### Show limits of process start by user
+```
+
+###### Show limits of process start by user
+```
 cat /proc/PID/limits
-### Show maximum of objects inotify per user
+```
+
+###### Show maximum of objects inotify per user
+```
 /proc/sys/fs/inotify/max_user_instances
-### Show maximum of watch files and directories per object inotify
+```
+
+###### Show maximum of watch files and directories per object inotify
+```
 /proc/sys/fs/inotify/max_user_watches
-### Show maximum of events in queued
+```
+
+###### Show maximum of events in queued
+```
 /proc/sys/fs/inotify/max_queued_events
-### Show shell process of user limits
+```
+
+###### Show shell process of user limits
+```
 ulimit -a
-### Show settings
+```
+
+###### Show settings
+```
 sysctl -a
-### Accept changes
+```
+
+###### Accept changes
+```
 sysctl -p
-### Change process limits
+```
+
+###### Change process limits
+```
 prlimit --pid PID --nofile=1024:1024
+```
 
+# TIME
 
-***
-
-TIME
-=====================
-### View
+###### View
+```
 timedatectl status
+```
 
-***
+# FAIL2BAN
 
-FAIL2BAN
-=====================
-### View
+###### View
+```
 fail2ban-client status
 fail2ban-client status asterisk-udp
-### Unban
+```
+
+###### Unban
+```
 fail2ban-client set asterisk-udp unbanip ***REMOVED***
+```
 
-***
+# IPTABLES
 
-IPTABLES
-=====================
-### View
+###### View
+```
 iptables -n -L -v --line-numbers
+```
 
-**
-
-Dovecot
-=====================
-# Quota
+# Dovecot
+###### Quota
+```
 dovecot set quota
-# Reload the dovecot
+```
+###### Reload the dovecot
+```
 doveadm reload
-# Show who connected
+```
+
+###### Show who connected
+```
 doveadm who -1
+```
+
 # Authorization cache
+```
 doveadm auth cache
+```
 
-***
+# Make files
 
-Make files
-=====================
-### Make emty files with size
+###### Make emty files with size
+```
 dd if=/dev/zero of=output.dat  bs=24M  count=1
 dd if=/dev/zero of=output.dat  bs=1M  count=24
+```
 
-***
+# Mail
 
-Mail
-=====================
-### Mail console client
+###### Mail console client
+```
 mutt -f
+```
 
-***
+# Reboot
 
-Reboot
-=====================
-### Problems with software
+###### Problems with software
+```
 reboot -f
-### Problems with kernel, mount, libc
+```
+
+###### Problems with kernel, mount, libc
+```
 echo b>/proc/sysrq-trigger
-### Problems with kernel and hardware
+```
+
+###### Problems with kernel and hardware
+```
 ipmitool chassis power cycle
-### Problems with kernel and hardware without open console
+```
+
+###### Problems with kernel and hardware without open console
+```
 ipmitool -H ipmi.server.local chassis power cycle
+```
 
-***
+# PS
 
-PS
-=====================
-### Sort by RAM
+###### Sort by RAM
+```
 ps aux | sort -nk 4
-### Sort by CPU
-ps aux | sort -nk 3
+```
 
-RAM, SWAP
-=====================
-### Memory use
+###### Sort by CPU
+```
+ps aux | sort -nk 3
+```
+
+# RAM, SWAP
+
+###### Memory use
+```
 cat /proc/meminfo
 
 ps axo rss,comm,pid \
@@ -264,88 +358,105 @@ ps axo rss,comm,pid \
 END { for (proc in proc_list) { printf("%d\t%s\n", \
 proc_list[proc "," 1],proc); }}' | sort -n | tail -n 10 | sort -rn \
 | awk '{$1/=1024;printf "%.0fMB\t",$1}{print $2}'
+```
 
-***
+# SYSTEMCTL
 
-systemctl
-=====================
-### Systemd reload
+###### Systemd reload
+```
 systemctl daemon-reload
+```
 
-***
-
-Environment
-=====================
+# Environment
+```
 export var=
 export var=$var
+```
 
-***
-
-POSTFIX
-=====================
+# POSTFIX
+````
 postfix check
 postconf
+```
 
-### Queue view
+###### Queue view
+```
 mailq | less
 postqueue -p | less
 mailq | grep Request
 find /var/spool/postfix/deferred -type f | wc -l
 find /var/spool/postfix/active -type f | wc -l
 find /var/spool/postfix/incoming -type f | wc –l
+```
 
-### Queue send
+###### Queue send
+```
 postqueue -f
 mailq -q
 postsuper -r ALL
 postqueue -i <ID-mail>
 postsuper -r <ID-mail>
 postqueue -s <domain>
+```
 
-### Queue drop
+###### Queue drop
+```
 postsuper -d ALL
 postsuper -d deferred
 postsuper -d <ID-mail>
+```
 
-### Queue halt
+###### Queue halt
+```
 postsuper -h <ID-mail>
 postsuper -h ALL
 postsuper -h deferred
+```
 
-### Queue run
+###### Queue run
+```
 postsuper -H <ID-mail>
 postsuper -H ALL
+```
 
-***
-
-ACL
-=====================
+# ACL
+```
 umask
-### View premissions
+```
+
+###### View premissions
+```
 getfacl
-### Add default permission
+```
+
+###### Add default permission
+```
 setfacl -d -m u::rwx,g::r-x,o::r-x /home/test/
-### Remove default permission
+```
+
+###### Remove default permission
+```
 setfacl -k /home/test/
 setfacl -R -k /home/test/
+```
 
-***
+# SED
 
-SED
-=====================
-### Replace in all files
+###### Replace in all files
+```
 sed 's/10.0.226.250/10.0.230.4/g' *
+```
 
-***
+# Mount
 
-Mount
-=====================
-### Cifs
+###### Cifs
+```
 mount.cifs //192.168.1.10/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
+```
 
-***
+# Chromium
 
-Chromium
-=====================
-### Proxy
+###### Proxy
+```
 chromium --proxy-server="socks://192.168.0.230:9050"
+```

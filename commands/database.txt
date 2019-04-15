@@ -1,36 +1,59 @@
-### Create database
+###### Create database
+```
 echo "CREATE DATABASE `my_db` CHARACTER SET utf8 ***REMOVED***LLATE utf8_general_ci;" | mysql
+```
 
-### Create user
+###### Create user
+```
 echo "CREATE USER 'name'@'localhost' IDENTIFIED BY 'password';" | mysql
+```
 
-### Give privileges for user
+###### Give privileges for user
+```
 echo "GRANT ALL PRIVILEGES ON `db`.* TO 'name'@'localhost';" | mysql
+```
 
-### Reloads the privileges
+###### Reloads the privileges
+```
 echo "FLUSH PRIVILEGES;" | mysql
+```
 
-### Edit user account
+###### Edit user account
+```
 echo "RENAME USER 'name'@'localhost' TO 'modx'@'%';" | mysql
+```
 
-### Last entry
-SELECT MAX(`my_table`) FROM my_db`.cdr;
+###### Last entry
+```
+SELECT MAX(`my_table`) FROM my_db;
+```
 
-### Set password for user
+###### Set password for user
+```
 echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';" | mysql
+```
 
-### Delete user
+###### Delete user
+```
 echo "DROP USER 'name'@'localhost';" | mysql
+```
 
-### User as root privileges
+###### User as root privileges
+```
 echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' with GRANT OPTION;" | mysql
+```
 
-
-### Give backup privileges for user
+###### Give backup privileges for user
+```
 echo "GRANT RELOAD, PROCESS, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'backup'@'localhost'" | mysql
+```
 
-### Import dump
+###### Import dump
+```
 gunzip < DUMP_FILE.sql.gz | mysql my_db --user= --password= --host=
+```
 
-### Export dump
+###### Export dump
+```
 mysqldump  --skip-extended-insert my_db | gzip > ${DIR}/zabbix_${NAME}.sql.gz
+```

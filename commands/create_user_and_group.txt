@@ -1,22 +1,36 @@
-### Create a user with defaul group administrator and add him to the wheel group.
+###### Create a user with defaul group administrator and add him to the wheel group.
+```
 useradd -m -N -g administrator -G wheel "user name"
 
 useradd -s /sbin/nologin -d /usr/lib/"service"  "user name"
+```
 
-### Create group
+###### Create group
+```
 groupadd "group name"
+```
 
-### Delete group
+###### Delete group
+```
 delgroup "group name"
+```
 
-### Delete user
+###### Delete user
+```
 userdel "user name"
+```
 
-### Add user to group
+###### Add user to group
+```
 usermod -a -G "group name" "user name"
+```
 
-### Make the default group
+###### Make the default group
+```
 usermod -g "group name" "user name"
+```
 
-### Remove user from group
+###### Remove user from group
+```
 usermod -R "group name" "user name"
+```
