@@ -1,21 +1,32 @@
-### Number of characters in the display name field
-/var/www/html/admin/assets/js/pbxlib*
-function isCorrectLengthExtensions(s)
+###### Number of characters in the display name field
 
-### Activation of text messages
-sip_general_custom.conf
+_/var/www/html/admin/assets/js/pbxlib*_
+
+```
+function isCorrectLengthExtensions(s)
+```
+
+###### Activation of text message
+
+*sip_general_custom.conf*
+```
 accept_ou***REMOVED***call_message = yes
 ou***REMOVED***call_message_context = messages
 auth_message_requests = no
+```
 
-### Extensions_custom.conf
+*Extensions_custom.conf*
+```
 [messages]
 exten => _XXXXX,1,MessageSend(sip:${EXTEN},"${CALLERID(name)}"${MESSAGE(from)})
+```
 
-### Sounds
-http://downloads.asterisk.org/pub/telephony/sounds/
+###### Sounds
+[Download](http://downloads.asterisk.org/pub/telephony/sounds/)
 
-### odbc.ini
+
+_odbc.ini_
+```
 Description=
 Driver=MySQL
 Server=
@@ -26,8 +37,10 @@ Port=3306
 Socket=/var/lib/mysql/mysql.sock
 Option=3
 Charset=utf8
+```
 
-### cdr_mysql.conf
+*cdr_mysql.conf*
+```
 [global]
 hostname=
 dbname=
@@ -35,6 +48,8 @@ table=cdr
 password=
 user=
 port=3306
-
-### cdr.conf
+```
+_cdr.conf_
+```
 enable=yes
+```

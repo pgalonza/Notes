@@ -1,5 +1,5 @@
-### ad_sender_login_maps.cf
-
+_ad_sender_login_maps.cf_
+```
 server_host     = host
 server_port     = 389
 version         = 3
@@ -12,9 +12,10 @@ scope           = sub
 query_filter    = (&(|(mail=%s)(userPrincipalName=%s))(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
 result_attribute= mail
 debuglevel      = 0
+```
 
-### ad_virtual_group_maps.cf
-
+_ad_virtual_group_maps.cf_
+````
 server_host     = host
 server_port     = 389
 version         = 3
@@ -29,9 +30,10 @@ special_result_attribute = member
 leaf_result_attribute = mail
 #result_attribute= userPrincipalName
 debuglevel      = 0
+```
 
-### ad_virtual_mailbox_maps.cf
-
+_ad_virtual_mailbox_maps.cf_
+```
 server_host     = host
 server_port     = 389
 version         = 3
@@ -45,9 +47,10 @@ query_filter    = (&(objectCategory=person)(mail=%s)(!(userAccountControl:1.2.84
 result_attribute= mail
 result_format   = %d/%u/Maildir/
 debuglevel      = 0
+```
 
-### main.cf
-
+_main.cf_
+```
 myhostname = host
 myorigin = $mydomain
 mydomain = mail_domain
@@ -58,16 +61,20 @@ smtpd_sasl_local_domain = mail_domain
 message_size_limit = 52428800
 inet_protocols = ipv4
 mynetworks = 127.0.0.1 [::1] 10.0.0.0/16 172.16.0.0/12
+```
 
-### queue
+###### Queue
+```
 bounce_queue_lifetime = 7d
 maximal_queue_lifetime = 7d
 minimal_backoff_time = 3h
 maximal_backoff_time = 9h
 queue_run_delay = 3m
+```
 
-### transport
-
+###### Transport
+```
 .mail_domain dovecot
 mail_domain dovecot
 *      error:mail for local use only
+```

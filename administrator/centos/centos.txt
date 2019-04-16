@@ -1,70 +1,86 @@
-MOUNT
-=====================
-### cifs
+# MOUNT
+
+###### cifs
+```
 //"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,vers=3.0,gid="" 0 0
+```
 
-***
 
-File, socket limits
-=====================
-### /etc/sysctl.conf
-### Maximum of objects inotify per user
+# File, socket limits
+
+_/etc/sysctl.conf_
+
+###### Maximum of objects inotify per user
+```
 fs.inotify.max_user_instances=
+```
 
-### Maximum of watch files and directories per object inotify
+###### Maximum of watch files and directories per object inotify
+```
 fs.inotify.max_user_watches=
+```
 
-### Maximum of events in queued
+###### Maximum of events in queued
+```
 fs.inotify.max_queued_events=
+```
 
-### Maximum of open descriptors
+###### Maximum of open descriptors
+```
 fs.file-max=
+```
 
-### Maximum queue size of packet
+###### Maximum queue size of packet
+```
 net.core.netdev_max_backlog =
+```
 
-### Maximum number of open sockets waiting to be connected
+###### Maximum number of open sockets waiting to be connected
+```
 net.core.somaxconn =
+```
 
-### PAM limits configuration
-###/etc/security/limits.conf
-###/etc/security/
+###### PAM limits configuration
+_/etc/security/limits.conf_, _/etc/security/_
+```
 * soft nproc 65535
 * hard nproc 65535
 * soft nofile 65535
 * hard nofile 65535
+```
 
-### /etc/systemd/system.conf, /etc/systemd/user.conf, /etc/systemd/<systemd_unit>/override.conf
+###### _/etc/systemd/system.conf_, _/etc/systemd/user.conf_, */etc/systemd/<systemd_unit>/override.conf*
+```
 DefaultLimitNOFILE=
+```
 
-### /lib/systemd/system/<service>, /etc/systemd/*, /usr/lib/systemd/system/<service>
+###### _/lib/systemd/system/<service>_, _/etc/systemd/*_, _/usr/lib/systemd/system/<service>_
+```
 LimitNOFILE=
+```
 
-***
+# Swap
 
-Swap
-=====================
-### /etc/sysctl.conf
+###### _/etc/sysctl.conf_
+```
 vm.swappiness=10
+```
 
-***
+# Environment
 
-Environment
-=====================
-/etc/environment
+_/etc/environment_
+```
 export PYTHONPATH=/data/libraries_and_modules/python
+```
 
-***
-
-TFTP
-=====================
+# TFTP
+```
 server_args             = -u tftpd -s /var/lib/tftpboot --verbose/-vvv
 disable                 = no
+```
 
-***
-
-Django/CMS
-=====================
+# Django/CMS
+```
 pip install --upgrade virtualenv
 virtualenv env
 source env/bin/activate
@@ -75,25 +91,27 @@ pip3.6 install mysqlclient
 python3.6 manage.py migrate
 python3.6 manage.py runserver
 python3.6 manage.py startapp firstapp
+```
 
-***
-
-PHP-FPM
-=====================
+# PHP-FPM
+```
 rpm -Uhv http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum install yum-utils
 yum-config-manager --enable remi-php71
 yum install php71
 yum install -y php-mysql php-mbstring php-mcrypt php-devel php-xml php-gd
+```
 
-***
+# Kernels
 
-Kernels
-=====================
-### Remove old kernels
+###### Remove old kernels
+```
 yum install yum-utils
 package-cleanup --oldkernels --count=2
+```
 
-### Automatic remove old kernels
-/etc/yum.conf
+###### Automatic remove old kernels
+_/etc/yum.conf_
+```
 installonly_limit=3
+```

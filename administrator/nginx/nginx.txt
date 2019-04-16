@@ -1,11 +1,13 @@
-General
-=====================
-### Disable ignore invalid headers
+# General
+
+###### Disable ignore invalid headers
+```
 echo "ignore_invalid_headers off;" >> /etc/nginx/nginx.conf
+```
 
-***
+# FastCGI
 
-FastCGI
-=====================
-### Time out
+###### Time out
+```
 fastcgi_read_timeout = 60
+```

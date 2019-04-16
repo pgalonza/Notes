@@ -1,4 +1,5 @@
-REMOTE ***REMOVED***MMANDS
-=====================
+###### REMOTE ***REMOVED***MMANDS
+```
 EnableRemoteCommands=1
 LogRemoteCommands=1
+```

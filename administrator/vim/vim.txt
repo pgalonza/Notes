@@ -1,4 +1,6 @@
-Commands
-=====================
-### Disable visual mode
+# Commands
+
+###### Disable visual mode
+```
 set mouse-=a
+```
