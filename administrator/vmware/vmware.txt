@@ -12,9 +12,9 @@ re-register the virtual machine
 * Open *.vmx
 
 
-*/***REMOVED***s/volumes/datastore_name/virtual_machine_folder/*
+*/vmfs/volumes/datastore_name/virtual_machine_folder/*
 
 ```
-sched.swap.dir = /***REMOVED***s/volumes/datastore_name/dir_name
+sched.swap.dir = /vmfs/volumes/datastore_name/dir_name
 #sched.swap.derivedName = xxx
 ```

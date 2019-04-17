@@ -161,11 +161,11 @@ dhclient -v
 
 ###### Take sum sha1
 ```
-echo -n "***REMOVED***1151" | sha1sum | tr [:lower:] [:upper:]
+echo -n "actual_password_here" | sha1sum | tr [:lower:] [:upper:]
 ```
 ###### Take sum like shadow
 ```
-python -c 'import crypt; print crypt.crypt("actual password here", "$6$random_salt")'
+python -c 'import crypt; print crypt.crypt("actual_password_here", "$6$random_salt")'
 ```
 
 # SSL/TLS
@@ -178,7 +178,7 @@ update-ca-trust
 
 ###### Check
 ```
-openssl s_client -tls1_1 -starttls imap -connect ***REMOVED***:143 -servername ***REMOVED***
+openssl s_client -tls1_1 -starttls imap -connect host:143 -servername host_name
 ```
 
 # Network
@@ -268,7 +268,7 @@ fail2ban-client status asterisk-udp
 
 ###### Unban
 ```
-fail2ban-client set asterisk-udp unbanip ***REMOVED***
+fail2ban-client set asterisk-udp unbanip ip_address
 ```
 
 # IPTABLES
@@ -444,19 +444,19 @@ setfacl -R -k /home/test/
 
 ###### Replace in all files
 ```
-sed 's/10.0.226.250/10.0.230.4/g' *
+sed 's/old_text/new_text/g' *
 ```
 
 # Mount
 
 ###### Cifs
 ```
-mount.cifs //192.168.1.10/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
+mount.cifs //host/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
 ```
 
 # Chromium
 
 ###### Proxy
 ```
-chromium --proxy-server="socks://192.168.0.230:9050"
+chromium --proxy-server="socks://host:9050"
 ```

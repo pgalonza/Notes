@@ -36,7 +36,7 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
         hwiBMC MODULE-IDENTITY
               LAST-UPDATED 	"201110250000Z"  
               ORGANIZATION 	"Huawei Technologies Co.,Ltd."
-              ***REMOVED***NTACT-INFO
+              CONTACT-INFO
               				" http://www.huawei.com
                    	          Zip:518129   E-mail:support@huawei.com "    
               DESCRIPTION
@@ -2844,8 +2844,8 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 				fanBackplane(25),
 				psuBackplane(26),
 				ioBoard(36),
-				pcieTran***REMOVED***erCard(39),
-				m2Tran***REMOVED***erCard(46),
+				pcieTransferCard(39),
+				m2TransferCard(46),
 				gpuBoard(65),
 				passThroughCard(68),
 				logicalDrive(69),
@@ -3581,7 +3581,7 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 				bit1 - SNMP:   0 disabled; 1 enabled
 				bit2 - IPMI:   0 disabled; 1 enabled
 				bit3 - SSH:    0 disabled; 1 enabled
-				bit4 - ***REMOVED***TP:   0 disabled; 1 enabled
+				bit4 - SFTP:   0 disabled; 1 enabled
 				bit6 - Local:  0 disabled; 1 enabled
 				bit7 - Redfish:0 disabled; 1 enabled"
 			::= { userDescriptionEntry 7 }
@@ -5967,7 +5967,7 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 	csrStatus OBJECT-TYPE
 			SYNTAX INTEGER
 				{
-				notStartedOrHasSucces***REMOVED***ullyCompleted (1),
+				notStartedOrHasSuccessfullyCompleted (1),
 				beingGenerated (2),
 				failsGenerated (3)
 				}
@@ -5975,7 +5975,7 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 			STATUS current
 			DESCRIPTION
 				"The status of generating CSR.
-				CSR generation has not started or has succes***REMOVED***ully completed(1)
+				CSR generation has not started or has successfully completed(1)
 				A CSR is being generated (2)
 				A CSR fails to be generated (3)."
 			::= { csrRequestInfo 10 }  			
@@ -6714,14 +6714,14 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 				"System firmware hang deassert"
 			::= { hwSysFWProgress 18 }
     
-		hwPS2US***REMOVED***ault NOTIFICATION-TYPE
+		hwPS2USBFault NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS  current
 			DESCRIPTION
 				"Unrecoverable PS/2 or USB keyboard failure"
 			::= { hwSysFWProgress 1793 }
 
-		hwPS2US***REMOVED***aultDeassert NOTIFICATION-TYPE
+		hwPS2USBFaultDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS  current
 			DESCRIPTION
@@ -9222,13 +9222,13 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 				"Large fan speed deviation. (Cleared)"
 			::= { hwFanEvent 8 }
 	hwDiskBackplaneEvent OBJECT IDENTIFIER ::= {hwServerTRAPObjectV2 6 }
-		hwDiskBackplaneP***REMOVED***ault NOTIFICATION-TYPE
+		hwDiskBackplanePSFault NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
 				"Hard disk backplane power failure. (Generated)"
 			::= { hwDiskBackplaneEvent 1 }
-		hwDiskBackplaneP***REMOVED***aultDeassert NOTIFICATION-TYPE
+		hwDiskBackplanePSFaultDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
@@ -10525,13 +10525,13 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 			DESCRIPTION
 				"Mainboard CPLD self-test status. (Cleared)"
 			::= { hwMainboardEvent 22 }
-		hwMainboardP***REMOVED***ault NOTIFICATION-TYPE
+		hwMainboardPSFault NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
 				"Mainboard power supply failure. (Generated)"
 			::= { hwMainboardEvent 23 }
-		hwMainboardP***REMOVED***aultDeassert NOTIFICATION-TYPE
+		hwMainboardPSFaultDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
@@ -10673,25 +10673,25 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
-				"Large voltage difference on mainboard MO***REMOVED***ET (major alarm). (Generated)"
+				"Large voltage difference on mainboard MOSFET (major alarm). (Generated)"
 			::= { hwMainboardEvent 47 }
 		hwMainboardMOSOverVoltageMajorDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
-				"Large voltage difference on mainboard MO***REMOVED***ET (major alarm). (Cleared)"
+				"Large voltage difference on mainboard MOSFET (major alarm). (Cleared)"
 			::= { hwMainboardEvent 48 }
 		hwMainboardMOSOverVoltageCritical NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
-				"Large voltage difference on mainboard MO***REMOVED***ET (critical alarm). (Generated)"
+				"Large voltage difference on mainboard MOSFET (critical alarm). (Generated)"
 			::= { hwMainboardEvent 49 }
 		hwMainboardMOSOverVoltageCriticalDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
-				"Large voltage difference on mainboard MO***REMOVED***ET (critical alarm). (Cleared)"
+				"Large voltage difference on mainboard MOSFET (critical alarm). (Cleared)"
 			::= { hwMainboardEvent 50 }
 		hwMainboardStdby5VLowerVoltage NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
@@ -11015,13 +11015,13 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
-				"Failed to read MO***REMOVED***ET voltage. (Generated)"
+				"Failed to read MOSFET voltage. (Generated)"
 			::= { hwMainboardEvent 123 }
 		hwMainboardMOSAccessVoltageFailureDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
-				"Failed to read MO***REMOVED***ET voltage. (Cleared)"
+				"Failed to read MOSFET voltage. (Cleared)"
 			::= { hwMainboardEvent 124 }
 		hwMainboardAccessFRULableFailure NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
@@ -11883,13 +11883,13 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 			DESCRIPTION
 				"Active-standby iBMC heartbeat abnormal. (Cleared)"
 			::= { hwBMCEvent 26 }
-		hwBM***REMOVED***PLogSpaceExceedThreshold NOTIFICATION-TYPE
+		hwBMCOPLogSpaceExceedThreshold NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
 				"Operation log is about to full. (Generated)"
 			::= { hwBMCEvent 27 }
-		hwBM***REMOVED***PLogSpaceExceedThresholdDeassert NOTIFICATION-TYPE
+		hwBMCOPLogSpaceExceedThresholdDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
@@ -12226,13 +12226,13 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 			DESCRIPTION
 				"Failed to read Base plane CPU temperature. (Cleared)"
 			::= { hwBasePlaneEvent 42 }
-		hwBasePlaneP***REMOVED***ault NOTIFICATION-TYPE
+		hwBasePlanePSFault NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
 				"Base plane PS fault. (Generated)"
 			::= { hwBasePlaneEvent 43 }
-		hwBasePlaneP***REMOVED***aultDeassert NOTIFICATION-TYPE
+		hwBasePlanePSFaultDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
@@ -12864,13 +12864,13 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 			DESCRIPTION
 				"Failed to read mezzanine card 1.8V voltage. (Cleared)"
 			::= { hwSwitchMezzEvent 64 }
-        hwSwitchMezzP***REMOVED***ault NOTIFICATION-TYPE
+        hwSwitchMezzPSFault NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
 				"Mezzanine card ps fault. (Generated)"
 			::= { hwSwitchMezzEvent 65 }
-		hwSwitchMezzP***REMOVED***aultDeassert NOTIFICATION-TYPE
+		hwSwitchMezzPSFaultDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
@@ -14488,13 +14488,13 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 			DESCRIPTION
 				"PIC card removed."
 			::= { hwPICCard 23 }
-		hwPICCardP***REMOVED***ault NOTIFICATION-TYPE
+		hwPICCardPSFault NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
 				"PIC card power failure. (Generated)"
 			::= { hwPICCard 25 }
-		hwPICCardP***REMOVED***aultDeassert NOTIFICATION-TYPE
+		hwPICCardPSFaultDeassert NOTIFICATION-TYPE
 			OBJECTS { hwTrapSeq, hwTrapSensorName, hwTrapEvent, hwTrapSeverity, hwTrapEventCode, hwTrapEventData2, hwTrapEventData3, hwTrapServerIdentity, hwTrapLocation, hwTrapTime }
 			STATUS current
 			DESCRIPTION
@@ -15506,36 +15506,36 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 			DESCRIPTION
 				"Manufacturer firmware version of security module."
 			::= { securityModuleProperty 5 }
---    ****** fileTran***REMOVED***er Information *******************************
-    fileTran***REMOVED***er OBJECT IDENTIFIER ::= { hwiBMC 35 }
+--    ****** fileTransfer Information *******************************
+    fileTransfer OBJECT IDENTIFIER ::= { hwiBMC 35 }
 	
-	fileTran***REMOVED***erUrl OBJECT-TYPE
+	fileTransferUrl OBJECT-TYPE
 			SYNTAX DisplayString
 			MAX-ACCESS read-write
 			STATUS current
 			DESCRIPTION
-				"The file tran***REMOVED***er URL format is: <download/upload><ID><protocol://[username:password@]IP[:port]/directory/filename> 
+				"The file transfer URL format is: <download/upload><ID><protocol://[username:password@]IP[:port]/directory/filename> 
 				 The maximum length of the URL is 1024 bytes.
 				 The parameters in the URL are described as follows:
 				 	 The download means download file to BMC.
 				 	 The upload means upload file to the destination server. 
 				 	 The ID is the file ID, ranging from 0 to 255.
-				 	 The supported protocols include https, ***REMOVED***tp, cifs, scp, and nfs.
+				 	 The supported protocols include https, sftp, cifs, scp, and nfs.
 				 	 The username and password are those of the destination server. 
 				 	 The IP can be set to an IPv4/IPv6 address or a domain name.
 				 	 The directory and filename are those on the destination server.
 				 Example URLs are as follows: 
 				 	 download;0;https://root:test1234@192.168.2.13:443/data/display0.ini
-				 	 upload;1;***REMOVED***tp://root:test1234@[2001::178]/home/options0.ini
+				 	 upload;1;sftp://root:test1234@[2001::178]/home/options0.ini
 				 The URL can contain only letters, digits, and special characters. The directory or file name cannot contain @."
-			::= { fileTran***REMOVED***er 1 }                                                                                                                           
+			::= { fileTransfer 1 }                                                                                                                           
 	
-	fileTran***REMOVED***erState OBJECT-TYPE
+	fileTransferState OBJECT-TYPE
 			SYNTAX INTEGER
 			MAX-ACCESS read-only
 			STATUS current
 			DESCRIPTION
-				"Information about file tran***REMOVED***er state.
+				"Information about file transfer state.
 				the value defined as:
 				  -1  : unknown error,
 				  -101: download unavailable,
@@ -15547,8 +15547,8 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 				  -107: upload file unavailable,
 				  -108: protocol not supported,
 				  -109: url format error,
-				  [0,100]:represents tran***REMOVED***er progress in percentage while file being tran***REMOVED***ered."
-			::= { fileTran***REMOVED***er 2 } 
+				  [0,100]:represents transfer progress in percentage while file being transfered."
+			::= { fileTransfer 2 } 
       			                                                     
 		                                       
 --    ****** RAID Controller Information *******************************
@@ -16399,7 +16399,7 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 				255: Unknown (read only)
 				
 				Note: 1. CacheCade logical drive can't be set as bootable drive.
-				      2. Noraml logical drive(not cachecade) during offline state can be set bootable succes***REMOVED***ully, but readback value of logicalDriveBootable
+				      2. Noraml logical drive(not cachecade) during offline state can be set bootable successfully, but readback value of logicalDriveBootable
 				         is still 'No' unless change the logical drive state to online."
 			::= { logicalDriveDescriptionEntry 18 }
 		
@@ -16885,7 +16885,7 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 					 Filepath  e.g.: /tmp/config.xml
 					 File URL      : protocol://username:password@IP:[port]/directory/filename
 						 The parameters in the URL are described as follows:
-						 The protocol must be https,***REMOVED***tp,cifs,scp or nfs.
+						 The protocol must be https,sftp,cifs,scp or nfs.
 						 The username and password are those of the destination server.
 						 The directory and filename are those on the destination server."
 				::= { configuration 1 }
@@ -16900,7 +16900,7 @@ HUAWEI-SERVER-IBMC-MIB DEFINITIONS ::= BEGIN
 					 Filepath  e.g.: /tmp/config.xml
 					 File URL      : protocol://username:password@IP:[port]/directory/filename
 						 The parameters in the URL are described as follows:
-						 The protocol must be https,***REMOVED***tp,cifs,scp or nfs.
+						 The protocol must be https,sftp,cifs,scp or nfs.
 						 The username and password are those of the destination server.
 						 The directory and filename are those on the destination server."
 				::= { configuration 2 }

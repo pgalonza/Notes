@@ -7,23 +7,16 @@ _ad_server = ''
 _ad_user = ''
 _ad_password = ''
 
-_ad_server_***REMOVED*** = ''
-_ad_user_***REMOVED*** = ''
-_ad_password_***REMOVED*** = ''
-_ad_ou_tree_***REMOVED*** = 'dc=***REMOVED***,dc=***REMOVED***,dc=ru'
+_ad_server_vks = ''
+_ad_user_vks = ''
+_ad_password_vks = ''
+_ad_ou_tree_vks = 'dc=,dc=,dc='
 
-ad_ou_tree = {'all': ('dc=corp,dc=***REMOVED***,dc=ru','Все'), 'co': ('ou=co,dc=corp,dc=***REMOVED***,dc=ru', '.ЦУ'),
-               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
-               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
-               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
-               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
-               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
-               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'),
-               '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***'), '***REMOVED***': ('ou=***REMOVED***,dc=corp,dc=***REMOVED***,dc=ru', '***REMOVED***')}
+ad_ou_tree = {'all': ('dc=,dc=,dc=','Все')}
 
-def active_derectory_connector_***REMOVED***():
-    server = Server(_ad_server_***REMOVED***)
-    conn = Connection(server, user=_ad_user_***REMOVED***, password=_ad_password_***REMOVED***)
+def active_derectory_connector_vks():
+    server = Server(_ad_server_vks)
+    conn = Connection(server, user=_ad_user_vks, password=_ad_password_vks)
     conn.bind()
     return conn
 

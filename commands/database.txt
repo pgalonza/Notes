@@ -1,6 +1,6 @@
 ###### Create database
 ```
-echo "CREATE DATABASE `my_db` CHARACTER SET utf8 ***REMOVED***LLATE utf8_general_ci;" | mysql
+echo "CREATE DATABASE `my_db` CHARACTER SET utf8 COLLATE utf8_general_ci;" | mysql
 ```
 
 ###### Create user
@@ -20,7 +20,7 @@ echo "FLUSH PRIVILEGES;" | mysql
 
 ###### Edit user account
 ```
-echo "RENAME USER 'name'@'localhost' TO 'modx'@'%';" | mysql
+echo "RENAME USER 'name'@'localhost' TO 'name'@'%';" | mysql
 ```
 
 ###### Last entry
@@ -30,7 +30,7 @@ SELECT MAX(`my_table`) FROM my_db;
 
 ###### Set password for user
 ```
-echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass';" | mysql
+echo "ALTER USER 'name'@'localhost' IDENTIFIED BY 'MyNewPass';" | mysql
 ```
 
 ###### Delete user
@@ -40,12 +40,12 @@ echo "DROP USER 'name'@'localhost';" | mysql
 
 ###### User as root privileges
 ```
-echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' with GRANT OPTION;" | mysql
+echo "GRANT ALL PRIVILEGES ON *.* TO 'name'@'%' with GRANT OPTION;" | mysql
 ```
 
 ###### Give backup privileges for user
 ```
-echo "GRANT RELOAD, PROCESS, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'backup'@'localhost'" | mysql
+echo "GRANT RELOAD, PROCESS, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'name'@'localhost'" | mysql
 ```
 
 ###### Import dump

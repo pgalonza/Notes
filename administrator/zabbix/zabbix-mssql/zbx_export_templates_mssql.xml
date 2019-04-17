@@ -2476,7 +2476,7 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <description>Specifies the total number of processes that have succes***REMOVED***ully acquired a workspace memory grant.&#13;
+                    <description>Specifies the total number of processes that have successfully acquired a workspace memory grant.&#13;
 &#13;
 Текущее количество процессов, успешно получивших память для рабочего пространства</description>
                     <inventory_link>0</inventory_link>
@@ -3175,7 +3175,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description>State of a specific database. The values: 0 = ONLINE, 1 = RESTORING, 2 = RE***REMOVED***VERING, 3 = RE***REMOVED***VERY_PENDING, 4 = SUSPECT, 5 = EMERGENCY, 6 = OFFLINE, 7 = Database Does Not Exist on Server.</description>
+                            <description>State of a specific database. The values: 0 = ONLINE, 1 = RESTORING, 2 = RECOVERING, 3 = RECOVERY_PENDING, 4 = SUSPECT, 5 = EMERGENCY, 6 = OFFLINE, 7 = Database Does Not Exist on Server.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -5449,11 +5449,11 @@
                 </mapping>
                 <mapping>
                     <value>2</value>
-                    <newvalue>RE***REMOVED***VERING</newvalue>
+                    <newvalue>RECOVERING</newvalue>
                 </mapping>
                 <mapping>
                     <value>3</value>
-                    <newvalue>RE***REMOVED***VERY PENDING</newvalue>
+                    <newvalue>RECOVERY PENDING</newvalue>
                 </mapping>
                 <mapping>
                     <value>4</value>

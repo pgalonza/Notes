@@ -1,5 +1,5 @@
 # PPPoE
-###### IGMP Proxy 
+###### IGMP Proxy
 Address on interface
 
 # IPv6
@@ -16,6 +16,6 @@ chain=forward action=change-mss new-mss=clamp-to-pmtu passthrough=yes protocol=t
 /ip firewall nat
 ```
 ```
-add action=dst-nat chain=dstnat dst-address=***REMOVED***_host dst-port=80,443 in-interface-list=LAN protocol=tcp src-address=10.0.192.0/20 to-addresses=local_host
+add action=dst-nat chain=dstnat dst-address=remote_host dst-port=80,443 in-interface-list=LAN protocol=tcp src-address=10.0.192.0/20 to-addresses=local_host
 add action=masquerade chain=srcnat dst-address=local_host dst-port=80,443 out-interface-list=LAN protocol=tcp src-address=10.0.192.0/20
 ```

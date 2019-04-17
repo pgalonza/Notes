@@ -5,14 +5,14 @@ IMPORTS
     Integer32, Opaque, enterprises, Counter32
     FROM SNMPv2-SMI
 
-    TEXTUAL-***REMOVED***NVENTION, DisplayString, TruthValue
+    TEXTUAL-CONVENTION, DisplayString, TruthValue
 	FROM SNMPv2-TC;
 
 
 cityron MODULE-IDENTITY
     LAST-UPDATED "201707240000Z"
     ORGANIZATION "CITYRON"
-    ***REMOVED***NTACT-INFO
+    CONTACT-INFO
 	".."
     DESCRIPTION
 	"Some stuff MIB definitions."	

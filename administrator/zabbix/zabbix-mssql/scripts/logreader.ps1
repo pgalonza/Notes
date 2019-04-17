@@ -1,5 +1,5 @@
 ﻿## This script exists to grab all MSSQL instances running on
-## a server, loop through them, and find the location of 
+## a server, loop through them, and find the location of
 ## their error log file.
 
 # This function converts from one encoding to another.
@@ -18,8 +18,8 @@ function convertto-encoding ([string]$from, [string]$to){
 
 # First, grab our hostname
 $SQLServer = $(hostname.exe)
-$uid = "sa" 
-$pwd = "***REMOVED***"
+$uid = "" 
+$pwd = ""
 
 
 # Create a connection string to connect to this instance, on this server.
@@ -40,13 +40,13 @@ $connectionString = "Server = $SQLServer; User ID = $uid; Password = $pwd;"
     $DataSet = $null
     $connection = $null
 }
-    
+
 try{
     # Only run our queries if connection isn't null
     if ($connection -ne $null){
         # Create a MSSQL request
         $SqlCmd = New-Object System.Data.SqlClient.SqlCommand
-        # Select all the database names within this instance  
+        # Select all the database names within this instance
         $SqlCmd.CommandText = "SELECT @@servicename as inst, SERVERPROPERTY('ErrorLogFileName') AS 'fileLoc'"
         $SqlCmd.Connection = $Connection
         $SqlAdapter = New-Object System.Data.SqlClient.SqlDataAdapter
@@ -76,7 +76,7 @@ foreach ($name in $basename)
 {
     if ($idx -lt $basename.Rows.Count)
         {
-            
+
             # Escape those backslashes
             $cName = $name.fileLoc -replace "\\", "\\"
             $line= "{ `"{#INST}`" : `"" + $name.inst + "`", "  + "`"{#ERRORLOG}`" : `"" + $cName + "`" }," | convertto-encoding "cp866" "utf-8"
@@ -95,4 +95,3 @@ foreach ($name in $basename)
  write-host
 write-host " ]"
 write-host "}"
- 

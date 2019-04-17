@@ -123,7 +123,7 @@ export LC_ALL=en_US.UTF-8
 Time zone
 ```
 ls /usr/share/zoneinfo/
-ln -***REMOVED*** /usr/share/zoneinfo/Europe/Moscow /etc/locatime
+ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/locatime
 date
 ```
 

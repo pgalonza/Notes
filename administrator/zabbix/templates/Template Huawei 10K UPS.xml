@@ -47,7 +47,7 @@
                 <item>
                     <name>Number of active alarms</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.6.174.1.12.2.0</snmp_oid>
                     <key>huawei-ups.hwUpsAlarmCurrActiveNum</key>
                     <delay>5m</delay>
@@ -106,7 +106,7 @@
                 <item>
                     <name>Alarm synchronization ID</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.6.174.1.12.1.0</snmp_oid>
                     <key>huawei-ups.hwUpsAlarmSynchronNum</key>
                     <delay>10m</delay>
@@ -165,7 +165,7 @@
                 <item>
                     <name>Ambient humidity</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.6.174.1.1.1.7.0</snmp_oid>
                     <key>huawei-ups.hwUpsEnvHumidity</key>
                     <delay>1m</delay>
@@ -224,7 +224,7 @@
                 <item>
                     <name>Ambient temperature.</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.6.174.1.1.1.6.0</snmp_oid>
                     <key>huawei-ups.hwUpsEnvTemper</key>
                     <delay>1m</delay>
@@ -283,7 +283,7 @@
                 <item>
                     <name>Number of parallel systems</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.6.174.1.1.1.5.0</snmp_oid>
                     <key>huawei-ups.hwUpsParallelSysNum</key>
                     <delay>1h</delay>
@@ -342,7 +342,7 @@
                 <item>
                     <name>Site time UTC</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.6.174.1.11.1.0</snmp_oid>
                     <key>huawei-ups.hwUpsSiteTimeUTC</key>
                     <delay>10m</delay>
@@ -401,7 +401,7 @@
                 <item>
                     <name>Number of devices in the system</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.6.174.1.1.1.4.0</snmp_oid>
                     <key>huawei-ups.hwUpsSysDeviceNum</key>
                     <delay>1h</delay>
@@ -460,7 +460,7 @@
                 <item>
                     <name>System interface protocol version</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>.1.3.6.1.4.1.2011.6.174.1.1.1.3.0</snmp_oid>
                     <key>huawei-ups.hwUpsSysInerProtVersion</key>
                     <delay>6h</delay>
@@ -519,7 +519,7 @@
                 <item>
                     <name>System main device ESN</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.6.174.1.1.1.1.0</snmp_oid>
                     <key>huawei-ups.hwUpsSystemMainDeviceESN</key>
                     <delay>6h</delay>
@@ -578,7 +578,7 @@
                 <item>
                     <name>System type</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.6.174.1.1.1.2.0</snmp_oid>
                     <key>huawei-ups.hwUpsSystemType</key>
                     <delay>6h</delay>
@@ -639,7 +639,7 @@
                 <discovery_rule>
                     <name>Device</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#HWUPSDEVICEID},1.3.6.1.4.1.2011.6.174.1.2.100.1.1, {#HWUPSDEVICETYPE}, 1.3.6.1.4.1.2011.6.174.1.2.100.1.2]</snmp_oid>
                     <key>huawei-ups.hwUpsDeviceId</key>
                     <delay>1m</delay>
@@ -671,7 +671,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery auto test</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.103.101.1.1.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBattAutoTest.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -735,7 +735,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery auto test discharge rate</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.103.101.1.4.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBattAutoTestDischargeRate.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -795,7 +795,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery maximum discharge time</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.103.101.1.5.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBattAutoTestEndVol.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -855,7 +855,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery auto test time interval</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.103.101.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBattAutoTestTimeInterval.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -915,7 +915,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery auto test time limit</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.103.101.1.2.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBattAutoTestTimeLimit.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -981,7 +981,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery backup time</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.6.100.1.4.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}]</key>
                             <delay>1m</delay>
@@ -1041,7 +1041,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery capacity left</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.6.100.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}]</key>
                             <delay>1m</delay>
@@ -1101,7 +1101,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery current</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.6.100.1.2.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBatteryCurrent.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1166,7 +1166,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery row status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.6.100.1.100.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBatteryRowStatus.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1228,7 +1228,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery temperature</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.6.100.1.6.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBatterytemperature.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1293,7 +1293,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery voltage</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.6.100.1.1.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBatteryVoltage.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1358,7 +1358,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery schedule rest row status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.103.101.1.100.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBattScheduleTestRowStatus/{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1420,7 +1420,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery test</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.103.101.1.6.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBattTest.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -1484,7 +1484,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} bypass input frequency</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.5.100.1.4.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBypassInputFrequency.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1549,7 +1549,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} bypass input voltage phase A</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.5.100.1.1.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBypassInputVoltageA.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1614,7 +1614,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} bypass input voltage phase B</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.5.100.1.2.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBypassInputVoltageB.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1679,7 +1679,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} bypass input voltage phase C</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.5.100.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBypassInputVoltageC.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1744,7 +1744,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} bypass row status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.5.100.1.100.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBypassRowStatus.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -1806,7 +1806,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery end test</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.19.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlBatteryEndTest.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -1870,7 +1870,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery manual boost charge</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.15.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlBatteryManualBoostCharge.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -1934,7 +1934,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery manual float charge</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.16.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlBatteryManualFloatCharge.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -1998,7 +1998,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery shallow test</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.17.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlBatteryShallowTest.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -2062,7 +2062,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery stop test state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.14.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlBatteryStopTestState.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -2126,7 +2126,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery to boost state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.11.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlBatteryToBoostState.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -2190,7 +2190,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery to float state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.12.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlBatteryToFloatState.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -2254,7 +2254,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery to test state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.13.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlBatteryToTestState.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -2318,7 +2318,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery verify cap test</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.18.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlBatteryVerifyCapTest.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -2380,11 +2380,11 @@
                             <master_item/>
                         </item_prototype>
                         <item_prototype>
-                            <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} E***REMOVED*** switch</name>
+                            <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} ECO switch</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.1.{#HWUPSDEVICEID}</snmp_oid>
-                            <key>huawei-ups[hwUpsCtrlE***REMOVED***Switch.{#HWUPSDEVICEID}]</key>
+                            <key>huawei-ups[hwUpsCtrlECOSwitch.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
                             <history>30d</history>
                             <trends>365d</trends>
@@ -2407,9 +2407,9 @@
                             <publickey/>
                             <privatekey/>
                             <port>161</port>
-                            <description>E***REMOVED*** settings. Enumeration type. The default value is 1.&#13;
-				Value 1 indicates E***REMOVED*** mode.&#13;
-				Value 2 indicates Non E***REMOVED*** mode.</description>
+                            <description>ECO settings. Enumeration type. The default value is 1.&#13;
+				Value 1 indicates ECO mode.&#13;
+				Value 2 indicates Non ECO mode.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -2417,7 +2417,7 @@
                                 </application>
                             </applications>
                             <valuemap>
-                                <name>HUAWEI-UPS-MIB::hwUpsCtrlE***REMOVED***Switch</name>
+                                <name>HUAWEI-UPS-MIB::hwUpsCtrlECOSwitch</name>
                             </valuemap>
                             <logtimefmt/>
                             <preprocessing/>
@@ -2446,7 +2446,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} EPO</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.21.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlEPO.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -2510,7 +2510,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} input standard</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.8.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlInputStandard.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -2574,7 +2574,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} model capacity</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.20.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlModelCapacity.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -2634,7 +2634,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} model Type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.7.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlModelType.{#HWUPSDEVICEID}]</key>
                             <delay>6h</delay>
@@ -2704,7 +2704,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output standard</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.9.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlOutputStandard.{#HWUPSDEVICEID}]</key>
                             <delay>10m</delay>
@@ -2768,7 +2768,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} power off</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlPowerOff.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -2832,7 +2832,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} power on</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.2.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlPowerOn.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -2896,7 +2896,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} power on state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.10.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlPowerOnState.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -2962,7 +2962,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} row status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.102.100.1.100.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsCtrlRowStatus.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -3024,7 +3024,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} battery status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.101.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceBatteryState.{#HWUPSDEVICEID}]</key>
                             <delay>30s</delay>
@@ -3092,7 +3092,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} current flow status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.101.1.5.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceEnergyFloatState.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -3152,7 +3152,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} ESN</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.100.1.5.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceESN.{#HWUPSDEVICEID}]</key>
                             <delay>6h</delay>
@@ -3212,7 +3212,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} row status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.100.1.100.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceIdentRowStatus.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -3274,7 +3274,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} interface protocol</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.100.1.4.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceInerProtVersion.{#HWUPSDEVICEID}]</key>
                             <delay>6h</delay>
@@ -3334,7 +3334,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} running row status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.101.1.101.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceOperInfoRowStatus.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -3396,7 +3396,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} parallel ID</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.100.1.7.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceParaSysIndex.{#HWUPSDEVICEID}]</key>
                             <delay>6h</delay>
@@ -3456,7 +3456,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} power rating</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.100.1.6.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDevicePowerRating.{#HWUPSDEVICEID}]</key>
                             <delay>6h</delay>
@@ -3523,7 +3523,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} power supply mode</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.101.1.1.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDevicePowerSupplyMethod.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -3554,8 +3554,8 @@
 				Value 3 indicates normal mode.&#13;
 				Value 4 indicates battery mode.&#13;
 				Value 5 indicates combined mode.&#13;
-				Value 6 indicates mains E***REMOVED*** mode.&#13;
-				Value 7 indicates battery E***REMOVED*** mode.</description>
+				Value 6 indicates mains ECO mode.&#13;
+				Value 7 indicates battery ECO mode.</description>
                             <inventory_link>0</inventory_link>
                             <applications>
                                 <application>
@@ -3592,7 +3592,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} redundant number</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.101.1.6.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceRedundantNumber.{#HWUPSDEVICEID}]</key>
                             <delay>1h</delay>
@@ -3652,7 +3652,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} soft version number</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.100.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceSoftVersion.{#HWUPSDEVICEID}]</key>
                             <delay>6h</delay>
@@ -3712,7 +3712,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} temperature</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.101.1.4.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceTemperature.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -3777,7 +3777,7 @@
                         <item_prototype>
                             <name>Device model with ID {#HWUPSDEVICEID}</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.100.1.2.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceType.{#HWUPSDEVICEID}]</key>
                             <delay>6h</delay>
@@ -3837,7 +3837,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} input frequency</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.3.100.1.4.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsInputFrequency.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -3902,7 +3902,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} input row status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.3.100.1.100.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsInputRowStatus.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -3964,7 +3964,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} input voltage phase A</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.3.100.1.1.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsInputVoltageA.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4029,7 +4029,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} input voltage phase B</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.3.100.1.2.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsInputVoltageB.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4094,7 +4094,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} input voltage phase C</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.3.100.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsInputVoltageC.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4159,7 +4159,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output active power phase A</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.8.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputActivePowerA.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4224,7 +4224,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output active power phase B</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.9.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputActivePowerB.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4289,7 +4289,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output active power phase C</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.10.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputActivePowerC.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4354,7 +4354,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output appearance power phase A</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.11.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputAppearancePowerA.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4419,7 +4419,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output appearance power phase B</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.12.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputAppearancePowerB.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4484,7 +4484,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output appearance power phase C</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.13.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputAppearancePowerC.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4549,7 +4549,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output current phase A</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.4.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputCurrentA.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4614,7 +4614,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output current phase B</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.5.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputCurrentB.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4679,7 +4679,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output current phase C</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.6.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputCurrentC.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4744,7 +4744,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output frequency</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.7.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputFrequency.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4809,7 +4809,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output load phase A</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.14.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputLoadA.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4874,7 +4874,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output load phase B</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.15.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputLoadB.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -4939,7 +4939,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output load phase C</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.16.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputLoadC.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -5004,7 +5004,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output row status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.100.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputRowStatus.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -5066,7 +5066,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output voltage phase A</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.1.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputVoltageA.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -5131,7 +5131,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output voltage phase B</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.2.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputVoltageB.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -5196,7 +5196,7 @@
                         <item_prototype>
                             <name>{#HWUPSDEVICETYPE}-{#HWUPSDEVICEID} output voltage phase C</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.4.100.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsOutputVoltageC.{#HWUPSDEVICEID}]</key>
                             <delay>5m</delay>
@@ -5485,11 +5485,11 @@
             </mappings>
         </value_map>
         <value_map>
-            <name>HUAWEI-UPS-MIB::hwUpsCtrlE***REMOVED***Switch</name>
+            <name>HUAWEI-UPS-MIB::hwUpsCtrlECOSwitch</name>
             <mappings>
                 <mapping>
                     <value>1</value>
-                    <newvalue>noE***REMOVED***</newvalue>
+                    <newvalue>noECO</newvalue>
                 </mapping>
                 <mapping>
                     <value>2</value>
@@ -5707,11 +5707,11 @@
                 </mapping>
                 <mapping>
                     <value>6</value>
-                    <newvalue>normalE***REMOVED***</newvalue>
+                    <newvalue>normalECO</newvalue>
                 </mapping>
                 <mapping>
                     <value>7</value>
-                    <newvalue>batteryE***REMOVED***</newvalue>
+                    <newvalue>batteryECO</newvalue>
                 </mapping>
             </mappings>
         </value_map>

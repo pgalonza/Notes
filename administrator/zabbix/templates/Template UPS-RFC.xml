@@ -41,7 +41,7 @@
                 <item>
                     <name>Alarms present</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.6.1.0</snmp_oid>
                     <key>ups-rfc.upsAlarmsPresent</key>
                     <delay>5m</delay>
@@ -82,7 +82,7 @@
                 <item>
                     <name>Battery current</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.2.6.0</snmp_oid>
                     <key>ups-rfc.upsBatteryCurrent</key>
                     <delay>30s</delay>
@@ -128,7 +128,7 @@
                 <item>
                     <name>Battery status</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.2.1.0</snmp_oid>
                     <key>ups-rfc.upsBatteryStatus</key>
                     <delay>30s</delay>
@@ -171,7 +171,7 @@
                 <item>
                     <name>Battery temperature</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.2.7.0</snmp_oid>
                     <key>ups-rfc.upsBatteryTemperature</key>
                     <delay>5m</delay>
@@ -212,7 +212,7 @@
                 <item>
                     <name>Battery voltage</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.2.5.0</snmp_oid>
                     <key>ups-rfc.upsBatteryVoltage</key>
                     <delay>5m</delay>
@@ -258,7 +258,7 @@
                 <item>
                     <name>Bypass frequency</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.5.1.0</snmp_oid>
                     <key>ups-rfc.upsBypassFrequency</key>
                     <delay>5m</delay>
@@ -304,7 +304,7 @@
                 <item>
                     <name>Bypass number lines</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.5.2.0</snmp_oid>
                     <key>ups-rfc.upsBypassNumLines</key>
                     <delay>10m</delay>
@@ -345,7 +345,7 @@
                 <item>
                     <name>Estimated charge remaining</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.2.4.0</snmp_oid>
                     <key>ups-rfc.upsEstimatedChargeRemaining</key>
                     <delay>30s</delay>
@@ -386,7 +386,7 @@
                 <item>
                     <name>Estimated minutes remaining</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.2.3.0</snmp_oid>
                     <key>ups-rfc.upsEstimatedMinutesRemaining</key>
                     <delay>30s</delay>
@@ -427,7 +427,7 @@
                 <item>
                     <name>Agent software version</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.1.4.0</snmp_oid>
                     <key>ups-rfc.upsIdentAgentSoftwareVersion</key>
                     <delay>6h</delay>
@@ -468,7 +468,7 @@
                 <item>
                     <name>Attached devices</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.1.6.0</snmp_oid>
                     <key>ups-rfc.upsIdentAttachedDevices</key>
                     <delay>6h</delay>
@@ -509,7 +509,7 @@
                 <item>
                     <name>Manufacturer</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.1.1.0</snmp_oid>
                     <key>ups-rfc.upsIdentManufacturer</key>
                     <delay>6h</delay>
@@ -550,7 +550,7 @@
                 <item>
                     <name>Model</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.1.2.0</snmp_oid>
                     <key>ups-rfc.upsIdentModel</key>
                     <delay>6h</delay>
@@ -591,7 +591,7 @@
                 <item>
                     <name>Name</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.1.5.0</snmp_oid>
                     <key>ups-rfc.upsIdentName</key>
                     <delay>6h</delay>
@@ -632,7 +632,7 @@
                 <item>
                     <name>UPS software version</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.1.3.0</snmp_oid>
                     <key>ups-rfc.upsIdentUPSSoftwareVersion</key>
                     <delay>6h</delay>
@@ -673,7 +673,7 @@
                 <item>
                     <name>Input line bads</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.3.1.0</snmp_oid>
                     <key>ups-rfc.upsInputLineBads</key>
                     <delay>10m</delay>
@@ -714,7 +714,7 @@
                 <item>
                     <name>Input number lines</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.3.2.0</snmp_oid>
                     <key>ups-rfc.upsInputNumLines</key>
                     <delay>10m</delay>
@@ -755,7 +755,7 @@
                 <item>
                     <name>Output frequency</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.4.2.0</snmp_oid>
                     <key>ups-rfc.upsOutputFrequency</key>
                     <delay>5m</delay>
@@ -801,7 +801,7 @@
                 <item>
                     <name>Output number lines</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.4.3.0</snmp_oid>
                     <key>ups-rfc.upsOutputNumLines</key>
                     <delay>10m</delay>
@@ -842,7 +842,7 @@
                 <item>
                     <name>Output source</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.4.1.0</snmp_oid>
                     <key>ups-rfc.upsOutputSource</key>
                     <delay>30s</delay>
@@ -885,7 +885,7 @@
                 <item>
                     <name>Seconds on battery</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.2.1.33.1.2.2.0</snmp_oid>
                     <key>ups-rfc.upsSecondsOnBattery</key>
                     <delay>30s</delay>
@@ -960,7 +960,7 @@
                         <item_prototype>
                             <name>Input frequency on line $1</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.2.1.33.1.3.3.1.2.{#UPSINPUTLINEINDEX}</snmp_oid>
                             <key>ups-rfc.upsInputFrequency.[{#UPSINPUTLINEINDEX}]</key>
                             <delay>5m</delay>
@@ -1007,7 +1007,7 @@
                         <item_prototype>
                             <name>Input voltage on line $1</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.2.1.33.1.3.3.1.3.{#UPSINPUTLINEINDEX}</snmp_oid>
                             <key>ups-rfc.upsInputVoltage.[{#UPSINPUTLINEINDEX}]</key>
                             <delay>5m</delay>
@@ -1055,7 +1055,7 @@
                 <discovery_rule>
                     <name>UPS bypass</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#UPSBYPASSLINEINDEX}, 1.3.6.1.2.1.33.1.5.3.1.1]</snmp_oid>
                     <key>ups-rfc.upsBypassLineIndex</key>
                     <delay>1h</delay>
@@ -1087,7 +1087,7 @@
                         <item_prototype>
                             <name>Bypass voltage on line $1</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.2.1.33.1.5.3.1.2.{#UPSBYPASSLINEINDEX}</snmp_oid>
                             <key>ups-rfc.upsBypassVoltage.[{#UPSBYPASSLINEINDEX}]</key>
                             <delay>5m</delay>
@@ -1135,7 +1135,7 @@
                 <discovery_rule>
                     <name>UPS output</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#UPSOUTPUTLINEINDEX}, 1.3.6.1.2.1.33.1.4.4.1.1]</snmp_oid>
                     <key>ups-rfc.upsOutputLineIndex</key>
                     <delay>1h</delay>
@@ -1167,7 +1167,7 @@
                         <item_prototype>
                             <name>Output current on line $1</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.2.1.33.1.4.4.1.3.{#UPSOUTPUTLINEINDEX}</snmp_oid>
                             <key>ups-rfc.upsOutputCurrent.[{#UPSOUTPUTLINEINDEX}]</key>
                             <delay>5m</delay>
@@ -1214,7 +1214,7 @@
                         <item_prototype>
                             <name>Output percent load on line $1</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.2.1.33.1.4.4.1.5.{#UPSOUTPUTLINEINDEX}</snmp_oid>
                             <key>ups-rfc.upsOutputPercentLoad.[{#UPSOUTPUTLINEINDEX}]</key>
                             <delay>1m</delay>
@@ -1256,7 +1256,7 @@
                         <item_prototype>
                             <name>Output power on line $1</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.2.1.33.1.4.4.1.4.{#UPSOUTPUTLINEINDEX}</snmp_oid>
                             <key>ups-rfc.upsOutputPower.[{#UPSOUTPUTLINEINDEX}]</key>
                             <delay>5m</delay>
@@ -1298,7 +1298,7 @@
                         <item_prototype>
                             <name>Output voltage on line $1</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.2.1.33.1.4.4.1.2.{#UPSOUTPUTLINEINDEX}</snmp_oid>
                             <key>ups-rfc.upsOutputVoltage.[{#UPSOUTPUTLINEINDEX}]</key>
                             <delay>5m</delay>

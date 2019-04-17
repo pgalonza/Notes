@@ -4,8 +4,8 @@ Zabbix Template for monitoring and collecting Microsoft SQL Server statistics.
 Most requests are done via Windows performance counters (`perf_counter`), some via PowerShell and, optionaly, via ODBC.
 
 
-![CPU/Memory Load](https://github.com/***REMOVED***uerte/zbx-mssql/blob/master/images/zbx_mssql-cpu_mem_load.png)
-![Server Memory Statistics](https://github.com/***REMOVED***uerte/zbx-mssql/blob/master/images/zbx_mssql-server_memory.png)
+![CPU/Memory Load](https://github.com/sfuerte/zbx-mssql/blob/master/images/zbx_mssql-cpu_mem_load.png)
+![Server Memory Statistics](https://github.com/sfuerte/zbx-mssql/blob/master/images/zbx_mssql-server_memory.png)
 
 ## System requirements
 
@@ -46,7 +46,7 @@ IMPORTANT: if you use another folder for agent scripts, then update userparamete
 - Import XML template file (`zbx_template_mssql.xml`) into Zabbix via Web GUI (Configuration -> Templates -> Import).
 Optional, if you want to use ODBC for discovering databases, then update XML file before importing, as all item prototypes
 are under a discovery rule that utilizes PowerShell via Zabbix Agent.
-![Discovery Rule](https://github.com/***REMOVED***uerte/zbx-mssql/blob/master/images/zbx_mssql-discovery_rules.png)
+![Discovery Rule](https://github.com/sfuerte/zbx-mssql/blob/master/images/zbx_mssql-discovery_rules.png)
 
 - Configure regular expression in "Administration -> General -> Regular Expressions (dropdown on the right)":
 
@@ -61,8 +61,8 @@ Or add it manually:
 ```
  0 -> ONLINE
  1 -> RESTORING
- 2 -> RE***REMOVED***VERING
- 3 -> RE***REMOVED***VERY PENDING
+ 2 -> RECOVERING
+ 3 -> RECOVERY PENDING
  4 -> SUSPECT
  5 -> EMERGENCY
  6 -> OFFLINE
@@ -102,7 +102,7 @@ TDS_Version = 8.0
 {$ODBC}		  - srv01-mssql
 ```
 
-![Host Macros](https://github.com/***REMOVED***uerte/zbx-mssql/blob/master/images/zbx_mssql-macros_config.png)
+![Host Macros](https://github.com/sfuerte/zbx-mssql/blob/master/images/zbx_mssql-macros_config.png)
 
 
 ## Troubleshooting

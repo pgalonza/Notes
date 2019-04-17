@@ -14,7 +14,7 @@ HUAWEI-MIB DEFINITIONS ::= BEGIN
     huawei MODULE-IDENTITY
         LAST-UPDATED "201111050000Z"
         ORGANIZATION "Huawei Technologies Co.,Ltd."
-        ***REMOVED***NTACT-INFO                                       
+        CONTACT-INFO                                       
                      "Huawei Industrial Base               
                       Bantian, Longgang                    
                       Shenzhen 518129                      

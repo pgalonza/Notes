@@ -10,8 +10,8 @@ function isCorrectLengthExtensions(s)
 
 *sip_general_custom.conf*
 ```
-accept_ou***REMOVED***call_message = yes
-ou***REMOVED***call_message_context = messages
+accept_outofcall_message = yes
+outofcall_message_context = messages
 auth_message_requests = no
 ```
 

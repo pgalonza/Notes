@@ -8,14 +8,14 @@ def main():
         if ou == 'all':
             continue
         user_list = get_information(origin[0], origin[1])
-        path_to_file = ou + '-***REMOVED***.xml'
+        path_to_file = ou + '-remote.xml'
 
 
 
 def get_information(origin, group_name):
-    if group_name == "***REMOVED***":
-        connection = lm_auth.active_derectory_connector_***REMOVED***()
-        connection.search('dc=***REMOVED***,dc=***REMOVED***,dc=ru',
+    if group_name == "ВКС":
+        connection = lm_auth.active_derectory_connector_vks()
+        connection.search('dc=,dc=,dc=',
                     '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                     SUBTREE,
                     attributes=['ipPhone', 'displayName'])
@@ -37,7 +37,7 @@ def get_information(origin, group_name):
 def create_xml_file(user_info, file_path, group_name):
     root = ET.Element('YealinkIPPhoneDirectory')
     entry = ET.SubElement(root, 'DirectoryEntry')
-    
+
 
 
 

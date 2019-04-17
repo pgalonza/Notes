@@ -15,9 +15,9 @@ def main():
 
 def get_information(origin, group_name):
 
-    if group_name == "***REMOVED***":
-        conn = lm_auth.active_derectory_connector_***REMOVED***()
-        conn.search('dc=***REMOVED***,dc=***REMOVED***,dc=ru',
+    if group_name == "ВКС":
+        conn = lm_auth.active_derectory_connector_vks()
+        conn.search('dc=,dc=,dc=',
                     '(&(objectCategory=person)(displayName=*)(givenName=*)(sn=*)(|(ipPhone= *)(mobile=*)(mail=*)('
                     'title=*)(department=*)(physicalDeliveryOfficeName=*)(company=*))(!('
                     'userAccountControl:1.2.840.113556.1.4.803:=2)))',
@@ -109,7 +109,7 @@ def html_structure_file(position, file_name):
             } );
         } );
     </script>
-    <p><a href="mailto:itinfo@***REMOVED***?subject=Вопрос по web-адресной книге">Нашли ошибку?</a></p>
+    <p><a href="mailto:itinfo@example.local?subject=Вопрос по web-адресной книге">Нашли ошибку?</a></p>
     </body>
     </html>'''
 

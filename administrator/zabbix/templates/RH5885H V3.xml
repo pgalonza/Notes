@@ -59,7 +59,7 @@
                 <item>
                     <name>Actual power supply entire mode</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.3.0</snmp_oid>
                     <key>huawei-server.actualPowerSupplyEntireMode</key>
                     <delay>5m</delay>
@@ -120,7 +120,7 @@
                 <item>
                     <name>Average power</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.20.3.0</snmp_oid>
                     <key>huawei-server.averagePower</key>
                     <delay>5m</delay>
@@ -179,7 +179,7 @@
                 <item>
                     <name>Configuration error info</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.42.4.0</snmp_oid>
                     <key>huawei-server.configerrorinfo</key>
                     <delay>10m</delay>
@@ -241,7 +241,7 @@
                 <item>
                     <name>CPU entire status</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.1.0</snmp_oid>
                     <key>huawei-server.cpuEntireStatus</key>
                     <delay>5m</delay>
@@ -302,7 +302,7 @@
                 <item>
                     <name>CSR status</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.1.0</snmp_oid>
                     <key>huawei-server.csrStatus</key>
                     <delay>5m</delay>
@@ -328,7 +328,7 @@
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
                     <description>The status of generating CSR.&#13;
-				CSR generation has not started or has succes***REMOVED***ully completed(1)&#13;
+				CSR generation has not started or has successfully completed(1)&#13;
 				A CSR is being generated (2)&#13;
 				A CSR fails to be generated (3).</description>
                     <inventory_link>0</inventory_link>
@@ -366,7 +366,7 @@
                 <item>
                     <name>Device location info</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.17.0</snmp_oid>
                     <key>huawei-server.deviceLocationInfo</key>
                     <delay>6h</delay>
@@ -426,7 +426,7 @@
                 <item>
                     <name>Device name</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.6.0</snmp_oid>
                     <key>huawei-server.deviceName</key>
                     <delay>6h</delay>
@@ -485,7 +485,7 @@
                 <item>
                     <name>Device owner ID</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.14.0</snmp_oid>
                     <key>huawei-server.deviceOwnerID</key>
                     <delay>6h</delay>
@@ -544,7 +544,7 @@
                 <item>
                     <name>Device serial number</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.7.0</snmp_oid>
                     <key>huawei-server.deviceSerialNo</key>
                     <delay>6h</delay>
@@ -603,7 +603,7 @@
                 <item>
                     <name>Devices slot ID</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.15.0</snmp_oid>
                     <key>huawei-server.deviceslotID</key>
                     <delay>6h</delay>
@@ -662,7 +662,7 @@
                 <item>
                     <name>ETH MAC address</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.6.1</snmp_oid>
                     <key>huawei-server.ethMACAddress</key>
                     <delay>6h</delay>
@@ -721,7 +721,7 @@
                 <item>
                     <name>Fan entire status</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.8.3.0</snmp_oid>
                     <key>huawei-server.fanEntireStatus</key>
                     <delay>5m</delay>
@@ -782,7 +782,7 @@
                 <item>
                     <name>Hard disk entire status</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.1.0</snmp_oid>
                     <key>huawei-server.hardDiskEntireStatus</key>
                     <delay>5m</delay>
@@ -843,7 +843,7 @@
                 <item>
                     <name>Host name</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.9.0</snmp_oid>
                     <key>huawei-server.hostName</key>
                     <delay>6h</delay>
@@ -904,7 +904,7 @@ Default value is huawei.</description>
                 <item>
                     <name>System disk portition usage  threshold</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.28.0</snmp_oid>
                     <key>huawei-server.hudiskPartitionUsage</key>
                     <delay>10m</delay>
@@ -964,7 +964,7 @@ Default value is huawei.</description>
                 <item>
                     <name>Local LVM state</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.40.1.0</snmp_oid>
                     <key>huawei-server.localKVMState</key>
                     <delay>5m</delay>
@@ -1026,7 +1026,7 @@ Default value is huawei.</description>
                 <item>
                     <name>Memory entire status</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.1.0</snmp_oid>
                     <key>huawei-server.memoryEntireStatus</key>
                     <delay>5m</delay>
@@ -1087,7 +1087,7 @@ Default value is huawei.</description>
                 <item>
                     <name>PCle device entire status</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.1.0</snmp_oid>
                     <key>huawei-server.pCIeDeviceEntireStatus</key>
                     <delay>5m</delay>
@@ -1148,7 +1148,7 @@ Default value is huawei.</description>
                 <item>
                     <name>Peak power</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.20.1.0</snmp_oid>
                     <key>huawei-server.peakPower</key>
                     <delay>5m</delay>
@@ -1207,7 +1207,7 @@ Default value is huawei.</description>
                 <item>
                     <name>Power capping enable</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.23.1.0</snmp_oid>
                     <key>huawei-server.powerCappingEnable</key>
                     <delay>10m</delay>
@@ -1269,7 +1269,7 @@ Default value is huawei.</description>
                 <item>
                     <name>Power consumption</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.20.4.0</snmp_oid>
                     <key>huawei-server.powerConsumption</key>
                     <delay>5m</delay>
@@ -1328,7 +1328,7 @@ Default value is huawei.</description>
                 <item>
                     <name>Power on control</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.28.1.0</snmp_oid>
                     <key>huawei-server.powerOnControl</key>
                     <delay>1h</delay>
@@ -1387,7 +1387,7 @@ Default value is huawei.</description>
                 <item>
                     <name>Power on polici</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.8.0</snmp_oid>
                     <key>huawei-server.powerOnPolicy</key>
                     <delay>5m</delay>
@@ -1451,7 +1451,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Power supply entire status</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.1.0</snmp_oid>
                     <key>huawei-server.powerSupplyEntireStatus</key>
                     <delay>5m</delay>
@@ -1512,7 +1512,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Presense</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.33.1.0</snmp_oid>
                     <key>huawei-server.presence</key>
                     <delay>1h</delay>
@@ -1573,7 +1573,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Present system power</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.13.0</snmp_oid>
                     <key>huawei-server.presentSystemPower</key>
                     <delay>5m</delay>
@@ -1632,7 +1632,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Safe poweroff time</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.5.0</snmp_oid>
                     <key>huawei-server.safepowerofftime</key>
                     <delay>1h</delay>
@@ -1691,7 +1691,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Setted power supply entire mode</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.2.0</snmp_oid>
                     <key>huawei-server.settedPowerSupplyEntireMode</key>
                     <delay>5m</delay>
@@ -1759,7 +1759,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Syslog enable</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.34.1.0</snmp_oid>
                     <key>huawei-server.syslogEnable</key>
                     <delay>10m</delay>
@@ -1821,7 +1821,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Syslog Identity</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.34.2.0</snmp_oid>
                     <key>huawei-server.syslogIdentity</key>
                     <delay>10m</delay>
@@ -1882,7 +1882,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Syslog protocol type</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.34.4.0</snmp_oid>
                     <key>huawei-server.syslogProtocolType</key>
                     <delay>6h</delay>
@@ -1947,7 +1947,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Syslog severity</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.34.3.0</snmp_oid>
                     <key>huawei-server.syslogSeverity</key>
                     <delay>5m</delay>
@@ -2014,7 +2014,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>System boot sequence</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.2.0</snmp_oid>
                     <key>huawei-server.systemBootsequence</key>
                     <delay>1h</delay>
@@ -2085,7 +2085,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>System CPU usage</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.23.0</snmp_oid>
                     <key>huawei-server.systemCpuUsage</key>
                     <delay>5m</delay>
@@ -2147,7 +2147,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>System CPU usage threshold</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.26.0</snmp_oid>
                     <key>huawei-server.systemCpuUsageThre</key>
                     <delay>10m</delay>
@@ -2207,7 +2207,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>System disk partition usage threshold</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.28.0</snmp_oid>
                     <key>huawei-server.systemDiskPartitionUsageThre</key>
                     <delay>10m</delay>
@@ -2267,7 +2267,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>System GUID</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.10.0</snmp_oid>
                     <key>huawei-server.systemGuid</key>
                     <delay>6h</delay>
@@ -2327,7 +2327,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>System health</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.1.0</snmp_oid>
                     <key>huawei-server.systemHealth</key>
                     <delay>5m</delay>
@@ -2390,7 +2390,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>System memory usage</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.25.0</snmp_oid>
                     <key>huawei-server.systemMemUsage</key>
                     <delay>5m</delay>
@@ -2452,7 +2452,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>System memory usage threshold</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.27.0</snmp_oid>
                     <key>huawei-server.systemMemUsageThre</key>
                     <delay>15m</delay>
@@ -2512,7 +2512,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>System power state</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.1.12.0</snmp_oid>
                     <key>huawei-server.systemPowerState</key>
                     <delay>5m</delay>
@@ -2583,7 +2583,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Temperature entire status</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.26.1.0</snmp_oid>
                     <key>huawei-server.temperatureEntireStatus</key>
                     <delay>5m</delay>
@@ -2644,7 +2644,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Two factor authentication</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.41.1.0</snmp_oid>
                     <key>huawei-server.twoFactorAuthenticationEnable</key>
                     <delay>15m</delay>
@@ -2707,7 +2707,7 @@ Default value is turnon(3).</description>
                 <item>
                     <name>Two factor authentication revocation check</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.41.2.0</snmp_oid>
                     <key>huawei-server.twoFactorAuthenticationRevocationCheck</key>
                     <delay>15m</delay>
@@ -2772,7 +2772,7 @@ Default value is turnon(3).</description>
                 <discovery_rule>
                     <name>CPU</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.15.50.1.1,{#CPUNAME},1.3.6.1.4.1.2011.2.235.1.1.15.50.1.10]</snmp_oid>
                     <key>huawei-server.cpuIndex</key>
                     <delay>1h</delay>
@@ -2804,7 +2804,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} availability</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuAvailability.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -2866,7 +2866,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} clock rate</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuClockRate.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -2926,7 +2926,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} core count</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.12.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuCoreCount.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -2986,7 +2986,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} family</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuFamily.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3046,7 +3046,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} function</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.9.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuFunction.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3106,7 +3106,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} L1 cache</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.15.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuL1Cache.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3166,7 +3166,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} L2 cache</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.16.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuL2Cache.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3226,7 +3226,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} L3 cache</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.17.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuL3Cache.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3286,7 +3286,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} location</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuLocation.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3346,7 +3346,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} manufacturer</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.2.{#SNMPVALUE}</snmp_oid>
                             <key>huawei-server[cpuManufacturer.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3406,7 +3406,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} memory technology</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.14.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuMemoryTechnology.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3466,7 +3466,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} ID</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.11.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuProcessorID.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3526,7 +3526,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuStatus.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -3588,7 +3588,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} thread count</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.13.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuThreadCount.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3648,7 +3648,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#CPUNAME} type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.15.50.1.4.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[cpuType.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -3780,7 +3780,7 @@ Default value is turnon(3).</description>
                 <discovery_rule>
                     <name>Eth</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.12.50.1.1]</snmp_oid>
                     <key>huawei-server.ethNum</key>
                     <delay>1h</delay>
@@ -3812,7 +3812,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} default gateway</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.4.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethDefaultGateway.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -3872,7 +3872,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} enable</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.9.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethEnable.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -3934,7 +3934,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} host port</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethHostPort.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -3996,7 +3996,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} info</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.12.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethInfo.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -4057,7 +4057,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} IP address</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.2.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethIPAddress.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -4117,7 +4117,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} IP source</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethIPSource.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -4179,7 +4179,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} IPv4 enable</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.13.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethIPv4Enable.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -4241,7 +4241,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} MAC address</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethMACAddress.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -4301,7 +4301,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} mode</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.10.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethMode.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -4363,7 +4363,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} netmask</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethNetmask.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -4423,7 +4423,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[ethType.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -4485,7 +4485,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>Eth {#SNMPVALUE} vlan ID</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.12.50.1.11.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[vlanID.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -4570,7 +4570,7 @@ Default value is turnon(3).</description>
                 <discovery_rule>
                     <name>Fan</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.8.50.1.1,{#DEVICENAME},1.3.6.1.4.1.2011.2.235.1.1.8.50.1.7]</snmp_oid>
                     <key>huawei-server.fanIndex</key>
                     <delay>1h</delay>
@@ -4602,7 +4602,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} function</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.8.50.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[fanFunction.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -4662,7 +4662,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} location</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.8.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[fanLocation.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -4722,7 +4722,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} presence</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.8.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[fanPresence.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -4784,7 +4784,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} speed</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.8.50.1.2.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[fanSpeed.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -4844,7 +4844,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} speed ratio</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.8.50.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[fanSpeedRatio.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -4904,7 +4904,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.8.50.1.4.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[fanStatus.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -5038,7 +5038,7 @@ Default value is turnon(3).</description>
                 <discovery_rule>
                     <name>Hard disk</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.18.50.1.1,{#DEVICENAME},1.3.6.1.4.1.2011.2.235.1.1.18.50.1.6]</snmp_oid>
                     <key>huawei-server.hardDiskIndex</key>
                     <delay>1h</delay>
@@ -5077,7 +5077,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} capable speed in Mbps</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.18.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskCapableSpeedInMbps.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5139,7 +5139,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} capacity in GB</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.12.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskCapacityInGB.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5201,7 +5201,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} capacity in MB</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.30.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskCapacityInMB.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5263,7 +5263,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} function</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskFunction.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5323,7 +5323,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} firmware state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.10.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskFwState.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -5409,7 +5409,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} firmware version</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.11.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskFwVersion.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5469,7 +5469,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} hot spare state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.24.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskHotSpareState.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5548,7 +5548,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} interface type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.14.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskInterfaceType.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5618,7 +5618,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} location</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.4.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskLocation.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5678,7 +5678,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} disk location state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.29.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskLocationState.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5743,7 +5743,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} manufacturer</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.9.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskManufacturer.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5803,7 +5803,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} media type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.13.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskMediaType.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5865,7 +5865,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} model number</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskModelNumber.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5925,7 +5925,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} negotiated speed in Mbps</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.19.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskNegotiatedSpeedInMbps.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -5985,7 +5985,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} other error count</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.28.{#SNMPVALUE}</snmp_oid>
                             <key>huawei-server[hardDiskOtherErrCount.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -6047,7 +6047,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} patrol read status.</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.17.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskPatrolReadStatus.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -6109,7 +6109,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} power state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.14.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskPowerState.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -6171,7 +6171,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} prefail error count</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.27.{#SNMPVALUE}</snmp_oid>
                             <key>huawei-server[hardDiskPrefailErrCount.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -6233,7 +6233,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} prefail state</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.23.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskPrefailState.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -6295,7 +6295,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} presence</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.2.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskPresence.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -6357,7 +6357,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} rebuild progress</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.16.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskRebuildProgress.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -6419,7 +6419,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} remnant wearout</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.25.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskRemnantWearout.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -6481,7 +6481,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} SAS address 1</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.21.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskSASAddr1.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -6541,7 +6541,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} SAS address 2</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.22.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskSASAddr2.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -6601,7 +6601,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} serial number</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskSerialNumber.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -6661,7 +6661,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskStatus.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -6723,7 +6723,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} temperature</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.18.50.1.20.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[hardDiskTemperature.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -6857,7 +6857,7 @@ Default value is turnon(3).</description>
                 <discovery_rule>
                     <name>Memory</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.16.50.1.1,{#DEVICENAME},1.3.6.1.4.1.2011.2.235.1.1.16.50.1.10]</snmp_oid>
                     <key>huawei-server.memoryDimmIndex</key>
                     <delay>1h</delay>
@@ -6896,7 +6896,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} availability</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryAvailability.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -6958,7 +6958,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} bit width</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.15.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryBitWidth.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -7018,7 +7018,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} clock rate</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryClockRate.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -7078,7 +7078,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} function</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.9.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryFunction.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -7138,7 +7138,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} location</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryLocation.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -7198,7 +7198,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} logic</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.2.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryLogic.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -7258,7 +7258,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} manufacturer</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryManufacturer.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -7318,7 +7318,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} minimum voltage</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.13.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryMinimumVoltage.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -7378,7 +7378,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} rank</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.14.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryRank.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -7438,7 +7438,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} size</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.4.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memorySize.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -7498,7 +7498,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} SN</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.12.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memorySN.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -7558,7 +7558,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryStatus.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -7620,7 +7620,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} technology</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.16.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryTechnology.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -7680,7 +7680,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} {#SNMPVALUE} type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.16.50.1.11.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[memoryType.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -7812,7 +7812,7 @@ Default value is turnon(3).</description>
                 <discovery_rule>
                     <name>PCI</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.24.50.1.1,{#DEVICENAME},1.3.6.1.4.1.2011.2.235.1.1.24.50.1.7]</snmp_oid>
                     <key>huawei-server.pCIeDeviceIndex</key>
                     <delay>1h</delay>
@@ -7844,7 +7844,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} availability</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.50.1.4.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[pCIeAvailability.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -7906,7 +7906,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} description</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.50.1.11.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[pCIeDeviceDescription.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -7966,7 +7966,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} DID</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.50.1.9.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[pCIeDeviceDID.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -8026,7 +8026,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} function</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.50.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[pCIeDeviceFunction.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -8086,7 +8086,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} location</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[pCIeDeviceLocation.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -8146,7 +8146,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} manufacturer</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.50.1.10.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[pCIeDeviceManufacturer.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -8206,7 +8206,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} presence</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.50.1.2.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[pCIeDevicePresence.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -8268,7 +8268,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[pCIeDeviceStatus.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -8330,7 +8330,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} VID</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.24.50.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[pCIeDeviceVID.{#SNMPVALUE}]</key>
                             <delay>1h</delay>
@@ -8413,7 +8413,7 @@ Default value is turnon(3).</description>
                 <discovery_rule>
                     <name>Power supply</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.6.50.1.1,{#DEVICENAME},1.3.6.1.4.1.2011.2.235.1.1.6.50.1.13]</snmp_oid>
                     <key>huawei-server.powerSupplyIndex</key>
                     <delay>1h</delay>
@@ -8445,7 +8445,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} function</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.12.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyFunction.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -8505,7 +8505,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} input mode</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyInputMode.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -8567,7 +8567,7 @@ Default value is turnon(3).</description>
                         <item_prototype>
                             <name>{#DEVICENAME} input power</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyInputPower.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -8628,7 +8628,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} location</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.11.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyLocation.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -8688,7 +8688,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} manufacture</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.2.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplymanufacture.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -8748,7 +8748,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} model</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.4.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyModel.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -8808,7 +8808,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} power rating</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyPowerRating.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -8868,7 +8868,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} presence</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.9.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyPresence.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -8930,7 +8930,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} protocol</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.10.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyProtocol.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -8992,7 +8992,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} SN</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.15.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplySN.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -9052,7 +9052,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyStatus.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -9114,7 +9114,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} version</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyVersion.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -9174,7 +9174,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} work mode</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.6.50.1.14.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[powerSupplyWorkMode.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -9308,7 +9308,7 @@ The unit is watt.</description>
                 <discovery_rule>
                     <name>Raid controller</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.36.50.1.1,{#DEVICENAME},1.3.6.1.4.1.2011.2.235.1.1.36.50.1.4]</snmp_oid>
                     <key>huawei-server.raidControllerIndex</key>
                     <delay>1h</delay>
@@ -9340,7 +9340,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} add logical drive</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.26.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerAddLD.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -9433,7 +9433,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} BBU status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.18.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerBBUHealthStatus.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -9503,7 +9503,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} BBU presence</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.16.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerBBUPresence.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -9568,7 +9568,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} BBU type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.17.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerBBUType.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -9628,7 +9628,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} cache pinned</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.13.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerCachePinned.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -9693,7 +9693,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} controller copy back</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.21.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerCopybackEnable.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -9758,7 +9758,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} create logical drive</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.25.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerCreateLD.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -9866,7 +9866,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} DDR ECC count</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.15.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerDDREccCount.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -9928,7 +9928,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} interface type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.11.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerDeviceInterface.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -9997,7 +9997,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} driver name</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.27.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerDriverName.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -10057,7 +10057,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} driver version</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.28.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerDriverVersion.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -10117,7 +10117,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} firmware version</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerFwVersion.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -10177,7 +10177,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} status</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerHealthStatus.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -10244,7 +10244,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} JBOD</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.23.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerJBODEnable.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -10309,7 +10309,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} PD fail history</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.14.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerMaintainPDFailHistory.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -10374,7 +10374,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} maxsimum strip support bytes</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.20.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerMaxStripSupportInBytes.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -10436,7 +10436,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} memory size</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.10.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerMemorySizeInMB.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -10496,7 +10496,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} minimum strip support bytes</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.19.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerMinStripSupportInBytes.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -10558,7 +10558,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} mode</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerMode.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -10623,7 +10623,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} NVData version</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.9.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerNVDataVersion.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -10683,7 +10683,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} settings</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.24.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerRestoreSettings.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -10745,7 +10745,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} SAS address</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.12.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerSASAddress.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -10805,7 +10805,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} smart copy back</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.21.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerSMARTerCopybackEnable.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -10872,7 +10872,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} OOB management</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerSupportOOBManagement.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -10936,7 +10936,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.36.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[raidControllerType.{#SNMPVALUE}]</key>
                             <delay>6h</delay>
@@ -11019,7 +11019,7 @@ The unit is watt.</description>
                 <discovery_rule>
                     <name>Syslog</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.34.50.1.1]</snmp_oid>
                     <key>huawei-server.syslogReceiverIndex</key>
                     <delay>1h</delay>
@@ -11051,7 +11051,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#SNMPVALUE} syslog receiver IP addrsss</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.34.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[syslogReceiverAddress.{#SNMPVALUE}]</key>
                             <delay>10m</delay>
@@ -11112,7 +11112,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#SNMPVALUE} syslog receiver enable</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.34.50.1.2.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[syslogReceiverEnable.{#SNMPVALUE}]</key>
                             <delay>10m</delay>
@@ -11175,7 +11175,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#SNMPVALUE} syslog receiver port</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.34.50.1.4.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[syslogReceiverPort.{#SNMPVALUE}]</key>
                             <delay>10m</delay>
@@ -11235,7 +11235,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#SNMPVALUE} syslog receiver test</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.34.50.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[syslogReceiverTest.{#SNMPVALUE}]</key>
                             <delay>10m</delay>
@@ -11296,7 +11296,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#SNMPVALUE} syslog send log type</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.34.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[syslogSendLogType.{#SNMPVALUE}]</key>
                             <delay>10m</delay>
@@ -11390,7 +11390,7 @@ The unit is watt.</description>
                 <discovery_rule>
                     <name>Temperature</name>
                     <type>4</type>
-                    <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                     <snmp_oid>discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.2.235.1.1.26.50.1.1,{#DEVICENAME},1.3.6.1.4.1.2011.2.235.1.1.26.50.1.2]</snmp_oid>
                     <key>huawei-server.temperatureIndex</key>
                     <delay>1h</delay>
@@ -11422,7 +11422,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} lower critical</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.26.50.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[temperatureLowerCritical.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -11487,7 +11487,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} lower minor</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.26.50.1.9.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[temperatureLowerMinor.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -11552,7 +11552,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} lower nonrecoverable</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.26.50.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[temperatureLowerNonRecoverable.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -11617,7 +11617,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} temperature</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.26.50.1.3.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[temperatureReading.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -11683,7 +11683,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} upper critical</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.26.50.1.5.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[temperatureUpperCritical.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -11748,7 +11748,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} upper minor</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.26.50.1.6.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[temperatureUpperMinor.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -11813,7 +11813,7 @@ The unit is watt.</description>
                         <item_prototype>
                             <name>{#DEVICENAME} upper nonrecoverable</name>
                             <type>4</type>
-                            <snmp_community>{$SNMP_***REMOVED***MMUNITY}</snmp_community>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.2.235.1.1.26.50.1.4.{#SNMPINDEX}</snmp_oid>
                             <key>huawei-server[temperatureUpperNonRecoverable.{#SNMPVALUE}]</key>
                             <delay>5m</delay>
@@ -11952,7 +11952,7 @@ The unit is watt.</description>
             <httptests/>
             <macros>
                 <macro>
-                    <macro>{$SNMP_***REMOVED***MMUNITY}</macro>
+                    <macro>{$SNMP_COMMUNITY}</macro>
                     <value>Server_public</value>
                 </macro>
                 <macro>
@@ -12045,7 +12045,7 @@ The unit is watt.</description>
             <mappings>
                 <mapping>
                     <value>1</value>
-                    <newvalue>notStartedOrHasSucces***REMOVED***ullyCompleted</newvalue>
+                    <newvalue>notStartedOrHasSuccessfullyCompleted</newvalue>
                 </mapping>
                 <mapping>
                     <value>2</value>

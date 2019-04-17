@@ -14,7 +14,7 @@
 #     The script is based on a script by Ricardo Santos
 #     (http://zabbixzone.com/zabbix/backuping-only-the-zabbix-configuration/)
 #
-# ***REMOVED***NTRIBUTORS
+# CONTRIBUTORS
 #      - Ricardo Santos
 #      - Jens Berthold (maxhq)
 #      - Oleksiy Zagorskyi (zalex)
@@ -45,7 +45,7 @@ DBHOST="***REMOVED***"
 DBNAME="zabbix"
 DBUSER=""
 DBPASS=""
-***REMOVED***MPRESSION="gz"
+COMPRESSION="gz"
 QUIET="no"
 REVERSELOOKUP="yes"
 GENERATIONSTOKEEP=0
@@ -118,7 +118,7 @@ EOF
 fi
 
 #
-# PARSE ***REMOVED***MMAND LINE ARGUMENTS
+# PARSE COMMAND LINE ARGUMENTS
 #
 DB_GIVEN=0
 while getopts ":h:d:u:p:o:r:c:x0qn" opt; do
@@ -130,8 +130,8 @@ while getopts ":h:d:u:p:o:r:c:x0qn" opt; do
 		c)  CNFFILE="$OPTARG" ;;
 		o)  DUMPDIR="$OPTARG" ;;
 		r)  GENERATIONSTOKEEP=$(printf '%.0f' "$OPTARG") ;;
-		x)  ***REMOVED***MPRESSION="xz" ;;
-		0)  ***REMOVED***MPRESSION="" ;;
+		x)  COMPRESSION="xz" ;;
+		0)  COMPRESSION="" ;;
 		n)  REVERSELOOKUP="no" ;;
 		q)  QUIET="yes" ;;
 		\?) echo "Invalid option: -$OPTARG" >&2; exit 1 ;;
@@ -160,9 +160,9 @@ if [ ! -z "$CNFFILE" ]; then
 fi
 
 #
-# ***REMOVED***NSTANTS
+# CONSTANTS
 #
-SUFFIX=""; test ! -z $***REMOVED***MPRESSION && SUFFIX=".${***REMOVED***MPRESSION}"
+SUFFIX=""; test ! -z $COMPRESSION && SUFFIX=".${COMPRESSION}"
 
 MYSQL_OPTS=()
 [ ! -z "$CNFFILE" ] && MYSQL_OPTS=("${MYSQL_OPTS[@]}" --defaults-extra-file="$CNFFILE")
@@ -187,7 +187,7 @@ if [ "$REVERSELOOKUP" == "yes" -a $FIND_DIG -eq 0 ]; then
 fi
 
 #
-# ***REMOVED***NFIG DUMP
+# CONFIG DUMP
 #
 if [ "$QUIET" == "no" ]; then
 	cat <<-EOF
@@ -300,7 +300,7 @@ done <<<"$DB_TABLES"
 rm $ERRORLOG
 
 #
-# ***REMOVED***MPRESS BACKUP
+# COMPRESS BACKUP
 #
 if [ "$QUIET" == "no" ]; then
 	echo -e "\n"
@@ -311,10 +311,10 @@ if [ "$QUIET" == "no" ]; then
 	echo "Compressing backup file..."
 fi
 
-EXIT***REMOVED***DE=0
-if [ "$***REMOVED***MPRESSION" == "gz" ]; then gzip -f "$DUMPFILE"; EXIT***REMOVED***DE=$?; fi
-if [ "$***REMOVED***MPRESSION" == "xz" ]; then xz   -f "$DUMPFILE"; EXIT***REMOVED***DE=$?; fi
-if [ $EXIT***REMOVED***DE -ne 0 ]; then
+EXITCODE=0
+if [ "$COMPRESSION" == "gz" ]; then gzip -f "$DUMPFILE"; EXITCODE=$?; fi
+if [ "$COMPRESSION" == "xz" ]; then xz   -f "$DUMPFILE"; EXITCODE=$?; fi
+if [ $EXITCODE -ne 0 ]; then
 	echo -e "\nERROR: Could not compress backup file, see previous messages" >&2
 	exit 1
 fi

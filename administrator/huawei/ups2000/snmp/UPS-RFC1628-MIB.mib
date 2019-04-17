@@ -7,8 +7,8 @@ UPS-RFC-MIB DEFINITIONS ::= BEGIN
        DisplayString, TimeStamp, TimeInterval, TestAndIncr, TextualConvention,
          AutonomousType
            FROM SNMPv2-TC
-       MODULE-***REMOVED***MPLIANCE, OBJECT-GROUP
-           FROM SNMPv2-***REMOVED***NF;
+       MODULE-COMPLIANCE, OBJECT-GROUP
+           FROM SNMPv2-CONF;
 
 org            OBJECT IDENTIFIER ::= { iso 3 }  --  "iso" = 1
 dod            OBJECT IDENTIFIER ::= { org 6 }
@@ -19,7 +19,7 @@ mib-2          OBJECT IDENTIFIER ::= { mgmt 1 }
    upsMIB MODULE-IDENTITY
        LAST-UPDATED "9402230000Z"
        ORGANIZATION "IETF UPS MIB Working Group"
-       ***REMOVED***NTACT-INFO
+       CONTACT-INFO
               "        Jeffrey D. Case
                 Postal: SNMP Research, Incorporated
                         3001 Kimberlin Heights Road
@@ -34,14 +34,14 @@ mib-2          OBJECT IDENTIFIER ::= { mgmt 1 }
                Supplies."
        ::= { mib-2 33 }
 
-   PositiveInteger ::= TEXTUAL-***REMOVED***NVENTION
+   PositiveInteger ::= TEXTUAL-CONVENTION
        DISPLAY-HINT "d"
        STATUS       current
        DESCRIPTION
                "This data type is a non-zero and non-negative value."
        SYNTAX       INTEGER (1..2147483647)
 
-   NonNegativeInteger ::= TEXTUAL-***REMOVED***NVENTION
+   NonNegativeInteger ::= TEXTUAL-CONVENTION
        DISPLAY-HINT "d"
        STATUS       current
        DESCRIPTION
@@ -1006,7 +1006,7 @@ mib-2          OBJECT IDENTIFIER ::= { mgmt 1 }
                "This feature is not supported. A value 0 is returned."
        ::= { upsConfig 8 }
 
-   upsConfigLowVoltageTran***REMOVED***erPoint OBJECT-TYPE
+   upsConfigLowVoltageTransferPoint OBJECT-TYPE
        SYNTAX     NonNegativeInteger
        UNITS      "RMS Volts"
        MAX-ACCESS read-write
@@ -1015,7 +1015,7 @@ mib-2          OBJECT IDENTIFIER ::= { mgmt 1 }
                "This feature is not supported. A value 0 is returned."
        ::= { upsConfig 9 }
 
-   upsConfigHighVoltageTran***REMOVED***erPoint OBJECT-TYPE
+   upsConfigHighVoltageTransferPoint OBJECT-TYPE
        SYNTAX     NonNegativeInteger
        UNITS      "RMS Volts"
        MAX-ACCESS read-write
@@ -1088,7 +1088,7 @@ mib-2          OBJECT IDENTIFIER ::= { mgmt 1 }
    -- compliance statements
    --
 
-      upsSubsetCompliance MODULE-***REMOVED***MPLIANCE
+      upsSubsetCompliance MODULE-COMPLIANCE
        STATUS     current
        DESCRIPTION
 
@@ -1164,7 +1164,7 @@ mib-2          OBJECT IDENTIFIER ::= { mgmt 1 }
 
        ::= { upsCompliances 1 }
 
-   upsBasicCompliance MODULE-***REMOVED***MPLIANCE
+   upsBasicCompliance MODULE-COMPLIANCE
        STATUS     current
        DESCRIPTION
 
@@ -1256,7 +1256,7 @@ mib-2          OBJECT IDENTIFIER ::= { mgmt 1 }
 
        ::= { upsCompliances 2 }
 
-   upsFullCompliance MODULE-***REMOVED***MPLIANCE
+   upsFullCompliance MODULE-COMPLIANCE
        STATUS     current
        DESCRIPTION
 
@@ -1418,8 +1418,8 @@ mib-2          OBJECT IDENTIFIER ::= { mgmt 1 }
    --upsConfigOutputPower                  x       x       x
    --upsConfigLowBattTime                          x       x  notes
    --upsConfigAudibleStatus                        x       x
-   --upsConfigLowVoltageTran***REMOVED***erPoint
-   --upsConfigHighVoltageTran***REMOVED***erPoint
+   --upsConfigLowVoltageTransferPoint
+   --upsConfigHighVoltageTransferPoint
 
 
    -- units of conformance

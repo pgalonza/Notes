@@ -127,7 +127,7 @@ arch-chroot /mnt
 
 Делаем ссылку на временную зону
 ```
-ln -***REMOVED*** /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 ```
 
 Генерируем файл /etc/adjtime

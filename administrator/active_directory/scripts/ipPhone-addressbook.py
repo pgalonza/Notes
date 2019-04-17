@@ -17,9 +17,9 @@ def main():
 
 
 def get_information(origin, group_name):
-    if group_name == "***REMOVED***":
-        conn = lm_auth.active_derectory_connector_***REMOVED***()
-        conn.search('dc=***REMOVED***,dc=***REMOVED***,dc=ru',
+    if group_name == "ВКС":
+        conn = lm_auth.active_derectory_connector_vks()
+        conn.search('dc=vks,dc=zhky,dc=ru',
                     '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                     SUBTREE,
                     attributes=['ipPhone', 'displayName'])
@@ -36,7 +36,7 @@ def get_information(origin, group_name):
         user_list[str(entry.displayName)] = [str(entry.ipPhone).replace('-', ''), group_name]
 
     if not group_name == 'Все' and not group_name == 'ЦУ':
-        conn.search('ou=co,dc=corp,dc=***REMOVED***,dc=ru',
+        conn.search('ou=co,dc=corp,dc=zhky,dc=ru',
                     '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                     SUBTREE,
                     attributes=['ipPhone', 'displayName'])
@@ -57,9 +57,9 @@ def get_all_information():
         if ou == 'all':
             continue
 
-        if origin[1] == "***REMOVED***":
-            conn = lm_auth.active_derectory_connector_***REMOVED***()
-            conn.search('dc=***REMOVED***,dc=***REMOVED***,dc=ru',
+        if origin[1] == "ВКС":
+            conn = lm_auth.active_derectory_connector_vks()
+            conn.search('dc=,dc=,dc=',
                         '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                         SUBTREE,
                         attributes=['ipPhone', 'displayName'])

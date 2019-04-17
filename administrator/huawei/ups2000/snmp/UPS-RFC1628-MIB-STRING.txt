@@ -58,5 +58,5 @@ UPS-RFC-MIB::upsConfigOutputVA.0 = INTEGER: 0 Volt-Amps
 UPS-RFC-MIB::upsConfigOutputPower.0 = INTEGER: 0 Watts
 UPS-RFC-MIB::upsConfigLowBattTime.0 = INTEGER: 0 minutes
 UPS-RFC-MIB::upsConfigAudibleStatus.0 = INTEGER: 0
-UPS-RFC-MIB::upsConfigLowVoltageTran***REMOVED***erPoint.0 = INTEGER: 0 RMS Volts
-UPS-RFC-MIB::upsConfigHighVoltageTran***REMOVED***erPoint.0 = INTEGER: 0 RMS Volts
+UPS-RFC-MIB::upsConfigLowVoltageTransferPoint.0 = INTEGER: 0 RMS Volts
+UPS-RFC-MIB::upsConfigHighVoltageTransferPoint.0 = INTEGER: 0 RMS Volts

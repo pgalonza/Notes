@@ -11,7 +11,7 @@ def main():
 
 def get_information():
     conn = lm_auth.active_derectory_connector()
-    conn.search(lm_auth.ad_ou_tree.get('***REMOVED***')[0],
+    conn.search(lm_auth.ad_ou_tree.get('zvo')[0],
                 '(&(objectCategory=person)(mail=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                 SUBTREE,
                 attributes=['mail', 'displayName'])

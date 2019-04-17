@@ -21,10 +21,10 @@
 			huaweiUtility
 				FROM HUAWEI-MIB			
 			OBJECT-GROUP, NOTIFICATION-GROUP
-				FROM SNMPv2-***REMOVED***NF
+				FROM SNMPv2-CONF
 			Integer32, Unsigned32, OBJECT-TYPE, MODULE-IDENTITY, NOTIFICATION-TYPE
 				FROM SNMPv2-SMI
-			TEXTUAL-***REMOVED***NVENTION
+			TEXTUAL-CONVENTION
 				FROM SNMPv2-TC;
 
 
@@ -39,7 +39,7 @@
 			LAST-UPDATED "201110211210Z"		-- October 21, 2011 at 12:10 GMT
 			ORGANIZATION
 				"Huawei Technologies Co.,Ltd."
-			***REMOVED***NTACT-INFO
+			CONTACT-INFO
 				"Contact-info."
 			DESCRIPTION
 				"The mib is used for defining huawei's UPS MIB objects which provides UPS management NMS interfaces.
@@ -62,7 +62,7 @@
 --
 -- Textual conventions
 --
-		RowStatus ::= TEXTUAL-***REMOVED***NVENTION
+		RowStatus ::= TEXTUAL-CONVENTION
 			STATUS current
 			DESCRIPTION
 				"Used to manage the creation and deletion of rows in a table."
@@ -398,8 +398,8 @@
 				normal(3),
 				battery(4),
 				sourceShare(5),
-				normalE***REMOVED***(6),
-				batteryE***REMOVED***(7)
+				normalECO(6),
+				batteryECO(7)
 				}
 			MAX-ACCESS read-only
 			STATUS current
@@ -410,8 +410,8 @@
 				Value 3 indicates normal mode.
 				Value 4 indicates battery mode.
 				Value 5 indicates combined mode.
-				Value 6 indicates mains E***REMOVED*** mode.
-				Value 7 indicates battery E***REMOVED*** mode."
+				Value 6 indicates mains ECO mode.
+				Value 7 indicates battery ECO mode."
 			::= { hwUpsDeviceOperInfoEntry 1 }
 
 
@@ -422,8 +422,8 @@
 				{
 				single(1),
 				parallel(2),
-				singleE***REMOVED***(3),
-				parallelE***REMOVED***(4),
+				singleECO(3),
+				parallelECO(4),
 				aging(5)
 				}
 			MAX-ACCESS read-only
@@ -432,8 +432,8 @@
 				"UPS operating status. Enumeration type.
 				Value 1 indicates that a single UPS is operating.
 				Value 2 indicates that the parallel system is operating.
-				Value 3 indicates that a single UPS is operating in E***REMOVED*** mode.
-				Value 4 indicates that the parallel system is operating in E***REMOVED*** mode.
+				Value 3 indicates that a single UPS is operating in ECO mode.
+				Value 4 indicates that the parallel system is operating in ECO mode.
 				Value 5 indicates aging."
 			::= { hwUpsDeviceOperInfoEntry 2 }
 
@@ -1811,7 +1811,7 @@
 
 		HwUpsControlEntry ::=
 			SEQUENCE {
-				hwUpsCtrlE***REMOVED***Switch
+				hwUpsCtrlECOSwitch
 					INTEGER,
 				hwUpsCtrlPowerOn
 					INTEGER,
@@ -1859,18 +1859,18 @@
 
 --  1.3.6.1.4.1.2011.6.174.1.102.100.1.1
 		-- 1.3.6.1.4.1.2011.6.174.1.102.100.1.1
-		hwUpsCtrlE***REMOVED***Switch OBJECT-TYPE
+		hwUpsCtrlECOSwitch OBJECT-TYPE
 			SYNTAX INTEGER
 				{
-				noE***REMOVED***(1),
+				noECO(1),
 				eco(2)
 				}
 			MAX-ACCESS read-only
 			STATUS current
 			DESCRIPTION
-				"E***REMOVED*** settings. Enumeration type. The default value is 1.
-				Value 1 indicates E***REMOVED*** mode.
-				Value 2 indicates Non E***REMOVED*** mode."
+				"ECO settings. Enumeration type. The default value is 1.
+				Value 1 indicates ECO mode.
+				Value 2 indicates Non ECO mode."
 			::= { hwUpsControlEntry 1 }
 
 
@@ -1939,7 +1939,7 @@
 			MAX-ACCESS read-only
 			STATUS current
 			DESCRIPTION
-				"Battery type.E***REMOVED*** settings. Enumeration type. The default value is 1.
+				"Battery type.ECO settings. Enumeration type. The default value is 1.
 				Value 1 indicates VRLA batteries."
 			::= { hwUpsControlEntry 6 }
 
@@ -3495,7 +3495,7 @@
 				 }
 			STATUS current
 			DESCRIPTION
-				"Tran***REMOVED***ormer Abnormal Trap.
+				"Transformer Abnormal Trap.
 				Its correlation binding parameters: Device ID, Sequence ID, Equip ID, Trap ID,
 				Trap Reason ID, Trap Text, Trap Level, Trap Flag, Synchron NO and the time. "
 			::= { hwUpsAlarmTrapsPrefix 21 }
@@ -3511,7 +3511,7 @@
 				 }
 			STATUS current
 			DESCRIPTION
-				"Tran***REMOVED***ormer Abnormal Resume Trap.
+				"Transformer Abnormal Resume Trap.
 				Its correlation binding parameters: Device ID, Sequence ID, Equip ID, Trap ID,
 				Trap Reason ID, Trap Text, Trap Level, Trap Flag, Synchron NO and the time. "
 			::= { hwUpsAlarmTrapsPrefix 22 }
@@ -4485,7 +4485,7 @@
 				 }
 			STATUS current
 			DESCRIPTION
-				"E***REMOVED*** Range Trap.
+				"ECO Range Trap.
 				Its correlation binding parameters: Device ID, Sequence ID, Equip ID, Trap ID,
 				Trap Reason ID, Trap Text, Trap Level, Trap Flag, Synchron NO and the tim"
 			::= { hwUpsAlarmTrapsPrefix 87 }
@@ -4499,7 +4499,7 @@
 				 }
 			STATUS current
 			DESCRIPTION
-				"E***REMOVED*** Range Resume Trap.
+				"ECO Range Resume Trap.
 				Its correlation binding parameters: Device ID, Sequence ID, Equip ID, Trap ID,
 				Trap Reason ID, Trap Text, Trap Level, Trap Flag, Synchron NO and the tim"
 			::= { hwUpsAlarmTrapsPrefix 88 }
@@ -4640,7 +4640,7 @@
 -- 1.3.6.1.4.1.2011.6.174.3.8
 		-- 1.3.6.1.4.1.2011.6.174.3.8
 		hwUpsControlGroup OBJECT-GROUP
-			OBJECTS { hwUpsCtrlPowerOffDelay, hwUpsCtrlE***REMOVED***Switch, hwUpsCtrlPowerBatCapacity, hwUpsCtrlPowerBatType, hwUpsCtrlModelType,
+			OBJECTS { hwUpsCtrlPowerOffDelay, hwUpsCtrlECOSwitch, hwUpsCtrlPowerBatCapacity, hwUpsCtrlPowerBatType, hwUpsCtrlModelType,
 				hwUpsCtrlInputStandard, hwUpsCtrlOutputStandard, hwUpsCtrlPowerOnState, hwUpsCtrlBatteryToTestState, hwUpsCtrlBatteryStopTestState,
 				hwUpsCtrlBatteryShallowTest, hwUpsCtrlBatteryVerifyCapTest, hwUpsCtrlBatteryEndTest, hwUpsCtrlBatteryToBoostState, hwUpsCtrlBatteryToFloatState,
 				hwUpsCtrlBatteryManualBoostCharge, hwUpsCtrlModelCapacity, hwUpsCtrlEPO, hwUpsCtrlBatteryManualFloatCharge, hwUpsCtrlPowerOn,

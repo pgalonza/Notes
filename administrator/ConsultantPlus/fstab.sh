@@ -26,7 +26,7 @@ sudo mkdir /mnt/cons && sudo chmod 0777 /mnt/cons
 echo "make dir and chown ok"
 
 sudo echo "#ConsultantPlus" >> /etc/fstab
-sudo echo "//10.0.200.100/ConsultantPlus /mnt/cons cifs _netdev,domain=$domain,username=$username,password=$password,iocharset=utf8,file_mode=0777,dir_mode=0777 0 0" >> /etc/fstab
+sudo echo "//host/ConsultantPlus /mnt/cons cifs _netdev,domain=$domain,username=$username,password=$password,iocharset=utf8,file_mode=0777,dir_mode=0777 0 0" >> /etc/fstab
 sudo mount -a
 
 echo "mount ok"

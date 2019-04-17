@@ -1,9 +1,9 @@
 ```
-docker run --rm  --name nginx  -p 80:80 -v /home/www-data/evaron-js.ru:/code ***REMOVED***/nginx:latest
+docker run --rm  --name container_name  -p 80:80 -v path_in_host:path_in_container tag/name:tag
 
-docker build -t ***REMOVED***/nginx:latest -f DockerFileNginx .
+docker build -t tag/name:tag -f DockerFile .
 
-docker exec -it nginx bash
+docker exec -it container_name bash
 
 docker rmi $(docker images -q -f dangling=true)
 ```

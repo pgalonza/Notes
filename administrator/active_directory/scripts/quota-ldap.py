@@ -8,7 +8,7 @@ _ad_server = ''
 _ad_user = ''
 _ad_password = ''
 _ad_search_tree = 'dc=,dc=,dc='
-_ad_ou = ('***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***', '***REMOVED***')
+_ad_ou = ('CO')
 
 
 def main():

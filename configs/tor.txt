@@ -15,7 +15,7 @@ SOCKSPort 0.0.0.0:9050
 
 ControlPort 9051
 
-HashedControlPassword 16:C7A4749635EE9DDB60029D4EF325F1FA5EDA1699E019F3349EFC2C719A
+HashedControlPassword hash_of_password
 CookieAuthentication 1
 
 ORPort 9001
@@ -23,7 +23,7 @@ Address 'ip'
 
 Nickname SilvanaRelay1
 
-ContactInfo 0xFFFFFFFF Peter <petewindows AT yandex dot ru>
+ContactInfo 0xFFFFFFFF Name <name AT example dot ru>
 
 ExitRelay 0
 IPv6Exit 0
