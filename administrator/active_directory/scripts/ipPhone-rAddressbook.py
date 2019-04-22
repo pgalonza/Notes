@@ -35,6 +35,7 @@ def get_information(origin, group_name):
     for entry in connection.entries:
         user_list[str(entry.displayName)] = str(entry.ipPhone).replace('-', '')
 
+    connection.unbind()
     return user_list
 
 

@@ -70,6 +70,7 @@ def active_directory():
         print(conn.modify(dn, {'mail': [(MODIFY_REPLACE, [str(login)+'@'])]}))
         # print(conn.modify(dn, {'mail': [(MODIFY_DELETE, [str(login) + '@'])]}))
         # print(conn.modify(dn, {'mail': [(MODIFY_ADD, [str(login) + '@'])]}))
+    conn.unbind()
 
 
 def active_directory_mysql():
@@ -89,7 +90,7 @@ def active_directory_mysql():
             dn = (json.loads(entry.entry_to_json())['dn'])
             print("ipPhone", conn.modify(dn, {'ipPhone': [(MODIFY_ADD, [extension])]}), sep=' ')
             print("telephoneNumber", conn.modify(dn, {'telephoneNumber': [(MODIFY_ADD, [extension])]}), sep=' ')
-
+    conn.unbind()
 
 def active_directory_csv():
     conn = active_directory_connector()
@@ -116,7 +117,7 @@ def active_directory_csv():
                 if row['room']:
                     print('physicalDeliveryOfficeName', conn.modify(dn, {'physicalDeliveryOfficeName': [(MODIFY_ADD, [row['room']])]}), sep=' ')
             """
-
+    conn.unbind()
 
 if __name__ == "__main__":
     sys.exit(main())

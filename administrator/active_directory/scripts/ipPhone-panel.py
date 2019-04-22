@@ -69,6 +69,7 @@ def get_information(file_name, mac):
         line += 'expansion_module.1.key.{}.line = 1\n'.format(i + 1)
         line += 'expansion_module.1.key.{}.value = {}\n'.format(i + 1, number)
 
+    conn.unbind()
     return line
 
 
