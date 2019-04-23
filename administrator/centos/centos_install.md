@@ -38,7 +38,7 @@ yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
 
 ###### Zabbix repository
 ```
-rpm -ivh https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.el7.noarch.rpm
+rpm -ivh http://repo.zabbix.com/zabbix/4.2/rhel/7/x86_64/zabbix-release-4.2-1.el7.noarch.rpm
 ```
 
 ###### Zabbix user for mysql check
