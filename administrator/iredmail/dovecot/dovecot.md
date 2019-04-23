@@ -107,6 +107,11 @@ mail_max_userip_connections =
 auth_cache_verify_password_with_worker =
 ```
 
+###### Copy a message with hard links
+```
+maildir_copy_with_hardlinks=
+```
+
 _dovecot.conf_
 ```
 quota = maildir:User quota
