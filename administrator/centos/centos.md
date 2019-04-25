@@ -5,6 +5,11 @@
 //"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,vers=3.0,gid="" 0 0
 ```
 
+# Network
+###### Forward
+```
+net.ipv4.ip_forward = 1
+```
 
 # File, socket limits
 
