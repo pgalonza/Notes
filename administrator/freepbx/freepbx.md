@@ -1,3 +1,10 @@
+# General
+
+###### Core FastAGI Server is not running
+```
+fwconsole setting LAUNCH_AGI_AS_FASTAGI 1
+```
+
 ###### Number of characters in the display name field
 
 _/var/www/html/admin/assets/js/pbxlib*_
