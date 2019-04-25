@@ -5,13 +5,22 @@ from ldap3 import SUBTREE
 
 
 def main():
-    user_list = get_information()
-    create_csv_file(user_list)
+    choice = 'all'
+    if choice == 'all':
+        for ou, origin in lm_auth.ad_ou_tree.items():
+            if ou == 'all':
+                continue
+            user_list = get_information(origin[0])
+            create_csv_file(user_list, ou)
+
+    else:
+        user_list = get_information(lm_auth.ad_ou_tree.get('zvo')[0])
+        create_csv_file(user_list)
 
 
-def get_information():
+def get_information(origin):
     conn = lm_auth.active_derectory_connector()
-    conn.search(lm_auth.ad_ou_tree.get('zvo')[0],
+    conn.search(origin,
                 '(&(objectCategory=person)(mail=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
                 SUBTREE,
                 attributes=['mail', 'displayName'])
@@ -21,8 +30,8 @@ def get_information():
     return conn_entries
 
 
-def create_csv_file(user_list):
-    with open('names.csv', 'w', newline='') as csvfile:
+def create_csv_file(user_list, file_name):
+    with open(file_name + '.csv', 'w', newline='') as csvfile:
         fieldnames = ['name', 'mail']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
