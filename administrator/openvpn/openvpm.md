@@ -23,7 +23,7 @@ mv vars.example vars
 
 Create verification center CA
 ```
-/easyrsa build-ca
+./easyrsa build-ca
 ```
 
 Create the certificate request for server without password
@@ -61,7 +61,7 @@ mkdir /etc/openvpn/ccd && mkdir /var/log/openvpn
 ```
 
 Create the configuration file for client
-_/etc/openvpn/ccd/clien_
+_/etc/openvpn/ccd/client_
 ```
 iroute 192.168.20.0 255.255.255.0
 ```
