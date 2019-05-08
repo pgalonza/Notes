@@ -46,7 +46,7 @@ rpm -ivh http://repo.zabbix.com/zabbix/4.2/rhel/7/x86_64/zabbix-release-4.2-1.el
 GRANT USAGE ON *.* TO 'zabbix'@'%' IDENTIFIED BY 'superpassword';
 ```
 
-###### Make zabbix agent directoru
+###### Make zabbix agent directory
 ```
 mkdir /var/lib/zabbix
 ```
@@ -54,7 +54,7 @@ mkdir /var/lib/zabbix
 # Zabbix database
 _/etc/sysctl.conf_
 ```
-vm.swappiness=10
+echo vm.swappiness = 10 >> /etc/sysctl.conf
 ```
 
 _/etc/fstab_
