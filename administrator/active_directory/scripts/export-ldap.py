@@ -14,8 +14,8 @@ def main():
             create_csv_file(user_list, ou)
 
     else:
-        user_list = get_information(lm_auth.ad_ou_tree.get('zvo')[0])
-        create_csv_file(user_list)
+        user_list = get_information(lm_auth.ad_ou_tree.get(choice)[0])
+        create_csv_file(user_list, choice)
 
 
 def get_information(origin):
