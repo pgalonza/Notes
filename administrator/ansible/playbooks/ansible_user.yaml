@@ -1,5 +1,8 @@
 ---
 - hosts: all
+  become: yes
+  #become_user: root
+  #become_method: sudo
   tasks:
   - name: Create a ansible user
     user:
@@ -18,5 +21,12 @@
     authorized_key:
      user: ansible
      state: present
-     key: "{{ lookup('file', '/data/ansible/kee/id_rsa.pub') }}"
+     key: "{{ lookup('file', '/data/ansible/keys/id_rsa.pub') }}"
+  - name: Enable passwordless sudo
+    copy:
+     content: ansible ALL=(ALL) NOPASSWD:ALL
+     dest: /etc/sudoers.d/ansible
+     owner: root
+     group: root
+     mode: 0440
 ...
