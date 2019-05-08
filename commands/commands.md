@@ -460,3 +460,10 @@ mount.cifs //host/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
 ```
 chromium --proxy-server="socks://host:9050"
 ```
+
+# Ansible
+
+###### Start as another user
+```
+ansible-playbook -i co_kibana1, -ugpv --ask-pass -b --ask-become-pass ansible_user.yaml
+```
