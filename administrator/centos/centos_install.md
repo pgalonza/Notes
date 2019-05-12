@@ -2,7 +2,7 @@
 
 ###### Packet
 ```
-yum install epel-release net-tools wget vim htop tmux
+yum install epel-release net-tools wget vim htop tmux iotop
 ```
 
 ###### No root ssh
