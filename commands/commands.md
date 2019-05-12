@@ -467,3 +467,58 @@ chromium --proxy-server="socks://host:9050"
 ```
 ansible-playbook -i co_kibana1, -ugpv --ask-pass -b --ask-become-pass ansible_user.yaml
 ```
+
+# Disks and partitions
+
+###### View
+```
+fdisk -l
+lsblk -o NAME,SIZE,FSTYPE,TYPE,MOUNTPOINT
+lsblk -f
+```
+
+###### Tell the Linux kernel about the presence and numbering of on-disk partitions, update the specified partitions
+```
+partx -u /dev/XXX
+```
+
+###### Inform the OS of partition table changes
+```
+partprobe
+```
+
+###### Copy partition
+```
+dd if=/dev/XXX of=/dev/YYY
+```
+
+###### Copy partition table
+MBR
+```
+sfdisk -d /dev/XXX | sfdisk /dev/YYY
+```
+
+GPT sda to sdb
+```
+sgdisk -R=/dev/sdb /dev/sda
+```
+
+# S.M.A.R.T
+
+###### View
+```
+smartctl -a /dev/sdX
+```
+
+
+# Raid
+
+###### Information
+```
+cat /proc/mdstat
+```
+
+###### Add disk
+```
+mdadm --manage /dev/mdXXX --add /dev/YYY
+```
