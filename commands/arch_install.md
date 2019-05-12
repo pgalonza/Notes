@@ -57,7 +57,7 @@ lvdisplay
 ```
 
 Делаем группы доступными
-````
+```
 vgscan
 vgchange –ay
 ```
