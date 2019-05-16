@@ -1,4 +1,4 @@
-# ATHER
+# General
 ###### Кодировка
 ```
 iconv -f cp1251 -t utf8
@@ -58,6 +58,11 @@ python -m SimpleHTTPServer
 ###### Execute the command, without history.
 ```
 space command
+```
+
+###### Print shared object dependencies
+```
+ldd /path_to_object
 ```
 
 # PERMISSION
@@ -479,7 +484,7 @@ lsblk -f
 
 ###### Tell the Linux kernel about the presence and numbering of on-disk partitions, update the specified partitions
 ```
-partx -u /dev/XXX
+partx -u /dev/sda
 ```
 
 ###### Inform the OS of partition table changes
@@ -489,13 +494,13 @@ partprobe
 
 ###### Copy partition
 ```
-dd if=/dev/XXX of=/dev/YYY
+dd if=/dev/sda of=/dev/sdb
 ```
 
 ###### Copy partition table
 MBR
 ```
-sfdisk -d /dev/XXX | sfdisk /dev/YYY
+sfdisk -d /dev/sda | sfdisk /dev/sdb
 ```
 
 GPT sda to sdb
@@ -503,13 +508,32 @@ GPT sda to sdb
 sgdisk -R=/dev/sdb /dev/sda
 ```
 
+###### Formatting
+```
+mkfs.ext4 /dev/sda
+```
+
+###### Partition synchronization
+```
+rsync -avzr /var/log/ /mnt/
+```
+
+###### What kind of process working with partition
+```
+lsof | grep '/var/log'
+```
+
 # S.M.A.R.T
 
 ###### View
 ```
-smartctl -a /dev/sdX
+smartctl -a /dev/sda
 ```
 
+###### File system resize
+```
+resize2fs /dev/sda
+```
 
 # Raid
 
@@ -520,5 +544,15 @@ cat /proc/mdstat
 
 ###### Add disk
 ```
-mdadm --manage /dev/mdXXX --add /dev/YYY
+mdadm --manage /dev/md_number --add /dev/sda
+```
+
+###### Create the raid with one disk
+```
+mdadm --create --verbose /dev/md_number --level=1 --raid-devices=1 /dev/sda
+```
+
+###### Change number of disks
+```
+mdadm --grow /dev/m_number --raid-devices=2
 ```
