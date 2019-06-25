@@ -60,3 +60,11 @@ _cdr.conf_
 ```
 enable=yes
 ```
+
+
+###### Yealink reload
+_sip_notify_custom.conf_
+```
+[reboot-yealink]
+Event=>check-sync\;reboot=true to Event=>check-sync\;reboot=false
+```
