@@ -5,7 +5,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Perflib\009
 
 ###### Get the value
 ```
-typeperf ""
+typeperf -q ""
 ```
 
 ###### Re-creating counters

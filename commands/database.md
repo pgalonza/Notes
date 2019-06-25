@@ -55,5 +55,5 @@ gunzip < DUMP_FILE.sql.gz | mysql my_db --user= --password= --host=
 
 ###### Export dump
 ```
-mysqldump  --skip-extended-insert my_db | gzip > ${DIR}/zabbix_${NAME}.sql.gz
+mysqldump  --skip-extended-insert my_db | gzip > DUMP_FILE.sql.gz
 ```
