@@ -170,7 +170,7 @@ echo -n "actual_password_here" | sha1sum | tr [:lower:] [:upper:]
 ```
 ###### Take sum like shadow
 ```
-python -c 'import crypt; print crypt.crypt("actual_password_here", "$6$random_salt")'
+python -c 'import crypt; print crypt.crypt("actual_password_here", "$6$random_salt$")'
 ```
 
 # SSL/TLS
@@ -191,6 +191,11 @@ openssl s_client -tls1_1 -starttls imap -connect host:143 -servername host_name
 ###### Change interface speed
 ```
 ethtool -s eth0 speed 100 duplex full
+```
+
+###### Create a new UUID value
+```
+uuidgen eth1
 ```
 
 # TREE
@@ -445,6 +450,12 @@ setfacl -k /home/test/
 setfacl -R -k /home/test/
 ```
 
+###### Remove permission
+```
+setfacl -x user_name /home/test/
+```
+
+
 # SED
 
 ###### Replace in all files
@@ -470,7 +481,7 @@ chromium --proxy-server="socks://host:9050"
 
 ###### Start as another user
 ```
-ansible-playbook -i co_kibana1, -ugpv --ask-pass -b --ask-become-pass ansible_user.yaml
+ansible-playbook -i host_name, -u user_name --ask-pass -b --ask-become-pass ansible_user.yaml
 ```
 
 # Disks and partitions
@@ -490,6 +501,17 @@ partx -u /dev/sda
 ###### Inform the OS of partition table changes
 ```
 partprobe
+```
+
+###### Re-scan disk
+```
+find /sys -iname 'scan'
+echo 1>/sys/class/block/sda/device/rescan
+```
+
+SCSI
+```
+echo "– – -” > /sys/class/scsi_host/hostX/scan
 ```
 
 ###### Copy partition
