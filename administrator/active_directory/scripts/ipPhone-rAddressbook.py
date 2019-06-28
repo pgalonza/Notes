@@ -1,6 +1,9 @@
+#! /usr/bin/env python3.6
+import argparse
 import sys
 import lm_auth
-from ldap3 import SUBTREE, Server, Connection
+import logging
+from ldap3 import SUBTREE
 import xml.etree.ElementTree as ET
 
 
@@ -9,33 +12,32 @@ def main():
     for ou, origin in lm_auth.ad_ou_tree.items():
         if ou == 'all':
             continue
-        user_list = get_information(origin[0], origin[1])
-        path_to_file = ou + '-remote.xml'
-        path_list[origin[1]] = ou + '-remote.xml'
+        logging.info(f'Get information from Active Directory for {ou}')
+        user_list = get_information(origin[0])
+        path_to_file = f'{args.xml}/{ou}-remote.xml'
+        path_list[origin[1]] = f'{args.url}/{ou}-remote.xml'
+        logging.info(f'Create xml file for {ou}')
         create_xml_departament(user_list, path_to_file)
+    logging.info('Create xml menu')
     create_xml_menu(path_list)
 
 
-def get_information(origin, group_name):
-    if group_name == "ВКС":
-        connection = lm_auth.active_derectory_connector_vks()
-        connection.search('dc=,dc=,dc=',
-                          '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
-                          SUBTREE,
-                          attributes=['ipPhone', 'displayName'])
-    else:
-        connection = lm_auth.active_derectory_connector()
-        connection.search(origin,
-                          '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
-                          SUBTREE,
-                          attributes=['ipPhone', 'displayName'])
+def get_information(origin):
+    connection = lm_auth.active_derectory_connector()
+    logging.debug(f'{connection}')
+    connection.search(origin,
+                      '(&(objectCategory=person)(displayName=*)(givenName=*)(ipPhone=*)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))',
+                      SUBTREE,
+                      attributes=['ipPhone', 'displayName'])
 
     user_list = {}
 
     for entry in connection.entries:
+        logging.debug(f'dictionary:\n{entry.ipPhone}\n{entry.displayName}\n')
         user_list[str(entry.displayName)] = str(entry.ipPhone).replace('-', '')
 
-    connection.unbind()
+    logging.debug('Active Directory close connection')
+    conn.unbind()
     return user_list
 
 
@@ -49,6 +51,7 @@ def create_xml_departament(user_info, file_path):
         number_xml.text = number
 
     tree = ET.ElementTree(root)
+    logging.debug(f'Write to file {file_path}')
     tree.write(file_path, encoding="utf-8")
 
 
@@ -64,8 +67,26 @@ def create_xml_menu(path_list):
         url.text = path
 
     tree = ET.ElementTree(root)
-    tree.write('menu.xml', encoding="utf-8")
+    logging.debug('Write to menu file')
+    tree.write(f'{args.xml}/menu.xml', encoding="utf-8")
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Xml remote Yealink addressbook',
+                                     formatter_class=argparse.MetavarTypeHelpFormatter)
+
+    parser.add_argument('--log', type=str, help='Path to log file', default='/var/log/scripts')
+    parser.add_argument('--debug', type=str, help='debug level', default='info', choices=('info', 'debug'))
+    parser.add_argument('--xml', type=str, help='Path to xml files',
+                        default='/data/provisioning/yealink/configs/phone_book')
+    parser.add_argument('--url', type=str, help='URL to files',
+                        default='http://ip_address/configs/yealink/phone_book/')
+
+    args = parser.parse_args()
+
+    debug_match = {'info': logging.INFO, 'debug': logging.DEBUG}
+    logging.basicConfig(level=debug_match.get(args.debug), filename=f"{args.log}/remote-addressbook.log",
+                        format='%(asctime)s %(process)d %(name)s %(levelname)s %(message)s',
+                        datefmt='%d-%b-%y %H:%M:%S')
+
     sys.exit(main())
