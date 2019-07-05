@@ -55,6 +55,11 @@ Create the key for client
 ./easyrsa sign-req client client
 ```
 
+Check the key
+```
+openssl verify -CAfile pki/ca.crt pki/issued/client.crt
+```
+
 Create folders for _log_ and _ccd_
 ```
 mkdir /etc/openvpn/ccd && mkdir /var/log/openvpn
