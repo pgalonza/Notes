@@ -26,6 +26,7 @@ echo "RENAME USER 'name'@'localhost' TO 'name'@'%';" | mysql
 ###### Last entry
 ```
 SELECT MAX(`my_table`) FROM my_db;
+SELECT TOP 10 * FROM my_db ORDER BY my_table DESC
 ```
 
 ###### Set password for user
