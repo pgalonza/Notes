@@ -57,3 +57,18 @@ context=from-internal
 disallow=all
 allow=alaw&ulaw
 ```
+
+###### LinkSYS
+```
+[username]
+secret=
+type=friend
+username=
+qualify=yes
+port=5061
+nat=no
+host=
+dtmfmode=inband
+context=from-pstn
+canreinvite=no
+```
