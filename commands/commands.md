@@ -578,29 +578,50 @@ mdadm --create --verbose /dev/md_number --level=1 --raid-devices=1 /dev/sda
 mdadm --grow /dev/m_number --raid-devices=2
 ```
 
-###### ffmpeg
-video from RTSP
+# ffmpeg
+###### Video from RTSP
 ```
 ffmpeg -y -re -acodec pcm_s16le -rtsp_transport tcp -i rtsp:// -vcodec copy -af asetrate=22050 -acodec aac -b:a 96k -t 15 tmp/test.mp4
 ```
 
-screenshot from RTSP
+###### Screenshot from RTSP
 ```
 ffmpeg -rtsp_transport tcp -i rtsp:// -f image2 -vf fps=fps=1 -t 0.001 -ss 00:00:3 tmp/image.png
 ```
 
-###### youtube-dl
-Best video
+# youtube-dl
+###### Best video
 ```
 youtube-dl -f bestvideo+bestaudio 'url'
 ```
 
-Best audio
+###### Best audio
 ```
 youtube-dl -f bestaudio 'url'
 ```
 
-The list of formats
+###### The list of formats
 ```
 youtube-dl -F 'url'
+```
+
+# Grep
+###### Print only matching parts
+```
+grep -Eo "pattern" file | sort | uniq
+```
+
+# e2fsprogs
+##### The defragmentation check ext4 partition
+```
+e4defrag -c /dev/sda
+```
+##### Defragmentation ext4 partition
+```
+e4defrag /dev/sda
+```
+
+##### Check the result ⩽0.3% non-contiguous
+```
+fsck -n /dev/sda
 ```
