@@ -61,10 +61,63 @@ _cdr.conf_
 enable=yes
 ```
 
-
 ###### Yealink reload
 _sip_notify_custom.conf_
 ```
 [reboot-yealink]
 Event=>check-sync\;reboot=true to Event=>check-sync\;reboot=false
+```
+
+###### Admin module
+disabel
+```
+Contact Manager
+Digium Addons
+Online Support
+REST API
+iSymphonyV3
+Directory
+Do-Not-Disturb (DND)
+Parking Lot
+Wake Up Calls
+DAHDi Config
+Digium Phones Config
+Google Voice/Chan Motif
+SIPSTATION
+WebRTC Phone
+Weak Password Detection
+Fax Configuration
+Class of Service
+PBX Upgrader
+Phone Apps
+XMPP
+Zulu
+AMD
+Appointment Reminder
+Broadcast
+CallerID Managment
+Conference Pro
+Directory
+Do-Not-Disturb (DND)
+Paging Pro
+Parking Pro
+Queues Pro
+Sangoma Property Management
+Voicemail Notifications
+Web Callback
+Custom Contexts
+Extension Routes
+Outbound Call Limit
+SMS
+Vega
+Call Recording Report
+Pinsets Pro
+Queue Reports
+Queue Wallboard
+Voicemail Reports
+Customer Relationship Management
+EndPoint Manager
+Fax Configuration Professional
+High Availability Services
+OSS PBX End Point Manager
 ```
