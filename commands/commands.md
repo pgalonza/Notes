@@ -672,4 +672,24 @@ fio --name=randwrite --ioengine=libaio --iodepth=1 --rw=randwrite --bs=4k --dire
 Read Write
 ```
 fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75
+
+# Grep
+###### Print only matching parts
+```
+grep -Eo "pattern" file | sort | uniq
+```
+
+# e2fsprogs
+##### The defragmentation check ext4 partition
+```
+e4defrag -c /dev/sda
+```
+##### Defragmentation ext4 partition
+```
+e4defrag /dev/sda
+```
+
+##### Check the result ⩽0.3% non-contiguous
+```
+fsck -n /dev/sda
 ```
