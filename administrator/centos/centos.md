@@ -121,3 +121,61 @@ _/etc/yum.conf_
 ```
 installonly_limit=3
 ```
+
+# Systemd
+
+###### Searach problem
+
+Show problems
+```
+systemctl --failed
+```
+
+Get pid
+```
+systemctl status systemd-modules-load
+```
+
+Show problems by pid
+```
+journalctl _PID=
+```
+
+# SSL
+##### Certificate Authority (CA)
+
+###### Install  openssl
+```
+yum install -y openssl
+```
+
+###### Generate a private key
+```
+cd /etc/pki/CA/private/
+openssl genrsa -aes128 -out name-CA.key 2048
+```
+
+###### Create a Certificate Authority (CA) certificate
+```
+openssl req -new -x509 -days 1825 \
+> -key /etc/pki/CA/private/name-CA.key \
+> -out /etc/pki/CA/certs/name-CA.crt
+```
+
+###### Generate a CSR (Certificate Signing Request) for server1
+```
+openssl req -new -key /etc/pki/tls/private/web-01.key \
+> -out /etc/pki/tls/server1.csr
+scp /etc/pki/tls/server1.csr server-ca:~/server1.csr
+```
+
+###### Sign the CSR by Certificate Authority (CA)
+```
+openssl x509 -req -in server1.csr \
+> -CA /etc/pki/CA/certs/name-CA.crt \
+> -CAkey /etc/pki/CA/private/name-CA.key \
+> -CAcreateserial \
+> -out server1.crt \
+> -days 365
+scp server1.crt server1:/etc/pki/tls/certs/server1.crt
+```
