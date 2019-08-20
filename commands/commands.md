@@ -64,6 +64,10 @@ space command
 ```
 ldd /path_to_object
 ```
+###### Check nginx configuration
+```
+nginx -t
+```
 
 # PERMISSION
 ```
@@ -184,6 +188,34 @@ update-ca-trust
 ###### Check
 ```
 openssl s_client -tls1_1 -starttls imap -connect host:143 -servername host_name
+```
+
+###### View
+Request CSR
+```
+openssl req -text -noout -verify -in domain.csr
+```
+
+Public CRT
+```
+openssl x509 -text -noout -in domain.crt
+```
+
+Private KEY
+```
+openssl rsa -check -in domain.key
+```
+
+###### Check the membership
+```
+openssl rsa -noout -modulus -in domain.key | openssl md5
+openssl x509 -noout -modulus -in domain.crt | openssl md5
+openssl req -noout -modulus -in domain.csr | openssl md5
+```
+
+###### Check CRT via CA
+```
+openssl verify -verbose -CAfile ca.crt domain.crt
 ```
 
 # Network
@@ -510,7 +542,7 @@ echo 1>/sys/class/block/sda/device/rescan
 
 SCSI
 ```
-echo "– – -” > /sys/class/scsi_host/hostX/scan
+echo "- - -" > /sys/class/scsi_host/hostX/scan
 ```
 
 ###### Copy partition
@@ -578,29 +610,66 @@ mdadm --create --verbose /dev/md_number --level=1 --raid-devices=1 /dev/sda
 mdadm --grow /dev/m_number --raid-devices=2
 ```
 
-###### ffmpeg
-video from RTSP
+# Ffmpeg
+
+###### Video from RTSP
 ```
 ffmpeg -y -re -acodec pcm_s16le -rtsp_transport tcp -i rtsp:// -vcodec copy -af asetrate=22050 -acodec aac -b:a 96k -t 15 tmp/test.mp4
 ```
 
-screenshot from RTSP
+###### Screenshot from RTSP
 ```
 ffmpeg -rtsp_transport tcp -i rtsp:// -f image2 -vf fps=fps=1 -t 0.001 -ss 00:00:3 tmp/image.png
 ```
 
-###### youtube-dl
-Best video
+# Youtube-dl
+
+###### Best video
 ```
 youtube-dl -f bestvideo+bestaudio 'url'
 ```
 
-Best audio
+###### Best audio
 ```
 youtube-dl -f bestaudio 'url'
 ```
 
-The list of formats
+###### The list of formats
 ```
 youtube-dl -F 'url'
+```
+
+# Ldconfig
+###### Create the cache
+```
+ldconfig
+```
+
+###### Delete the cache
+```
+rm /etc/ld.so.cache
+```
+
+###### View what libraries are in cache
+```
+ldconfig -p
+```
+
+# Benchmark
+##### Disk
+
+###### FIO
+Read
+```
+fio --name=randread --ioengine=libaio --iodepth=16 --rw=randread --bs=4k --direct=0 --size=512M --numjobs=4 --runtime=240 --group_reporting
+```
+
+Write
+```
+fio --name=randwrite --ioengine=libaio --iodepth=1 --rw=randwrite --bs=4k --direct=0 --size=512M --numjobs=4 --runtime=240 --group_reporting
+```
+
+Read Write
+```
+fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75
 ```
