@@ -335,7 +335,7 @@ doveadm reload
 doveadm who -1
 ```
 
-# Authorization cache
+###### Clean the authorization cache
 ```
 doveadm auth cache
 ```
@@ -672,6 +672,7 @@ fio --name=randwrite --ioengine=libaio --iodepth=1 --rw=randwrite --bs=4k --dire
 Read Write
 ```
 fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75
+```
 
 # Grep
 ###### Print only matching parts
