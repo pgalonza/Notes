@@ -47,7 +47,7 @@ vgreduce fg_name /dev/sda
 vgcreate vg_name /dev/sda
 ```
 
-#Logical volumes
+# Logical volumes
 
 ###### Create a logical volume
 ```
