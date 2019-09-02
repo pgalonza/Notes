@@ -179,3 +179,22 @@ openssl x509 -req -in server1.csr \
 > -days 365
 scp server1.crt server1:/etc/pki/tls/certs/server1.crt
 ```
+
+# SysRq
+###### Enable
+On work
+```
+sysctl kernel.sysrq=1
+echo "1" > /proc/sys/kernel/sysrq
+```
+
+On boot
+```
+echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
+```
+
+Before mounting and init
+_Kernel_
+```
+sysrq_always_enabled=1
+```

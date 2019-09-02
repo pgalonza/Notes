@@ -1,3 +1,4 @@
+# General
 ###### Create database
 ```
 echo "CREATE DATABASE `my_db` CHARACTER SET utf8 COLLATE utf8_general_ci;" | mysql
@@ -57,4 +58,10 @@ gunzip < DUMP_FILE.sql.gz | mysql my_db --user= --password= --host=
 ###### Export dump
 ```
 mysqldump  --skip-extended-insert my_db | gzip > DUMP_FILE.sql.gz
+```
+
+###### Check & Repair
+```
+mysqlcheck --check-upgrade --all-databases --auto-repair
+mysql_upgrade --force
 ```

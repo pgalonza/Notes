@@ -694,3 +694,104 @@ e4defrag /dev/sda
 ```
 fsck -n /dev/sda
 ```
+
+# Shutdown/Poweroff/Reboot
+##### Shutdown
+```
+shutdown -h hours:minutes
+init 0
+telinit 0
+shutdown -h now
+poweroff
+halt --poweroff
+reboot --poweroff
+shytdown --poweroff
+halt --no-wtmp --no-wall
+```
+
+##### Poweroff
+```
+halt
+halt --force
+reboot --halt
+poweroff --halt
+poweroff --force
+```
+
+##### Reboot
+```
+poweroff --reboot
+shutdown --reboot
+reboot --force
+halt --reboot
+init 6
+reboot
+```
+
+#####Cancel
+```
+shutdown -c
+```
+
+# SysRq
+##### Unraw
+```
+Alt+SysRq+r
+```
+
+##### Terminate
+```
+Alt+SysRq+e
+```
+
+##### Kill
+```
+Alt+SysRq+i
+```
+
+##### Sync
+```
+Alt+SysRq+s
+```
+
+##### Unmount
+```
+Alt+SysRq+u
+```
+
+##### Reboot
+```
+Alt+SysRq+b
+```
+
+# Fsck
+##### Check the file system
+```
+fsck -CMn /dev/sda1
+```
+
+##### Force check the file system
+```
+fsck -CMnf /dev/sda1
+```
+
+##### Repair the file system
+```
+fsck -p /dev/sda1
+```
+
+##### Repair superblocks
+View backup superblocks
+```
+mkfs -t ext4 -n /dev/sda1
+```
+
+Recovery
+```
+fsck -b "superblocks" /dev/sda1
+```
+
+###### Find badblocks
+```
+fsck -c /dev/sda1
+```
