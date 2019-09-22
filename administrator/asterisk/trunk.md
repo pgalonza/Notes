@@ -1,7 +1,20 @@
-###### IAX2 trunk
+# IAX2 trunk
 ```
-[SERVER222]
-username=SERVER111
+[SERVER2]
+username=SERVER1
+secret=
+host=
+type=friend
+qualify=yes
+trunk=yes
+context=from-trunk
+disallow=all
+allow=alaw&ulaw
+```
+
+```
+[SERVER1]
+username=SERVER2
 secret=
 host=
 type=friend
