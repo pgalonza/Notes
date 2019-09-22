@@ -2,7 +2,7 @@
 
 ###### Packet
 ```
-yum install epel-release net-tools wget vim htop tmux iotop
+yum install epel-release net-tools wget vim htop tmux iotop iptables-services ipset-service
 ```
 
 ###### No root ssh
@@ -22,6 +22,11 @@ firewall-cmd --set-default=internal
 
 ###### Disable selinux
 _/etc/sysconfig/selinux_
+```
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+systemctl reboot
+```
+
 
 ###### Disable IPV6
 ```
