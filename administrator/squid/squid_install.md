@@ -21,7 +21,6 @@ tar -zxf openssl-1.1.1b.tar.gz
 Show configuration options
 ```
 ./configure -help | less
-
 ```
 
 Configure openssl and install
@@ -33,9 +32,7 @@ make install_sw
 ```
 
 Add path /usr/local/openssl/lib
-
 _/etc/ld.so.conf.d/openssl.conf_
-
 ```
 ldconfig
 ldd /usr/bin/openssl
@@ -64,9 +61,7 @@ openssl x509 -in proxyCA.pem -outform DER -out proxyCA.der
 ```
 
 Import certificate to local storage
-
 _/etc/squid/*.der_ _ /etc/pki/ca-trust/source/anchors/_
-
 ```
 update-ca-trust
 ```
@@ -77,7 +72,8 @@ Createcertificate storage
 chown squid:squid /var/lib/ssl_db
 ```
 
-###### FATAL: Ipc::Mem::Segment::create failed to shm_open(/squid-cf__metadata.shm): (17) File exists
+# Problems
+## FATAL: Ipc::Mem::Segment::create failed to shm_open(/squid-cf__metadata.shm): (17) File exists
 ```
 chown squid:squid /dev/shm/*
 ```

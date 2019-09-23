@@ -1,11 +1,8 @@
-Скрипт _wine_install.sh_  устанавливает Wine, PlayOnLinux и остальное нелобходимое
-Скрипт _fstab.sh_ создает директогирию _/etc/cons_ дает на нее права. Затем записывает в файл /etc/fstab данные для монтировани при этом спрашивает
-данные пользователя от которого будет произведено подключение к шаре и мантирует его.
-В конце создает ссылки для первого запуска и обычного запуска консультанта.
-!Важно!
-Для полной работоспоснобности скрипта необходимо
+# Install ConsultantPlus on linux
+1. The script _wine_install.sh_ install Wine, PlayOnLinux and other packages.
+2. The script _fstab.sh_ make directory _/etc/cons_ with privileges. After this write in _/etc/fstab_ the parameters for mount, then create the link.
 
-1. При создании вируального диска в PlayOnLinux именовать его consultant
-2. При добавлении диска в настройках wine диск должен именоваться d:
-
-ПОТОМ это переделаю для выбора в консоли. Забыл как правильно экранировать двойные кавычки)
+!Important!
+For the full functionality of the script you must do:
+1. When you create a virtual disk in PlayOnLinux, name it consultant
+2. When you add a disc in the wine settings, the disc should be named d:

@@ -1,4 +1,6 @@
-# IAX2 trunk
+# Trunk
+## IAX2 trunk
+### Frieend
 ```
 [SERVER2]
 username=SERVER1
@@ -25,7 +27,8 @@ disallow=all
 allow=alaw&ulaw
 ```
 
-###### Outgoing server 1
+### Input, output
+Outgoing server 1
 ```
 [offise1]
 username=user1
@@ -38,7 +41,7 @@ disallow=all
 allow=alaw&ulaw
 ```
 
-###### Incoming server 2
+Incoming server 2
 ```
 [user1]
 type=user
@@ -48,7 +51,7 @@ disallow=all
 allow=alaw&ulaw
 ```
 
-###### Outgoing server 2
+Outgoing server 2
 ```
 [offise2]
 username=user2
@@ -61,7 +64,7 @@ disallow=all
 allow=alaw&ulaw
 ```
 
-###### Incoming server 1
+Incoming server 1
 ```
 [user2]
 type=user
@@ -71,7 +74,7 @@ disallow=all
 allow=alaw&ulaw
 ```
 
-###### LinkSYS
+## LinkSYS
 ```
 [username]
 secret=

@@ -1,3 +1,4 @@
+# Dovecot
 _dovecot.conf_
 ```
 userdb {
@@ -17,7 +18,6 @@ mail_location = maildir:%Lh/Maildir/:INDEX=%Lh/Maildir:LAYOUT=fs
 ```
 
 _dovecot.conf_
-
 ```
 mailbox Отправленные {
         auto = subscribe
@@ -38,76 +38,78 @@ mailbox "Нежелательная почта" {
 ```
 
 _dovecot.conf_
-###### plugins
+plugins
 ```
 mail_plugins = quota mailbox_alias acl mail_log notify stats
 ```
-###### imap
+
+imap
 ```
 mail_plugins = $mail_plugins imap_quota imap_acl imap_stats
 ```
-######  return when quota full
+
+return when quota full
 ```
 quota_full_tempfail = yes
 ```
 
 _dovecot.conf_
-###### Maximum number of simultaneous client connections per process.
+Maximum number of simultaneous client connections per process.
 ```
 client_limit =
 ```
 
-###### Number of client connections to handle until the process kills itself.
+Number of client connections to handle until the process kills itself.
 ```
 service_count =
 ```
 
-###### Minimum number of processes that always should be available to accept more client connections.
+Minimum number of processes that always should be available to accept more client connections.
 ```
 process_min_avail =
 ```
 
-###### Maximum number of processes that can exist for this service.
+Maximum number of processes that can exist for this service.
 ```
 process_limit =
 ```
 
-###### Limit the process's address space (both RLIMIT_DATA and RLIMIT_AS if available).
+Limit the process's address space (both RLIMIT_DATA and RLIMIT_AS if available).
 ```
 vsz_limit =
 ```
 
-###### Authentication cache size
+Authentication cache size
 ```
 auth_cache_size =
 ```
 
-###### Time to live in seconds for cache entries.
+Time to live in seconds for cache entries.
 ```
 auth_cache_ttl =
 ```
 
-###### Time to live in seconds for negative cache entries.
+Time to live in seconds for negative cache entries.
 ```
 auth_cache_negative_ttl =
 ```
 
-###### Maximum number of worker processes.
+Maximum number of worker processes.
 ```
 auth_worker_max_count =
 ```
 
-###### Maximum number of concurrent connections
+Maximum number of concurrent connections
 ```
 mail_max_userip_connections =
 ```
 
-###### Password hash verifications are done by the auth master process by default
+Password hash verifications are done by the auth master process by default
 ```
 auth_cache_verify_password_with_worker =
 ```
 
-###### Copy a message with hard links
+Copy a message with hard links
 ```
 maildir_copy_with_hardlinks=
 ```

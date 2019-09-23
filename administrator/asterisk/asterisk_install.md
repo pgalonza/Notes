@@ -1,6 +1,5 @@
 # New installation
-
-###### Libraries
+## Libraries
 Essential Libraries
 ```
 libjansson
@@ -31,7 +30,8 @@ libgmime
 libunbound
 ```
 
-###### Packet
+## Packet
+
 Compile
 ```
 yum install make gcc gcc-c++ patch pkgconfig
@@ -72,7 +72,7 @@ Other
 yum install libxml2-devel libuuid-devel jansson-devel bzip2 zlib-devel libedit-devel subversion gsm-devel python-devel libcurl-devel
 ```
 
-###### Get source
+## Get source
 
 Asterisk 16
 ```
@@ -93,8 +93,8 @@ wget https://downloads.asterisk.org/pub/telephony/dahdi-linux/dahdi-linux-3.0.0.
 wget https://downloads.asterisk.org/pub/telephony/libpri/libpri-current.tar.gz
 ```
 
-###### Extract
-gz
+## Extract
+ gz
 ```
 tar -zxvf
 ```
@@ -104,12 +104,12 @@ bz2
 tar -xvjf
 ```
 
-###### MP3 support
+## MP3 support
 ```
 ./contrib/scripts/get_mp3_source.sh
 ```
 
-###### Resolve !all! of the dependencies
+## Resolve !all! of the dependencies
 Install
 ```
 contrib/scripts/install_prereq install
@@ -120,7 +120,7 @@ View
 contrib/scripts/install_prereq test
 ```
 
-###### Build compile and install
+## Build, compile and install
 ```
 ./configure --libdir=/usr/lib64 --with-jansson-bundled
 make menuselect
@@ -130,7 +130,7 @@ make config
 make install-logrotate
 ```
 
-###### Firewalld
+## Firewalld
 ```
 firewall-cmd --zone="name of zone" --permanent --add-service={sip,sips}
 firewall-cmd --zone="name of zone" --permanent --add-port=2727/udp
@@ -138,7 +138,7 @@ irewall-cmd --zone="name of zone" --permanent --add-port=10000-20000/udp
 firewall-cmd --zone="name of zone" --permanent --add-port=4569/udp
 ```
 
-###### Asterisk user and premissions
+## Asterisk user and premissions
 ```
 useradd asterisk -c "Asterisk User" -s /sbin/nologin -M
 chown asterisk.asterisk /var/run/asterisk

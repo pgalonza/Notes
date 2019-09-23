@@ -1,5 +1,5 @@
 # General
-###### Links
+## Links
 [Asterisk structure](https://wiki.asterisk.org/wiki/display/AST/Directory+and+File+Structure)
 
 [Asterisk source](https://downloads.asterisk.org/pub/telephony/)

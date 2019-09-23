@@ -1,13 +1,14 @@
-# Подключение Linux к принтеру рассшаренному на Windows!
+# Linux printers
+## Connect Linux to a shared printer on Windows!
 
-1. Если есть установщик драйверов то ставим
-2. Переходим в окно Управления принтерами и добавляем новый
-3. Протокол соединения с принтером выбираем smb.
-4. В поле путь вводим ip/имя пк или воспользовавшись кнопкой найти находим пк и принтер.
-5. Выбираем драйвер для принтера.
-6. Открываем конфигурационный файл принтеров удобным способом по пути
+1. If have driver installer use it
+2. Go to the printer Management window and add a new one
+3. Connection Protocol choose smb.
+4. In the path field, enter the ip/name of the PC or press the find button to find a PC and printer.
+5. Select the driver for the printer.
+6. Open the printer configuration file
 _/etc/cups/printers.conf_
-и редактируем параметр _DeviceURI_ приведя его к следующему виду.
+and edit the parameter _DeviceURI_
 ```
 DeviceURI smb://[username]%40[domain]:[password]@[pass to printer]
 ```

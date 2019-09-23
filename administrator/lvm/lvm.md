@@ -1,6 +1,6 @@
-# Resize LVM
-
-###### Extend
+# LVM
+## Resize LVM
+### Extend
 
 Connect to disk
 ```

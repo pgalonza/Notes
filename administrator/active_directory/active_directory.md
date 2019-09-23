@@ -1,6 +1,5 @@
 # Flags
-
-###### UserAccountControl
+## UserAccountControl
 
 |                                         Property flag                                          | Value in hexadecimal | Value in decimal |
 |------------------------------------------------------------------------------------------------|:--------------------:|-----------------:|

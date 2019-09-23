@@ -1,6 +1,6 @@
-# Arch install
-
-## Disk layout
+# RaspberryPI
+## Arch install
+### Disk layout
 ```
 fdisk /dev/sdX
 ```
@@ -59,28 +59,24 @@ Unmount the two partitions
 umount boot root
 ```
 
-# Tweaks
-
+## Tweaks
 No space left on device when building packages
 
 _/mnt/root/etc/fstab_
-
 ```
 tmpfs   /tmp         tmpfs   rw,nodev,nosuid,size=2G          0  0
 ```
 
-sd card class 10
+**sd card class 10**
 
 _/mnt/boot/config.txt_
-
 ```
 dtparam=sd_overclock=100
 force_turbo=1
 boot_delay=1
 ```
 
-# Initialize
-
+## Initialize
 Initialize the pacman keyring and populate the Arch Linux ARM package signing keys
 ```
 pacman-key --init
@@ -98,23 +94,18 @@ pacman -S sudo
 ```
 
 _/etc/sudoers.d/myOverrides_
-
 ```
 alarm  ALL=NOPASSWD: ALL
 ```
 
 Locale en_US.UTF-8 UTF-8, ru_RU.UTF-8 UTF-8
-
 _/etc/locale.gen_
-
 ```
 locale-gen
 ```
 
 Add export
-
 _/etc/profile_
-
 ```
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
@@ -127,8 +118,7 @@ ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/locatime
 date
 ```
 
-# Desktop
-
+## Desktop
 XFCE4
 ```
 pacman -S xorg-server xf86-video-fbdev xorg-xrefresh
@@ -147,7 +137,6 @@ pacman -S lightdm-gtk-greeter
 ```
 
 _/etc/lightdm/lightdm.conf_
-
 ```
 greeter-session=lightdm-yourgreeter-greeter
 systemctl enable ightdm.service
@@ -159,7 +148,7 @@ pacman -S ttf-hack ttf-droid ttf-ubuntu-font-family
 ```
 
 
-# Install
+## Install
 
 Yaourt
 ```
@@ -173,13 +162,11 @@ cd yaourt
 makepkg -si
 cd ..
 ```
-
 ```
 yaourt -Syu --devel --aur
 ```
 
-# BlackArch
-
+## BlackArch
 Install script
 ```
 curl -O https://blackarch.org/strap.sh

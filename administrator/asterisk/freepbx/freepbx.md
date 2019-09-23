@@ -1,11 +1,10 @@
-# General
-
-###### Core FastAGI Server is not running
+# FreePBX
+## Core FastAGI Server is not running
 ```
 fwconsole setting LAUNCH_AGI_AS_FASTAGI 1
 ```
 
-###### Number of characters in the display name field
+## Number of characters in the display name field
 
 _/var/www/html/admin/assets/js/pbxlib*_
 
@@ -13,9 +12,9 @@ _/var/www/html/admin/assets/js/pbxlib*_
 function isCorrectLengthExtensions(s)
 ```
 
-###### Activation of text message
+##  Activation of text message
 
-*sip_general_custom.conf*
+_sip_general_custom.conf_
 ```
 accept_outofcall_message = yes
 outofcall_message_context = messages
@@ -28,18 +27,18 @@ auth_message_requests = no
 exten => _XXXXX,1,MessageSend(sip:${EXTEN},"${CALLERID(name)}"${MESSAGE(from)})
 ```
 
-###### Sounds
+## Sounds
 [Download](http://downloads.asterisk.org/pub/telephony/sounds/)
 
-###### Yealink reload
+## Yealink reload
 _sip_notify_custom.conf_
 ```
 [reboot-yealink]
 Event=>check-sync\;reboot=true to Event=>check-sync\;reboot=false
 ```
 
-###### Admin module
-disabel
+##  Admin module
+### Disabel
 ```
 Contact Manager
 Digium Addons

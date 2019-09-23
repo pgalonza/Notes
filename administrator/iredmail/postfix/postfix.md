@@ -1,3 +1,4 @@
+# Postfix
 _ad_sender_login_maps.cf_
 ```
 server_host     = host
@@ -15,7 +16,7 @@ debuglevel      = 0
 ```
 
 _ad_virtual_group_maps.cf_
-````
+```
 server_host     = host
 server_port     = 389
 version         = 3
@@ -63,7 +64,7 @@ inet_protocols = ipv4
 mynetworks = 127.0.0.1 [::1] 10.0.0.0/16 172.16.0.0/12
 ```
 
-###### Queue
+## Queue
 ```
 bounce_queue_lifetime = 7d
 maximal_queue_lifetime = 7d
@@ -72,7 +73,7 @@ maximal_backoff_time = 9h
 queue_run_delay = 3m
 ```
 
-###### Transport
+## Transport
 ```
 .mail_domain dovecot
 mail_domain dovecot

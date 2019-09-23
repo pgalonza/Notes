@@ -1,52 +1,53 @@
-# MOUNT
+# Centos
+## MOUNT
 
-###### cifs
+CIFS
 ```
 //"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,vers=3.0,gid="" 0 0
 ```
 
-# Network
-###### Forward
+## Network
+Forward
 ```
 echo net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
 echo net.ipv6.conf.all.forwarding=1 >> /etc/sysctl.conf
 ```
 
-# File, socket limits
+## File, socket limits
 
 _/etc/sysctl.conf_
 
-###### Maximum of objects inotify per user
+Maximum of objects inotify per user
 ```
 fs.inotify.max_user_instances=
 ```
 
-###### Maximum of watch files and directories per object inotify
+Maximum of watch files and directories per object inotify
 ```
 fs.inotify.max_user_watches=
 ```
 
-###### Maximum of events in queued
+Maximum of events in queued
 ```
 fs.inotify.max_queued_events=
 ```
 
-###### Maximum of open descriptors
+Maximum of open descriptors
 ```
 fs.file-max=
 ```
 
-###### Maximum queue size of packet
+Maximum queue size of packet
 ```
 net.core.netdev_max_backlog =
 ```
 
-###### Maximum number of open sockets waiting to be connected
+Maximum number of open sockets waiting to be connected
 ```
 net.core.somaxconn =
 ```
 
-###### PAM limits configuration
+## PAM limits configuration
 _/etc/security/limits.conf_, _/etc/security/_
 ```
 * soft nproc 65535
@@ -55,37 +56,37 @@ _/etc/security/limits.conf_, _/etc/security/_
 * hard nofile 65535
 ```
 
-###### _/etc/systemd/system.conf_, _/etc/systemd/user.conf_, */etc/systemd/<systemd_unit>/override.conf*
+_/etc/systemd/system.conf_, _/etc/systemd/user.conf_,  _/etc/systemd/<systemd_unit>/override.conf_
 ```
 DefaultLimitNOFILE=
 ```
 
-###### _/lib/systemd/system/<service>_, _/etc/systemd/*_, _/usr/lib/systemd/system/<service>_
+_/lib/systemd/system/<service>_, _/etc/systemd/*_, _/usr/lib/systemd/system/<service>_
 ```
 LimitNOFILE=
 ```
 
-# Swap
+## Swap
 
-###### _/etc/sysctl.conf_
+_/etc/sysctl.conf_
 ```
 vm.swappiness=10
 ```
 
-# Environment
+## Environment
 
 _/etc/environment_
 ```
 export PYTHONPATH=/data/libraries_and_modules/python
 ```
 
-# TFTP
+## TFTP
 ```
 server_args             = -u tftpd -s /var/lib/tftpboot --verbose/-vvv
 disable                 = no
 ```
 
-# Django/CMS
+## Django/CMS
 ```
 pip install --upgrade virtualenv
 virtualenv env
@@ -99,7 +100,7 @@ python3.6 manage.py runserver
 python3.6 manage.py startapp firstapp
 ```
 
-# PHP-FPM
+## PHP-FPM
 ```
 rpm -Uhv http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum install yum-utils
@@ -108,23 +109,23 @@ yum install php71
 yum install -y php-mysql php-mbstring php-mcrypt php-devel php-xml php-gd
 ```
 
-# Kernels
+## Kernels
 
-###### Remove old kernels
+ Remove old kernels
 ```
 yum install yum-utils
 package-cleanup --oldkernels --count=2
 ```
 
-###### Automatic remove old kernels
+Automatic remove old kernels
 _/etc/yum.conf_
 ```
 installonly_limit=3
 ```
 
-# Systemd
+## Systemd
 
-###### Searach problem
+### Searach problem
 
 Show problems
 ```
@@ -141,35 +142,35 @@ Show problems by pid
 journalctl _PID=
 ```
 
-# SSL
-##### Certificate Authority (CA)
+## SSL
+### Certificate Authority (CA)
 
-###### Install  openssl
+Install  openssl
 ```
 yum install -y openssl
 ```
 
-###### Generate a private key
+Generate a private key
 ```
 cd /etc/pki/CA/private/
 openssl genrsa -aes128 -out name-CA.key 2048
 ```
 
-###### Create a Certificate Authority (CA) certificate
+Create a Certificate Authority (CA) certificate
 ```
 openssl req -new -x509 -days 1825 \
 > -key /etc/pki/CA/private/name-CA.key \
 > -out /etc/pki/CA/certs/name-CA.crt
 ```
 
-###### Generate a CSR (Certificate Signing Request) for server1
+Generate a CSR (Certificate Signing Request) for server1
 ```
 openssl req -new -key /etc/pki/tls/private/web-01.key \
 > -out /etc/pki/tls/server1.csr
 scp /etc/pki/tls/server1.csr server-ca:~/server1.csr
 ```
 
-###### Sign the CSR by Certificate Authority (CA)
+Sign the CSR by Certificate Authority (CA)
 ```
 openssl x509 -req -in server1.csr \
 > -CA /etc/pki/CA/certs/name-CA.crt \
@@ -180,20 +181,21 @@ openssl x509 -req -in server1.csr \
 scp server1.crt server1:/etc/pki/tls/certs/server1.crt
 ```
 
-# SysRq
-###### Enable
-On work
+## SysRq
+Enable
+* On work
 ```
 sysctl kernel.sysrq=1
 echo "1" > /proc/sys/kernel/sysrq
 ```
 
-On boot
+* On boot
 ```
 echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
 ```
 
-Before mounting and init
+* Before mounting and ini
+
 _Kernel_
 ```
 sysrq_always_enabled=1

@@ -1,26 +1,25 @@
 # New installation
-
-###### Packet
+Packet
 ```
 yum install epel-release net-tools wget vim htop tmux iotop iptables-services ipset-service
 ```
 
-###### No root ssh
+No root ssh
 ```
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config
 ```
 
-###### Change host name
+Change host name
 ```
 hostnamectl set-hostname
 ```
 
-###### Set default zone
+Set default zone
 ```
 firewall-cmd --set-default=internal
 ```
 
-###### Disable selinux
+Disable selinux
 _/etc/sysconfig/selinux_
 ```
 sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
@@ -28,35 +27,35 @@ systemctl reboot
 ```
 
 
-###### Disable IPV6
+Disable IPV6
 ```
 echo net.ipv6.conf.all.disable_ipv6 = 1 >> /etc/sysctl.conf
 echo net.ipv6.conf.default.disable_ipv6 = 1 >> /etc/sysctl.conf
 ```
 
-###### Java
+Java
 ```
 yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
 ```
 
-# Zabbix agent
+## Zabbix agent
 
-###### Zabbix repository
+Zabbix repository
 ```
 rpm -ivh http://repo.zabbix.com/zabbix/4.2/rhel/7/x86_64/zabbix-release-4.2-1.el7.noarch.rpm
 ```
 
-###### Zabbix user for mysql check
+Zabbix user for mysql check
 ```
 GRANT USAGE ON *.* TO 'zabbix'@'%' IDENTIFIED BY 'superpassword';
 ```
 
-###### Make zabbix agent directory
+Make zabbix agent directory
 ```
 mkdir /var/lib/zabbix
 ```
 
-# Zabbix database
+## Zabbix database
 _/etc/sysctl.conf_
 ```
 echo vm.swappiness = 10 >> /etc/sysctl.conf
@@ -67,61 +66,61 @@ _/etc/fstab_
 defaults,noatime,nosuid,noexec,nodev 0 0
 ```
 
-# MariaDB
+## MariaDB
 ```
 yum install MariaDB-backup MariaDB-server MariaDB-client
 ```
 
-# MOUNT
+## MOUNT
 
-###### CIFS
+CIFS
 ```
 //"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,vers=3.0,gid="" 0 0
 ```
 
-# NGINX
+## NGINX
 
-###### Disable ignore invalid headers
+Disable ignore invalid headers
 ```
 echo "ignore_invalid_headers off;" >> /etc/nginx/nginx.conf
 ```
 
-# PYTHON
+## PYTHON
 
-###### Add repository
+Add repository
 ```
 sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 ```
-###### Install packages
+Install packages
 ```
 sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
 ```
 
-# File limit
+## File limit
 
 _/etc/sysctl.conf_
 
-###### Maximum of objects inotify per user
+Maximum of objects inotify per user
 ```
 fs.inotify.max_user_instances=
 ```
 
-###### Maximum of watch files and directories per object inotify
+Maximum of watch files and directories per object inotify
 ```
 fs.inotify.max_user_watches=
 ```
 
-###### Maximum of events in queued
+Maximum of events in queued
 ```
 fs.inotify.max_queued_events=
 ```
 
-###### Maximum of open descriptors
+Maximum of open descriptors
 ```
 fs.file-max=
 ```
 
-###### PAM limits configuration
+## PAM limits configuration
 
 _/etc/security/limits.conf_
 _/etc/security/_
@@ -132,9 +131,9 @@ _/etc/security/_
 * hard nofile 65535
 ```
 
-# Repository
+## Repository
 
-###### Exclude packages
+Exclude packages
 _/etc/yum.repos.d/_
 ```
 Exclude=
