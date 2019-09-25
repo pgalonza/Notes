@@ -1,11 +1,11 @@
-# General
-###### Author name and email
+# Git
+Author name and email
 ```
 git config user.name "FirstName LastName"
 git config user.email "user@example.com"
 ```
 
-###### Used words
+Used words
 * feature — используется при добавлении новой функциональности уровня приложения
 * fix — если исправили какую-то серьезную багу
 * docs — всё, что касается документации
@@ -14,7 +14,7 @@ git config user.email "user@example.com"
 * test — всё, что связано с тестированием
 * chore — обычное обслуживание кода
 
-###### Create new repository
+## Create new repository
 Create the folder and initialization on server
 ```
 mkdir example.git
@@ -34,22 +34,22 @@ git push origin master
 
 ###### [Git ignore templates](https://github.com/github/gitignore)
 
-# BFG Repo-Cleaner
-###### Install
+## BFG Repo-Cleaner
+Install
 ```
 git clone --mirror git://example.com/some-big-repo.git
 ```
 
-###### Clean the repository
+Clean the repository
 ```
 java -jar bfg.jar --strip-blobs-bigger-than 100M some-big-repo.git
 ```
 
-###### Replace the passwords
+Replace the passwords
 ```
 bfg --replace-text passwords.txt  my-repo.git
 ```
-###### Remove the files and folders
+Remove the files and folders
 ```
- bfg --delete-folders .git --delete-files .git  --no-blob-protection  my-repo.git
+bfg --delete-folders .git --delete-files .git  --no-blob-protection  my-repo.git
 ```

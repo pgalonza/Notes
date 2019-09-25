@@ -1,12 +1,15 @@
-# General
-###### Install
+# OpenVPN
+## Install
+Package
 ```
 yum -y install openvpn unzip zip
 ```
+
 Create the directory for keys
 ```
 mkdir /etc/openvpn/keys
 ```
+
 Download Easy-RSA
 ```
 cd /etc/openvpn/keys

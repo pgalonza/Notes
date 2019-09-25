@@ -1,6 +1,6 @@
-# Resize portition
-
-###### Extend
+# Disks and partitions
+## Resize portition
+### Extend
 
 Connect to disk
 ```

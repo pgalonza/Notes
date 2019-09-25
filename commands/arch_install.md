@@ -1,5 +1,4 @@
 # Arch install
-
 ## Настройка wifi
 ```
 wifi-menu
@@ -17,7 +16,7 @@ fdisk -l
 cfdisk /dev/sdX
 ```
 
-# LVM
+## LVM
 
 Загружаем модуль ядра
 ```
@@ -62,7 +61,7 @@ vgscan
 vgchange –ay
 ```
 
-# File system
+## File system
 Форматируем обычный раздел
 ```
 mkfs.extX /dev/sdaX
@@ -98,8 +97,7 @@ swapon /dev/"имя_LVM"/"имя_раздела"
 mount | grep \/mnt
 ```
 
-# Base installation
-
+## Base installation
 Выбираем зеркало. Указываем 5-ть зеркал в начале файла.
 
 _/etc/pacman.d/mirrorlist_
@@ -141,9 +139,7 @@ echo мое_имя_узла > /etc/hostname
 ```
 
 Вносим имя узла в hosts
-
 _/etc/hosts_
-
 ```
 #<ip-address>	<hostname.domain.org>	      <hostname>
 127.0.0.1	localhost.localdomain	      localhost
@@ -166,13 +162,11 @@ useradd -m -G wheel "имя_пользоввателя"
 passwd "имя_пользоввателя"
 ```
 
-Отображаем настройки /etc/sudoers, активировать группу wheel
-
+Отображаем настройки /etc/sudoers и активируем группу wheel
 _/etc/sudoers_
 
 
 Выбираем локаль en_US.UTF-8, ru_RU.UTF-8
-
 _/etc/locale.gen_
 
 
@@ -187,14 +181,11 @@ echo KEYMAP=ru >> /etc/vconsole.conf
 ```
 
 Отображаем настройки vconsole.conf
-
 _cat /etc/vconsole.conf_
 
 
 Редактируем хуки для LVM
-
 _/etc/mkinitcpio.conf_
-
 ```
 #HOOKS="base udev autodetect modconf block lvm2 scsi keyboard filesystems fsck shutdown"
 ```
@@ -204,7 +195,7 @@ _/etc/mkinitcpio.conf_
 mkinitcpio -p linux
 ```
 
-# Grub
+## Grub
 Установка grub
 ```
 pacman -S grub || efibootmgr
@@ -223,9 +214,7 @@ cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 ```
 
 Для Windows UEFI
-
 _/etc/grub.d/40_custom_
-
 ```
 menuentry 'Windows 10' {
     search --fs-uuid --no-floppy --set=root "UUID"
@@ -239,12 +228,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Отображаем
-
-_cat /boot/grub/grub.cfg_
-
-
+_/boot/grub/grub.cfg_
 _/boot/grub/menu.lst_
-
 ```
 # (0) Arch Linux
 #title  Arch Linux
@@ -254,7 +239,6 @@ _/boot/grub/menu.lst_
 ```
 
 UEFI windows
-
 _/etc/grub/40_customc_
 
 

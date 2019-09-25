@@ -1,23 +1,22 @@
-# General
+# Regular
 
-###### IP
+IP
 ```
 grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'
 ```
 
-###### E-mail
+E-mail
 ```
 ^([a-zA-Z0-9_.+-]+)@([a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)$
 ```
 
-###### Url
+Url
 ```
 (http|https)://[a-zA-Z0-9./?=_-]*
 ```
 
-# Mikrotik
-
-###### Mikrotik social
+## Mikrotik
+Mikrotik social
 
 ```
 ^.+(vk|odnoklassniki|ok|facebook|love.mail|edarling|badoo|topdating|twitter|instagram|ask|meetme).(com|ru|su|ua|net|fm).*$

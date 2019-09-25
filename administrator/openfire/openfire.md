@@ -1,9 +1,9 @@
-# Memmory
-
+# OpenFire
+Memmory
 _/etc/sysconfig/openfire_
 
 
-# DNS
+## DNS
 ```
 SRV recond 1:
 

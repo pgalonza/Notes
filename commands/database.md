@@ -1,60 +1,67 @@
-###### Create database
+# SQL
+Create database
 ```
 echo "CREATE DATABASE `my_db` CHARACTER SET utf8 COLLATE utf8_general_ci;" | mysql
 ```
 
-###### Create user
+Create user
 ```
 echo "CREATE USER 'name'@'localhost' IDENTIFIED BY 'password';" | mysql
 ```
 
-###### Give privileges for user
+Give privileges for user
 ```
 echo "GRANT ALL PRIVILEGES ON `db`.* TO 'name'@'localhost';" | mysql
 ```
 
-###### Reloads the privileges
+Reloads the privileges
 ```
 echo "FLUSH PRIVILEGES;" | mysql
 ```
 
-###### Edit user account
+Edit user account
 ```
 echo "RENAME USER 'name'@'localhost' TO 'name'@'%';" | mysql
 ```
 
-###### Last entry
+Last entry
 ```
 SELECT MAX(`my_table`) FROM my_db;
 SELECT TOP 10 * FROM my_db ORDER BY my_table DESC
 ```
 
-###### Set password for user
+Set password for user
 ```
 echo "ALTER USER 'name'@'localhost' IDENTIFIED BY 'MyNewPass';" | mysql
 ```
 
-###### Delete user
+Delete user
 ```
 echo "DROP USER 'name'@'localhost';" | mysql
 ```
 
-###### User as root privileges
+User as root privileges
 ```
 echo "GRANT ALL PRIVILEGES ON *.* TO 'name'@'%' with GRANT OPTION;" | mysql
 ```
 
-###### Give backup privileges for user
+Give backup privileges for user
 ```
 echo "GRANT SELECT, SHOW VIEW, EVENT, TRIGGER, RELOAD, PROCESS, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'name'@'localhost'" | mysql
 ```
 
-###### Import dump
+Import dump
 ```
 gunzip < DUMP_FILE.sql.gz | mysql my_db --user= --password= --host=
 ```
 
-###### Export dump
+Export dump
 ```
 mysqldump  --skip-extended-insert my_db | gzip > DUMP_FILE.sql.gz
+```
+
+Check & Repair
+```
+mysqlcheck --check-upgrade --all-databases --auto-repair
+mysql_upgrade --force
 ```

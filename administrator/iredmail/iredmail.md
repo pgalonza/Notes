@@ -1,3 +1,4 @@
+# iRedMail
 ```
 ldapsearch -x -h ad.example.com -D 'vmail' -W -b 'cn=users,dc=example,dc=com'
 
@@ -47,13 +48,13 @@ USE_EXISTING_MYSQL='YES' \
     bash iRedMail.sh
 ```
 
-###### Dovecot
+Dovecot
 * %u - полное имя пользователя(с доменной частью: user@domail.local)
 * %n - короткое имя пользователя(без доменной части: user)
 * %d - доменная часть(domail.local), может быть пустой
 * %h - домашний каталог, тоже может быть пустым
 
-###### Postfix
+Postfix
 * %d Доменная часть без локальной части и символа @ (например, test.org).
 * %s Полный почтовый адрес (например, lena@test.org).
 * %u Локальная часть без символа @ и указания домена (например, lena).
