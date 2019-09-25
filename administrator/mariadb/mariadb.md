@@ -38,3 +38,10 @@ _/etc/fstab_
 ```
 defaults,noatime,nosuid,noexec,nodev 0 0
 ```
+
+# Errors
+###### Can't lock aria control file '/var/lib/mysql/aria_log_control'
+_/var/lib/mysql_
+```
+rm aria_log*
+```
