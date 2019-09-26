@@ -471,12 +471,16 @@ setfacl -d -m u::rwx,g::r-x,o::r-x /home/test/
 Remove default permission
 ```
 setfacl -k /home/test/
-setfacl -R -k /home/test/
 ```
 
 Remove permission
 ```
 setfacl -x user_name /home/test/
+```
+
+Recursive
+```
+setfacl -R
 ```
 
 ## SED
@@ -729,4 +733,10 @@ config reload file_name
 Reload all
 ```
 core reload
+```
+
+## Amavisd
+Check the configuration file
+```
+amavisd -u amavis -c /etc/amavisd/amavisd.conf debug
 ```
