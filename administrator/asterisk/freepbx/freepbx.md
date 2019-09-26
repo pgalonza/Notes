@@ -5,7 +5,6 @@ fwconsole setting LAUNCH_AGI_AS_FASTAGI 1
 ```
 
 ## Number of characters in the display name field
-
 _/var/www/html/admin/assets/js/pbxlib*_
 
 ```
@@ -13,7 +12,6 @@ function isCorrectLengthExtensions(s)
 ```
 
 ##  Activation of text message
-
 _sip_general_custom.conf_
 ```
 accept_outofcall_message = yes

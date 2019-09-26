@@ -504,7 +504,7 @@ chromium --proxy-server="socks://host:9050"
 ## Ansible
 Start as another user
 ```
-ansible-playbook -i host_name, -u user_name --ask-pass -b --ask-become-pass ansible_user.yaml
+ansible-playbook -i host_name, -e 'ansible_ssh_user=user' --ask-pass -b --ask-become-pass ansible_user.yaml
 ```
 
 ## Ffmpeg

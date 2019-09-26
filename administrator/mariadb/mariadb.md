@@ -42,7 +42,7 @@ SET GLOBAL innodb_file_format=BARRACUDA
 ```
 
 ## Problems
-### How to fix error “1812 Tablespace is missing for table XXXX”
+How to fix error “1812 Tablespace is missing for table XXXX”
 1. Backup all .ibd and .frm files.
 2. Create the database and tables structure.
 3. DISCARD the new tables.
@@ -53,4 +53,10 @@ ALTER TABLE table_name DISCARD TABLESPACE;
 5. Then IMPORT new files
 ```
 ALTER TABLE table_name IMPORT TABLESPACE;
+```
+
+Can't lock aria control file '/var/lib/mysql/aria_log_control'
+_/var/lib/mysql_
+```
+rm aria_log*
 ```
