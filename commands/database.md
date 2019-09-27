@@ -1,4 +1,23 @@
-# SQL
+# MySQL/mariaDB
+Initializes the data directory
+```
+mysql_install_db
+mariadb-install-db
+```
+
+Set security settings
+```
+mysql_secure_installation
+mariadb-secure-installation
+```
+
+Check & Repair
+```
+mysqlcheck --check-upgrade --all-databases --auto-repair
+mysql_upgrade --force
+```
+
+## SQL
 Create database
 ```
 echo "CREATE DATABASE `my_db` CHARACTER SET utf8 COLLATE utf8_general_ci;" | mysql
@@ -60,8 +79,13 @@ Export dump
 mysqldump  --skip-extended-insert my_db | gzip > DUMP_FILE.sql.gz
 ```
 
-Check & Repair
+InnoDB warnings become errors instead
 ```
-mysqlcheck --check-upgrade --all-databases --auto-repair
-mysql_upgrade --force
+SET GLOBAL innodb_strict_mode=ON;
+SET SESSION innodb_strict_mode=ON;
+```
+
+Check foreign key constraints for InnoDB tables
+```
+SET FOREIGN_KEY_CHECKS = 1
 ```

@@ -471,12 +471,16 @@ setfacl -d -m u::rwx,g::r-x,o::r-x /home/test/
 Remove default permission
 ```
 setfacl -k /home/test/
-setfacl -R -k /home/test/
 ```
 
 Remove permission
 ```
 setfacl -x user_name /home/test/
+```
+
+Recursive
+```
+setfacl -R
 ```
 
 ## SED
@@ -754,4 +758,10 @@ esxcli network nic up/down -n vmnicX
 Set speed and duplex
 ```
 esxcfg-nics -s 10000 -d full vmnicX
+```
+
+## Amavisd
+Check the configuration file
+```
+amavisd -u amavis -c /etc/amavisd/amavisd.conf debug
 ```

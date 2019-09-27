@@ -137,3 +137,29 @@ Find badblocks
 ```
 fsck -c /dev/sda1
 ```
+
+## XFS_check
+```
+Check the partition
+xfs_check /dev/sdb1
+```
+
+## XFS_repair
+Check the partition
+```
+xfs_repair -n /dev/sdb1
+```
+
+Repair the file system
+```
+xfs_repair /dev/sdb1
+```
+
+Force Log Zeroing
+```
+xfs_repair -L  /dev/sdb1
+```
+
+## XFSsdump
+
+## XFS_copy

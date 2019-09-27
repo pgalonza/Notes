@@ -12,3 +12,10 @@ _HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VSS\Settings_
 ```
 MaxShadowCopies DWORD
 ```
+
+Maximum attachment size in outlook
+_HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Preferences_
+_HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Outlook\Preferences_
+```
+MaximumAttachmentSize DWORD
+```
