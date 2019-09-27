@@ -730,3 +730,28 @@ Reload all
 ```
 core reload
 ```
+
+## Logrotate
+Check the configuration file
+```
+logrotate -d /etc/logrotate.d/config_name
+````
+
+## Sox
+Convert to VoIP format
+```
+sox -V vm-intro.wav -r 8000 -c 1 -t ul vm-intro.ulaw
+sox -V vm-intro.wav -r 8000 -c 1 -t al vm-intro.alaw
+sox -V vm-intro.wav -r 8000 -c 1 -t gsm vm-intro.gsm
+```
+
+## ESXI
+Up or down
+```
+esxcli network nic up/down -n vmnicX
+```
+
+Set speed and duplex
+```
+esxcfg-nics -s 10000 -d full vmnicX
+```
