@@ -16,4 +16,14 @@
 * sngrep
 * tcpdump
 * sipp
+* iftop
+* iptraf
+* bmon
+* bwm-ng
+* nload
+* nethogs
+* explain
+* ifstat
+* trafshow
+* tcptrack
 * [Data Tables](https://www.datatables.net)
