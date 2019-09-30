@@ -52,11 +52,6 @@ Executing the previous command
 sudo !!
 ```
 
-IO priority
-```
-ionice -c3
-```
-
 Сommand replay
 ```
 while true
@@ -764,4 +759,27 @@ esxcfg-nics -s 10000 -d full vmnicX
 Check the configuration file
 ```
 amavisd -u amavis -c /etc/amavisd/amavisd.conf debug
+```
+
+## Priority
+IO priority
+```
+ionice -c3 coommand
+```
+
+Process priority
+```
+nice -n 15 coommand
+renice renice -n 15 -p pid
+```
+
+## Udevadm
+Show in realtime
+```
+udevadm monitor
+```
+
+Get attributes
+```
+udevadm info /dev/sdb1
 ```
