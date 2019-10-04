@@ -1,4 +1,4 @@
-# VMWare
+# VMWare ESXI
 Linux virtual machine with lost network
 Set current time
 
@@ -15,3 +15,7 @@ Move swap
 sched.swap.dir = /vmfs/volumes/datastore_name/dir_name
 #sched.swap.derivedName = xxx
 ```
+
+When Veeam make backup the host lost the time
+start ntp service
+host time zone UTC
