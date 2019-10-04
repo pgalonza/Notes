@@ -52,11 +52,6 @@ Executing the previous command
 sudo !!
 ```
 
-IO priority
-```
-ionice -c3
-```
-
 Сommand replay
 ```
 while true
@@ -775,4 +770,27 @@ ssh-keygen -m pem -t rsa -C "test"
 Show RSA host key
 ```
 ssh-keyscan -t rsa host_address
+```
+
+## Priority
+IO priority
+```
+ionice -c3 coommand
+```
+
+Process priority
+```
+nice -n 15 coommand
+renice renice -n 15 -p pid
+```
+
+## Udevadm
+Show in realtime
+```
+udevadm monitor
+```
+
+Get attributes
+```
+udevadm info /dev/sdb1
 ```

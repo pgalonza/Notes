@@ -14,6 +14,7 @@ fdisk -l
 Для UEFI создаем раздел 100M вне LVM в vfat
 ```
 cfdisk /dev/sdX
+mkfs.fat -F32 /dev/sda1
 ```
 
 ## LVM
@@ -205,7 +206,7 @@ pacman -S grub || efibootmgr
 ```
 grub-install --target=i386-pc --recheck /dev/sdx
 grub-install --recheck /dev/sda
-grub-install --efi-directory=/boot/efi --boot-directory=/boot/efi/EFI --bootloader-id=grub --target=x86_64-efi --removable
+grub-install --efi-directory=/boot/efi --boot-directory=/boot/efi/EFI --bootloader-id=grub --target=x86_64-efi --removable --recheck
 ```
 
 Копипастим что-то важное
@@ -241,6 +242,16 @@ _/boot/grub/menu.lst_
 UEFI windows
 _/etc/grub/40_customc_
 
+EFI bootloader
+```
+mkdir /boot/efi/EFI/BOOT
+cp /boot/efi/EFI/GRUB/grubx64.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
+```
+
+_/boot/efi/startup.nsh_
+```
+bcfg boot add 1 fs0:\EFI\GRUB\grubx64.efi "My GRUB bootloader"
+```
 
 # Установка KDE
 
