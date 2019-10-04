@@ -89,3 +89,10 @@ Check foreign key constraints for InnoDB tables
 ```
 SET FOREIGN_KEY_CHECKS = 1
 ```
+
+Show in which table the column
+```
+SELECT *
+FROM information_schema.columns
+WHERE column_name='column_name';
+```
