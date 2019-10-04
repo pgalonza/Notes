@@ -765,3 +765,14 @@ Check the configuration file
 ```
 amavisd -u amavis -c /etc/amavisd/amavisd.conf debug
 ```
+
+## OpenSSH
+Generate for paramiko
+```
+ssh-keygen -m pem -t rsa -C "test"
+```
+
+Show RSA host key
+```
+ssh-keyscan -t rsa host_address
+```
