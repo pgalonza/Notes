@@ -35,6 +35,13 @@ _sip_notify_custom.conf_
 Event=>check-sync\;reboot=true to Event=>check-sync\;reboot=false
 ```
 
+## Follow Me
+Only for specific caller
+_extensions_override_freepbx.conf_
+```
+exten => XXX,1,GotoIf($[(${DB_EXISTS(AMPUSER/${EXTEN}/followme/ddial)} != 1 | "${DB(AMPUSER/${EXTEN}/followme/ddial)}" = "EXTENSION") | ${CALLERID(num)} != XXXX]?ext-local,${EXTEN},1:followme-check,${EXTEN},1)
+```
+
 ##  Admin module
 ### Disabel
 ```
