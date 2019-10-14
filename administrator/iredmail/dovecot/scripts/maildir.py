@@ -55,7 +55,7 @@ class Mail(threading.Thread):
                             if args.title in title:
                                 print('Found: ', user, title)
                                 logging.info(f"The letter was found!\n User: {user}\nTitle: {title}")
-                                _mails.append([key, user, title.decode(charset), mail_box])
+                                _mails.append([key, user, title, mail_box])
                     else:
                         try:
                             logging.debug(f"Decode the: {charset}")
@@ -123,7 +123,7 @@ def main():
     logging.debug('Freeze the general thread and wait child threads')
     queue.join()
     logging.debug('Unfreeze the general thread and show mails to delete')
-    if not _mails:
+    if _mails:
         print("Delete mails?")
         for mail in _mails:
             logging.debug(f'Path: {mail[1]}\nTitle: {mail[2]}')
