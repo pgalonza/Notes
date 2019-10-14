@@ -62,6 +62,7 @@ smtpd_sasl_local_domain = mail_domain
 message_size_limit = 52428800
 inet_protocols = ipv4
 mynetworks = 127.0.0.1 [::1] 10.0.0.0/16 172.16.0.0/12
+smtpd_command_filter = pcre:/etc/postfix/command_filter.pcre
 ```
 
 ## Queue
