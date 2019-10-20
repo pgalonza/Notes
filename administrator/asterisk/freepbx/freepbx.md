@@ -95,3 +95,9 @@ Fax Configuration Professional
 High Availability Services
 OSS PBX End Point Manager
 ```
+
+## Update
+Change the asterisk version
+```
+asterisk-version-switch
+```
