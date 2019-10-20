@@ -13,6 +13,7 @@ Used words
 * refactor — рефакторинг кода приложения
 * test — всё, что связано с тестированием
 * chore — обычное обслуживание кода
+* This commit will ... (this commit will fix bugs)
 
 ## Create new repository
 Create the folder and initialization on server
