@@ -85,6 +85,12 @@ Check nginx configuration
 nginx -t
 ```
 
+Print the locate of binary
+```
+type -a command
+whereis command
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
@@ -371,11 +377,13 @@ Send mail
 Sort by RAM
 ```
 ps aux | sort -nk 4
+ps aux —sort=%mem | grep -v 'root' | head -n 35
 ```
 
 Sort by CPU
 ```
 ps aux | sort -nk 3
+ps aux —sort=%cpu | grep -v 'root' | head -n 35
 ```
 
 ## RAM, SWAP
@@ -494,6 +502,17 @@ mount.cifs //host/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
 Proxy
 ```
 chromium --proxy-server="socks://host:9050"
+```
+
+Discard
+```
+browser://discards
+chrome://discards
+```
+
+Task manager
+```
+Shift + ESC
 ```
 
 ## Ansible
@@ -793,4 +812,57 @@ udevadm monitor
 Get attributes
 ```
 udevadm info /dev/sdb1
+```
+
+## Git
+Edit _.gitconfig_
+```
+git config --global --edit
+git config --global user.name
+git config --global user.email
+```
+
+Stash the changes
+```
+git stash
+git stash apply
+```
+
+## Chattr
+Make immutable
+```
+chattr +i file_name
+```
+
+Show the file attributes
+```
+lsattr file_name
+```
+
+## Cache
+### Clean
+PageCache
+```
+sync; echo 1 > /proc/sys/vm/drop_caches
+```
+
+Inode and dentrie
+```
+sync; echo 2 > /proc/sys/vm/drop_caches
+```
+
+Inode, dentrie and PageCache
+```
+sync; echo 3 > /proc/sys/vm/drop_caches
+```
+
+Swap
+```
+swapoff -a && swapon -a
+```
+
+## GPG
+Import key
+```
+gpg --keyserver keys.gnupg.net --recv-keys key
 ```
