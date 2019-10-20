@@ -66,6 +66,15 @@ _/lib/systemd/system/<service>_, _/etc/systemd/*_, _/usr/lib/systemd/system/<ser
 LimitNOFILE=
 ```
 
+_override.conf_
+```
+mkdir /etc/systemd/system/service_name.service.d/
+```
+```
+[Service]
+LimitNOFILE=100000
+```
+
 ## Swap
 
 _/etc/sysctl.conf_
@@ -199,4 +208,11 @@ echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
 _Kernel_
 ```
 sysrq_always_enabled=1
+```
+
+## Sudoers
+_/etc/sudoers_
+Write logs
+```
+Defaults  log_host, log_year, logfile="/var/log/sudo.log"
 ```
