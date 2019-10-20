@@ -73,6 +73,10 @@ Import dump
 ```
 gunzip < DUMP_FILE.sql.gz | mysql my_db --user= --password= --host=
 ```
+```
+USE database_name;
+SOURCE path_to_sql_file;
+```
 
 Export dump
 ```
@@ -95,4 +99,15 @@ Show in which table the column
 SELECT *
 FROM information_schema.columns
 WHERE column_name='column_name';
+```
+
+Show information about table
+```
+DESCRIBE table_name;
+```
+
+## MyTOP
+Monitor the database
+```
+mytop --prompt -d database_name
 ```
