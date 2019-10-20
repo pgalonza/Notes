@@ -1,10 +1,10 @@
-# Umask
+# Permissions, flags and attributes
 ## Umask flags
 * r - чтение
 * w - запись
 * x - выполнение
 * s - выполнение  от имени суперпользователя (дополнительный)
-
+* t - sticky-bit
 
 * u - владелец файла
 * g - группа файла
