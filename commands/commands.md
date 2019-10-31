@@ -489,7 +489,7 @@ setfacl -R
 ## SED
 Replace in all files
 ```
-sed 's/old_text/new_text/g' *
+sed -i 's/old_text/new_text/g' *
 ```
 
 ## Mount
