@@ -375,7 +375,7 @@ if __name__ == "__main__":
     parser.add_argument('--asterisk-password', dest='asterisk_password', type=str, help='asterisk ssh password',
                         default='')
     parser.add_argument('--ssh-port', dest='asterisk_port', type=int, help='asterisk ssh port', default=22)
-    parser.add_argument('--reboot-yealink', dest='reboot_yealink', type=str, help='reboot yealink', action='store_true')
+    parser.add_argument('--reboot-yealink', dest='reboot_yealink', help='reboot yealink', action='store_true')
 
     args = parser.parse_args()
 
