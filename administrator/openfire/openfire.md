@@ -34,3 +34,10 @@ weigth: 100
 port: 5222
 hostname: jabber.contora.local.
 ```
+
+## Problems
+UTF-8 encoded messages are saved wrong
+_openfire.xml_
+```
+<serverURL>jdbc:mysql://host:3306/openfire?rewriteBatchedStatements=true&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Europe/Moscow</serverURL>
+```
