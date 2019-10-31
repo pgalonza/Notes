@@ -31,7 +31,7 @@ def get_information(origin):
 
 
 def create_csv_file(user_list, file_name):
-    with open(file_name + '.csv', 'w', newline='') as csvfile:
+    with open(file_name + '.csv', 'w', newline='', encoding='windows-1251) as csvfile:
         fieldnames = ['name', 'mail']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
