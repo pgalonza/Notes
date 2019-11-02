@@ -866,3 +866,19 @@ Import key
 ```
 gpg --keyserver keys.gnupg.net --recv-keys key
 ```
+
+## Slmgr
+Install or replace the product key
+```
+slmgr /ipk product_key
+```
+
+Install kms host
+```
+slmgr /skms host_name:port
+```
+
+Activation windows
+```
+slmgr /ato
+```
