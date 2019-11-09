@@ -46,3 +46,10 @@ Update the specified partitions
 ```
 partx -u /dev/sda
 ```
+
+## Tmpfs
+Directory in ram
+_/etc/fstab_
+```
+tmpfs   path_to_directory        tmpfs   nodev,nosuid,size=2G          0  0
+```
