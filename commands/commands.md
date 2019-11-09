@@ -404,6 +404,11 @@ Systemd reload
 systemctl daemon-reload
 ```
 
+Restart network manager
+```
+systemctl restart NetworkManager
+```
+
 ## Environment
 ```
 export var=
@@ -881,4 +886,10 @@ slmgr /skms host_name:port
 Activation windows
 ```
 slmgr /ato
+```
+
+## Nmcli
+Show devices
+```
+nmcli device show
 ```

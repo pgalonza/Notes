@@ -1,7 +1,22 @@
 # New installation
-Packet
+Mirror repository
 ```
-yum install epel-release net-tools wget vim htop tmux iotop iptables-services ipset-service
+https://mirror.yandex.ru/centos/8/BaseOS/x86_64/os/
+```
+
+Repository
+```
+epel-release
+```
+
+Centos 7 packet
+```
+net-tools iptables-services ipset-service
+```
+
+Packet Centos 7/8
+```
+wget vim htop tmux
 ```
 
 No root ssh
@@ -36,6 +51,12 @@ echo net.ipv6.conf.default.disable_ipv6 = 1 >> /etc/sysctl.conf
 Java
 ```
 yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
+```
+
+## Centos 8
+Activation the web console
+```
+systemctl enable --now cockpit.socket
 ```
 
 ## Zabbix agent
