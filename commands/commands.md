@@ -893,3 +893,20 @@ Show devices
 ```
 nmcli device show
 ```
+
+## Fish shell
+Make fish to default
+```
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
+```
+
+Update man page completions
+```
+fish_update_completions
+```
+
+Fish settings
+```
+fish_config
+```
