@@ -1,7 +1,19 @@
 # New installation
-Packet
+Repository
 ```
-yum install epel-release net-tools wget vim htop tmux iotop iptables-services ipset-service
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
+```
+```
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+yum install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
+```
+
+Packet
+
+```
+yum install epel-release
+yum install net-tools wget vim htop tmux iotop iptables-services ipset-service
 ```
 
 No root ssh
@@ -137,4 +149,24 @@ Exclude packages
 _/etc/yum.repos.d/_
 ```
 Exclude=
+```
+
+## Docker
+Repository
+```
+yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+```
+
+Stable
+```
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+Install
+```
+yum install docker-ce docker-ce-cli containerd.io
 ```
