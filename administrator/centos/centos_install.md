@@ -1,19 +1,34 @@
 # New installation
-Repository
+Mirror repository
+```
+https://mirror.yandex.ru/centos/8/BaseOS/x86_64/os/
+```
+
+Centos 7 repository
 ```
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
 ```
+
+Centos 8 repository
 ```
-yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-yum install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
+dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
+```
+
+Repository
+```
+epel-release
+```
+
+Centos 7 packet
+```
+net-tools iptables-services ipset-service
 ```
 
 Packet
-
 ```
-yum install epel-release
-yum install net-tools wget vim htop tmux iotop iptables-services ipset-service
+wget vim htop tmux
 ```
 
 No root ssh
@@ -48,6 +63,12 @@ echo net.ipv6.conf.default.disable_ipv6 = 1 >> /etc/sysctl.conf
 Java
 ```
 yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
+```
+
+## Centos 8
+Activation the web console
+```
+systemctl enable --now cockpit.socket
 ```
 
 ## Zabbix agent
@@ -97,7 +118,7 @@ Disable ignore invalid headers
 echo "ignore_invalid_headers off;" >> /etc/nginx/nginx.conf
 ```
 
-## PYTHON
+## Python
 
 Add repository
 ```

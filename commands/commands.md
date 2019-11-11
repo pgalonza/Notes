@@ -404,6 +404,11 @@ Systemd reload
 systemctl daemon-reload
 ```
 
+Restart network manager
+```
+systemctl restart NetworkManager
+```
+
 ## Environment
 ```
 export var=
@@ -865,4 +870,43 @@ swapoff -a && swapon -a
 Import key
 ```
 gpg --keyserver keys.gnupg.net --recv-keys key
+```
+
+## Slmgr
+Install or replace the product key
+```
+slmgr /ipk product_key
+```
+
+Install kms host
+```
+slmgr /skms host_name:port
+```
+
+Activation windows
+```
+slmgr /ato
+```
+
+## Nmcli
+Show devices
+```
+nmcli device show
+```
+
+## Fish shell
+Make fish to default
+```
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
+```
+
+Update man page completions
+```
+fish_update_completions
+```
+
+Fish settings
+```
+fish_config
 ```
