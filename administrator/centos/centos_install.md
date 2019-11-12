@@ -6,17 +6,17 @@ https://mirror.yandex.ru/centos/8/BaseOS/x86_64/os/
 
 Repository
 ```
-epel-release
+yum/dnf install epel-release
 ```
 
 Centos 7 packet
 ```
-net-tools iptables-services ipset-service
+yum install net-tools iptables-services ipset-service
 ```
 
 Packet Centos 7/8
 ```
-wget vim htop tmux
+yum/dnf wget vim htop tmux
 ```
 
 No root ssh
@@ -50,7 +50,7 @@ echo net.ipv6.conf.default.disable_ipv6 = 1 >> /etc/sysctl.conf
 
 Java
 ```
-yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
+yum/dnf -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
 ```
 
 ## Centos 8
@@ -89,7 +89,7 @@ defaults,noatime,nosuid,noexec,nodev 0 0
 
 ## MariaDB
 ```
-yum install MariaDB-backup MariaDB-server MariaDB-client
+yum/dnf install MariaDB-backup MariaDB-server MariaDB-client
 ```
 
 ## MOUNT
