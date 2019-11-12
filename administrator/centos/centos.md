@@ -153,9 +153,9 @@ journalctl _PID=
 ## SSL
 ### Certificate Authority (CA)
 
-Install  openssl
+Install openssl
 ```
-yum install -y openssl
+yum/dnf install -y openssl
 ```
 
 Generate a private key
@@ -214,4 +214,16 @@ _/etc/sudoers_
 Write logs
 ```
 Defaults  log_host, log_year, logfile="/var/log/sudo.log"
+```
+
+## Entropy
+Install
+```
+yum/dnf install haveged
+```
+
+Start
+```
+systemctl enable haveged
+systemctl start haveged
 ```

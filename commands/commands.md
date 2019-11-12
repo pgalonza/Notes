@@ -910,3 +910,14 @@ Fish settings
 ```
 fish_config
 ```
+
+## Entropy
+View the size of the entropy pool
+```
+cat /proc/sys/kernel/random/poolsize
+```
+
+View status of server’s entropy
+```
+cat /proc/sys/kernel/random/entropy_avail
+```
