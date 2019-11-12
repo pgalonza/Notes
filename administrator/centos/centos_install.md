@@ -4,6 +4,18 @@ Mirror repository
 https://mirror.yandex.ru/centos/8/BaseOS/x86_64/os/
 ```
 
+Centos 7 repository
+```
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+yum install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
+```
+
+Centos 8 repository
+```
+dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm
+```
+
 Repository
 ```
 yum/dnf install epel-release
@@ -14,7 +26,7 @@ Centos 7 packet
 yum install net-tools iptables-services ipset-service
 ```
 
-Packet Centos 7/8
+Packet
 ```
 yum/dnf wget vim htop tmux
 ```
@@ -106,7 +118,7 @@ Disable ignore invalid headers
 echo "ignore_invalid_headers off;" >> /etc/nginx/nginx.conf
 ```
 
-## PYTHON
+## Python
 
 Add repository
 ```
@@ -158,4 +170,24 @@ Exclude packages
 _/etc/yum.repos.d/_
 ```
 Exclude=
+```
+
+## Docker
+Repository
+```
+yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+```
+
+Stable
+```
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+Install
+```
+yum install docker-ce docker-ce-cli containerd.io
 ```
