@@ -13,7 +13,7 @@ fastcgi_read_timeout = 60
 ## SSL
 Generate the Diffie Hellman certificate
 ```
-openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048/4096
 ```
 
 Configuration parameters
