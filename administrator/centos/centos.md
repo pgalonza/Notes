@@ -173,6 +173,7 @@ openssl req -new -x509 -days 1825 \
 
 Generate a CSR (Certificate Signing Request) for server1
 ```
+openssl genrsa -out /etc/pki/tls/private/web-01.key 1024
 openssl req -new -key /etc/pki/tls/private/web-01.key \
 > -out /etc/pki/tls/server1.csr
 scp /etc/pki/tls/server1.csr server-ca:~/server1.csr
