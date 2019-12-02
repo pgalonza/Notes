@@ -62,9 +62,9 @@ class Mail(threading.Thread):
                             title = title.decode(charset)
                             logging.debug(f"Search the string {args.title} in {title}")
                             if args.title in title:
-                                print('Found: ', user, title.decode(charset))
+                                print('Found: ', user, title)
                                 logging.info(f"The letter was found!\n User: {user}\nTitle: {title}")
-                                _mails.append([key, user, title.decode(charset), mail_box])
+                                _mails.append([key, user, title, mail_box])
                             pass
                         except UnicodeDecodeError:
                             print(f"Can`t decode masseage: {title} with charset: {charset}")
@@ -112,7 +112,7 @@ def main():
 
         for domain in domains:
             logging.info(f'List the users directory of {domain}')
-            users = os.listdir(domain)
+            users = os.listdir(f'{args.path}/{domain}')
             logging.info('Filter the directorys')
             users = list(filter(lambda x: not re.search(r'\.tar\.gz', x), users))
             for user in users:
