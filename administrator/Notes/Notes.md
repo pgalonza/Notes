@@ -26,4 +26,5 @@
 * ifstat
 * trafshow
 * tcptrack
+* xrdp
 * [Data Tables](https://www.datatables.net)
