@@ -196,10 +196,16 @@ python -c 'import crypt; print crypt.crypt("actual_password_here", "$6$random_sa
 ```
 
 ## SSL/TLS
-Import
-/etc/pki/ca-trust/source/anchors/
+Import Centos
+_/etc/pki/ca-trust/source/anchors/_
 ```
 update-ca-trust
+```
+
+Import Ubuntu
+_/usr/local/share/ca-certificates/_
+```
+update-ca-certificates
 ```
 
 Check
