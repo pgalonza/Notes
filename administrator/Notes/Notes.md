@@ -27,4 +27,5 @@
 * trafshow
 * tcptrack
 * xrdp
+* pidof
 * [Data Tables](https://www.datatables.net)
