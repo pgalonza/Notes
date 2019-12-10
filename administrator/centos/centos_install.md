@@ -100,8 +100,18 @@ defaults,noatime,nosuid,noexec,nodev 0 0
 ```
 
 ## MariaDB
+https://downloads.mariadb.org/MariaDB/repositories/#mirror=netinch
 ```
 yum/dnf install MariaDB-backup MariaDB-server MariaDB-client
+```
+
+## PostgreSQL
+https://yum.postgresql.org
+```
+yum/dnf install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+yum install postgresql postgresqlXX-server
+/usr/pgsql-11/bin/postgresql-XX-setup initdb
+passwd postgres
 ```
 
 ## MOUNT
