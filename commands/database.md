@@ -17,6 +17,24 @@ mysqlcheck --check-upgrade --all-databases --auto-repair
 mysql_upgrade --force
 ```
 
+## PostgreSQL
+Login as a postgres user
+```
+su - postgres
+sudo -u postgres psql
+```
+
+Connenct to console
+```
+psql
+```
+
+Exit
+```
+\q
+```
+
+
 ## SQL
 Create database
 ```
