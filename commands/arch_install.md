@@ -304,3 +304,19 @@ pacman -S xf86-video-intel
 ```
 unmount /mnt{имя_раздела,}
 ```
+
+## Install the AUR helper
+Install dependencies
+```
+sudo pacman -S --needed base-devel git
+```
+
+Get the source from GitHub
+```
+git clone https://github.com/actionless/pikaur.git
+```
+
+Make
+```
+makepkg -fsri
+```
