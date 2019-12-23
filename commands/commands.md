@@ -802,6 +802,11 @@ Show RSA host key
 ssh-keyscan -t rsa host_address
 ```
 
+Convert for FileZilla
+```
+puttygen keyname -o keyname.ppk
+```
+
 ## Priority
 IO priority
 ```
