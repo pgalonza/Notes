@@ -114,7 +114,7 @@ export LC_ALL=en_US.UTF-8
 Time zone
 ```
 ls /usr/share/zoneinfo/
-ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/locatime
+ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 date
 ```
 
@@ -122,7 +122,7 @@ date
 XFCE4
 ```
 pacman -S xorg-server xf86-video-fbdev xorg-xrefresh
-pacman -S make gcc git-core automake autoconf pkg-config libtool
+pacman -S make gcc git automake autoconf pkg-config libtool
 pacman -S xfce4 xfce4-goodies xarchiver pavucontrol
 ```
 
@@ -139,7 +139,7 @@ pacman -S lightdm-gtk-greeter
 _/etc/lightdm/lightdm.conf_
 ```
 greeter-session=lightdm-yourgreeter-greeter
-systemctl enable ightdm.service
+systemctl enable lightdm.service
 ```
 
 Fonts
