@@ -34,7 +34,6 @@ Exit
 \q
 ```
 
-
 ## SQL
 Create database
 ```
