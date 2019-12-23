@@ -221,6 +221,11 @@ Write logs
 Defaults  log_host, log_year, logfile="/var/log/sudo.log"
 ```
 
+Run command with sudo without password
+```
+notify ALL=(ALL) NOPASSWD:path_to_command, path_to_command
+```
+
 ## Entropy
 Install
 ```
