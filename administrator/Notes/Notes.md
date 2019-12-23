@@ -1,6 +1,6 @@
 # Tools, Programs and Libraries
-* net-tools - ifconfig
 * wget
+* curl
 * vim
 * htop
 * tmux
@@ -22,7 +22,6 @@
 * bwm-ng
 * nload
 * nethogs
-* explain
 * ifstat
 * trafshow
 * tcptrack
