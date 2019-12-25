@@ -93,7 +93,7 @@ whereis command
 
 Write command results to file with privileges
 ```
-echo 1| sudo tee -a privileged_file > /dev/null
+echo 1 | sudo tee -a privileged_file > /dev/null
 ```
 
 ## PERMISSION
