@@ -123,6 +123,16 @@ Show information about table
 DESCRIBE table_name;
 ```
 
+Show query information
+```
+EXPLAIN SELECT * FROM categories
+```
+
+Count rows in table
+```
+SELECT COUNT(*) FROM table_name
+```
+
 ## MyTOP
 Monitor the database
 ```
