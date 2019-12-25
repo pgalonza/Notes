@@ -91,6 +91,11 @@ type -a command
 whereis command
 ```
 
+Write command results to file with privileges
+```
+echo 1| sudo tee -a privileged_file > /dev/null
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
