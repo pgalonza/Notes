@@ -1,6 +1,6 @@
 # Tools, Programs and Libraries
-* net-tools - ifconfig
 * wget
+* curl
 * vim
 * htop
 * tmux
@@ -25,4 +25,6 @@
 * ifstat
 * trafshow
 * tcptrack
+* xrdp
+* pidof
 * [Data Tables](https://www.datatables.net)

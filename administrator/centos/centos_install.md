@@ -72,7 +72,6 @@ systemctl enable --now cockpit.socket
 ```
 
 ## Zabbix agent
-
 Zabbix repository
 ```
 rpm -ivh http://repo.zabbix.com/zabbix/4.2/rhel/7/x86_64/zabbix-release-4.2-1.el7.noarch.rpm
@@ -100,26 +99,33 @@ defaults,noatime,nosuid,noexec,nodev 0 0
 ```
 
 ## MariaDB
+https://downloads.mariadb.org/MariaDB/repositories/#mirror=netinch
 ```
 yum/dnf install MariaDB-backup MariaDB-server MariaDB-client
 ```
 
-## MOUNT
+## PostgreSQL
+https://yum.postgresql.org
+```
+yum/dnf install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+yum install postgresql postgresqlXX-server
+/usr/pgsql-11/bin/postgresql-XX-setup initdb
+passwd postgres
+```
 
+## MOUNT
 CIFS
 ```
 //"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,vers=3.0,gid="" 0 0
 ```
 
 ## NGINX
-
 Disable ignore invalid headers
 ```
 echo "ignore_invalid_headers off;" >> /etc/nginx/nginx.conf
 ```
 
 ## Python
-
 Add repository
 ```
 sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
@@ -130,7 +136,6 @@ sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
 ```
 
 ## File limit
-
 _/etc/sysctl.conf_
 
 Maximum of objects inotify per user
@@ -154,7 +159,6 @@ fs.file-max=
 ```
 
 ## PAM limits configuration
-
 _/etc/security/limits.conf_
 _/etc/security/_
 ```
@@ -165,7 +169,6 @@ _/etc/security/_
 ```
 
 ## Repository
-
 Exclude packages
 _/etc/yum.repos.d/_
 ```

@@ -73,6 +73,10 @@ yum install libxml2-devel libuuid-devel jansson-devel bzip2 zlib-devel libedit-d
 ```
 
 ## Get source
+Create work directory
+```
+mkdir /usr/src/asterisk
+```
 
 Asterisk 16
 ```
@@ -120,6 +124,20 @@ contrib/scripts/install_prereq test
 ```
 
 ## Build, compile and install
+DAHDI
+```
+make all
+make install
+make config
+```
+
+LibPRI
+```
+make
+make install
+```
+
+Asterisk
 ```
 ./configure --libdir=/usr/lib64 --with-jansson-bundled
 make menuselect

@@ -17,6 +17,23 @@ mysqlcheck --check-upgrade --all-databases --auto-repair
 mysql_upgrade --force
 ```
 
+## PostgreSQL
+Login as a postgres user
+```
+su - postgres
+sudo -u postgres psql
+```
+
+Connenct to console
+```
+psql
+```
+
+Exit
+```
+\q
+```
+
 ## SQL
 Create database
 ```
@@ -104,6 +121,16 @@ WHERE column_name='column_name';
 Show information about table
 ```
 DESCRIBE table_name;
+```
+
+Show query information
+```
+EXPLAIN SELECT * FROM categories
+```
+
+Count rows in table
+```
+SELECT COUNT(*) FROM table_name
 ```
 
 ## MyTOP

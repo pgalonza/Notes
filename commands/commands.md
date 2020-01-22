@@ -91,6 +91,11 @@ type -a command
 whereis command
 ```
 
+Write command results to file with privileges
+```
+echo 1 | sudo tee -a privileged_file > /dev/null
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
@@ -196,10 +201,16 @@ python -c 'import crypt; print crypt.crypt("actual_password_here", "$6$random_sa
 ```
 
 ## SSL/TLS
-Import
-/etc/pki/ca-trust/source/anchors/
+Import Centos
+_/etc/pki/ca-trust/source/anchors/_
 ```
 update-ca-trust
+```
+
+Import Ubuntu
+_/usr/local/share/ca-certificates/_
+```
+update-ca-certificates
 ```
 
 Check
@@ -794,6 +805,11 @@ ssh-keygen -m pem -t rsa -C "test"
 Show RSA host key
 ```
 ssh-keyscan -t rsa host_address
+```
+
+Convert for FileZilla
+```
+puttygen keyname -o keyname.ppk
 ```
 
 ## Priority
