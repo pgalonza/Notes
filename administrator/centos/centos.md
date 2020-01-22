@@ -1,12 +1,17 @@
 # Centos
 ## MOUNT
-
 CIFS
 ```
 //"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,vers=3.0,gid="" 0 0
 ```
 
 ## Network
+IPv6
+_/etc/sysconfig/network_
+```
+NETWORKING_IPV6=yes
+```
+
 Forward
 ```
 echo net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
@@ -14,7 +19,6 @@ echo net.ipv6.conf.all.forwarding=1 >> /etc/sysctl.conf
 ```
 
 ## File, socket limits
-
 _/etc/sysctl.conf_
 
 Maximum of objects inotify per user
@@ -119,7 +123,6 @@ yum install -y php-mysql php-mbstring php-mcrypt php-devel php-xml php-gd
 ```
 
 ## Kernels
-
  Remove old kernels
 ```
 yum install yum-utils
@@ -134,7 +137,6 @@ installonly_limit=3
 
 ## Systemd
 ### Searach problem
-
 Show problems
 ```
 systemctl --failed
@@ -152,7 +154,6 @@ journalctl _PID=
 
 ## SSL
 ### Certificate Authority (CA)
-
 Install openssl
 ```
 yum/dnf install -y openssl
