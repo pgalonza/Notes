@@ -298,6 +298,14 @@ mkdir ~/.compose-cache/
 pacman -S xf86-video-intel
 ```
 
+Устанавливаем pikaur
+```
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/pikaur.git
+cd pikaur
+makepkg -fsri
+```
+
 Ставим остальной софт
 
 Размантируем разделы
