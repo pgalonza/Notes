@@ -82,7 +82,6 @@ Asterisk 16
 ```
 wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current.tar.gz
 wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current-patch.tar.gz
-
 ```
 
 Only if asterisk 13
@@ -98,7 +97,7 @@ wget https://downloads.asterisk.org/pub/telephony/libpri/libpri-current.tar.gz
 ```
 
 ## Extract
- gz
+gz
 ```
 tar -zxvf
 ```

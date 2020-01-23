@@ -4,10 +4,10 @@
 * vim
 * htop
 * tmux
-* iotop
+* iotop - disk I/O
 * rsync
-* lsof
-* sysstat - iostat
+* lsof - show open files
+* sysstat(iostat) - show input/output device loading
 * dstat
 * atop
 * ioping
