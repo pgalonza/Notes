@@ -76,6 +76,10 @@ ZONE=internal
 ```
 
 VLAN
+```
+modprobe --first-time 8021q
+```
+
 _/etc/sysconfig/network-scripts/ifcfg-enpX_
 ```
 TYPE=Ethernet
@@ -87,6 +91,7 @@ UUID=
 
 _/etc/sysconfig/network-scripts/ifcfg-enpX.X_
 ```
+TYPE=VLAN
 ONBOOT=yes
 VLAN_ID=
 VLAN=yes
