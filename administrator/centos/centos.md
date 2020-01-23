@@ -6,16 +6,91 @@ CIFS
 ```
 
 ## Network
+Forward
+```
+echo net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
+echo net.ipv6.conf.all.forwarding=1 >> /etc/sysctl.conf
+```
+
 IPv6
 _/etc/sysconfig/network_
 ```
 NETWORKING_IPV6=yes
 ```
 
-Forward
+_/etc/sysconfig/network-scripts/_
 ```
-echo net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
-echo net.ipv6.conf.all.forwarding=1 >> /etc/sysctl.conf
+TYPE=Ethernet
+PROXY_METHOD=static
+BROWSER_ONLY=no
+BOOTPROTO=none
+IPV6_AUTOCONF=no
+DEFROUTE=yes
+IPV6INIT=yes
+IPV6ADDR=
+IPV6_DEFAULTGW=
+IPV6_PRIVACY=no
+DNS0=""
+DNS1=""
+DNS2=""
+DOMAIN=""
+```
+
+IPv4 static
+_/etc/sysconfig/network-scripts/_
+```
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+NAME=""
+UUID=""
+DEVICE=""
+ONBOOT=yes
+IPADDR=
+PREFIX=
+#NETMASK=
+GATEWAY=
+DNS1=
+DNS2=
+DOMAIN=
+ZONE=internal
+```
+
+IPv4 dinamic
+_/etc/sysconfig/network-scripts/_
+```
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=dhcp
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+NAME=
+UUID=
+DEVICE=
+ONBOOT=yes
+ZONE=internal
+```
+
+VLAN
+_/etc/sysconfig/network-scripts/ifcfg-enpX_
+```
+TYPE=Ethernet
+NAME=
+DEVICE=
+ONBOOT=yes
+UUID=
+```
+
+_/etc/sysconfig/network-scripts/ifcfg-enpX.X_
+```
+ONBOOT=yes
+VLAN_ID=
+VLAN=yes
+DEVICE=enpX.X
 ```
 
 ## File, socket limits
@@ -193,7 +268,6 @@ cat coturn1.key coturn1.crt > coturn1.pem
 
 scp server1.* server1:/etc/pki/tls/certs/
 ```
-
 
 ## SysRq
 Enable
