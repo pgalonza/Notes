@@ -427,6 +427,7 @@ export var=$var
 ```
 
 ## POSTFIX
+Check configuration
 ```
 postfix check
 postconf
