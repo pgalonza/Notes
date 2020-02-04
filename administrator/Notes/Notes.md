@@ -22,9 +22,11 @@
 * bwm-ng
 * nload
 * nethogs
-* ifstat
-* trafshow
-* tcptrack
-* xrdp
-* pidof
+* xrdp - remote desktop protocol
+* pidof - find the process ID
 * [Data Tables](https://www.datatables.net)
+
+## Network
+* tcptrack - monitor TCP connections on the network
+* trafshow - full screen show network traffic
+* ifstat - report InterFace statistics
