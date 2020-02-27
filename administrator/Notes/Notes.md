@@ -27,4 +27,8 @@
 * tcptrack
 * xrdp
 * pidof
+* PWGEN
+* MAKEPASSWD
+* aspell
+* hunspell
 * [Data Tables](https://www.datatables.net)
