@@ -52,35 +52,19 @@ _/ip firewall raw_
 add action=drop chain=prerouting in-interface= log=yes log-prefix=raw_ src-address-list=block_list
 ```
 
-Port scannerddress-list="port scanners" address-list-timeout=2w comment="Port scanners to list " disabled=no
-add chain=input protocol=tcp tcp-flags=fin,!syn,!rst,!psh,!ack,!urg action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="NMAP FIN Stealth scan
-add chain=input protocol=tcp tcp-flags=fin,syn action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="SYN/FIN scan"
-add chain=input protocol=tcp tcp-flags=syn,rst action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="SYN/RST scan"
-add chain=input protocol=tcp tcp-flags=fin,psh,urg,!syn,!rst,!ack action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="FIN/PSH/URG scan"
-add chain=input protocol=tcp tcp-flags=fin,syn,rst,psh,ack,urg action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="ALL/ALL scan"
-add chain=input protocol=tcp tcp-flags=!fin,!syn,!rst,!psh,!ack,!urg action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="NMAP NULL scan"
-```
-
-Honey pot
-```
-add action=add-src-to-address-list address-list=blackList address-list-timeout=12h chain=input comment=Block connection-state=new dst-port=1723 in-interface-list=WAN protocol=tcp src-address-list=block_stage1
-add action=add-src-to-address-list address-list=block_stage1 address-list-timeout=1m chain=input comment=stage1 connection-state=new dst-port=1723 in-interface-list=WAN protocol=tcp src-address-list=block_stage2
-add action=add-src-to-address-list address-list=block_stage2 address-list-timeout=1m chain=input comment=stage2 connection-state=new dst-port=1723 in-interface-list=WAN protocol=tcp src-address-list=block_stage3
-add action=add-src-to-address-list address-list=block_stage3 address-list-timeout=1m chain=input comment=stage3 connection-state=new dst-port=1723 in-interface-list=WAN protocol=tcp
-
-```
+Port scanners
 _/ip firewall filter_
 ```
-add chain=input protocol=tcp psd=21,3s,3,1 action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="Port scanners to list " disabled=no
-add chain=input protocol=tcp tcp-flags=fin,!syn,!rst,!psh,!ack,!urg action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="NMAP FIN Stealth scan
-add chain=input protocol=tcp tcp-flags=fin,syn action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="SYN/FIN scan"
-add chain=input protocol=tcp tcp-flags=syn,rst action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="SYN/RST scan"
-add chain=input protocol=tcp tcp-flags=fin,psh,urg,!syn,!rst,!ack action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="FIN/PSH/URG scan"
-add chain=input protocol=tcp tcp-flags=fin,syn,rst,psh,ack,urg action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="ALL/ALL scan"
-add chain=input protocol=tcp tcp-flags=!fin,!syn,!rst,!psh,!ack,!urg action=add-src-to-address-list address-list="port scanners" address-list-timeout=2w comment="NMAP NULL scan"
+add chain=input protocol=tcp psd=21,3s,3,1 action=add-src-to-address-list address-list="block_list" address-list-timeout=2w comment="block_list to list " disabled=no
+add chain=input protocol=tcp tcp-flags=fin,!syn,!rst,!psh,!ack,!urg action=add-src-to-address-list address-list="block_list" address-list-timeout=2w comment="NMAP FIN Stealth scan"
+add chain=input protocol=tcp tcp-flags=fin,syn action=add-src-to-address-list address-list="block_list" address-list-timeout=2w comment="SYN/FIN scan"
+add chain=input protocol=tcp tcp-flags=syn,rst action=add-src-to-address-list address-list="block_list" address-list-timeout=2w comment="SYN/RST scan"
+add chain=input protocol=tcp tcp-flags=fin,psh,urg,!syn,!rst,!ack action=add-src-to-address-list address-list="block_list" address-list-timeout=2w comment="FIN/PSH/URG scan"
+add chain=input protocol=tcp tcp-flags=fin,syn,rst,psh,ack,urg action=add-src-to-address-list address-list="block_list" address-list-timeout=2w comment="ALL/ALL scan"
+add chain=input protocol=tcp tcp-flags=!fin,!syn,!rst,!psh,!ack,!urg action=add-src-to-address-list address-list="block_list" address-list-timeout=2w comment="NMAP NULL scan"
 ```
 
 _/ip firewall raw_
 ```
-add action=drop chain=prerouting in-interface=avk-wellcom log=yes log-prefix=raw_ src-address-list=port scanners
+add action=drop chain=prerouting in-interface= log=yes log-prefix=raw_ src-address-list=block_list
 ```
