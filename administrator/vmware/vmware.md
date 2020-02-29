@@ -19,3 +19,16 @@ sched.swap.dir = /vmfs/volumes/datastore_name/dir_name
 When Veeam make backup the host lost the time
 start ntp service
 host time zone UTC
+
+## Virtual Machine
+### Configuration parameters
+#### Disk
+Type = Thick provisioned, eagerly zeroed
+
+Disk mode = Indeoendent - persistent
+
+#### SCSI Controller
+SCSI = VMware Pravirtual
+
+#### Network Adapter
+Adapter Type = VMXNET 3
