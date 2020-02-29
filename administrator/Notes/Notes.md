@@ -22,6 +22,12 @@
 * bwm-ng
 * nload
 * nethogs
+* xrdp
+* pidof
+* PWGEN
+* MAKEPASSWD
+* aspell
+* hunspell
 * xrdp - remote desktop protocol
 * pidof - find the process ID
 * [Data Tables](https://www.datatables.net)
