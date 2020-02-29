@@ -1,9 +1,9 @@
 # VMWare ESXI
 Linux virtual machine with lost network
-Set current time
+* Set current time
 
 1c aplication server is freeze after hard reboot
-re-register the virtual machine
+* re-register the virtual machine
 
 Move swap
 * Power off the virtual machine.
@@ -17,8 +17,13 @@ sched.swap.dir = /vmfs/volumes/datastore_name/dir_name
 ```
 
 When Veeam make backup the host lost the time
-start ntp service
-host time zone UTC
+* start ntp service
+* host time zone UTC
+
+Max query metrics
+```
+config.vpxd.stats.maxQueryMetrics = -1
+```
 
 ## Virtual Machine
 ### Configuration parameters
