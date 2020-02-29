@@ -126,13 +126,29 @@ echo "ignore_invalid_headers off;" >> /etc/nginx/nginx.conf
 ```
 
 ## Python
-Add repository
+Add repository ius
 ```
-sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+sudo yum install https://$(rpm -E '%{?centos:centos}%{!?centos:rhel}%{rhel}').iuscommunity.org/ius-release.rpm
+
+sudo yum install \
+https://repo.ius.io/ius-release-el7.rpm \
+https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 ```
+
+Add repository scl
+```
+sudo yum install centos-release-scl
+```
+
 Install packages
 ```
 sudo yum install -y python36u python36u-libs python36u-devel python36u-pip
+```
+
+PIP install
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
 ```
 
 ## File limit
