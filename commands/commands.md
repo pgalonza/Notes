@@ -503,6 +503,11 @@ Recursive
 setfacl -R
 ```
 
+Remove all acl
+```
+setfacl -bn /home/test/
+```
+
 ## SED
 Replace in all files
 ```
@@ -536,6 +541,16 @@ Shift + ESC
 Start as another user
 ```
 ansible-playbook -i host_name, -e 'ansible_ssh_user=user ansible_python_interpreter=/usr/bin/python3' --ask-pass -b --ask-become-pass ansible_user.yaml
+```
+
+Test inventory
+```
+ansible -i hosts.yaml all --list-hosts
+```
+
+Ping the hosts
+```
+ansible all -m ping
 ```
 
 ## Ffmpeg
@@ -781,6 +796,7 @@ sox -V vm-intro.wav -r 8000 -c 1 -t gsm vm-intro.gsm
 ```
 
 ## ESXI
+### Network
 Up or down
 ```
 esxcli network nic up/down -n vmnicX
@@ -791,6 +807,17 @@ Set speed and duplex
 esxcfg-nics -s 10000 -d full vmnicX
 ```
 
+### Disk
+Convert the Thin disk to Eager Zeroed Thick disk
+```
+vmkfstools --inflatedisk /vmfs/volumes/DatastoreName/VMName/VMName.vmdk
+```
+
+Convert the Thick disk to Eager Zeroed Thick disk
+```
+vmkfstools --eagerzero /vmfs/volumes/DatastoreName/VMName/VMName.vmdkf
+```
+
 ## Amavisd
 Check the configuration file
 ```
@@ -798,6 +825,11 @@ amavisd -u amavis -c /etc/amavisd/amavisd.conf debug
 ```
 
 ## OpenSSH
+Generate RSA
+```
+ssh-keygen -f ~/name_key_file_rsa -t rsa -b 2048
+```
+
 Generate for paramiko
 ```
 ssh-keygen -m pem -t rsa -C "test"
@@ -937,4 +969,10 @@ cat /proc/sys/kernel/random/poolsize
 View status of server’s entropy
 ```
 cat /proc/sys/kernel/random/entropy_avail
+```
+
+## RouterOS
+Remove all
+```
+remove [find]
 ```
