@@ -1,0 +1,13 @@
+Host *
+ForwardAgent no
+ForwardX11 no
+ForwardX11Trusted yes
+Protocol 2
+ServerAliveInterval 60
+ServerAliveCountMax 30
+
+Host
+HostName %h
+User
+port 22
+IdentityFile /run/media/
