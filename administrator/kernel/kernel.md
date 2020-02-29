@@ -7,7 +7,7 @@ make menuconfig
 
 Make kernel all targets
 ```
-make all
+make -j(<NUMBER_OF_CORES> + 1) all
 ```
 
 Make modules
