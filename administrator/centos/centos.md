@@ -197,8 +197,8 @@ python3.6 manage.py startapp firstapp
 ```
 rpm -Uhv http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum install yum-utils
-yum-config-manager --enable remi-php71
-yum install php71
+yum-config-manager --enable remi-php72
+yum install php72
 yum install -y php-mysql php-mbstring php-mcrypt php-devel php-xml php-gd
 ```
 
