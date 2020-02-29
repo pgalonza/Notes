@@ -68,3 +68,6 @@ _/ip firewall raw_
 ```
 add action=drop chain=prerouting in-interface= log=yes log-prefix=raw_ src-address-list=block_list
 ```
+
+## Serial port
+Speed = 115200
