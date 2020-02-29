@@ -21,6 +21,7 @@ Create the folder and initialization on server
 mkdir example.git
 cd example.git
 git init --bare --share
+useradd -s /usr/bin/git-shell -d /git git
 ```
 
 Create local repository, add remote,
