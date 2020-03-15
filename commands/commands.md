@@ -520,6 +520,11 @@ Cifs
 mount.cifs //host/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
 ```
 
+Remount with rw
+```
+mount -o remount,rw /dev/sdXX
+```
+
 ## Chromium
 Proxy
 ```
@@ -908,4 +913,20 @@ remove [find]
 Show all symbols
 ```
 cat -A file_name
+```
+
+## systemd-analyze
+Show load time
+```
+systemd-analyze
+```
+
+Show load time in detail
+```
+systemd-analyze blame
+```
+
+Write load information in svf file
+```
+systemd-analyze plot > graph.svf
 ```
