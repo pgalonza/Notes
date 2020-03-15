@@ -205,7 +205,7 @@ pacman -S grub || efibootmgr
 Устанавливаем загрузчик
 ```
 grub-install --target=x86_64-efi /dev/sdx
-grub-install --recheck /dev/sda
+grub-install --recheck /dev/sdx
 grub-install --efi-directory=/boot/efi --boot-directory=/boot/efi/EFI --bootloader-id=grub --target=x86_64-efi --removable --recheck
 ```
 
