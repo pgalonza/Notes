@@ -1,5 +1,12 @@
-# Linux printers
-## Connect Linux to a shared printer on Windows!
+# Linux
+
+Thunderbird check all folders
+```
+mail.server.default.check_all_folders_for_new true
+```
+
+## Linux printers
+Connect Linux to a shared printer on Windows!
 
 1. If have driver installer use it
 2. Go to the printer Management window and add a new one

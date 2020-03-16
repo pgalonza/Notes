@@ -504,6 +504,11 @@ CD-rom
 mount- -o loop /opt/cd.iso /opt/repo
 ```
 
+Remount with rw
+```
+mount -o remount,rw /dev/sdXX
+```
+
 ## Chromium
 Proxy
 ```
@@ -919,4 +924,20 @@ dd if=/dev/zero of=output.dat  bs=1M  count=24
 Copy cd-rom
 ```
 dd if=/dev/cdrom of=/opt/cd.iso bs=1M
+```
+
+## systemd-analyze
+Show load time
+```
+systemd-analyze
+```
+
+Show load time in detail
+```
+systemd-analyze blame
+```
+
+Write load information in svf file
+```
+systemd-analyze plot > graph.svf
 ```
