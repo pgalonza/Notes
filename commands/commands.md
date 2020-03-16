@@ -1,13 +1,4 @@
 # Commands
-Cd rom access
-```
-chmod u+s /usr/bin/wodim
-```
-
-Burn the image
-```
-sudo dd oflag=direct status=progress  if=image.iso of=/dev/sd* bs=1M; sync
-```
 
 Format the flash card
 ```
@@ -30,11 +21,6 @@ Search in files
 find -name *.c -type f | xargs grep open
 
 grep -R open --include="*.c".
-```
-
-dd with status
-```
-pv -tpreb /dev/sdb | dd of=~/sdb.img bs=1M
 ```
 
 Execute the command in another directory and return
@@ -366,13 +352,6 @@ Clean the authorization cache
 doveadm auth cache
 ```
 
-## Make files
-Make emty files with size
-```
-dd if=/dev/zero of=output.dat  bs=24M  count=1
-dd if=/dev/zero of=output.dat  bs=1M  count=24
-```
-
 ## Mail
 Mail console client
 ```
@@ -518,6 +497,11 @@ sed -i 's/old_text/new_text/g' *
 Cifs
 ```
 mount.cifs //host/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
+```
+
+CD-rom
+```
+mount- -o loop /opt/cd.iso /opt/repo
 ```
 
 ## Chromium
@@ -908,4 +892,31 @@ remove [find]
 Show all symbols
 ```
 cat -A file_name
+```
+
+## dd
+Cd rom access
+```
+chmod u+s /usr/bin/wodim
+```
+
+Burn the image
+```
+sudo dd oflag=direct status=progress  if=image.iso of=/dev/sd* bs=1M; sync
+```
+
+dd with status
+```
+pv -tpreb /dev/sdb | dd of=~/sdb.img bs=1M
+```
+
+Make emty files with size
+```
+dd if=/dev/zero of=output.dat  bs=24M  count=1
+dd if=/dev/zero of=output.dat  bs=1M  count=24
+```
+
+Copy cd-rom
+```
+dd if=/dev/cdrom of=/opt/cd.iso bs=1M
 ```
