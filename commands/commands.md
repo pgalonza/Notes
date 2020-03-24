@@ -82,6 +82,11 @@ Write command results to file with privileges
 echo 1 | sudo tee -a privileged_file > /dev/null
 ```
 
+Executing command for each row
+```
+cat file_name.txt | while read in; do command_line "$in"; done
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
@@ -731,7 +736,12 @@ vmkfstools --inflatedisk /vmfs/volumes/DatastoreName/VMName/VMName.vmdk
 
 Convert the Thick disk to Eager Zeroed Thick disk
 ```
-vmkfstools --eagerzero /vmfs/volumes/DatastoreName/VMName/VMName.vmdkf
+vmkfstools --eagerzero /vmfs/volumes/DatastoreName/VMName/VMName.vmdk
+```
+
+Check and repair vmdk
+```
+vmkfstools --fix check file_name.vmdk
 ```
 
 ## Amavisd
@@ -893,6 +903,21 @@ Remove all
 remove [find]
 ```
 
+Show list
+```
+:foreach i in=[/interface vrrp find] do={ :put [/interface vrrp get $i name];
+```
+
+Instruction if
+```
+:if ([:len [/file find name=file_name]] > 0) do={:put "false"}
+```
+
+Print variable
+```
+:local variable_name [:len [/file find name=name_file]]; :put (variable_name);
+```
+
 ## Cat
 Show all symbols
 ```
@@ -940,4 +965,10 @@ systemd-analyze blame
 Write load information in svf file
 ```
 systemd-analyze plot > graph.svf
+```
+
+## VirtualBox
+Change UUID
+```
+VBoxManage internalcommands sethduuid disk_name.vdi
 ```
