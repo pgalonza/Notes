@@ -87,6 +87,11 @@ Executing command for each row
 cat file_name.txt | while read in; do command_line "$in"; done
 ```
 
+Description of the filesystem hierarchy
+```
+man hier
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
