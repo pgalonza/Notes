@@ -929,7 +929,7 @@ Show all symbols
 cat -A file_name
 ```
 
-## dd
+## Dd
 Cd rom access
 ```
 chmod u+s /usr/bin/wodim
@@ -956,7 +956,7 @@ Copy cd-rom
 dd if=/dev/cdrom of=/opt/cd.iso bs=1M
 ```
 
-## systemd-analyze
+## Systemd-analyze
 Show load time
 ```
 systemd-analyze
@@ -978,7 +978,7 @@ Change UUID
 VBoxManage internalcommands sethduuid disk_name.vdi
 ```
 
-## cp
+## Cp
 Copy with attributes mode,ownership,timestamps
 ```
 cp -rp /source /destination
@@ -987,4 +987,20 @@ cp -rp /source /destination
 Copy with save all parameters
 ```
 cp -a /source /destination
+```
+
+## Shred
+Overwrite a file and delete
+```
+shred -zvu -n 10 file_name
+```
+
+Overwrite a file
+```
+shred -zv -n 10 file_name
+```
+
+Overwrite a partition
+```
+shred -fvz /dev/sdb*
 ```
