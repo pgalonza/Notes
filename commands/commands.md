@@ -87,9 +87,44 @@ Executing command for each row
 cat file_name.txt | while read in; do command_line "$in"; done
 ```
 
-Description of the filesystem hierarchy
+Sequential execution of commands
 ```
-man hier
+command_1; command_2; command_3
+```
+
+Parallel execution of commands
+```
+(command_1 &); (command_2 &)
+```
+
+Output one command as an argument to another
+```
+command_1 $(command_2)
+```
+
+Search by commands history
+```
+Ctrl+R
+```
+
+Usеing the argument of the last command
+```
+!$
+````
+
+Executing a long command
+```
+Ctrl+X,E
+```
+
+Terminal reinitialization
+```
+reset
+```
+
+Process tree
+```
+pstree
 ```
 
 ## PERMISSION
@@ -846,6 +881,12 @@ Swap
 swapoff -a && swapon -a
 ```
 
+Percentage value controls the tendency of the kernel to reclaim
+the memory which is used for caching of directory and inode objects
+```
+echo 1000 > /proc/sys/vm/vfs_cache_pressure
+```
+
 ## GPG
 Import key
 ```
@@ -1002,5 +1043,16 @@ shred -zv -n 10 file_name
 
 Overwrite a partition
 ```
-shred -fvz /dev/sdb*
+shred -fvz /dev/sdXX
+```
+
+## Man
+Description of the filesystem hierarchy
+```
+man hier
+```
+
+ASCII table
+```
+man ascii
 ```
