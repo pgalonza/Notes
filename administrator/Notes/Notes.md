@@ -19,6 +19,7 @@
 * aspell - interactive spell checker
 * hunspell - spell checker, stemmer and morphological analyzer
 * [Data Tables](https://www.datatables.net)
+* [JetBrainsMono](https://www.jetbrains.com/lp/mono/#how-to-install)
 
 ## Network
 * tcptrack - monitor TCP connections on the network.
