@@ -977,3 +977,10 @@ Change UUID
 ```
 VBoxManage internalcommands sethduuid disk_name.vdi
 ```
+
+## cp
+Copy with attributes mode,ownership,timestamps
+cp -rp /source /destination
+
+Copy with save all parameters
+cp -a /source /destination
