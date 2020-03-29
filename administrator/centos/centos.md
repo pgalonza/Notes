@@ -6,17 +6,6 @@ CIFS
 ```
 
 ## Network
-Forward
-```
-echo net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
-echo net.ipv6.conf.all.forwarding=1 >> /etc/sysctl.conf
-```
-
-IPv6
-_/etc/sysconfig/network_
-```
-NETWORKING_IPV6=yes
-```
 
 _/etc/sysconfig/network-scripts/_
 ```
