@@ -61,3 +61,14 @@ DeviceURI smb://[username]%40[domain]:[password]@[pass to printer]
 * %MEM -- Memory Usage (RES) : A task's currently used share of available physical memory (RAM).
 * TIME+ -- CPU Time, hundredths : Total CPU time the task has used since it started.
 * COMMAND -- Command Name or Command Line : To see the full command line that launched the process, start top with the -c flag : top -c.
+
+## FSTAB
+Do not allow set-user-identifier or set-group-identifier bits to take effect
+```
+nosuid
+```
+
+Do not allow direct execution of any binaries on the mounted filesystem
+```
+noexec
+```
