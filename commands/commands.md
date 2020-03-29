@@ -516,7 +516,7 @@ mount- -o loop /opt/cd.iso /opt/repo
 
 Remount with rw
 ```
-mount -o remount,rw /dev/sdXX
+mount -n -o remount,rw /dev/sdXX
 ```
 
 ## Chromium
