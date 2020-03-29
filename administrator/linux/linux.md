@@ -5,6 +5,16 @@ Thunderbird check all folders
 mail.server.default.check_all_folders_for_new true
 ```
 
+Hard disk partitions
+```
+/dev/sda1 — boot
+/dev/sda2 — root (/)
+/dev/sda3 — home
+/dev/sda4 — var
+/dev/sda5 — tmp
+/dev/sda6 — swap
+```
+
 ## Linux printers
 Connect Linux to a shared printer on Windows!
 
