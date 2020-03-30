@@ -811,6 +811,68 @@ Convert for FileZilla
 puttygen keyname -o keyname.ppk
 ```
 
+## SSH
+Executing a command on a remote host
+```
+ssh user_name@remote_server "comamnd"
+```
+
+SOCKS-proxy
+```
+ssh -D 0.0.0.0:port_number user_name@remote_server
+```
+
+Port forwarding
+```
+ssh -L 0.0.0.0:port_number:127.0.0.1:port_number user_name@remote_server
+```
+
+Reverse SOCKS-proxy
+```
+ssh -v -R 0.0.0.0:port_number X.X.X.X user_name@remote_server
+```
+
+Reverse ssh tunnel
+```
+ssh -R 0.0.0.0:port_number:127.0.0.1:port_number X.X.X.X user_name@remote_server
+```
+
+Jumping through the remote hosts
+```
+ssh -J host1,host2,host3 user_name@remote_server
+```
+
+Dual ssh tunnel
+```
+ssh -L port_number:127.0.0.1:port_number user_name@remote_server
+ssh -R port_number:127.0.0.1:port_number user_name@remote_server
+```
+
+Do not execute a remote command
+```
+ssh -N
+```
+
+Allows remote hosts to connect to local forwarded ports
+```
+ssh -g
+```
+
+Requests ssh to go to background just before command execution
+```
+ssh -f
+```
+
+Editing a file via scp
+```
+vim scp://user_name@remote_server //path_to_file
+```
+
+Mount local directory to remote host
+```
+sshfs user_name@remote_serve:/remote_directory /local_directory
+```
+
 ## Priority
 IO priority
 ```
