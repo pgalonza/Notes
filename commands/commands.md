@@ -75,6 +75,7 @@ Print the locate of binary
 ```
 type -a command
 whereis command
+which command
 ```
 
 Write command results to file with privileges
@@ -125,6 +126,11 @@ reset
 Process tree
 ```
 pstree
+```
+
+Determine file type
+```
+file file_name
 ```
 
 ## PERMISSION
@@ -394,7 +400,7 @@ doveadm who -1
 
 Clean the authorization cache
 ```
-doveadm auth cache
+doveadm auth cache flush
 ```
 
 ## Mail
