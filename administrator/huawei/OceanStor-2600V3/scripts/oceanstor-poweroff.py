@@ -18,7 +18,7 @@ _nas_rest_url = None
 def main():
     session = nas_rest_connector()
     data = json.dumps({'IMPORTANTPSW': '***REMOVED***'})
-    #!session.put(_nas_rest_url + '/system/poweroff', data=data, verify=False)!#
+    session.put(_nas_rest_url + '/system/poweroff', data=data, verify=False)
     nas_rest_disconnect(session)
 
 
