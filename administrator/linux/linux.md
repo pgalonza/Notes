@@ -105,3 +105,27 @@ Enabling the interface
 ```
 ip link set dev ethX.vlan_id up
 ```
+
+### MACVLAN
+
+Adding new makvlan interface
+```
+ip link add link ethX makvlan_name type macvlan mode bridge
+```
+
+### Bridge
+
+Adding new bridge interface
+```
+ip link add name bridge_name type bridge
+```
+
+Adding interface to bridge
+```
+ip link set interface_name master bridge_name
+```
+
+Removing interface
+```
+ip link set interface_name nomaster
+```
