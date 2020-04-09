@@ -82,9 +82,34 @@ _/etc/sysconfig/network-scripts/ifcfg-enpX.X_
 ```
 TYPE=VLAN
 ONBOOT=yes
-VLAN_ID=
 VLAN=yes
 DEVICE=enpX.X
+```
+
+Bridge
+_/etc/sysconfig/network-scripts/ifcfg-brX_
+```
+DEVICE=
+TYPE=Bridge
+ONBOOT=yes
+BOOTPROTO=none
+IPV6INIT=no
+IPV6_AUTOCONF=no
+DELAY=5
+STP=yes
+```
+
+_/etc/sysconfig/network-scripts/ifcfg-enpX_
+```
+DEVICE=enpX
+BOOTPROTO=none
+TYPE=Ethernet
+NAME=
+DEVICE=
+ONBOOT=yes
+UUID=
+HOTPLUG=no
+BRIDGE=brX
 ```
 
 ## File, socket limits
