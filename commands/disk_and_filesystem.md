@@ -4,6 +4,8 @@ View
 fdisk -l
 lsblk -o NAME,SIZE,FSTYPE,TYPE,MOUNTPOINT
 lsblk -f
+findmnt
+mount | column -t
 ```
 
 Tell the Linux kernel about the presence and numbering of on-disk partitions, update the specified partitions

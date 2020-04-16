@@ -87,9 +87,44 @@ Executing command for each row
 cat file_name.txt | while read in; do command_line "$in"; done
 ```
 
-Description of the filesystem hierarchy
+Sequential execution of commands
 ```
-man hier
+command_1; command_2; command_3
+```
+
+Parallel execution of commands
+```
+(command_1 &); (command_2 &)
+```
+
+Output one command as an argument to another
+```
+command_1 $(command_2)
+```
+
+Search by commands history
+```
+Ctrl+R
+```
+
+Usеing the argument of the last command
+```
+!$
+````
+
+Executing a long command
+```
+Ctrl+X,E
+```
+
+Terminal reinitialization
+```
+reset
+```
+
+Process tree
+```
+pstree
 ```
 
 ## PERMISSION
@@ -516,7 +551,7 @@ mount- -o loop /opt/cd.iso /opt/repo
 
 Remount with rw
 ```
-mount -o remount,rw /dev/sdXX
+mount -n -o remount,rw /dev/sdXX
 ```
 
 ## Chromium
@@ -776,6 +811,68 @@ Convert for FileZilla
 puttygen keyname -o keyname.ppk
 ```
 
+## SSH
+Executing a command on a remote host
+```
+ssh user_name@remote_server "comamnd"
+```
+
+SOCKS-proxy
+```
+ssh -D 0.0.0.0:port_number user_name@remote_server
+```
+
+Port forwarding
+```
+ssh -L 0.0.0.0:port_number:127.0.0.1:port_number user_name@remote_server
+```
+
+Reverse SOCKS-proxy
+```
+ssh -v -R 0.0.0.0:port_number X.X.X.X user_name@remote_server
+```
+
+Reverse ssh tunnel
+```
+ssh -R 0.0.0.0:port_number:127.0.0.1:port_number X.X.X.X user_name@remote_server
+```
+
+Jumping through the remote hosts
+```
+ssh -J host1,host2,host3 user_name@remote_server
+```
+
+Dual ssh tunnel
+```
+ssh -L port_number:127.0.0.1:port_number user_name@remote_server
+ssh -R port_number:127.0.0.1:port_number user_name@remote_server
+```
+
+Do not execute a remote command
+```
+ssh -N
+```
+
+Allows remote hosts to connect to local forwarded ports
+```
+ssh -g
+```
+
+Requests ssh to go to background just before command execution
+```
+ssh -f
+```
+
+Editing a file via scp
+```
+vim scp://user_name@remote_server //path_to_file
+```
+
+Mount local directory to remote host
+```
+sshfs user_name@remote_serve:/remote_directory /local_directory
+```
+
 ## Priority
 IO priority
 ```
@@ -844,6 +941,12 @@ sync; echo 3 > /proc/sys/vm/drop_caches
 Swap
 ```
 swapoff -a && swapon -a
+```
+
+Percentage value controls the tendency of the kernel to reclaim
+the memory which is used for caching of directory and inode objects
+```
+echo 1000 > /proc/sys/vm/vfs_cache_pressure
 ```
 
 ## GPG
@@ -929,7 +1032,7 @@ Show all symbols
 cat -A file_name
 ```
 
-## dd
+## Dd
 Cd rom access
 ```
 chmod u+s /usr/bin/wodim
@@ -956,7 +1059,7 @@ Copy cd-rom
 dd if=/dev/cdrom of=/opt/cd.iso bs=1M
 ```
 
-## systemd-analyze
+## Systemd-analyze
 Show load time
 ```
 systemd-analyze
@@ -976,4 +1079,42 @@ systemd-analyze plot > graph.svf
 Change UUID
 ```
 VBoxManage internalcommands sethduuid disk_name.vdi
+```
+
+## Cp
+Copy with attributes mode,ownership,timestamps
+```
+cp -rp /source /destination
+```
+
+Copy with save all parameters
+```
+cp -a /source /destination
+```
+
+## Shred
+Overwrite a file and delete
+```
+shred -zvu -n 10 file_name
+```
+
+Overwrite a file
+```
+shred -zv -n 10 file_name
+```
+
+Overwrite a partition
+```
+shred -fvz /dev/sdXX
+```
+
+## Man
+Description of the filesystem hierarchy
+```
+man hier
+```
+
+ASCII table
+```
+man ascii
 ```

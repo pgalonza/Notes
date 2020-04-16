@@ -5,7 +5,18 @@ Thunderbird check all folders
 mail.server.default.check_all_folders_for_new true
 ```
 
+Hard disk partitions
+```
+/dev/sda1 — boot
+/dev/sda2 — root (/)
+/dev/sda3 — home
+/dev/sda4 — var
+/dev/sda5 — tmp
+/dev/sda6 — swap
+```
+
 ## Linux printers
+
 Connect Linux to a shared printer on Windows!
 
 1. If have driver installer use it
@@ -51,3 +62,46 @@ DeviceURI smb://[username]%40[domain]:[password]@[pass to printer]
 * %MEM -- Memory Usage (RES) : A task's currently used share of available physical memory (RAM).
 * TIME+ -- CPU Time, hundredths : Total CPU time the task has used since it started.
 * COMMAND -- Command Name or Command Line : To see the full command line that launched the process, start top with the -c flag : top -c.
+
+## FSTAB
+
+Do not allow set-user-identifier or set-group-identifier bits to take effect
+```
+nosuid
+```
+
+Do not allow direct execution of any binaries on the mounted filesystem
+```
+noexec
+```
+
+## Network
+
+Forward
+```
+echo net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
+echo net.ipv6.conf.all.forwarding=1 >> /etc/sysctl.conf
+```
+
+IPv6
+_/etc/sysconfig/network_
+```
+NETWORKING_IPV6=yes
+```
+
+### VLAN
+
+Adding new virtual interface
+```
+ip link add link ethX name ethX.vlan_id type vlan id vlan_id
+```
+
+Assign ip-address to interface
+```
+ip addr add X.X.X.X/XX dev ethX.vlan_id
+```
+
+Enabling the interface
+```
+ip link set dev ethX.vlan_id up
+```
