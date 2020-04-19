@@ -15,9 +15,11 @@
 * **xrdp** -  a RDP server.
 * **pidof** - find the process ID of a running program.
 * **PWGEN** - generate pronounceable passwords.
-* **MAKEPASSWD** - generate and/or encrypt passwords
+* **MAKEPASSWD** - generate and/or encrypt passwords.
 * **aspell** - interactive spell checker
-* **hunspell** - spell checker, stemmer and morphological analyzer
+* **hunspell** - spell checker, stemmer and morphological analyzer.
+* **#!** - shebang indicate an interpreter for execution under UNIX / Linux operating systems.
+* **screenfetch** - fetches system/theme information in. terminal for Linux desktop screenshots
 * [Data Tables](https://www.datatables.net)
 * [JetBrainsMono](https://www.jetbrains.com/lp/mono/#how-to-install)
 
