@@ -1,0 +1,32 @@
+crypto key generate dsa
+crypto key generate rsa
+ip ssh server
+vlan {{ commutator.management_vlan }}
+exit
+interface vlan {{ commutator.management_vlan }}
+ip address {{ commutator.ip_address }}
+exit
+interface vlan 1
+ip address none
+exit
+ip default-gateway {{ commutator.default_gateway }}
+{% for interface in commutator.interfaces -%}
+interface {{ interface.name }}
+{% if interface.mode == "trunk" -%}
+switchport mode {{ interface.mode }}
+{% if interface.vlan is iterable -%}
+switchport trunk allowed vlan {{ interface.vlan[0] }}
+{% for vlan_id in interface.vlan[1:] -%}
+switchport trunk allowed vlan add {{ vlan_id }}
+{% endfor -%}
+{% else -%}
+switchport trunk allowed vlan {{ interface.vlan }}
+{% endif -%}
+{% else -%}
+switchport mode {{ interface.mode }}
+switchport access vlan {{ interface.vlan }}
+{% endif -%}
+{% endfor -%}
+exit
+username {{ commutator.admin_name }} password {{ commutator.admin_password }} privilege 15
+enable password {{commutator.admin_password}}

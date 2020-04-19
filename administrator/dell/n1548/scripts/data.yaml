@@ -1,0 +1,13 @@
+---
+management_vlan: 10
+ip_address: 192.168.0.2 /24
+default_gateway: 192.168.0.1
+admin_name: admin
+admin_password: admin
+interfaces:
+  - name: gigabitethernet 1/0/1
+    mode: trunk
+    vlan: [10,1]
+  - name: tengigabitethernet 1/0/44
+    mode: access
+    vlan: 10
