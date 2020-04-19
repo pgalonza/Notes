@@ -2,7 +2,7 @@
 Create a user with defaul group administrator and add him to the wheel group.
 ```
 useradd -m -N -g primary_group -G other_group user_name
-useradd -s /sbin/nologin -d /usr/lib/"service"  user_name
+useradd --system --no-create-home -s /sbin/nologin user_name
 ```
 
 Create group
