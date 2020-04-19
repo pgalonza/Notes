@@ -51,5 +51,5 @@ partx -u /dev/sda
 Directory in ram
 _/etc/fstab_
 ```
-tmpfs   path_to_directory        tmpfs   nodev,nosuid,size=2G          0  0
+tmpfs   path_to_directory        tmpfs   noatime,nodev,nosuid,size=2G          0  0
 ```
