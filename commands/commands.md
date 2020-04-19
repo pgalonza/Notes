@@ -133,6 +133,11 @@ Determine file type
 file file_name
 ```
 
+Show last command execution result
+```
+echo $?
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
