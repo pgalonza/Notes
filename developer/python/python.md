@@ -1,5 +1,42 @@
 # Python
 
+Docstrings
+```
+"""Summary or Description of the Function
+
+    Parameters:
+    argument1 (int): Description of arg1
+
+    Returns:
+    int:Returning value
+"""
+```
+
+Enter interactive mode after executing the script or the command
+```
+python -i file_name.py
+```
+
+Named arguments
+```
+**kwargs
+```
+
+Non-keyworded variable-length argument
+```
+*args
+```
+
+Type annotations
+```
+variable_name: str
+```
+
+Integer syntax
+```
+10_000
+```
+
 Yes or no
 ```
 input('Are you sure? (y/n): ').lower().strip()[:1]
@@ -82,12 +119,26 @@ for i in a:
 * **mailbox** - manipulate mailboxes in various formats.
 * **paramiko** - making SSH2 connections (client or server).
 * **subprocess** - subprocess managemen.
+* **multiprocessing** - process-based parallelism.
+* **threading** - thread-based parallelism.
+* **concurrent.futures** - launching parallel tasks.
+* **asyncio** - asynchronous I/O.
+* **netmiko** - multi-vendor library to simplify Paramiko SSH connections to network devices.
+* **pprint** - data pretty printer.
+* **bracket_expansion** - generator for bracket-expansion function.
+* **jinja2** - jinja is a sandboxed template engine written in pure Python.
+* **pyyaml** - the next generation YAML parser and emitter for Python.
 
 ## Functions and methods
 
 * **repr(object)** - return a string containing a printable representation of an object.
 * **enumerate(iterable, start=0)** - return an enumerate object.
 * **type(object)** - return the type of an object.
+* **super()** - return a proxy object that delegates method calls to a parent or sibling class of type.
+* **dir()** - without arguments, return the list of names in the current local scope. With an argument, attempt to return a list of valid attributes for that object.
+* **help([object])** - invoke the built-in help system.
+* **isinstance(object, classinfo)** - returns a Boolean stating whether the object is an instance or subclass of another object.
+* **globals()** - return a dictionary representing the current global symbol table.
 
 ## LDAP
 
@@ -362,4 +413,31 @@ sftp.close()
 Executing command
 ```
 stdin, stdout, stderr = client.exec_command("command")
+```
+
+## YAML
+
+Read yaml file
+```
+with open('file_name') as file:
+    data = yaml.load(file, Loader=yaml.FullLoader)
+```
+
+## Jinja2
+
+Create the environment
+* trim_blocks - first newline after a block is removed.
+* lstrip_blocks - leading spaces and tabs are stripped from the start of a line to a block.
+```
+ENV = Environment(loader=FileSystemLoader('.'), trim_blocks=True, lstrip_blocks=True)
+ENV = Environment(loader=FileSystemLoader('.'))
+```
+
+Load a template from the loader
+```
+template = ENV.get_template("template_name")
+```
+
+```
+template.render(some_context=data)
 ```
