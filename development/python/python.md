@@ -17,6 +17,11 @@ Enter interactive mode after executing the script or the command
 python -i file_name.py
 ```
 
+Searches sys.path for the named module and runs the corresponding .py file as a script.
+```
+python -m module_name
+```
+
 Named arguments
 ```
 **kwargs
@@ -417,6 +422,11 @@ stdin, stdout, stderr = client.exec_command("command")
 
 ## YAML
 
+Import
+```
+import yaml
+```
+
 Read yaml file
 ```
 with open('file_name') as file:
@@ -424,6 +434,11 @@ with open('file_name') as file:
 ```
 
 ## Jinja2
+
+Import
+```
+from jinja2 import Environment, FileSystemLoader
+```
 
 Create the environment
 * trim_blocks - first newline after a block is removed.
@@ -440,4 +455,75 @@ template = ENV.get_template("template_name")
 
 ```
 template.render(some_context=data)
+```
+
+## Requests
+
+Import
+```
+import json
+import requests
+```
+
+Headers
+```
+headers = {
+        'Authorization': 'OAuth ',
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+```
+
+Params
+```
+params = {
+        'fields': '',
+    }
+```
+
+Body
+```
+data = {
+        'fields': {'': ''}
+    }
+```
+
+URL address
+```
+url = "https://site_name/"
+```
+
+HTTP get request
+```
+response = requests.get(url, headers=headers, params=params)
+```
+
+HTTP post request
+```
+response = requests.post(url=url, headers=headers, params=params, data=json.dump(data))
+```
+
+Get response
+```
+response.json()
+json.loads(response.text)
+response.text
+response.text.encode('utf8')
+json.dumps(response.json(), indent=2)
+json.loads(response.text)['antivirus_status']
+```
+
+Get status code
+```
+response.status_code
+```
+
+Get headers
+```
+response.headers
+```
+
+Get encoding
+```
+response.encoding
 ```
