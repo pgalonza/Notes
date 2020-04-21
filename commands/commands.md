@@ -1129,3 +1129,14 @@ ASCII table
 ```
 man ascii
 ```
+
+## Curl
+REST API get
+```
+curl --include --location --request GET 'https://site_name/?fields=parameter_name' --header 'Authorization: OAuth id'
+```
+
+Formatting JSON answer
+```
+curl --location --request GET 'https://site_name/?fields=parameter_name' --header 'Authorization: OAuth id' | python -m json.tool
+```
