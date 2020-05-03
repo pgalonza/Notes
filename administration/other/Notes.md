@@ -19,7 +19,9 @@
 * **aspell** - interactive spell checker
 * **hunspell** - spell checker, stemmer and morphological analyzer.
 * **#!** - shebang indicate an interpreter for execution under UNIX / Linux operating systems.
-* **screenfetch** - fetches system/theme information in. terminal for Linux desktop screenshots
+* **screenfetch** - fetches system/theme information in. terminal for Linux desktop screenshots.
+* **nproc** - print the number of processing units available.
+* **strings** - print the sequences of printable characters in files.
 * [Data Tables](https://www.datatables.net)
 * [JetBrainsMono](https://www.jetbrains.com/lp/mono/#how-to-install)
 
