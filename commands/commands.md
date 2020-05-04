@@ -1140,3 +1140,9 @@ Formatting JSON answer
 ```
 curl --location --request GET 'https://site_name/?fields=parameter_name' --header 'Authorization: OAuth id' | python -m json.tool
 ```
+
+## Vim
+Delete and paste
+```
+ddP
+```
