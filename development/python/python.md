@@ -42,6 +42,11 @@ Integer syntax
 10_000
 ```
 
+Float syntax
+```
+.5
+```
+
 Yes or no
 ```
 input('Are you sure? (y/n): ').lower().strip()[:1]
@@ -133,6 +138,8 @@ for i in a:
 * **bracket_expansion** - generator for bracket-expansion function.
 * **jinja2** - jinja is a sandboxed template engine written in pure Python.
 * **pyyaml** - the next generation YAML parser and emitter for Python.
+* **ncclient** - library for NETCONF clients.
+* **getpass** - portable password input.
 
 ## Functions and methods
 
@@ -144,6 +151,7 @@ for i in a:
 * **help([object])** - invoke the built-in help system.
 * **isinstance(object, classinfo)** - returns a Boolean stating whether the object is an instance or subclass of another object.
 * **globals()** - return a dictionary representing the current global symbol table.
+* **id()** return the “identity” of an object.
 
 ## LDAP
 
@@ -448,11 +456,17 @@ ENV = Environment(loader=FileSystemLoader('.'), trim_blocks=True, lstrip_blocks=
 ENV = Environment(loader=FileSystemLoader('.'))
 ```
 
+Add filter
+```
+ENV.filters['function_name'] = function_name
+```
+
 Load a template from the loader
 ```
 template = ENV.get_template("template_name")
 ```
 
+Render the template
 ```
 template.render(some_context=data)
 ```
@@ -526,4 +540,33 @@ response.headers
 Get encoding
 ```
 response.encoding
+```
+
+## Netmiko
+
+Import
+```
+from netmiko import ConnectHandler
+```
+
+Creating connection
+```
+device = ConnectHandler(host='ip_address', username='user_name', password='user_password', device_type='linux', secret='')
+```
+
+Show device prompt
+```
+device.find_prompt()
+```
+
+Become root
+```
+device.enable(cmd='sudo -i', pattern='[sudo]')
+```
+
+Send command
+```
+device.send_command_expect()
+device.send_command_timing()
+device.send_command()
 ```
