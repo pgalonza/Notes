@@ -11,6 +11,9 @@ Docstrings
     int:Returning value
 """
 ```
+```
+__doc__
+```
 
 Enter interactive mode after executing the script or the command
 ```
@@ -111,6 +114,11 @@ for i in a:
   print(i)
 ```
 
+Explicitly Define parameters in function
+```
+def function_name(parameter_name,*, parameter_name)
+```
+
 ## Modules and packets
 
 * **argparse** - parser for command-line options, arguments and sub-commands.
@@ -151,7 +159,8 @@ for i in a:
 * **help([object])** - invoke the built-in help system.
 * **isinstance(object, classinfo)** - returns a Boolean stating whether the object is an instance or subclass of another object.
 * **globals()** - return a dictionary representing the current global symbol table.
-* **id()** return the “identity” of an object.
+* **id()** - return the “identity” of an object.
+* **del** - delete object.
 
 ## LDAP
 
