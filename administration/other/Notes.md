@@ -22,6 +22,7 @@
 * **screenfetch** - fetches system/theme information in. terminal for Linux desktop screenshots.
 * **nproc** - print the number of processing units available.
 * **strings** - print the sequences of printable characters in files.
+* **obs-studio** - source software for video recording and live streaming.
 * [Data Tables](https://www.datatables.net)
 * [JetBrainsMono](https://www.jetbrains.com/lp/mono/#how-to-install)
 
