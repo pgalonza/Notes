@@ -161,6 +161,7 @@ def function_name(parameter_name,*, parameter_name)
 * **globals()** - return a dictionary representing the current global symbol table.
 * **id()** - return the “identity” of an object.
 * **del** - delete object.
+* **zip()** - join two tuples together.
 
 ## LDAP
 
