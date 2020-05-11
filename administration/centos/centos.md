@@ -86,6 +86,17 @@ VLAN=yes
 DEVICE=enpX.X
 ```
 
+_/etc/sysconfig/network-scripts/ifcfg-vlanX_
+```
+ONBOOT=yes
+TYPE=VLAN
+VLAN=yes
+VLAN_NAME_TYPE=VLAN_PLUS_VID_NO_PAD
+DEVICE=vlan5
+PHYSDEV=ens32
+VLAN_ID=5
+```
+
 Bridge
 _/etc/sysconfig/network-scripts/ifcfg-brX_
 ```
