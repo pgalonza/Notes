@@ -20,5 +20,5 @@ Server = https://archive.archlinux.org/repos/2019/12/02/$repo/os/$arch
 
 Downgrade
 ```
-sudo pacman -Syyu
+sudo pacman -Syyuu
 ```
