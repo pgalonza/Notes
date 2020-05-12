@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>4.0</version>
-    <date>2018-12-29T13:59:27Z</date>
+    <version>4.2</version>
+    <date>2020-05-12T10:47:23Z</date>
     <groups>
         <group>
             <name>Templates/Conditioners</name>
@@ -93,7 +93,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.2.1.7.0</snmp_oid>
                     <key>sbr01.conditioners.conditioner1.coolTime</key>
-                    <delay>3h</delay>
+                    <delay>10m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -128,6 +128,8 @@
                         <step>
                             <type>1</type>
                             <params>0.01</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
                         </step>
                     </preprocessing>
                     <jmx_endpoint/>
@@ -157,7 +159,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.2.1.2.0</snmp_oid>
                     <key>sbr01.conditioners.conditioner1.error</key>
-                    <delay>15m</delay>
+                    <delay>3m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -188,7 +190,14 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>15m</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -216,7 +225,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.2.1.5.0</snmp_oid>
                     <key>sbr01.conditioners.conditioner1.state</key>
-                    <delay>15m</delay>
+                    <delay>3m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -249,7 +258,14 @@
                         <name>SBR01::State</name>
                     </valuemap>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>15m</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -456,7 +472,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.2.2.7.0</snmp_oid>
                     <key>sbr01.conditioners.conditioner2.coolTime</key>
-                    <delay>3h</delay>
+                    <delay>10m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -515,7 +531,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.2.2.2.0</snmp_oid>
                     <key>sbr01.conditioners.conditioner2.error</key>
-                    <delay>15m</delay>
+                    <delay>3m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -546,7 +562,14 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>15m</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -574,7 +597,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.2.2.5.0</snmp_oid>
                     <key>sbr01.conditioners.conditioner2.state</key>
-                    <delay>15m</delay>
+                    <delay>3m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -607,7 +630,14 @@
                         <name>SBR01::State</name>
                     </valuemap>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>15m</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -814,7 +844,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.2.3.7.0</snmp_oid>
                     <key>sbr01.conditioners.conditioner3.coolTime</key>
-                    <delay>3h</delay>
+                    <delay>10m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -849,6 +879,8 @@
                         <step>
                             <type>1</type>
                             <params>0.01</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
                         </step>
                     </preprocessing>
                     <jmx_endpoint/>
@@ -878,7 +910,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.2.3.2.0</snmp_oid>
                     <key>sbr01.conditioners.conditioner3.error</key>
-                    <delay>15m</delay>
+                    <delay>3m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -909,7 +941,14 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>15m</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -937,7 +976,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.2.3.5.0</snmp_oid>
                     <key>sbr01.conditioners.conditioner3.state</key>
-                    <delay>15m</delay>
+                    <delay>3m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -970,7 +1009,14 @@
                         <name>SBR01::State</name>
                     </valuemap>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>15m</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -1116,7 +1162,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.1.4.0</snmp_oid>
                     <key>sbr01.system.alarmTemp</key>
-                    <delay>3h</delay>
+                    <delay>10m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -1147,7 +1193,14 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>3h</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -1269,6 +1322,8 @@
                         <step>
                             <type>1</type>
                             <params>0.01</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
                         </step>
                     </preprocessing>
                     <jmx_endpoint/>
@@ -1298,7 +1353,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.1.5.0</snmp_oid>
                     <key>sbr01.system.minCondCnt</key>
-                    <delay>3h</delay>
+                    <delay>10m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -1329,7 +1384,14 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>3h</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -1357,7 +1419,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.1.6.0</snmp_oid>
                     <key>sbr01.system.rotTime</key>
-                    <delay>3h</delay>
+                    <delay>10m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -1388,7 +1450,14 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>3h</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -1416,7 +1485,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.1.3.0</snmp_oid>
                     <key>sbr01.system.setTemp</key>
-                    <delay>3h</delay>
+                    <delay>10m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -1447,7 +1516,14 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>3h</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -1534,7 +1610,7 @@
                     <snmp_community>public</snmp_community>
                     <snmp_oid>1.3.6.1.4.1.47777.1.1.1.7.0</snmp_oid>
                     <key>sbr01.system.timeError</key>
-                    <delay>3h</delay>
+                    <delay>10m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
                     <status>0</status>
@@ -1565,7 +1641,14 @@
                     </applications>
                     <valuemap/>
                     <logtimefmt/>
-                    <preprocessing/>
+                    <preprocessing>
+                        <step>
+                            <type>20</type>
+                            <params>3h</params>
+                            <error_handler>0</error_handler>
+                            <error_handler_params/>
+                        </step>
+                    </preprocessing>
                     <jmx_endpoint/>
                     <timeout>3s</timeout>
                     <url/>
@@ -1703,15 +1786,35 @@
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
             <macros/>
             <templates/>
             <screens/>
+            <tags/>
         </template>
     </templates>
     <triggers>
+        <trigger>
+            <expression>{Template SBR01:sbr01.conditioners.conditioner1.state.last()}=3 and {Template SBR01:sbr01.conditioners.conditioner2.state.last()}=3 and {Template SBR01:sbr01.conditioners.conditioner3.state.last()}=3</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>All the air conditioning's stopped</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
         <trigger>
             <expression>{Template SBR01:sbr01.conditioners.conditioner1.autoOn.diff()}&lt;&gt;0</expression>
             <recovery_mode>0</recovery_mode>
@@ -1754,6 +1857,70 @@
             <url/>
             <status>1</status>
             <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template SBR01:sbr01.conditioners.conditioner1.error.last()}&lt;&gt;0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Error on conditioner 1</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template SBR01:sbr01.conditioners.conditioner2.error.last()}&lt;&gt;0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Error on conditioner 2</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template SBR01:sbr01.conditioners.conditioner3.error.last()}&lt;&gt;0</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>Error on conditioner 3</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+        </trigger>
+        <trigger>
+            <expression>{Template SBR01:sbr01.system.tempRoom.nodata(3m)}=1</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>No data on {HOST.NAME}</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
             <description/>
             <type>0</type>
             <manual_close>0</manual_close>

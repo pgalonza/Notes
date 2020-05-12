@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>4.0</version>
-    <date>2018-12-29T13:58:31Z</date>
+    <version>4.2</version>
+    <date>2020-05-12T10:46:02Z</date>
     <groups>
         <group>
             <name>Templates/UPS</name>
@@ -984,7 +984,7 @@
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.6.100.1.4.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBatteryBackupTime.{#HWUPSDEVICEID}]</key>
-                            <delay>1m</delay>
+                            <delay>10s</delay>
                             <history>30d</history>
                             <trends>365d</trends>
                             <status>0</status>
@@ -1015,7 +1015,14 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing/>
+                            <preprocessing>
+                                <step>
+                                    <type>20</type>
+                                    <params>5m</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
+                                </step>
+                            </preprocessing>
                             <jmx_endpoint/>
                             <timeout>3s</timeout>
                             <url/>
@@ -1044,7 +1051,7 @@
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.6.100.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsBatteryCapacityLeft.{#HWUPSDEVICEID}]</key>
-                            <delay>1m</delay>
+                            <delay>10s</delay>
                             <history>30d</history>
                             <trends>365d</trends>
                             <status>0</status>
@@ -1075,7 +1082,14 @@
                             </applications>
                             <valuemap/>
                             <logtimefmt/>
-                            <preprocessing/>
+                            <preprocessing>
+                                <step>
+                                    <type>20</type>
+                                    <params>5m</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
+                                </step>
+                            </preprocessing>
                             <jmx_endpoint/>
                             <timeout>3s</timeout>
                             <url/>
@@ -1139,6 +1153,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -1266,6 +1282,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -1331,6 +1349,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -1522,6 +1542,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.01</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -1587,6 +1609,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -1652,6 +1676,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -1717,6 +1743,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -2677,6 +2705,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -3027,7 +3057,7 @@
                             <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
                             <snmp_oid>1.3.6.1.4.1.2011.6.174.1.2.101.1.3.{#HWUPSDEVICEID}</snmp_oid>
                             <key>huawei-ups[hwUpsDeviceBatteryState.{#HWUPSDEVICEID}]</key>
-                            <delay>30s</delay>
+                            <delay>10s</delay>
                             <history>30d</history>
                             <trends>365d</trends>
                             <status>0</status>
@@ -3066,7 +3096,14 @@
                                 <name>HUAWEI-UPS-MIB::hwUpsDeviceBatteryState</name>
                             </valuemap>
                             <logtimefmt/>
-                            <preprocessing/>
+                            <preprocessing>
+                                <step>
+                                    <type>20</type>
+                                    <params>5m</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
+                                </step>
+                            </preprocessing>
                             <jmx_endpoint/>
                             <timeout>3s</timeout>
                             <url/>
@@ -3750,6 +3787,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -3875,6 +3914,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.01</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4002,6 +4043,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4067,6 +4110,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4132,6 +4177,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4197,6 +4244,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4262,6 +4311,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4327,6 +4378,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4392,6 +4445,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4457,6 +4512,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4522,6 +4579,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4587,6 +4646,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4652,6 +4713,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4717,6 +4780,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4782,6 +4847,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.01</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4847,6 +4914,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4912,6 +4981,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -4977,6 +5048,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -5104,6 +5177,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -5169,6 +5244,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -5234,6 +5311,8 @@
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -5329,6 +5408,9 @@
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
@@ -5344,6 +5426,7 @@
             </macros>
             <templates/>
             <screens/>
+            <tags/>
         </template>
     </templates>
     <value_maps>

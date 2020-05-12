@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>4.0</version>
-    <date>2018-12-29T13:57:18Z</date>
+    <version>4.2</version>
+    <date>2020-05-12T10:45:03Z</date>
     <groups>
         <group>
             <name>Templates/Server</name>
@@ -205,7 +205,7 @@
                     <privatekey/>
                     <port>{$SNMP_PORT}</port>
                     <description>Query the error information of exporting/importing all configuration of BMC , BIOS and RAID Controller.&#13;
-					 Query the error information of uploading configuration file to ***REMOVED*** host or download configuration file from ***REMOVED*** host.&#13;
+					 Query the error information of uploading configuration file to remote host or download configuration file from remote host.&#13;
 					 If error happened, configerrorinfo value shows the error information.&#13;
 					 If error don't happened, configerrorinfo value is null.</description>
                     <inventory_link>0</inventory_link>
@@ -1093,7 +1093,7 @@ Default value is huawei.</description>
                     <delay>5m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
-                    <status>0</status>
+                    <status>1</status>
                     <value_type>3</value_type>
                     <allowed_hosts/>
                     <units/>
@@ -1275,7 +1275,7 @@ Default value is huawei.</description>
                     <delay>5m</delay>
                     <history>30d</history>
                     <trends>365d</trends>
-                    <status>0</status>
+                    <status>1</status>
                     <value_type>0</value_type>
                     <allowed_hosts/>
                     <units>kWh</units>
@@ -3776,6 +3776,9 @@ Default value is turnon(3).</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Eth</name>
@@ -4566,6 +4569,9 @@ Default value is turnon(3).</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Fan</name>
@@ -5034,6 +5040,9 @@ Default value is turnon(3).</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Hard disk</name>
@@ -6853,6 +6862,9 @@ Default value is turnon(3).</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Memory</name>
@@ -7808,6 +7820,9 @@ Default value is turnon(3).</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>PCI</name>
@@ -8409,6 +8424,9 @@ Default value is turnon(3).</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Power supply</name>
@@ -9304,6 +9322,9 @@ The unit is watt.</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Raid controller</name>
@@ -11015,6 +11036,9 @@ The unit is watt.</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Syslog</name>
@@ -11386,6 +11410,9 @@ The unit is watt.</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
                 <discovery_rule>
                     <name>Temperature</name>
@@ -11460,6 +11487,8 @@ The unit is watt.</description>
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -11525,6 +11554,8 @@ The unit is watt.</description>
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -11590,6 +11621,8 @@ The unit is watt.</description>
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -11656,6 +11689,8 @@ The unit is watt.</description>
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -11721,6 +11756,8 @@ The unit is watt.</description>
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -11786,6 +11823,8 @@ The unit is watt.</description>
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -11851,6 +11890,8 @@ The unit is watt.</description>
                                 <step>
                                     <type>1</type>
                                     <params>0.1</params>
+                                    <error_handler>0</error_handler>
+                                    <error_handler_params/>
                                 </step>
                             </preprocessing>
                             <jmx_endpoint/>
@@ -11878,10 +11919,10 @@ The unit is watt.</description>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Huawei Server iBMC Template:huawei-server[temperatureReading.{#SNMPVALUE}].last()}&gt;=60</expression>
+                            <expression>{Huawei Server iBMC Template:huawei-server[temperatureReading.{#SNMPVALUE}].last()}&gt;=75</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>{ITEM.NAME} is too high</name>
+                            <name>[{#DEVICENAME}] is too high</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
@@ -11947,13 +11988,16 @@ The unit is watt.</description>
                     <ssl_key_password/>
                     <verify_peer>0</verify_peer>
                     <verify_host>0</verify_host>
+                    <lld_macro_paths/>
+                    <preprocessing/>
+                    <master_item/>
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
             <macros>
                 <macro>
                     <macro>{$SNMP_COMMUNITY}</macro>
-                    <value>Server_public</value>
+                    <value>Server_public!1</value>
                 </macro>
                 <macro>
                     <macro>{$SNMP_PORT}</macro>
@@ -11962,6 +12006,7 @@ The unit is watt.</description>
             </macros>
             <templates/>
             <screens/>
+            <tags/>
         </template>
     </templates>
     <triggers>
