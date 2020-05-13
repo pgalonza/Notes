@@ -239,7 +239,7 @@ echo -n "actual_password_here" | sha1sum | tr [:lower:] [:upper:]
 
 Take sum like shadow
 ```
-python -c 'import crypt; print crypt.crypt("actual_password_here", "$6$random_salt$")'
+python3 -c "import crypt; print(crypt.crypt('actual_password_here', '\$6\$random_salt\$'))"
 ```
 
 ## SSL/TLS
