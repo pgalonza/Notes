@@ -1,0 +1,29 @@
+---
+- hosts: ubuntu
+  #remote_user:
+  become: yes
+  #become_user: root
+  #become_method: sudo
+  tasks:
+  #- name: Remove user
+    #user:
+      #name:
+  - name: Create a ansible user
+    user:
+      name:
+      append: yes
+      password:
+      groups: wheel
+      group: administrator
+      shell: /bin/bash
+      state: present
+      system: no
+      create_home: yes
+      home: /home/
+    #become: yes
+  - name: Set authorized key taken from file
+    authorized_key:
+      user:
+      state: present
+      key: "{{ lookup('file', '/home/user/.ssh/id_rsa.pub') }}"
+...
