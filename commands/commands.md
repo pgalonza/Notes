@@ -793,6 +793,8 @@ vmkfstools --eagerzero /vmfs/volumes/DatastoreName/VMName/VMName.vmdk
 Check and repair vmdk
 ```
 vmkfstools --fix check file_name.vmdk
+vmkfstools -x check file_name.vmdk
+vmkfstools -x repair file_name.vmdk
 ```
 
 ## Amavisd
