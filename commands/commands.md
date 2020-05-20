@@ -141,7 +141,10 @@ echo $?
 Clear command history
 ```
 history -cw
+<<<<<<< HEAD
 rm -rf ~/.bash_history
+=======
+>>>>>>> de0172346fd515f20330f972d2cedc7781a6e4fa
 ```
 
 ## PERMISSION
