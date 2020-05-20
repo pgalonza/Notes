@@ -17,6 +17,11 @@ mysqlcheck --check-upgrade --all-databases --auto-repair
 mysql_upgrade --force
 ```
 
+Clear command history
+```
+rm $HOME/.mysql_history
+```
+
 ## PostgreSQL
 Login as a postgres user
 ```

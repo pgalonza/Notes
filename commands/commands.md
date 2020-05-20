@@ -138,6 +138,12 @@ Show last command execution result
 echo $?
 ```
 
+Clear command history
+```
+history -cw
+rm -rf ~/.bash_history
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
