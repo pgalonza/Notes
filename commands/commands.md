@@ -141,11 +141,11 @@ echo $?
 Clear command history
 ```
 history -cw
-rm -rf ~/.bash_history
+rm ~/.bash_history
 history -r
 ```
 
-Don't save commands of the current session 
+Don't save commands of the current session
 ```
 unset HISTFILE
 ```
