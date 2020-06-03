@@ -1,9 +1,4 @@
 # Git
-Author name and email
-```
-git config user.name "FirstName LastName"
-git config user.email "user@example.com"
-```
 
 Used words
 * feature — используется при добавлении новой функциональности уровня приложения
