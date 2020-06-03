@@ -1160,3 +1160,14 @@ Delete and paste
 ```
 ddP
 ```
+
+## Du
+Show size of directories
+```
+du --max-depth=1 -h directory_name
+```
+
+Show of files
+```
+du -ah directory_name
+```
