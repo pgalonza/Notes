@@ -66,3 +66,17 @@ Stash the changes
 ```
 git stash --save "massage_text"
 ```
+
+## Troubleshooting
+
+### Windows
+
+Filename too long
+```
+git config --global core.longpaths true
+```
+
+Illegal instruction
+```
+git config --global core.fscache true
+```
