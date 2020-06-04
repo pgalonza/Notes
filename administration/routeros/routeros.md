@@ -69,5 +69,20 @@ _/ip firewall raw_
 add action=drop chain=prerouting in-interface= log=yes log-prefix=raw_ src-address-list=block_list
 ```
 
+## VRRP
+Master
+```
+/interface vrrp add interface=ether1 name=vrrp password=vrrp_password priority=vrrp_priority vrid=vrrp_id
+/ip address add address=connection_ip comment=VRRP interface=ether1 network=
+/ip address add address=vrrp_ip interface=vrrp network=
+```
+
+Slave
+```
+/interface vrrp add interface=ether1 name=vrrp password=vrrp_password priority=vrrp_priority vrid=vrrp_id
+/ip address add address=connection_ip comment=VRRP interface=ether1 network=
+/ip address add address=vrrp_ip interface=vrrp network=
+```
+
 ## Serial port
 Speed = 115200
