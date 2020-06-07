@@ -148,6 +148,7 @@ def function_name(parameter_name,*, parameter_name)
 * **pyyaml** - the next generation YAML parser and emitter for Python.
 * **ncclient** - library for NETCONF clients.
 * **getpass** - portable password input.
+* **dis** - python bytecode disassembler.
 
 ## Functions and methods
 
