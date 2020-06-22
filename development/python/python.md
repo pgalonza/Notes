@@ -39,6 +39,9 @@ Type annotations
 ```
 variable_name: str
 ```
+```
+def function() -> str:
+```
 
 Integer syntax
 ```
@@ -160,9 +163,13 @@ def function_name(parameter_name,*, parameter_name)
 * **help([object])** - invoke the built-in help system.
 * **isinstance(object, classinfo)** - returns a Boolean stating whether the object is an instance or subclass of another object.
 * **globals()** - return a dictionary representing the current global symbol table.
+* **locals()** - return a dictionary representing the current local symbol table.
 * **id()** - return the “identity” of an object.
 * **del** - delete object.
 * **zip()** - join two tuples together.
+* **random.shuffle()** - randomizes the items of a list in place.
+* **nonlocal** - work with variables inside nested functions, where the variable should not belong to the inner function.
+* **global** - is a declaration which holds for the entire current code block. 
 
 ## LDAP
 
