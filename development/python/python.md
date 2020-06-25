@@ -169,8 +169,12 @@ def function_name(parameter_name,*, parameter_name)
 * **zip()** - join two tuples together.
 * **random.shuffle()** - randomizes the items of a list in place.
 * **random.choice()** - return a k sized list of elements chosen from the population with replacement.
+
+## Statements
+
 * **nonlocal** - work with variables inside nested functions, where the variable should not belong to the inner function.
 * **global** - is a declaration which holds for the entire current code block.
+* **assert** - assert statements are a convenient way to insert debugging assertions into a program.
 
 ## LDAP
 
