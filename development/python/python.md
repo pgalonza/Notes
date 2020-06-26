@@ -169,6 +169,10 @@ def function_name(parameter_name,*, parameter_name)
 * **zip()** - join two tuples together.
 * **random.shuffle()** - randomizes the items of a list in place.
 * **random.choice()** - return a k sized list of elements chosen from the population with replacement.
+* **hasattr()** - returns true if an object has the given named attribute and false if it does not.
+* **setattr()** - sets the value of the attribute of an object.
+* **getattr()** - returns the value of the named attribute of an object. If not found, it returns the default value provided to the function.
+* **delattr()** - deletes an attribute from the object.
 
 ## Statements
 
