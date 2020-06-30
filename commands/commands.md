@@ -1171,3 +1171,15 @@ Show of files
 ```
 du -ah directory_name
 ```
+
+## PowerShell
+
+Test TCP connection to a port
+```
+Test-NetConnection -ComputerName host_name -Port port_number -InformationLevel "Detailed"
+```
+
+Route diagnostic
+```
+Test-NetConnection -ComputerName host_name -DiagnoseRouting -InformationLevel "Detailed"
+```
