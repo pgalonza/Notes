@@ -152,6 +152,11 @@ def function_name(parameter_name,*, parameter_name)
 * **ncclient** - library for NETCONF clients.
 * **getpass** - portable password input.
 * **dis** - python bytecode disassembler.
+* **shutil** - provides many functions of high-level operations on files and collections of files.
+* **os** - provides a portable way of using operating system dependent functionality.
+* **os.path** - implements some useful functions on pathnames.
+* **platform** - probe the underlying platform’s hardware, operating system, and interpreter version information.
+* **lxml** - most feature-rich and easy-to-use library for processing XML and HTML in the Python language.
 
 ## Functions and methods
 
@@ -173,6 +178,13 @@ def function_name(parameter_name,*, parameter_name)
 * **setattr()** - sets the value of the attribute of an object.
 * **getattr()** - returns the value of the named attribute of an object. If not found, it returns the default value provided to the function.
 * **delattr()** - deletes an attribute from the object.
+* **platform.system()** - returns the system/OS name.
+* **os.environ[]** - mapping object representing the string environment.
+* **os.getenv()** - return the value of the environment variable varname if it exists, or value if it doesn’t.
+* **os.putenv()** - set the environment variable named varname to the string value.
+* **os.path.normpath()** - this string manipulation may change the meaning of a path that contains symbolic links. On Windows, it converts forward slashes to backward slashes.
+* **os.path.join()** - join one or more path components intelligently.
+* **os.path.abspath()** - return a normalized absolutized version of the pathname path.
 
 ## Statements
 
