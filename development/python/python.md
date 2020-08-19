@@ -171,7 +171,7 @@ def function_name(parameter_name,*, parameter_name)
 * **locals()** - return a dictionary representing the current local symbol table.
 * **id()** - return the “identity” of an object.
 * **del** - delete object.
-* **zip()** - join two tuples together.
+* **zip()** - make an iterator that aggregates elements from each of the iterables.
 * **random.shuffle()** - randomizes the items of a list in place.
 * **random.choice()** - return a k sized list of elements chosen from the population with replacement.
 * **hasattr()** - returns true if an object has the given named attribute and false if it does not.
@@ -185,6 +185,8 @@ def function_name(parameter_name,*, parameter_name)
 * **os.path.normpath()** - this string manipulation may change the meaning of a path that contains symbolic links. On Windows, it converts forward slashes to backward slashes.
 * **os.path.join()** - join one or more path components intelligently.
 * **os.path.abspath()** - return a normalized absolutized version of the pathname path.
+* **io.StringIO()** - an in-memory stream for text I/O.
+* **ord()** - returns an integer representing the Unicode character.
 
 ## Statements
 
@@ -313,7 +315,7 @@ with open('file_name', 'w', newline='', encoding='windows-1251) as csv_file:
   csv_writer.writerow({'column_name': value})
 ```
 
-## MySQL
+## MySQLparamiko.RSAKey.from_private_key(ssh_key_object, password_for_key)
 
 Import
 ```
@@ -448,6 +450,17 @@ Import
 import paramiko
 ```
 
+SSH key from string
+```
+ssh_key_object = io.StringIO(ssh_key)
+ssh_rsa_key = paramiko.RSAKey.from_private_key(ssh_key_object, password_for_key)
+```
+
+SSH key from file
+```
+ssh_rsa_key = paramiko.RSAKey.from_private_key_file(path_to_key, password_for_key)
+```
+
 Creating connection
 ```
 client = paramiko.SSHClient()
@@ -465,6 +478,8 @@ sftp.close()
 Executing command
 ```
 stdin, stdout, stderr = client.exec_command("command")
+stdout.read().decode()
+stderr.read().decode()
 ```
 
 ## YAML
@@ -609,3 +624,11 @@ device.send_command_expect()
 device.send_command_timing()
 device.send_command()
 ```
+
+## OS
+### Path
+
+* posixpath for UNIX-style paths
+* ntpath for Windows paths
+* macpath for old-style MacOS paths
+* os2emxpath for OS/2 EMX paths
