@@ -1172,14 +1172,21 @@ Show of files
 du -ah directory_name
 ```
 
-## PowerShell
+## Nohup
+Run command immune to hangups
+```
+nohup command
+```
 
-Test TCP connection to a port
+Run command in background
 ```
-Test-NetConnection -ComputerName host_name -Port port_number -InformationLevel "Detailed"
+nohup command &
 ```
 
-Route diagnostic
+## Sudo
+
+Run shell as another user
 ```
-Test-NetConnection -ComputerName host_name -DiagnoseRouting -InformationLevel "Detailed"
+sudo -iu user_name
+sudo -su user_name command
 ```
