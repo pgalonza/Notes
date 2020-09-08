@@ -14,7 +14,7 @@ _HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Outlook\Preferences_
 MaximumAttachmentSize DWORD
 ```
 
-# Sadow copies
+## Sadow copies
 Maximum of shadow copies
 _HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VSS\Settings_
 ```
