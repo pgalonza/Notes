@@ -157,6 +157,7 @@ def function_name(parameter_name,*, parameter_name)
 * **os.path** - implements some useful functions on pathnames.
 * **platform** - probe the underlying platform’s hardware, operating system, and interpreter version information.
 * **lxml** - most feature-rich and easy-to-use library for processing XML and HTML in the Python language.
+* **importlib** - implementation of import.
 
 ## Functions and methods
 
@@ -271,6 +272,12 @@ INFO    |20
 DEBUG   |10
 NOTSET  |0
 
+
+Print to stdout
+```
+stream=std.stdout
+```
+
 ## Command-line parser
 
 Import
@@ -315,7 +322,7 @@ with open('file_name', 'w', newline='', encoding='windows-1251) as csv_file:
   csv_writer.writerow({'column_name': value})
 ```
 
-## MySQLparamiko.RSAKey.from_private_key(ssh_key_object, password_for_key)
+## MySQL
 
 Import
 ```
