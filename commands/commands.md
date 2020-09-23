@@ -467,6 +467,12 @@ Restart network manager
 systemctl restart NetworkManager
 ```
 
+Masked/unmasked, Completely disabled service
+```
+sudo systemctl mask service_name
+sudo systemctl unmask service_name
+```
+
 ## Environment
 ```
 export var=
