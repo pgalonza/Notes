@@ -8,3 +8,4 @@
 * **Trailing Spaces** - highlight trailing spaces and delete them in a flash.
 * **DevOps Extension Pack** - adds language support for Go, HCL (HashiCorp Configuration Language), JSON, Jsonnet, Markdown, Ruby, XML and YAML. Integrates with tools like Chef, Docker, Git, GitHub, Gradle, Kubernetes, Logstash, NGINX, Puppet, and Terraform.
 * **GitLens** - supercharges the Git capabilities built into Visual Studio Code.
+* **Ident-rainbow** - colorizes the indentation in front of your text alternating four different colors on each step. 
