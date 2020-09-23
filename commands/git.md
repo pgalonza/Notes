@@ -67,6 +67,16 @@ Stash the changes
 git stash --save "massage_text"
 ```
 
+Clone and auto checkout
+```
+git clone --branch
+```
+
+Сlone a specific branch
+```
+git clone --branch --single-branch
+```
+
 ## Troubleshooting
 
 ### Windows
