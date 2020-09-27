@@ -25,6 +25,7 @@
 * **strings** - print the sequences of printable characters in files.
 * **obs-studio** - source software for video recording and live streaming.
 * **sshpass** - noninteractive ssh password provider.
+* **neofetch** - displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
 * [Data Tables](https://www.datatables.net)
 * [JetBrainsMono](https://www.jetbrains.com/lp/mono/#how-to-install)
 
@@ -41,7 +42,6 @@
 * **nload** - displays the current network usage.
 * **nethogs** - net top tool grouping bandwidth per process.
 * **tshark** - dump and analyze network traffic.
-* **neofetch** - displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
 
 ## SIP
 * **sipp** - SIP testing tool and traffic generator.
