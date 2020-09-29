@@ -635,7 +635,18 @@ device.send_command()
 ## OS
 ### Path
 
+Note
+
 * posixpath for UNIX-style paths
 * ntpath for Windows paths
 * macpath for old-style MacOS paths
 * os2emxpath for OS/2 EMX paths
+
+### Sep
+
+* **os.sep** -The character used by the operating system to separate pathname components.
+* **os.altsep** - An alternative character used by the operating system to separate pathname components.
+* **os.extsep** - The character which separates the base filename from the extension.
+* **os.pathsep** - The character conventionally used by the operating system to separate search path components.
+* **os.linesep** - The string used to separate (or, rather, terminate) lines on the current platform.
+* **linesep** - The string used to separate (or, rather, terminate) lines on the current platform.
