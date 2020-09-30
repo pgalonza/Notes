@@ -15,3 +15,9 @@ ASCII             |RS          |1E       |30       |
 ASCII             |LF CR       |0A 0D    |10 13    |\n\r
 ATASCII           |            |9B       |155      |
 EBCDIC            |NL          |15       |21       |\025
+
+## ANSI
+
+* \033[0-7m - effects
+* \033[30-37m - text colors
+* \033[40-47m - background colors
