@@ -164,7 +164,6 @@ def function_name(parameter_name,*, parameter_name)
 * **repr(object)** - return a string containing a printable representation of an object.
 * **enumerate(iterable, start=0)** - return an enumerate object.
 * **type(object)** - return the type of an object.
-* **super()** - return a proxy object that delegates method calls to a parent or sibling class of type.
 * **dir()** - without arguments, return the list of names in the current local scope. With an argument, attempt to return a list of valid attributes for that object.
 * **help([object])** - invoke the built-in help system.
 * **isinstance(object, classinfo)** - returns a Boolean stating whether the object is an instance or subclass of another object.
@@ -175,10 +174,6 @@ def function_name(parameter_name,*, parameter_name)
 * **zip()** - make an iterator that aggregates elements from each of the iterables.
 * **random.shuffle()** - randomizes the items of a list in place.
 * **random.choice()** - return a k sized list of elements chosen from the population with replacement.
-* **hasattr()** - returns true if an object has the given named attribute and false if it does not.
-* **setattr()** - sets the value of the attribute of an object.
-* **getattr()** - returns the value of the named attribute of an object. If not found, it returns the default value provided to the function.
-* **delattr()** - deletes an attribute from the object.
 * **platform.system()** - returns the system/OS name.
 * **os.environ[]** - mapping object representing the string environment.
 * **os.getenv()** - return the value of the environment variable varname if it exists, or value if it doesn’t.
@@ -573,6 +568,12 @@ HTTP get request
 response = requests.get(url, headers=headers, params=params)
 ```
 
+HTTP authorization
+```
+http_auth = requests.auth.HTTPBasicAuth('login', 'password')
+response = requests.get(url, auth=http_auth)
+```
+
 HTTP post request
 ```
 response = requests.post(url=url, headers=headers, params=params, data=json.dump(data))
@@ -601,6 +602,25 @@ response.headers
 Get encoding
 ```
 response.encoding
+```
+
+Upload file
+```
+file = open(path_to_file, 'rb')
+
+response = request.post(url=url, headers=headers, params=params, data=data, files=file)
+```
+
+Download file
+```
+response = request.post(url = url, stream = True)
+with open(path_to_file, 'wb') as file:
+    file.write(response.content)
+```
+```
+with open(path_to_file, 'wb') as file:
+    for chunk in file.iter_content(chunk_size=128):
+        file.write(chunk)
 ```
 
 ## Netmiko
@@ -650,3 +670,61 @@ Note
 * **os.pathsep** - The character conventionally used by the operating system to separate search path components.
 * **os.linesep** - The string used to separate (or, rather, terminate) lines on the current platform.
 * **linesep** - The string used to separate (or, rather, terminate) lines on the current platform.
+
+## Class
+
+* **hasattr()** - returns true if an object has the given named attribute and false if it does not.
+* **setattr()** - sets the value of the attribute of an object.
+* **getattr()** - returns the value of the named attribute of an object. If not found, it returns the default value provided to the function.
+* **delattr()** - deletes an attribute from the object.
+* **super()** - return a proxy object that delegates method calls to a parent or sibling class of type.
+* **__mro__** - This attribute is a tuple of classes that are considered when looking for base classes during method resolution.
+* **mro()** - This method can be overridden by a metaclass to customize the method resolution order for its instances.
+
+## Nexus
+
+Upload raw
+```
+url = 'http://nexus_address:8081/service/rest/v1/components'
+http_auth = requests.auth.HTTPBasicAuth('login', 'password')
+
+asset = open(path_to_file, 'rb')
+
+params = {
+  'repository': repository_name
+}
+
+payload = {
+  'raw.asset1': asset
+}
+
+data = {
+  'raw.directory': path_in_nexus,
+  'raw.asset1.filename': file_name
+}
+
+response = request.post(url = url, auth = http_auth, params = params, data = data, files = payload)
+```
+
+Download row
+```
+url = 'http://nexus_address:8081/service/rest/v1/search/assets'
+http_auth = requests.auth.HTTPBasicAuth('login', 'password')
+
+params = {
+  'repository': repository_name
+}
+
+response = request.get(url = url, auth = http_auth, params = params)
+asset_info = response['items']
+asset_url = asset_info['downloadUrl']
+
+asset_object = request.get(url = asset_url, auth = http_auth)
+
+with open(path_to_file, 'wb') as file:
+  file.write(asset_object.content)
+```
+
+## Tarfile
+```
+```
