@@ -26,7 +26,8 @@
 * **obs-studio** - source software for video recording and live streaming.
 * **sshpass** - noninteractive ssh password provider.
 * **neofetch** - displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
-* **xsel/xclip** - command line interface to the X11 clipboard
+* **xsel/xclip** - command line interface to the X11 clipboard.
+* **spool(oracle)** - stores query results in a file, or optionally sends the file to a printer.
 
 ## Network
 * **tcptrack** - monitor TCP connections on the network.
