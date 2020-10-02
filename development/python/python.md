@@ -62,24 +62,23 @@ Threading and queue
 ```
 Class CThread(threading.Thread):
 
-  def __init__(self, name, queue):
-    threading.Thread.__init__(self)
-    self.name = name
-    self.queue = queue
+    def __init__(self, name, queue):
+        threading.Thread.__init__(self)
+        self.name = name
+        self.queue = queue
 
-  def run(self):
-    self.queue.get()
-    print(self.name)
-    self.queue.task_done()
-
+    def run(self):
+        self.queue.get()
+        print(self.name)
+        self.queue.task_done()
 
 queue = Queue()
 
 for i in range(5):
-  name = f'Thread {i}'
-  thread = CThread(name, queue)
-  thread.daemon = True
-  thread.start()
+    name = f 'Thread {i}'
+    thread = CThread(name, queue)
+    thread.daemon = True
+    thread.start()
 
 queue.put('element')
 ```
@@ -91,7 +90,7 @@ a = [i+10 for i in range(10)]
 
 ```
 for index, value in range(10):
-  a[index] = value + 10
+    a[index] = value + 10
 ```
 
 Dictionaries comprehension
@@ -106,20 +105,44 @@ a = (i+10 for i in range(10))
 
 ```
 def func(number):
-  for i in range(number):
-    yield i + 10
+    for i in range(number):
+        yield i + 10
 
 a = func(10)
 print(a.__next__())
 print(next(a))
 
 for i in a:
-  print(i)
+    print(i)
 ```
 
 Explicitly Define parameters in function
 ```
 def function_name(parameter_name,*, parameter_name)
+```
+
+Recursive search with nesting
+```
+def target_search(path, deep, *, depth = 0):
+    target_dirs = list()
+
+    if depth >= deep:
+        return None
+
+    depth += 1
+
+    directories = os.listdir(path)
+
+    if 'target_name' in directories:
+        target_dirs.append(os.path.join(path, target_name))
+
+    if not target_dirs:
+        for directory in directories:
+        next_path = os.path.join(path, directory)
+    if os.path.isdir(next_path)
+        result = target_search(next_path, deep, depth = depth)
+    if result:
+        target_dirs.extend(result)
 ```
 
 ## Modules and packets
@@ -304,17 +327,17 @@ Read the file
 ```
 with open('file_name', 'r') as csv_file:
 csv_reader = csv.reader(csv_file)
-  for row in csv_reader:
-    row['column_name']
+    for row in csv_reader:
+        row['column_name']
 ```
 
 Write to a file
 ```
 with open('file_name', 'w', newline='', encoding='windows-1251) as csv_file:
-  fieldnames = ['column_name']
-  csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-  csv_writer.writeheader()
-  csv_writer.writerow({'column_name': value})
+    fieldnames = ['column_name']
+    csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+    csv_writer.writeheader()
+    csv_writer.writerow({'column_name': value})
 ```
 
 ## MySQL
@@ -427,22 +450,22 @@ import threading
 Creating a thread pool
 ```
 for i in range(5):
-  name = f'Thread {i}'
-  thread = CThread(name)
-  thread.daemon = True
-  thread.start()
+    name = f'Thread {i}'
+    thread = CThread(name)
+    thread.daemon = True
+    thread.start()
 ```
 
 Threading class
 ```
 Class CThread(threading.Thread):
 
-  def __init__(self, name):
-    threading.Thread.__init__(self)
-    self.name = name
+    def __init__(self, name):
+        threading.Thread.__init__(self)
+        self.name = name
 
-  def run(self):
-      print(self.name)
+    def run(self):
+        print(self.name)
 ```
 
 ## Paramiko
@@ -653,6 +676,12 @@ device.send_command()
 ```
 
 ## OS
+
+Import
+```
+import os
+```
+
 ### Path
 
 Note
@@ -683,6 +712,11 @@ Note
 
 ## Nexus
 
+Import
+```
+import requests
+```
+
 Upload raw
 ```
 url = 'http://nexus_address:8081/service/rest/v1/components'
@@ -691,19 +725,21 @@ http_auth = requests.auth.HTTPBasicAuth('login', 'password')
 asset = open(path_to_file, 'rb')
 
 params = {
-  'repository': repository_name
+    'repository': repository_name
 }
 
 payload = {
-  'raw.asset1': asset
+    'raw.asset1': asset
 }
 
 data = {
-  'raw.directory': path_in_nexus,
-  'raw.asset1.filename': file_name
+    'raw.directory': path_in_nexus,
+    'raw.asset1.filename': file_name
 }
 
 response = request.post(url = url, auth = http_auth, params = params, data = data, files = payload)
+
+asset.close()
 ```
 
 Download row
@@ -712,7 +748,7 @@ url = 'http://nexus_address:8081/service/rest/v1/search/assets'
 http_auth = requests.auth.HTTPBasicAuth('login', 'password')
 
 params = {
-  'repository': repository_name
+    'repository': repository_name
 }
 
 response = request.get(url = url, auth = http_auth, params = params)
@@ -722,9 +758,63 @@ asset_url = asset_info['downloadUrl']
 asset_object = request.get(url = asset_url, auth = http_auth)
 
 with open(path_to_file, 'wb') as file:
-  file.write(asset_object.content)
+    file.write(asset_object.content)
 ```
 
 ## Tarfile
+
+* tar = w, r
+* tar.gzip = w:gz, r:gz
+
+Import
 ```
+import tarfile
+```
+
+Create tar arhive
+```
+tar_file = tarfile.open(path_to_arhive. mode='w')
+tar_file.add(path_to_file, arcname=path_to_file_in_arhive)
+tar_file.close()
+```
+
+Extract all files
+```
+tar_file = tarfile.open(path_to_arhive, mode='r')
+tar_file.extractall(path=path_to_directory)
+tar_file.close()
+```
+
+## GitLab CI
+
+Import
+```
+import requests
+import json
+```
+
+Create pipeline
+```
+access_token = private_token
+
+project_id = project id in GitLab
+
+branch_name = branch name in project
+
+variables = [{
+    'key': variable_name,
+    'value': variable_value,
+}]
+
+headers = {'PRIVATE-TOKEN': access_token, 'Content-Type': 'application/json'}
+
+data = {'ref': branch_name, 'variables': variables}
+
+url = f'https://gitlab_domain_name/api/v4/projects/{project_id}/pipeline'
+
+response = requests.post(url=url, headers=headers, data=json.dumps(data), verify=False)
+
+pipeline_info = response.json()
+
+print(f'Pipeline running with parameters:\nURL: {pipeline_info["web_url"]}\nREF: {pipeline_info["ref"]}\nUSER: {pipeline_info["user"]["name"]}')
 ```
