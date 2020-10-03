@@ -600,6 +600,16 @@ Task manager
 Shift + ESC
 ```
 
+Chrome Flag
+```
+browser://flags/
+```
+
+GPU information
+```
+browser://gpu/
+```
+
 ## Ansible
 Start as another user
 ```
