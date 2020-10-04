@@ -853,40 +853,20 @@ puttygen keyname -o keyname.ppk
 ```
 
 ## SSH
+
 Executing a command on a remote host
 ```
 ssh user_name@remote_server "comamnd"
 ```
 
-SOCKS-proxy
+Copy directory
 ```
-ssh -D 0.0.0.0:port_number user_name@remote_server
-```
-
-Port forwarding
-```
-ssh -L 0.0.0.0:port_number:127.0.0.1:port_number user_name@remote_server
+tar -cvj /datafolder | ssh user_name@remote_server "tar -xj -C /datafolder"
 ```
 
-Reverse SOCKS-proxy
+Wireshark
 ```
-ssh -v -R 0.0.0.0:port_number X.X.X.X user_name@remote_server
-```
-
-Reverse ssh tunnel
-```
-ssh -R 0.0.0.0:port_number:127.0.0.1:port_number X.X.X.X user_name@remote_server
-```
-
-Jumping through the remote hosts
-```
-ssh -J host1,host2,host3 user_name@remote_server
-```
-
-Dual ssh tunnel
-```
-ssh -L port_number:127.0.0.1:port_number user_name@remote_server
-ssh -R port_number:127.0.0.1:port_number user_name@remote_server
+ssh user_name@remote_server 'tcpdump -c 1000 -nn -w - not port 22' | wireshark -k –i
 ```
 
 Do not execute a remote command
@@ -909,9 +889,73 @@ Editing a file via scp
 vim scp://user_name@remote_server //path_to_file
 ```
 
+Run remote GUI-application
+```
+ssh -X remote_server program_name
+```
+
 Mount local directory to remote host
 ```
 sshfs user_name@remote_serve:/remote_directory /local_directory
+```
+
+### SOCKS-proxy
+
+local host > ssh host > Network
+```
+ssh -D 0.0.0.0:port_number user_name@remote_server
+```
+
+### Port forwarding
+
+local host > ssh host
+```
+ssh -L 0.0.0.0:port_number:127.0.0.1:port_number user_name@remote_server
+```
+
+### Port forwarding to remote host
+
+local host > ssh host > remote host
+```
+ssh -L 0.0.0.0:port_number:X.X.X.X:port_number user_name@remote_server
+```
+
+### Reverse ssh tunnel
+
+ssh host > local host -> (local host > ssh host)
+```
+ssh -R 0.0.0.0:port_number:127.0.0.1:port_number user_name@remote_server
+```
+
+### Reverse ssh tunnel to remote host
+
+remote host < ssh host > local host -> (local host > ssh host > remote host)
+```
+ssh -R 0.0.0.0:port_number:X.X.X.X:port_number user_name@remote_server
+```
+
+### Reverse SOCKS-proxy
+
+Network < ssh host > local host -> (local host > ssh host > Network)
+```
+ssh -v -R 0.0.0.0:port_number user_name@remote_server
+```
+
+## Jumping through the remote hosts
+
+local host > host1 > ssh host
+```
+ssh -J host1,host2,host3 user_name@remote_server
+```
+
+## Dual ssh tunnel
+local host > ssh host
+remote host > ssh_host
+
+local_host > ssh_host > remote_host
+```
+ssh -L port_number:127.0.0.1:port_number user_name@remote_server
+ssh -R port_number:127.0.0.1:port_number user_name@remote_server
 ```
 
 ## Priority
