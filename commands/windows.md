@@ -33,10 +33,16 @@ Change code page
 chcp code_page
 ```
 
-## Problem steps recorder 
+## Problem steps recorder
 
 Run problem steps recorder
 ```
 win + R
 psr
+```
+
+## Qwinsta
+
+```
+qwinsta /server:host_name
 ```
