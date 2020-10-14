@@ -181,6 +181,7 @@ def target_search(path, deep, *, depth = 0):
 * **platform** - probe the underlying platform’s hardware, operating system, and interpreter version information.
 * **lxml** - most feature-rich and easy-to-use library for processing XML and HTML in the Python language.
 * **importlib** - implementation of import.
+* **pyinstaller** - bundles a Python application and all its dependencies into a single package.
 
 ## Functions and methods
 
@@ -206,6 +207,12 @@ def target_search(path, deep, *, depth = 0):
 * **os.path.abspath()** - return a normalized absolutized version of the pathname path.
 * **io.StringIO()** - an in-memory stream for text I/O.
 * **ord()** - returns an integer representing the Unicode character.
+* **chr()** - returns the character that represents the specified unicode.
+* **bytes()** - return a new "bytes" object, which is an immutable sequence of small integers in the range 0 <= x < 256, print as ASCII characters when displayed.
+* **bin()** - convert an integer number to a binary string prefixed with “0b”.
+* **hex()** - convert an integer number to a lowercase hexadecimal string prefixed with “0x”.
+* **str.encode()** - return an encoded version of the string as a bytes object. Default
+* **bytes.decode()** - return a string decoded from the given bytes. 
 
 ## Statements
 
