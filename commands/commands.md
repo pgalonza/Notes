@@ -1250,3 +1250,10 @@ Run shell as another user
 sudo -iu user_name
 sudo -su user_name command
 ```
+
+## QEMU
+
+LiveUSB
+```
+qemu-system-x86_64 -hda /dev/sdX
+```
