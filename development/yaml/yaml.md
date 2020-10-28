@@ -17,6 +17,13 @@ script:
         b
         c
 ```
+```
+script:  |
+    echo
+        a
+        b
+        c
+```
 
 Merge
 ```
