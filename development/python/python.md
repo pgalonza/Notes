@@ -145,6 +145,20 @@ def target_search(path, deep, *, depth = 0):
         target_dirs.extend(result)
 ```
 
+With
+```
+class ClassName:
+
+    def __enter__(self):
+        print()
+
+    def __exit__(self):
+        print()
+
+with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
+    print()
+```
+
 ## Modules and packets
 
 * **argparse** - parser for command-line options, arguments and sub-commands.
@@ -212,7 +226,7 @@ def target_search(path, deep, *, depth = 0):
 * **bin()** - convert an integer number to a binary string prefixed with “0b”.
 * **hex()** - convert an integer number to a lowercase hexadecimal string prefixed with “0x”.
 * **str.encode()** - return an encoded version of the string as a bytes object. Default
-* **bytes.decode()** - return a string decoded from the given bytes. 
+* **bytes.decode()** - return a string decoded from the given bytes.
 
 ## Statements
 
@@ -825,3 +839,34 @@ pipeline_info = response.json()
 
 print(f'Pipeline running with parameters:\nURL: {pipeline_info["web_url"]}\nREF: {pipeline_info["ref"]}\nUSER: {pipeline_info["user"]["name"]}')
 ```
+
+
+## Formatting
+
+Left aligned
+```
+'|{}:<30|'.format(variable)
+```
+
+Right aligned
+```
+'|{}:>30|'.format(variable)
+```
+
+Centered
+```
+'|{}:^30|'.format(variable)
+```
+
+Centered
+```
+'|{}:*^30|'.format(variable)
+```
+
+## File
+
+* io.SEEK_SET - start of the stream
+* io.SEEK_CUR - current stream position
+* io.SEEK_END - end of the stream
+* truncate(size=None)- resize the stream to the given size in bytes
+* flush()- flush the write buffers of the stream if applicable
