@@ -43,6 +43,7 @@ psr
 
 ## Qwinsta
 
+Show active sessions on remoute host
 ```
 qwinsta /server:host_name
 ```
