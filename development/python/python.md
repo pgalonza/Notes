@@ -154,6 +154,7 @@ class ClassName:
 
     def __exit__(self):
         print()
+        return True # disable crash when exception
 
 with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
     print()
