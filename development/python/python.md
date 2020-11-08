@@ -151,6 +151,7 @@ class ClassName:
 
     def __enter__(self):
         print()
+        return self
 
     def __exit__(self):
         print()
