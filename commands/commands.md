@@ -150,6 +150,12 @@ Don't save commands of the current session
 unset HISTFILE
 ```
 
+Clone large svn repository
+```
+git svn clone -r1:HEAD http://my-project.googlecode.com/svn/ --authors-file=users.txt --no-metadata -s my_project
+git svn fetch -r1:HEAD --authors-file=users.txt
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
@@ -1256,4 +1262,11 @@ sudo -su user_name command
 LiveUSB
 ```
 qemu-system-x86_64 -hda /dev/sdX
+```
+
+## Kubectl
+
+Network utils
+```
+kubectl run -it --rm --image amouat/network-utils test bash
 ```
