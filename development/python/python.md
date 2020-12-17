@@ -161,6 +161,18 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
     print()
 ```
 
+Exception
+```
+try:
+    result = 5 / 0
+except ZeroDivisionError as message:
+    print(message.args)
+else:
+    print()
+finally:
+    print()
+```
+
 ## Modules and packets
 
 * **argparse** - parser for command-line options, arguments and sub-commands.
@@ -528,6 +540,13 @@ Executing command
 stdin, stdout, stderr = client.exec_command("command")
 stdout.read().decode()
 stderr.read().decode()
+stdout.chennel.recv_exit_status()
+```
+
+Open key in UTF-8 BOM
+```
+with open(key_file, encoding='utf-8-sig') as key_object:
+    ssh_rsa_key = paramiko.RSAKey.from_private_key(key_object, password_for_key)
 ```
 
 ## YAML
