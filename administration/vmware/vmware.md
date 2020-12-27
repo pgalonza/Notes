@@ -1,9 +1,4 @@
 # VMWare ESXI
-Linux virtual machine with lost network
-* Set current time
-
-1c aplication server is freeze after hard reboot
-* re-register the virtual machine
 
 Move swap
 * Power off the virtual machine.
@@ -37,3 +32,10 @@ SCSI = VMware Pravirtual
 
 #### Network Adapter
 Adapter Type = VMXNET 3
+
+## Troubleshooting
+Linux virtual machine with lost network
+* Set current time
+
+1c aplication server is freeze after hard reboot
+* re-register the virtual machine

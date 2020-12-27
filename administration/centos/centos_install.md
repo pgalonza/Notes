@@ -53,7 +53,6 @@ sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
 systemctl reboot
 ```
 
-
 Disable IPV6
 ```
 echo net.ipv6.conf.all.disable_ipv6 = 1 >> /etc/sysctl.conf
@@ -75,27 +74,6 @@ systemctl enable --now cockpit.socket
 Zabbix repository
 ```
 rpm -ivh http://repo.zabbix.com/zabbix/4.2/rhel/7/x86_64/zabbix-release-4.2-1.el7.noarch.rpm
-```
-
-Zabbix user for mysql check
-```
-GRANT USAGE ON *.* TO 'zabbix'@'%' IDENTIFIED BY 'superpassword';
-```
-
-Make zabbix agent directory
-```
-mkdir /var/lib/zabbix
-```
-
-## Zabbix database
-_/etc/sysctl.conf_
-```
-echo vm.swappiness = 10 >> /etc/sysctl.conf
-```
-
-_/etc/fstab_
-```
-defaults,noatime,nosuid,noexec,nodev 0 0
 ```
 
 ## MariaDB

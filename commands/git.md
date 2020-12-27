@@ -1,5 +1,24 @@
 # Git
 
+Edit _.gitconfig_
+```
+git config --global --edit
+git config --global user.name
+git config --global user.email
+```
+
+Stash the changes
+```
+git stash
+git stash apply
+```
+
+Clone large svn repository
+```
+git svn clone -r1:HEAD http://my-project.googlecode.com/svn/ --authors-file=users.txt --no-metadata -s my_project
+git svn fetch -r1:HEAD --authors-file=users.txt
+```
+
 Interactively choose hunks of patch between the index and the work tree and add them to the index.
 ```
 git add --patch
@@ -75,18 +94,4 @@ git clone --branch
 Сlone a specific branch
 ```
 git clone --branch --single-branch
-```
-
-## Troubleshooting
-
-### Windows
-
-Filename too long
-```
-git config --global core.longpaths true
-```
-
-Illegal instruction
-```
-git config --global core.fscache true
 ```

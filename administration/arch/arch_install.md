@@ -14,6 +14,8 @@ fdisk -l
 Для UEFI создаем раздел 100M вне LVM в vfat
 ```
 cfdisk /dev/sdX
+```
+```
 mkfs.fat -F32 /dev/sda1
 ```
 

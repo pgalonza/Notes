@@ -1,4 +1,5 @@
 # VirtualBox
+## Troubleshooting
 Fix the problems
 ```
 /sbin/vboxconfig

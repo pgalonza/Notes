@@ -1,6 +1,6 @@
 # GitLab CI
 
-## Problems
+## Troubleshooting
 
 Skipping cache extraction due to empty cache
 _config.toml_

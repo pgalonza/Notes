@@ -1,6 +1,6 @@
 # Minikube
 
-## Problems
+## Troubleshooting
 
 TARGETS <unknown>/N%
 ```

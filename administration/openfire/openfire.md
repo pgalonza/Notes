@@ -35,7 +35,7 @@ port: 5222
 hostname: jabber.contora.local.
 ```
 
-## Problems
+## Troubleshooting
 UTF-8 encoded messages are saved wrong
 _openfire.xml_
 ```

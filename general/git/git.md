@@ -50,3 +50,17 @@ Remove the files and folders
 ```
 bfg --delete-folders .git --delete-files .git  --no-blob-protection  my-repo.git
 ```
+
+## Troubleshooting
+
+### Windows
+
+Filename too long
+```
+git config --global core.longpaths true
+```
+
+Illegal instruction
+```
+git config --global core.fscache true
+```

@@ -85,7 +85,7 @@ parted
 
 Copy the boot partition
 ```
-dd if=/dev/sda1 of=/dev/sdb1
+dd if=/dev/sdX1 of=/dev/sdX1
 ```
 
 Create the volume

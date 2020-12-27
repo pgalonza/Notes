@@ -72,7 +72,7 @@ Createcertificate storage
 chown squid:squid /var/lib/ssl_db
 ```
 
-# Problems
+# Troubleshooting
 ## FATAL: Ipc::Mem::Segment::create failed to shm_open(/squid-cf__metadata.shm): (17) File exists
 ```
 chown squid:squid /dev/shm/*

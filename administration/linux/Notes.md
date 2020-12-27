@@ -1,4 +1,8 @@
-# Tools, Programs and Libraries
+# Notes
+
+* **#!** - shebang indicate an interpreter for execution under UNIX / Linux operating systems.
+
+## Tools, Programs
 
 * **vim** - a programmers text editor.
 * **htop** - interactive process viewer.
@@ -19,7 +23,6 @@
 * **MAKEPASSWD** - generate and/or encrypt passwords.
 * **aspell** - interactive spell checker
 * **hunspell** - spell checker, stemmer and morphological analyzer.
-* **#!** - shebang indicate an interpreter for execution under UNIX / Linux operating systems.
 * **screenfetch** - fetches system/theme information in. terminal for Linux desktop screenshots.
 * **nproc** - print the number of processing units available.
 * **strings** - print the sequences of printable characters in files.
@@ -28,6 +31,11 @@
 * **neofetch** - displays information about your operating system, software and hardware in an aesthetic and visually pleasing way.
 * **xsel/xclip** - command line interface to the X11 clipboard.
 * **spool(oracle)** - stores query results in a file, or optionally sends the file to a printer.
+* **jq** - command-line JSON processor.
+
+## Recovery
+* **testdisk** - recovery software.
+* **photorec** - recovery software.
 
 ## Network
 * **tcptrack** - monitor TCP connections on the network.

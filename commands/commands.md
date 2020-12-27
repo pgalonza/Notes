@@ -33,11 +33,6 @@ Run the command at the specified time
 echo "ls -l" | at midnight
 ```
 
-Executing the previous command
-```
-sudo !!
-```
-
 Сommand replay
 ```
 while true
@@ -76,11 +71,6 @@ Print the locate of binary
 type -a command
 whereis command
 which command
-```
-
-Write command results to file with privileges
-```
-echo 1 | sudo tee -a privileged_file > /dev/null
 ```
 
 Executing command for each row
@@ -123,11 +113,6 @@ Terminal reinitialization
 reset
 ```
 
-Process tree
-```
-pstree
-```
-
 Determine file type
 ```
 file file_name
@@ -150,11 +135,46 @@ Don't save commands of the current session
 unset HISTFILE
 ```
 
-Clone large svn repository
+Create a new UUID value
 ```
-git svn clone -r1:HEAD http://my-project.googlecode.com/svn/ --authors-file=users.txt --no-metadata -s my_project
-git svn fetch -r1:HEAD --authors-file=users.txt
+uuidgen
 ```
+
+Cd rom access
+```
+chmod u+s /usr/bin/wodim
+```
+
+Show the status of modules in the Linux Kernel
+```
+lsmod
+```
+
+Display file or file system status
+```
+stat
+```
+
+Compare files
+```
+comm
+```
+
+Merge files
+```
+paste
+```
+
+Read from standard input and write to standard output and files
+```
+tee
+```
+
+Rename file
+```
+mv /tmp/working-dir/readme.md{,.backup}
+```
+
 
 ## PERMISSION
 ```
@@ -339,6 +359,7 @@ Show the number of open files on your system
 ```
 lsof | wc -l
 lsof | grep 29384
+lsof /home
 ```
 
 Show limits of process start by user
@@ -435,19 +456,6 @@ mutt -f
 Send mail
 ```
 (echo  "Subject: test1"; echo "test2";)|sendmail -f sender@domain.com recipient@domain.com
-```
-
-## PS
-Sort by RAM
-```
-ps aux | sort -nk 4
-ps aux —sort=%mem | grep -v 'root' | head -n 35
-```
-
-Sort by CPU
-```
-ps aux | sort -nk 3
-ps aux —sort=%cpu | grep -v 'root' | head -n 35
 ```
 
 ## RAM, SWAP
@@ -687,7 +695,7 @@ fio --name=randread --ioengine=libaio --iodepth=16 --rw=randread --bs=4k --direc
 fio --name=randwrite --ioengine=libaio --iodepth=1 --rw=randwrite --bs=4k --direct=0 --size=512M --numjobs=4 --runtime=240 --group_reporting
 ```
 
-* Read Write
+* Read & Write
 ```
 fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75
 ```
@@ -964,18 +972,6 @@ ssh -L port_number:127.0.0.1:port_number user_name@remote_server
 ssh -R port_number:127.0.0.1:port_number user_name@remote_server
 ```
 
-## Priority
-IO priority
-```
-ionice -c3 coommand
-```
-
-Process priority
-```
-nice -n 15 coommand
-renice renice -n 15 -p pid
-```
-
 ## Udevadm
 Show in realtime
 ```
@@ -985,20 +981,6 @@ udevadm monitor
 Get attributes
 ```
 udevadm info /dev/sdb1
-```
-
-## Git
-Edit _.gitconfig_
-```
-git config --global --edit
-git config --global user.name
-git config --global user.email
-```
-
-Stash the changes
-```
-git stash
-git stash apply
 ```
 
 ## Chattr
@@ -1123,33 +1105,6 @@ Show all symbols
 cat -A file_name
 ```
 
-## Dd
-Cd rom access
-```
-chmod u+s /usr/bin/wodim
-```
-
-Burn the image
-```
-sudo dd oflag=direct status=progress  if=image.iso of=/dev/sd* bs=1M; sync
-```
-
-dd with status
-```
-pv -tpreb /dev/sdb | dd of=~/sdb.img bs=1M
-```
-
-Make emty files with size
-```
-dd if=/dev/zero of=output.dat  bs=24M  count=1
-dd if=/dev/zero of=output.dat  bs=1M  count=24
-```
-
-Copy cd-rom
-```
-dd if=/dev/cdrom of=/opt/cd.iso bs=1M
-```
-
 ## Systemd-analyze
 Show load time
 ```
@@ -1238,6 +1193,11 @@ Show of files
 du -ah directory_name
 ```
 
+Show directory size
+```
+du -sh directory_name
+```
+
 ## Nohup
 Run command immune to hangups
 ```
@@ -1257,6 +1217,16 @@ sudo -iu user_name
 sudo -su user_name command
 ```
 
+Executing the previous command
+```
+sudo !!
+```
+
+Write command results to file with privileges
+```
+echo 1 | sudo tee -a privileged_file > /dev/null
+```
+
 ## QEMU
 
 LiveUSB
@@ -1269,4 +1239,43 @@ qemu-system-x86_64 -hda /dev/sdX
 Network utils
 ```
 kubectl run -it --rm --image amouat/network-utils test bash
+```
+
+## Grub
+
+Generate configyration file
+```
+grub-mkconfig -o /boot/grub2/grub.cfg
+```
+
+## Lsof
+
+Show a list of processes that have opene files
+```
+lsof /home
+```
+
+Show a list of user processes
+```
+lsof -u <user_name>
+```
+
+Show open files in directory
+```
+lsof +D <path_to_directory>
+```
+
+Show open files of process
+```
+lsof -p <pid>
+```
+
+Show openfiles of command
+```
+lsof -c <command>
+```
+
+Show what process use port
+```
+lsof -i :<port_number>
 ```

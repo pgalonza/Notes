@@ -41,7 +41,7 @@ innodb_file_format=Barracuda
 SET GLOBAL innodb_file_format=BARRACUDA
 ```
 
-## Problems
+## Troubleshooting
 How to fix error “1812 Tablespace is missing for table XXXX”
 1. Backup all .ibd and .frm files.
 2. Create the database and tables structure.
