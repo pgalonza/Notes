@@ -210,6 +210,10 @@ finally:
 * **lxml** - most feature-rich and easy-to-use library for processing XML and HTML in the Python language.
 * **importlib** - implementation of import.
 * **pyinstaller** - bundles a Python application and all its dependencies into a single package.
+* **posixpath** -  for UNIX-style paths like os.path. 
+* **pylint** - static code analysis tool, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
+* **flake8** - tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
+* **yamllint** - a linter for YAML files.
 
 ## Functions and methods
 
