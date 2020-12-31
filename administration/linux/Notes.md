@@ -32,6 +32,7 @@
 * **xsel/xclip** - command line interface to the X11 clipboard.
 * **spool(oracle)** - stores query results in a file, or optionally sends the file to a printer.
 * **jq** - command-line JSON processor.
+* **rkhunter** - RootKit Hunter
 
 ## Recovery
 * **testdisk** - recovery software.
