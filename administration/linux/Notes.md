@@ -32,7 +32,16 @@
 * **xsel/xclip** - command line interface to the X11 clipboard.
 * **spool(oracle)** - stores query results in a file, or optionally sends the file to a printer.
 * **jq** - command-line JSON processor.
-* **rkhunter** - RootKit Hunter
+* **rkhunter** - RootKit Hunter.
+
+
+## Environment
+
+* **eval** - evaluate the specified commands.
+* **env** - run a program in a modified environment.
+* **setenv** - change or add an environment variable.
+* **export** - set the export attribute for variables.
+* **set** - display and change shell variables.
 
 ## Recovery
 * **testdisk** - recovery software.

@@ -10,6 +10,15 @@ Used words
 * chore — обычное обслуживание кода
 * This commit will ... (this commit will fix bugs)
 
+
+Removedd git tags
+```
+git tag -d $(git tag -l)
+git fetch
+git push origin --delete $(git tag -l)
+git tag -d $(git tag -l)
+```
+
 ## Create new repository
 Create the folder and initialization on server
 ```

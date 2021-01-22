@@ -83,39 +83,6 @@ for i in range(5):
 queue.put('element')
 ```
 
-List comprehension
-```
-a = [i+10 for i in range(10)]
-```
-
-```
-for index, value in range(10):
-    a[index] = value + 10
-```
-
-Dictionaries comprehension
-```
-a = [i:i+10 for i in range(10)]
-```
-
-Generators
-```
-a = (i+10 for i in range(10))
-```
-
-```
-def func(number):
-    for i in range(number):
-        yield i + 10
-
-a = func(10)
-print(a.__next__())
-print(next(a))
-
-for i in a:
-    print(i)
-```
-
 Explicitly Define parameters in function
 ```
 def function_name(parameter_name,*, parameter_name)
@@ -161,17 +128,6 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
     print()
 ```
 
-Exception
-```
-try:
-    result = 5 / 0
-except ZeroDivisionError as message:
-    print(message.args)
-else:
-    print()
-finally:
-    print()
-```
 
 ## Modules and packets
 
@@ -210,10 +166,11 @@ finally:
 * **lxml** - most feature-rich and easy-to-use library for processing XML and HTML in the Python language.
 * **importlib** - implementation of import.
 * **pyinstaller** - bundles a Python application and all its dependencies into a single package.
-* **posixpath** -  for UNIX-style paths like os.path. 
+* **posixpath** -  for UNIX-style paths like os.path.
 * **pylint** - static code analysis tool, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
 * **flake8** - tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
 * **yamllint** - a linter for YAML files.
+* **warnings** - part of the warnings subsystem.
 
 ## Functions and methods
 
@@ -245,6 +202,9 @@ finally:
 * **hex()** - convert an integer number to a lowercase hexadecimal string prefixed with “0x”.
 * **str.encode()** - return an encoded version of the string as a bytes object. Default
 * **bytes.decode()** - return a string decoded from the given bytes.
+* **map()** - function applies a given function to each item of an iterable (list, tuple etc.) and returns a list of the results.
+* **filter()** - method filters the given sequence with the help of a function that tests each element in the sequence to be true or not.
+
 
 ## Statements
 
@@ -552,6 +512,13 @@ Open key in UTF-8 BOM
 with open(key_file, encoding='utf-8-sig') as key_object:
     ssh_rsa_key = paramiko.RSAKey.from_private_key(key_object, password_for_key)
 ```
+
+Shell
+```
+client.exec_command("command_line", shell=True)
+client.exec_command(["command", 'args'], shell=False)
+```
+
 
 ## YAML
 
@@ -895,3 +862,139 @@ Centered
 * io.SEEK_END - end of the stream
 * truncate(size=None)- resize the stream to the given size in bytes
 * flush()- flush the write buffers of the stream if applicable
+
+## Exception
+
+Exception Handling
+```
+try:
+    result = 5 / 0
+except ZeroDivisionError as message:
+    print(message.args)
+else:
+    print()
+finally:
+    print()
+```
+
+Castom exception
+```
+class ExampleError(Exception):
+
+    def __init__(self, message, input_data=None):
+        self.message = message
+        self.input_data = input_data
+
+    def __str__(self):
+        return self.message
+```
+
+Raise an exception.
+```
+raise ExampleError('example error')
+```
+
+## Functional programming
+
+List comprehension
+```
+a = [i+10 for i in range(10)]
+```
+
+```
+for index, value in range(10):
+    a[index] = value + 10
+```
+
+Dictionaries comprehension
+```
+a = [i:i+10 for i in range(10)]
+```
+
+Generators
+```
+a = (i+10 for i in range(10))
+```
+
+```
+def func(number):
+    for i in range(number):
+        yield i + 10
+
+        return / raise StopIteration()
+
+a = func(10)
+print(a.__next__())
+print(next(a))
+
+for i in a:
+    print(i)
+```
+
+Iterators
+```
+class Example:
+    def __init__(self):
+        self.i = 0
+
+    def __iter__(self):
+        self.i = 0
+        return self
+
+    def __next__(self):
+        self.i += 1
+        return self.i
+
+        raise StopIteration()
+```
+
+lambda
+```
+lambda x: x + 1
+```
+
+Create function
+```
+class Multiplier:
+
+    def __init__(self, n):
+        self.n = n
+
+    def __call__(self, x):
+        return x * self.n
+
+object = Multiplier(n=2)
+object(x=2)
+```
+
+High order functions
+```
+def multiplier(y):
+    def multiply_column(x):
+        return y * x
+
+    return multiply
+```
+
+Decorators
+```
+def time_track(func):
+    started_at = time.time()
+
+    result = func(*args, **kwargs)
+
+    ended_at = time.time()
+    elapsed = round(ended_at - started_at, 4)
+    print(elapsed)
+    return result
+
+def some_function()
+    pass
+
+time_track(some_function)
+
+@time_track
+def some_function_v2()
+    pass
+
+```
