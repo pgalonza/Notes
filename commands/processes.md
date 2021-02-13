@@ -30,6 +30,12 @@ Kill all user processes
 killall -u user
 ```
 
+Process information pseudo-filesystem
+```
+/proc
+```
+
+
 ## Priority
 IO priority
 ```
@@ -57,4 +63,7 @@ Sort by CPU
 ```
 ps aux | sort -nk 3
 ps aux —sort=%cpu | grep -v 'root' | head -n 35
+
+Show processes
+ps -ef
 ```
