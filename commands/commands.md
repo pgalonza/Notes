@@ -1148,6 +1148,15 @@ Write command results to file with privileges
 echo 1 | sudo tee -a privileged_file > /dev/null
 ```
 
+## SU
+
+Run shell as another user
+```
+su - user_name
+su -l user_name
+sudo su - user_name
+```
+
 ## QEMU
 
 LiveUSB
