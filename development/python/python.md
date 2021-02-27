@@ -171,6 +171,10 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 * **flake8** - tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
 * **yamllint** - a linter for YAML files.
 * **warnings** - part of the warnings subsystem.
+* **collections** -  container datatypes
+* **datetime** - basic date and time types.
+* **locale** - work with locale, internationalization services.
+* **calendar** - work with calendar, general calendar-related functions.
 
 ## Functions and methods
 
@@ -204,6 +208,8 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 * **bytes.decode()** - return a string decoded from the given bytes.
 * **map()** - function applies a given function to each item of an iterable (list, tuple etc.) and returns a list of the results.
 * **filter()** - method filters the given sequence with the help of a function that tests each element in the sequence to be true or not.
+* **collections.defaultdict()** - dict subclass that calls a factory function to supply missing values.
+* **pickle** - python object serialization.
 
 
 ## Statements
@@ -997,4 +1003,14 @@ time_track(some_function)
 def some_function_v2()
     pass
 
+```
+
+## Date and time
+
+Next day with ru locale
+```
+current_date = datetime.datetime.now()
+next_date = current_date + datetime.timedelta(days=1)
+locale.setlocale(locale.LC_TIME, "ru_RU.utf8")
+next_date.strftime('%a %d-%B')
 ```
