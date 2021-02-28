@@ -21,3 +21,12 @@ EBCDIC            |NL          |15       |21       |\025
 * \033[0-7m - effects
 * \033[30-37m - text colors
 * \033[40-47m - background colors
+
+## VKontakte
+
+Get  user token
+* _https://vk.com/dev/permissions_
+
+```
+https://oauth.vk.com/authorize?client_id=<application_id>&scope=<permissions>&response_type=token
+```
