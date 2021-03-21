@@ -67,3 +67,8 @@ ps aux —sort=%cpu | grep -v 'root' | head -n 35
 Show processes
 ps -ef
 ```
+
+Show pids of process
+```
+ps -ef | grep -v grep | grep <process_name> | awk '{ print $2 }'
+```

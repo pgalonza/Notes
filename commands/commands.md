@@ -23,37 +23,9 @@ find -name *.c -type f | xargs grep open
 grep -R open --include="*.c".
 ```
 
-Execute the command in another directory and return
-```
-(cd /tmp && ls)
-```
-
-Run the command at the specified time
-```
-echo "ls -l" | at midnight
-```
-
-Сommand replay
-```
-while true
-do
-command
-done;
-```
-
-Automatic answer
-```
-yes/no | command
-```
-
 Share the directory http://$HOSTNAME:8000/
 ```
 python -m SimpleHTTPServer
-```
-
-Execute the command without history.
-```
-space command
 ```
 
 Print shared object dependencies
@@ -73,35 +45,10 @@ whereis command
 which command
 ```
 
-Executing command for each row
-```
-cat file_name.txt | while read in; do command_line "$in"; done
-```
-
-Sequential execution of commands
-```
-command_1; command_2; command_3
-```
-
-Parallel execution of commands
-```
-(command_1 &); (command_2 &)
-```
-
-Output one command as an argument to another
-```
-command_1 $(command_2)
-```
-
 Search by commands history
 ```
 Ctrl+R
 ```
-
-Usеing the argument of the last command
-```
-!$
-````
 
 Executing a long command
 ```
@@ -116,23 +63,6 @@ reset
 Determine file type
 ```
 file file_name
-```
-
-Show last command execution result
-```
-echo $?
-```
-
-Clear command history
-```
-history -cw
-rm ~/.bash_history
-history -r
-```
-
-Don't save commands of the current session
-```
-unset HISTFILE
 ```
 
 Create a new UUID value
@@ -165,16 +95,10 @@ Read from standard input and write to standard output and files
 tee
 ```
 
-Rename file
-```
-mv /tmp/working-dir/readme.md{,.backup}
-```
-
 Documnentation
 ```
 /usr/share/doc
 ```
-
 
 ## PERMISSION
 ```

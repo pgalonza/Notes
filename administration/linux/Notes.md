@@ -60,6 +60,7 @@
 * **nload** - displays the current network usage.
 * **nethogs** - net top tool grouping bandwidth per process.
 * **tshark** - dump and analyze network traffic.
+* **mtr** - a network diagnostic tool.
 
 ## SIP
 * **sipp** - SIP testing tool and traffic generator.
