@@ -84,3 +84,9 @@ Run the command at the specified time
 ```
 echo "ls -l" | at midnight
 ```
+
+Evaluate contents of file
+```
+source <file_name>
+. <file_name>
+```
