@@ -15,6 +15,11 @@ Hard disk partitions
 /dev/sda6 — swap
 ```
 
+Running some program in background
+```
+nohup <program_name> > <program_name>.out 2> <program_name>.err < /dev/null & echo -n "$!" > pid.file &
+```
+
 ## Linux printers
 
 Connect Linux to a shared printer on Windows!
