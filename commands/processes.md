@@ -35,6 +35,11 @@ Process information pseudo-filesystem
 /proc
 ```
 
+Show information about PID
+```
+top -p <PID>
+```
+
 
 ## Priority
 IO priority
