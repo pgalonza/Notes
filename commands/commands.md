@@ -469,22 +469,6 @@ GPU information
 browser://gpu/
 ```
 
-## Ansible
-Start as another user
-```
-ansible-playbook -i host_name, -e 'ansible_ssh_user=user ansible_python_interpreter=/usr/bin/python3' --ask-pass -b --ask-become-pass ansible_user.yaml
-```
-
-Test inventory
-```
-ansible -i hosts.yaml all --list-hosts
-```
-
-Ping the hosts
-```
-ansible all -m ping
-```
-
 ## Ffmpeg
 Video from RTSP
 ```
