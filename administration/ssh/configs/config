@@ -6,8 +6,8 @@ Protocol 2
 ServerAliveInterval 60
 ServerAliveCountMax 30
 
-Host
-HostName %h
-User
-port 22
-IdentityFile /run/media/
+Host <alias>
+  HostName <host_name>
+  User <user_name>
+  port 22
+  IdentityFile <path_to_key>
