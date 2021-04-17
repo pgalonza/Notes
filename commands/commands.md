@@ -100,6 +100,11 @@ Documnentation
 /usr/share/doc
 ```
 
+Load one core
+```
+yes > /dev/null &
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
