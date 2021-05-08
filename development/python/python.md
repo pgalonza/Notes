@@ -175,6 +175,8 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 * **datetime** - basic date and time types.
 * **locale** - work with locale, internationalization services.
 * **calendar** - work with calendar, general calendar-related functions.
+* **Pillow** - imaging Library.
+* **inspect** - inspect live objects.
 
 ## Functions and methods
 
@@ -210,6 +212,7 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 * **filter()** - method filters the given sequence with the help of a function that tests each element in the sequence to be true or not.
 * **collections.defaultdict()** - dict subclass that calls a factory function to supply missing values.
 * **pickle** - python object serialization.
+* **any** - return True if any element of the iterable is true. If the iterable is empty, return False.
 
 
 ## Statements
@@ -466,7 +469,26 @@ Threading class
 Class CThread(threading.Thread):
 
     def __init__(self, name):
-        threading.Thread.__init__(self)
+        super().__init__()
+        self.name = name
+
+    def run(self):
+        print(self.name)
+```
+
+## Multiprocessing
+
+Import
+```
+import multiprocessing
+```
+
+Multiprocessing class
+```
+Class CProcess(multiprocessing.Process):
+
+    def __init__(self, name):
+        super().__init__()
         self.name = name
 
     def run(self):
