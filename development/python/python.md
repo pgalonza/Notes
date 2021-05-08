@@ -560,6 +560,10 @@ Read yaml file
 with open('file_name') as file:
     data = yaml.load(file, Loader=yaml.FullLoader)
 ```
+```
+yaml.full_load(file)
+```
+
 
 ## Jinja2
 
