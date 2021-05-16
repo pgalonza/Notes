@@ -20,6 +20,11 @@ Verifies the integrity of the groups information.
 newgrp
 ```
 
+Change shell of user
+```
+chsh
+```
+
 
 ## User
 
