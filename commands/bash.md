@@ -5,6 +5,13 @@ EOF
 < dev/null
 ```
 
+Heredoc
+```
+cat << EOF
+  <text> $PWD
+EOF
+```
+
 PID of last process
 ```
 echo $!
