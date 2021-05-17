@@ -213,6 +213,7 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 * **collections.defaultdict()** - dict subclass that calls a factory function to supply missing values.
 * **pickle** - python object serialization.
 * **any** - return True if any element of the iterable is true. If the iterable is empty, return False.
+* **sys.getrefcount(object)** - return the reference count of the object.
 
 
 ## Statements
