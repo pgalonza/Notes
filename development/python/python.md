@@ -167,9 +167,6 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 * **importlib** - implementation of import.
 * **pyinstaller** - bundles a Python application and all its dependencies into a single package.
 * **posixpath** -  for UNIX-style paths like os.path.
-* **pylint** - static code analysis tool, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
-* **flake8** - tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
-* **yamllint** - a linter for YAML files.
 * **warnings** - part of the warnings subsystem.
 * **collections** -  container datatypes
 * **datetime** - basic date and time types.
@@ -177,6 +174,13 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 * **calendar** - work with calendar, general calendar-related functions.
 * **Pillow** - imaging Library.
 * **inspect** - inspect live objects.
+* **diagrams** - diagram as code.
+
+### Testing & Checking
+* **pylint** - static code analysis tool, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
+* **flake8** - tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
+* **yamllint** - a linter for YAML files.
+* **unittest** - unit testing framework.
 
 ## Functions and methods
 
