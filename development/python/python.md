@@ -128,6 +128,15 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
     print()
 ```
 
+Function attributes
+```
+def func():
+    func.x = 'x'
+    func.y = 'y'
+
+print(func.x)
+```
+
 
 ## Modules and packets
 
@@ -168,13 +177,14 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 * **pyinstaller** - bundles a Python application and all its dependencies into a single package.
 * **posixpath** -  for UNIX-style paths like os.path.
 * **warnings** - part of the warnings subsystem.
-* **collections** -  container datatypes
+* **collections** -  container datatypes.
 * **datetime** - basic date and time types.
 * **locale** - work with locale, internationalization services.
 * **calendar** - work with calendar, general calendar-related functions.
 * **Pillow** - imaging Library.
 * **inspect** - inspect live objects.
 * **diagrams** - diagram as code.
+* **sh** - full-fledged subprocess replacement.
 
 ### Testing & Checking
 * **pylint** - static code analysis tool, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
@@ -218,6 +228,10 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 * **pickle** - python object serialization.
 * **any** - return True if any element of the iterable is true. If the iterable is empty, return False.
 * **sys.getrefcount(object)** - return the reference count of the object.
+* **sys.getsizeof(object)** - return the size of an object in bytes.
+* **eval()** - function runs the python code.
+* **exec()** - method executes the dynamically created program.
+* **compile()** - method returns a Python code object from the source.
 
 
 ## Statements
@@ -759,6 +773,8 @@ Note
 * **super()** - return a proxy object that delegates method calls to a parent or sibling class of type.
 * **__mro__** - This attribute is a tuple of classes that are considered when looking for base classes during method resolution.
 * **mro()** - This method can be overridden by a metaclass to customize the method resolution order for its instances.
+* **__repr__()** - unction returns the object representation in string format.
+* **__str__()** - method returns the string representation of the object.
 
 ## Nexus
 
