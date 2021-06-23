@@ -6,7 +6,6 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-#PS1='[\u@\h \W]\$ '
 PS1="[\[\e[38;5;81m\]\u\[\e[m\]@\[\e[38;5;82m\]\h\[\e[m\] \W]\\$ "
 
 alias ssh_mikrotik="ssh name@host"
