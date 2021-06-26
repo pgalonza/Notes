@@ -105,6 +105,18 @@ Load one core
 yes > /dev/null &
 ```
 
+Clean file
+```
+truncate -s 0 <file_name>
+echo '' > <file_name>
+> <file_name>
+cat /dev/null > <file_name>
+true | tee <file_name>
+dd if=/dev/null of=<file_name>
+shred <file_name>
+shred -zu <file_name>
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo
@@ -857,6 +869,11 @@ du -ah directory_name
 Show directory size
 ```
 du -sh directory_name
+```
+
+Show hidden directorys
+```
+du -hs .[^.]*
 ```
 
 ## Nohup
