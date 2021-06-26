@@ -25,7 +25,10 @@ mv /tmp/working-dir/readme.md{,.backup}
 Don't save commands of the current session
 ```
 unset HISTFILE
+export HISTFILE=/dev/null
+export HISTSIZE=0
 set +o history
+kill -9 $$
 ```
 
 Clear command history
