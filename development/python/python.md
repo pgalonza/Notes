@@ -566,6 +566,13 @@ client.exec_command("command_line", shell=True)
 client.exec_command(["command", 'args'], shell=False)
 ```
 
+Run command as root
+```
+stdin, stdout, stderr = client..exec_command("sudo -i root -s")
+stdin.write('ls\n')
+stdin.flush()
+```
+
 
 ## YAML
 
