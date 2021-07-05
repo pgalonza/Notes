@@ -1068,3 +1068,49 @@ next_date = current_date + datetime.timedelta(days=1)
 locale.setlocale(locale.LC_TIME, "ru_RU.utf8")
 next_date.strftime('%a %d-%B')
 ```
+
+## WebLogic Server
+
+Import
+```
+import requests
+import json
+```
+
+HTTP Header
+```
+http_header = {
+    'Accept': 'application/json',
+    'User-Agent': '<agent_name>',
+    'X-Requested-By': '<agent_name>'
+}
+```
+
+HTTP authorization
+```
+auth = requests.ayth.HTTPBasicAuth(<user_name>, <user_password>)
+```
+
+Stop server
+```
+url = http:<server_name>:8001/management/weblogic/latest/domainRuntime/serverLifeCycleRuntimes/<server_name>/forceShutdown
+response = requests.post(url=url, headers=headers, auth=auth)
+```
+
+Start server
+```
+url = http:<server_name>:8001/management/weblogic/latest/domainRuntime/serverLifeCycleRuntimes/<server_name>/start
+response = requests.post(url=url, headers=headers, auth=auth)
+```
+
+Redeploy application
+```
+application_files = {
+    'model': (None, json.dumps(dict())),
+    'sourcePath': open(<path_to_application>, 'rb'),
+    'planPath': open(<path_to_xml>, 'rb')
+}
+
+url = http:<server_name>:8001/management/weblogic/latest/edit/appDeployments/<application_name>/redeploy
+response = requests.post(url=url, headers=headers, auth=auth, files=application_files)
+```
