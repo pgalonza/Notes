@@ -892,7 +892,8 @@ nohup command &
 Run shell as another user
 ```
 sudo -iu user_name
-sudo -su user_name command
+sudo su - user_name command
+sudo su user_name -s "/bin/bash"
 ```
 
 Executing the previous command
