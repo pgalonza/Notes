@@ -185,6 +185,7 @@ print(func.x)
 * **inspect** - inspect live objects.
 * **diagrams** - diagram as code.
 * **sh** - full-fledged subprocess replacement.
+* **selenium** - tools and libraries enabling web browser automation.
 
 ### Testing & Checking
 * **pylint** - static code analysis tool, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
@@ -1113,4 +1114,28 @@ application_files = {
 
 url = http:<server_name>:8001/management/weblogic/latest/edit/appDeployments/<application_name>/redeploy
 response = requests.post(url=url, headers=headers, auth=auth, files=application_files)
+```
+
+## Selenium
+
+Import
+```
+from selenium import webdriver
+```
+
+Set language
+```
+profile = webdriver.FirefoxProfile()
+profile.set_preference('intl.accept_languages', 'en-GB')
+driver = webdriver.Firefox(firefox_profile=profile)
+```
+
+Open URL, search by string and press "Sign in"
+```
+driver.get("http://www.google.com")
+elem = driver.find_element_by_name("q")
+elem.send_keys("Python")
+elem.submit()
+elem1 = driver.find_element_by_link_text('Sign in')
+elem1.click()
 ```
