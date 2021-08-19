@@ -11,6 +11,11 @@ cat << EOF
   <text> $PWD
 EOF
 ```
+```
+cat > file_name << EOF
+  <text> $PWD
+EOF
+```
 
 PID of last process
 ```
