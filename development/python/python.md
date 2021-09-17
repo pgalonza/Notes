@@ -138,7 +138,7 @@ print(func.x)
 ```
 
 
-## Modules and packets
+## Packages and modules
 
 * **argparse** - parser for command-line options, arguments and sub-commands.
 * **json** - JSON encoder and decoder.
@@ -186,6 +186,7 @@ print(func.x)
 * **diagrams** - diagram as code.
 * **sh** - full-fledged subprocess replacement.
 * **selenium** - tools and libraries enabling web browser automation.
+* **wgconfig** - parsing and writing WireGuard configuration file.
 
 ### Testing & Checking
 * **pylint** - static code analysis tool, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
@@ -1138,4 +1139,25 @@ elem.send_keys("Python")
 elem.submit()
 elem1 = driver.find_element_by_link_text('Sign in')
 elem1.click()
+```
+
+## WireGuard
+
+Generate keys
+```
+def generate_wireguard_keys():
+    """
+    Generate a WireGuard private, public key and preshared key
+    Requires that the 'wg' command is available on PATH
+    Returns (private_key, public_key, psk), both strings
+    https://techoverflow.net/2021/05/16/how-to-generate-wireguard-key-private-public-in-python-without-dependencies/
+    https://github.com/pbengert/wireguard-config-generator/blob/main/wireguard-config-generator.py
+    """
+    privkey = subprocess.check_output(
+        "wg genkey", shell=True).decode("utf-8").strip()
+    pubkey = subprocess.check_output(
+        f"echo '{privkey}' | wg pubkey", shell=True).decode("utf-8").strip()
+    psk = subprocess.check_output(
+        "wg genkey", shell=True).decode("utf-8").strip()
+    return (privkey, pubkey, psk)
 ```
