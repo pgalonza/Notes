@@ -57,6 +57,11 @@ Make the default group
 usermod -g group_name user_name
 ```
 
+Add to the group
+```
+usermod -a -G group_name user_name
+```
+
 Remove user from group
 ```
 usermod -R group_name user_name

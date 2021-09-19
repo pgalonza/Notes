@@ -34,6 +34,7 @@
 * **jq** - command-line JSON processor.
 * **rkhunter** - RootKit Hunter.
 * **chkrootkit** - RootKit Hunter.
+* **qrencode** - encode input data in a QR Code and save as a PNG image.
 
 
 ## Environment

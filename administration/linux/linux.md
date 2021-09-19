@@ -134,3 +134,10 @@ Removing interface
 ```
 ip link set interface_name nomaster
 ```
+
+## Sudoers
+
+Root without asking password
+```
+<user_name> ALL=(ALL) NOPASSWD: ALL
+```
