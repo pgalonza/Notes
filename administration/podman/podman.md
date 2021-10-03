@@ -6,6 +6,11 @@ _/etc/containers/registries.conf_
 unqualified-search-registries = ["registry.fedoraproject.org", "registry.access.redhat.com", "registry.centos.org", "docker.io", "quay.io"]
 ```
 
+Choose storage driver
+```
+export STORAGE_DRIVER=vfs
+```
+
 
 ## Troubleshooting
 
