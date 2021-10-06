@@ -11,6 +11,9 @@ Choose storage driver
 export STORAGE_DRIVER=vfs
 ```
 
+Network configurations
+_/etc/cni/net.d/_
+
 
 ## Troubleshooting
 
