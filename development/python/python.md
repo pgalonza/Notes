@@ -326,6 +326,12 @@ Print to stdout
 stream=std.stdout
 ```
 
+
+Disable logging level
+```
+logging.disable(logging.ERROR)
+```
+
 ## Command-line parser
 
 Import
