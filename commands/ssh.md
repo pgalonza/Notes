@@ -38,7 +38,7 @@ vim scp://user_name@remote_server //path_to_file
 
 Run remote GUI-application
 ```
-ssh -X remote_server program_name
+ssh -XYC remote_server program_name
 ```
 
 Mount local directory to remote host
