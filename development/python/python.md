@@ -137,6 +137,11 @@ def func():
 print(func.x)
 ```
 
+PyLint generate configuration
+```
+python -m pylint --generate-rcfile > .pylintrc
+```
+
 
 ## Packages and modules
 
