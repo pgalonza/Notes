@@ -580,9 +580,9 @@ client.exec_command("command_line", shell=True)
 client.exec_command(["command", 'args'], shell=False)
 ```
 
-Run command as root
+Run command as root or nologin
 ```
-stdin, stdout, stderr = client..exec_command("sudo -i root -s")
+stdin, stdout, stderr = client..exec_command("sudo -u root -s /bin/bash")
 stdin.write('ls\n')
 stdin.flush()
 ```
