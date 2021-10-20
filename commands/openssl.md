@@ -1,4 +1,6 @@
-# SSL/TLS
+# OpenSSL
+
+## SSL/TLS
 Import Centos
 _/etc/pki/ca-trust/source/anchors/_
 ```
@@ -74,4 +76,16 @@ openssl req -new -key <domain_name>.key -out <domain_name>.csr
 Create certificate
 ```
 openssl x509 -req -in <domain_name>.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out <domain_name>.pem -days 365 -sha256
+```
+
+## Encryption & Decryption
+
+Encrypt password
+```
+echo "<password>" | openssl enc -aes-256-cbc -md sha512 -a -pbkdf2 -iter 100000 -salt -pass pass:<salt> > secret.txt
+```
+
+Decryption password
+```
+cat secret.txt | openssl enc -aes-256-cbc -md sha512 -a -d -pbkdf2 -iter 100000 -salt -pass pass:<salt>
 ```
