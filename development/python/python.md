@@ -193,6 +193,7 @@ python -m pylint --generate-rcfile > .pylintrc
 * **selenium** - tools and libraries enabling web browser automation.
 * **wgconfig** - parsing and writing WireGuard configuration file.
 * **pickle** - implements binary protocols for serializing and de-serializing a Python object structure.
+* **tinydb** - document oriented database.
 
 ### Testing & Checking
 * **pylint** - static code analysis tool, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
