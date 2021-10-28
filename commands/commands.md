@@ -974,3 +974,23 @@ Unit logs in real time
 ```
 journalctl -fu <unit_name>
 ```
+
+## Certbot
+
+Create certificate
+_certbot.ini_
+```
+authenticator = standalone
+noninteractive = true
+agree-tos = true
+rsa-key-size = 2048
+```
+
+```
+certbot certonly --config ./certbot.ini --email <e-mail address> --work-dir </var/lib/letsencrypt> --config-dir <where save data> --domain <domain_name>
+```
+
+Renew certificate
+```
+certbot renew --work-dir </var/lib/letsencrypt> --config-dir <where save data>
+```
