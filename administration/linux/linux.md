@@ -20,6 +20,11 @@ Running some program in background
 nohup <program_name> > <program_name>.out 2> <program_name>.err < /dev/null & echo -n "$!" > pid.file &
 ```
 
+Restore .bashrc, .bash_profile and .bash_logout
+```
+cp /etc/skel/{.bashrc,.bash_profile,.bash_logout} .
+```
+
 ## Linux printers
 
 Connect Linux to a shared printer on Windows!
