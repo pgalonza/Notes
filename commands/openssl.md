@@ -26,7 +26,7 @@ openssl req -text -noout -verify -in domain.csr
 
 * Public CRT
 ```
-openssl x509 -text -noout -in domain.crtopenssl
+openssl x509 -text -noout -in domain.crt
 ```
 
 * Private KEY
