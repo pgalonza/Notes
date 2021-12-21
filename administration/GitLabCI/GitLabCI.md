@@ -34,6 +34,32 @@ Start runner
 systemctl start gitlab-runner-<project_name>
 ```
 
+## Ansible
+
+SSH key
+```
+script:
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+```
+
+SSH key no docker
+```
+script:
+  - eval $(ssh-agent -s)
+  - echo $SSH_AGENT_PID > ssh_agent.pid
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+after_script:
+  - kill $(cat ssh_agent.pid)
+```
 
 ## Troubleshooting
 
