@@ -35,6 +35,7 @@
 * **rkhunter** - RootKit Hunter.
 * **chkrootkit** - RootKit Hunter.
 * **qrencode** - encode input data in a QR Code and save as a PNG image.
+* **vmstat** - report virtual memory statistics.
 
 
 ## Environment
