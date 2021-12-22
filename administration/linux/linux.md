@@ -41,6 +41,18 @@ and edit the parameter _DeviceURI_
 DeviceURI smb://[username]%40[domain]:[password]@[pass to printer]
 ```
 
+## SWAP
+
+### Create SWAP
+
+Swap file
+```
+fallocate -l 1G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+```
+
 ## Tools
 ### Top
 
