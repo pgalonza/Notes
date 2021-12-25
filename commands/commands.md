@@ -978,3 +978,10 @@ Show password expiration date
 
 chage -l <user_name>
 ```
+
+## Scl
+
+Activate python environment
+```
+scl enable rh-python<version_numver> bash
+```
