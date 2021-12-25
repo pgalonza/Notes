@@ -970,3 +970,11 @@ Renew certificate
 ```
 certbot renew --work-dir </var/lib/letsencrypt> --config-dir <where save data>
 ```
+
+## Chage
+
+Show password expiration date
+```
+
+chage -l <user_name>
+```
