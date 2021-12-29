@@ -195,6 +195,8 @@ python -m pylint --generate-rcfile > .pylintrc
 * **pickle** - implements binary protocols for serializing and de-serializing a Python object structure.
 * **tinydb** - document oriented database.
 * **beautifulsoup4** - library for parsing HTML and XML.
+* **openpyxl** - work with excel.
+* **webbrowser** - web-browser controller.
 
 
 ### Testing & Checking
@@ -202,6 +204,7 @@ python -m pylint --generate-rcfile > .pylintrc
 * **flake8** - tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
 * **yamllint** - a linter for YAML files.
 * **unittest** - unit testing framework.
+* **pytest** - unit testing framework.
 
 ## Functions and methods
 
