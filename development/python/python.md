@@ -197,7 +197,7 @@ python -m pylint --generate-rcfile > .pylintrc
 * **beautifulsoup4** - library for parsing HTML and XML.
 * **openpyxl** - work with excel.
 * **webbrowser** - web-browser controller.
-* **pewee** - simple and small ORM.
+* **peewee** - simple and small ORM.
 
 
 ### Testing & Checking
