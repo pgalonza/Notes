@@ -1179,3 +1179,28 @@ def generate_wireguard_keys():
         "wg genkey", shell=True).decode("utf-8").strip()
     return (privkey, pubkey, psk)
 ```
+
+## OpenCV
+
+Image overlay
+```
+x_offset = 0
+y_offset = 0
+
+image1 = cv2.imread('image_1.jpg')
+image2 = cv2.imread('image_2.jpg')
+
+height, width, _ = image2.shape
+
+roi = self.image1[y_offset:height+y_offset, x_offset:width+x_offset]
+img2gray = cv2.cvtColor(image2, cv2.COLOR_BGR2GRAY)
+
+ret, mask = cv2.threshold(img2gray, 10, 255, cv2.THRESH_BINARY)
+mask_inv = cv2.bitwise_not(mask)
+
+img1_bg = cv2.bitwise_and(roi, roi, mask=mask_inv)
+img2_fg = cv2.bitwise_and(image2, image2, mask=mask)
+
+dst = cv2.add(img1_bg, img2_fg)
+image1[y_offset:height+y_offset, x_offset:width+x_offset] = dst
+```
