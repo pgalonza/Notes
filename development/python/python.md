@@ -58,31 +58,6 @@ Yes or no
 input('Are you sure? (y/n): ').lower().strip()[:1]
 ```
 
-Threading and queue
-```
-Class CThread(threading.Thread):
-
-    def __init__(self, name, queue):
-        threading.Thread.__init__(self)
-        self.name = name
-        self.queue = queue
-
-    def run(self):
-        self.queue.get()
-        print(self.name)
-        self.queue.task_done()
-
-queue = Queue()
-
-for i in range(5):
-    name = f 'Thread {i}'
-    thread = CThread(name, queue)
-    thread.daemon = True
-    thread.start()
-
-queue.put('element')
-```
-
 Explicitly Define parameters in function
 ```
 def function_name(parameter_name,*, parameter_name)
@@ -110,22 +85,6 @@ def target_search(path, deep, *, depth = 0):
         result = target_search(next_path, deep, depth = depth)
     if result:
         target_dirs.extend(result)
-```
-
-With
-```
-class ClassName:
-
-    def __enter__(self):
-        print()
-        return self
-
-    def __exit__(self):
-        print()
-        return True # disable crash when exception
-
-with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
-    print()
 ```
 
 Function attributes
@@ -198,6 +157,9 @@ python -m pylint --generate-rcfile > .pylintrc
 * **openpyxl** - work with excel.
 * **webbrowser** - web-browser controller.
 * **peewee** - simple and small ORM.
+* **SQLAlchemy** - ORM.
+* **functools** - higher-order functions and operations on callable objects.
+* **typing** - support for type hints.
 
 
 ### Testing & Checking
@@ -515,6 +477,32 @@ Class CThread(threading.Thread):
     def run(self):
         print(self.name)
 ```
+
+Threading and queue
+```
+Class CThread(threading.Thread):
+
+    def __init__(self, name, queue):
+        threading.Thread.__init__(self)
+        self.name = name
+        self.queue = queue
+
+    def run(self):
+        self.queue.get()
+        print(self.name)
+        self.queue.task_done()
+
+queue = Queue()
+
+for i in range(5):
+    name = f 'Thread {i}'
+    thread = CThread(name, queue)
+    thread.daemon = True
+    thread.start()
+
+queue.put('element')
+```
+
 
 ## Multiprocessing
 
@@ -1057,17 +1045,20 @@ def multiplier(y):
     return multiply
 ```
 
-Decorators
+Decorator
 ```
 def time_track(func):
-    started_at = time.time()
+    @wraps(func)
+    def wrapper(*args, **kwds)
+      started_at = time.time()
 
-    result = func(*args, **kwargs)
+      result = func(*args, **kwargs)
 
-    ended_at = time.time()
-    elapsed = round(ended_at - started_at, 4)
-    print(elapsed)
-    return result
+      ended_at = time.time()
+      elapsed = round(ended_at - started_at, 4)
+      print(elapsed)
+      return result
+    return wrapper
 
 def some_function()
     pass
@@ -1077,7 +1068,24 @@ time_track(some_function)
 @time_track
 def some_function_v2()
     pass
+```
 
+Decorator context manager
+```
+from contextlib import contextmanager
+import random
+
+
+@contextmanager
+def next_number(number):
+    try:
+        yield number + random.randint(0, 10)
+    except Exception as exc:
+        print(exc)
+
+
+with next_number(1) as next_n:
+    print(next_n)
 ```
 
 ## Date and time
@@ -1204,4 +1212,67 @@ img2_fg = cv2.bitwise_and(image2, image2, mask=mask)
 
 dst = cv2.add(img1_bg, img2_fg)
 image1[y_offset:height+y_offset, x_offset:width+x_offset] = dst
+```
+
+## OOP
+
+context manager (with)
+```
+class ClassName:
+
+    def __enter__(self):
+        print()
+        return self
+
+    def __exit__(self):
+        print()
+        return True # disable crash when exception
+
+with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
+    print()
+```
+
+Getter and Setter
+```
+class Person:
+    def __init__(self, class_name, lvl):
+        self._class_name = class_name
+        self._lvl = lvl
+
+    @classmethod
+    def info(cls):
+        print('info')
+
+    @property
+    def lvl(self):
+        return self._lvl
+
+    @property
+    def class_name(self):
+        return self._class_name
+
+    @lvl.setter
+    def lvl(self, lvl):
+        self._lvl = lvl
+
+    @class_name.setter
+    def class_name(self, class_name):
+        self._class_name = class_name
+
+
+person = Person('druid', 80)
+person.lvl = 70
+print(person.lvl)
+```
+
+Abstract class and method
+```
+from abc import ABC, abstractmethod
+
+
+class Person(ABC):
+
+    @abstractmethod
+    def attack(self):
+        """"""
 ```
