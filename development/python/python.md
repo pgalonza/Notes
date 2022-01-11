@@ -160,6 +160,8 @@ python -m pylint --generate-rcfile > .pylintrc
 * **SQLAlchemy** - ORM.
 * **functools** - higher-order functions and operations on callable objects.
 * **typing** - support for type hints.
+* **hashlib** - secure hashes and message digests.
+* **secrets** - generate secure random numbers for managing secrets.
 
 
 ### Testing & Checking
