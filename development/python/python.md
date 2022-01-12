@@ -302,11 +302,34 @@ Print to stdout
 stream=std.stdout
 ```
 
-
 Disable logging level
 ```
 logging.disable(logging.ERROR)
 ```
+
+Logger configuration function
+```
+def logging_configuration(logger):
+    fh_formatter = logging.Formatter(fmt='%(asctime)s %(levelname)s: %(process)d %(name)s %(funcName)s %(message)s',
+                                     datefmt='%m-%d-%Y %H:%M:%S')
+    fh = logging.FileHandler(filename='<log_name>.log', delay=True)
+    fh.setLevel(level=logging.INFO)
+    fh.setFormatter(fh_formatter)
+
+    sh_formatter = logging.Formatter(fmt='%(asctime)s %(process)d %(name)s %(levelname)s %(funcName)s %(message)s',
+                                     datefmt='%d-%b-%y %H:%M:%S')
+    sh = logging.StreamHandler()
+    sh.setLevel(level=logging.INFO)
+    sh.setFormatter(sh_formatter)
+
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(fh)
+    logger.addHandler(sh)
+
+loggger_interface = logging.getLogger('<logger_name>')
+logging_configuration(loggger_interface)
+```
+
 
 ## Command-line parser
 
