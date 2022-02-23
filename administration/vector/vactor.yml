@@ -1,0 +1,47 @@
+---
+data_dir: var/lib/vector
+
+sources:
+  source_nginx:
+    type: file
+    inlcude:
+      - /var/log/nginx/access-json.log
+    read_from: begginning
+transforms:
+  transform_message:
+    type: remap
+    inputs:
+      - source_*
+    source: |-
+      . = parse_json(.message)
+  general_tags:
+    type: remap
+    inputs:
+      - transform_message
+    source: |-
+      .environment = "development"
+      .label = ["app"]
+      .hostname = get_hostname!()
+      .host_address = get_env_var!("HOST_ADDRESS")
+  tags_nginx:
+    type: remap
+    inputs:
+      - general_tags
+    source: |-
+      .application = "nginx"
+sinks:
+  opensearch_nginx:
+    type: elasticsearch
+    inputs:
+      - tags_nginx
+    endpoint: https://<host_name>:9200
+    bulk:
+      index: "vector-nginx-%Y-%m-%d"
+    mode: bulk
+    auth:
+      strategy: basic
+      user: <user_name>
+      password: <password>
+    tls:
+      ca_file: <path>.pem
+...
