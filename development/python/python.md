@@ -1,7 +1,8 @@
 # Python
 
 Docstrings
-```
+
+```text
 """Summary or Description of the Function
 
     Parameters:
@@ -10,61 +11,74 @@ Docstrings
     Returns:
     int:Returning value
 """
-```
-```
+
+```python
+
+```text
 __doc__
 ```
 
 Enter interactive mode after executing the script or the command
-```
+
+```bash
 python -i file_name.py
 ```
 
 Searches sys.path for the named module and runs the corresponding .py file as a script.
-```
+
+```bash
 python -m module_name
 ```
 
 Named arguments
-```
+
+```text
 **kwargs
 ```
 
 Non-keyworded variable-length argument
-```
+
+```text
 *args
 ```
 
 Type annotations
-```
+
+```text
 variable_name: str
 ```
-```
+
+```python
 def function() -> str:
 ```
 
 Integer syntax
-```
+
+```text
 10_000
 ```
 
 Float syntax
-```
+
+```text
 .5
 ```
 
 Yes or no
-```
+
+```python
 input('Are you sure? (y/n): ').lower().strip()[:1]
 ```
 
 Explicitly Define parameters in function
-```
+
+```python
 def function_name(parameter_name,*, parameter_name)
 ```
 
 Recursive search with nesting
-```
+
+```python
 def target_search(path, deep, *, depth = 0):
     target_dirs = list()
 
@@ -88,7 +102,8 @@ def target_search(path, deep, *, depth = 0):
 ```
 
 Function attributes
-```
+
+```python
 def func():
     func.x = 'x'
     func.y = 'y'
@@ -97,10 +112,10 @@ print(func.x)
 ```
 
 PyLint generate configuration
-```
+
+```bash
 python -m pylint --generate-rcfile > .pylintrc
 ```
-
 
 ## Packages and modules
 
@@ -162,9 +177,10 @@ python -m pylint --generate-rcfile > .pylintrc
 * **typing** - support for type hints.
 * **hashlib** - secure hashes and message digests.
 * **secrets** - generate secure random numbers for managing secrets.
-
+* **python-gitlab** - is a Python package providing access to the GitLab server API.
 
 ### Testing & Checking
+
 * **pylint** - static code analysis tool, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
 * **flake8** - tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
 * **yamllint** - a linter for YAML files.
@@ -212,7 +228,6 @@ python -m pylint --generate-rcfile > .pylintrc
 * **exec()** - method executes the dynamically created program.
 * **compile()** - method returns a Python code object from the source.
 
-
 ## Statements
 
 * **nonlocal** - work with variables inside nested functions, where the variable should not belong to the inner function.
@@ -222,12 +237,14 @@ python -m pylint --generate-rcfile > .pylintrc
 ## LDAP
 
 Import
-```
+
+```python
 from ldap3 import Server, Connection, SUBTREE, MODIFY_ADD, MODIFY_REPLACE, MODIFY_ADD, MODIFY_DELETE
 ```
 
 Creating connection
-```
+
+```python
 server = Server("ip_address")
 connection = Connection(server, user="user_name", password="user_password")
 connection.bind()
@@ -235,7 +252,8 @@ connection.unbind()
 ```
 
 Searching entries
-```
+
+```python
 connection.search('search_base',
                     'search_filter',
                     SUBTREE,
@@ -244,19 +262,22 @@ conn.entries[0].returned_attributes
 ```
 
 Replaceing attribute value
-```
+
+```python
 dn = json.loads(connection.entries[0].entry_to_json())['dn']
 connection.modify(dn, {'user_attribute': [(MODIFY_REPLACE, [new_value])]})
 ```
 
 Adding attribute value
-```
+
+```python
 dn = json.loads(connection.entries[0].entry_to_json())['dn']
 connection.modify(dn, {'user_attribute': [(MODIFY_ADD, [new_value])]})
 ```
 
 Deleting attribute value
-```
+
+```python
 dn = json.loads(connection.entries[0].entry_to_json())['dn']
 connection.modify(dn, {'user_attribute': [(MODIFY_DELETE, [delete_value])]})
 ```
@@ -264,19 +285,22 @@ connection.modify(dn, {'user_attribute': [(MODIFY_DELETE, [delete_value])]})
 ## Logging
 
 Import
-```
+
+```python
 import logging
 ```
 
 Initialization logging format
-```
+
+```python
 logging.basicConfig(level=logging.logging_level, filename="path_to_log_file",
                       format='%(asctime)s %(process)d %(name)s %(levelname)s %(funcName)s %(message)s',
                       datefmt='%d-%b-%y %H:%M:%S')
 ```
 
 Writing log
-```
+
+```python
 logging.debug('')
 logging.info('')
 logging.critical('')
@@ -296,19 +320,21 @@ INFO    |20
 DEBUG   |10
 NOTSET  |0
 
-
 Print to stdout
-```
+
+```text
 stream=std.stdout
 ```
 
 Disable logging level
-```
+
+```python
 logging.disable(logging.ERROR)
 ```
 
 Logger configuration function
-```
+
+```python
 def logging_configuration(logger):
     fh_formatter = logging.Formatter(fmt='%(asctime)s %(levelname)s: %(process)d %(name)s %(funcName)s %(message)s',
                                      datefmt='%m-%d-%Y %H:%M:%S')
@@ -330,16 +356,17 @@ loggger_interface = logging.getLogger('<logger_name>')
 logging_configuration(loggger_interface)
 ```
 
-
 ## Command-line parser
 
 Import
-```
+
+```python
 import argparse
 ```
 
 Initialization
-```
+
+```python
 parser = argparse.ArgumentParser(description='', formatter_class=argparse.MetavarTypeHelpFormatter)
 parser.add_argument('--example', dest='example', type=str, help='', default='')
 parser.add_argument('--example2', dest='example2', type=bool, help='', action='store_true')
@@ -347,19 +374,22 @@ args = parser.parse_args()
 ```
 
 Get argument
-```
+
+```text
 args.example
 ```
 
 ## CSV
 
 Import
-```
+
+```python
 import csv
 ```
 
 Read the file
-```
+
+```python
 with open('file_name', 'r') as csv_file:
 csv_reader = csv.reader(csv_file)
     for row in csv_reader:
@@ -367,7 +397,8 @@ csv_reader = csv.reader(csv_file)
 ```
 
 Write to a file
-```
+
+```python
 with open('file_name', 'w', newline='', encoding='windows-1251) as csv_file:
     fieldnames = ['column_name']
     csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -378,18 +409,22 @@ with open('file_name', 'w', newline='', encoding='windows-1251) as csv_file:
 ## MySQL
 
 Import
-```
+
+```python
 import mysql.connector
 ```
 
 Creating connection
-```
+
+```python
 mysql_connection = mariadb.connect(user='mysql_user', password='mysql_password', database='mysql_database', host='mysql_ip')
 cursor = mysql_connection.cursor()
 cursor.close()
 ```
+
 Executing sql-command
-```
+
+```python
 cursor.execute("sql_query")
 rows = cursor.fetchall()
 rows[0].['column_name']
@@ -398,23 +433,27 @@ rows[0].['column_name']
 ## Configuration file
 
 Import
-```
+
+```python
 import configparser
 ```
 
 Initialization
-```
+
+```python
 config = configparser.ConfigParser()
 ```
 
 Reading configuration file
-```
+
+```python
 config.read('configuration_file_name')
 config.get('section_name', 'option_name', fallback=False)
 ```
 
 Configuration file structure
-```
+
+```ini
 [DEFAULT]
 option_name = value
 
@@ -425,12 +464,14 @@ option_name = value
 ## XML
 
 Import
-```
-xml.etree.ElementTree
+
+```python
+import xml.etree.ElementTree
 ```
 
 Creating xml
-```
+
+```python
 root = ElementTree.Element('root_element')
 sub_element = ElementTree.SubElement(root, 'sub_element')
 sub_element.text = "sub_element_value"
@@ -438,7 +479,8 @@ ElementTree.dump(root)
 ```
 
 Writing xml to file
-```
+
+```python
 tree = ElementTree.ElementTree(root)
 tree.write('file_name', encoding="utf-8")
 ```
@@ -446,44 +488,52 @@ tree.write('file_name', encoding="utf-8")
 ## Queue
 
 Import
-```
+
+```python
 from queue import Queue
 ```
 
 Initializing a queue
-```
+
+```python
 queue = Queue()
 ```
 
 Adding of element to queue
-```
+
+```python
 queue.put('element')
 ```
 
 Get and removing element from queue
-```
+
+```python
 queue.get()
 ```
 
 Indicate that a formerly enqueued task is complete
-```
+
+```python
 queue.task_done()
 ```
 
 Blocks until all items in the queue have been gotten and processed.
-```
+
+```python
 queue.join()
 ```
 
 ## Threading
 
 Import
-```
+
+```python
 import threading
 ```
 
 Creating a thread pool
-```
+
+```python
 for i in range(5):
     name = f'Thread {i}'
     thread = CThread(name)
@@ -492,7 +542,8 @@ for i in range(5):
 ```
 
 Threading class
-```
+
+```python
 Class CThread(threading.Thread):
 
     def __init__(self, name):
@@ -504,7 +555,8 @@ Class CThread(threading.Thread):
 ```
 
 Threading and queue
-```
+
+```python
 Class CThread(threading.Thread):
 
     def __init__(self, name, queue):
@@ -528,16 +580,17 @@ for i in range(5):
 queue.put('element')
 ```
 
-
 ## Multiprocessing
 
 Import
-```
+
+```python
 import multiprocessing
 ```
 
 Multiprocessing class
-```
+
+```python
 Class CProcess(multiprocessing.Process):
 
     def __init__(self, name):
@@ -551,23 +604,27 @@ Class CProcess(multiprocessing.Process):
 ## Paramiko
 
 Import
-```
+
+```python
 import paramiko
 ```
 
 SSH key from string
-```
+
+```python
 ssh_key_object = io.StringIO(ssh_key)
 ssh_rsa_key = paramiko.RSAKey.from_private_key(ssh_key_object, password_for_key)
 ```
 
 SSH key from file
-```
+
+```python
 ssh_rsa_key = paramiko.RSAKey.from_private_key_file(path_to_key, password_for_key)
 ```
 
 Creating connection
-```
+
+```python
 client = paramiko.SSHClient()
 client.load_system_host_keys()
 client.connect(hostname='ip_address', port='port_number', username='user_name', password='user_password', pkey='key_file')
@@ -575,13 +632,15 @@ client.close()
 ```
 
 Create SFTP session
-```
+
+```python
 sftp = client.open_sftp()
 sftp.close()
 ```
 
 Executing command
-```
+
+```python
 stdin, stdout, stderr = client.exec_command("command")
 stdout.read().decode()
 stderr.read().decode()
@@ -589,82 +648,94 @@ stdout.chennel.recv_exit_status()
 ```
 
 Open key in UTF-8 BOM
-```
+
+```python
 with open(key_file, encoding='utf-8-sig') as key_object:
     ssh_rsa_key = paramiko.RSAKey.from_private_key(key_object, password_for_key)
 ```
 
 Shell
-```
+
+```python
 client.exec_command("command_line", shell=True)
 client.exec_command(["command", 'args'], shell=False)
 ```
 
 Run command as root or nologin
-```
+
+```python
 stdin, stdout, stderr = client..exec_command("sudo -u root -s /bin/bash")
 stdin.write('ls\n')
 stdin.flush()
 ```
 
-
 ## YAML
 
 Import
-```
+
+```python
 import yaml
 ```
 
 Read yaml file
-```
+
+```python
 with open('file_name') as file:
     data = yaml.load(file, Loader=yaml.FullLoader)
 ```
-```
+
+```python
 yaml.full_load(file)
 ```
-
 
 ## Jinja2
 
 Import
-```
+
+```python
 from jinja2 import Environment, FileSystemLoader
 ```
 
 Create the environment
+
 * trim_blocks - first newline after a block is removed.
 * lstrip_blocks - leading spaces and tabs are stripped from the start of a line to a block.
-```
+
+```python
 ENV = Environment(loader=FileSystemLoader('.'), trim_blocks=True, lstrip_blocks=True)
 ENV = Environment(loader=FileSystemLoader('.'))
 ```
 
 Add filter
-```
+
+```python
 ENV.filters['function_name'] = function_name
 ```
 
 Load a template from the loader
-```
+
+```python
 template = ENV.get_template("template_name")
 ```
 
 Render the template
-```
+
+```python
 template.render(some_context=data)
 ```
 
 ## Requests
 
 Import
-```
+
+```python
 import json
 import requests
 ```
 
 Headers
-```
+
+```python
 headers = {
         'Authorization': 'OAuth ',
         'Accept': 'application/json',
@@ -673,42 +744,49 @@ headers = {
 ```
 
 Params
-```
+
+```python
 params = {
         'fields': '',
     }
 ```
 
 Body
-```
+
+```python
 data = {
         'fields': {'': ''}
     }
 ```
 
 URL address
-```
+
+```python
 url = "https://site_name/"
 ```
 
 HTTP get request
-```
+
+```python
 response = requests.get(url, headers=headers, params=params)
 ```
 
 HTTP authorization
-```
+
+```python
 http_auth = requests.auth.HTTPBasicAuth('login', 'password')
 response = requests.get(url, auth=http_auth)
 ```
 
 HTTP post request
-```
+
+```python
 response = requests.post(url=url, headers=headers, params=params, data=json.dump(data))
 ```
 
 Get response
-```
+
+```python
 response.json()
 json.loads(response.text)
 response.text
@@ -718,34 +796,40 @@ json.loads(response.text)['antivirus_status']
 ```
 
 Get status code
-```
+
+```python
 response.status_code
 ```
 
 Get headers
-```
+
+```python
 response.headers
 ```
 
 Get encoding
-```
+
+```python
 response.encoding
 ```
 
 Upload file
-```
+
+```python
 file = open(path_to_file, 'rb')
 
 response = request.post(url=url, headers=headers, params=params, data=data, files=file)
 ```
 
 Download file
-```
+
+```python
 response = request.post(url = url, stream = True)
 with open(path_to_file, 'wb') as file:
     file.write(response.content)
 ```
-```
+
+```python
 with open(path_to_file, 'wb') as file:
     for chunk in file.iter_content(chunk_size=128):
         file.write(chunk)
@@ -754,27 +838,32 @@ with open(path_to_file, 'wb') as file:
 ## Netmiko
 
 Import
-```
+
+```python
 from netmiko import ConnectHandler
 ```
 
 Creating connection
-```
+
+```python
 device = ConnectHandler(host='ip_address', username='user_name', password='user_password', device_type='linux', secret='')
 ```
 
 Show device prompt
-```
+
+```python
 device.find_prompt()
 ```
 
 Become root
-```
+
+```python
 device.enable(cmd='sudo -i', pattern='[sudo]')
 ```
 
 Send command
-```
+
+```python
 device.send_command_expect()
 device.send_command_timing()
 device.send_command()
@@ -783,7 +872,8 @@ device.send_command()
 ## OS
 
 Import
-```
+
+```python
 import os
 ```
 
@@ -812,20 +902,22 @@ Note
 * **getattr()** - returns the value of the named attribute of an object. If not found, it returns the default value provided to the function.
 * **delattr()** - deletes an attribute from the object.
 * **super()** - return a proxy object that delegates method calls to a parent or sibling class of type.
-* **__mro__** - This attribute is a tuple of classes that are considered when looking for base classes during method resolution.
+* ****mro**** - This attribute is a tuple of classes that are considered when looking for base classes during method resolution.
 * **mro()** - This method can be overridden by a metaclass to customize the method resolution order for its instances.
-* **__repr__()** - unction returns the object representation in string format.
-* **__str__()** - method returns the string representation of the object.
+* ****repr**()** - unction returns the object representation in string format.
+* ****str**()** - method returns the string representation of the object.
 
 ## Nexus
 
 Import
-```
+
+```python
 import requests
 ```
 
 Upload raw
-```
+
+```python
 url = 'http://nexus_address:8081/service/rest/v1/components'
 http_auth = requests.auth.HTTPBasicAuth('login', 'password')
 
@@ -850,7 +942,8 @@ asset.close()
 ```
 
 Download row
-```
+
+```python
 url = 'http://nexus_address:8081/service/rest/v1/search/assets'
 http_auth = requests.auth.HTTPBasicAuth('login', 'password')
 
@@ -874,19 +967,22 @@ with open(path_to_file, 'wb') as file:
 * tar.gzip = w:gz, r:gz
 
 Import
-```
+
+```python
 import tarfile
 ```
 
 Create tar arhive
-```
+
+```python
 tar_file = tarfile.open(path_to_arhive. mode='w')
 tar_file.add(path_to_file, arcname=path_to_file_in_arhive)
 tar_file.close()
 ```
 
 Extract all files
-```
+
+```python
 tar_file = tarfile.open(path_to_arhive, mode='r')
 tar_file.extractall(path=path_to_directory)
 tar_file.close()
@@ -895,13 +991,15 @@ tar_file.close()
 ## GitLab CI
 
 Import
-```
+
+```python
 import requests
 import json
 ```
 
 Create pipeline
-```
+
+```python
 access_token = private_token
 
 project_id = project id in GitLab
@@ -926,26 +1024,29 @@ pipeline_info = response.json()
 print(f'Pipeline running with parameters:\nURL: {pipeline_info["web_url"]}\nREF: {pipeline_info["ref"]}\nUSER: {pipeline_info["user"]["name"]}')
 ```
 
-
 ## Formatting
 
 Left aligned
-```
+
+```python
 '|{}:<30|'.format(variable)
 ```
 
 Right aligned
-```
+
+```python
 '|{}:>30|'.format(variable)
 ```
 
 Centered
-```
+
+```python
 '|{}:^30|'.format(variable)
 ```
 
 Centered
-```
+
+```python
 '|{}:*^30|'.format(variable)
 ```
 
@@ -960,7 +1061,8 @@ Centered
 ## Exception
 
 Exception Handling
-```
+
+```python
 try:
     result = 5 / 0
 except ZeroDivisionError as message:
@@ -972,7 +1074,8 @@ finally:
 ```
 
 Castom exception
-```
+
+```python
 class ExampleError(Exception):
 
     def __init__(self, message, input_data=None):
@@ -984,33 +1087,37 @@ class ExampleError(Exception):
 ```
 
 Raise an exception.
-```
+
+```python
 raise ExampleError('example error')
 ```
 
 ## Functional programming
 
 List comprehension
-```
+
+```python
 a = [i+10 for i in range(10)]
 ```
 
-```
+```python
 for index, value in range(10):
     a[index] = value + 10
 ```
 
 Dictionaries comprehension
-```
+
+```python
 a = [i:i+10 for i in range(10)]
 ```
 
 Generators
-```
+
+```python
 a = (i+10 for i in range(10))
 ```
 
-```
+```python
 def func(number):
     for i in range(number):
         yield i + 10
@@ -1026,7 +1133,8 @@ for i in a:
 ```
 
 Iterators
-```
+
+```python
 class Example:
     def __init__(self):
         self.i = 0
@@ -1043,12 +1151,14 @@ class Example:
 ```
 
 lambda
-```
+
+```python
 lambda x: x + 1
 ```
 
 Create function
-```
+
+```python
 class Multiplier:
 
     def __init__(self, n):
@@ -1062,7 +1172,8 @@ object(x=2)
 ```
 
 High order functions
-```
+
+```python
 def multiplier(y):
     def multiply_column(x):
         return y * x
@@ -1071,7 +1182,8 @@ def multiplier(y):
 ```
 
 Decorator
-```
+
+```python
 def time_track(func):
     @wraps(func)
     def wrapper(*args, **kwds)
@@ -1096,7 +1208,8 @@ def some_function_v2()
 ```
 
 Decorator context manager
-```
+
+```python
 from contextlib import contextmanager
 import random
 
@@ -1116,7 +1229,8 @@ with next_number(1) as next_n:
 ## Date and time
 
 Next day with ru locale
-```
+
+```python
 current_date = datetime.datetime.now()
 next_date = current_date + datetime.timedelta(days=1)
 locale.setlocale(locale.LC_TIME, "ru_RU.utf8")
@@ -1126,13 +1240,15 @@ next_date.strftime('%a %d-%B')
 ## WebLogic Server
 
 Import
-```
+
+```python
 import requests
 import json
 ```
 
 HTTP Header
-```
+
+```python
 http_header = {
     'Accept': 'application/json',
     'User-Agent': '<agent_name>',
@@ -1141,24 +1257,28 @@ http_header = {
 ```
 
 HTTP authorization
-```
+
+```python
 auth = requests.ayth.HTTPBasicAuth(<user_name>, <user_password>)
 ```
 
 Stop server
-```
+
+```python
 url = http:<server_name>:8001/management/weblogic/latest/domainRuntime/serverLifeCycleRuntimes/<server_name>/forceShutdown
 response = requests.post(url=url, headers=headers, auth=auth)
 ```
 
 Start server
-```
+
+```python
 url = http:<server_name>:8001/management/weblogic/latest/domainRuntime/serverLifeCycleRuntimes/<server_name>/start
 response = requests.post(url=url, headers=headers, auth=auth)
 ```
 
 Redeploy application
-```
+
+```python
 application_files = {
     'model': (None, json.dumps(dict())),
     'sourcePath': open(<path_to_application>, 'rb'),
@@ -1172,19 +1292,22 @@ response = requests.post(url=url, headers=headers, auth=auth, files=application_
 ## Selenium
 
 Import
-```
+
+```python
 from selenium import webdriver
 ```
 
 Set language
-```
+
+```python
 profile = webdriver.FirefoxProfile()
 profile.set_preference('intl.accept_languages', 'en-GB')
 driver = webdriver.Firefox(firefox_profile=profile)
 ```
 
 Open URL, search by string and press "Sign in"
-```
+
+```python
 driver.get("http://www.google.com")
 elem = driver.find_element_by_name("q")
 elem.send_keys("Python")
@@ -1196,7 +1319,8 @@ elem1.click()
 ## WireGuard
 
 Generate keys
-```
+
+```python
 def generate_wireguard_keys():
     """
     Generate a WireGuard private, public key and preshared key
@@ -1217,7 +1341,8 @@ def generate_wireguard_keys():
 ## OpenCV
 
 Image overlay
-```
+
+```python
 x_offset = 0
 y_offset = 0
 
@@ -1242,7 +1367,8 @@ image1[y_offset:height+y_offset, x_offset:width+x_offset] = dst
 ## OOP
 
 context manager (with)
-```
+
+```python
 class ClassName:
 
     def __enter__(self):
@@ -1258,7 +1384,8 @@ with ClassName(self, exc_type, exc_val, exc_tb) as class_name:
 ```
 
 Getter and Setter
-```
+
+```python
 class Person:
     def __init__(self, class_name, lvl):
         self._class_name = class_name
@@ -1291,7 +1418,8 @@ print(person.lvl)
 ```
 
 Abstract class and method
-```
+
+```python
 from abc import ABC, abstractmethod
 
 
