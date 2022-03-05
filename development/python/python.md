@@ -11,8 +11,7 @@ Docstrings
     Returns:
     int:Returning value
 """
-
-```python
+```
 
 ```text
 __doc__
