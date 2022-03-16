@@ -176,7 +176,10 @@ python -m pylint --generate-rcfile > .pylintrc
 * **typing** - support for type hints.
 * **hashlib** - secure hashes and message digests.
 * **secrets** - generate secure random numbers for managing secrets.
+* **semver** - simplifies comparing versions.
 * **python-gitlab** - is a Python package providing access to the GitLab server API.
+* **jira** - Jira REST API from Python.
+* **nexus3-cli** - python-based command-line interface and API client for Sonatype's Nexus OSS 3.
 
 ### Testing & Checking
 
