@@ -116,6 +116,12 @@ PyLint generate configuration
 python -m pylint --generate-rcfile > .pylintrc
 ```
 
+Zero if value is negative
+
+```python
+max(0, <vvariable>)
+```
+
 ## Packages and modules
 
 * **argparse** - parser for command-line options, arguments and sub-commands.
