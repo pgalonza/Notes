@@ -1,37 +1,48 @@
 # Ansible
 
 Install ansible for developing on Windows
-```
+
+```texts
 git clone -b <branch_name or tag_name> https://github.com/ansible/ansible.git
 pip intall -e ansible
 ```
 
 Other host by index
-```
+
+```text
 {{ groups['<group1>'][groups['<group2>'].index(inveentory_hostname)] }}
 ```
 
 Get variable by name
-```
+
+```text
 {{ lookup('vars', '<variable_name>') }}
 ```
 
 Default value if not exist
-```
+
+```text
 {{ <variable_name> | default(<value>) }}
 ```
 
 Search local file
-```
+
+```text
 pattern: "<pattern_match>"
 file: "{{ lookup('fileglob'), pattern }}"
 ```
 
+Regexp
+
+```text
+{{ <variable> | regex_search('<pattern>') }}
+```
 
 ## Module
 
 Own module
-```
+
+```yaml
 #!/usr/bin/env python
 from ansible.moddule_utils.basic import AnsibleModule
 
