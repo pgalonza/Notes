@@ -20,4 +20,3 @@
         regexp: '^#.*\r\n'
         state: absent
       with_items: "{{ settings_list }}"
-...
