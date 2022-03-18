@@ -1,8 +1,6 @@
 ---
 - hosts: all
-  become: yes
-  #become_user: root
-  #become_method: sudo
+  become: true
   tasks:
     - name: Create a ansible user
       user:
@@ -16,7 +14,7 @@
         system: no
         create_home: yes
         home: /home/ansible
-      become: yes
+      become: true
     - name: Ansible ssh key
       authorized_key:
       user: ansible
@@ -29,4 +27,3 @@
       owner: root
       group: root
       mode: 0440
-...
