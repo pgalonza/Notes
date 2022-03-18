@@ -13,7 +13,7 @@
       with_items: "{{ settings_list }}"
     - name: Remove file
       routeros_command:
-        commands: /file remove [find name~"-sync.cfg.rsc"]
+        commands: "/file remove [find name~'-sync.cfg.rsc']"
     - name: Remove lines
       lineinfile:
         dest: "/data/git/routeros/{{ group_names[0] }}/{{ item }}-sync.cfg.rsc"
