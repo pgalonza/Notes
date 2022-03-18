@@ -4,29 +4,29 @@
   #become_user: root
   #become_method: sudo
   tasks:
-  - name: Create a ansible user
-    user:
-      name: ansible
-      append: yes
-      password: hash
-      groups: wheel
-      group: administrator
-      shell: /bin/bash
+    - name: Create a ansible user
+      user:
+        name: ansible
+        append: yes
+        password: hash
+        groups: wheel
+        group: administrator
+        shell: /bin/bash
+        state: present
+        system: no
+        create_home: yes
+        home: /home/ansible
+      become: yes
+    - name: Ansible ssh key
+      authorized_key:
+      user: ansible
       state: present
-      system: no
-      create_home: yes
-      home: /home/ansible
-    become: yes
-  - name: Ansible ssh key
-    authorized_key:
-     user: ansible
-     state: present
-     key: "{{ lookup('file', '/data/ansible/keys/id_rsa.pub') }}"
-  - name: Enable passwordless sudo
-    copy:
-     content: ansible ALL=(ALL) NOPASSWD:ALL
-     dest: /etc/sudoers.d/ansible
-     owner: root
-     group: root
-     mode: 0440
+      key: "{{ lookup('file', '/data/ansible/keys/id_rsa.pub') }}"
+    - name: Enable passwordless sudo
+      copy:
+      content: ansible ALL=(ALL) NOPASSWD:ALL
+      dest: /etc/sudoers.d/ansible
+      owner: root
+      group: root
+      mode: 0440
 ...

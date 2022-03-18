@@ -2,21 +2,21 @@
 - hosts: all
   become: yes
   tasks:
-  - name: Create a ansible user
-    user:
-      name: <user_name>
-      append: yes
-      password: <user_password>
-      groups: wheel
-      group: administrator
-      shell: /bin/bash
-      state: present
-      system: no
-      create_home: yes
-      home: /home/
-  - name: Set authorized key taken from file
-    authorized_key:
-      user: <user_name>
-      state: present
-      key: "{{ lookup('file', '/home/user/.ssh/id_rsa.pub') }}"
+    - name: Create a ansible user
+      user:
+        name: <user_name>
+        append: yes
+        password: <user_password>
+        groups: wheel
+        group: administrator
+        shell: /bin/bash
+        state: present
+        system: no
+        create_home: yes
+        home: /home/
+    - name: Set authorized key taken from file
+      authorized_key:
+        user: <user_name>
+        state: present
+        key: "{{ lookup('file', '/home/user/.ssh/id_rsa.pub') }}"
 ...
