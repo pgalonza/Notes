@@ -1,5 +1,5 @@
 ---
-- hosts: <host group>
+- hosts: all
   become: yes
   tasks:
   - name: Create a ansible user
