@@ -4,7 +4,7 @@ readme_index:
   remove_originals: false
   with_frontmatter: false
 relative_links:
-  enabled: false
+  enabled: true
   collections: true
 include:
   - README.md
