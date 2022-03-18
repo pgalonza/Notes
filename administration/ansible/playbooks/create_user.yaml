@@ -1,18 +1,12 @@
 ---
-- hosts: ubuntu
-  #remote_user:
+- hosts: <host group>
   become: yes
-  #become_user: root
-  #become_method: sudo
   tasks:
-  #- name: Remove user
-    #user:
-      #name:
   - name: Create a ansible user
     user:
-      name:
+      name: <user_name>
       append: yes
-      password:
+      password: <user_password>
       groups: wheel
       group: administrator
       shell: /bin/bash
@@ -20,7 +14,6 @@
       system: no
       create_home: yes
       home: /home/
-    #become: yes
   - name: Set authorized key taken from file
     authorized_key:
       user:
