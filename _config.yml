@@ -2,4 +2,10 @@ theme: jekyll-theme-midnight
 readme_index:
   enabled:          true
   remove_originals: false
-  with_frontmatter: false 
+  with_frontmatter: false
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - LICENSE.md
