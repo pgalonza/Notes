@@ -117,6 +117,18 @@ shred <file_name>
 shred -zu <file_name>
 ```
 
+Translate or delete characters
+
+```bash
+tr
+```
+
+Set or retrieve a process's CPU affinity
+
+```bash
+taskset
+```
+
 ## PERMISSION
 ```
 usermod -u 2005 foo

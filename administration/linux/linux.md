@@ -1,12 +1,14 @@
 # Linux
 
 Thunderbird check all folders
-```
+
+```bash
 mail.server.default.check_all_folders_for_new true
 ```
 
 Hard disk partitions
-```
+
+```bash
 /dev/sda1 — boot
 /dev/sda2 — root (/)
 /dev/sda3 — home
@@ -16,13 +18,21 @@ Hard disk partitions
 ```
 
 Running some program in background
-```
+
+```bash
 nohup <program_name> > <program_name>.out 2> <program_name>.err < /dev/null & echo -n "$!" > pid.file &
 ```
 
 Restore .bashrc, .bash_profile and .bash_logout
-```
+
+```bash
 cp /etc/skel/{.bashrc,.bash_profile,.bash_logout} .
+```
+
+Shebang indicate an interpreter for execution under UNIX / Linux operating systems
+
+```bash
+#!
 ```
 
 ## Linux printers
@@ -36,8 +46,10 @@ Connect Linux to a shared printer on Windows!
 5. Select the driver for the printer.
 6. Open the printer configuration file
 _/etc/cups/printers.conf_
+
 and edit the parameter _DeviceURI_
-```
+
+```text
 DeviceURI smb://[username]%40[domain]:[password]@[pass to printer]
 ```
 
@@ -46,7 +58,8 @@ DeviceURI smb://[username]%40[domain]:[password]@[pass to printer]
 ### Create SWAP
 
 Swap file
-```
+
+```bash
 fallocate -l 1G /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
@@ -54,6 +67,7 @@ swapon /swapfile
 ```
 
 ## Tools
+
 ### Top
 
 * us, user    : time running un-niced user processes
@@ -65,6 +79,7 @@ swapon /swapfile
 * si : time spent servicing software interrupts
 * st : time stolen from this vm by the hypervisor
 
+---
 
 * PID -- Process Id : This is a unique number used to identify the process.
 * User -- The username of whoever launched the process.
@@ -88,73 +103,85 @@ swapon /swapfile
 ## FSTAB
 
 Do not allow set-user-identifier or set-group-identifier bits to take effect
-```
+
+```text
 nosuid
 ```
 
 Do not allow direct execution of any binaries on the mounted filesystem
-```
+
+```text
 noexec
 ```
 
 ## Network
 
 Forward
-```
+
+```bash
 echo net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
 echo net.ipv6.conf.all.forwarding=1 >> /etc/sysctl.conf
 ```
 
 IPv6
 _/etc/sysconfig/network_
-```
+
+```text
 NETWORKING_IPV6=yes
 ```
 
 ### VLAN
 
 Adding new virtual interface
-```
+
+```bash
 ip link add link ethX name ethX.vlan_id type vlan id vlan_id
 ```
 
 Assign ip-address to interface
-```
+
+```bash
 ip addr add X.X.X.X/XX dev ethX.vlan_id
 ```
 
 Enabling the interface
-```
+
+```bash
 ip link set dev ethX.vlan_id up
 ```
 
 ### MACVLAN
 
 Adding new makvlan interface
-```
+
+```bash
 ip link add link ethX makvlan_name type macvlan mode bridge
 ```
 
 ### Bridge
 
 Adding new bridge interface
-```
+
+```bash
 ip link add name bridge_name type bridge
 ```
 
 Adding interface to bridge
-```
+
+```bash
 ip link set interface_name master bridge_name
 ```
 
 Removing interface
-```
+
+```bash
 ip link set interface_name nomaster
 ```
 
 ## Sudoers
 
 Root without asking password
-```
+
+```bash
 <user_name> ALL=(ALL) NOPASSWD: ALL
 ```

@@ -1,8 +1,4 @@
-# Notes
-
-* **#!** - shebang indicate an interpreter for execution under UNIX / Linux operating systems.
-
-## Tools, Programs
+# Tools, Programs
 
 * **vim** - a programmers text editor.
 * **htop** - interactive process viewer.
@@ -37,6 +33,7 @@
 * **qrencode** - encode input data in a QR Code and save as a PNG image.
 * **vmstat** - report virtual memory statistics.
 * **taskset** - set or retrieve a process's CPU affinity.
+* **tr** - translate or delete characters.
 
 ## Environment
 
