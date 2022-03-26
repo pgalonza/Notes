@@ -36,7 +36,7 @@
 * **chkrootkit** - RootKit Hunter.
 * **qrencode** - encode input data in a QR Code and save as a PNG image.
 * **vmstat** - report virtual memory statistics.
-
+* **taskset** - set or retrieve a process's CPU affinity.
 
 ## Environment
 
@@ -47,10 +47,12 @@
 * **set** - display and change shell variables.
 
 ## Recovery
+
 * **testdisk** - recovery software.
 * **photorec** - recovery software.
 
 ## Network
+
 * **tcptrack** - monitor TCP connections on the network.
 * **trafshow** - full screen show network traffic.
 * **ifstat** - report InterFace statistics.
@@ -66,5 +68,6 @@
 * **mtr** - a network diagnostic tool.
 
 ## SIP
+
 * **sipp** - SIP testing tool and traffic generator.
 * **sngrep** - SIP Messages flow viewer.
