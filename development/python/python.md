@@ -235,6 +235,7 @@ max(0, <vvariable>)
 * **eval()** - function runs the python code.
 * **exec()** - method executes the dynamically created program.
 * **compile()** - method returns a Python code object from the source.
+* **os.sched_setaffinity()** - set the CPU affinity of the process identified by pid to mask.
 
 ## Statements
 
