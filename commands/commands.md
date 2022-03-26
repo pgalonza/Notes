@@ -839,6 +839,24 @@ Import key
 gpg --keyserver keys.gnupg.net --recv-keys key
 ```
 
+Generate key pair
+
+```bash
+gpg --full-gen-key
+```
+
+Show private keys
+
+```bash
+gpg --list-secret-keys --keyid-format LONG <email>
+```
+
+Export public key
+
+```bash
+gpg --armor --export <key_id>
+```
+
 ## Slmgr
 
 Install or replace the product key
