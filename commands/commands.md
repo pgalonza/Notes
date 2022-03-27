@@ -1216,15 +1216,6 @@ Renew certificate
 certbot renew --work-dir </var/lib/letsencrypt> --config-dir <where save data>
 ```
 
-## Chage
-
-Show password expiration date
-
-```bash
-
-chage -l <user_name>
-```
-
 ## Scl
 
 Activate python environment
