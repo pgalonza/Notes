@@ -35,6 +35,11 @@ Shebang indicate an interpreter for execution under UNIX / Linux operating syste
 #!
 ```
 
+```bash
+#!/bin/bash
+#!/bin/env bash 
+```
+
 ## Linux printers
 
 Connect Linux to a shared printer on Windows!
