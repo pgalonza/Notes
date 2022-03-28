@@ -65,10 +65,10 @@ Add remote repository
 git remote add <upstream_name> <url>
 ```
 
-Commit in upstream and create Merge Request
+Push in upstream and create Merge Request
 
 ```bash
-git commit -u <upstream_name> -o merge_request.create
+git push -u <upstream_name> -o merge_request.create
 ```
 
 ## Clone
