@@ -122,6 +122,13 @@ Zero if value is negative
 max(0, <vvariable>)
 ```
 
+Walrus
+
+```python
+if x := True:
+    print(x)
+```
+
 ## Packages and modules
 
 * **argparse** - parser for command-line options, arguments and sub-commands.
@@ -566,7 +573,7 @@ Class CThread(threading.Thread):
 Threading and queue
 
 ```python
-Class CThread(threading.Thread):
+class CThread(threading.Thread):
 
     def __init__(self, name, queue):
         threading.Thread.__init__(self)
@@ -1437,4 +1444,19 @@ class Person(ABC):
     @abstractmethod
     def attack(self):
         """"""
+```
+
+## Debugging
+
+Profiler
+
+```bash
+python -m cProfile <python file>
+```
+
+Breakpoint
+
+```python
+import pdb
+pdb.set_trace()
 ```
