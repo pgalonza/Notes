@@ -3,7 +3,8 @@
 ## Create private key and request
 
 OpenSSL configuration
-```
+
+```ini
 [ req ]
 default_bits = 2048
 distinguished_name= req_distinguished_name
@@ -36,6 +37,7 @@ DNS.2 = <alternative domain named>
 ```
 
 Command
-```
+
+```bash
 openssl req -new -newkey rsa:2048 -keyout <key name>.key -config openssl.cfg -out <request name>.csr
 ```
