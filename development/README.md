@@ -1,6 +1,10 @@
 # Development
 
-# Tools, Programs and Libraries
+* [Java](./java/java.md)
+* [Python](./python/python.md)
+* [YAML](./yaml/yaml.md)
+
+## Tools, Programs and Libraries
 
 * **postman** - the Collaboration Platform for API Development.
 
@@ -27,6 +31,6 @@ EBCDIC            |NL          |15       |21       |\025
 Get  user token
 * _https://vk.com/dev/permissions_
 
-```
+```text
 https://oauth.vk.com/authorize?client_id=<application_id>&scope=<permissions>&response_type=token
 ```
