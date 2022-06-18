@@ -1460,3 +1460,92 @@ Breakpoint
 import pdb
 pdb.set_trace()
 ```
+
+## Build package
+
+Upgrade pip
+
+```bash
+pip install --upgrade pip
+```
+
+Create _pyproject.toml_
+
+```toml
+[build-system]
+requires = ["setuptools>=60", "wheel"]
+build-backend = "setuptools.build_meta"
+```
+
+Create _setup.py_
+
+```python
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name='<package name>',
+    version='<package version>,
+    description='',
+    long_description='',
+    long_description_content_type="text/markdown",
+    author='<author name>',
+    author_email='<author email>',
+    maintainer='',
+    maintainer_email='',
+    url='<website url>',
+    download_url='',
+    packages=setuptools.find_packages(),
+    py_modules=['<module name>',],
+    classifiers= ['<describing>']
+    license='Apache License 2.0',
+    keywords=[],
+    platforms='any',
+    install_requires=[],
+    python_requires='>=3.7',
+    project_urls={},
+)
+```
+
+Create README.md and LICENSE
+
+Install build tools
+
+```bash
+pip install --upgrade build
+pip install --upgrade wheel
+pip install --upgrade setuptools
+```
+
+Build package
+
+```bash
+python -m build
+```
+
+Install twine
+
+```bash
+pip install --upgrade twine
+```
+
+Create _~/.pypirc_ for upload on gitlab
+
+```text
+[distutils]
+index-servers =
+    gitlab
+ 
+[gitlab]
+repository = https://<gitlab domain>/api/v4/projects/<project id>/packages/pypi
+username = <token name>
+password = <token>
+```
+
+Upload package
+
+```bash
+twine upload --repository gitlab dist/*
+```
