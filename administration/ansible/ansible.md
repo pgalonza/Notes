@@ -13,6 +13,12 @@ Other host by index
 {{ groups['<group1>'][groups['<group2>'].index(inveentory_hostname)] }}
 ```
 
+Variable of other host by index
+
+```text
+hostvars[groups['<group1>'][groups['<group2>'].index(inveentory_hostname)]].<variable name>
+```
+
 Get variable by name
 
 ```text
