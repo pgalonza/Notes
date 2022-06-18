@@ -71,6 +71,13 @@ Push in upstream and create Merge Request
 git push -u <upstream_name> -o merge_request.create
 ```
 
+Merge without checkout and push
+
+```bash
+git fetch . <src_branch>:<dst_branch>
+git push --all
+```
+
 ## Clone
 
 Clone large svn repository
