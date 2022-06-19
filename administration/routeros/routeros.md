@@ -5,6 +5,10 @@ Address on interface
 
 ## IPv6
 IPv6 MTU over PPPoE Interface
+IPv4 + ICMPv4 = 28
+IPv4 + TCP = 40
+IPv6 + ICMPv6 = 48
+IPv6 + TCP = 60
 ```
 chain=forward action=change-mss new-mss=clamp-to-pmtu passthrough=yes protocol=tcp tcp-flags=syn in-interface=6to4 tcp-mss=1221-65535 log-prefix=""
 chain=forward action=change-mss new-mss=clamp-to-pmtu passthrough=yes protocol=tcp tcp-flags=syn out-interface=6to4 tcp-mss=1221-65535 log-prefix=""
