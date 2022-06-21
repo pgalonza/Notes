@@ -2,6 +2,6 @@
 
 In this repository I publish my work for further evaluation of my skills.
 
-* [Administration](/administration/README.md)
 * [Commands](/commands/README.md)
 * [Development](/development/README.md)
+* [Operations](/operations/README.md)
