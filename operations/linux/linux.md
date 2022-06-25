@@ -190,3 +190,40 @@ Root without asking password
 ```bash
 <user_name> ALL=(ALL) NOPASSWD: ALL
 ```
+
+## SystemD
+
+### Units
+
+Create unit with wrapper
+_/etc/systemd/system/<service name>.service_
+
+```text
+[Unit]
+Description=<description>
+After=syslog.target network.target
+[Service]
+SuccessExitStatus=143
+User=<username>
+Group=<usergroup>
+
+Type=simple
+
+ExecStart=</path to wrapper>
+ExecStop=/bin/kill -15 $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```bash
+#!/bin/bash
+
+JAVA_HOME=<java path>
+WORKDIR=<service work dir>
+JAVA_OPTIONS="<java options>"
+APP_OPTIONS="<application options>"
+
+cd $WORKDIR
+eval exec "${JAVA_HOME}/bin/java" $JAVA_OPTIONS -jar <jar file>.jar $APP_OPTIONS
+```
