@@ -34,6 +34,9 @@
 * **vmstat** - report virtual memory statistics.
 * **taskset** - set or retrieve a process's CPU affinity.
 * **tr** - translate or delete characters.
+* **nvme-cli** -  storage command line interface utility.
+* **exec** - execute command in current process.
+* **tee** - read from standard input and write to standard output and files.
 
 ## Environment
 
