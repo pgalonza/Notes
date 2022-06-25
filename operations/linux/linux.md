@@ -196,7 +196,7 @@ Root without asking password
 ### Units
 
 Create unit with wrapper
-_/etc/systemd/system/<service name>.service_
+_/etc/systemd/system/\<service name\>.service_
 
 ```text
 [Unit]
