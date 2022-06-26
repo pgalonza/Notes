@@ -50,7 +50,7 @@ resource "yandex_compute_instance_group" "s-group1" {
       nat = true
     }
     metadata = {
-      ssh-keys = "ubuntu:${file("<ssh key path>")}"
+      ssh-keys = "ubuntu:${file("<ssh public key path>")}"
     }
 
   }
@@ -68,7 +68,7 @@ resource "yandex_compute_instance_group" "s-group1" {
   }
   scale_policy {
     fixed_scale {
-      size = 2
+      size = var.size
     }
   }
 
@@ -101,7 +101,7 @@ resource "yandex_compute_instance" "s-vm-1" {
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${file("<ssh key path>")}"
+    ssh-keys = "ubuntu:${file("<ssh public key path>")}"
   }
 }
 
@@ -143,6 +143,34 @@ resource "yandex_lb_network_load_balancer" "s-balancer-1" {
       }
     }
   }
+}
+
+resource "null_resource" "command" {
+  count = var.size
+
+  connection {
+    type = "ssh"
+    user = "ubuntu"
+    host = element(yandex_compute_instance_group.s-group1.instances[*].network_interface[0].nat_ip_address, count.index)
+    private_key = file("<ssh private key path>)
+  }
+
+  provisioner "file" {
+    source = "<script name>.sh"
+    destination = "<script name>.sh"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "chmod +x ~/<script name>.sh",
+      "sudo ~/<script name>.sh",
+    ]
+  }
+}
+
+variable "size" {
+  type = string
+  default = 2
 }
 
 output "front-internal" {
