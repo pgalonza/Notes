@@ -12,6 +12,14 @@ Boxes
 ~/.vagrant.d/boxes/
 ```
 
+Ansible provisioner
+
+```ruby
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "<playbook name>.yml"
+  end
+```
+
 ## Troubleshooting
 
 Vagrant was unable to mount VirtualBox shared folders
