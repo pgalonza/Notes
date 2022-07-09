@@ -123,6 +123,7 @@ Load one core
 
 ```bash
 yes > /dev/null &
+perl -e 'while(1){}'
 ```
 
 Clean file
