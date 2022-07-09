@@ -209,20 +209,20 @@ netstat -lantp | grep ESTABLISHED |awk '{print $5}' | awk -F: '{print $1}' | sor
 
 ## TAR
 
-Создание архива
+Create archive
 
 ```bash
-tar cvpzf archive.tar.gz /forpack
+tar -cvpzf archive.tar.gz /forpack
 ```
 
-Распаковка архива
+Unpack archive
 
 ```bash
-tar xfvz archive.tar.gz
-tar xfvj archive.tar.bz2 -C /var/www
+tar -xzvf archive.tar.gz
+tar -xfvj archive.tar.bz2 -C /var/www
 ```
 
-Просмотр содержимого
+View archive
 
 ```bash
 tar -tf archive.tar
