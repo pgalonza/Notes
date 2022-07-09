@@ -1045,6 +1045,12 @@ Formatting JSON answer
 curl --location --request GET 'https://site_name/?fields=parameter_name' --header 'Authorization: OAuth id' | python -m json.tool
 ```
 
+Download file
+
+```bash
+curl --location --remote-name https://<url to file>
+```
+
 ## Vim
 
 Delete and paste
