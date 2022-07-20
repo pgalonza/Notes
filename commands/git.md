@@ -78,6 +78,12 @@ git fetch . <src_branch>:<dst_branch>
 git push --all
 ```
 
+Remove file from all commits
+
+```bash
+git filter-branch --index-filter 'rm -f <file name> -- --all'
+```
+
 ## Clone
 
 Clone large svn repository
