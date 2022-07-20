@@ -163,50 +163,6 @@ find / -user 1005 -exec chown -h foo {} \;
 usermod -g <NEWGID> <LOGIN>
 ```
 
-## NETSTAT
-
-Список всех открытых портов (TCP)
-
-```bash
-netstat -at
-```
-
-Список всех открытых портов (UDP)
-
-```bash
-netstat -au
-```
-
-Список только прослушиваемых портов (TCP)
-
-```bash
-netstat -lt
-```
-
-Статистика по всем открытым портам
-
-```bash
-netstat -s
-```
-
-Подробное отображение списка с открытыми портами - добавлен PID и имя процессов
-
-```bash
-netstat -p
-```
-
-Объединим все ключи в полезную команду для просмотра открытых TCP/UDP портов с именами процессов (может понадобиться root-доступ)
-
-```bash
-netstat -ltupn
-```
-
-Список подключенных хостов
-
-```bash
-netstat -lantp | grep ESTABLISHED |awk '{print $5}' | awk -F: '{print $1}' | sort -u
-```
-
 ## TAR
 
 Create archive
@@ -1057,32 +1013,6 @@ Delete and paste
 
 ```bash
 ddP
-```
-
-## Du
-
-Show size of directories
-
-```bash
-du --max-depth=1 -h directory_name
-```
-
-Show of files
-
-```bash
-du -ah directory_name
-```
-
-Show directory size
-
-```bash
-du -sh directory_name
-```
-
-Show hidden directorys
-
-```bash
-du -hs .[^.]*
 ```
 
 ## Nohup
