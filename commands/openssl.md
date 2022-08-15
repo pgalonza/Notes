@@ -1,5 +1,11 @@
 # OpenSSL
 
+Connect with cipher
+
+```bash
+openssl s_client -connect <host name> -cipher <cipher name>
+```
+
 ## SSL/TLS
 
 Import Centos
@@ -19,7 +25,7 @@ update-ca-certificates
 Check
 
 ```bash
-openssl s_client -tls1_1 -starttls imap -connect host:143 -servername host_name
+openssl s_client -tls1_1 -starttls imap -connect <host name>:143 -servername <host name>
 ```
 
 View
