@@ -40,6 +40,10 @@ Shebang indicate an interpreter for execution under UNIX / Linux operating syste
 #!/bin/env bash 
 ```
 
+Bash profile scripts
+
+* _/etc/profile.d/_
+
 ## Linux printers
 
 Connect Linux to a shared printer on Windows!
@@ -226,4 +230,25 @@ APP_OPTIONS="<application options>"
 
 cd $WORKDIR
 eval exec "${JAVA_HOME}/bin/java" $JAVA_OPTIONS -jar <jar file>.jar $APP_OPTIONS
+```
+
+Docker
+
+```text
+[Unit]
+Description=<description>
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker exec %n stop
+ExecStartPre=-/usr/bin/docker rm %n
+ExecStartPre=/usr/bin/docker pull <docker image>
+ExecStart=/usr/bin/docker run --rm --name %n \
+    <docker image>
+
+[Install]
+WantedBy=default.target
 ```
