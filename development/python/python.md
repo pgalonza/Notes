@@ -1208,7 +1208,7 @@ def multiplier(y):
     def multiply_column(x):
         return y * x
 
-    return multiply
+    return multiply_column
 ```
 
 Decorator
