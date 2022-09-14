@@ -33,10 +33,10 @@ Remove paths only from the index
 git rm --cashed
 ```
 
-Discard changes
+Discard changes in file
 
 ```bash
-git checkout -- file_name
+git checkout <hash> -- file_name
 ```
 
 Replace the tip of the current branch by creating a new commit
@@ -139,4 +139,19 @@ Resets the index but not the working tree. Default
 
 ```bash
 git reset --mixed commit_hash
+```
+
+Resets using index
+
+```bash
+git reflog
+git reset HEAD@{<index>}
+```
+
+## Log
+
+Show log with graph
+
+```bash
+git log --decorate --graph --branches --oneline
 ```
