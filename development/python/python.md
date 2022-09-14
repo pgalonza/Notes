@@ -129,6 +129,23 @@ if x := True:
     print(x)
 ```
 
+F-string
+
+```python
+mode = dual
+f"{mode=}"
+```
+
+Function with attribute
+
+```python
+def example():
+    exammple.x = 1
+    return x
+
+example.x
+```
+
 ## Packages and modules
 
 * **argparse** - parser for command-line options, arguments and sub-commands.
@@ -234,7 +251,6 @@ if x := True:
 * **bytes.decode()** - return a string decoded from the given bytes.
 * **map()** - function applies a given function to each item of an iterable (list, tuple etc.) and returns a list of the results.
 * **filter()** - method filters the given sequence with the help of a function that tests each element in the sequence to be true or not.
-* **collections.defaultdict()** - dict subclass that calls a factory function to supply missing values.
 * **pickle** - python object serialization.
 * **any** - return True if any element of the iterable is true. If the iterable is empty, return False.
 * **sys.getrefcount(object)** - return the reference count of the object.
@@ -243,6 +259,16 @@ if x := True:
 * **exec()** - method executes the dynamically created program.
 * **compile()** - method returns a Python code object from the source.
 * **os.sched_setaffinity()** - set the CPU affinity of the process identified by pid to mask.
+* **functools.lru_cache()** - cache return values based on parameters.
+* **functools.singledispatch()** - create function for work with different types.
+* **functools.partial()** - return object which when called will behave like func.
+* **functools.wraps** - execute @functools.update_wrapper() as decorator.
+* **сollections.deque()** - Doubly Ended Queue.
+* **сollections.namedtuple()** - named tuples.
+* **сollections.Counter()** - count hashable objects.
+* **collections.ChainMap()** - groups multiple dicts or other mappings together to create a single, updateable view.
+* **collections.defaultdict()** - dict subclass that calls a factory function to supply missing values.
+* **collections.OrderedDict()** - dict which saves the order of adding keys.
 
 ## Statements
 
@@ -911,18 +937,6 @@ Note
 * **os.linesep** - The string used to separate (or, rather, terminate) lines on the current platform.
 * **linesep** - The string used to separate (or, rather, terminate) lines on the current platform.
 
-## Class
-
-* **hasattr()** - returns true if an object has the given named attribute and false if it does not.
-* **setattr()** - sets the value of the attribute of an object.
-* **getattr()** - returns the value of the named attribute of an object. If not found, it returns the default value provided to the function.
-* **delattr()** - deletes an attribute from the object.
-* **super()** - return a proxy object that delegates method calls to a parent or sibling class of type.
-* ****mro**** - This attribute is a tuple of classes that are considered when looking for base classes during method resolution.
-* **mro()** - This method can be overridden by a metaclass to customize the method resolution order for its instances.
-* ****repr**()** - unction returns the object representation in string format.
-* ****str**()** - method returns the string representation of the object.
-
 ## Nexus
 
 Import
@@ -1446,6 +1460,19 @@ class Person(ABC):
         """"""
 ```
 
+### Class
+
+* **hasattr()** - returns true if an object has the given named attribute and false if it does not.
+* **setattr()** - sets the value of the attribute of an object.
+* **getattr()** - returns the value of the named attribute of an object. If not found, it returns the default value provided to the function.
+* **delattr()** - deletes an attribute from the object.
+* **super()** - return a proxy object that delegates method calls to a parent or sibling class of type.
+* **mro** - This attribute is a tuple of classes that are considered when looking for base classes during method resolution.
+* **mro()** - This method can be overridden by a metaclass to customize the method resolution order for its instances.
+* **repr()** - unction returns the object representation in string format.
+* **str()** - method returns the string representation of the object.
+* **\_\_slots\_\_** = set special attributes.
+
 ## Debugging
 
 Profiler
@@ -1548,4 +1575,16 @@ Upload package
 
 ```bash
 twine upload --repository gitlab dist/*
+```
+
+## Good ptroctice
+
+Do not add mutable default arguments to functions
+
+```python
+def example(x, y=None):
+    if y is None:
+        y = []
+    x.append(x)
+    return x
 ```
