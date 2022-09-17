@@ -49,7 +49,8 @@ useradd --system --no-create-home -s /sbin/nologin user_name
 Delete user
 
 ```bash
-userdel user_name
+userdel <user name>
+userdel –rf <user name>
 ```
 
 ## Group

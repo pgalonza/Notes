@@ -1,63 +1,77 @@
 # Processes
 
 Look process by name
-```
+
+```bash
 pgrep
 ```
 
 Kill process by name
-```
-pkill
+
+```bash
+pkill <process name>
+killall <process name>
 ```
 
 Process tree
-```
+
+```bash
 pstree
 ```
 
 Show what process use device
-```
+
+```bash
 fuser -m /mnt
 ```
 
-Kill process by name
-```
-killall atom
-```
-
 Kill all user processes
-```
+
+```bash
 killall -u user
 ```
 
 Process information pseudo-filesystem
-```
+
+```bash
 /proc
 ```
 
 Show information about PID
-```
+
+```bash
 top -p <PID>
 ```
 
+Show open files of process
+
+```bash
+ls -l /proc/<PID>/fd/
+lsof | grep <PID>
+```
 
 ## Priority
+
 IO priority
-```
+
+```bash
 ionice -c3 coommand
 ```
 
 Start with priority
-```
+
+```bash
 nice -n 15 command
 ```
 
 Change the priority
-```
+
+```bash
 renice renice -n 15 -p pid
 ```
 
 ## PS
+
 Sort by RAM
 
 ```bash
@@ -76,6 +90,12 @@ Show processes
 
 ```bash
 ps -ef
+```
+
+Show processes with ASCII art process tree
+
+```bash
+ps -ef --forest
 ```
 
 Show pids of process

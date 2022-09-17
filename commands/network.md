@@ -21,13 +21,13 @@ Show all UDP ports
 netstat -au
 ```
 
-Show all open sockets with pid and name of proccess
+Show all open sockets with pid and name of process
 
 ```bash
 netstat -p
 ```
 
-Shown all listening sockets with pid and name of proccess
+Shown all listening sockets with pid and name of process
 
 ```bash
 netstat -ltupn

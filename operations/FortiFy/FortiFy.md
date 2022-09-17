@@ -19,6 +19,6 @@ fortifyclient -url <scc url> -authtoken <upload_derctypted_token> -file <file_na
 
 Limiting resource consumption
 
-* nice -n <priority_number> - set priority of proccess
+* nice -n <priority_number> - set priority of process
 * -Xmx<size_number>G - set maximum RAM size
 * com.fortify.sca.ThreadCount - set number of threads

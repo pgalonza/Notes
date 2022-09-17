@@ -252,3 +252,14 @@ ExecStart=/usr/bin/docker run --rm --name %n \
 [Install]
 WantedBy=default.target
 ```
+
+## Users and Groups
+
+Restricted Shells
+
+```bash
+useadd <user name> –s /bin/rbash
+mkdir –p /home/<user name>/bin
+cp /bin/ping /home/<user name>/bin
+ln –s /bin/ls /home/<user name>/bin
+```

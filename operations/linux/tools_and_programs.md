@@ -36,11 +36,11 @@
 * **tr** - translate or delete characters.
 * **nvme-cli** -  storage command line interface utility.
 * **exec** - execute command in current process.
+* **eval** - evaluate the specified commands.
 * **tee** - read from standard input and write to standard output and files.
 
 ## Environment
 
-* **eval** - evaluate the specified commands.
 * **env** - run a program in a modified environment.
 * **setenv** - change or add an environment variable.
 * **export** - set the export attribute for variables.
@@ -71,3 +71,8 @@
 
 * **sipp** - SIP testing tool and traffic generator.
 * **sngrep** - SIP Messages flow viewer.
+
+## SHELL
+
+* **fish** - friendly interactive shell.
+* **fzf** - general-purpose command-line fuzzy finder.

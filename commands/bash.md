@@ -137,3 +137,13 @@ Replace
 ```bash
 ${<source text>/<pettern>/<replacement>}
 ```
+
+Run in a single instance
+
+```bash
+[ "$(pidof -x $(basename $0))" != $$ ] && exit
+```
+
+```bash
+/usr/bin/flock -w 0 /tmp/test.lock -c '<file name or command>' || echo "cannot be executed an instance already runs"
+```

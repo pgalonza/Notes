@@ -244,7 +244,6 @@ Show the number of open files on your system
 
 ```bash
 lsof | wc -l
-lsof | grep 29384
 lsof /home
 ```
 
@@ -951,6 +950,12 @@ Copy with save all parameters
 
 ```bash
 cp -a /source /destination
+```
+
+Backup
+
+```bash
+cp <file name>.txt{,.bak}
 ```
 
 ## Shred

@@ -146,6 +146,49 @@ def example():
 example.x
 ```
 
+Many conditions
+
+```python
+fullness = 100
+distance = 200
+health = 70
+
+conditions = [
+    fullness == 100,
+    distance == 200,
+    health < 80,
+]
+
+if all(conditions):
+    pass
+
+if any(conditions):
+    pass
+```
+
+Merge dictionaries
+
+```python
+dict1 = {"healt": 100, "distance": 50}
+dict2 = {"health": 80, "enemys": 4}
+dict3 = {**dict1, **dict2}
+```
+
+Nested loops
+
+```python
+from itertools import chain
+
+elements_list = [
+    ['element1',],
+    ['element1',],
+    ['element1', 'element2',],
+]
+
+for element in chain.from_iterable(elements_list):
+    print(element)
+```
+
 ## Packages and modules
 
 * **argparse** - parser for command-line options, arguments and sub-commands.
@@ -210,6 +253,9 @@ example.x
 * **python-gitlab** - is a Python package providing access to the GitLab server API.
 * **jira** - Jira REST API from Python.
 * **nexus3-cli** - python-based command-line interface and API client for Sonatype's Nexus OSS 3.
+* **enum** - support for enumerations.
+* **tqdm** - console progress bar.
+* **pre-commit** - framework for managing and maintaining multi-language pre-commit hooks.
 
 ### Testing & Checking
 
@@ -1460,6 +1506,19 @@ class Person(ABC):
         """"""
 ```
 
+Dataclass
+
+```python
+from dataclasses import dataclass
+
+@dataclass(slots=False)
+class Example:
+    name: str
+    email_id: str
+    phone_number: str
+    address: str
+```
+
 ### Class
 
 * **hasattr()** - returns true if an object has the given named attribute and false if it does not.
@@ -1577,7 +1636,7 @@ Upload package
 twine upload --repository gitlab dist/*
 ```
 
-## Good ptroctice
+## Good practice
 
 Do not add mutable default arguments to functions
 
