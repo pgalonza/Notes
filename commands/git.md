@@ -84,6 +84,12 @@ Remove file from all commits
 git filter-branch --index-filter 'rm -f <file name> -- --all'
 ```
 
+Delete remote brannch
+
+```bash
+git push --delete origin <remote branch>
+```
+
 ## Clone
 
 Clone large svn repository
@@ -154,4 +160,5 @@ Show log with graph
 
 ```bash
 git log --decorate --graph --branches --oneline
+git log --all --decorate --graph --oneline
 ```
