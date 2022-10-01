@@ -114,6 +114,20 @@ Decryption password
 cat secret.txt | openssl enc -aes-256-cbc -md sha512 -a -d -pbkdf2 -iter 100000 -salt -pass pass:<salt>
 ```
 
+## Change password
+
+Remove passowrd
+
+```bash
+openssl rsa -in <src key>.key -out <dst key>.key
+```
+
+Change password
+
+```bash
+openssl rsa -aes256 -in <src key>.key -out <dst key>.key
+```
+
 ## Java Keystore
 
 Import certificate
