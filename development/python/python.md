@@ -189,6 +189,35 @@ for element in chain.from_iterable(elements_list):
     print(element)
 ```
 
+Multithreading or Multiprocessing
+
+* I/O or Network usag - Multithreading
+* GUI - Multithreading
+* CPU - Multiprocessing(if multiple cores)
+
+Mutable and Immutable data types
+
+* List - mutable
+* Dictionary - mutable
+* Set - mutable
+* Integer - immutable
+* String - immutable
+* Tuple - immutable
+* Float - immutable
+* Bool- immutable
+
+TypedDict
+
+```python
+from typing import TypedDict
+
+class SpaceShip(TypedDict, total=True):
+    fullness: int
+    health: int
+    speed: int
+    name: str
+```
+
 ## Functions and methods
 
 * **repr(object)** - return a string containing a printable representation of an object.
@@ -232,7 +261,8 @@ for element in chain.from_iterable(elements_list):
 * **functools.lru_cache()** - cache return values based on parameters.
 * **functools.singledispatch()** - create function for work with different types.
 * **functools.partial()** - return object which when called will behave like func.
-* **functools.wraps** - execute @functools.update_wrapper() as decorator.
+* **functools.wraps()** - execute @functools.update_wrapper() as decorator.
+* **functools.partial()** - allow us to fix a certain number of arguments of a function and generate a new function.
 * **сollections.deque()** - Doubly Ended Queue.
 * **сollections.namedtuple()** - named tuples.
 * **сollections.Counter()** - count hashable objects.
@@ -1073,7 +1103,7 @@ finally:
     print()
 ```
 
-Castom exception
+Custom exception
 
 ```python
 class ExampleError(Exception):
@@ -1090,6 +1120,35 @@ Raise an exception.
 
 ```python
 raise ExampleError('example error')
+```
+
+Cheatsheet
+
+```python
+def get_exception_example():
+    return ValueError
+
+exception_example = ValueError
+
+try:
+    pass
+except exception_example:
+    raise CustomException() from None
+
+try:
+    pass
+except get_exception_example() as exc:
+    raise CustomException() from exc
+
+try:
+    pass
+except :
+    raise
+
+try:
+    pass
+except Exception:
+    raise SyntaxError()
 ```
 
 ## Functional programming
@@ -1570,4 +1629,12 @@ def example(x, y=None):
         y = []
     x.append(x)
     return x
+```
+
+Private and Protected
+
+```python
+
+_variable_name = 'value'    # Protected
+___variable_name = 'value'   # Private
 ```
