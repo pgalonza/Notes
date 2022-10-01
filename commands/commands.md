@@ -485,7 +485,7 @@ Screenshot from RTSP
 ffmpeg -rtsp_transport tcp -i rtsp:// -f image2 -vf fps=fps=1 -t 0.001 -ss 00:00:3 tmp/image.png
 ```
 
-## Youtube-dl
+## Youtube-dl / yt-dlp
 
 Best video
 
@@ -1164,4 +1164,18 @@ Activate python environment
 
 ```bash
 scl enable rh-python<version_numver> bash
+```
+
+## Tail
+
+Terminate tail when proccess over
+
+```bash
+tail -f <file name> --pid=<PID>
+```
+
+Whait when file exist
+
+```bash
+tail -f <file name> --retry
 ```
