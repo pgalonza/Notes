@@ -10,3 +10,4 @@
 * **GitLens** - supercharges the Git capabilities built into Visual Studio Code.
 * **Ident-rainbow** - colorizes the indentation in front of your text alternating four different colors on each step.
 * **Ansible** - adds language support for Ansible.
+* **autoDocstring** - quickly generate docstrings for python functions.
