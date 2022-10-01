@@ -65,6 +65,9 @@
 * **enum** - support for enumerations.
 * **tqdm** - console progress bar.
 * **pre-commit** - framework for managing and maintaining multi-language pre-commit hooks.
+* **rich** - library for rich text and beautiful formatting in the terminal.
+* **bcrypt** - acceptable password hashing..
+* **cryptography** - cryptographic module.
 
 ## Testing & Checking
 
