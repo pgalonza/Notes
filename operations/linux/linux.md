@@ -263,3 +263,28 @@ mkdir –p /home/<user name>/bin
 cp /bin/ping /home/<user name>/bin
 ln –s /bin/ls /home/<user name>/bin
 ```
+
+## Reset password
+
+### Mount
+
+```bash
+sudo mount /dev/<device id> /mnt
+chroot /mnt
+passwd <user name>
+sudo umount -l /mnt
+```
+
+### Grub
+
+1. Choose edit in Grub menu
+
+2. Add in linux line
+
+    ```text
+    init=/bin/bash
+    ```
+
+3. Change ro to rw
+
+4. Remove single, splash and quiet words
