@@ -147,3 +147,9 @@ Run in a single instance
 ```bash
 /usr/bin/flock -w 0 /tmp/test.lock -c '<file name or command>' || echo "cannot be executed an instance already runs"
 ```
+
+Error if variable not exist
+
+```bash
+rm -rf /${dirname:?}
+```
