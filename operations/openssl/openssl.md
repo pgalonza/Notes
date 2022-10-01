@@ -5,16 +5,20 @@
 OpenSSL configuration
 
 ```ini
-[ req ]
+[req]
 default_bits = 2048
 distinguished_name= req_distinguished_name
 req_extensions = req_ext
+prompt = no
+utf8 = yes
 
-[ req_distinguished_name ]
-countryName	= Country Name (2 letter code)
-countryName_default	= <RU/EU..>
-countryName_min	= 2
-countryName_max	= 2
+[req_distinguished_name]
+countryName = Country Name (2 letter code)
+countryName_default = <RU/EU..>
+countryName_min = 2
+countryName_max = 2
+stateOrProvinceName = State or Province Name (full name)
+stateOrProvinceName_default = <name of city>
 localityName = Locality Name (eg, city)
 localityName_default = <name of city>
 organizationName = Organization Name (eg, company)
@@ -28,10 +32,10 @@ emailAddress = Email Address
 emailAddress_default = <contact email>
 emailAddress_max = 40
 
-[ req_ext ]
+[req_ext]
 subjectAltName = @alt_names
 
-[ alt_names ]
+[alt_names]
 DNS.1 = <alternative domain named>
 DNS.2 = <alternative domain named>
 ```
