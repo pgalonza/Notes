@@ -270,12 +270,12 @@ ln –s /bin/ls /home/<user name>/bin
 
 ```bash
 sudo mount /dev/<device id> /mnt
-chroot /mnt
+chroot /mnt /bin/bash
 passwd <user name>
 sudo umount -l /mnt
 ```
 
-### Grub
+## Grub
 
 1. Choose edit in Grub menu
 
@@ -288,3 +288,14 @@ sudo umount -l /mnt
 3. Change ro to rw
 
 4. Remove single, splash and quiet words
+
+## Chroot
+
+```bash
+mount /dev/<root> /mnt
+mount /dev/<boot> /mnt/boot
+mount --bind /dev /mnt/dev
+mount --bind /sys /mnt/sys
+mount --bind /proc /mnt/proc
+chroot /mnt /bin/bash
+````
