@@ -1179,3 +1179,23 @@ Whait when file exist
 ```bash
 tail -f <file name> --retry
 ```
+
+## Wine
+
+Run application with prefix
+
+Create prefix
+
+```bash
+env WINEPREFIX=<apth to prefix> winecfg
+```
+
+Update prefix
+
+```bash
+env WINEPREFIX=<apth to prefix> wineboot -u
+```
+
+```bash
+env WINEPREFIX=<apth to prefix> wine <path to appliaction>
+```
