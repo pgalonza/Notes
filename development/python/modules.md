@@ -68,6 +68,8 @@
 * **rich** - library for rich text and beautiful formatting in the terminal.
 * **bcrypt** - acceptable password hashing..
 * **cryptography** - cryptographic module.
+* **unicorn** - next Generation CPU Emulator Framework.
+* **capstone** - lightweight multi-platform, multi-architecture disassembly framework.
 
 ## Testing & Checking
 
