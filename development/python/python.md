@@ -1088,6 +1088,12 @@ Centered
 * truncate(size=None)- resize the stream to the given size in bytes
 * flush()- flush the write buffers of the stream if applicable
 
+In-memory binary stream
+
+```python
+file = io.BytesIO(<bytes>)
+```
+
 ## Exception
 
 Exception Handling
@@ -1637,4 +1643,36 @@ Private and Protected
 
 _variable_name = 'value'    # Protected
 ___variable_name = 'value'   # Private
+```
+
+## Emulation and Disassembling
+
+Run code in emulation
+
+```python
+from unicorn import *
+from unicorn.x86_const import *
+from unicorn.arm_const import *
+from unicorn.mips_const import *
+
+CODE = b"\x41\x4a\x66\x0f\xef\xc1"
+
+mu = Uc(UC_ARCH_X86, UC_MODE_32)
+mu.mem_map(0, <size of memmory>)
+mu.mem_write(0, CODE)
+
+mu.emu_start(0, len(CODE))
+```
+
+Disassembling
+
+```python
+from capstone import *
+
+CODE = b"\x41\x4a\x66\x0f\xef\xc1"
+
+md = Cs(CS_ARCH_X86, CS_MODE_64)
+for i in md.disasm(CODE, 0x1000):
+    print("0x%x:\t%s\t%s" %(i.address, i.mnemonic, i.op_str))
+
 ```
