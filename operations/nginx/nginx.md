@@ -42,3 +42,27 @@ ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;
 ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
 ssl_dhparam /etc/ssl/certs/dhparam.pem;
 ```
+
+## Reverse Proxy
+
+WebSocket
+
+```text
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    '' close;
+}
+
+upstream <upstream name> {
+    server <server>:<port>;
+}
+
+location /wsapp/ {
+    proxy_pass https://<upstream name>;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $connection_upgrade; # or Connection "upgrade";
+    proxy_set_header Host $host;
+}
+
+```
