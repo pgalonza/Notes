@@ -39,6 +39,15 @@ Print shared object dependencies
 ldd /path_to_object
 ```
 
+Missing files or libraries
+
+```bash
+strace -eopen <application name>
+LD_DEBUG=files <application name>
+readelf -a /usr/bin/<application name> | grep interp
+LD_DEBUG=all /lib64/ld-linux-x86-64.so.2 <application name>
+```
+
 Check nginx configuration
 
 ```bash
