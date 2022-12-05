@@ -9,7 +9,38 @@ Create topic
 View topic
 
 ```bash
-<path>/bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic 
+<path>/bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic <topic name>
+```
+
+View topics with overrides parameters
+
+```bash
+<path>/bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --topics-with-overrides
+```
+
+View partitions that are not consistent with the replica
+
+```bash
+<path>/bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --under-replicated-partitions
+```
+
+View partitions with no master replica
+
+```bash
+<path>/bin/kafka-topics.sh --bootstrap-server localhost:9092 --describe --unavailable-partitions
+```
+
+View consumer groups
+
+```bash
+<path>/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+```
+
+View consumer group infoprmation
+
+```bash
+<path>/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group <group name>
+<path>/bin/kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group <group name> --state
 ```
 
 Run consumer
