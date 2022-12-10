@@ -26,6 +26,7 @@ Check
 
 ```bash
 openssl s_client -tls1_1 -starttls imap -connect <host name>:143 -servername <host name>
+openssl s_client -showcerts -connect <host name>:443 -servername <host name>
 ```
 
 View
@@ -36,7 +37,7 @@ View
 openssl req -text -noout -verify -in domain.csr
 ```
 
-* Public CRT
+* Public sertificate
 
 ```bash
 openssl x509 -text -noout -in domain.crt
@@ -68,38 +69,6 @@ Convert DER to PEM
 openssl x509 -inform der -in <certigicate_name>.der -out <certigicate_name>.pem
 ```
 
-## Create self signed certifications
-
-Root key
-
-```bash
-openssl genrsa -des3 -out rootCA.key 4096
-```
-
-Root certificate
-
-```bash
-openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 1825 -out rootCA.pem
-```
-
-Domain key
-
-```bash
-openssl genrsa -out <domain_name>.key 2048
-```
-
-CSR
-
-```bash
-openssl req -new -key <domain_name>.key -out <domain_name>.csr
-```
-
-Create certificate
-
-```bash
-openssl x509 -req -in <domain_name>.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out <domain_name>.pem -days 365 -sha256
-```
-
 ## Encryption & Decryption
 
 Encrypt password
@@ -126,31 +95,4 @@ Change password
 
 ```bash
 openssl rsa -aes256 -in <src key>.key -out <dst key>.key
-```
-
-## Java Keystore
-
-Import certificate
-
-```bash
-keytool -import -alias <alias> -file <file_name>.cer -storetype <type> -keystore <keystore_file>
-```
-
-View
-
-```bash
-keytool -list -v -keystore <keystore_file>
-```
-
-Create keystore
-
-```bash
-keytool -genkey -alias tmp -keyalg RSA -keystore <keystore_file> -keysize 2048 -storetype <type>
-keytool -delete -alias tmp -keystore <keystore_file>
-```
-
-Change key password
-
-```bash
-keytool -keypasswd -alias <alias> -keystore <keystore_file>
 ```
