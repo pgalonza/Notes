@@ -107,5 +107,6 @@ openssl req -new -key <domain_name>.key -out <domain_name>.csr
 Create certificate
 
 ```bash
+openssl x509 -req -in <domain_name>.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out <domain_name>.pem -days 365 -sha256
 openssl x509 -req -in <domain_name>.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out <domain_name>.pem -days 365 -sha256 -extfile openssl.cfg -extensions 'v3_req'
 ```

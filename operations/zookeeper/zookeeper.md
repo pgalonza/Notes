@@ -1,6 +1,6 @@
 # Zookeeper
 
-## SSL
+## TLS
 
 Server
 

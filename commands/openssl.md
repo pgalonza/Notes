@@ -34,19 +34,19 @@ View
 * Request CSR
 
 ```bash
-openssl req -text -noout -verify -in domain.csr
+openssl req -text -noout -verify -in <request name>.csr
 ```
 
 * Public sertificate
 
 ```bash
-openssl x509 -text -noout -in domain.crt
+openssl x509 -text -noout -in <sertificate name>.crt
 ```
 
 * Private KEY
 
 ```bash
-openssl rsa -check -in domain.key
+openssl rsa -check -in <key name>.key
 ```
 
 Check the membership

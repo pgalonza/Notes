@@ -15,7 +15,9 @@
 * net.ipv4.tcp_max_syn_backlog: > 1024
 * net.core.netdev_max_backlog: > 1000
 
-## SSL
+## TLS
+
+### Connection
 
 Server
 
@@ -32,6 +34,52 @@ Client
 
 ```ini
 security.protocol=SSL
+ssl.truststore.location=<truststore path>
+ssl.truststore.password=<truststore password>
+```
+
+### Authentication
+
+Certification
+
+* !Generate certification without email if use DN
+
+```ini
+[req]
+default_bits = 2048
+default_md = sha256
+distinguished_name = req_distinguished_name
+prompt = no
+utf8 = yes
+
+[req_distinguished_name]
+countryName = <RU/EU..>
+stateOrProvinceName = <name of city>
+localityName = <name of city>
+organizationName = <name of organization>
+organizationalUnitName = <division name>
+commonName = <domain name if have not alternative names. !Required Field!>
+```
+
+Server
+
+```ini
+ssl.client.auth=required
+
+ssl.principal.mapping.rules= \
+RULE:^CN=([a-zA-Z0-9.]*).*$/$1/L ,\
+RULE:^CN=(.*?),OU=ServiceUsers.*$/$1/,\
+RULE:^CN=(.*?),OU=(.*?),O=(.*?),L=(.*?),ST=(.*?),C=(.*?)$/$1@$2/L,\
+RULE:^.*[Cc][Nn]=([a-zA-Z0-9.]*).*$/$1/L,\
+DEFAULT
+```
+
+Clinet
+
+```ini
+security.protocol=SSL
+ssl.keystore.location=<keystore path>
+ssl.keystore.password=<keystore password>
 ssl.truststore.location=<truststore path>
 ssl.truststore.password=<truststore password>
 ```
@@ -84,7 +132,7 @@ authorizer.class.name=kafka.security.authorizer.AclAuthorizer
 allow.everyone.if.no.acl.found=false
 super.users=User:admin
 
-# Only if 1st start
+# Only before 1st start
 zookeeper.set.acl=true
 ```
 
