@@ -136,6 +136,37 @@ super.users=User:admin
 zookeeper.set.acl=true
 ```
 
+## OAUTHBEARER
+
+Server
+
+File _server.propeties_
+
+```ini
+sasl.enabled.mechanisms=SCRAM-SHA-512,SCRAM-SHA-256,OAUTHBEARER
+
+listener.name.sasl_ssl.sasl.enabled.mechanisms=OAUTHBEARER,SCRAM-SHA-512,SCRAM-SHA-256
+listener.name.sasl_ssl.oauthbearer.sasl.server.callback.handler.class=org.apache.kafka.common.security.oauthbearer.secured.OAuthBearerValidatorCallbackHandler
+listener.name.sasl_ssl.oauthbearer.sasl.jaas.config=org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginModule required;
+sasl.oauthbearer.expected.audience=account
+sasl.oauthbearer.token.endpoint.url=https://<Keycloak host>:8443/realms/<realm name>/protocol/openid-connect/token
+sasl.oauthbearer.jwks.endpoint.url=https://<Keycloak host>:8443/realms/<realm name>/protocol/openid-connect/certs
+sasl.oauthbearer.expected.issuer=https://<Keycloak host>:8443/realms/<realm name>
+```
+
+Client
+
+```ini
+security.protocol=SASL_SSL
+sasl.mechanism=OAUTHBEARER
+sasl.login.callback.handler.class=org.apache.kafka.common.security.oauthbearer.secured.OAuthBearerLoginCallbackHandler
+sasl.oauthbearer.token.endpoint.url=https://<Keycloak host>:8443/realms/<realm name>/protocol/openid-connect/token
+
+sasl.jaas.config=org.apache.kafka.common.security.oauthbearer.OAuthBearerLoginModule required \
+clientId="<client id>" \
+clientSecret="<client secret>";
+```
+
 ## Zookeeper
 
 ### Sasl
