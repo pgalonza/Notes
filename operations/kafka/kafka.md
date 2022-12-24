@@ -43,6 +43,7 @@ ssl.truststore.password=<truststore password>
 Certification
 
 * !Generate certification without email if use DN
+* If email exist, use principal "1.2.840.113549.1.9.1=#\<email in hex\>,CN=,OU=,O=,L=,ST=,C="
 
 ```ini
 [req]
@@ -137,6 +138,8 @@ zookeeper.set.acl=true
 ```
 
 ## OAUTHBEARER
+
+[KIP-768: Extend SASL/OAUTHBEARER with Support for OIDC](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=186877575)
 
 Server
 
