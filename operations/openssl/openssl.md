@@ -21,7 +21,6 @@ localityName = <name of city>
 organizationName = <name of organization>
 organizationalUnitName = <division name>
 commonName = <domain name if have not alternative names. !Required Field!>
-emailAddress = <contact email>
 
 [v3_req]
 subjectAltName = @alt_names
