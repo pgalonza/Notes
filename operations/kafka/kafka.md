@@ -1,5 +1,7 @@
 # Kafka
 
+Optimizations
+
 * File system: XFS
 * Mount option: noatime
 * vm.swappinness: 1
@@ -182,4 +184,11 @@ Client {
     username="<user>"
     password="<password>";
 };
+```
+
+## Replication
+
+```properties
+acks = all
+min.insync.replicas = <number of replicas < replication.factor>
 ```

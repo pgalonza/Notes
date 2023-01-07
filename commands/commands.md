@@ -249,6 +249,12 @@ Show allocated file descriptors, not use file descriptors, maximum of file descr
 cat /proc/sys/fs/file-nr
 ```
 
+Show proccess descriptors
+
+```bash
+ls -l /proc/<number of proccess>/fd
+```
+
 Show the number of open files on your system
 
 ```bash

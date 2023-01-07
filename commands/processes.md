@@ -76,20 +76,26 @@ Sort by RAM
 
 ```bash
 ps aux | sort -nk 4
-ps aux —sort=%mem | grep -v 'root' | head -n 35
+ps aux --sort=%mem | grep -v 'root' | head -n 35
 ```
 
 Sort by CPU
 
 ```bash
 ps aux | sort -nk 3
-ps aux —sort=%cpu | grep -v 'root' | head -n 35
+ps aux --sort=%cpu | grep -v 'root' | head -n 35
 ```
 
 Show processes
 
 ```bash
 ps -ef
+```
+
+Show RAM and CPU
+
+```bash
+ps -eo cmd,%cpu,%mem
 ```
 
 Show processes with ASCII art process tree
