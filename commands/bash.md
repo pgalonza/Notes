@@ -71,46 +71,43 @@ echo $!
 Executing command for each row
 
 ```bash
-cat file_name.txt | while read in; do command_line "$in"; done
+cat file_name.txt | while read in; do <command_line> "$in"; done
 ```
 
 Sequential execution of commands
 
 ```bash
-command_1; command_2; command_3
+<command_1>; <command_2>; <command_3>
 ```
 
 Parallel execution of commands
 
 ```bash
-(command_1 &); (command_2 &)
+(<command_1> &); (<command_2> &)
 ```
 
 Output one command as an argument to another
 
 ```bash
-command_1 $(command_2)
+<command_1> $(<command_2>)
 ```
 
 Execute the command without history.
 
 ```bash
-space command
+space <command>
 ```
 
 Automatic answer
 
 ```bash
-yes/no | command
+yes/no | <command>
 ```
 
 Сommand replay
 
 ```bash
-while true
-do
-command
-done;
+watch <command>
 ```
 
 Execute the command in another directory and return
@@ -152,4 +149,30 @@ Error if variable not exist
 
 ```bash
 rm -rf /${dirname:?}
+```
+
+If in one line
+
+```bash
+if [[ <condition> ]]; then <command>; else <command>; fi
+[[ <condition> ]] && <command>
+test <condition> && <command>
+```
+
+For in one line
+
+```bash
+for <variable> in <list>; do <command>; done
+```
+
+No finish if error
+
+```bash
+<command> || true
+```
+
+Separator
+
+```bash
+IFS=$"<value>"
 ```
