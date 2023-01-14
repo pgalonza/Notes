@@ -1143,14 +1143,6 @@ Show what process use port
 lsof -i :<port_number>
 ```
 
-## Journalctl
-
-Unit logs in real time
-
-```bash
-journalctl -fu <unit_name>
-```
-
 ## Certbot
 
 Create certificate

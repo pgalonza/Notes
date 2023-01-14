@@ -50,6 +50,31 @@ ls -l /proc/<PID>/fd/
 lsof | grep <PID>
 ```
 
+Show namespaces
+
+```bash
+ls -l /prod/proc/<PID>/ns/
+```
+
+Show maps
+
+```bash
+cat /proc/<PID>/uid_map
+cat /proc/<PID>/gid_map
+```
+
+Run in napeespace
+
+```bash
+unshare <parameters> <program>
+```
+
+Show cgroups
+
+```bash
+cat /proc/<PID>/cgroup
+```
+
 ## Priority
 
 IO priority
