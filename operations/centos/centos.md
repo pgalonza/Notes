@@ -204,20 +204,6 @@ server_args             = -u tftpd -s /var/lib/tftpboot --verbose/-vvv
 disable                 = no
 ```
 
-## Django/CMS
-```
-pip install --upgrade virtualenv
-virtualenv env
-source env/bin/activate
-(env) $ pip install djangocms-installer
-(env) $ djangocms mysite
-yum install python3-devel mysql-devel
-pip3.6 install mysqlclient
-python3.6 manage.py migrate
-python3.6 manage.py runserver
-python3.6 manage.py startapp firstapp
-```
-
 ## PHP-FPM
 ```
 rpm -Uhv http://rpms.remirepo.net/enterprise/remi-release-7.rpm
@@ -238,65 +224,6 @@ Automatic remove old kernels
 _/etc/yum.conf_
 ```
 installonly_limit=3
-```
-
-## Systemd
-### Searach problem
-Show problems
-```
-systemctl --failed
-```
-
-Get pid
-```
-systemctl status systemd-modules-load
-```
-
-Show problems by pid
-```
-journalctl _PID=
-```
-
-## SSL
-### Certificate Authority (CA)
-Install openssl
-```
-yum/dnf install -y openssl
-```
-
-Generate a private key
-```
-cd /etc/pki/CA/private/
-openssl genrsa -aes128 -out name-CA.key 2048/4096
-```
-
-Create a Certificate Authority (CA) certificate
-```
-openssl req -new -x509 -days 1825 \
--key /etc/pki/CA/private/name-CA.key \
--out /etc/pki/CA/certs/name-CA.crt
-```
-
-Generate a CSR (Certificate Signing Request) for server1
-```
-openssl genrsa -out /etc/pki/tls/private/web-01.key 1024/2048/4096
-openssl req -new -key /etc/pki/tls/private/web-01.key \
--out /etc/pki/tls/server1.csr
-scp /etc/pki/tls/server1.csr server-ca:~/server1.csr
-```
-
-Sign the CSR by Certificate Authority (CA)
-```
-openssl x509 -req -in server1.csr \
--CA /etc/pki/CA/certs/name-CA.crt \
--CAkey /etc/pki/CA/private/name-CA.key \
--CAcreateserial \
--out server1.crt \
--days 1828
-
-cat coturn1.key coturn1.crt > coturn1.pem
-
-scp server1.* server1:/etc/pki/tls/certs/
 ```
 
 ## SysRq
