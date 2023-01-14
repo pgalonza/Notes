@@ -197,6 +197,45 @@ Root without asking password
 
 ## SystemD
 
+### Nspawn
+
+Create container system files
+
+```bash
+mount rootfs.img /var/lib/machines/<container name>
+```
+
+Start container
+
+```bash
+systemctl start systemd-nspawn@<container name>
+```
+
+Connect to container
+
+```bash
+systemd-run -t -M <container name> /bin/bash
+```
+
+Show status
+
+```bash
+machinectl status <container name>
+```
+
+Start on boot
+
+```bash
+machinectl enable <container name>
+```
+
+Set quotas
+
+```bash
+systemctl set-property systemd-nspawn@<container name> CPUQuota=200%
+systemctl set-property systemd-nspawn@<container name> MemoryMax=2G
+```
+
 ### Units
 
 Create unit with wrapper
