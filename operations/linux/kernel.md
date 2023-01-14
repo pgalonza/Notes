@@ -3,7 +3,7 @@
 Set dump directory
 
 ```text
-kernel.core_pattern = <path>
+kernel.core_pattern = <path>/core.%u.%e.$p
 ```
 
 ## Make and build
