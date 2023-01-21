@@ -179,3 +179,9 @@ top -b -n 1
 strace -f -tt -s <number of symbols> -o <log file> <application name>
 pgrep <name of application> | awk '{print "-p " $1}' | xargs strace -f -tt -s <number of symbols> -o <log file> 
 ```
+
+## GDB
+
+```bash
+gdb <program or dump>
+```
