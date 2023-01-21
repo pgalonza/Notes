@@ -71,6 +71,16 @@ Show inodes
 df -i
 ```
 
+Make emty files with size
+
+```bash
+dd if=/dev/zero of=output.dat  bs=24M  count=1
+dd if=/dev/zero of=output.dat  bs=1M  count=24
+truncate -s 10M file.txt
+fallocate -l $((10*1024*1024)) file.txt
+head -c 10MB /dev/urandom > file.txt
+```
+
 ## Du
 
 Show size of directories
