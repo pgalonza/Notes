@@ -155,6 +155,33 @@ Removing interface
 ip link set interface_name nomaster
 ```
 
+### VRRP
+
+```text
+global_defs {
+    enable_script_security
+    router_id <name>
+}
+
+vrrp_instance Instance1 {
+    state <MASTER/BACKUP>
+    interface <interface name>
+    virtual_router_id <id, must be same>
+    priority <0-255>
+    advert_int 1
+    authentication {
+        auth_type PASS
+        auth_pass <password>
+    }
+    unicast_peer {
+        <ip other vrrp host>
+    }
+    virtual_ipaddress {
+        <virtual ip>/<mask> dev <interface name> label <interface name>:vip
+    }
+}
+```
+
 ## Sudoers
 
 Root without asking password
