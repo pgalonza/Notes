@@ -129,10 +129,10 @@ ip link set dev ethX.vlan_id up
 
 ### MACVLAN
 
-Adding new makvlan interface
+Adding new macvlan interface
 
 ```bash
-ip link add link ethX makvlan_name type macvlan mode bridge
+ip link add link ethX macvlan_name type macvlan mode bridge
 ```
 
 ### Bridge
