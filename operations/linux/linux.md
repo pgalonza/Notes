@@ -233,6 +233,15 @@ systemctl set-property systemd-nspawn@<container name> MemoryMax=2G
 
 ### Units
 
+OOMKiller
+
+```text
+OOMScoreAdjust=1000
+ExecStartPost=/bin/bash -c "echo <memory>G > /sys/fs/cgroup/memory/system.slice/php-fpm.service/memory.memsw.limit_in_bytes"
+ExecStartPost=/bin/bash -c "echo 0 > /sys/fs/cgroup/memory/system.slice/php-fpm.service/memory.swappiness"
+MemoryLimit=<memory>G
+```
+
 Create unit with wrapper
 _/etc/systemd/system/\<service name\>.service_
 
