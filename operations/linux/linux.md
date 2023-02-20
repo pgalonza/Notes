@@ -163,7 +163,22 @@ global_defs {
     router_id <name>
 }
 
-vrrp_instance Instance1 {
+vrrp_script <block name> {
+    script "<command>"
+    interval <interval in seconds>
+    weight <value for priority -253..253>
+    user nobody
+}
+
+vrrp_track_process <block name> {
+    process <name of proccess>
+    interval <interval in seconds>
+    weight <value for priority -253..253>
+    quorum <minimum number of processes for success>
+    quorum_max <maximum number of processes for success>
+}
+
+vrrp_instance <block name> {
     state <MASTER/BACKUP>
     interface <interface name>
     virtual_router_id <id, must be same>
@@ -179,6 +194,15 @@ vrrp_instance Instance1 {
     virtual_ipaddress {
         <virtual ip>/<mask> dev <interface name> label <interface name>:vip
     }
+
+    track_process {
+        <block name>
+    }
+
+   track_script {
+       <block name>
+    }
+
 }
 ```
 
