@@ -107,6 +107,9 @@ _/etc/sysconfig/network_
 NETWORKING_IPV6=yes
 ```
 
+IPv6 and IPv4 priority
+_/etc/gai.conf_
+
 ### VLAN
 
 Adding new virtual interface
