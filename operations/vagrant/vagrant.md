@@ -34,3 +34,9 @@ On Guest OS
 ```bash
 sudo mount -t vboxsf -o uid=1000,gid=1000,_netdev <tag_name> <dir_dst> 
 ```
+
+VBoxClient: error while loading shared libraries
+
+```bash
+dnf install libX11-devel libXt-devel libXext-devel libXmu-devel kernel-headers kernel-devel xorg-x11-drivers xorg-x11-utils
+```
