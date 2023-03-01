@@ -55,3 +55,9 @@ Show the status of modules in the Linux Kernel
 ```bash
 lsmod
 ```
+
+Show Posix IPC
+
+```bash
+ipcs -ma
+```
