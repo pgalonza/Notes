@@ -14,6 +14,9 @@ function backup() {
   ssh $LOGIN@$1 "/system/backup/save dont-encrypt=yes name=$2-$DATE.backup"
   scp $LOGIN@$1:~/$2-$DATE.backup .
   ssh $LOGIN@$1 "/file remove $2-$DATE.backup"
+  ssh $LOGIN@$1 "export terse verbose file=$2-$DATE"
+  scp $LOGIN@$1:~/$2-$DATE.rsc .
+  ssh $LOGIN@$1 "/file remove $2-$DATE.rsc"
 }
 
 for name in ${devicesName[@]}; do
