@@ -41,6 +41,7 @@ openssl req -text -noout -verify -in <request name>.csr
 
 ```bash
 openssl x509 -text -noout -in <sertificate name>.crt
+openssl pkcs12 -in <sertificate name>.p12 -node | openssl x509 -text -noout
 ```
 
 * Private KEY
