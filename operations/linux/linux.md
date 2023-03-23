@@ -388,3 +388,18 @@ net.ipv4.icmp_ignore_bogus_error_messages=1
 # Make sure spoofed packets get logged
 net.ipv4.conf.all.log_martians = 1
 ```
+
+## Locale
+
+Set global
+
+```bash
+localectl set-locale <locale variable>=<locale value>
+vim /etc/locale.conf
+```
+
+Set for user
+
+```bash
+export <locale variable>=<locale value>
+```
