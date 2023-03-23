@@ -2,6 +2,7 @@
 
 Executable path
 _~/.config/fish/config.fish_
-```
-set PATH $PATH
+
+```bash
+set -a PATH $PATH
 ```
