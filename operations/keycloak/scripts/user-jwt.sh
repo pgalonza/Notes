@@ -1,8 +1,10 @@
 #!/bin/bash
 
+HOST=<>
+REALM=<>
 CLIENT_ID=<client>
 CLIENT_SECRET='<secret>'
-URL=https://<keycloak host>/realms/<realm name>/protocol/openid-connect/token
+URL=https://$HOST/realms/$REALM/protocol/openid-connect/token
 SCOPE=<>
 USERNAME=<>
 PASSWORD=<>
@@ -20,5 +22,20 @@ curl -v \
 --header "content-type: application/x-www-form-urlencoded" \
 --data "grant_type=password" \
 --data "scope=$SCOPE" \
+--data "username=$USERNAME" \ 
+--data "password=$PASSWORD" | jq -r .access_token
+
+curl -v \
+--cacert ./rootCA.pem \
+--silent \
+--request POST \
+--url $URL \
+--header "accept: application/json" \
+--header "cache-control: no-cache" \
+--header "content-type: application/x-www-form-urlencoded" \
+--data "grant_type=password" \
+--data "scope=$SCOPE" \
+--data "clinet_id=$CLIENT_ID" \
+--data "client_secret=$CLIENT_SECRET"
 --data "username=$USERNAME" \ 
 --data "password=$PASSWORD" | jq -r .access_token
