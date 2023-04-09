@@ -176,3 +176,11 @@ Separator
 ```bash
 IFS=$"<value>"
 ```
+
+Debug
+
+```bash
+#!/bin/bash
+
+trap 'echo "# $BASH_COMMAND";read' DEBUG
+```
