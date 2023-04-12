@@ -61,3 +61,11 @@ Show Posix IPC
 ```bash
 ipcs -ma
 ```
+
+Get distribution ID
+
+<https://unix.stackexchange.com/a/432819/440845>
+
+```bash
+awk -F= '$1=="ID" { print $2 ;}' /etc/os-release
+```
