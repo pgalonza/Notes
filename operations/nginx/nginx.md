@@ -99,6 +99,16 @@ upstream <upstream name> {
 Virtual domain
 
 ```text
+map $http_host $http_host_valid {
+    default false;
+    <host name> true;
+}
+
+map $host $host_valid {
+    default false;
+    <host name> true;
+}
+
 server {
     return 404;
 }
@@ -130,6 +140,14 @@ server {
     add_header X-Content-Type-Options nosniff;
     add_header X-XSS-Protection "1; mode=block";
     add_header Content-Security-Policy "default-src 'self'";
+
+    if ( $http_host_valid == false ) {
+        return 418;
+    }
+
+    if ( $host_valid == false ) {
+        return 418;
+    }
 }
 
 # Not work with keycloak
