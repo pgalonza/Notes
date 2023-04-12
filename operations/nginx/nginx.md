@@ -20,6 +20,17 @@ location /heartbeat {
 }
 ```
 
+Forward local and remote ports
+
+```text
+map http_host $f_port {
+    "~^.*\:<port number>" $server_port;
+    default 443;
+}
+
+proxy_set_header X-Forwarded-Port $f_port;
+```
+
 ## FastCGI
 
 Time out
