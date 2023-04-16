@@ -1,6 +1,7 @@
 baseURL: 'https://github.evaron.ru/Notes/'
 languageCode: 'en-us'
-title: 'Notes'
+title: 'Notes by Peter Galonza'
+enableRobotsTXT: true
 theme: 'hugo-book'
 params:
   BookSection: '*'
