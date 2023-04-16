@@ -1,0 +1,6 @@
+baseURL: 'https://github.evaron.ru/Notes/'
+languageCode: 'en-us'
+title: 'Notes'
+theme: 'hugo-book'
+params:
+  BookSection: '*'
