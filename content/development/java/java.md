@@ -1,7 +1,6 @@
 ---
 title: "Java"
 draft: false
-bookCollapseSection: true
 ---
 
 set timezone in logback

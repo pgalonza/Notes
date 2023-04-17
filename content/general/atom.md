@@ -1,5 +1,9 @@
-# Atom
-```
+---
+title: "Atom"
+draft: false
+---
+
+```text
 source.asciidoc, source.gfm, text.git-commit, text.plain, text.plain.null-grammar
 ```
 

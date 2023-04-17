@@ -1,4 +1,7 @@
-# Gradle
+---
+title: "Gradle"
+draft: false
+---
 
 Download dependencies from nexus for cashing
 

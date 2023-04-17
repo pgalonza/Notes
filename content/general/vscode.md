@@ -1,4 +1,7 @@
-# Visual Studio Code
+---
+title: "Visual Studio Code"
+draft: false
+---
 
 ## Extensions
 

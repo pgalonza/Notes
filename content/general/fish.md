@@ -1,4 +1,7 @@
-# Fish-shell
+---
+title: "Fish-shell"
+draft: false
+---
 
 Executable path
 _~/.config/fish/config.fish_

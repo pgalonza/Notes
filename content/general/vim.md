@@ -1,4 +1,7 @@
-# Vim
+---
+title: "VIM"
+draft: false
+---
 
 Enable syntax
 _~/.vimrc_

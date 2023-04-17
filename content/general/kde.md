@@ -1,4 +1,7 @@
-# KDE
+---
+title: "KDE"
+draft: false
+---
 
 Path for AppImage
 _*~/.local/bin/_

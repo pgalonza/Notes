@@ -1,4 +1,7 @@
-# Lutris
+---
+title: "Lutris"
+draft: false
+---
 
 Create play file
 
