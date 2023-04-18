@@ -5,7 +5,6 @@ draft: false
 
 ## Core FastAGI Server is not running
 
-
 ```bash
 fwconsole setting LAUNCH_AGI_AS_FASTAGI 1
 ```
@@ -18,7 +17,7 @@ _/var/www/html/admin/assets/js/pbxlib*_
 function isCorrectLengthExtensions(s)
 ```
 
-##  Activation of text message
+## Activation of text message
 
 _sip_general_custom.conf_
 

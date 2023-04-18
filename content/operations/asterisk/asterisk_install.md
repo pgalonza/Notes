@@ -161,7 +161,7 @@ make config
 ```
 
 LibPRI
-`
+
 ```bash
 make
 make install
