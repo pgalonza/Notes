@@ -170,49 +170,6 @@ Maximum number of open sockets waiting to be connected
 net.core.somaxconn =
 ```
 
-## PAM limits configuration
-
-_/etc/security/limits.conf_, _/etc/security/_
-
-
-```text
-* soft nproc 65535
-* hard nproc 65535
-* soft nofile 65535
-* hard nofile 65535
-```
-
-_/etc/systemd/system.conf_, _/etc/systemd/user.conf_,  _/etc/systemd/<systemd_unit>/override.conf_
-
-```text
-DefaultLimitNOFILE=
-```
-
-_/lib/systemd/system/<service>_, _/etc/systemd/*_, _/usr/lib/systemd/system/<service>_
-
-```text
-LimitNOFILE=
-```
-
-_override.conf_
-
-```bash
-mkdir /etc/systemd/system/service_name.service.d/
-```
-
-```ini
-[Service]
-LimitNOFILE=100000
-```
-
-## Swap
-
-_/etc/sysctl.conf_
-
-```text
-vm.swappiness=10
-```
-
 ## Environment
 
 _/etc/environment_
