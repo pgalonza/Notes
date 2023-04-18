@@ -17,6 +17,13 @@ Lock tables
 FLUSH TABLES WITH READ LOCK
 ```
 
+Backup tools
+
+```bash
+mysqldump -u${USER} -p${PASSWORD} --skip-extended-insert <database> | gzip > ${DIR}/<database>${NAME}.sql.gz
+mariabackup --backup --target-dir=${DIR}/${NAME} --user=${USER} --password=${PASSWORD}
+```
+
 ## Optimization
 
 The number of open files
