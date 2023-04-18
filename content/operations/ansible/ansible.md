@@ -81,5 +81,42 @@ def main()
 
 if __name__ == "__main__":
   main()
+```
 
+Execute sudo in systemd module for work with sudoers
+
+in main function
+
+```python
+argument_spec=dict(
+    ...
+    root_privileges=dict(type='bool'), # <- add parameter
+),
+```
+
+variable with sudo or empty string, it concatenate with commands below
+
+```bash
+if module.params['root_privileges']:
+    root_command = "sudo "
+else:
+    root_command = ""
+```
+
+add root_command to all functions module.run_command
+
+```bash
+module.run_command("%s%s daemon-reload" % (root_command, systemctl))
+module.run_command("%s%s daemon-reexec" % (root_command, systemctl))
+module.run_command("%s%s show '%s'" % (root_command, systemctl, unit))
+module.run_command("{root_command}{systemctl} list-unit-files '{unit_search}*'".format(systemctl=systemctl, unit_search=unit_search))
+module.run_command("{root_command}{systemctl} is-active '{unit}'".format(root_command=root_command, systemctl=systemctl, unit=unit))
+module.run_command("%s%s is-enabled '%s'" % (root_command, systemctl, unit))
+module.run_command("%s%s list-unit-files '%s'" % (root_command, systemctl, unit))
+module.run_command(root_command+systemctl, check_rc=True)
+module.run_command("%s%s is-enabled '%s'" % (root_command, systemctl, unit))
+module.run_command("%s%s %s '%s'" % (root_command, systemctl, action, unit))
+module.run_command("%s%s is-enabled '%s' -l" % (root_command, systemctl, unit))
+module.run_command("%s%s %s '%s'" % (root_command, systemctl, action, unit))
+module.run_command("%s%s %s '%s'" % (root_command, systemctl, action, unit))
 ```
