@@ -3,6 +3,12 @@ title: "Active directory"
 draft: false
 ---
 
+Search inactive users
+
+```powershell
+Search-ADAccount –UsersOnly –AccountInActive –TimeSpan 40:00:00:00 –ResultPageSize 2000 –ResultSetSize $null | ?{$_.Enabled –eq $True} | Select-Object Name, SamAccountName, DistinguishedName | Export-CSV “C:\Temp\InActiveUsers.CSV” –NoTypeInformation -Encoding UTF8
+```
+
 ## Flags
 
 ### UserAccountControl
