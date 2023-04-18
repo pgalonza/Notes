@@ -1,3 +1,11 @@
+---
+title: "RaspberryPI"
+draft: false
+---
+
+Grid of cameras
+
+```bash
 #!/bin/bash
 setterm -cursor off
 #stream1
@@ -10,3 +18,4 @@ if [ "$st1" = "stream1" ];
   echo "Starting Stream1..";
   screen -dmS stream1 sh -c 'omxplayer --adev hdmi --aidx -1 --live --refresh --video_queue 8 --fps 20 --win "0 0 1440 810" rtsp://'; #x1 y1 x2 y2
 fi
+```

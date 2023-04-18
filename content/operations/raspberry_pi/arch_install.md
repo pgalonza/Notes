@@ -1,5 +1,5 @@
 ---
-title: "RaspberryPI"
+title: "Install Arch"
 draft: false
 ---
 
