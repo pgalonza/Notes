@@ -30,3 +30,26 @@ Connect
 ```bash
 ssh -XYC <user_name>@<host_name>
 ```
+
+## Configuration
+
+```text
+Host *
+ForwardAgent no
+ForwardX11 no
+ForwardX11Trusted yes
+Protocol 2
+ServerAliveInterval 60
+ServerAliveCountMax 30
+
+Host <alias>
+  HostName <host_name>
+  User <user_name>
+  port 22
+  IdentityFile <path_to_key>
+
+Host *
+  User <user_name>
+  port 22
+  IdentityFile <path_to_key>
+```
