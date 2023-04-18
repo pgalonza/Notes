@@ -47,6 +47,21 @@ Bash profile scripts
 
 * _/etc/profile.d/_
 
+Set variables from property
+
+```bash
+#! /bin/nash
+
+function read_properties {
+  grep "${1}" <file_name>.properties|cut -d'=' -f2|tr -d '[:space:]'
+}
+
+WORK_DIR="$(dirname "$0")"
+cd $WORK_DIR
+
+export <variable_name> = $(read_properties <'parameter_name'>)
+```
+
 ## Linux printers
 
 Connect Linux to a shared printer on Windows!
@@ -76,6 +91,12 @@ fallocate -l 1G /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
+```
+
+_/etc/sysctl.conf_
+
+```text
+vm.swappiness=10
 ```
 
 ## Tools
@@ -354,6 +375,18 @@ CIFS
 //"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,vers=3.0,gid="" 0 0
 ```
 
+Check CIFS if mount
+
+```bash
+#!/bin/sh
+RESULT=$(mount -v | grep -i -e 'type smb' -e 'type cifs')
+if [ -n "$RESULT" ]; then
+  exit
+else
+  mount -a
+fi
+```
+
 ## Grub
 
 1. Choose edit in Grub menu
@@ -411,4 +444,55 @@ Set for user
 
 ```bash
 export <locale variable>=<locale value>
+```
+
+## PAM limits configuration
+
+_/etc/security/limits.conf_, _/etc/security/_
+
+
+```text
+* soft nproc 65535
+* hard nproc 65535
+* soft nofile 65535
+* hard nofile 65535
+```
+
+_/etc/systemd/system.conf_, _/etc/systemd/user.conf_,  _/etc/systemd/<systemd_unit>/override.conf_
+
+```text
+DefaultLimitNOFILE=
+```
+
+_/lib/systemd/system/<service>_, _/etc/systemd/*_, _/usr/lib/systemd/system/<service>_
+
+```text
+LimitNOFILE=
+```
+
+_override.conf_
+
+```bash
+mkdir /etc/systemd/system/service_name.service.d/
+```
+
+```ini
+[Service]
+LimitNOFILE=100000
+```
+
+Show limits
+
+```python
+import platform
+
+if 'linux' in platform.system().lower():
+    import resource  # Linux only
+
+    limit_nofile = resource.getrlimit(resource.RLIMIT_NOFILE)
+    limit_nproc = resource.getrlimit(resource.RLIMIT_NPROC)
+
+    print ('Max number of opened files allowed:', limit_nofile)
+    print ('Max number of processes allowed', limit_nproc)
+
 ```
