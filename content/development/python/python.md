@@ -1680,3 +1680,16 @@ for i in md.disasm(CODE, 0x1000):
     print("0x%x:\t%s\t%s" %(i.address, i.mnemonic, i.op_str))
 
 ```
+
+## JWT
+
+View JWT
+
+```python
+import jwt
+from pprint import pprint
+
+token = input("Token: ")
+jwt_structure = jwt.decode(token, algorithms=["RS256"], options={"verify_signature": False})
+pprint(jwt_structure)
+```
