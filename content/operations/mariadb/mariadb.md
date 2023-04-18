@@ -61,6 +61,59 @@ innodb_file_format=Barracuda
 SET GLOBAL innodb_file_format=BARRACUDA
 ```
 
+## Configuration
+
+Client
+
+```ini
+[client]
+default-character-set = utf8
+user = 
+password = 
+
+[mysqladmin]
+default-character-set = utf8
+user = 
+password = 
+```
+
+Server
+
+```ini
+[mysqld]
+character-set-server=utf8
+collation-server=utf8_general_ci
+init-connect="SET NAMES utf8"
+
+skip-name-resolve       = 1
+server-id=mMariadb1
+
+log_error               = /var/log/mysql/mysql_error.log
+log_bin                 = /var/log/mysql/mysql_bin.log
+expire_logs_days        = 7
+max_binlog_size         = 1G
+
+innodb_file_per_table   = 1
+innodb_buffer_pool_size = 500M
+innodb_log_file_size    = 16M
+innodb_flush_log_at_trx_commit = 1
+innodb_flush_method     = O_DIRECT
+max_connections         = 160
+
+wait_timeout            = 32400
+interactive_timeout     = 32400
+max_allowed_packet      = 8M
+connect_timeout         = 30
+
+query_cache_size        = 0
+query_cache_type        = 0
+query_cache_limit       = 5M
+join_buffer_size        = 5M
+table_open_cache        = 4096
+
+performance_schema      = 1
+```
+
 ## Troubleshooting
 
 How to fix error “1812 Tablespace is missing for table XXXX”
