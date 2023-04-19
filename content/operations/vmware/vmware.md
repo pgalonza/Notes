@@ -54,3 +54,7 @@ Linux virtual machine with lost network
 1c aplication server is freeze after hard reboot
 
 * re-register the virtual machine
+
+## Scripts
+
+[VM poweroff on python](https://github.com/pgalonza/Notes-files/vmware/scripts/esxi-poweroff.py)

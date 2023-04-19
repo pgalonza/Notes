@@ -191,3 +191,10 @@ pass_attrs      = userPassword=password, mail=user
 
 default_pass_scheme = CRYPT
 ```
+
+## Scripts
+
+Work on storage mode
+
+[Rename maildir](https://github.com/pgalonza/Notes-files/dovecot/scripts/rename.py)
+[Find and delete email](https://github.com/pgalonza/Notes-files/dovecot/scripts/maildir.py)

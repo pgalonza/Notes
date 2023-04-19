@@ -40,3 +40,10 @@ Search-ADAccount –UsersOnly –AccountInActive –TimeSpan 40:00:00:00 –Resu
 | PASSWORD_EXPIRED                                                                               | 0x800000             |          8388608 |
 | TRUSTED_TO_AUTH_FOR_DELEGATION                                                                 | 0x1000000            |         16777216 |
 | PARTIAL_SECRETS_ACCOUNT                                                                        | 0x04000000           |         67108864 |
+
+## Scripts
+
+[Find not block users](https://github.com/pgalonza/Notes-files/active_directory/scripts/check-users.py)
+[Decode UAC](https://github.com/pgalonza/Notes-files/active_directory/scripts/DecodeUserAccountControl.ps1)
+[Search user in python](https://github.com/pgalonza/Notes-files/active_directory/scripts/ldap_user_search.py)
+[Show quotas](https://github.com/pgalonza/Notes-files/active_directory/scripts/quota-ldap.py)

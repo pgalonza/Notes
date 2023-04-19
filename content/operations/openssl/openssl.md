@@ -112,3 +112,7 @@ Create certificate
 openssl x509 -req -in <domain_name>.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out <domain_name>.pem -days 365 -sha256
 openssl x509 -req -in <domain_name>.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out <domain_name>.pem -days 365 -sha256 -extfile openssl.cfg -extensions 'v3_req'
 ```
+
+## Scripts
+
+[Check ciphers](https://github.com/pgalonza/Notes-files/openssl/scripts/check_ciphers.py)
