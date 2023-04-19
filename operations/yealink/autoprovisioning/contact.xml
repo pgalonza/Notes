@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root_group>
-	<group display_name="All Contacts" />
-</root_group>
-<root_contact>
-	<contact display_name="Example" office_number="000" mobile_number="000" other_number="3" line="2" ring="" group_id_name="All Contacts" />
-	<contact display_name="Галонза Петр Валерьевич" office_number="491" mobile_number="" other_number="" line="0" ring="" group_id_name="All Contacts" />
-</root_contact>
