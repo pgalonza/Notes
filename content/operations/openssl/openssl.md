@@ -115,4 +115,4 @@ openssl x509 -req -in <domain_name>.csr -CA rootCA.pem -CAkey rootCA.key -CAcrea
 
 ## Scripts
 
-[Check ciphers](https://github.com/pgalonza/Notes-files/openssl/scripts/check_ciphers.py)
+[Check ciphers](https://github.com/pgalonza/Notes-files/blob/main/openssl/scripts/check_ciphers.py)

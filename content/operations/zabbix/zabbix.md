@@ -82,9 +82,9 @@ lodctr /r
 
 ## Templates
 
-[PitON](https://github.com/pgalonza/Notes-files/zabbix/templates/PitON-XM20.xml)
-[RH5885H V3](https://github.com/pgalonza/Notes-files/zabbix/templates/RH5885H-V3.xml)
-[SBR01](https://github.com/pgalonza/Notes-files/zabbix/templates/SBR01.xml)
-[Huawei 10K UPS](https://github.com/pgalonza/Notes-files/zabbix/templates/Huawei-10K-UPS.xml)
-[UPS RFC](https://github.com/pgalonza/Notes-files/zabbix/templates/UPS-RFC.xml)
-[Mikrotik Queue Tree.xml](https://github.com/pgalonza/Notes-files/zabbix/templates/mikrotik-Queue-Tree.xml)
+[PitON](https://github.com/pgalonza/Notes-files/blob/main/zabbix/templates/PitON-XM20.xml)
+[RH5885H V3](https://github.com/pgalonza/Notes-files/blob/main/zabbix/templates/RH5885H-V3.xml)
+[SBR01](https://github.com/pgalonza/Notes-files/blob/main/zabbix/templates/SBR01.xml)
+[Huawei 10K UPS](https://github.com/pgalonza/Notes-files/blob/main/zabbix/templates/Huawei-10K-UPS.xml)
+[UPS RFC](https://github.com/pgalonza/Notes-files/blob/main/zabbix/templates/UPS-RFC.xml)
+[Mikrotik Queue Tree.xml](https://github.com/pgalonza/Notes-files/blob/main/zabbix/templates/mikrotik-Queue-Tree.xml)

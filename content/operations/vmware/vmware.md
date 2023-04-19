@@ -57,4 +57,4 @@ Linux virtual machine with lost network
 
 ## Scripts
 
-[VM poweroff on python](https://github.com/pgalonza/Notes-files/vmware/scripts/esxi-poweroff.py)
+[VM poweroff on python](https://github.com/pgalonza/Notes-files/blob/main/vmware/scripts/esxi-poweroff.py)
