@@ -1,12 +1,12 @@
 ---
-data_dir: var/lib/vector
+title: "Vector"
+draft: false
+---
 
-sources:
-  source_nginx:
-    type: file
-    inlcude:
-      - /var/log/nginx/access-json.log
-    read_from: begginning
+
+Convert Json  to fields
+
+```yaml
 transforms:
   transform_message:
     type: remap
@@ -14,6 +14,12 @@ transforms:
       - source_*
     source: |-
       . = parse_json(.message)
+```
+
+Add tags
+
+```yaml
+transforms:
   general_tags:
     type: remap
     inputs:
@@ -29,19 +35,4 @@ transforms:
       - general_tags
     source: |-
       .application = "nginx"
-sinks:
-  opensearch_nginx:
-    type: elasticsearch
-    inputs:
-      - tags_nginx
-    endpoint: https://<host_name>:9200
-    bulk:
-      index: "vector-nginx-%Y-%m-%d"
-    mode: bulk
-    auth:
-      strategy: basic
-      user: <user_name>
-      password: <password>
-    tls:
-      ca_file: <path>.pem
-...
+```
