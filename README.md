@@ -2,6 +2,4 @@
 
 In this repository I publish my work for further evaluation of my skills.
 
-* [Commands](/commands/README.md)
-* [Development](/development/README.md)
-* [Operations](/operations/README.md)
+You can visit the GitHub Pages [Notes](https://github.evaron.ru/Notes/)
