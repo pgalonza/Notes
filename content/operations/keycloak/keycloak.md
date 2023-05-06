@@ -139,3 +139,65 @@ curl -X GET "${$URL}/admin/realms/${REALM}/users" \
 View JWT
 
 [Python](/Notes/development/python/python/#jwt)
+
+## Security
+
+Ansible task for configure realm
+
+```yaml
+- name: Congigure realm
+  comunity.general.keycloak_realm:
+  community.general.keycloak_realm:
+      auth_client_id: admin-cli
+      auth_keycloak_url: <keycloak url>
+      auth_realm: master
+      auth_username: <user name>
+      auth_password: <password>
+      id: <realm name>
+      realm: <realm name>
+      state: present
+      access_token_lifespan: 60
+      access_token_lifespan_for_implicit_flow: 900
+      sso_session_idle_timeout: 900
+      sso_session_max_lifespan: 36000
+      sso_session_idle_timeout_remember_me: 0
+      sso_session_max_lifespan_remember_me: 0
+      offline_session_idle_timeout: 2592000
+      offline_session_max_lifespan_enabled: true
+      offline_session_max_lifespan: 0
+      ssl_required: all
+      otp_policy_type: totp
+      otp_policy_algorithm: HmacSHA256
+      otp_policy_digits: 6
+      otp_policy_look_ahead_window: 1
+      otp_policy_period: 30
+      events_enabled: true
+      events_expiration: 31536000
+      admin_events_enabled: true
+      admin_events_details_enabled: true
+      events_listeners:
+      - email
+      default_signature_algorithm: RS256
+      browser_security_headers:
+          xFrameOptions: SOMEORIGIN
+          contentSecurityPolicyReportOnly: ""
+          xContentTypeOptions: nosniff
+          xRobotsTag: "none"
+          contentSecurityPolicy: "frame-src 'self'; frame-ancestors 'self'; object-src 'none';"
+          strictTransportSecurity: "max-age=31536000l includeSubDomains"
+      password_policy: >
+          hashAlgorithm(pbkdf2-sha-256) and digits(1)
+          and lowerCase(1) anmd upperCase(1)
+          and notUsername(undefined) and notEmail(undefined)
+          and forceExpiredPasswordChange(30)
+          and password History(4) and lenght(16)
+      brute_force_protected: true
+      max_failure_wait_seconds: 5400
+      failure_factor: 6
+      wait_increment_seconds: 1800
+      max_delta_time_seconds: 86400
+      quick_login_check_milli_seconds: 1000
+      minimum_quick_login_wait_seconds: 60
+      state: present
+  delegate_to: localhost
+```
