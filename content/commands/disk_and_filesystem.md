@@ -1,6 +1,7 @@
 ---
-title: "Disks and partitions"
+title: Disks and partitions
 draft: false
+description: "CLI commands for work with disks and partitions"
 ---
 
 View

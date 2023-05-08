@@ -1,6 +1,7 @@
 ---
-title: "TMUX"
+title: TMUX
 draft: false
+description: "CLI commands for TMUX"
 ---
 
 Run

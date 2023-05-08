@@ -1,6 +1,7 @@
 ---
 title: "Windows"
 draft: false
+description: "CLI commands for Windows"
 ---
 
 ## Recovery

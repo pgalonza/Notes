@@ -1,6 +1,7 @@
 ---
-title: "Bash"
+title: Bash
 draft: false
+description: "Bash commands"
 ---
 
 EOF

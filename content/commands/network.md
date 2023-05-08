@@ -1,6 +1,7 @@
 ---
-title: "Network"
+title: Network
 draft: false
+description: "CLI commands for NetStat"
 ---
 Check MTU
 

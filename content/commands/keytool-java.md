@@ -1,6 +1,7 @@
 ---
-title: "Keytool"
+title: Keytool
 draft: false
+description: "CLI commands for Java keytool"
 ---
 
 Import certificate

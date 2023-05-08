@@ -1,6 +1,7 @@
 ---
-title: "User and Groups"
+title: User and Groups
 draft: false
+description: "CLI commands for get information about users and groups"
 ---
 
 Show real and effective user and group IDs

@@ -1,6 +1,7 @@
 ---
-title: "Vim"
+title: Vim
 draft: false
+description: "CLI commands for VIM"
 ---
 
 Disable visual mode

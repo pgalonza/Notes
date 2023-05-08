@@ -1,6 +1,7 @@
 ---
 title: "Docker"
 draft: false
+description: "CLI commands for Docker"
 ---
 
 ```bash

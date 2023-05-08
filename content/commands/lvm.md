@@ -1,6 +1,7 @@
 ---
-title: "LVM"
+title: LVM
 draft: false
+description: "CLI commands for LVM"
 ---
 
 ## Physical volumes

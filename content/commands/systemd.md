@@ -1,6 +1,7 @@
 ---
-title: "SystemD"
+title: SystemD
 draft: false
+description: "CLI commands for systemd"
 ---
 
 Show problems

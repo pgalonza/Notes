@@ -1,6 +1,7 @@
 ---
-title: "Git"
+title: Git
 draft: false
+description: "CLI commands for GIT"
 ---
 
 ## General

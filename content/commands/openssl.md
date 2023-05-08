@@ -1,6 +1,7 @@
 ---
-title: "OpenSSL"
+title: OpenSSL
 draft: false
+description: "CLI commands for openssl tool"
 ---
 
 Connect with cipher

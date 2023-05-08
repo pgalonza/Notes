@@ -1,6 +1,7 @@
 ---
 title: "E-mail"
 draft: false
+description: "CLI commands for postfix, dovecot, mutt"
 ---
 
 ## POSTFIX

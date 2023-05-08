@@ -1,6 +1,7 @@
 ---
-title: "System information"
+title: System information
 draft: false
+description: "CLI commands for get System information"
 ---
 
 Print real and effective user and group IDs

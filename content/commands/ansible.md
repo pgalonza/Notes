@@ -1,6 +1,7 @@
 ---
-title: "Ansible"
+title: Ansible
 draft: false
+description: "CLI commands for Ansible"
 ---
 
 Start as another user

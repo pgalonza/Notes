@@ -1,6 +1,7 @@
 ---
-title: "Proccess"
+title: Proccess
 draft: false
+description: "CLI commands for wotk with linux proccess"
 ---
 
 Look process by name

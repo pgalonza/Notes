@@ -1,6 +1,7 @@
 ---
-title: "SSH"
+title: SSH
 draft: false
+description: "CLI commands for SSH"
 ---
 
 Executing a command on a remote host

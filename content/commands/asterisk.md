@@ -1,6 +1,7 @@
 ---
-title: "Asterisk"
+title: Asterisk
 draft: false
+description: "CLI commands for Asterisk"
 ---
 
 Start and connect to asterisk CLI

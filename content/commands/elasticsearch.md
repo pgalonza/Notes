@@ -1,6 +1,7 @@
 ---
 title: "ElasticSearch"
 draft: false
+description: "CLI commands and queries for ElasticSearch"
 ---
 
 Add pipekine with frok

@@ -1,6 +1,7 @@
 ---
-title: "Database"
+title: Database
 draft: false
+description: "CLI commands and queries for PostgreSQL, MySQL, MariaDB"
 ---
 
 ## MySQL/MariaDB

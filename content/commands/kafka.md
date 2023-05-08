@@ -1,6 +1,7 @@
 ---
-title: "Kafka"
+title: Kafka
 draft: false
+description: "CLI commands for Kafka"
 ---
 
 View consumer groups
