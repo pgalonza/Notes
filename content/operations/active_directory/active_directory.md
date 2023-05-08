@@ -43,7 +43,7 @@ Search-ADAccount –UsersOnly –AccountInActive –TimeSpan 40:00:00:00 –Resu
 
 ## Scripts
 
-[Find not block users](https://github.com/pgalonza/Notes-files/blob/main/blob/main/active_directory/scripts/check-users.py)
-[Decode UAC](https://github.com/pgalonza/Notes-files/blob/main/active_directory/scripts/DecodeUserAccountControl.ps1)
-[Search user in python](https://github.com/pgalonza/Notes-files/blob/main/active_directory/scripts/ldap_user_search.py)
-[Show quotas](https://github.com/pgalonza/Notes-files/blob/main/active_directory/scripts/quota-ldap.py)
+* [Find not block users](https://github.com/pgalonza/Notes-files/blob/main/active_directory/scripts/check-users.py)
+* [Decode UAC](https://github.com/pgalonza/Notes-files/blob/main/active_directory/scripts/DecodeUserAccountControl.ps1)
+* [Search user in python](https://github.com/pgalonza/Notes-files/blob/main/active_directory/scripts/ldap_user_search.py)
+* [Show quotas](https://github.com/pgalonza/Notes-files/blob/main/active_directory/scripts/quota-ldap.py)
