@@ -62,8 +62,13 @@ ssl_certificate_key <private key>;
 ssl_dhparam <dhparam.pem>;
 
 ssl_protocols TLSv1.2 TLSv1.3;
+proxy_ssl_protocols TLSv1.2 TLSv1.3;
 ssl_ciphers <ciphers>;
+proxy_ssl_ciphers ciphers>;
+
 ssl_prefer_server_ciphers on;
+ssl_stapling on;
+ssl_stapling_verify on;
 ssl_session_cache shared:SSL:10m;
 ssl_session_timeout 5m;
 ```
@@ -141,19 +146,9 @@ server {
 
     <SSL>
 
-    underscores_in_headers on;
-    limit_conn limitperip 10;
-    large_client_header_buffers 2 4k;
-
     if ($request_method !~ ^(GET|HEAD|POST)$ ) {
         return 444;
     }
-
-    add_header Strict-Transport-Security "max-age=15768000;";
-    add_header X-Frame-Options "SAMEORIGIN";
-    add_header X-Content-Type-Options nosniff;
-    add_header X-XSS-Protection "1; mode=block";
-    add_header Content-Security-Policy "default-src 'self'";
 
     if ( $http_host_valid == false ) {
         return 418;
@@ -174,21 +169,43 @@ location ~ /\. {
 Nginx
 
 ```text
+http {
     sendfile               on;
     tcp_nopush             on;
-    tcp_nodelay            on;
-    server_tokens          off;
-    ssl_stapling           on;
-    ssl_stapling_verify    on;
 
-    keepalive_timeout      10;
-    send_timeout           10;
-    client_body_timeout    10;
-    client_header_timeout  0;
+    gzip off;
+    autoindex off;
 
-    client_max_body_size        100k;
-    types_hash_max_size         4096;
-    map_hash_bucket_size        256;
-    large_client_header_buffers 2 1k;
+    add_header Strict-Transport-Security "max-age=15768000; includeSubdomains;";
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header X-Content-Type-Options nosniff;
+    add_header X-XSS-Protection "1; mode=block";
+    add_header Content-Security-Policy "default-src 'self'";
+
+    proxy_http_version 1.1;
+    proxy_hide_header X-powered-By;
+    proxy_hide_header Server;
+    server_tokens off;
+
     limit_conn_zone $binary_remote_addr zone=limitperip:10m;
+    limit_conn limitperip 10;
+
+    send_timeout 10;
+    keepalive_timeout 10;
+    client_body_timeout 10;
+    client_header_timeout 10;
+    client_max_body_size 100k;
+    client_body_buffer_size 100k;
+    large_client_header_buffers 2 1k;
+
+    proxy_set_timeout 1m;
+    proxy_read_timeout 1m;
+    proxy_connect_timeout 1m;
+    proxy_buffering off;
+    expires -1;
+
+    server {
+        return 404;
+    }
+}
 ```
