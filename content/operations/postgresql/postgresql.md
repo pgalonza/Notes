@@ -21,3 +21,9 @@ Added to SELinux
 ```text
 setsebool -P httpd_can_network_connect_db 1
 ```
+
+Shared buffers
+
+```text
+shared_buffers=<25% of RAM>
+```
