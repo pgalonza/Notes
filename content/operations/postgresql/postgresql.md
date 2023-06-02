@@ -3,6 +3,14 @@ title: "PostgreSQL"
 draft: false
 ---
 
+What to return for trigger (work with BEFORE)
+
+|trigger invocation|NEW is set|OLD is set|
+|------------------|----------|----------|
+|ON INSERT         |✔️        |          |
+|ON UPDATE         |✔️        |✔️        |
+|ON DELETE         |          |✔️        |
+
 Bind to address
 _/var/lib/pgsql/data/postgresql.conf_
 
