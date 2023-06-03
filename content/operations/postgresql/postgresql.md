@@ -35,3 +35,41 @@ Shared buffers
 ```text
 shared_buffers=<25% of RAM>
 ```
+
+## Replication
+
+### Stream
+
+Create replication user
+
+```sql
+create role <role name> with replication login password '<password>';
+```
+
+Add access in __pg_hba.conf__
+
+```test
+host replication <role name> <replica host> md5
+```
+
+Change parameters in __postgresql.conf__
+
+```test
+wal_level = <logical|replica>
+wal_log_hints = on
+max_wal_senders = 8
+max_wal_size = 1GB
+hot_standby = on
+```
+
+Restart master
+
+Backup
+
+```bash
+pg_basebackup -R -P -X stream -c fast -D <new data dir> -h <master host> -U <role name> -W
+```
+
+Check connection string __postgresql.auto.conf__
+
+Start database

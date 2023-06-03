@@ -105,6 +105,7 @@ select * from pg_stat_activity;
 select * from pg_stat_user_tables;
 select * from pg_stat_user_indexes;
 select * from pg_stat_statements;
+select * from pg_catalog.pg_stat_replication;
 ```
 
 Quotes
@@ -123,6 +124,19 @@ WHERE datistemplate = false;
 SELECT table_schema,table_name
 FROM information_schema.tables
 ORDER BY table_schema,table_name;
+```
+
+Start database
+
+```bash
+pg_ctl -D <data dir> start
+postgres -D <data dir>
+```
+
+Promote replica
+
+```bash
+pg_ctl promote -D <data dir>
 ```
 
 ## Permissions
@@ -155,6 +169,12 @@ Show roles privileges
 
 ```bash
 \duS+
+```
+
+Show roles
+
+```sql
+select * from pg_catalog.pg_shadow;
 ```
 
 ## Functions
