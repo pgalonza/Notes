@@ -4,6 +4,54 @@ draft: false
 description: "SQL commands for PostgreSQL"
 ---
 
+Set parameters in session
+
+```sql
+set <parameter name> to '<value>';
+select set_config(<parameter name>, <value>,false) 
+```
+
+Reload configuration file
+
+```sql
+select pg_reload_conf()
+```
+
+Start vacuum and show progress
+
+```sql
+vacuum verbose;
+select * from pg_catalog.pg_stat_progress_vacuum;
+```
+
+Quotes
+
+```sql
+quote_ident() -- ""
+quote_literal() -- ''
+```
+
+Start database
+
+```bash
+pg_ctl -D <data dir> start
+postgres -D <data dir>
+```
+
+Promote replica
+
+```bash
+pg_ctl promote -D <data dir>
+```
+
+Move row in other table
+
+```sql
+with <cte name> as (delete from <only> <src table> where <condition> returning *) insert into <dst table> select * from <cte name>;
+```
+
+## Show informations
+
 Show parameters
 
 ```sql
@@ -26,36 +74,10 @@ SELECT pg_size_pretty(pg_relation_size('<table name>'));
 SELECT relname, relpages FROM pg_class ORDER BY relpages DESC;
 ```
 
-Set parameters in session
-
-```sql
-set <parameter name> to '<value>';
-select set_config(<parameter name>, <value>,false) 
-```
-
 Get path to configuration file
 
 ```sql
 show config_file;
-```
-
-Reload configuration file
-
-```sql
-select pg_reload_conf()
-```
-
-Show search path
-
-```sql
-show search_path;
-```
-
-Start vacuum and show progress
-
-```sql
-vacuum verbose;
-select * from pg_catalog.pg_stat_progress_vacuum;
 ```
 
 Check shared buffers
@@ -64,10 +86,10 @@ Check shared buffers
 select * from pg_settings where name = 'shared_buffers';
 ```
 
-Create extension for view buffers
+Show search path
 
 ```sql
-CREATE EXTENSION pg_buffercache;
+show search_path;
 ```
 
 Show WAL`s
@@ -108,13 +130,6 @@ select * from pg_stat_statements;
 select * from pg_catalog.pg_stat_replication;
 ```
 
-Quotes
-
-```sql
-quote_ident() -- ""
-quote_literal() -- ''
-```
-
 Show databases and tables
 
 ```sql
@@ -126,20 +141,7 @@ FROM information_schema.tables
 ORDER BY table_schema,table_name;
 ```
 
-Start database
-
-```bash
-pg_ctl -D <data dir> start
-postgres -D <data dir>
-```
-
-Promote replica
-
-```bash
-pg_ctl promote -D <data dir>
-```
-
-## Permissions
+## Privileges
 
 Show table privileges
 
@@ -175,6 +177,13 @@ Show roles
 
 ```sql
 select * from pg_catalog.pg_shadow;
+```
+
+Granting the permissions to transfer privileges
+
+```sql
+GRANT <statements> ON <table name> TO <role name> WITH GRANT OPTION;
+GRANT <statements> ON <role name>.<table name> TO <role name>;
 ```
 
 ## Functions
@@ -282,7 +291,7 @@ select * from pg_event_trigger;
 Data changes
 
 ```sql
-create or replace function <function name>() returns trigger as $$
+create or replace function <function name>_tg() returns trigger as $$
 begin
     new.<row name> = <query>;
     ---
@@ -293,14 +302,14 @@ $$ language plpgsql
 
 
 create trigger <trigger name> <before|after|instead of> 
-<update|insert|delete|truncate> on <table name> function
-for each <row|statement> when (<condition>) execute <procedure|function> <function name>(); 
+<update|insert|delete|truncate> on <table name>
+for each <row|statement> when (<condition>) execute <procedure|function> <function name>_tg(); 
 ```
 
 Database event
 
 ```sql
-create or replace function <function name> returns event_trigger as $$
+create or replace function <function name>_tg() returns event_trigger as $$
 begin
     for i in select * from pg_event_trigger_ddl_commands()
     loop
@@ -309,7 +318,7 @@ begin
 end;
 $$ language plpgsql
 
-create event <trigger name> on <ddl_command_start,ddl_command_end|sql_drop|table_rewrite> execute function <function name>();
+create event <trigger name> on <ddl_command_start,ddl_command_end|sql_drop|table_rewrite> execute function <function name>_tg();
 ```
 
 ## Procedure
@@ -354,4 +363,46 @@ Show extensions
 
 ```sql
 select * from pg_catalog.pg_available_extensions;
+```
+
+Create extension for view buffers
+
+```sql
+CREATE EXTENSION pg_buffercache;
+```
+
+## Rules
+
+Create rule
+
+```sql
+create or replace rule <rule name> as on <insert|update|delete> to <src table name> where <condition> do instead <insert|update|delete> into <dst table name>; -- <values (new.*)> for insert
+```
+
+Show rules
+
+```sql;
+select * from pg_rules;
+```
+
+## Table
+
+Create table with same structure
+
+```sql
+create table <to table name> as table <from table name> with no data;
+```
+
+Create inherits
+
+```sql
+create table <table name> (check (<condition>)) inherits <src table name>;
+
+create index <index name>_idx on <dst table name> (cast(<column name> <column type>));
+```
+
+Create temp table
+
+```sql
+create temporary table <table name>_temp as (select * from <table name>);
 ```
