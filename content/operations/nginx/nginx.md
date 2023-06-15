@@ -212,3 +212,11 @@ http {
     }
 }
 ```
+
+## Troubleshooting
+
+Duplicate headers when proxy_pass
+
+```text
+proxy_hide_header <header name>;
+```
