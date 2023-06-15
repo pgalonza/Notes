@@ -150,6 +150,8 @@ server {
         return 444;
     }
 
+    limit_except GET HEAD POST {deny all;}
+
     if ( $http_host_valid == false ) {
         return 418;
     }
@@ -175,6 +177,7 @@ http {
 
     gzip off;
     autoindex off;
+    dav_methods off;
 
     add_header Strict-Transport-Security "max-age=15768000; includeSubdomains;";
     add_header X-Frame-Options "SAMEORIGIN";
