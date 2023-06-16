@@ -1209,3 +1209,19 @@ env WINEPREFIX=<apth to prefix> wineboot -u
 ```bash
 env WINEPREFIX=<apth to prefix> wine <path to appliaction>
 ```
+
+## Keyring
+
+Get key
+
+```bash
+keyring get <service name> <username>
+```
+
+## Secret tool
+
+Get key
+
+```bash
+secret-tool lookup <attribute> <value>
+```
