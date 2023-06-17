@@ -8,7 +8,6 @@ _pip.ini_ _pip.conf_
 
 ```ini
 [global]
-trusted-host = localhost
-index = http://localhost:8081/repository/pypi-all/pypi
-index-url = http://localhost:8081/repository/pypi-all/simple
-```
+trusted-host = <host name>
+index = https://<host>/<path>/simple
+index-url = https://<host>/<path>/simple
