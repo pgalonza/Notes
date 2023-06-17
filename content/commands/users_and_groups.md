@@ -43,10 +43,15 @@ chage -l <user_name>
 
 ## User
 
-Create a user with defaul group administrator and add him to the wheel group.
+Create a user with defaul group and add him to other group.
 
 ```bash
 useradd -m -N -g primary_group -G other_group user_name
+```
+
+Create system user
+
+```bash
 useradd --system --no-create-home -s /sbin/nologin user_name
 ```
 
