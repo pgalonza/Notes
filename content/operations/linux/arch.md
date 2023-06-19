@@ -35,6 +35,16 @@ sudo pacman -Syyuu
 
 ## AUR
 
+### Pikaur
+
+No diff and no edit
+*/root/.config/pikaur.conf*
+
+```ini
+donteditbydefault = yes
+nodiff = yes
+```
+
 ### Create packages for AUR from deb
 
 Create _PKGBUILD_ file
