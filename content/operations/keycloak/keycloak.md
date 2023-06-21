@@ -140,6 +140,29 @@ View JWT
 
 [Python](/Notes/development/python/python/#jwt)
 
+## TLS
+
+### Client certification in header with Nginx
+
+Build spi
+
+```bash
+<path>/bin/kc.sh build --spi-x509cert-lookup-provider=nginx
+```
+
+Add in keycloak configuration
+
+```text
+spi-x509cert-lookup-nginx-ssl-client-cert=SSL_CLIENT_CERT
+```
+
+Add in Nginx configuration
+
+```text
+ssl_verify_client <on|optional|optional_no_ca>;
+proxy_set_header ssl-client-cert $ssl_client_escaped_cert;
+```
+
 ## Security
 
 Ansible task for configure realm
