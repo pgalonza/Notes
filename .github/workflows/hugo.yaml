@@ -58,7 +58,7 @@ jobs:
       - name: Create folder for template
         run: mkdir -p ${THEMEDIR}/${THEME}/
       - name: Download template
-        run: curl -sSL "https://github.com/thegeeklab/${THEME}/releases/${THEME_VERSION}/download/${THEME}.tar.gz" | tar -xz -C ${THEMEDIR}/${THEME}/ --strip-components=1
+        run: curl -sSL "https://github.com/thegeeklab/${THEME}/releases/download/${THEME_VERSION}/${THEME}.tar.gz" | tar -xz -C ${THEMEDIR}/${THEME}/ --strip-components=1
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
