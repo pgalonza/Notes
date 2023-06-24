@@ -37,7 +37,7 @@ jobs:
       THEME_VERSION: 0.39.5
       THEME: hugo-geekdoc
       BASEDIR: docs
-      THEMEDIR: ${CURDIR}/themes
+      THEMEDIR: ./themes
     steps:
       - name: Install Hugo CLI
         run: |
