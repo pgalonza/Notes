@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.111.3
-      THEME_VERSION: v0.39.5
+      THEME_VERSION: 0.39.5
       THEME: hugo-geekdoc
       BASEDIR: docs
       THEMEDIR: ${CURDIR}/themes
@@ -58,7 +58,7 @@ jobs:
       - name: Create folder for template
         run: mkdir -p ${THEMEDIR}/${THEME}/
       - name: Download template
-        run: curl -sSL "https://github.com/thegeeklab/${THEME}/releases/download/${THEME_VERSION}/${THEME}.tar.gz" | tar -xz -C ${THEMEDIR}/${THEME}/ --strip-components=1
+        run: curl -sSL "https://github.com/thegeeklab/${THEME}/releases/download/v${THEME_VERSION}/${THEME}.tar.gz" | tar -xz -C ${THEMEDIR}/${THEME}/ --strip-components=1
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
