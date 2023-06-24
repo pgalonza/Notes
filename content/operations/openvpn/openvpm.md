@@ -3,6 +3,8 @@ title: "OpenVPN"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Install
 
 Package

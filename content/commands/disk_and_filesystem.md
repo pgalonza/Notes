@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for work with disks and partitions"
 ---
 
+{{< toc >}}
+
 View
 
 ```bash

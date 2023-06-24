@@ -3,6 +3,8 @@ title: "Install Arch"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Arch install
 
 ### Disk layout

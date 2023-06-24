@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for openssl tool"
 ---
 
+{{< toc >}}
+
 Connect with cipher
 
 ```bash

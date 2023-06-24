@@ -3,6 +3,8 @@ title: "Disks and partitions"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Resize portition
 
 ### Extend

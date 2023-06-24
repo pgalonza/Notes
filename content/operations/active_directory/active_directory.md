@@ -3,6 +3,8 @@ title: "Active directory"
 draft: false
 ---
 
+{{< toc >}}
+
 Search inactive users
 
 ```powershell

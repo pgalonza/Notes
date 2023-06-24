@@ -3,6 +3,9 @@ title: Network
 draft: false
 description: "CLI commands for NetStat"
 ---
+
+{{< toc >}}
+
 Check MTU
 
 ```bash

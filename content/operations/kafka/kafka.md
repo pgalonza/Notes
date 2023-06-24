@@ -3,6 +3,8 @@ title: "Kafka"
 draft: false
 ---
 
+{{< toc >}}
+
 Optimizations
 
 * File system: XFS

@@ -3,6 +3,8 @@ title: "Visual Studio Code"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Extensions
 
 * **Better Comments** - improve your code commenting by annotating with alert, informational, TODOs, and more.

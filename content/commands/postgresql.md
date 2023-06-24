@@ -4,6 +4,8 @@ draft: false
 description: "SQL commands for PostgreSQL"
 ---
 
+{{< toc >}}
+
 Set parameters in session
 
 ```sql

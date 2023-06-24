@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for SSH"
 ---
 
+{{< toc >}}
+
 Executing a command on a remote host
 
 ```bash

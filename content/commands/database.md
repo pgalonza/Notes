@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands and queries for PostgreSQL, MySQL, MariaDB"
 ---
 
+{{< toc >}}
+
 ## MySQL/MariaDB
 
 Initializes the data directory

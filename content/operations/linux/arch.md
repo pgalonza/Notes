@@ -3,6 +3,8 @@ title: "Arch"
 draft: false
 ---
 
+{{< toc >}}
+
 Ignore the package when update
 _/etc/pacman.conf_
 

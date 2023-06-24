@@ -3,6 +3,8 @@ title: "Git"
 draft: false
 ---
 
+{{< toc >}}
+
 Removed git tags
 
 ```bash

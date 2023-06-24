@@ -3,6 +3,8 @@ title: "Openfire"
 draft: false
 ---
 
+{{< toc >}}
+
 Memmory
 _/etc/sysconfig/openfire_
 

@@ -3,6 +3,8 @@ title: "Install Centos"
 draft: false
 ---
 
+{{< toc >}}
+
 Mirror repository
 
 ```text

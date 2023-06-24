@@ -3,6 +3,8 @@ title: "Kernel"
 draft: false
 ---
 
+{{< toc >}}
+
 Set dump directory
 
 ```text

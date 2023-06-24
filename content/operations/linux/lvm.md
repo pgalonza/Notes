@@ -3,6 +3,8 @@ title: "LVM"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Resize LVM
 
 ### Add new disk

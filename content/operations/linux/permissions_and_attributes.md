@@ -3,6 +3,8 @@ title: "Permissions, flags and attributes"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Umask flags
 
 * r - чтение

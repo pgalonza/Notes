@@ -3,6 +3,8 @@ title: "Vagrant"
 draft: false
 ---
 
+{{< toc >}}
+
 SSH key
 
 ```bash

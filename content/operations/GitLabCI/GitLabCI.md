@@ -3,6 +3,8 @@ title: "GitLab CI"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Add new runner for project
 
 Create runner for project

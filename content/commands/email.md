@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for postfix, dovecot, mutt"
 ---
 
+{{< toc >}}
+
 ## POSTFIX
 
 Check configuration

@@ -3,6 +3,8 @@ title: "Zabbix"
 draft: false
 ---
 
+{{< toc >}}
+
 REMOTE COMMANDS
 
 ```text

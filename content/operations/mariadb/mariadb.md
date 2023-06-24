@@ -3,6 +3,8 @@ title: "Mariadb"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Backup
 
 Read only

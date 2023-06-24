@@ -3,6 +3,8 @@ title: "VMWare ESXI"
 draft: false
 ---
 
+{{< toc >}}
+
 Move swap
 
 * Power off the virtual machine.

@@ -3,6 +3,8 @@ title: "Modules"
 draft: false
 ---
 
+{{< toc >}}
+
 * **argparse** - parser for command-line options, arguments and sub-commands.
 * **json** - JSON encoder and decoder.
 * **logging** - logging facility for Python.

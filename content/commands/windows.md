@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for Windows"
 ---
 
+{{< toc >}}
+
 ## Recovery
 
 ### SFC

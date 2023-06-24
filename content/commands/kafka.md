@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for Kafka"
 ---
 
+{{< toc >}}
+
 View consumer groups
 
 ```bash

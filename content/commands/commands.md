@@ -3,6 +3,8 @@ title: "Other"
 draft: false
 ---
 
+{{< toc >}}
+
 Format the flash card
 
 ```bash

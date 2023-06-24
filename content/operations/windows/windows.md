@@ -3,6 +3,8 @@ title: "Windows"
 draft: false
 ---
 
+{{< toc >}}
+
 Enable the developer mode for unsigned drivers
 
 ```cmd

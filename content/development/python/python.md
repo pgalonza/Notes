@@ -3,6 +3,7 @@ title: "Python"
 draft: false
 ---
 
+{{< toc >}}
 
 Docstrings
 

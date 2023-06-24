@@ -3,6 +3,8 @@ title: "VirtualBox"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Troubleshooting
 
 Fix the problems

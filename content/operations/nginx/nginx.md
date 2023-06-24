@@ -3,6 +3,8 @@ title: "Nginx"
 draft: false
 ---
 
+{{< toc >}}
+
 Disable ignore invalid headers
 
 ```bash

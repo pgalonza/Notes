@@ -4,6 +4,7 @@ draft: false
 description: "CLI commands for GIT"
 ---
 
+{{< toc >}}
 ## General
 
 Edit _.gitconfig_

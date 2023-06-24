@@ -1,8 +1,9 @@
 ---
+title: Hi, it’s my notes
 draft: false
+# geekdocNav: false
+geekdocAnchor: false
 ---
-
-# Hi, it's my notes
 
 In this repository I publish my work for further evaluation of my skills.
 

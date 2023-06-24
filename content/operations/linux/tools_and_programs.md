@@ -3,6 +3,8 @@ title: "Tools and Programs"
 draft: false
 ---
 
+{{< toc >}}
+
 * **vim** - a programmers text editor.
 * **htop** - interactive process viewer.
 * **tmux** - terminal multiplexer.

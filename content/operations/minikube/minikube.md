@@ -3,6 +3,8 @@ title: "Minikube"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Troubleshooting
 
 TARGETS <unknown>/N%

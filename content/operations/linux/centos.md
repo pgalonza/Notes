@@ -3,6 +3,8 @@ title: "Centos"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Network
 
 _/etc/sysconfig/network-scripts/_

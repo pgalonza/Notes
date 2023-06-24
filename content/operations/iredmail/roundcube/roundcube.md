@@ -3,6 +3,8 @@ title: "Roundcube"
 draft: false
 ---
 
+{{< toc >}}
+
 ## PLUGINS
 
 _config.inc.php_

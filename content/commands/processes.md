@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for wotk with linux proccess"
 ---
 
+{{< toc >}}
+
 Look process by name
 
 ```bash

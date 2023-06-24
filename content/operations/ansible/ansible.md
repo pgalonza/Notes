@@ -2,6 +2,9 @@
 title: "Ansible"
 draft: false
 ---
+
+{{< toc >}}
+
 Install ansible for developing on Windows
 
 ```bash

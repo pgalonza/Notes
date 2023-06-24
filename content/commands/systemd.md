@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for systemd"
 ---
 
+{{< toc >}}
+
 Show problems
 
 ```bash

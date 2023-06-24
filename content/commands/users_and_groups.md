@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for get information about users and groups"
 ---
 
+{{< toc >}}
+
 Show real and effective user and group IDs
 
 ```bash

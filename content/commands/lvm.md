@@ -4,6 +4,8 @@ draft: false
 description: "CLI commands for LVM"
 ---
 
+{{< toc >}}
+
 ## Physical volumes
 
 View information about pv

@@ -3,6 +3,8 @@ title: "VIM"
 draft: false
 ---
 
+{{< toc >}}
+
 Enable syntax
 _~/.vimrc_
 

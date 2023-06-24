@@ -3,6 +3,8 @@ title: "Grub"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Linux kernel options
 
 Speculation protection disable

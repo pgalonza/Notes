@@ -3,6 +3,8 @@ title: "Bash"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Prompt
 
 Label for warn the criticality of the server

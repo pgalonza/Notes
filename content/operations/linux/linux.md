@@ -3,6 +3,8 @@ title: "Linux"
 draft: false
 ---
 
+{{< toc >}}
+
 Thunderbird check all folders
 
 ```bash

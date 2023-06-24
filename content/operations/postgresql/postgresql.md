@@ -3,6 +3,8 @@ title: "PostgreSQL"
 draft: false
 ---
 
+{{< toc >}}
+
 What to return for trigger (work with BEFORE)
 
 |trigger invocation|NEW is set|OLD is set|

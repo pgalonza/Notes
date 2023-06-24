@@ -3,6 +3,8 @@ title: "Podman"
 draft: false
 ---
 
+{{< toc >}}
+
 Registries
 _/etc/containers/registries.conf_
 
