@@ -155,7 +155,7 @@ Build spi
 Add in keycloak configuration
 
 ```text
-spi-x509cert-lookup-nginx-ssl-client-cert=SSL_CLIENT_CERT
+spi-x509cert-lookup-nginx-ssl-client-cert=ssl-client-cert
 ```
 
 Add in Nginx configuration
