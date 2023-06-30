@@ -49,13 +49,6 @@ Show information about PID
 top -p <PID>
 ```
 
-Show open files of process
-
-```bash
-ls -l /proc/<PID>/fd/
-lsof | grep <PID>
-```
-
 Show namespaces
 
 ```bash
@@ -69,7 +62,7 @@ cat /proc/<PID>/uid_map
 cat /proc/<PID>/gid_map
 ```
 
-Run in napeespace
+Run in namespaces
 
 ```bash
 unshare <parameters> <program>
@@ -79,6 +72,88 @@ Show cgroups
 
 ```bash
 cat /proc/<PID>/cgroup
+```
+
+## Open files, sockets
+
+Show maximum of open files
+
+```bash
+cat /proc/sys/fs/file-max
+```
+
+Show open files of process
+
+```bash
+ls -l /proc/<PID>/fd/
+lsof | grep <PID>
+```
+
+Show allocated file descriptors, not use file descriptors, maximum of file descriptors
+
+```bash
+cat /proc/sys/fs/file-nr
+```
+
+Show proccess descriptors
+
+```bash
+ls -l /proc/<number of proccess>/fd
+```
+
+Show the number of open files on your system
+
+```bash
+lsof | wc -l
+lsof /home
+```
+
+Show limits of process start by user
+
+```bash
+cat /proc/PID/limits
+```
+
+Show maximum of objects inotify per user
+
+```bash
+/proc/sys/fs/inotify/max_user_instances
+```
+
+Show maximum of watch files and directories per object inotify
+
+```bash
+/proc/sys/fs/inotify/max_user_watches
+```
+
+Show maximum of events in queued
+
+```bash
+/proc/sys/fs/inotify/max_queued_events
+```
+
+Show shell process of user limits
+
+```bash
+ulimit -a
+```
+
+Show settings
+
+```bash
+sysctl -a
+```
+
+Accept changes
+
+```bash
+sysctl -p
+```
+
+Change process limits
+
+```bash
+prlimit --pid PID --nofile=1024:1024
 ```
 
 ## Priority
