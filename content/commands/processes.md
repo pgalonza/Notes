@@ -89,6 +89,36 @@ ls -l /proc/<PID>/fd/
 lsof | grep <PID>
 ```
 
+Show a list of user processes
+
+```bash
+lsof -u <user_name>
+```
+
+Show open files of process
+
+```bash
+lsof -p <pid>
+```
+
+Show openfiles of command
+
+```bash
+lsof -c <command>
+```
+
+Show what process use port
+
+```bash
+lsof -i :<port_number>
+```
+
+Show open files in directory
+
+```bash
+lsof +D <path_to_directory>
+```
+
 Show allocated file descriptors, not use file descriptors, maximum of file descriptors
 
 ```bash
@@ -105,13 +135,13 @@ Show the number of open files on your system
 
 ```bash
 lsof | wc -l
-lsof /home
+lsof <path to dir>
 ```
 
 Show limits of process start by user
 
 ```bash
-cat /proc/PID/limits
+cat /proc/<pid>/limits
 ```
 
 Show maximum of objects inotify per user

@@ -17,13 +17,6 @@ Read ttyUSB0
 chmod a+rw /dev/ttyUSB0
 ```
 
-Encoding
-
-```bash
-iconv -f cp1251 -t utf8
-file -bi
-```
-
 Search in files
 
 ```bash
@@ -85,12 +78,6 @@ Terminal reinitialization
 reset
 ```
 
-Determine file type
-
-```bash
-file file_name
-```
-
 Create a new UUID value
 
 ```bash
@@ -101,24 +88,6 @@ Cd rom access
 
 ```bash
 chmod u+s /usr/bin/wodim
-```
-
-Display file or file system status
-
-```bash
-stat
-```
-
-Compare files
-
-```bash
-comm
-```
-
-Merge files
-
-```bash
-paste
 ```
 
 Read from standard input and write to standard output and files
@@ -151,12 +120,6 @@ true | tee <file_name>
 dd if=/dev/null of=<file_name>
 shred <file_name>
 shred -zu <file_name>
-```
-
-Translate or delete characters
-
-```bash
-tr
 ```
 
 Set or retrieve a process's CPU affinity
@@ -1033,44 +996,6 @@ Generate configyration file
 
 ```bash
 grub-mkconfig -o /boot/grub2/grub.cfg
-```
-
-## Lsof
-
-Show a list of processes that have opene files
-
-```bash
-lsof /home
-```
-
-Show a list of user processes
-
-```bash
-lsof -u <user_name>
-```
-
-Show open files in directory
-
-```bash
-lsof +D <path_to_directory>
-```
-
-Show open files of process
-
-```bash
-lsof -p <pid>
-```
-
-Show openfiles of command
-
-```bash
-lsof -c <command>
-```
-
-Show what process use port
-
-```bash
-lsof -i :<port_number>
 ```
 
 ## Certbot
