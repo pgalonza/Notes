@@ -53,3 +53,15 @@ Translate or delete characters
 ```bash
 tr
 ```
+
+Show inodes
+
+```bash
+ls -i <file path>
+```
+
+Show file system where file
+
+```bash
+df file path>
+```
