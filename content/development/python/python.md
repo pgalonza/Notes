@@ -1694,3 +1694,28 @@ token = input("Token: ")
 jwt_structure = jwt.decode(token, algorithms=["RS256"], options={"verify_signature": False})
 pprint(jwt_structure)
 ```
+
+## File descriptors
+
+Pipe
+
+```python
+import os, sys, codecs
+import time
+
+R,W=os.pipe()
+r,w=os.pipe()
+print('R:', R, 'W:', W)
+print('r', r, 'w:', w)
+print('Parrent', os.getpid())
+cpid = os.fork()
+print('Child', cpid)
+if cpid:
+    os.dup2(0,100) # stdin > 100
+    os.dup2(R,0) # R > stdin
+    os.dup2(r,101) # r > 101
+    os.close(R)
+    os.close(r)
+    os.close(W)
+    os.close(w)
+```
