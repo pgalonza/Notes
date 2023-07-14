@@ -68,6 +68,12 @@ Run in namespaces
 unshare <parameters> <program>
 ```
 
+Show namespaces
+
+```bash
+lsns
+```
+
 Show cgroups
 
 ```bash
