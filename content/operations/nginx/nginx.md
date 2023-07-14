@@ -164,10 +164,11 @@ server {
 }
 
 # Not work with keycloak
-location ~ /\. {
+location ~ /\.(?!well-known) {
     deny all;
     return 404;
 }
+
 ```
 
 Nginx
