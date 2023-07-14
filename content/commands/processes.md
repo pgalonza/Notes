@@ -125,18 +125,6 @@ Show open files in directory
 lsof +D <path_to_directory>
 ```
 
-Show allocated file descriptors, not use file descriptors, maximum of file descriptors
-
-```bash
-cat /proc/sys/fs/file-nr
-```
-
-Show proccess descriptors
-
-```bash
-ls -l /proc/<number of proccess>/fd
-```
-
 Show the number of open files on your system
 
 ```bash
@@ -301,4 +289,37 @@ pgrep <name of application> | awk '{print "-p " $1}' | xargs strace -f -tt -s <n
 
 ```bash
 gdb <program or dump>
+```
+
+## File descriptors
+
+Show allocated file descriptors, not use file descriptors, maximum of file descriptors
+
+```bash
+cat /proc/sys/fs/file-nr
+```
+
+Show proccess descriptors
+
+```bash
+ls -l /proc/<number of proccess>/fd
+```
+
+Truncate file
+
+```bash
+: > <path to file>
+```
+
+Truncate descriptor
+
+```bash
+: > proc/<pid>/fd/$fd
+```
+
+Show deleted files
+
+```bash
+lsof -nP | grep '(deleted)'
+lsof -nP +L1
 ```
