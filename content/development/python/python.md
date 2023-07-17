@@ -1099,6 +1099,14 @@ In-memory binary stream
 file = io.BytesIO(<bytes>)
 ```
 
+In-memory string file
+
+```python
+file = StringIO()
+file.write(<data>)
+file.getvalue().encode('utf-8')
+```
+
 ## Exception
 
 Exception Handling
