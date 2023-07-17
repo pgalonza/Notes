@@ -33,8 +33,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.111.3
-      THEME_VERSION: 0.39.5
+      HUGO_VERSION: 0.115.3
+      THEME_VERSION: 0.40.1
       THEME: hugo-geekdoc
       BASEDIR: docs
       THEMEDIR: ./themes
