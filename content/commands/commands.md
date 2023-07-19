@@ -128,18 +128,6 @@ Set or retrieve a process's CPU affinity
 taskset
 ```
 
-## PERMISSION
-
-```bash
-usermod -u 2005 foo
-groupmod -g 3000 foo
-
-find / -group 2000 -exec chgrp -h foo {} \;
-find / -user 1005 -exec chown -h foo {} \;
-
-usermod -g <NEWGID> <LOGIN>
-```
-
 ## TAR
 
 Create archive
