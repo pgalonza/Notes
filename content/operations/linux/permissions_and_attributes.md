@@ -14,3 +14,9 @@ find / -user 1005 -exec chown -h foo {} \;
 
 usermod -g <NEWGID> <LOGIN>
 ```
+
+End-to-end file access without read directory
+
+```bash
+chmod 711 <folder name>
+```
