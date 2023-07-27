@@ -73,3 +73,12 @@ Get distribution ID
 ```bash
 awk -F= '$1=="ID" { print $2 ;}' /etc/os-release | sed s/\"//g
 ```
+
+Information about commands
+
+```bash
+command -v <command>
+type <command>
+type -t <command>
+type -a <command>
+```

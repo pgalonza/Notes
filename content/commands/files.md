@@ -65,3 +65,11 @@ Show file system where file
 ```bash
 df file path>
 ```
+
+Print the locate of binary
+
+```bash
+type -a command
+whereis command
+which command
+```

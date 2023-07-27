@@ -52,14 +52,6 @@ Check nginx configuration
 nginx -t
 ```
 
-Print the locate of binary
-
-```bash
-type -a command
-whereis command
-which command
-```
-
 Search by commands history
 
 ```bash
