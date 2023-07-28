@@ -20,3 +20,9 @@ End-to-end file access without read directory
 ```bash
 chmod 711 <folder name>
 ```
+
+Sticky Bit
+
+```bash
+chmod +t <folder or file name>
+```
