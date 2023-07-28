@@ -243,6 +243,34 @@ Root without asking password
 <user_name> ALL=(ALL) NOPASSWD: ALL
 ```
 
+## OOM Killer
+
+[Information from](https://t.me/bashdays/40)
+
+Get OOM score
+
+```bash
+cat /proc/<pid>/oom_score
+```
+
+Disable
+
+```bash
+echo 1 > /proc/sys/vm/panic_on_oom
+```
+
+Disable for proccess
+
+```bash
+echo -17 > /proc/<pid>/oom_adj
+```
+
+Set priority
+
+```bash
+echo <+-value> > /proc/<pid>/oom_adj
+```
+
 ## SystemD
 
 ### Nspawn
