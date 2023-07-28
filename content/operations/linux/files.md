@@ -73,3 +73,9 @@ type -a command
 whereis command
 which command
 ```
+
+Show all symbols
+
+```bash
+cat -A file_name
+```

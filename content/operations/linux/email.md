@@ -1,7 +1,6 @@
 ---
-title: "E-mail"
+title: "Email"
 draft: false
-description: "CLI commands for postfix, dovecot, mutt"
 ---
 
 {{< toc >}}

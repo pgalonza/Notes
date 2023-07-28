@@ -29,6 +29,52 @@ Max query metrics
 config.vpxd.stats.maxQueryMetrics = -1
 ```
 
+## ESXI
+
+### Network
+
+Up or down
+
+```bash
+esxcli network nic up/down -n vmnicX
+```
+
+Set speed and duplex
+
+```bash
+esxcfg-nics -s 10000 -d full vmnicX
+```
+
+### Disk
+
+Convert the Thin disk to Eager Zeroed Thick disk
+
+```bash
+vmkfstools --inflatedisk /vmfs/volumes/DatastoreName/VMName/VMName.vmdk
+```
+
+Convert the Thick disk to Eager Zeroed Thick disk
+
+```bash
+vmkfstools --eagerzero /vmfs/volumes/DatastoreName/VMName/VMName.vmdk
+```
+
+Check and repair vmdk
+
+```bash
+vmkfstools --fix check file_name.vmdk
+vmkfstools -x check file_name.vmdk
+vmkfstools -x repair file_name.vmdk
+```
+
+## Amavisd
+
+Check the configuration file
+
+```bash
+amavisd -u amavis -c /etc/amavisd/amavisd.conf debug
+```
+
 ## Virtual Machine
 
 ### Configuration parameters

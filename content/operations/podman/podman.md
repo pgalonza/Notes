@@ -37,6 +37,12 @@ wait $!
 Network configurations
 _/etc/cni/net.d/_
 
+Clear testing
+
+```bash
+sudo podman rm --all; sudo podman rmi wireguard; sudo buildah rm --all
+```
+
 ## Troubleshooting
 
 kernel does not support overlay fs: 'overlay' is not supported over extfs at "": backing file system is unsupported for this graph driver

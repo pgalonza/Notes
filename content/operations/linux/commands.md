@@ -566,52 +566,6 @@ sox -V vm-intro.wav -r 8000 -c 1 -t al vm-intro.alaw
 sox -V vm-intro.wav -r 8000 -c 1 -t gsm vm-intro.gsm
 ```
 
-## ESXI
-
-### Network
-
-Up or down
-
-```bash
-esxcli network nic up/down -n vmnicX
-```
-
-Set speed and duplex
-
-```bash
-esxcfg-nics -s 10000 -d full vmnicX
-```
-
-### Disk
-
-Convert the Thin disk to Eager Zeroed Thick disk
-
-```bash
-vmkfstools --inflatedisk /vmfs/volumes/DatastoreName/VMName/VMName.vmdk
-```
-
-Convert the Thick disk to Eager Zeroed Thick disk
-
-```bash
-vmkfstools --eagerzero /vmfs/volumes/DatastoreName/VMName/VMName.vmdk
-```
-
-Check and repair vmdk
-
-```bash
-vmkfstools --fix check file_name.vmdk
-vmkfstools -x check file_name.vmdk
-vmkfstools -x repair file_name.vmdk
-```
-
-## Amavisd
-
-Check the configuration file
-
-```bash
-amavisd -u amavis -c /etc/amavisd/amavisd.conf debug
-```
-
 ## Udevadm
 
 Show in realtime
@@ -729,27 +683,6 @@ Show devices
 nmcli device show
 ```
 
-## Fish shell
-
-Make fish to default
-
-```bash
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
-```
-
-Update man page completions
-
-```bash
-fish_update_completions
-```
-
-Fish settings
-
-```bash
-fish_config
-```
-
 ## Entropy
 
 View the size of the entropy pool
@@ -762,68 +695,6 @@ View status of server’s entropy
 
 ```bash
 cat /proc/sys/kernel/random/entropy_avail
-```
-
-## RouterOS
-
-Remove all
-
-```bash
-remove [find]
-```
-
-Show list
-
-```bash
-:foreach i in=[/interface vrrp find] do={ :put [/interface vrrp get $i name];
-```
-
-Instruction if
-
-```bash
-:if ([:len [/file find name=file_name]] > 0) do={:put "false"}
-```
-
-Print variable
-
-```bash
-:local variable_name [:len [/file find name=name_file]]; :put (variable_name);
-```
-
-## Cat
-
-Show all symbols
-
-```bash
-cat -A file_name
-```
-
-## Systemd-analyze
-
-Show load time
-
-```bash
-systemd-analyze
-```
-
-Show load time in detail
-
-```bash
-systemd-analyze blame
-```
-
-Write load information in svf file
-
-```bash
-systemd-analyze plot > graph.svf
-```
-
-## VirtualBox
-
-Change UUID
-
-```bash
-VBoxManage internalcommands sethduuid disk_name.vdi
 ```
 
 ## Cp
@@ -900,14 +771,6 @@ Download file
 curl --location --remote-name https://<url to file>
 ```
 
-## Vim
-
-Delete and paste
-
-```bash
-ddP
-```
-
 ## Nohup
 
 Run command immune to hangups
@@ -968,14 +831,6 @@ Network utils
 
 ```bash
 kubectl run -it --rm --image amouat/network-utils test bash
-```
-
-## Grub
-
-Generate configyration file
-
-```bash
-grub-mkconfig -o /boot/grub2/grub.cfg
 ```
 
 ## Certbot

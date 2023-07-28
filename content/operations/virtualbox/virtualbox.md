@@ -5,6 +5,12 @@ draft: false
 
 {{< toc >}}
 
+Change UUID
+
+```bash
+VBoxManage internalcommands sethduuid disk_name.vdi
+```
+
 ## Troubleshooting
 
 Fix the problems

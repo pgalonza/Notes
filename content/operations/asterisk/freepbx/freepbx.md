@@ -3,6 +3,8 @@ title: "FreePBX"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Core FastAGI Server is not running
 
 ```bash

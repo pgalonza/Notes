@@ -8,6 +8,30 @@ draft: false
 IGMP Proxy
 Address on interface
 
+Remove all
+
+```bash
+remove [find]
+```
+
+Show list
+
+```bash
+:foreach i in=[/interface vrrp find] do={ :put [/interface vrrp get $i name];
+```
+
+Instruction if
+
+```bash
+:if ([:len [/file find name=file_name]] > 0) do={:put "false"}
+```
+
+Print variable
+
+```bash
+:local variable_name [:len [/file find name=name_file]]; :put (variable_name);
+```
+
 ## IPv6
 
 IPv6 MTU over PPPoE Interface

@@ -43,6 +43,15 @@ Show password expiration date
 chage -l <user_name>
 ```
 
+Restricted Shells
+
+```bash
+useadd <user name> –s /bin/rbash
+mkdir –p /home/<user name>/bin
+cp /bin/ping /home/<user name>/bin
+ln –s /bin/ls /home/<user name>/bin
+```
+
 ## User
 
 Create a user with defaul group and add him to other group.

@@ -117,124 +117,6 @@ Do not allow direct execution of any binaries on the mounted filesystem
 noexec
 ```
 
-## Network
-
-Forward
-
-```bash
-echo net.ipv4.ip_forward = 1 >> /etc/sysctl.conf
-echo net.ipv6.conf.all.forwarding=1 >> /etc/sysctl.conf
-```
-
-IPv6
-_/etc/sysconfig/network_
-
-```text
-NETWORKING_IPV6=yes
-```
-
-IPv6 and IPv4 priority
-_/etc/gai.conf_
-
-### VLAN
-
-Adding new virtual interface
-
-```bash
-ip link add link ethX name ethX.vlan_id type vlan id vlan_id
-```
-
-Assign ip-address to interface
-
-```bash
-ip addr add X.X.X.X/XX dev ethX.vlan_id
-```
-
-Enabling the interface
-
-```bash
-ip link set dev ethX.vlan_id up
-```
-
-### MACVLAN
-
-Adding new macvlan interface
-
-```bash
-ip link add link ethX macvlan_name type macvlan mode bridge
-```
-
-### Bridge
-
-Adding new bridge interface
-
-```bash
-ip link add name bridge_name type bridge
-```
-
-Adding interface to bridge
-
-```bash
-ip link set interface_name master bridge_name
-```
-
-Removing interface
-
-```bash
-ip link set interface_name nomaster
-```
-
-### VRRP
-
-```text
-global_defs {
-    enable_script_security
-    router_id <name>
-}
-
-vrrp_script <block name> {
-    script "<command>"
-    interval <interval in seconds>
-    weight <value for priority -253..253>
-    user nobody
-}
-
-vrrp_track_process <block name> {
-    process <name of proccess>
-    interval <interval in seconds>
-    weight <value for priority -253..253>
-    quorum <minimum number of processes for success>
-    quorum_max <maximum number of processes for success>
-}
-
-vrrp_instance <block name> {
-    state <MASTER/BACKUP>
-    interface <interface name>
-    virtual_router_id <id, must be same>
-    priority <0-255>
-    advert_int 1
-    authentication {
-        auth_type PASS
-        auth_pass <password>
-    }
-    unicast_peer {
-        <ip other vrrp host>
-    }
-    virtual_ipaddress {
-        <virtual ip>/<mask> dev <interface name> label <interface name>:vip
-    }
-
-    track_process {
-        <block name>
-    }
-
-   track_script {
-       <block name>
-    }
-
-}
-```
-
 ## Sudoers
 
 Root without asking password
@@ -269,123 +151,6 @@ Set priority
 
 ```bash
 echo <+-value> > /proc/<pid>/oom_adj
-```
-
-## SystemD
-
-### Nspawn
-
-Create container system files
-
-```bash
-mount rootfs.img /var/lib/machines/<container name>
-```
-
-Start container
-
-```bash
-systemctl start systemd-nspawn@<container name>
-```
-
-Connect to container
-
-```bash
-systemd-run -t -M <container name> /bin/bash
-```
-
-Show status
-
-```bash
-machinectl status <container name>
-```
-
-Start on boot
-
-```bash
-machinectl enable <container name>
-```
-
-Set quotas
-
-```bash
-systemctl set-property systemd-nspawn@<container name> CPUQuota=200%
-systemctl set-property systemd-nspawn@<container name> MemoryMax=2G
-```
-
-### Units
-
-OOMKiller
-
-```text
-OOMScoreAdjust=1000
-ExecStartPost=/bin/bash -c "echo <memory>G > /sys/fs/cgroup/memory/system.slice/php-fpm.service/memory.memsw.limit_in_bytes"
-ExecStartPost=/bin/bash -c "echo 0 > /sys/fs/cgroup/memory/system.slice/php-fpm.service/memory.swappiness"
-MemoryLimit=<memory>G
-```
-
-Create unit with wrapper
-_/etc/systemd/system/\<service name\>.service_
-
-```text
-[Unit]
-Description=<description>
-After=syslog.target network.target
-[Service]
-SuccessExitStatus=143
-User=<username>
-Group=<usergroup>
-
-Type=simple
-
-ExecStart=</path to wrapper>
-ExecStop=/bin/kill -15 $MAINPID
-
-[Install]
-WantedBy=multi-user.target
-```
-
-```bash
-#!/bin/bash
-
-JAVA_HOME=<java path>
-WORKDIR=<service work dir>
-JAVA_OPTIONS="<java options>"
-APP_OPTIONS="<application options>"
-
-cd $WORKDIR
-eval exec "${JAVA_HOME}/bin/java" $JAVA_OPTIONS -jar <jar file>.jar $APP_OPTIONS
-```
-
-Docker
-
-```text
-[Unit]
-Description=<description>
-After=docker.service
-Requires=docker.service
-
-[Service]
-TimeoutStartSec=0
-Restart=always
-ExecStartPre=-/usr/bin/docker exec %n stop
-ExecStartPre=-/usr/bin/docker rm %n
-ExecStartPre=/usr/bin/docker pull <docker image>
-ExecStart=/usr/bin/docker run --rm --name %n \
-    <docker image>
-
-[Install]
-WantedBy=default.target
-```
-
-## Users and Groups
-
-Restricted Shells
-
-```bash
-useadd <user name> –s /bin/rbash
-mkdir –p /home/<user name>/bin
-cp /bin/ping /home/<user name>/bin
-ln –s /bin/ls /home/<user name>/bin
 ```
 
 ## Reset password
@@ -430,6 +195,12 @@ fi
 3. Change ro to rw
 
 4. Remove single, splash and quiet words
+
+Generate configyration file
+
+```bash
+grub-mkconfig -o /boot/grub2/grub.cfg
+```
 
 ## Chroot
 
@@ -479,7 +250,6 @@ export <locale variable>=<locale value>
 ## PAM limits configuration
 
 _/etc/security/limits.conf_, _/etc/security/_
-
 
 ```text
 * soft nproc 65535

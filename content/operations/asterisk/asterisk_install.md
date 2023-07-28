@@ -3,6 +3,8 @@ title: "Install asterisk"
 draft: false
 ---
 
+{{< toc >}}
+
 ## Libraries
 
 Essential Libraries
