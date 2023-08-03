@@ -1,5 +1,4 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Deploy Hugo site to Hosting
 
 on:
   # Runs on pushes targeting the default branch
@@ -11,16 +10,14 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: "hosting"
   cancel-in-progress: false
 
 # Default to bash
@@ -38,6 +35,7 @@ jobs:
       THEME: hugo-geekdoc
       BASEDIR: docs
       THEMEDIR: ./themes
+      SITE_URL: "https://notes.evaron.ru/"
     steps:
       - name: Install Hugo CLI
         run: |
@@ -50,9 +48,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Create folder for template
@@ -68,21 +63,30 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+            --baseURL ${SITE_URL}         
+      - name: Archive hugo artifacts
+        uses: actions/upload-artifact@v3
         with:
+          name: hugo-artifact
           path: ./public
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  deploy-hosting:
     runs-on: ubuntu-latest
+    environment: jino
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
-
+    - uses: actions/checkout@v3
+    - name: Download hugo artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: hugo-artifact
+        path: public
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@6.0.0
+      with:
+        switches: -avzr --delete
+        path: public/
+        remote_path: 	./domains/notes.evaron.ru/
+        remote_host: ${{ vars.SFTP_HOST }}
+        remote_user: ${{ secrets.SFTP_USER }}
+        remote_key: ${{ secrets.SFTP_KEY }}

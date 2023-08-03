@@ -1,4 +1,4 @@
-baseURL: 'https://github.evaron.ru/Notes/'
+baseURL: 'https://notes.evaron.ru/'
 languageCode: 'en-us'
 title: 'Notes by Peter Galonza'
 theme: 'hugo-geekdoc'
@@ -23,7 +23,7 @@ taxonomies:
 
 params:
   geekdocCollapseAllSections: true
-  geekdocRepo: "https://github.com/pgalonza/Notes"
+  geekdocRepo: "https://notes.evaron.ru/"
   geekdocContentLicense:
     name: Apache-2.0 license
     link: https://github.com/pgalonza/Notes/blob/master/LICENSE
