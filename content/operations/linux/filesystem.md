@@ -1,5 +1,5 @@
 ---
-title: "Disks and partitions"
+title: "Filesystem"
 draft: false
 ---
 

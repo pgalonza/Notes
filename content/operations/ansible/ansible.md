@@ -50,6 +50,40 @@ Regexp
 {{ <variable> | regex_search('<pattern>') }}
 ```
 
+Handling errors
+
+[Doc](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_debugger.html)
+
+```yaml
+ - name: Handle the error
+   block:
+    - <tasks>
+   rescue:
+    - <tasks>
+    - name: Run all handlers
+      meta: flush_handlers
+   always:
+     - <tasks>
+```
+
+Async
+
+[Doc](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_async.html)
+
+```yaml
+  - name: <Job name>
+    async: <how long wait>
+    poll: <how often to poll>
+
+  - name: Check on an async task
+    async_status:
+      jid: "{{ yum_sleeper.ansible_job_id }}"
+    register: job_result
+    until: job_result.finished
+    retries: <count of attempts>
+    delay: <how often to retry>
+```
+
 ## Commands
 
 Start as another user
@@ -80,6 +114,12 @@ Get facts:
 
 ```bash
 ansible all -i hosts.yml --user <ssh_uaser_name> --key-file <ssh_key> -m setup
+```
+
+Ad-hoc
+
+```bash
+ansible -i <host file> -m <module name> -a <module parameters> <host or group>
 ```
 
 ## Module
