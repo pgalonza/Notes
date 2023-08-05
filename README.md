@@ -2,4 +2,4 @@
 
 In this repository I publish my work for further evaluation of my skills.
 
-You can visit the GitHub Pages [Notes](https://github.evaron.ru/Notes/)
+You can visit the GitHub Pages [Notes](https://notes.evaron.ru/)
