@@ -16,3 +16,5 @@ draft: false
 * **Ident-rainbow** - colorizes the indentation in front of your text alternating four different colors on each step.
 * **Ansible** - adds language support for Ansible.
 * **autoDocstring** - quickly generate docstrings for python functions.
+* **Log File Highlighter** - aadds color highlighting to log files to make it easier to follow the flow of log events and identify problems.
+* **RayThis: Instant Beautiful Code Screenshots** - instantly deploy beautiful code snippets to Ray.so without leaving your coding environment.
