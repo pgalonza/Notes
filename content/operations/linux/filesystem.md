@@ -88,6 +88,12 @@ fallocate -l $((10*1024*1024)) file.txt
 head -c 10MB /dev/urandom > file.txt
 ```
 
+Show physical location of file
+
+```bash
+filefrag -b512 -v <file>
+```
+
 ## Du
 
 Show size of directories
@@ -167,6 +173,12 @@ Ignore Errors
 
 ```bash
 dd if=/dev/sdc of=flash.img bs=1M conv=noerror
+```
+
+Read file from physical location
+
+```bash
+dd if=/dev/<sd*> skip=<start offset> status=none count=8
 ```
 
 ## S.M.A.R.T
