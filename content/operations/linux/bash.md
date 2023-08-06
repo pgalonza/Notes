@@ -193,6 +193,61 @@ Debug
 trap 'echo "# $BASH_COMMAND";read' DEBUG
 ```
 
+## File descriptors
+
+Open descriptor.
+
+- write
+- read
+- read and write
+
+```bash
+exec <fd>> <file>
+exec <fd>< <file>
+exec <fd><> <file>
+```
+
+Close descriptor
+
+```bash
+exec <fd>>&-
+exec <fd><&-
+```
+
+Merge descriptor
+
+```bash
+exec <fd> >&<fd>
+exec <fd> <&<fd>
+```
+
+Move descriptor
+
+```bash
+exec <fd><&<fd>-
+```
+
+Read descriptor
+
+```bash
+read input <& <fd> && echo "${input}"
+```
+
+## I/O redirect
+
+Stderr and stdout in file
+
+```bash
+<command> > <file> 2>&1
+<command> &> <file>
+```
+
+Stderr in stdout of console, stderr in file
+
+```bash
+<command> 2>&1 > <file> 
+```
+
 ## Prompt
 
 Label for warn the criticality of the server
