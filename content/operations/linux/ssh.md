@@ -74,12 +74,6 @@ Generate for paramiko
 ssh-keygen -m pem -t rsa -C "test"
 ```
 
-Show RSA host key
-
-```bash
-ssh-keyscan -t rsa host_address
-```
-
 Convert for FileZilla
 
 ```bash
@@ -89,7 +83,7 @@ puttygen keyname -o keyname.ppk
 Add fingerprint
 
 ```bash
-ssh-keyscan -H <host_name> >> ~/.ssh/known_hosts
+ssh-keyscan -t <fingerprint type> -H <host_name> >> ~/.ssh/known_hosts
 ```
 
 ## SSH Tunneling
