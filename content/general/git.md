@@ -106,6 +106,12 @@ Delete remote brannch
 git push --delete origin <remote branch>
 ```
 
+Add file from other branch
+
+```bash
+git checkout <from branch> <file or directory>
+```
+
 ## Create new repository
 
 Create the folder and initialization on server
