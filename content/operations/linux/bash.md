@@ -233,6 +233,12 @@ Read descriptor
 read input <& <fd> && echo "${input}"
 ```
 
+Open socket
+
+```bash
+exec <fd><>//dev/<protocol>/<ip>/<port number>
+```
+
 ## I/O redirect
 
 Stderr and stdout in file

@@ -13,6 +13,12 @@ ping <ip_address> -4 -M do -s $((1500-28))
 ping <ip_address> -6 -M do -s $((1500-48))
 ```
 
+Check port
+
+```bash
+(echo > /dev/tcp/<ip>/<port number>) > /dev/null 2>&1 && echo "success"
+```
+
 ## Network
 
 Forward
