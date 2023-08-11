@@ -147,7 +147,7 @@ netstat -at
 
 Show all UDP ports
 
-```bash
+```bashKDE
 netstat -au
 ```
 
@@ -168,3 +168,11 @@ List of connecting host
 ```bash
 netstat -lantp | grep ESTABLISHED |awk '{print $5}' | awk -F: '{print $1}' | sort -u
 ```
+
+## NetworkManager
+
+Network configurations
+
+/etc/NetworkManager/system-connections/
+
+/var/run/NetworkManager/system-connections/
