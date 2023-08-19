@@ -72,12 +72,19 @@ Show namespaces
 
 ```bash
 lsns
+ls -al /proc/<PID>/ns
 ```
 
 Show cgroups
 
 ```bash
 cat /proc/<PID>/cgroup
+```
+
+Execute program in namespace
+
+```bash
+nsenter --target <PID> <parameters> <program>
 ```
 
 ## Open files, sockets
