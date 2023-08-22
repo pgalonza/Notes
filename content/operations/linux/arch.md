@@ -12,6 +12,15 @@ _/etc/pacman.conf_
 IgnorePkg=linux
 ```
 
+Clean cache
+
+```bash
+paccache -rk<count of recent versions to keep>
+paccache -rk<count of recent versions to keep> --cachedir ~/.cache/pikaur/pkg
+paccache -ruk0
+paccache -ruk0 --cachedir ~/.cache/pikaur/pkg
+```
+
 ## Recovery
 
 ### Downgrade package
