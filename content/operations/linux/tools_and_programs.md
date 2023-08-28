@@ -39,6 +39,7 @@ draft: false
 * **tee** - read from standard input and write to standard output and files.
 * **cfdisk** - display and manipulate a disk partition table.
 * **chcpu** - configure CPUs.
+* **script** - record the terminal session.
 
 ## Environment
 

@@ -42,6 +42,7 @@ Rename file
 
 ```bash
 mv /tmp/working-dir/readme.md{,.backup}
+rename <>
 ```
 
 Don't save commands of the current session
@@ -191,6 +192,12 @@ Debug
 [Information from](https://t.me/bash_help/104)
 
 trap 'echo "# $BASH_COMMAND";read' DEBUG
+```
+
+Read password in variable
+
+```bash
+read -s <variable name>
 ```
 
 ## File descriptors
