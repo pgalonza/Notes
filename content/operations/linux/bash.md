@@ -200,6 +200,12 @@ Read password in variable
 read -s <variable name>
 ```
 
+End of argument processing for command
+
+```bash
+<command> -- <command> <args>
+```
+
 ## File descriptors
 
 Open descriptor.
