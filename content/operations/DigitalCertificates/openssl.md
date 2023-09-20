@@ -89,6 +89,18 @@ Decryption password
 cat secret.txt | openssl enc -aes-256-cbc -md sha512 -a -d -pbkdf2 -iter 100000 -salt -pass pass:<salt>
 ```
 
+Encrypt file
+
+```bash
+openssl enc -pbkdf2 -eas256 -base64 -in <src file> -out <file name>
+```
+
+Decryption file
+
+```bash
+openssl enc -d -pbkdf2 -eas256 -base64 -in <encryption file> -out <file name>
+```
+
 ## Change password
 
 Remove passowrd
