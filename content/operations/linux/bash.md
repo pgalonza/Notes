@@ -178,12 +178,6 @@ No finish if error
 <command> || true
 ```
 
-Separator
-
-```bash
-IFS=$"<value>"
-```
-
 Debug
 
 ```bash
@@ -205,6 +199,20 @@ End of argument processing for command
 ```bash
 <command> -- <command> <args>
 ```
+
+## Variables
+
+Separator
+
+```bash
+IFS=$"<value>"
+```
+
+[Information from](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html)
+
+- PS0 - value of this parameter is expanded like PS1 and displayed by interactive shells after reading a command and before the command is executed.
+- PS1 - primary prompt string.
+- PS2 - secondary prompt string.
 
 ## File descriptors
 
@@ -272,5 +280,5 @@ Stderr in stdout of console, stderr in file
 Label for warn the criticality of the server
 
 ```bash
-PS1="\@ \[\033[38;5;42m\]<server type>\[$(tput sgr0)\]\n[\[$(tput sgr0)\]\[\033[38;5;75m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;42m\]\h\[$(tput sgr0)\] \W]\\$ \[$(tput sgr0)\]"
+PS1="\@\[\033[38;5;42m\]<server type>\[$(tput sgr0)\]\n[\[$(tput sgr0)\]\[\033[38;5;75m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;42m\]\h\[$(tput sgr0)\] \W]\\$ \[$(tput sgr0)\]"
 ```
