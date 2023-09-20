@@ -23,7 +23,7 @@ taxonomies:
 
 params:
   geekdocCollapseAllSections: true
-  geekdocRepo: "https://notes.evaron.ru/"
+  geekdocRepo: "https://github.com/pgalonza/Notes"
   geekdocContentLicense:
     name: Apache-2.0 license
     link: https://github.com/pgalonza/Notes/blob/master/LICENSE
