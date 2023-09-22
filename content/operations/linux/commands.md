@@ -585,7 +585,43 @@ udevadm info /dev/sdb1
 Make immutable
 
 ```bash
-chattr +i file_name
+chattr +i <file name>
+```
+
+Only append
+
+```bash
+chattr +a <file name>
+```
+
+Kernel compress/decompress
+
+```bash
+chattr +c <file name>
+```
+
+Ignore when dump
+
+```bash
+chattr +d <file name>
+```
+
+Security remove
+
+```bash
+chattr +s <file name>
+```
+
+Remove with save data
+
+```bash
+chattr +u <file name>
+```
+
+Sync on disk
+
+```bash
+chattr +S <file name>
 ```
 
 Show the file attributes
