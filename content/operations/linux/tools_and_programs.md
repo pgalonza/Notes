@@ -33,6 +33,7 @@ draft: false
 * **xdotool** - X11 automation tool.
 * **wait** - wait for jobs to complete.
 * **tty-share** - share terminal.
+* **envsubst** - substitutes environment variables in shell format strings.
 
 ## CPU
 
