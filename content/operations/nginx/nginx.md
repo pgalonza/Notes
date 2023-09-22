@@ -136,7 +136,7 @@ server {
 
 server {
     listen 443 ssl default_server;
-    
+
     <SSL>
 
     return 403
