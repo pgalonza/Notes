@@ -30,6 +30,7 @@ draft: false
 * **tee** - read from standard input and write to standard output and files.
 * **script** - record the terminal session.
 * **expect** - programmed dialogue with interactive programs.
+* **xdotool** - X11 automation tool.
 
 ## CPU
 
