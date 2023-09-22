@@ -31,6 +31,7 @@ draft: false
 * **script** - record the terminal session.
 * **expect** - programmed dialogue with interactive programs.
 * **xdotool** - X11 automation tool.
+* **wait** - wait for jobs to complete.
 
 ## CPU
 
