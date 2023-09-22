@@ -115,6 +115,26 @@ upstream <upstream name> {
     }
 ```
 
+Select server use header
+
+[Information from](https://t.me/bashdays/26)
+
+```text
+map $http_x_backend $backend {
+    <server name> <address>:<port>;
+    default backend;
+}
+
+upstream <upstream name> {
+    server <server>:<port>;
+}
+
+location / {
+  add_header X-Upstream $upstream_addr;
+  proxy_pass http://$backend;
+}
+```
+
 ## Security
 
 Virtual domain
