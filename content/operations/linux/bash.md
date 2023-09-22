@@ -200,6 +200,20 @@ End of argument processing for command
 <command> -- <command> <args>
 ```
 
+Deactivate alias
+
+[Information from](https://t.me/bashdays/47)
+
+```bash
+/<command>
+'<command>'
+"<command>"
+<path to binary file>
+unalias <alias>
+unalias -a
+command <command>
+```
+
 ## Variables
 
 Separator
