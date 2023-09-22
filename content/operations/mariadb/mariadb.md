@@ -7,6 +7,12 @@ draft: false
 
 ## Commands
 
+Information about error
+
+```bash
+perror <error code>
+```
+
 Initializes the data directory
 
 ```bash
