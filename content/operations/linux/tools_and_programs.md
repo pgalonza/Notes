@@ -32,6 +32,7 @@ draft: false
 * **expect** - programmed dialogue with interactive programs.
 * **xdotool** - X11 automation tool.
 * **wait** - wait for jobs to complete.
+* **tty-share** - share terminal.
 
 ## CPU
 
