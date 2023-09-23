@@ -34,6 +34,7 @@ draft: false
 * **wait** - wait for jobs to complete.
 * **tty-share** - share terminal.
 * **envsubst** - substitutes environment variables in shell format strings.
+* **fwupd** - firmware update tool.
 
 ## CPU
 
