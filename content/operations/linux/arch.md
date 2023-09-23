@@ -17,8 +17,10 @@ Clean cache
 ```bash
 paccache -rk<count of recent versions to keep>
 paccache -rk<count of recent versions to keep> --cachedir ~/.cache/pikaur/pkg
+paccache -rk<count of recent versions to keep> --cachedir ~/.cache/yay/*/
 paccache -ruk0
 paccache -ruk0 --cachedir ~/.cache/pikaur/pkg
+paccache -ruk0 --cachedir ~/.cache/yay/*/
 ```
 
 ## Recovery
