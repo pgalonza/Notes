@@ -196,3 +196,7 @@ module.run_command("%s%s is-enabled '%s' -l" % (root_command, systemctl, unit))
 module.run_command("%s%s %s '%s'" % (root_command, systemctl, action, unit))
 module.run_command("%s%s %s '%s'" % (root_command, systemctl, action, unit))
 ```
+
+## Collections
+
+* [pgalonza.linux](https://github.com/pgalonza/linux-collection)
