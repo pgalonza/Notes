@@ -38,3 +38,10 @@ docker exec -it container_name bash
 
 docker rmi $(docker images -q -f dangling=true)
 ```
+
+## Security
+
+```bash
+--security-opt=no-new-privileges
+--read-only
+```
