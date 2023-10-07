@@ -103,3 +103,4 @@ draft: false
 
 * **fish** - friendly interactive shell.
 * **fzf** - general-purpose command-line fuzzy finder.
+* **whiptail** - display dialog boxes from shell scripts.
