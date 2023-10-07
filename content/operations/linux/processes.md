@@ -87,6 +87,12 @@ Execute program in namespace
 nsenter --target <PID> <parameters> <program>
 ```
 
+Pressure Stall Information
+
+```bash
+ /proc/pressure/<cpu|io|irq|memory>
+```
+
 ## Open files, sockets
 
 Show maximum of open files
