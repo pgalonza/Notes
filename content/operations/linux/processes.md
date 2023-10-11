@@ -87,7 +87,7 @@ Execute program in namespace
 nsenter --target <PID> <parameters> <program>
 ```
 
-Pressure Stall Information
+Pressure Stall Information 10s 60s 300s
 
 ```bash
  /proc/pressure/<cpu|io|irq|memory>
