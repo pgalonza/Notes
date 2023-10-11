@@ -260,6 +260,12 @@ GRANT <statements> ON <table name> TO <role name> WITH GRANT OPTION;
 GRANT <statements> ON <role name>.<table name> TO <role name>;
 ```
 
+Granting default permissions
+
+```bash
+alter default privileges for role <role name> in schema <schema name> grant <statements> on <target object> on <role name>
+```
+
 ## Functions
 
 Show functions
