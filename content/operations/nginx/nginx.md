@@ -181,12 +181,11 @@ server {
     if ( $host_valid == false ) {
         return 418;
     }
-}
 
-# Not work with keycloak
-location ~ /\.(?!well-known) {
-    deny all;
-    return 404;
+    location ~ /\.(?!well-known) {
+        deny all;
+        return 404;
+    }
 }
 
 ```
