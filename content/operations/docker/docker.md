@@ -23,6 +23,12 @@ FROM scratch
 ADD <path to rootfs> /
 ```
 
+Systemd in container
+
+```bash
+docker <> --volume /sys/fs/cgroup:/sys/fs/cgroup:rw --cgroupns=host --priveleged --command (/usr)/sbin/init
+```
+
 ## Commands
 
 ```bash
