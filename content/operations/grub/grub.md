@@ -10,6 +10,12 @@ draft: false
 Speculation protection disable
 
 ```text
+GRUB_CMDLINE_LINUX="mitigations=off"
+```
+
+older then5.1.13
+
+```text
 GRUB_CMDLINE_LINUX="PR_SPEC_DISABLE_NOEXEC nospectre_v2 nospectre_v1"
 ```
 
