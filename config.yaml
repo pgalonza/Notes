@@ -1,6 +1,6 @@
 baseURL: 'https://notes.evaron.ru/'
 languageCode: 'en-us'
-title: 'Notes by Peter Galonza'
+title: 'Notes by Peter Galonza(Пётр Галонза)'
 theme: 'hugo-geekdoc'
 
 pygmentsUseClasses: true
