@@ -36,6 +36,7 @@ draft: false
 * **envsubst** - substitutes environment variables in shell format strings.
 * **fwupd** - firmware update tool.
 * **mktemp** - create a temporary file or directory.
+* **flock** - manage locks from shell scripts.
 
 ## CPU
 
