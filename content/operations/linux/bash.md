@@ -3,7 +3,7 @@ title: Bash
 draft: false
 description: "Bash commands"
 aliases:
-  - /bash
+  - /operations/bash
 ---
 
 EOF
