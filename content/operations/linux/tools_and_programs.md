@@ -37,6 +37,7 @@ draft: false
 * **fwupd** - firmware update tool.
 * **mktemp** - create a temporary file or directory.
 * **flock** - manage locks from shell scripts.
+* **enable** - enable and disable shell builtins.
 
 ## CPU
 
