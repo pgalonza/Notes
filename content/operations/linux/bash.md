@@ -214,6 +214,16 @@ unalias -a
 command <command>
 ```
 
+Вetaching a process from a session
+
+[Information from](https://t.me/bashdays/160)
+
+```bash
+Ctrl + Z
+bg <pid>
+disown <pid>
+```
+
 ## Variables
 
 Separator
