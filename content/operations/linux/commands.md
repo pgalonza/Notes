@@ -373,6 +373,16 @@ Screenshot from RTSP
 ffmpeg -rtsp_transport tcp -i rtsp:// -f image2 -vf fps=fps=1 -t 0.001 -ss 00:00:3 tmp/image.png
 ```
 
+Use find
+
+```bash
+FFMPEG_COMMAND="ffmpeg -hide_banner -loglevel error -y"
+find . -type f -name "*.mp4" -print0 | while read -r -d '' file_name; do
+    echo $file_name
+    $FFMPEG_COMMAND -nostdin -i "$file_name" <params> - | $FFMPEG_COMMAND -i - -i "$file_name" <params> "${file_name/.mp4/}-dpni_fixed.mp4"
+done
+```
+
 ## Youtube-dl / yt-dlp
 
 Best video
