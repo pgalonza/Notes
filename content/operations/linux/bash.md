@@ -180,10 +180,10 @@ No finish if error
 
 Debug
 
+[Information from](https://t.me/bash_help/104)
+
 ```bash
 #!/bin/bash
-
-[Information from](https://t.me/bash_help/104)
 
 trap 'echo "# $BASH_COMMAND";read' DEBUG
 ```
