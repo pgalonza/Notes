@@ -247,6 +247,15 @@ Set for user
 export <locale variable>=<locale value>
 ```
 
+## Limits
+
+Get name and path byte limits
+
+```
+getconf -a | grep -i name_max
+getconf -a | grep -i path_max
+```
+
 ## PAM limits configuration
 
 _/etc/security/limits.conf_, _/etc/security/_
