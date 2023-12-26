@@ -305,3 +305,24 @@ if 'linux' in platform.system().lower():
     print ('Max number of processes allowed', limit_nproc)
 
 ```
+
+## Pipes
+
+Create named pipe
+
+```bash
+mkfifo <name of pipe>
+mknod <name of pipe> p
+```
+
+Write in pipe
+
+```
+echo <> > <pipe path>
+```
+
+Read from pipe
+
+```
+tail -f <pipe path>
+```
