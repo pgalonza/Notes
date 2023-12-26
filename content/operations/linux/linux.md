@@ -326,3 +326,9 @@ Read from pipe
 ```
 tail -f <pipe path>
 ```
+
+Remove named pipe
+
+```bash
+unlink <pipe path>
+```
