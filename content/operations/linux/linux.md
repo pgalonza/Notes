@@ -317,13 +317,13 @@ mknod <name of pipe> p
 
 Write in pipe
 
-```
+```bash
 echo <> > <pipe path>
 ```
 
 Read from pipe
 
-```
+```bash
 tail -f <pipe path>
 ```
 
