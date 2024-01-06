@@ -224,6 +224,11 @@ bg <pid>
 disown <pid>
 ```
 
+Cron sctipt template
+
+* [Original](https://habr.com/ru/articles/778922/)
+* [Fork](https://github.com/pgalonza/Notes-files/blob/main/bash/scripts/cron-template.sh)
+
 ## Variables
 
 Separator
