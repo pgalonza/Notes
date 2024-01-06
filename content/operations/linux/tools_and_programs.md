@@ -38,6 +38,9 @@ draft: false
 * **mktemp** - create a temporary file or directory.
 * **flock** - manage locks from shell scripts.
 * **enable** - enable and disable shell builtins.
+* **lastb** - show last logged users.
+* **ttyd** - share terminal in web.
+* **findmnt** - find a filesystems.
 
 ## CPU
 
@@ -64,6 +67,8 @@ draft: false
 * **nethogs** - net top tool grouping bandwidth per process.
 * **bmon** - portable bandwidth monitor and rate estimator.
 * **bwm-ng** - a live bandwidth monitor for network and disk io.
+* **fswatch** - file change monitoring tool.
+* **ttop** - system monitoring tool.
 
 ## Processes
 
