@@ -93,6 +93,14 @@ Pressure Stall Information 10s 60s 300s
  /proc/pressure/<cpu|io|irq|memory>
 ```
 
+Hide processes (fstab)
+
+[Information from](https://t.me/bashdays/167)
+
+```bash
+proc /proc hidepid=<0-2>, gid=<group> ...
+```
+
 ## Open files, sockets
 
 Show maximum of open files
