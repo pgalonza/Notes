@@ -1,5 +1,6 @@
 ---
 title: "Nintendo Switch"
+date: 2024-01-12T01:20:08+03:00
 draft: false
 description: "Nintendo Switch information about CFW, payloads, homebrew, modchip, sigpatches."
 ---
