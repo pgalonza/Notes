@@ -256,7 +256,7 @@ getconf -a | grep -i name_max
 getconf -a | grep -i path_max
 ```
 
-## PAM limits configuration
+### PAM limits configuration
 
 _/etc/security/limits.conf_, _/etc/security/_
 
@@ -306,6 +306,46 @@ if 'linux' in platform.system().lower():
 
 ```
 
+### File, socket limits
+
+_/etc/sysctl.conf_
+
+Maximum of objects inotify per user
+
+```text
+fs.inotify.max_user_instances=
+```
+
+Maximum of watch files and directories per object inotify
+
+```text
+fs.inotify.max_user_watches=
+```
+
+Maximum of events in queued
+
+```text
+fs.inotify.max_queued_events=
+```
+
+Maximum of open descriptors
+
+```text
+fs.file-max=
+```
+
+Maximum queue size of packet
+
+```text
+net.core.netdev_max_backlog =
+```
+
+Maximum number of open sockets waiting to be connected
+
+```text
+net.core.somaxconn =
+```
+
 ## Pipes
 
 Create named pipe
@@ -331,4 +371,52 @@ Remove named pipe
 
 ```bash
 unlink <pipe path>
+```
+
+## Sudoers
+
+_/etc/sudoers_
+Write logs
+
+```text
+Defaults  log_host, log_year, logfile="/var/log/sudo.log"
+```
+
+Run command with sudo without password
+
+```text
+notify ALL=(ALL) NOPASSWD:path_to_command, path_to_command
+```
+
+## SysRq
+
+Enable
+
+* On work
+
+    ```bash
+    sysctl kernel.sysrq=1
+    echo "1" > /proc/sys/kernel/sysrq
+    ```
+
+* On boot
+
+    ```bash
+    echo "kernel.sysrq = 1" >> /etc/sysctl.d/99-sysctl.conf
+    ```
+
+* Before mounting and ini
+
+    _Kernel_
+
+    ```text
+    sysrq_always_enabled=1
+    ```
+
+## Environment
+
+_/etc/environment_
+
+```bash
+export PYTHONPATH=/data/libraries_and_modules/python
 ```
