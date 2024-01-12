@@ -1,7 +1,7 @@
 ---
 title: "Nintendo Switch"
 draft: false
-description: "Nintendo Switch"
+description: "Nintendo Switch information about CFW, payloads, homebrew, modchip, sigpatches."
 ---
 
 {{< toc >}}
@@ -162,7 +162,7 @@ Install via DBI
     <name>=ApacheHTTP|http://<ip or hostname>/Nintendo/Switch/
     ```
 2. Create Ngin configuration switch.conf
-    ```
+    ```conf
     server {
         listen       80 default_server;
 
