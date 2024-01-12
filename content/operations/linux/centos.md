@@ -179,3 +179,12 @@ Start
 systemctl enable haveged
 systemctl start haveged
 ```
+
+## DNS
+
+Excluding package update
+
+```ini
+[main]
+excludepkgs=<package names with comma separated>
+```
