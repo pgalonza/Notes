@@ -85,7 +85,7 @@ Unoffical software
 * Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [GitHub](https://github.com/sthetix/HATS)
 * [sigmapatches](https://sigmapatches.su/)
 
-### SigPatche
+### SigPatch
 
 Signature patches, es/fs/ips/acid/loader-pathes. Digital signatures that allow unsigned code to run on the horizon operating system. Use sys-patch if problem with it.
 
