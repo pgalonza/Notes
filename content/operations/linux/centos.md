@@ -180,7 +180,7 @@ systemctl enable haveged
 systemctl start haveged
 ```
 
-## DNS
+## DNF
 
 Excluding package update
 
