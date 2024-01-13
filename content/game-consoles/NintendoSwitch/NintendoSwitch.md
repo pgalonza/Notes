@@ -11,8 +11,10 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * [4pda](https://4pda.to/forum/index.php?showtopic=900987)
 * [SwitchBrew](https://switchbrew.org/wiki/Main_Page)
 * [Jits](https://jits.site/)
+* [GameBrew](https://www.gamebrew.org/wiki/List_of_Switch_Homebrew_Applications)
 
-* RCM - Recovery Mode allows Nintendo to send the switch commands.
+
+* RCM - Recovery Mode allows Nintendo to send the switch commands. [GitHub](https://github.com/NVIDIA/tegrarcm)
 * sysNand/sysMMC - system NAND, Nintendo Switch internal memory storage.
 * emuNAND/emuMMC - emulated NAND. emulating Nintendo Switch “internal memory storage” which contain OS and everything else into a MicroSD card.
 * amiibo - interactive figures and cards that work with your games.
@@ -36,12 +38,14 @@ Allows to access a menu of various homebrew applications and plugins.
 
 ## Payload
 
-Send command or binary file (the payload) to the Nintendo Switch in Recovery mode (RCM)
+Send command or binary file (the payload) to the Nintendo Switch in Recovery mode (RCM). Software writes on C/C++ for AArch64 Cortex A57 CPU SoC Tegra X1.
 
 * Lockpick_RCM - bare metal Nintendo Switch payload that derives encryption keys for use in Switch file handling software without booting HOS. [GitLab](https://gitgud.io/LP/lockpick_rcm)
 * TegraExplorer - payload-based file manager. [GitHub](https://github.com/suchmememanyskill/TegraExplorer)
 * SX Gear/PRO - SX Gear is payload injector dongle for the Nintendo Switch.
 * NS-USBloader - Awoo Installer and GoldLeaf uploader of the NSPs, RCM payload injector. [GitHub](https://github.com/developersu/ns-usbloader)
+* ArgonNX-SE - GUI payload chainloader. [GitHub](https://github.com/Storm21CH/ArgonNX-SE)
+
 
 ## Homebrew
 
@@ -79,11 +83,17 @@ Unoffical software
 * SX OS - CFW for the Nintendo Switch. Features like the XCI Loader require an SX OS license.
 * Ultra - [GitHub](https://github.com/Ultra-NX/Ultra)
 * Switch OC Suite - Overclocking suite for Nintendo Switch devices running Atmosphere CFW. [GitHub](https://github.com/hanai3Bi/Switch-OC-Suite)
+* Kefir - [Codeberg](https://codeberg.org/rashevskyv/kefir)
+* Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [GitHub](https://github.com/sthetix/HATS)
+* NeXT - another AIO Pack. [GitHub](https://github.com/mistervampi/NeXT)
+* DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
+* ShallowSea - AIO CFW package for the. [GitHub](https://github.com/carcaschoi/ShallowSea)
+* Atmosphere-with-Hekate - Hekate and Atmosphere only. [GitHub](https://github.com/yyoossk/Atmosphere-with-Hekate)
+
+
 * Kefir Updater - update your CFW, sigpatches, cheat codes, firmwares and more. [GitHub](https://github.com/rashevskyv/kefir-updater)
 * AIO-Switch-Updater - update your CFW, cheat codes, firmwares and more. [GitHub](https://github.com/HamletDuFromage/aio-switch-updater)
-* Kefir - [Codeberg](https://codeberg.org/rashevskyv/kefir)
 * emuMMC - SDMMC driver replacement for Nintendo's Filesystem Services. [GitHub](https://github.com/m4xw/emuMMC)
-* Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [GitHub](https://github.com/sthetix/HATS)
 * [sigmapatches](https://sigmapatches.su/)
 
 ### SigPatch
@@ -98,13 +108,15 @@ Signature patches, es/fs/ips/acid/loader-pathes. Digital signatures that allow u
 
 * SX Core/SX Lite - glitch methods like PicoFly. [GitHub](https://github.com/Spacecraft-NX/firmware)
 * HWFLY - glitch methods like PicoFly. [GitHub](https://github.com/hwfly-nx/firmware)
-* Glitch - is an activity in which a person finds and exploits flaws or glitches in programs and devices to achieve something that was not intended by the designers and developers. [Habr](https://habr.com/ru/companies/ntc-vulkan/articles/480500/)
 * Erista/Mariko - names of SoC(System on Chip) NVIDIA Tegra X1 revisions.
 * Fuses - physical component on the board, that can be physically burned away. It`s security mechanism which preventing downgrade OFW.
-* Fusée Gelée - name of excploit and hardware vulnerability.
-* fusee-launcher - reference implementation launcher for the Fusée Gelée Tegra X1 bootROM exploit. [GitHub](https://github.com/Qyriad/fusee-launcher)
+
+
+* Glitching the Switch - CCC - [YouTube](https://www.youtube.com/watch?v=b-SeoIe1sKM), [media.ccc.de](https://media.ccc.de/v/c4.openchaos.2018.06.glitching-the-switch), [YouTube](https://www.youtube.com/watch?v=L3PPWVPg2WI)
 * fusee-nano - minimalist re-implementation of the Fusée Gelée exploit, designed to run on embedded Linux devices. [GitHub](https://github.com/DavidBuchanan314/fusee-nano)
-* Glitching the Switch - CCC - [YouTube](https://www.youtube.com/watch?v=b-SeoIe1sKM), [media.ccc.de](https://media.ccc.de/v/c4.openchaos.2018.06.glitching-the-switch)
+* fusee-launcher - reference implementation launcher for the Fusée Gelée Tegra X1 bootROM exploit. [GitHub](https://github.com/Qyriad/fusee-launcher)
+* Fusée Gelée - name of excploit and hardware vulnerability. [GitHub](https://github.com/Qyriad/fusee-launcher/blob/master/report/fusee_gelee.md), [SecurityLab](https://www.securitylab.ru/analytics/545182.php)
+* Glitch - is an activity in which a person finds and exploits flaws or glitches in programs and devices to achieve something that was not intended by the designers and developers. [Habr](https://habr.com/ru/companies/ntc-vulkan/articles/480500/)
 * CVE-2020-15808
 * CVE-2018-6242
 
