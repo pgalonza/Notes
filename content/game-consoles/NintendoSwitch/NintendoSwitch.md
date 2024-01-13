@@ -12,8 +12,7 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * [SwitchBrew](https://switchbrew.org/wiki/Main_Page)
 * [Jits](https://jits.site/)
 * [GameBrew](https://www.gamebrew.org/wiki/List_of_Switch_Homebrew_Applications)
-
-
+---
 * RCM - Recovery Mode allows Nintendo to send the switch commands. [GitHub](https://github.com/NVIDIA/tegrarcm)
 * sysNand/sysMMC - system NAND, Nintendo Switch internal memory storage.
 * emuNAND/emuMMC - emulated NAND. emulating Nintendo Switch “internal memory storage” which contain OS and everything else into a MicroSD card.
@@ -21,7 +20,6 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * Dongle - method to enter in RCM. (Do not need for Chip Mod)
 * ninfs - FUSE filesystem Python scripts. [GitHub](https://github.com/ihaveamac/ninfs)
 * nxdumptool - Generates XCI/NSP/HFS0/ExeFS/RomFS/Certificate/Ticket dumps gamecards and installed SD/eMMC titles. [GitHub](https://github.com/DarkMatterCore/nxdumptool)
-* Haku33 - perform a hard reset. [GitHub](https://github.com/StarDustCFW/Haku33)
 
 ## Tesla Overlay System
 
@@ -61,6 +59,8 @@ Unoffical software
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
 * Linkalho - homebrew app that will link NNID accounts offline. [GitHub](https://github.com/rdmrocha/linkalho)
 * dbi - install NSP, NSZ, XCI and XCZ from various sources. [GitHub](https://github.com/rashevskyv/dbi)
+* Haku33 - perform a hard reset. [GitHub](https://github.com/StarDustCFW/Haku33)
+* Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
 
 ## Firmware
 
@@ -89,8 +89,8 @@ Unoffical software
 * DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
 * ShallowSea - AIO CFW package for the. [GitHub](https://github.com/carcaschoi/ShallowSea)
 * Atmosphere-with-Hekate - Hekate and Atmosphere only. [GitHub](https://github.com/yyoossk/Atmosphere-with-Hekate)
-
-
+* Arquivos-JNX - additional file. [GitHub](https://github.com/JuniorPassos/Arquivos-JNX)
+---
 * Kefir Updater - update your CFW, sigpatches, cheat codes, firmwares and more. [GitHub](https://github.com/rashevskyv/kefir-updater)
 * AIO-Switch-Updater - update your CFW, cheat codes, firmwares and more. [GitHub](https://github.com/HamletDuFromage/aio-switch-updater)
 * emuMMC - SDMMC driver replacement for Nintendo's Filesystem Services. [GitHub](https://github.com/m4xw/emuMMC)
@@ -110,8 +110,7 @@ Signature patches, es/fs/ips/acid/loader-pathes. Digital signatures that allow u
 * HWFLY - glitch methods like PicoFly. [GitHub](https://github.com/hwfly-nx/firmware)
 * Erista/Mariko - names of SoC(System on Chip) NVIDIA Tegra X1 revisions.
 * Fuses - physical component on the board, that can be physically burned away. It`s security mechanism which preventing downgrade OFW.
-
-
+---
 * Glitching the Switch - CCC - [YouTube](https://www.youtube.com/watch?v=b-SeoIe1sKM), [media.ccc.de](https://media.ccc.de/v/c4.openchaos.2018.06.glitching-the-switch), [YouTube](https://www.youtube.com/watch?v=L3PPWVPg2WI)
 * fusee-nano - minimalist re-implementation of the Fusée Gelée exploit, designed to run on embedded Linux devices. [GitHub](https://github.com/DavidBuchanan314/fusee-nano)
 * fusee-launcher - reference implementation launcher for the Fusée Gelée Tegra X1 bootROM exploit. [GitHub](https://github.com/Qyriad/fusee-launcher)
@@ -127,7 +126,7 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 * Load payload.bin from root sd-card
 * Not needed transder payload from PC
 * Not needed boot.dat and boot.ini it`s for SX Gear.
-
+---
 * [GitHub Source](https://github.com/rehius/usk)
 * [GitHub Source](https://github.com/Ansem-SoD/Picofly)
 * Glitching the CPU to make it fail a check, which allows booting from an unsigned payload that will then run higher level software.
@@ -139,6 +138,17 @@ Mikrotik
 ```bash
 add address=127.0.0.1 regexp=".*\\.nintendo\\..*"
 add address=127.0.0.1 regexp="^nintendo\\..*"
+```
+
+EMUMMC
+
+[emummc.txt](https://nh-server.github.io/switch-guide/files/emummc.txt)
+
+```txt
+127.0.0.1 *nintendo*
+127.0.0.1 receive-%.dg.srv.nintendo.net receive-%.er.srv.nintendo.net
+127.0.0.1 *nintendo-europe.com
+127.0.0.1 *nintendoswitch.*
 ```
 
 ## Backup
