@@ -24,7 +24,7 @@ taxonomies:
 params:
   title: 'Notes by Peter Galonza(Пётр Галонза)'
   description: |
-    Welcome to ьн site covering Information Technology, Linux, DevOps, Python, Programming, Scripts, Bash, etc.
+    Welcome to my site covering Information Technology, Linux, DevOps, Python, Programming, Scripts, Bash, etc.
     Here you can find useful notes, guides, and tips on various IT-related topics that you may find useful in your work.
   images:
     - site/site-image.png
