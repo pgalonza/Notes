@@ -1,7 +1,7 @@
 baseURL: 'https://notes.evaron.ru/'
-languageCode: 'en-us'
 title: 'Notes by Peter Galonza(Пётр Галонза)'
 theme: 'hugo-geekdoc'
+languageCode: en-US
 
 pygmentsUseClasses: true
 pygmentsCodeFences: true
@@ -22,11 +22,12 @@ taxonomies:
   tag: tags
 
 params:
+  title: 'Notes by Peter Galonza(Пётр Галонза)'
   description: |
-    Приветствую вас на мое сайте, посвященном информационным технологиям, Linux, DevOps, Python, Программирование, скриптам, Bash и другим темам!
-    Тут вы найдете полезные записи, руководства и рекомендации по широкому кругу тем, связанных с IT которые могут пригадиться вам в работе.
     Welcome to ьн site covering Information Technology, Linux, DevOps, Python, Programming, Scripts, Bash, etc.
     Here you can find useful notes, guides, and tips on various IT-related topics that you may find useful in your work.
+  images:
+    - site/site-image.png
   geekdocCollapseAllSections: true
   geekdocRepo: "https://github.com/pgalonza/Notes"
   geekdocContentLicense:
