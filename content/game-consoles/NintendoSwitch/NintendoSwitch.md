@@ -72,18 +72,19 @@ Unoffical software
 
 ### Bootloader
 
-* Hekate - Nintendo Switch bootloader with GUI and many features. [GitHub](https://github.com/CTCaer/hekate)
+* Hekate - bootloader with GUI and many features. [GitHub](https://github.com/CTCaer/hekate)
 * hekate_boot_dat -create a SX boot.dat from hekate[GitHub](https://github.com/mondul/hekate_boot_dat)
 
 ### Custom
 
-* GNX - Brazilian All-in-One CFW package for the Nintendo Switch. [GitHub](https://github.com/vncsmnl/GNX)
+* GNX - Brazilian All-in-One CFW package. [GitHub](https://github.com/vncsmnl/GNX)
 * Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
 * Atmosphère - customized firmware for the Nintendo Switch. [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
-* SX OS - CFW for the Nintendo Switch. Features like the XCI Loader require an SX OS license.
+* SX OS - Features like the XCI Loader require an SX OS license.
 * Ultra - [GitHub](https://github.com/Ultra-NX/Ultra)
-* Switch OC Suite - Overclocking suite for Nintendo Switch devices running Atmosphere CFW. [GitHub](https://github.com/hanai3Bi/Switch-OC-Suite)
+* Switch OC Suite - Overclocking suite running Atmosphere CFW. [GitHub](https://github.com/hanai3Bi/Switch-OC-Suite)
 * Kefir - [Codeberg](https://codeberg.org/rashevskyv/kefir)
+* 4IFIR - ultimate CFW for overlocking. [GitHub](https://github.com/rashevskyv/4IFIR?tab=readme-ov-file#)
 * Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [GitHub](https://github.com/sthetix/HATS)
 * NeXT - another AIO Pack. [GitHub](https://github.com/mistervampi/NeXT)
 * DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
