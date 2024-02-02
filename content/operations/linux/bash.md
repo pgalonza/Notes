@@ -301,7 +301,21 @@ Stderr and stdout in file
 Stderr in stdout of console, stderr in file
 
 ```bash
-<command> 2>&1 > <file> 
+<command> 2>&1 > <file>
+```
+
+Pipe
+
+```bash
+mkfifo <pipe name>
+echo "Text" > <pipe name>
+cat < <pipe name>
+```
+
+Process Substitution
+
+```bash
+cat < (echo "Text" >)
 ```
 
 ## Prompt
