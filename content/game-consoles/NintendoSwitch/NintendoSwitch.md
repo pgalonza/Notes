@@ -187,7 +187,7 @@ Install via DBI
     [Network sources]
     <name>=ApacheHTTP|http://<ip or hostname>/Nintendo/Switch/
     ```
-2. Create Ngin configuration switch.conf
+2. Create Nginx configuration switch.conf
     ```conf
     server {
         listen       80 default_server;
