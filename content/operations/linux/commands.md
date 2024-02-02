@@ -644,6 +644,12 @@ lsattr file_name
 
 ### Clean
 
+Write cache to persistent storage
+
+```bash
+sync
+```
+
 PageCache
 
 ```bash
@@ -654,6 +660,7 @@ Inode and dentrie
 
 ```bash
 sync; echo 2 > /proc/sys/vm/drop_caches
+sysctl -w vm.drop_caches=3
 ```
 
 Inode, dentrie and PageCache
