@@ -82,3 +82,23 @@ type <command>
 type -t <command>
 type -a <command>
 ```
+
+Show the system shutdown entries and run level changes.
+
+[Information from](https://geekflare.com/check-linux-reboot-reason/)
+
+```bash
+who -b
+last -xF | head | tac
+ausearch -i -m system_boot,system_shutdown | tail -4
+```
+
+```bash
+journalctl --list-boots
+journalctl -b <reboot id> -n
+```
+
+```bash
+journalctl | grep -i "reboot\|shutdown"
+grep -i "reboot\|shutdown" /var/log/messages
+```
