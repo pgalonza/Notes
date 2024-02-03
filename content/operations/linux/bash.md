@@ -340,3 +340,9 @@ Arguments in enviroments
 set -k
 command <argument>=<value>
 ```
+
+Does not execute commands
+
+```bash
+set -o noexec
+```
