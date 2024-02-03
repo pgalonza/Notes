@@ -333,3 +333,10 @@ Show bash options
 ```bash
 echo $-
 ```
+
+Arguments in enviroments
+
+```bash
+set -k
+command <argument>=<value>
+```
