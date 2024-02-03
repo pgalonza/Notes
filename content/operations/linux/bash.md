@@ -298,7 +298,7 @@ Stderr and stdout in file
 <command> &> <file>
 ```
 
-Stderr in stdout of console, stderr in file
+Stderr in stdout of console, stdout in file
 
 ```bash
 <command> 2>&1 > <file>
