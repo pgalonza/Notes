@@ -102,3 +102,9 @@ journalctl -b <reboot id> -n
 journalctl | grep -i "reboot\|shutdown"
 grep -i "reboot\|shutdown" /var/log/messages
 ```
+
+Show CPU caches
+
+```bash
+lscpu --caches
+```
