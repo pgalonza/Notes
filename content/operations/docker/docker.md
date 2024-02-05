@@ -29,6 +29,14 @@ Systemd in container
 docker <> --volume /sys/fs/cgroup:/sys/fs/cgroup:rw --cgroupns=host --priveleged --command (/usr)/sbin/init
 ```
 
+Remove all images
+
+```bash
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+docker rmi $(docker images -q -f dangling=true)
+```
+
 ## Commands
 
 ```bash
@@ -41,8 +49,6 @@ docker run --rm  --name container_name  -p 80:80 -v path_in_host:path_in_contain
 docker build -t tag/name:tag -f DockerFile .
 
 docker exec -it container_name bash
-
-docker rmi $(docker images -q -f dangling=true)
 ```
 
 ## Security
