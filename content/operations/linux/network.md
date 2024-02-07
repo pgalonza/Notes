@@ -88,6 +88,9 @@ ip link set interface_name nomaster
 
 ### VRRP
 
+
+LVS + Keepalived.
+
 ```text
 global_defs {
     enable_script_security
@@ -134,6 +137,35 @@ vrrp_instance <block name> {
        <block name>
     }
 
+}
+
+virtual_server <virtual ip> <port> {
+
+    delay_loop <check delay per seconds>
+    lvs_sched <rr|wrr|lc|wlc|lblc|sh|mh|dh|fo|ovf|lblcr|sed|nq|twos>
+    lvs_method <NAT|DR>
+    protocol <TCP|UDP|SCTP>
+
+    real_server <backend ip> <port> {
+        weight 1
+        HTTP_GET {
+            url {
+                status_code 200
+            }
+            connect_timeout <connection timeout>
+        }
+    }
+
+    real_server <backend ip> <port> {
+        weight 1
+        HTTP_GET {
+            url {
+                path /
+                status_code 200
+            }
+            connect_timeout <connection timeout>
+        }
+    }
 }
 ```
 
