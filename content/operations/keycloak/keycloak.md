@@ -48,7 +48,7 @@ curl -v \
 --header "content-type: application/x-www-form-urlencoded" \
 --data "grant_type=password" \
 --data "scope=$SCOPE" \
---data "username=$USERNAME" \ 
+--data "username=$USERNAME" \
 --data "password=$PASSWORD" | jq -r .access_token
 ```
 
@@ -63,8 +63,8 @@ curl -v \
 --data "grant_type=password" \
 --data "scope=$SCOPE" \
 --data "clinet_id=$CLIENT_ID" \
---data "client_secret=$CLIENT_SECRET"
---data "username=$USERNAME" \ 
+--data "client_secret=$CLIENT_SECRET" \
+--data "username=$USERNAME" \
 --data "password=$PASSWORD" | jq -r .access_token
 ```
 
