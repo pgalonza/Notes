@@ -107,6 +107,8 @@ Show total and top
 ```bash
 du -chx | sort -h | tail
 du -ckx | sort -n | tail
+du -hs * | sort -rh | head -5
+du -Sh | sort -rh | head -5
 ```
 
 Show of files
