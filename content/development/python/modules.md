@@ -75,6 +75,7 @@ draft: false
 * **cryptography** - cryptographic module.
 * **unicorn** - next Generation CPU Emulator Framework.
 * **capstone** - lightweight multi-platform, multi-architecture disassembly framework.
+* **openpyxl** - python library to read/write xlsx/xlsm files.
 
 ## Testing & Checking
 
