@@ -17,10 +17,20 @@ Determine file type
 file file_name
 ```
 
-Display file or file system status
+Display file or file system information
 
 ```bash
 stat <file path|filesystem path>
+```
+
+Display ELF-file information
+```bash
+readelf -a <file path|filesystem path>
+```
+
+Show header of file
+```bash
+cat /usr/bin/python3.9 | hexdump -C | head
 ```
 
 Compare files

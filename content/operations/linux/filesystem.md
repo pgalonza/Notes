@@ -94,6 +94,12 @@ Show physical location of file
 filefrag -b512 -v <file>
 ```
 
+File system debugger
+
+```bash
+debugfs <device path>
+```
+
 ## Du
 
 Show size of directories
