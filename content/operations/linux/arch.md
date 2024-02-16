@@ -18,9 +18,12 @@ Clean cache
 paccache -rk<count of recent versions to keep>
 paccache -rk<count of recent versions to keep> --cachedir ~/.cache/pikaur/pkg
 paccache -rk<count of recent versions to keep> --cachedir ~/.cache/yay/*/
+paccache -rk<count of recent versions to keep> --cachedir /var/cache/private/pikaur/pkg
 paccache -ruk0
 paccache -ruk0 --cachedir ~/.cache/pikaur/pkg
 paccache -ruk0 --cachedir ~/.cache/yay/*/
+paccache -ruk0 --cachedir /var/cache/private/pikaur/pkg
+rm -rf /var/cache/private/pikaur/build
 ```
 
 ## Recovery
