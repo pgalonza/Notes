@@ -121,7 +121,7 @@ OpenSSL configuration
 
 ```ini
 [req]
-default_bits = 2048
+default_bits = 4096
 default_md = sha256
 distinguished_name = req_distinguished_name
 req_extensions = 
@@ -146,37 +146,35 @@ IP.2 = <alternative address>
 DNS.1 = <alternative domain named>
 DNS.2 = <alternative domain named>
 
-[ user_cert ]
+[user_cert]
 basicConstraints = CA:FALSE
-nsCertType = client, email
 nsComment = "Client certificates"
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid,issuer
 keyUsage = critical, nonRepudiation, digitalSignature, keyEncipherment
-extendedKeyUsage = clientAuth, emailProtection
+extendedKeyUsage = clientAuth
 
-[ server_cert ]
+[server_cert]
 basicConstraints = CA:FALSE
-nsCertType = server
 nsComment = "Server Certificate"
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid,issuer:always
 keyUsage = critical, digitalSignature, keyEncipherment
 extendedKeyUsage = serverAuth
 
-[ root_ca ]
+[root_ca]
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid:always,issuer
-basicConstraints = critical, CA:true
+basicConstraints = critical, CA:TRUE
 keyUsage = critical, digitalSignature, cRLSign, keyCertSign
 
-[ intermediate_ca ]
+[intermediate_ca]
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid:always,issuer
-basicConstraints = critical, CA:true, pathlen:0
+basicConstraints = critical, CA:TRUE, pathlen:0
 keyUsage = critical, digitalSignature, cRLSign, keyCertSign
 
-[ code_cert ]
+[code_cert]
 basicConstraints = CA:FALSE
 nsCertType = server
 nsComment = "Code Certificate"
