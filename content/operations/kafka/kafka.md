@@ -121,6 +121,9 @@ Parameters
     ```
 
 ## TLS
+{{< hint type=important icon=gdoc_error_outline title=Important >}}
+It`s disabling Zero Copy.
+{{< /hint >}}
 
 ### Connection
 
