@@ -159,7 +159,7 @@ basicConstraints = CA:FALSE
 nsComment = "Server Certificate"
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid,issuer:always
-keyUsage = critical, digitalSignature, keyEncipherment
+keyUsage = critical, digitalSignature, keyEncipherment, keyArgeement
 extendedKeyUsage = serverAuth
 
 [root_ca]
