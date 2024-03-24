@@ -7,7 +7,7 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 
 {{< toc >}}
 
-* [gbatemp](https://gbatemp.net/forums/nintendo-switch.283/)
+* [Gbatemp](https://gbatemp.net/forums/nintendo-switch.283/)
 * [4pda](https://4pda.to/forum/index.php?showtopic=900987)
 * [SwitchBrew](https://switchbrew.org/wiki/Main_Page)
 * [Jits](https://jits.site/)
@@ -30,7 +30,7 @@ Allows to access a menu of various homebrew applications and plugins.
 
 ## Overlays
 
-* sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot. [GitHub](https://github.com/ITotalJustice/sys-patch?tab=readme-ov-file)
+* sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot. [Gbatemp](https://gbatemp.net/download/sys-patch-latest-binary.38492/)
 * EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
 * sys-clk - overclocking/underclocking system module. [GitHub](https://github.com/retronx-team/sys-clk)
 
@@ -102,13 +102,11 @@ Unoffical software
 
 Signature patches, es/fs/ips/acid/loader-pathes. Digital signatures that allow unsigned code to run on the horizon operating system. Use sys-patch if problem with it.
 
-* Sigpatch-Updater - Download sigpatches for Atmosphere directly to your switch. [GitHub](https://github.com/ITotalJustice/sigpatch-updater)
-* IPS Patch Creator - PC program to generate IPS Sig patches. [GitHub](https://github.com/mrdude2478/IPS_Patch_Creator)
 * [sigmapatches](https://sigmapatches.su/)
 
 ## ModChip and HW
 
-* SX Core/SX Lite - glitch methods like PicoFly. [GitHub](https://github.com/Spacecraft-NX/firmware)
+* SX Core/SX Lite - glitch methods GitHublike PicoFly. [GitHub](https://github.com/Spacecraft-NX/firmware)
 * HWFLY - glitch methods like PicoFly. [GitHub](https://github.com/hwfly-nx/firmware)
 * Erista/Mariko - names of SoC(System on Chip) NVIDIA Tegra X1 revisions.
 * Fuses - physical component on the board, that can be physically burned away. It`s security mechanism which preventing downgrade OFW.
