@@ -79,9 +79,11 @@ Unoffical software
 
 ### Custom
 
+* **Evaron-AIO** - my own all-in-one build based on existing CFWS. [GitHub](https://github.com/pgalonza/Evaron-AIO)
+* Atmosphère - customized firmware for the Nintendo Switch. [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
+* DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
 * GNX - Brazilian All-in-One CFW package. [GitHub](https://github.com/vncsmnl/GNX)
 * Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
-* Atmosphère - customized firmware for the Nintendo Switch. [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
 * SX OS - Features like the XCI Loader require an SX OS license.
 * Ultra - [GitHub](https://github.com/Ultra-NX/Ultra)
 * Switch OC Suite - Overclocking suite running Atmosphere CFW. [GitHub](https://github.com/hanai3Bi/Switch-OC-Suite)
@@ -89,7 +91,6 @@ Unoffical software
 * 4IFIR - ultimate CFW for overlocking. [GitHub](https://github.com/rashevskyv/4IFIR?tab=readme-ov-file#)
 * Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Codeberg](https://codeberg.org/sthetix/HATS)
 * NeXT - another AIO Pack. [Codeberg](https://codeberg.org/vampitech/NeXT/releases/tag/3.05)
-* DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
 * ShallowSea - AIO CFW package for the. [Codeberg](https://codeberg.org/carcaschoi/Shallowsea)
 * Atmosphere-with-Hekate - Hekate and Atmosphere only. [GitHub](https://github.com/yyoossk/Atmosphere-with-Hekate)
 * Arquivos-JNX - additional file. [GitHub](https://github.com/JuniorPassos/Arquivos-JNX)
