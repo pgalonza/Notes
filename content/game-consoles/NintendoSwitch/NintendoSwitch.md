@@ -204,3 +204,16 @@ Install via DBI
     ```
 4. Go to DBI homebrew and select created resource
 5. Choose game folder and install
+
+## SD-Card
+
+### Partition for emuMMC
+
+```bash
+parted /dev/sd<>
+unit MB
+mkpart primary fat32 1M <end - 32768-1>M
+mkpart primary fat32 <end - 32768>M <end>M
+
+mkfs.fat /dev/sd<>1
+```
