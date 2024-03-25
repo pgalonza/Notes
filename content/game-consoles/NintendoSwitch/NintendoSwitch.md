@@ -38,7 +38,7 @@ Allows to access a menu of various homebrew applications and plugins.
 
 Send command or binary file (the payload) to the Nintendo Switch in Recovery mode (RCM). Software writes on C/C++ for AArch64 Cortex A57 CPU SoC Tegra X1.
 
-* Lockpick_RCM - bare metal Nintendo Switch payload that derives encryption keys for use in Switch file handling software without booting HOS. [GitLab](https://gitgud.io/LP/lockpick_rcm)
+* Lockpick_RCM - bare metal Nintendo Switch payload that derives encryption keys for use in Switch file handling software without booting HOS. [GitLab](https://gitgud.io/LP/lockpick_rcm) [Codeberg](https://codeberg.org/Lockpick/Lockpick_RCM)
 * TegraExplorer - payload-based file manager. [GitHub](https://github.com/suchmememanyskill/TegraExplorer)
 * SX Gear/PRO - SX Gear is payload injector dongle for the Nintendo Switch.
 * NS-USBloader - Awoo Installer and GoldLeaf uploader of the NSPs, RCM payload injector. [GitHub](https://github.com/developersu/ns-usbloader)
@@ -53,6 +53,7 @@ Unoffical software
 * nx-hbmenu - the Nintendo Switch Homebrew Menu. [GitHub](https://github.com/switchbrew/nx-hbmenu)
 * hb-appstore - Homebrew App Store. [GitHub](https://github.com/fortheusers/hb-appstore)
 * nx-hbloader - host process for loading Homebrew NROs. [GitHub](https://github.com/switchbrew/nx-hbloader)
+* nx-hbmenu - the Nintendo Switch Homebrew Menu. [GitHub](https://github.com/switchbrew/nx-hbmenu)
 * 90DNS Tester - simple homebrew application to test DNS. [GitHub](https://github.com/meganukebmp/Switch_90DNS_tester/)
 * libnx - library for development Homebrew. [GitHub](https://github.com/switchbrew/libnx)
 * LayeredFS - homebrew virtual file system for replace games use TitleID.
