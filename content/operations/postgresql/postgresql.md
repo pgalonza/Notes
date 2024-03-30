@@ -1,6 +1,7 @@
 ---
 title: "PostgreSQL"
 draft: false
+description: "PostgreSQL commands and information"
 ---
 
 {{< toc >}}
