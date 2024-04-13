@@ -87,10 +87,10 @@ Unoffical software
 * SX OS - Features like the XCI Loader require an SX OS license.
 * Ultra - [GitHub](https://github.com/Ultra-NX/Ultra)
 * Switch OC Suite - Overclocking suite running Atmosphere CFW. [GitHub](https://github.com/hanai3Bi/Switch-OC-Suite)
-* Kefir - [Codeberg](https://codeberg.org/rashevskyv/kefir)
+* Kefir - [Bitbucket](https://bitbucket.org/kefir-switch/kefir/src/master/)
 * 4IFIR - ultimate CFW for overlocking. [GitHub](https://github.com/rashevskyv/4IFIR?tab=readme-ov-file#)
 * Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Codeberg](https://codeberg.org/sthetix/HATS)
-* NeXT - another AIO Pack. [Codeberg](https://codeberg.org/vampitech/NeXT/releases/tag/3.05)
+* NeXT - another AIO Pack. [Filedn](https://filedn.com/lric62b9t2vz5v4OvwHkKJS/HATS/)
 * ShallowSea - AIO CFW package for the. [Codeberg](https://codeberg.org/carcaschoi/Shallowsea)
 * Atmosphere-with-Hekate - Hekate and Atmosphere only. [GitHub](https://github.com/yyoossk/Atmosphere-with-Hekate)
 * Arquivos-JNX - additional file. [GitHub](https://github.com/JuniorPassos/Arquivos-JNX)
