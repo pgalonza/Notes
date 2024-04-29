@@ -44,7 +44,7 @@ jobs:
       - name: Install Dart Sass Embedded
         run: sudo snap install dart-sass-embedded
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
@@ -65,7 +65,7 @@ jobs:
             --minify \
             --baseURL ${SITE_URL}
       - name: Archive hugo artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: hugo-artifact
           path: ./public
@@ -75,9 +75,9 @@ jobs:
     environment: jino
     needs: build
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Download hugo artifact
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: hugo-artifact
         path: public
