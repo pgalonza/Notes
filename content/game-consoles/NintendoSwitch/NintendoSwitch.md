@@ -89,6 +89,7 @@ Unoffical software
 * Switch OC Suite - Overclocking suite running Atmosphere CFW. [GitHub](https://github.com/hanai3Bi/Switch-OC-Suite)
 * Kefir - [Bitbucket](https://bitbucket.org/kefir-switch/kefir/src/master/)
 * 4IFIR - ultimate CFW for overlocking. [GitHub](https://github.com/rashevskyv/4IFIR?tab=readme-ov-file#)
+* 5IFIR - like 4IFIR for semi-stock[GitHub](https://github.com/k1gs/5ifir)
 * Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Telegram](https://t.me/HATSPACK)
 * NeXT - another AIO Pack. [Codeberg](https://codeberg.org/vampitech/NeXT)
 * ShallowSea - AIO CFW package for the. [Codeberg](https://codeberg.org/carcaschoi/Shallowsea)
