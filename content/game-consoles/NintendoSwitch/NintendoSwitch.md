@@ -30,7 +30,7 @@ Allows to access a menu of various homebrew applications and plugins.
 
 ## Overlays
 
-* sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot. [Gbatemp](https://gbatemp.net/download/sys-patch-latest-binary.38492/)
+* sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot. [GitFlic](https://gitflic.ru/project/impeeza/sys-patch)
 * EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
 * sys-clk - overclocking/underclocking system module. [GitHub](https://github.com/retronx-team/sys-clk)
 
