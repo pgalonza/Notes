@@ -62,7 +62,6 @@ Unoffical software
 * dbi - install NSP, NSZ, XCI and XCZ from various sources. [GitHub](https://github.com/rashevskyv/dbi)
 * Haku33 - perform a hard reset. [GitHub](https://github.com/StarDustCFW/Haku33)
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
-* AtmoPackUpdater - homebrew which update your CFW/Firmware/Homebrews/Sigpatches. [GitHub](https://github.com/PoloNX/AtmoPackUpdater)
 
 ## Firmware
 
@@ -98,6 +97,7 @@ Unoffical software
 ---
 * Kefir Updater - update your CFW, sigpatches, cheat codes, firmwares and more. [GitHub](https://github.com/rashevskyv/kefir-updater)
 * AIO-Switch-Updater - update your CFW, cheat codes, firmwares and more. [GitHub](https://github.com/HamletDuFromage/aio-switch-updater)
+* AtmoPackUpdater - homebrew which update your CFW/Firmware/Homebrews/Sigpatches. [GitHub](https://github.com/PoloNX/AtmoPackUpdater)
 * emuMMC - SDMMC driver replacement for Nintendo's Filesystem Services. [GitHub](https://github.com/m4xw/emuMMC)
 * [sigmapatches](https://sigmapatches.su/)
 
