@@ -107,6 +107,12 @@ Signature patches, es/fs/ips/acid/loader-pathes. Digital signatures that allow u
 
 * [sigmapatches](https://sigmapatches.su/)
 
+### Logo and spash screen
+
+* [Insert spash screen](https://raw.githubusercontent.com/Atmosphere-NX/Atmosphere/master/utilities/insert_splash_screen.py)
+* [Convertfb](https://github.com/zqb-all/convertfb)
+* [Switch logo patcher](https://github.com/friedkeenan/switch-logo-patcher)
+
 ## ModChip and HW
 
 * SX Core/SX Lite - glitch methods GitHublike PicoFly. [GitHub](https://github.com/Spacecraft-NX/firmware)
