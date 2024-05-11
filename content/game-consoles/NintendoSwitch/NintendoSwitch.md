@@ -94,6 +94,7 @@ Unoffical software
 * ShallowSea - AIO CFW package for the. [Codeberg](https://codeberg.org/carcaschoi/Shallowsea)
 * Atmosphere-with-Hekate - Hekate and Atmosphere only. [GitHub](https://github.com/yyoossk/Atmosphere-with-Hekate)
 * Arquivos-JNX - additional file. [GitHub](https://github.com/JuniorPassos/Arquivos-JNX)
+* Kefirosphere - fork of Atmosphère. [GitHub](https://github.com/rashevskyv/Kefirosphere)
 ---
 * Kefir Updater - update your CFW, sigpatches, cheat codes, firmwares and more. [GitHub](https://github.com/rashevskyv/kefir-updater)
 * AIO-Switch-Updater - update your CFW, cheat codes, firmwares and more. [GitHub](https://github.com/HamletDuFromage/aio-switch-updater)
