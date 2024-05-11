@@ -106,6 +106,7 @@ Unoffical software
 Signature patches, es/fs/ips/acid/loader-pathes. Digital signatures that allow unsigned code to run on the horizon operating system. Use sys-patch if problem with it.
 
 * [sigmapatches](https://sigmapatches.su/)
+* [Sigpatches for Atmosphere](https://gbatemp.net/threads/sigpatches-for-atmosphere-hekate-fss0-fusee-package3.571543/)
 
 ### Logo and spash screen
 
