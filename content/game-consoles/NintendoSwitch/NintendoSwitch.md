@@ -30,7 +30,6 @@ Allows to access a menu of various homebrew applications and plugins.
 
 ## Overlays
 
-* sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot. [GitFlic](https://gitflic.ru/project/impeeza/sys-patch)
 * EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
 * sys-clk - overclocking/underclocking system module. [GitHub](https://github.com/retronx-team/sys-clk)
 
@@ -79,7 +78,7 @@ Unoffical software
 ### Custom
 
 * **Evaron-AIO** - my own all-in-one build based on existing CFWS. [GitHub](https://github.com/pgalonza/Evaron-AIO)
-* Atmosphère - customized firmware for the Nintendo Switch. [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
+* [Atmosphère](#atmosphere) - customized firmware for the Nintendo Switch. [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
 * DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
 * GNX - Brazilian All-in-One CFW package. [GitHub](https://github.com/vncsmnl/GNX)
 * Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
@@ -102,18 +101,45 @@ Unoffical software
 * emuMMC - SDMMC driver replacement for Nintendo's Filesystem Services. [GitHub](https://github.com/m4xw/emuMMC)
 * [sigmapatches](https://sigmapatches.su/)
 
+### Atmosphere
+
+* [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
+
+#### Build
+
+* [Instruction](https://github.com/Atmosphere-NX/Atmosphere/blob/master/docs/building.md)
+* [devkitPro](#devkitpro) - provider of homebrew toolchains for Nintendo
+* **devkita64-atmosphere** - my own devkita64-container with everything you need for build atmosphere locally and with CI. [GitHub Packages](https://github.com/pgalonza/Evaron-Atmosphere/pkgs/container/devkita64-atmosphere)
+
 ### SigPatch
 
 Signature patches, es/fs/ips/acid/loader-pathes. Digital signatures that allow unsigned code to run on the horizon operating system. Use sys-patch if problem with it.
 
+Atmosphere > 1.7.0
+* Hekate use _patches.ini_ file
+* Modified fuse use _atmosphere/kip_patches/_
+
+---
 * [sigmapatches](https://sigmapatches.su/)
 * [Sigpatches for Atmosphere](https://gbatemp.net/threads/sigpatches-for-atmosphere-hekate-fss0-fusee-package3.571543/)
+* sigpatch-updater - [Bitbucket](https://bitbucket.org/e1ite007/sigpatch-updater/src/master/)
+* sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot.[Gbatemp](https://gbatemp.net/threads/sys-patch-sysmod-that-patches-on-boot.633517/), [GitFlic](https://gitflic.ru/project/impeeza/sys-patch)
+* IPS - International Patching System [Patchlib](https://patchlib.readthedocs.io/en/latest/filetype_docs/ips.html), [Zerosoft](https://zerosoft.zophar.net/ips.php)
+* [IPS python](https://github.com/friedkeenan/ips.py)
+* [Lips](https://github.com/kylon/Lipx)
+
 
 ### Logo and spash screen
 
 * [Insert spash screen](https://raw.githubusercontent.com/Atmosphere-NX/Atmosphere/master/utilities/insert_splash_screen.py)
 * [Convertfb](https://github.com/zqb-all/convertfb)
 * [Switch logo patcher](https://github.com/friedkeenan/switch-logo-patcher)
+
+## devkitPro
+
+* devkitPro pacman - devkitPro provided tools and libraries are managed by the rather wonderful Arch Linux pacman. [devkitpro](https://devkitpro.org/wiki/devkitPro_pacman)
+* devkitPro container images - [Dockerfiles](https://github.com/devkitPro/docker/tree/master), [DockerHub](https://hub.docker.com/u/devkitpro)
+* Problem with CI - you need to use a container to avoid http error 403. [Issues](https://github.com/devkitPro/pacman/issues/31)
 
 ## ModChip and HW
 
