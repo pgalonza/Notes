@@ -112,6 +112,13 @@ Add file from other branch
 git checkout <from branch> <file or directory>
 ```
 
+Pull branch from another remote repository
+
+```
+git remote add <remote label> <url>
+git pull <remote label> <remote branch name>:<new local branch name>
+```
+
 ## Create new repository
 
 Create the folder and initialization on server
@@ -155,6 +162,21 @@ git clone --branch
 
 ```bash
 git clone --branch --single-branch
+```
+
+Apply range of commits
+
+```bash
+git cherry-pick <start hash of commit - 1>..<end hash commit>
+```
+
+Patch
+
+```bash
+git diff (-binary) <> > <name>.patch
+git format-patch <>
+
+git apply <name>.patch
 ```
 
 ## Stash
