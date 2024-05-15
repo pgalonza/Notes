@@ -193,9 +193,9 @@ EMUMMC
 eMMC with DD
 
 1. Enter to Hekate
-2. Go to Tools > USb-tools
+2. Go to Tools > USB-tools
 3. In USB MASS STORAGE press eMMC RAW GPP
-4. Run partes -l or fdisk -l and look disk device
+4. Run parted -l or fdisk -l and look disk device
 5. Execute dd command
     ```bash
     dd if=/dev/sd<a-z> of=/ieMMC.img bs=5M status=progress
