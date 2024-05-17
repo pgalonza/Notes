@@ -128,6 +128,7 @@ Atmosphere > 1.7.0
 * sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot.[Gbatemp](https://gbatemp.net/threads/sys-patch-sysmod-that-patches-on-boot.633517/), [GitFlic](https://gitflic.ru/project/impeeza/sys-patch)
 * IPS - International Patching System [Patchlib](https://patchlib.readthedocs.io/en/latest/filetype_docs/ips.html), [Zerosoft](https://zerosoft.zophar.net/ips.php)
 * [IPS python](https://github.com/friedkeenan/ips.py)
+* [patchlib](https://github.com/brette-0/patchlib)
 * [Lips](https://github.com/kylon/Lipx)
 
 
