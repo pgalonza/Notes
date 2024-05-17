@@ -21,18 +21,19 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * ninfs - FUSE filesystem Python scripts. [GitHub](https://github.com/ihaveamac/ninfs)
 * nxdumptool - Generates XCI/NSP/HFS0/ExeFS/RomFS/Certificate/Ticket dumps gamecards and installed SD/eMMC titles. [GitHub](https://github.com/DarkMatterCore/nxdumptool)
 
-## Tesla Overlay System
-
-Allows to access a menu of various homebrew applications and plugins.
-
-* Tesla-Menu - overlay menu. [GitHub](https://github.com/WerWolv/Tesla-Menu)
-* nx-ovlloader - sys-module, host process for loading overlay OVLs (NROs). [GitHub](https://github.com/WerWolv/nx-ovlloader)
 
 ## Overlays
 
 * EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
 * sys-clk - overclocking/underclocking system module. [GitHub](https://github.com/retronx-team/sys-clk)
 * Uberhand-Overlay - fully craft-able overlay executor. [GitHub](https://github.com/efosamark/Uberhand-Overlay)
+
+### Tesla Overlay System
+
+Allows to access a menu of various homebrew applications and plugins.
+
+* Tesla-Menu - overlay menu. [GitHub](https://github.com/WerWolv/Tesla-Menu)
+* nx-ovlloader - sys-module, host process for loading overlay OVLs (NROs). [GitHub](https://github.com/WerWolv/nx-ovlloader)
 
 ## Payload
 
