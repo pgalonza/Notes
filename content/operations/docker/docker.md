@@ -61,3 +61,4 @@ docker exec -it container_name bash
 ## Tools
 
 * Crane - tool for Docker containers orchestration written in Go.
+* Kaniko - build Container Images.
