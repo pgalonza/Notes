@@ -41,6 +41,7 @@ draft: false
 * **lastb** - show last logged users.
 * **ttyd** - share terminal in web.
 * **findmnt** - find a filesystems.
+* **setsid** - run a program in a new session.
 
 ## CPU
 
