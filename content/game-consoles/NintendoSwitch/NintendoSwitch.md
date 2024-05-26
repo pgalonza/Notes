@@ -165,11 +165,14 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 
 * Load payload.bin from root sd-card
 * Not needed transder payload from PC
-* Not needed boot.dat and boot.ini it`s for SX Gear.
+* Not needed boot.dat and boot.ini it`s for SX Gear
+* .uf2 - flashing when loading into the controller memory
+* .bin - flashing using picofly toolbox
 ---
 * [GitHub Source](https://github.com/rehius/usk)
 * [GitHub Source](https://github.com/Ansem-SoD/Picofly)
 * Glitching the CPU to make it fail a check, which allows booting from an unsigned payload that will then run higher level software.
+* UF2 - USB flashing format developed by Microsoft. [GitHub](https://github.com/microsoft/uf2)
 
 ## DNS
 
