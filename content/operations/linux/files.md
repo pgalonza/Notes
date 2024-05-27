@@ -73,7 +73,7 @@ ls -i <file path>
 Show file system where file
 
 ```bash
-df file path>
+df <file path>
 ```
 
 Print the locate of binary
@@ -88,4 +88,11 @@ Show all symbols
 
 ```bash
 cat -A file_name
+```
+
+Find changed files use md5
+
+```bash
+find . -type f -exec md5sum {} \; > checklist.chk
+md5sum -c checklist.chk
 ```
