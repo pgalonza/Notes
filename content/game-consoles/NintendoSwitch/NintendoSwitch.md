@@ -176,14 +176,16 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 
 ## DNS
 
-Mikrotik
+* 90dns - NX DNS setup. [GitLab](https://gitlab.com/a/90dns)
+
+## Mikrotik
 
 ```bash
 add address=127.0.0.1 regexp=".*\\.nintendo\\..*"
 add address=127.0.0.1 regexp="^nintendo\\..*"
 ```
 
-EMUMMC
+## EMUMMC
 
 [emummc.txt](https://nh-server.github.io/switch-guide/files/emummc.txt)
 
