@@ -93,6 +93,7 @@ Unoffical software
 * Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Telegram](https://t.me/HATSPACK)
 * NeXT - another AIO Pack. [Codeberg](https://codeberg.org/vampitech/NeXT)
 * ShallowSea - AIO CFW package for the. [Codeberg](https://codeberg.org/carcaschoi/Shallowsea)
+* NX-Venom - the ultimate bundle for overclocking. [GitHub](https://github.com/CatcherITGF/NX-Venom)
 * Atmosphere-with-Hekate - Hekate and Atmosphere only. [GitHub](https://github.com/yyoossk/Atmosphere-with-Hekate)
 * Arquivos-JNX - additional file. [GitHub](https://github.com/JuniorPassos/Arquivos-JNX)
 * Kefirosphere - fork of Atmosphère. [GitHub](https://github.com/rashevskyv/Kefirosphere)
