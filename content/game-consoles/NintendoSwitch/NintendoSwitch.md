@@ -131,6 +131,8 @@ Atmosphere > 1.7.0
 * [IPS python](https://github.com/friedkeenan/ips.py)
 * [patchlib](https://github.com/brette-0/patchlib)
 * [Lips](https://github.com/kylon/Lipx)
+* AutoIPS-patcher - [Gbatemp](https://gbatemp.net/attachments/autoips-patcher-zip.303087/)
+* [SigPatches](https://github.com/btc08gh/SigPatches)
 
 
 ### Logo and spash screen
@@ -262,3 +264,7 @@ mkpart primary fat32 <end - 32768>M <end>M
 
 mkfs.fat /dev/sd<>1
 ```
+
+## Reverse engineering
+
+* Switch-Ghidra-Guides - [GitHub](https://github.com/borntohonk/Switch-Ghidra-Guides/)
