@@ -199,9 +199,11 @@ add address=127.0.0.1 regexp="^nintendo\\..*"
 127.0.0.1 *nintendoswitch.*
 ```
 
-## Backup
+## Backup&Restore
 
-eMMC with DD
+### DD backuo
+
+eMMC/emuMMC with DD
 
 1. Enter to Hekate
 2. Go to Tools > USB-tools
@@ -209,9 +211,23 @@ eMMC with DD
 4. Run parted -l or fdisk -l and look disk device
 5. Execute dd command
     ```bash
-    dd if=/dev/sd<a-z> of=/ieMMC.img bs=5M status=progress
+    dd if=/dev/sd<a-z> of=/<file name>.img bs=5M status=progress
     ```
 6. Do that for boot0 and boot1
+
+### DD restore
+
+eMMC/emuMMC with DD
+
+1. Enter to Hekate
+2. Go to Tools > USB-tools
+3. Disable Read-Only mode
+4. In USB MASS STORAGE press eMMC RAW GPP
+5. Run parted -l or fdisk -l and look disk device
+6. Execute dd command
+    ```bash
+    dd if=/<file name>.img of=/dev/sd<a-z> bs=5M status=progress
+    ```
 
 ## Games
 
