@@ -133,6 +133,7 @@ Atmosphere > 1.7.0
 * [Lips](https://github.com/kylon/Lipx)
 * AutoIPS-patcher - [Gbatemp](https://gbatemp.net/attachments/autoips-patcher-zip.303087/)
 * [SigPatches](https://github.com/btc08gh/SigPatches)
+* [IPS_Patch_Creator](https://github.com/zdm65477730/IPS_Patch_Creator)
 
 
 ### Logo and spash screen
