@@ -120,7 +120,7 @@ Signature patches, es/fs/ips/acid/loader-pathes. Digital signatures that allow u
 
 Atmosphere > 1.7.0
 * Hekate use _patches.ini_ file
-* Modified fuse use _atmosphere/kip_patches/_
+* Modified fusee use _atmosphere/kip_patches/_
 
 ---
 * [sigmapatches](https://sigmapatches.su/)
