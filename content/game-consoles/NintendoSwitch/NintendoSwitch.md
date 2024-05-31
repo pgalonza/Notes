@@ -132,8 +132,8 @@ Atmosphere > 1.7.0
 * [patchlib](https://github.com/brette-0/patchlib)
 * [Lips](https://github.com/kylon/Lipx)
 * AutoIPS-patcher - [Gbatemp](https://gbatemp.net/attachments/autoips-patcher-zip.303087/)
-* [SigPatches](https://github.com/btc08gh/SigPatches)
-* [IPS_Patch_Creator](https://github.com/zdm65477730/IPS_Patch_Creator)
+* SigPatches - [GitHub](https://github.com/btc08gh/SigPatches)
+* IPS Patch Creator - [GitHub](https://github.com/zdm65477730/IPS_Patch_Creator)(Source), [Gbatemp](https://disk.yandex.com/d/LEKGKbfDw-_pjA)(Build)
 
 
 ### Logo and spash screen
