@@ -80,7 +80,6 @@ Unoffical software
 ### Custom
 
 * **Evaron-AIO** - my own all-in-one build based on existing CFWS. [GitHub](https://github.com/pgalonza/Evaron-AIO)
-* [Atmosphère](#atmosphere) - customized firmware for the Nintendo Switch. [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
 * DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
 * GNX - Brazilian All-in-One CFW package. [GitHub](https://github.com/vncsmnl/GNX)
 * Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
@@ -106,7 +105,8 @@ Unoffical software
 
 ### Atmosphere
 
-* [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
+* Atmosphere - [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
+* Evaron-Atmosphere - custom atmosphere with including from fork changes and reverting controversial changes. [GitHub](https://github.com/pgalonza/Evaron-Atmosphere)
 
 #### Build
 
