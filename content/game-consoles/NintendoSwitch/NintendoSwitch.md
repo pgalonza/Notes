@@ -79,7 +79,7 @@ Unoffical software
 
 ### Custom
 
-* **Evaron-AIO** - my own all-in-one build based on existing CFWS. [GitHub](https://github.com/pgalonza/Evaron-AIO)
+* **Evaron-AIO** - sall-in-one build based on existing CFWS. [GitHub](https://github.com/pgalonza/Evaron-AIO)
 * DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
 * GNX - Brazilian All-in-One CFW package. [GitHub](https://github.com/vncsmnl/GNX)
 * Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
@@ -106,13 +106,13 @@ Unoffical software
 ### Atmosphere
 
 * Atmosphere - [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
-* Evaron-Atmosphere - custom atmosphere with including from fork changes and reverting controversial changes. [GitHub](https://github.com/pgalonza/Evaron-Atmosphere)
+* **Evaron-Atmosphere** - custom atmosphere with including from fork changes and reverting controversial changes. [GitHub](https://github.com/pgalonza/Evaron-Atmosphere)
 
 #### Build
 
 * [Instruction](https://github.com/Atmosphere-NX/Atmosphere/blob/master/docs/building.md)
 * [devkitPro](#devkitpro) - provider of homebrew toolchains for Nintendo
-* **devkita64-atmosphere** - my own devkita64-container with everything you need for build atmosphere locally and with CI. [GitHub Packages](https://github.com/pgalonza/Evaron-Atmosphere/pkgs/container/devkita64-atmosphere)
+* **devkita64-atmosphere** - devkita64-container with everything you need for build atmosphere locally and with CI. [GitHub Packages](https://github.com/pgalonza/Evaron-Atmosphere/pkgs/container/devkita64-atmosphere)
 
 ### SigPatch
 
@@ -136,9 +136,9 @@ Atmosphere > 1.7.0
 * IPS Patch Creator - [GitHub Source](https://github.com/zdm65477730/IPS_Patch_Creator), [Gbatemp Build](https://disk.yandex.com/d/LEKGKbfDw-_pjA)
 
 
-### Logo and spash screen
+### Logo and splash screen
 
-* [Insert spash screen](https://raw.githubusercontent.com/Atmosphere-NX/Atmosphere/master/utilities/insert_splash_screen.py)
+* [Insert splash screen](https://raw.githubusercontent.com/Atmosphere-NX/Atmosphere/master/utilities/insert_splash_screen.py)
 * [Convertfb](https://github.com/zqb-all/convertfb)
 * [Switch logo patcher](https://github.com/friedkeenan/switch-logo-patcher)
 
