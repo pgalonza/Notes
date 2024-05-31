@@ -173,6 +173,7 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 * .uf2 - flashing when loading into the controller memory
 * .bin - flashing using picofly toolbox
 ---
+* **Evaron-pfrp2040** - own picofly fork. [GitHub](https://github.com/pgalonza/Evaron-pfrp2040)
 * [GitHub Source](https://github.com/rehius/usk)
 * [GitHub Source](https://github.com/Ansem-SoD/Picofly)
 * Glitching the CPU to make it fail a check, which allows booting from an unsigned payload that will then run higher level software.
