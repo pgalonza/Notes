@@ -286,3 +286,5 @@ mkfs.fat /dev/sd<>1
 ## Reverse engineering
 
 * Switch-Ghidra-Guides - [GitHub](https://github.com/borntohonk/Switch-Ghidra-Guides/)
+* LibHac - [GitHub](https://github.com/Thealexbarney/LibHac/)
+* hactool - [GitHub](https://github.com/SciresM/hactool)
