@@ -133,7 +133,7 @@ Atmosphere > 1.7.0
 * [Lips](https://github.com/kylon/Lipx)
 * AutoIPS-patcher - [Gbatemp](https://gbatemp.net/attachments/autoips-patcher-zip.303087/)
 * SigPatches - [GitHub](https://github.com/btc08gh/SigPatches)
-* IPS Patch Creator - [GitHub](https://github.com/zdm65477730/IPS_Patch_Creator)(Source), [Gbatemp](https://disk.yandex.com/d/LEKGKbfDw-_pjA)(Build)
+* IPS Patch Creator - [GitHub Source](https://github.com/zdm65477730/IPS_Patch_Creator), [Gbatemp Build](https://disk.yandex.com/d/LEKGKbfDw-_pjA)
 
 
 ### Logo and spash screen
@@ -200,7 +200,7 @@ add address=127.0.0.1 regexp="^nintendo\\..*"
 127.0.0.1 *nintendoswitch.*
 ```
 
-## Backup&Restore
+## Backup & Restore
 
 ### DD backuo
 
