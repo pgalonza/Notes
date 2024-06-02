@@ -73,6 +73,7 @@ Unoffical software
 ### Official
 
 * HOS - Horizon OS or Switch OS
+* NSO - main executable format
 
 ### Bootloader
 
