@@ -137,6 +137,7 @@ Atmosphere > 1.7.0
 * IPS - International Patching System [Patchlib](https://patchlib.readthedocs.io/en/latest/filetype_docs/ips.html), [Zerosoft](https://zerosoft.zophar.net/ips.php)
 * [IPS python](https://github.com/friedkeenan/ips.py)
 * [patchlib](https://github.com/brette-0/patchlib)
+* [ips_util](https://github.com/nleseul/ips_util)
 * [Lips](https://github.com/kylon/Lipx)
 * AutoIPS-patcher - [Gbatemp](https://gbatemp.net/attachments/autoips-patcher-zip.303087/)
 * SigPatches - [GitHub](https://github.com/btc08gh/SigPatches)
