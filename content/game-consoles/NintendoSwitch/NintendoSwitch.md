@@ -63,6 +63,8 @@ Unoffical software
 * dbi - install NSP, NSZ, XCI and XCZ from various sources. [GitHub](https://github.com/rashevskyv/dbi)
 * Haku33 - perform a hard reset. [GitHub](https://github.com/StarDustCFW/Haku33)
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
+---
+* nton - NRO to NSP forwarder. [GitHub](https://github.com/rlaphoenix/nton)
 
 ## Firmware
 
