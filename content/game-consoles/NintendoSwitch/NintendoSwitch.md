@@ -123,7 +123,11 @@ Signature patches, es/fs/ips/acid/loader-pathes. Digital signatures that allow u
 Atmosphere > 1.7.0
 * Hekate use _patches.ini_ file
 * Modified fusee use _atmosphere/kip_patches/_
-
+---
+* FS-patches - File System patches, modifications to the file system required to execute custom, modified, or unsigned Nintendo Switch packages (NSPs), including homebrew NSPs and NRO forwarders.
+* ES-patches - Eticket Service patches, required to install fake tickets for running commercial(dumped/pirated) Nintendo Switch Packages (NSPs).
+* Loader-patches - required for running NRO forwarders and installed homebrews.
+* NIFM-ctest - patch for the connection test, allowing a local area network to function even without an internet connection.
 ---
 * [sigmapatches](https://sigmapatches.su/)
 * [Sigpatches for Atmosphere](https://gbatemp.net/threads/sigpatches-for-atmosphere-hekate-fss0-fusee-package3.571543/)
