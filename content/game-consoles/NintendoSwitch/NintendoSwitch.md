@@ -109,13 +109,14 @@ Unoffical software
 ### Atmosphere
 
 * Atmosphere - [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
-* **Evaron-Atmosphere** - custom atmosphere with including from fork changes and reverting controversial changes. [GitHub](https://github.com/pgalonza/Evaron-Atmosphere)
+* **ns-Atmosphere** - custom atmosphere with including from fork changes and reverting controversial changes. [GitHub](https://github.com/pgalonza/ns-Atmosphere)
+* KIP - Kernel Initial Processes
 
 #### Build
 
 * [Instruction](https://github.com/Atmosphere-NX/Atmosphere/blob/master/docs/building.md)
 * [devkitPro](#devkitpro) - provider of homebrew toolchains for Nintendo
-* **devkita64-atmosphere** - devkita64-container with everything you need for build atmosphere locally and with CI. [GitHub Packages](https://github.com/pgalonza/Evaron-Atmosphere/pkgs/container/devkita64-atmosphere)
+* **devkita64-atmosphere** - devkita64-container with everything you need for build atmosphere locally and with CI. [GitHub Packages](https://github.com/pgalonza/ns-Atmosphere/pkgs/container/devkita64-atmosphere)
 
 ### SigPatch
 
@@ -133,7 +134,7 @@ Atmosphere > 1.7.0
 * [sigmapatches](https://sigmapatches.su/)
 * [Sigpatches for Atmosphere](https://gbatemp.net/threads/sigpatches-for-atmosphere-hekate-fss0-fusee-package3.571543/)
 * sigpatch-updater - [Bitbucket](https://bitbucket.org/e1ite007/sigpatch-updater/src/master/)
-* sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot.[Gbatemp](https://gbatemp.net/threads/sys-patch-sysmod-that-patches-on-boot.633517/), [GitFlic](https://gitflic.ru/project/impeeza/sys-patch)
+* sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot.[Gbatemp](https://gbatemp.net/threads/sys-patch-sysmod-that-patches-on-boot.633517/), [GitFlic](https://gitflic.ru/project/impeeza/sys-patch),[GitFlic](https://gitflic.ru/project/fckn/sys-patch)
 * IPS - International Patching System [Patchlib](https://patchlib.readthedocs.io/en/latest/filetype_docs/ips.html), [Zerosoft](https://zerosoft.zophar.net/ips.php)
 * [IPS python](https://github.com/friedkeenan/ips.py)
 * [patchlib](https://github.com/brette-0/patchlib)
@@ -181,7 +182,7 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 * .uf2 - flashing when loading into the controller memory
 * .bin - flashing using picofly toolbox
 ---
-* **Evaron-pfrp2040** - own picofly fork. [GitHub](https://github.com/pgalonza/Evaron-pfrp2040)
+* **Evaron-pfrp2040** - own picofly fork. [GitHub](https://github.com/pgalonza/ns-pf-rp2040)
 * [GitHub Source](https://github.com/rehius/usk)
 * [GitHub Source](https://github.com/Ansem-SoD/Picofly)
 * Glitching the CPU to make it fail a check, which allows booting from an unsigned payload that will then run higher level software.
