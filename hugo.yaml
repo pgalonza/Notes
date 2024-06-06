@@ -10,6 +10,21 @@ enableGitInfo: true
 
 enableRobotsTXT: true
 
+outputs:
+  home:
+    - html
+    - rss
+    - turbo
+
+outputFormats:
+  turbo:
+    MediaType: "application/rss+xml"
+    BaseName: "turbo"
+    IsHTML: false
+    IsPlainText: true
+    noUgly: true
+    Rel: "alternate"
+
 markup:
   goldmark:
     renderer:
