@@ -23,6 +23,9 @@ taxonomies:
 
 params:
   title: 'Notes by Peter Galonza(Пётр Галонза)'
+  author:
+    email: pgalonza@evaron.ru
+    name: Peter Galonza(Пётр Галонза)
   description: |
     Welcome to my site covering Information Technology, Linux, DevOps, Python, Programming, Scripts, Bash, etc.
     Here you can find useful notes, guides, and tips on various IT-related topics that you may find useful in your work.
