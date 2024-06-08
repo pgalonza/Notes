@@ -23,8 +23,7 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 
 
 ## Overlays
-
-* EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
+* EdiZon-Overlay - EdiZon Overlay originally by WerWolv. [GitHub](https://github.com/proferabg/EdiZon-Overlay)
 * sys-clk - overclocking/underclocking system module. [GitHub](https://github.com/retronx-team/sys-clk)
 * Uberhand-Overlay - fully craft-able overlay executor. [GitHub](https://github.com/efosamark/Uberhand-Overlay)
 
@@ -63,6 +62,7 @@ Unoffical software
 * dbi - install NSP, NSZ, XCI and XCZ from various sources. [GitHub](https://github.com/rashevskyv/dbi)
 * Haku33 - perform a hard reset. [GitHub](https://github.com/StarDustCFW/Haku33)
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
+* EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
 ---
 * nton - NRO to NSP forwarder. [GitHub](https://github.com/rlaphoenix/nton)
 
@@ -133,8 +133,9 @@ Atmosphere > 1.7.0
 ---
 * [sigmapatches](https://sigmapatches.su/)
 * [Sigpatches for Atmosphere](https://gbatemp.net/threads/sigpatches-for-atmosphere-hekate-fss0-fusee-package3.571543/)
-* sigpatch-updater - [Bitbucket](https://bitbucket.org/e1ite007/sigpatch-updater/src/master/)
+* **ns-sys-patch** - fork of sys-patch[GitHub](https://github.com/pgalonza/ns-sys-patch/)
 * sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot.[Gbatemp](https://gbatemp.net/threads/sys-patch-sysmod-that-patches-on-boot.633517/), [GitFlic](https://gitflic.ru/project/impeeza/sys-patch),[GitFlic](https://gitflic.ru/project/fckn/sys-patch)
+* sigpatch-updater - [Bitbucket](https://bitbucket.org/e1ite007/sigpatch-updater/src/master/)
 * IPS - International Patching System [Patchlib](https://patchlib.readthedocs.io/en/latest/filetype_docs/ips.html), [Zerosoft](https://zerosoft.zophar.net/ips.php)
 * [IPS python](https://github.com/friedkeenan/ips.py)
 * [patchlib](https://github.com/brette-0/patchlib)
