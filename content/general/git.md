@@ -328,6 +328,28 @@ To synchronize the changes made in svn, restore from backup  step №5 and repea
 git svn fetch --authors-file=../users.txt
 ```
 
+## GPG
+
+### Copy key to another machine
+
+PC1
+
+```bash
+gpg —list-keys
+gpg —export <Key ID> > public.key
+gpg —export-secret-key <Key ID> > private.key
+```
+
+PC2
+
+```bash
+gpg —import public.key
+gpg —import —allow-secret-key-import private.key
+gpg --list-secret-keys --keyid-format=long
+git config --global user.signingkey <Key ID>
+git config --global commit.gpgsign true
+```
+
 ## Troubleshooting
 
 ### Windows
