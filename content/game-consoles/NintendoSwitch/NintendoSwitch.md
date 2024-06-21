@@ -73,7 +73,7 @@ Unoffical software
 
 ### Official
 
-* HOS - Horizon OS or Switch OS. [GitHub](https://github.com/THZoria/NX_Firmware)
+* HOS - Horizon OS or Switch OS. [GitHub](https://github.com/THZoria/NX_Firmware), [Mediafire](https://www.mediafire.com/folder/c9xwuvcyd4103/Firmwares)
 * NSO - main executable format
 
 ### Bootloader
@@ -89,7 +89,7 @@ Unoffical software
 * NX-Venom - the ultimate bundle for overclocking. [GitHub](https://github.com/CatcherITGF/NX-Venom)
 * OC Switchcraft - Overclocking suite. [Discord](https://discord.com/channels/854839758815363072/1173171845139288114)
 * Kefir - [Bitbucket](https://bitbucket.org/kefir-switch/kefir/src/master/)
-* Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Telegram](https://t.me/HATSPACK)
+* Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Telegram](https://t.me/HATSPACK), [Mediafire](https://www.mediafire.com/folder/ydsbtw60docxu/HATS)
 * Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
 * NeXT - another AIO Pack. [Codeberg](https://codeberg.org/vampitech/NeXT)
 * 4IFIR - ultimate CFW for overlocking. [GitHub](https://github.com/rashevskyv/4IFIR?tab=readme-ov-file#)
@@ -150,10 +150,16 @@ Atmosphere > 1.7.0
 
 
 ### Logo and splash screen
+* Hekate
+    * [boot logo](https://github.com/CTCaer/hekate?tab=readme-ov-file#boot-entry-keyvalue-combinations)
+* Atmosphere
+    * [boot splash screen](https://github.com/Atmosphere-NX/Atmosphere/blob/master/stratosphere/boot/source/boot_splash_screen.cpp)
+    * [splash screen package3](https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/build_package3.py)
 
+---
 * [Insert splash screen](https://raw.githubusercontent.com/Atmosphere-NX/Atmosphere/master/utilities/insert_splash_screen.py)
 * [Convertfb](https://github.com/zqb-all/convertfb)
-* [Switch logo patcher](https://github.com/friedkeenan/switch-logo-patcher)
+* Switch logo patcher - [GitHub](https://github.com/friedkeenan/switch-logo-patcher), [GitHub Fork](https://github.com/impeeza/switch-logo-patcher)
 
 ## devkitPro
 
