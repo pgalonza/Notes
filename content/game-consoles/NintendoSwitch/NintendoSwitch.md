@@ -26,6 +26,7 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * EdiZon-Overlay - EdiZon Overlay originally by WerWolv. [GitHub](https://github.com/proferabg/EdiZon-Overlay)
 * sys-clk - overclocking/underclocking system module. [GitHub](https://github.com/retronx-team/sys-clk)
 * Uberhand-Overlay - fully craft-able overlay executor. [GitHub](https://github.com/efosamark/Uberhand-Overlay)
+* SaltyNX - background process for file/code modification. [GitHub](https://github.com/masagrator/SaltyNX)
 
 ### Tesla Overlay System
 
@@ -72,7 +73,7 @@ Unoffical software
 
 ### Official
 
-* HOS - Horizon OS or Switch OS
+* HOS - Horizon OS or Switch OS. [GitHub](https://github.com/THZoria/NX_Firmware)
 * NSO - main executable format
 
 ### Bootloader
@@ -84,21 +85,21 @@ Unoffical software
 
 * **Evaron-AIO** - sall-in-one build based on existing CFWS. [GitHub](https://github.com/pgalonza/Evaron-AIO)
 * DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
-* GNX - Brazilian All-in-One CFW package. [GitHub](https://github.com/vncsmnl/GNX)
-* Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
-* SX OS - Features like the XCI Loader require an SX OS license.
 * Ultra - [GitHub](https://github.com/Ultra-NX/Ultra)
-* Switch OC Suite - Overclocking suite running Atmosphere CFW. [GitHub](https://github.com/hanai3Bi/Switch-OC-Suite)
+* NX-Venom - the ultimate bundle for overclocking. [GitHub](https://github.com/CatcherITGF/NX-Venom)
+* OC Switchcraft - Overclocking suite. [Discord](https://discord.com/channels/854839758815363072/1173171845139288114)
 * Kefir - [Bitbucket](https://bitbucket.org/kefir-switch/kefir/src/master/)
+* Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Telegram](https://t.me/HATSPACK)
+* Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
+* NeXT - another AIO Pack. [Codeberg](https://codeberg.org/vampitech/NeXT)
 * 4IFIR - ultimate CFW for overlocking. [GitHub](https://github.com/rashevskyv/4IFIR?tab=readme-ov-file#)
 * 5IFIR - like 4IFIR for semi-stock[GitHub](https://github.com/k1gs/5ifir)
-* Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Telegram](https://t.me/HATSPACK)
-* NeXT - another AIO Pack. [Codeberg](https://codeberg.org/vampitech/NeXT)
+* Switch OC Suite - Overclocking suite. [GitHub](https://github.com/hanai3Bi/Switch-OC-Suite)
+* GNX - Brazilian All-in-One CFW package. [GitHub](https://github.com/vncsmnl/GNX)
 * ShallowSea - AIO CFW package for the. [Codeberg](https://codeberg.org/carcaschoi/Shallowsea)
-* NX-Venom - the ultimate bundle for overclocking. [GitHub](https://github.com/CatcherITGF/NX-Venom)
+* SX OS - Features like the XCI Loader require an SX OS license.
 * Atmosphere-with-Hekate - Hekate and Atmosphere only. [GitHub](https://github.com/yyoossk/Atmosphere-with-Hekate)
 * Arquivos-JNX - additional file. [GitHub](https://github.com/JuniorPassos/Arquivos-JNX)
-* Kefirosphere - fork of Atmosphère. [GitHub](https://github.com/rashevskyv/Kefirosphere)
 ---
 * Kefir Updater - update your CFW, sigpatches, cheat codes, firmwares and more. [GitHub](https://github.com/rashevskyv/kefir-updater)
 * AIO-Switch-Updater - update your CFW, cheat codes, firmwares and more. [GitHub](https://github.com/HamletDuFromage/aio-switch-updater)
@@ -110,6 +111,8 @@ Unoffical software
 
 * Atmosphere - [GitHub](https://github.com/Atmosphere-NX/Atmosphere)
 * **ns-Atmosphere** - custom atmosphere with including from fork changes and reverting controversial changes. [GitHub](https://github.com/pgalonza/ns-Atmosphere)
+* Kefirosphere - fork of Atmosphère. [GitHub](https://github.com/rashevskyv/Kefirosphere)
+---
 * KIP - Kernel Initial Processes
 
 #### Build
@@ -133,7 +136,7 @@ Atmosphere > 1.7.0
 ---
 * [sigmapatches](https://sigmapatches.su/)
 * [Sigpatches for Atmosphere](https://gbatemp.net/threads/sigpatches-for-atmosphere-hekate-fss0-fusee-package3.571543/)
-* **ns-sys-patch** - fork of sys-patch[GitHub](https://github.com/pgalonza/ns-sys-patch/)
+* **ns-sys-patch** - fork of sys-patch. [GitHub](https://github.com/pgalonza/ns-sys-patch/)
 * sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot.[Gbatemp](https://gbatemp.net/threads/sys-patch-sysmod-that-patches-on-boot.633517/), [GitFlic](https://gitflic.ru/project/impeeza/sys-patch),[GitFlic](https://gitflic.ru/project/fckn/sys-patch)
 * sigpatch-updater - [Bitbucket](https://bitbucket.org/e1ite007/sigpatch-updater/src/master/)
 * IPS - International Patching System [Patchlib](https://patchlib.readthedocs.io/en/latest/filetype_docs/ips.html), [Zerosoft](https://zerosoft.zophar.net/ips.php)
