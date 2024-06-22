@@ -25,7 +25,8 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 ## Overlays
 * EdiZon-Overlay - EdiZon Overlay originally by WerWolv. [GitHub](https://github.com/proferabg/EdiZon-Overlay)
 * sys-clk - overclocking/underclocking system module. [GitHub](https://github.com/retronx-team/sys-clk)
-* Uberhand-Overlay - fully craft-able overlay executor. [GitHub](https://github.com/efosamark/Uberhand-Overlay)
+* Ultrahand-Overlay - fully craft-able overlay executor.[GitHub](https://github.com/ppkantorski/Ultrahand-Overlay)
+* Uberhand-Overlay(fork Ultrahand-Overlay) - fully craft-able overlay executor. [GitHub](https://github.com/efosamark/Uberhand-Overlay)
 * SaltyNX - background process for file/code modification. [GitHub](https://github.com/masagrator/SaltyNX)
 
 ### Tesla Overlay System
@@ -34,6 +35,8 @@ Allows to access a menu of various homebrew applications and plugins.
 
 * Tesla-Menu - overlay menu. [GitHub](https://github.com/WerWolv/Tesla-Menu)
 * nx-ovlloader - sys-module, host process for loading overlay OVLs (NROs). [GitHub](https://github.com/WerWolv/nx-ovlloader)
+---
+* libtesla - support library for Tesla overlays for develop. [GitHub](https://github.com/WerWolv/libtesla)
 
 ## Payload
 
@@ -66,6 +69,8 @@ Unoffical software
 * EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
 ---
 * nton - NRO to NSP forwarder. [GitHub](https://github.com/rlaphoenix/nton)
+* Switch Homebrew Development - [Gbatemp](https://gbatemp.net/threads/switch-homebrew-development.507284/)
+* nx.js - JavaScript runtime for homebrew applications [GitHub](https://github.com/TooTallNate/nx.js)
 
 ## Firmware
 
@@ -147,6 +152,7 @@ Atmosphere > 1.7.0
 * AutoIPS-patcher - [Gbatemp](https://gbatemp.net/attachments/autoips-patcher-zip.303087/)
 * SigPatches - [GitHub](https://github.com/btc08gh/SigPatches)
 * IPS Patch Creator - [GitHub Source](https://github.com/zdm65477730/IPS_Patch_Creator), [Gbatemp Build](https://disk.yandex.com/d/LEKGKbfDw-_pjA)
+* SHA-256 hashes on FS patches - [Gbatemp](https://gbatemp.net/threads/info-on-sha-256-hashes-on-fs-patches.581550/)
 
 
 ### Logo and splash screen
@@ -159,7 +165,7 @@ Atmosphere > 1.7.0
 ---
 * [Insert splash screen](https://raw.githubusercontent.com/Atmosphere-NX/Atmosphere/master/utilities/insert_splash_screen.py)
 * [Convertfb](https://github.com/zqb-all/convertfb)
-* Switch logo patcher - [GitHub](https://github.com/friedkeenan/switch-logo-patcher), [GitHub Fork](https://github.com/impeeza/switch-logo-patcher)
+* Switch logo patcher - [GitHub](https://github.com/friedkeenan/switch-logo-patcher), [GitHub Fork](https://github.com/impeeza/switch-logo-patcher), [Gbatemp Documentation ](https://gbatemp.net/threads/original-nintendo-logo-from-firmware-switch-logo-patcher.613041)
 
 ## devkitPro
 
