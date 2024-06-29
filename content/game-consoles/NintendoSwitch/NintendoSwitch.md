@@ -63,7 +63,8 @@ Unoffical software
 * LayeredFS - homebrew virtual file system for replace games use TitleID.
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
 * Linkalho - homebrew app that will link NNID accounts offline. [GitHub](https://github.com/rdmrocha/linkalho)
-* dbi - install NSP, NSZ, XCI and XCZ from various sources. [GitHub](https://github.com/rashevskyv/dbi)
+* DBI - install NSP, NSZ, XCI and XCZ from various sources. [GitHub](https://github.com/rashevskyv/dbi)
+* Awoo-Installer - install NSP, NSZ, XCI and XCZ. [GitHub](https://github.com/dragonflylee/Awoo-Installer)
 * Haku33 - perform a hard reset. [GitHub](https://github.com/StarDustCFW/Haku33)
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
 * EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
@@ -311,5 +312,7 @@ mkfs.fat /dev/sd<>1
 ## Reverse engineering
 
 * Switch-Ghidra-Guides - [GitHub](https://github.com/borntohonk/Switch-Ghidra-Guides/)
+* Ghidra-Switch-Loader - [GitHub](https://github.com/StevensND/Ghidra-Switch-Loader)
+* ghidra-port-mods-guide - [GitHub](https://github.com/StevensND/ghidra-port-mods-guide)
 * LibHac - [GitHub](https://github.com/Thealexbarney/LibHac/)
 * hactool - [GitHub](https://github.com/SciresM/hactool)
