@@ -1,6 +1,7 @@
 ---
 title: "Active directory"
 draft: false
+description: "Active Directory notes"
 ---
 
 {{< toc >}}

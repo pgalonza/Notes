@@ -1,6 +1,7 @@
 ---
 title: "Git"
 draft: false
+description: "Git notes"
 ---
 
 {{< toc >}}

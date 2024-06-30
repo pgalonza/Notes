@@ -1,6 +1,7 @@
 ---
 title: "OpenVPN"
 draft: false
+description: "OpenVPN notes"
 ---
 
 {{< toc >}}

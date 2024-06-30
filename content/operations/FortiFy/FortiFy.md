@@ -1,6 +1,7 @@
 ---
 title: "FortiFY"
 draft: false
+description: "FortiFy notes"
 ---
 
 Scanning the project

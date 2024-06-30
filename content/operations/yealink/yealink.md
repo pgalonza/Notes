@@ -1,6 +1,7 @@
 ---
 title: "Yealink"
 draft: false
+description: "Yealink notes"
 ---
 
 {{< toc >}}

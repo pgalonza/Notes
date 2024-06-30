@@ -1,6 +1,7 @@
 ---
 title: "Fish-shell"
 draft: false
+description: "Fish-shell notes"
 ---
 
 Executable path

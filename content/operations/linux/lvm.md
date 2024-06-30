@@ -1,6 +1,7 @@
 ---
 title: "LVM"
 draft: false
+description: "LVM(Logical Volume Manager) notes"
 ---
 
 {{< toc >}}

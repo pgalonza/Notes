@@ -1,6 +1,7 @@
 ---
 title: "Kernel"
 draft: false
+description: "Linux kernel notes"
 ---
 
 {{< toc >}}

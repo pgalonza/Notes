@@ -1,6 +1,7 @@
 ---
 title: "Java"
 draft: false
+description: "Java notes"
 ---
 
 set timezone in logback

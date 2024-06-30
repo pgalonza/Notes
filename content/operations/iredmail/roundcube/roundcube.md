@@ -1,6 +1,7 @@
 ---
 title: "Roundcube"
 draft: false
+description: "Roundcube notes"
 ---
 
 {{< toc >}}

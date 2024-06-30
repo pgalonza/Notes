@@ -1,6 +1,7 @@
 ---
 title: "Nginx"
 draft: false
+description: "Nginx notes"
 ---
 
 {{< toc >}}

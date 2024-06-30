@@ -1,6 +1,7 @@
 ---
 title: "Email"
 draft: false
+description: "E-mail notes"
 ---
 
 {{< toc >}}

@@ -1,6 +1,7 @@
 ---
 title: "VirtualBox"
 draft: false
+description: "VirtualBox notes"
 ---
 
 {{< toc >}}

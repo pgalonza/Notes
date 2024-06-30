@@ -1,6 +1,7 @@
 ---
 title: "iRedMail"
 draft: false
+description: "IredMail notes"
 ---
 
 ```bash

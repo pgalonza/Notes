@@ -1,6 +1,7 @@
 ---
 title: "GitLab CI"
 draft: false
+description: "GitLab CI notes"
 ---
 
 {{< toc >}}

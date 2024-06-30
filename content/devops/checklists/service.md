@@ -1,6 +1,7 @@
 ---
 title: "Service"
 draft: false
+description: "Check list for new service"
 ---
 
 ## New service

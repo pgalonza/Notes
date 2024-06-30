@@ -1,6 +1,7 @@
 ---
 title: "AeroDisk"
 draft: false
+description: "Data storage system AeroDisk notes"
 ---
 
 FC commutation

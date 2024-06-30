@@ -1,6 +1,7 @@
 ---
 title: "Keycloak"
 draft: false
+description: "Keycloak notes"
 ---
 
 {{< toc >}}

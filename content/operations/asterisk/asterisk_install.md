@@ -1,6 +1,7 @@
 ---
 title: "Install asterisk"
 draft: false
+description: "Asterisk install instruction"
 ---
 
 {{< toc >}}

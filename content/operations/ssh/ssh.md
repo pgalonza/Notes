@@ -1,6 +1,7 @@
 ---
 title: "SSH"
 draft: false
+description: "SSH notes"
 ---
 
 {{< toc >}}

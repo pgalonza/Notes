@@ -1,6 +1,7 @@
 ---
 title: "Grub"
 draft: false
+description: "Grub notes"
 ---
 
 {{< toc >}}

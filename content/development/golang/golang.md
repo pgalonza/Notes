@@ -3,6 +3,7 @@ title: "GoLang"
 draft: false
 aliases:
   - /development/go/go/
+description: "Golang notes"
 ---
 
 Enum iota

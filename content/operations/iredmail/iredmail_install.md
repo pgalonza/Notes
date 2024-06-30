@@ -1,6 +1,7 @@
 ---
 title: "Install iRedMail"
 draft: false
+description: "IredMail install instruction"
 ---
 
 Check ldap connection

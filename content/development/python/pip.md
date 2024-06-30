@@ -1,6 +1,7 @@
 ---
 title: "PIP"
 draft: false
+description: "Python PIP notes"
 ---
 
 Nexus

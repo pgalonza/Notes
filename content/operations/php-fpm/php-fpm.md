@@ -1,6 +1,7 @@
 ---
 title: "PHP-FPM"
 draft: false
+description: "PHP-FPM notes"
 ---
 
 {{< toc >}}

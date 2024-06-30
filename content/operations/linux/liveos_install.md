@@ -1,6 +1,7 @@
 ---
 title: "Install from LiveOS"
 draft: false
+description: "Linux install instruction via LiveOS"
 ---
 
 Load with LiveOS

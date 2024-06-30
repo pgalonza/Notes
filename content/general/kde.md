@@ -1,6 +1,7 @@
 ---
 title: "KDE"
 draft: false
+description: "KDE notes"
 ---
 
 Path for AppImage

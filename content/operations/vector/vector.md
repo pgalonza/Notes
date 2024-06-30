@@ -1,6 +1,7 @@
 ---
 title: "Vector"
 draft: false
+description: "Vector-agent notes"
 ---
 
 

@@ -1,6 +1,7 @@
 ---
 title: "Windows"
 draft: false
+description: "Windows notes"
 ---
 
 {{< toc >}}

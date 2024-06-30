@@ -1,6 +1,7 @@
 ---
 title: "RouterOS"
 draft: false
+description: "RouterOS notes"
 ---
 
 {{< toc >}}

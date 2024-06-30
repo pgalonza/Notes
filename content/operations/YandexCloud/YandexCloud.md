@@ -1,6 +1,7 @@
 ---
 title: "Yandex Cloud"
 draft: false
+description: "Yandex Cloud notes"
 ---
 
 {{< toc >}}

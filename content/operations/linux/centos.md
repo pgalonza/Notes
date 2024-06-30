@@ -1,6 +1,7 @@
 ---
 title: "Centos"
 draft: false
+description: "Centos linux notes"
 ---
 
 {{< toc >}}

@@ -1,6 +1,7 @@
 ---
 title: "Resources"
 draft: false
+description: "Resources notes"
 ---
 
 * [Data Tables](https://www.datatables.net)

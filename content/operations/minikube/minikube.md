@@ -1,6 +1,7 @@
 ---
 title: "Minikube"
 draft: false
+description: "Minicube notes"
 ---
 
 {{< toc >}}

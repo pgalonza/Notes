@@ -1,6 +1,7 @@
 ---
 title: "Install Centos"
 draft: false
+description: "Centos linux install instruction"
 ---
 
 {{< toc >}}

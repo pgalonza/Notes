@@ -1,6 +1,7 @@
 ---
 title: "Linux"
 draft: false
+description: "Linux notes"
 ---
 
 {{< toc >}}

@@ -1,6 +1,7 @@
 ---
 title: "Trunk"
 draft: false
+description: "Asterisk trunk notes"
 ---
 
 {{< toc >}}

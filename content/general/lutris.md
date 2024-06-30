@@ -1,6 +1,7 @@
 ---
 title: "Lutris"
 draft: false
+description: "Lutris notes"
 ---
 
 Create play file

@@ -1,6 +1,7 @@
 ---
 title: "Kafka"
 draft: false
+description: "Kafka notes"
 ---
 
 {{< toc >}}

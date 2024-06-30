@@ -1,6 +1,7 @@
 ---
 title: "Visual Studio Code"
 draft: false
+description: "VSCode(Visual Studio Code) notes"
 ---
 
 {{< toc >}}

@@ -1,6 +1,7 @@
 ---
 title: "Filesystem"
 draft: false
+description: "Linux filesystem notes"
 ---
 
 {{< toc >}}

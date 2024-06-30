@@ -1,6 +1,7 @@
 ---
 title: "VMWare ESXI"
 draft: false
+description: "VMWate ESXI notes"
 ---
 
 {{< toc >}}

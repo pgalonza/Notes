@@ -1,6 +1,7 @@
 ---
 title: "Zabbix"
 draft: false
+description: "Zabbix notes"
 ---
 
 {{< toc >}}

@@ -1,6 +1,7 @@
 ---
 title: "RaspberryPI"
 draft: false
+description: "Raspberry-PI notes"
 ---
 
 Grid of cameras

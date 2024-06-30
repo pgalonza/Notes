@@ -1,6 +1,7 @@
 ---
 title: "LDAP"
 draft: false
+description: "OpenFire LDAP notes"
 ---
 
 Users in group

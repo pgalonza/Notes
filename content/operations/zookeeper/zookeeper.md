@@ -1,6 +1,7 @@
 ---
 title: "Zookeeper"
 draft: false
+description: "Zookeeper notes"
 ---
 
 {{< toc >}}

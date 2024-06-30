@@ -1,6 +1,7 @@
 ---
 title: "Vagrant"
 draft: false
+description: "Vagrant notes"
 ---
 
 {{< toc >}}

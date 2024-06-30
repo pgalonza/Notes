@@ -1,6 +1,7 @@
 ---
 title: "Install Arch"
 draft: false
+description: "ArchLinux install instruction"
 ---
 
 {{< toc >}}

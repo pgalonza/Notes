@@ -1,6 +1,7 @@
 ---
 title: "VIM"
 draft: false
+description: "VIM notes"
 ---
 
 {{< toc >}}

@@ -1,6 +1,7 @@
 ---
 title: "Openfire"
 draft: false
+description: "OpenFire notes"
 ---
 
 {{< toc >}}

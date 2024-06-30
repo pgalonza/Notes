@@ -1,6 +1,7 @@
 ---
 title: "Redmine"
 draft: false
+description: "Redmine notes"
 ---
 
 Create issues from email

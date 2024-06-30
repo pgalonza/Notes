@@ -1,6 +1,7 @@
 ---
 title: "Modules"
 draft: false
+description: "Python modules notes"
 ---
 
 {{< toc >}}

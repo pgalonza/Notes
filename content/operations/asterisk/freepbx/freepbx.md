@@ -1,6 +1,7 @@
 ---
 title: "FreePBX"
 draft: false
+description: "FreePBX notes"
 ---
 
 {{< toc >}}

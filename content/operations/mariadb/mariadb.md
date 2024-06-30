@@ -1,6 +1,7 @@
 ---
 title: "Mariadb"
 draft: false
+description: "MariaDB notes"
 ---
 
 {{< toc >}}

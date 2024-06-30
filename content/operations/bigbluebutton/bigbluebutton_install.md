@@ -1,6 +1,7 @@
 ---
 title: "BigBlueButton"
 draft: false
+description: "Big Blue Button notes"
 ---
 
 {{< toc >}}

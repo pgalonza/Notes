@@ -1,6 +1,7 @@
 ---
 title: "SQUID"
 draft: false
+description: "SQUID install instruction"
 ---
 
 ```bash

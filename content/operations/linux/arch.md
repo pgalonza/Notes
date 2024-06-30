@@ -1,6 +1,7 @@
 ---
 title: "Arch"
 draft: false
+description: "ArchLinux manual"
 ---
 
 {{< toc >}}

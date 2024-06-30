@@ -1,6 +1,7 @@
 ---
 title: "Prometheus"
 draft: false
+description: "Prometheus notes"
 ---
 
 CPU IOWAIT

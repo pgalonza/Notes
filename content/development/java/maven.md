@@ -1,6 +1,7 @@
 ---
 title: "Maven"
 draft: false
+description: "Maven notes"
 ---
 
 Repository for all

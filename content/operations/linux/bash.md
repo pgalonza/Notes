@@ -1,7 +1,7 @@
 ---
 title: Bash
 draft: false
-description: "Bash commands"
+description: "Bash-shell commands"
 aliases:
   - /operations/bash
 ---

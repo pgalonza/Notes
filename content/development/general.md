@@ -1,6 +1,7 @@
 ---
 title: "General"
 draft: false
+description: "Development notes"
 ---
 
 {{< toc >}}

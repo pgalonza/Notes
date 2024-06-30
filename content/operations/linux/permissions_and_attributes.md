@@ -1,6 +1,7 @@
 ---
 title: "Permissions, flags and attributes"
 draft: false
+description: "Linux permission notes"
 ---
 
 Change uid and gid

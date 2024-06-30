@@ -1,6 +1,7 @@
 ---
 title: "Gradle"
 draft: false
+description: "Gradle notes"
 ---
 
 Download dependencies from nexus for cashing

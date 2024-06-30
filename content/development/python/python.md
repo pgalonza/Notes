@@ -1,6 +1,7 @@
 ---
 title: "Python"
 draft: false
+description: "Python notes"
 ---
 
 {{< toc >}}

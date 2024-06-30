@@ -1,6 +1,7 @@
 ---
 title: "JMeter"
 draft: false
+description: "JMeter notes"
 ---
 
 RabbitMQ

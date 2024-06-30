@@ -1,6 +1,7 @@
 ---
 title: "RabbitMQ"
 draft: false
+description: "RabbitMQ notes"
 ---
 
 Enable metrics
