@@ -79,7 +79,7 @@ Unoffical software
 
 ### Official
 
-* HOS - Horizon OS or Switch OS. [GitHub](https://github.com/THZoria/NX_Firmware), [Mediafire](https://www.mediafire.com/folder/c9xwuvcyd4103/Firmwares)
+* HOS - Horizon OS or Switch OS. [GitHub](https://github.com/THZoria/NX_Firmware), [Mediafire](https://www.mediafire.com/folder/c9xwuvcyd4103/Firmwares), [Darthsternie](https://darthsternie.net/switch-firmwares/)
 * NSO - main executable format
 
 ### Bootloader
