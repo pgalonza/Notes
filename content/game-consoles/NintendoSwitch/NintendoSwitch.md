@@ -59,8 +59,6 @@ Unoffical software
 * nx-hbloader - host process for loading Homebrew NROs. [GitHub](https://github.com/switchbrew/nx-hbloader)
 * nx-hbmenu - the Nintendo Switch Homebrew Menu. [GitHub](https://github.com/switchbrew/nx-hbmenu)
 * 90DNS Tester - simple homebrew application to test DNS. [GitHub](https://github.com/meganukebmp/Switch_90DNS_tester/)
-* libnx - library for development Homebrew. [GitHub](https://github.com/switchbrew/libnx)
-* LayeredFS - homebrew virtual file system for replace games use TitleID.
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
 * Linkalho - homebrew app that will link NNID accounts offline. [GitHub](https://github.com/rdmrocha/linkalho)
 * DBI - install NSP, NSZ, XCI and XCZ from various sources. [GitHub](https://github.com/rashevskyv/dbi)
@@ -69,6 +67,8 @@ Unoffical software
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
 * EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
 ---
+* libnx - library for development Homebrew. [GitHub](https://github.com/switchbrew/libnx)
+* LayeredFS - homebrew virtual file system for replace games use TitleID.
 * nton - NRO to NSP forwarder. [GitHub](https://github.com/rlaphoenix/nton)
 * Switch Homebrew Development - [Gbatemp](https://gbatemp.net/threads/switch-homebrew-development.507284/)
 * nx.js - JavaScript runtime for homebrew applications [GitHub](https://github.com/TooTallNate/nx.js)
@@ -99,12 +99,11 @@ Unoffical software
 * Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
 * NeXT - another AIO Pack. [Codeberg](https://codeberg.org/vampitech/NeXT)
 * 4IFIR - ultimate CFW for overlocking. [GitHub](https://github.com/rashevskyv/4IFIR?tab=readme-ov-file#)
-* 5IFIR - like 4IFIR for semi-stock[GitHub](https://github.com/k1gs/5ifir)
+* 5IFIR - like 4IFIR for semi-stock [GitHub](https://github.com/k1gs/5ifir)
 * Switch OC Suite - Overclocking suite. [GitHub](https://github.com/hanai3Bi/Switch-OC-Suite)
 * GNX - Brazilian All-in-One CFW package. [GitHub](https://github.com/vncsmnl/GNX)
 * ShallowSea - AIO CFW package for the. [Codeberg](https://codeberg.org/carcaschoi/Shallowsea)
 * SX OS - Features like the XCI Loader require an SX OS license.
-* Atmosphere-with-Hekate - Hekate and Atmosphere only. [GitHub](https://github.com/yyoossk/Atmosphere-with-Hekate)
 * Arquivos-JNX - additional file. [GitHub](https://github.com/JuniorPassos/Arquivos-JNX)
 ---
 * Kefir Updater - update your CFW, sigpatches, cheat codes, firmwares and more. [GitHub](https://github.com/rashevskyv/kefir-updater)
@@ -139,6 +138,8 @@ Atmosphere > 1.7.0
 * ES-patches - Eticket Service patches, required to install fake tickets for running commercial(dumped/pirated) Nintendo Switch Packages (NSPs).
 * Loader-patches - required for running NRO forwarders and installed homebrews.
 * NIFM-ctest - patch for the connection test, allowing a local area network to function even without an internet connection.
+* SHA-256 hashes on FS patches - [Gbatemp](https://gbatemp.net/threads/info-on-sha-256-hashes-on-fs-patches.581550/)
+* How work Load patch - [Gbatemp](https://gbatemp.net/threads/how-to-create-your-own-sigpatches.616288/post-10449915)
 ---
 * [sigmapatches](https://sigmapatches.su/)
 * [Sigpatches for Atmosphere](https://gbatemp.net/threads/sigpatches-for-atmosphere-hekate-fss0-fusee-package3.571543/)
@@ -151,9 +152,7 @@ Atmosphere > 1.7.0
 * [ips_util](https://github.com/nleseul/ips_util)
 * [Lips](https://github.com/kylon/Lipx)
 * AutoIPS-patcher - [Gbatemp](https://gbatemp.net/attachments/autoips-patcher-zip.303087/)
-* SigPatches - [GitHub](https://github.com/btc08gh/SigPatches)
 * IPS Patch Creator - [GitHub Source](https://github.com/zdm65477730/IPS_Patch_Creator), [Gbatemp Build](https://disk.yandex.com/d/LEKGKbfDw-_pjA)
-* SHA-256 hashes on FS patches - [Gbatemp](https://gbatemp.net/threads/info-on-sha-256-hashes-on-fs-patches.581550/)
 
 
 ### Logo and splash screen
