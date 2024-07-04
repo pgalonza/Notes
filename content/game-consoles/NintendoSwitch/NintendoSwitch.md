@@ -146,6 +146,9 @@ Atmosphere > 1.7.0
 * **ns-sys-patch** - fork of sys-patch. [GitHub](https://github.com/pgalonza/ns-sys-patch/)
 * sys-patch - system module for patches(SigPatche) fs, es, ldr and nifm on boot.[Gbatemp](https://gbatemp.net/threads/sys-patch-sysmod-that-patches-on-boot.633517/), [GitFlic](https://gitflic.ru/project/impeeza/sys-patch),[GitFlic](https://gitflic.ru/project/fckn/sys-patch)
 * sigpatch-updater - [Bitbucket](https://bitbucket.org/e1ite007/sigpatch-updater/src/master/)
+
+#### IPS patch
+
 * IPS - International Patching System [Patchlib](https://patchlib.readthedocs.io/en/latest/filetype_docs/ips.html), [Zerosoft](https://zerosoft.zophar.net/ips.php)
 * [IPS python](https://github.com/friedkeenan/ips.py)
 * [patchlib](https://github.com/brette-0/patchlib)
@@ -153,6 +156,39 @@ Atmosphere > 1.7.0
 * [Lips](https://github.com/kylon/Lipx)
 * AutoIPS-patcher - [Gbatemp](https://gbatemp.net/attachments/autoips-patcher-zip.303087/)
 * IPS Patch Creator - [GitHub Source](https://github.com/zdm65477730/IPS_Patch_Creator), [Gbatemp Build](https://disk.yandex.com/d/LEKGKbfDw-_pjA)
+---
+
+**IPS(International Patching System”)**
+
+|Type    |Size|Data |
+|:-------|:---|:----|
+|Header  |5   |Patch|
+|Offset  |3   |     |
+|Size    |2   |     |
+|Data    |Size|     |
+|Footer  |3   |EOF  |
+
+**RLE**
+
+|Type    |Size|Data |
+|:-------|:---|:----|
+|Header  |5   |Patch|
+|Offset  |3   |     |
+|Size    |2   |     |
+|RLE Size|2   |     |
+|Data    |Size|     |
+|Footer  |3   |EOF  |
+
+**IPS32**
+
+|Type    |Size|Data  |
+|:-------|:---|:-----|
+|Header  |5   |IPS32 |
+|Offset  |3   |      |
+|Size    |2   |      |
+|RLE Size|2   |      |
+|Data    |Size|      |
+|Footer  |4   |EEOF  |
 
 
 ### Logo and splash screen
