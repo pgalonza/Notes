@@ -192,16 +192,20 @@ Atmosphere > 1.7.0
 
 
 ### Logo and splash screen
+
 * Hekate
-    * [boot logo](https://github.com/CTCaer/hekate?tab=readme-ov-file#boot-entry-keyvalue-combinations)
+    * Bootlogo -[GitHub](https://github.com/CTCaer/hekate?tab=readme-ov-file#boot-entry-keyvalue-combinations)
 * Atmosphere
-    * [boot splash screen](https://github.com/Atmosphere-NX/Atmosphere/blob/master/stratosphere/boot/source/boot_splash_screen.cpp)
-    * [splash screen package3](https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/build_package3.py)
+    * Bootlogo - [GitHub](https://github.com/Atmosphere-NX/Atmosphere/blob/master/stratosphere/boot/source/boot_splash_screen.cpp)
+    * Splash screen - [GitHub](https://github.com/Atmosphere-NX/Atmosphere/blob/master/fusee/build_package3.py)
+* Firmware
+    * Bootlogo - [Gbatemp](https://gbatemp.net/threads/original-nintendo-logo-from-firmware-switch-logo-patcher.613041/)
 
 ---
 * [Insert splash screen](https://raw.githubusercontent.com/Atmosphere-NX/Atmosphere/master/utilities/insert_splash_screen.py)
 * [Convertfb](https://github.com/zqb-all/convertfb)
-* Switch logo patcher - [GitHub](https://github.com/friedkeenan/switch-logo-patcher), [GitHub Fork](https://github.com/impeeza/switch-logo-patcher), [Gbatemp Documentation ](https://gbatemp.net/threads/original-nintendo-logo-from-firmware-switch-logo-patcher.613041)
+* Switch logo patcher - [GitHub](https://github.com/friedkeenan/switch-logo-patcher), [GitHub Fork](https://github.com/impeeza/switch-logo-patcher)
+* [Displayed images](https://gbatemp.net/threads/custom-boot-logo-for-switch.569031/post-10439867)
 
 ## devkitPro
 
