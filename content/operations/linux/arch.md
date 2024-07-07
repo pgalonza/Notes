@@ -112,3 +112,14 @@ Build package
 ```bash
 makepkg
 ```
+
+## Wayland
+
+Activation for Plasma
+
+```bash
+sudo pikaur -S egl-wayland
+echo options nvidia_drm modeset=1 | sudo tee /etc/modprobe.d/nvidia_drm.conf
+echo options nvidia_drm fbdev=1 | sudo tee /etc/modprobe.d/nvidia_drm.conf
+sudo mkinitcpio -v
+```
