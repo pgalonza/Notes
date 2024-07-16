@@ -261,6 +261,12 @@ Show pids of process
 ps -ef | grep -v grep | grep <process_name> | awk '{ print $2 }'
 ```
 
+Print the variables with which the process was started
+
+```bash
+ps ewww
+```
+
 ## TOP
 
 * us, user    : time running un-niced user processes
