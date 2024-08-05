@@ -78,6 +78,8 @@ description: "Python modules notes"
 * **capstone** - lightweight multi-platform, multi-architecture disassembly framework.
 * **openpyxl** - python library to read/write xlsx/xlsm files.
 * **pathlib** - object-oriented filesystem paths.
+* **aiogram** - is modern and fully asynchronous framework for Telegram Bot API written in Python with asyncio and aiohttp.
+* **pyTelegramBotAPI** - a simple, but extensible Python implementation for the Telegram Bot API.
 
 ## Testing & Checking
 
