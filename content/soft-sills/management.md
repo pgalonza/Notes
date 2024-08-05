@@ -2,7 +2,7 @@
 title: "Management and Mentoring"
 date: 2024-04-04T00:01:55+03:00
 draft: false
-description: "Management, mentoring checklists and recomendations"
+description: "The page contains notes, checklists and recommendations on soft skills, mentoring and management. Here you will find useful tips that will help you improve your management skills, develop flexible skills and become a more effective leader."
 ---
 
 
