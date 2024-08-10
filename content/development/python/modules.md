@@ -80,6 +80,7 @@ description: "Python modules notes"
 * **pathlib** - object-oriented filesystem paths.
 * **aiogram** - is modern and fully asynchronous framework for Telegram Bot API written in Python with asyncio and aiohttp.
 * **pyTelegramBotAPI** - a simple, but extensible Python implementation for the Telegram Bot API.
+* **python-telegram-bot** - the library provides a pure Python, asynchronous interface for the Telegram Bot API.
 
 ## Testing & Checking
 
