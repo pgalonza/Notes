@@ -1299,6 +1299,8 @@ def next_number(number):
         yield number + random.randint(0, 10)
     except Exception as exc:
         print(exc)
+    finally:
+        <>
 
 
 with next_number(1) as next_n:
