@@ -43,6 +43,7 @@ description: "Tools and program notes"
 * **ttyd** - share terminal in web.
 * **findmnt** - find a filesystems.
 * **setsid** - run a program in a new session.
+* **sleuthkit** - forensics tools for investigate volume and file system.
 
 ## CPU
 
