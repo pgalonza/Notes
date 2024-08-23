@@ -638,3 +638,23 @@ Move rows
 ```sql
 with <cte name> as (delete from only <src table name> where <condition> returning *) insert into <dst table name> select * from <cte name>;
 ```
+
+##  Row Security Policies(Row Leve Security)
+
+Enable for table
+
+```sql
+ALTER TABLE <table name> ENABLE ROW LEVEL SECURITY;
+```
+
+Create policy
+
+```sql
+CREATE POLICY <policy name> ON <table name> TO <role name> USING (<condition>);
+```
+
+Show polices
+
+```sql
+SELECT * FROM information_schema.policies;
+```
