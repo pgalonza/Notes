@@ -79,3 +79,17 @@ Show ports and connections
 ss -tupn
 ss -tupnl
 ```
+
+Verify packages
+
+```bash
+dpkg --verify
+rpm -Va
+dnf check
+```
+
+Get processes
+
+```bash
+ps auxeww
+```
