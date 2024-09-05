@@ -1,4 +1,4 @@
-baseURL: 'https://notes.evaron.ru/'
+baseURL: 'https://notes.evaron.ru'
 title: 'Notes by Peter Galonza(Пётр Галонза)'
 theme: 'hugo-geekdoc'
 languageCode: en-US
