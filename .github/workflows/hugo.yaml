@@ -7,10 +7,6 @@ on:
       - hugo
       - master
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-
 permissions:
   contents: read
 
@@ -35,7 +31,6 @@ jobs:
       THEME: hugo-geekdoc
       BASEDIR: docs
       THEMEDIR: ./themes
-      SITE_URL: "https://notes.evaron.ru/"
     steps:
       - name: Install Hugo CLI
         run: |
@@ -55,12 +50,8 @@ jobs:
         env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
         run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL ${SITE_URL}
+          hugo --gc --minify
       - name: Archive hugo artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -83,7 +74,7 @@ jobs:
       with:
         switches: -avzr --delete
         path: public/
-        remote_path: 	./domains/notes.evaron.ru/
+        remote_path: 	./domains/${{ vars.DOMAIN_NAME }}/
         remote_host: ${{ vars.SFTP_HOST }}
         remote_user: ${{ secrets.SFTP_USER }}
         remote_key: ${{ secrets.SFTP_KEY }}
