@@ -45,9 +45,9 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:turbo="http://turbo.yandex.ru">
   <channel>
-    <title>Hi, it’s my notes</title>
+    <title>{{ .Title }}</title>
     <link>{{ .Permalink }}</link>
-    <description>I am Peter Galonza, and this is my note page.</description>
+    <description>{{ .Description }}</description>
     <generator>Hugo</generator>
     <language>{{ site.Language.LanguageCode }}</language>{{ with $authorEmail }}
     <managingEditor>{{.}}{{ with $authorName }} ({{ . }}){{ end }}</managingEditor>{{ end }}{{ with $authorEmail }}
