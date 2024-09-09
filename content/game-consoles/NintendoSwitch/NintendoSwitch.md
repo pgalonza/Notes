@@ -23,7 +23,6 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 
 
 ## Overlays
-* EdiZon-Overlay - EdiZon Overlay originally by WerWolv. [GitHub](https://github.com/proferabg/EdiZon-Overlay)
 * sys-clk - overclocking/underclocking system module. [GitHub](https://github.com/retronx-team/sys-clk)
 * Ultrahand-Overlay - fully craft-able overlay executor.[GitHub](https://github.com/ppkantorski/Ultrahand-Overlay)
 * Uberhand-Overlay(fork Ultrahand-Overlay) - fully craft-able overlay executor. [GitHub](https://github.com/efosamark/Uberhand-Overlay)
@@ -65,7 +64,6 @@ Unoffical software
 * Awoo-Installer - install NSP, NSZ, XCI and XCZ. [GitHub](https://github.com/dragonflylee/Awoo-Installer)
 * Haku33 - perform a hard reset. [GitHub](https://github.com/StarDustCFW/Haku33)
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
-* EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
 ---
 * libnx - library for development Homebrew. [GitHub](https://github.com/switchbrew/libnx)
 * LayeredFS - homebrew virtual file system for replace games use TitleID.
@@ -243,6 +241,17 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 * [GitHub Source](https://github.com/Ansem-SoD/Picofly)
 * Glitching the CPU to make it fail a check, which allows booting from an unsigned payload that will then run higher level software.
 * UF2 - USB flashing format developed by Microsoft. [GitHub](https://github.com/microsoft/uf2)
+
+## Cheat
+
+* EdiZon - using cheats. [GitHub](https://github.com/WerWolv/EdiZon)
+* EdiZon-SE - using cheats. [GitHub](https://github.com/tomvita/EdiZon-SE)
+* EdiZon-Overlay - EdiZon Overlay originally by WerWolv. [GitHub](https://github.com/proferabg/EdiZon-Overlay)
+* Breeze - game cheating tool designed to work with Atmosphere's cheatVM. [GitHub](https://github.com/tomvita/Breeze-Beta)
+* NXCheatCode - database. [GitHub](https://github.com/tomvita/NXCheatCode)
+---
+* [cheatslips](https://www.cheatslips.com/)
+* [EdiZon_CheatsConfigsAndScripts](https://github.com/WerWolv/EdiZon_CheatsConfigsAndScripts)
 
 ## DNS
 
