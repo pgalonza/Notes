@@ -19,3 +19,19 @@ description: "VSCode(Visual Studio Code) notes"
 * **autoDocstring** - quickly generate docstrings for python functions.
 * **Log File Highlighter** - aadds color highlighting to log files to make it easier to follow the flow of log events and identify problems.
 * **RayThis: Instant Beautiful Code Screenshots** - instantly deploy beautiful code snippets to Ray.so without leaving your coding environment.
+
+## Troubleshooting
+
+Activating extension 'ms-python.python' failed: Extension 'ms-python.python' CANNOT use API proposal: terminalShellIntegration.
+
+*.vscode-oss/extensions/ms-python.python-2024.14.1-universal/package.json*
+```json
+"enabledApiProposals": [
+        "terminalShellIntegration"
+],
+```
+
+*vscode-oss/argv.json*(Configure Runtime Arguments)
+```json
+"enable-proposed-api": ["ms-python.python"]
+```
