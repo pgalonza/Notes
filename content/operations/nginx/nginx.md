@@ -238,6 +238,18 @@ http {
 }
 ```
 
+## Locations
+
+Angular in subfolders(Tasks)
+
+```text
+location "/dynamic/(regexp)" {
+    root /<dir>;
+    index index.html;
+    try_files $uri $uri/ /dynamic/$1/index.html;
+}
+```
+
 ## Troubleshooting
 
 Duplicate headers when proxy_pass
