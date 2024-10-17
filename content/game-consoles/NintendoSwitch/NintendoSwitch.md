@@ -27,6 +27,7 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * Ultrahand-Overlay - fully craft-able overlay executor.[GitHub](https://github.com/ppkantorski/Ultrahand-Overlay)
 * Uberhand-Overlay(fork Ultrahand-Overlay) - fully craft-able overlay executor. [GitHub](https://github.com/efosamark/Uberhand-Overlay)
 * SaltyNX - background process for file/code modification. [GitHub](https://github.com/masagrator/SaltyNX)
+* Status-Monitor-Overlay - Monitor many stats of hardware. [GitHub](https://github.com/ppkantorski/Status-Monitor-Overlay)
 
 ### Tesla Overlay System
 
