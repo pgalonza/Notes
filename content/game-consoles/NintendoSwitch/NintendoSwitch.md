@@ -33,7 +33,7 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 Allows to access a menu of various homebrew applications and plugins.
 
 * Tesla-Menu - overlay menu. [GitHub](https://github.com/WerWolv/Tesla-Menu)
-* nx-ovlloader - sys-module, host process for loading overlay OVLs (NROs). [GitHub](https://github.com/WerWolv/nx-ovlloader)
+* nx-ovlloader - sys-module, host process for loading overlay OVLs (NROs). [GitHub](https://github.com/WerWolv/nx-ovlloader), [GitHub](https://github.com/ppkantorski/nx-ovlloader)
 ---
 * libtesla - support library for Tesla overlays for develop. [GitHub](https://github.com/WerWolv/libtesla)
 
