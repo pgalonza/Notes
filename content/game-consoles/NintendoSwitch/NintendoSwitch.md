@@ -92,7 +92,7 @@ Unoffical software
 * DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
 * Ultra - [GitHub](https://github.com/Ultra-NX/Ultra)
 * NX-Venom - the ultimate bundle for overclocking. [GitHub](https://github.com/CatcherITGF/NX-Venom)
-* OC Switchcraft - Overclocking suite. [Discord](https://discord.com/channels/854839758815363072/1173171845139288114)
+* OC Switchcraft - Overclocking suite. [Discord](https://discord.com/channels/854839758815363072/1173171845139288114), [GitHub](https://github.com/halop/OC-Switchcraft-EOS)
 * Kefir - [Bitbucket](https://bitbucket.org/kefir-switch/kefir/src/master/)
 * Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Telegram](https://t.me/HATSPACK), [Mediafire](https://www.mediafire.com/folder/ydsbtw60docxu/HATS)
 * Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
