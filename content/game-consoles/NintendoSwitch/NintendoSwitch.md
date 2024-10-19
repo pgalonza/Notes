@@ -69,6 +69,7 @@ Unoffical software
 * libnx - library for development Homebrew. [GitHub](https://github.com/switchbrew/libnx)
 * LayeredFS - homebrew virtual file system for replace games use TitleID.
 * nton - NRO to NSP forwarder. [GitHub](https://github.com/rlaphoenix/nton)
+* switch-tools - SP forwarder creator. [GitHub](https://github.com/TooTallNate/switch-tools/tree/main)
 * Switch Homebrew Development - [Gbatemp](https://gbatemp.net/threads/switch-homebrew-development.507284/)
 * nx.js - JavaScript runtime for homebrew applications [GitHub](https://github.com/TooTallNate/nx.js)
 
