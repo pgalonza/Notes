@@ -57,7 +57,6 @@ Unoffical software
 * nx-hbmenu - the Nintendo Switch Homebrew Menu. [GitHub](https://github.com/switchbrew/nx-hbmenu)
 * hb-appstore - Homebrew App Store. [GitHub](https://github.com/fortheusers/hb-appstore)
 * nx-hbloader - host process for loading Homebrew NROs. [GitHub](https://github.com/switchbrew/nx-hbloader)
-* nx-hbmenu - the Nintendo Switch Homebrew Menu. [GitHub](https://github.com/switchbrew/nx-hbmenu)
 * 90DNS Tester - simple homebrew application to test DNS. [GitHub](https://github.com/meganukebmp/Switch_90DNS_tester/)
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
 * Linkalho - homebrew app that will link NNID accounts offline. [GitHub](https://github.com/rdmrocha/linkalho)
