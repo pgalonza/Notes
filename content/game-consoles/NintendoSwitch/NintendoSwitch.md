@@ -11,7 +11,7 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * [4pda](https://4pda.to/forum/index.php?showtopic=900987)
 * [SwitchBrew](https://switchbrew.org/wiki/Main_Page)
 * [Jits](https://jits.site/)
-* [GameBrew](https://www.gamebrew.org/wiki/List_of_Switch_Homebrew_Applications)
+* [GameBrew](https://www.gamebrew.org/wiki/List_of_Switch_homebrew_applications)
 ---
 * RCM - Recovery Mode allows Nintendo to send the switch commands. [GitHub](https://github.com/NVIDIA/tegrarcm)
 * sysNand/sysMMC - system NAND, Nintendo Switch internal memory storage.
