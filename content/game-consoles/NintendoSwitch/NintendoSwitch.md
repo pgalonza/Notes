@@ -68,6 +68,7 @@ Unoffical software
 * nso-icon-tool - allows you to create user icons like NSO. [GitHub](https://github.com/dslatt/nso-icon-tool/)
 * switch-ezremote-client - File Manager application that allows you to connect the Switch to remote FTP, SMB, WebDAV servers to transfer and manage files. [GitHub](https://github.com/cy33hc/switch-ezremote-client)
 * PPSSPP - PSP emulator. [Site](https://www.ppsspp.org/legacybuilds/)
+* RetroArch - advanced features like shaders, netplay, rewinding, next-frame response times, runahead, machine translation, blind accessibility features, and more! [Site](https://www.retroarch.com/?page=platforms)
 ---
 * libnx - library for development Homebrew. [GitHub](https://github.com/switchbrew/libnx)
 * LayeredFS - homebrew virtual file system for replace games use TitleID.
