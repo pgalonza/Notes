@@ -65,6 +65,7 @@ Unoffical software
 * Haku33 - perform a hard reset. [GitHub](https://github.com/StarDustCFW/Haku33)
 * Goldleaf - multipurpose homebrew tool. [GitHub](https://github.com/XorTroll/Goldleaf)
 * nso-icon-tool - allows you to create user icons like NSO. [GitHub](https://github.com/dslatt/nso-icon-tool/)
+* switch-ezremote-client - File Manager application that allows you to connect the Switch to remote FTP, SMB, WebDAV servers to transfer and manage files. [GitHub](https://github.com/cy33hc/switch-ezremote-client)
 ---
 * libnx - library for development Homebrew. [GitHub](https://github.com/switchbrew/libnx)
 * LayeredFS - homebrew virtual file system for replace games use TitleID.
