@@ -28,7 +28,6 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * Uberhand-Overlay(fork Ultrahand-Overlay) - fully craft-able overlay executor. [GitHub](https://github.com/efosamark/Uberhand-Overlay)
 * SaltyNX - background process for file/code modification. [GitHub](https://github.com/masagrator/SaltyNX)
 * Status-Monitor-Overlay - Monitor many stats of hardware. [GitHub](https://github.com/ppkantorski/Status-Monitor-Overlay)
-* FPSLocker - set custom FPS in games. [GitHub](https://github.com/masagrator/FPSLocker), [Patches](https://github.com/masagrator/FPSLocker-Warehouse)
 
 ### Tesla Overlay System
 
@@ -48,7 +47,6 @@ Send command or binary file (the payload) to the Nintendo Switch in Recovery mod
 * SX Gear/PRO - SX Gear is payload injector dongle for the Nintendo Switch.
 * NS-USBloader - Awoo Installer and GoldLeaf uploader of the NSPs, RCM payload injector. [GitHub](https://github.com/developersu/ns-usbloader)
 * ArgonNX-SE - GUI payload chainloader. [GitHub](https://github.com/Storm21CH/ArgonNX-SE)
-
 
 ## Homebrew
 
@@ -97,7 +95,6 @@ Unoffical software
 * DeepSea - the new All-in-One CFW package. [GitHub](https://github.com/Team-Neptune/DeepSea)
 * Ultra - [GitHub](https://github.com/Ultra-NX/Ultra)
 * NX-Venom - the ultimate bundle for overclocking. [GitHub](https://github.com/CatcherITGF/NX-Venom)
-* OC Switchcraft - Overclocking suite. [Discord](https://discord.com/channels/854839758815363072/1173171845139288114), [GitHub](https://github.com/halop/OC-Switchcraft-EOS)
 * Kefir - [Bitbucket](https://bitbucket.org/kefir-switch/kefir/src/master/)
 * Hats - pack containing the latest version of Hekate, Atmosphere and its Signature Patches. [Telegram](https://t.me/HATSPACK), [Mediafire](https://www.mediafire.com/folder/ydsbtw60docxu/HATS)
 * Santa-Claus - [Site](https://santa-atmo.ru/nintendo-switch/)
@@ -258,6 +255,11 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 ---
 * [cheatslips](https://www.cheatslips.com/)
 * [EdiZon_CheatsConfigsAndScripts](https://github.com/WerWolv/EdiZon_CheatsConfigsAndScripts)
+
+## Overcloak
+* OC Switchcraft - Overclocking suite. [Discord](https://discord.com/channels/854839758815363072/1173171845139288114), [GitHub](https://github.com/halop/OC-Switchcraft-EOS)
+* sys-clk - overclocking/underclocking system module and frontend. [GitHub](https://github.com/retronx-team/sys-clk)
+* FPSLocker - set custom FPS in games. [GitHub](https://github.com/masagrator/FPSLocker), [Patches](https://github.com/masagrator/FPSLocker-Warehouse)
 
 ## DNS
 
