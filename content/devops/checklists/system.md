@@ -9,4 +9,11 @@ description: "Check list for new system"
 - [ ] DNS
     - [ ] API
     - [ ] Frontend
-    - [ ] Oauth
+    - [ ] OAuth
+- [ ] LDAP Groups
+    - [ ] Developers
+    - [ ] DevOps
+    - [ ] Administrators
+    - [ ] Analytics
+    - [ ] Testers
+    - [ ] Support
