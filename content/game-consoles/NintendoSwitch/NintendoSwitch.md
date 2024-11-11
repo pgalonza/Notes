@@ -29,6 +29,8 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * SaltyNX - background process for file/code modification. [GitHub](https://github.com/masagrator/SaltyNX)
 * Status-Monitor-Overlay - Monitor many stats of hardware. [GitHub](https://github.com/ppkantorski/Status-Monitor-Overlay)
 * QuickNTP - Tesla plugin to sync time with NTP servers. [GitHub](https://github.com/nedex/QuickNTP)
+* sys-ftpd - FTP server as a background service (sysmodule). [GitHub](https://github.com/cathery/sys-ftpd)
+* ReverseNX-RT - alternative version of ReverseNX that can switch between handheld and docked mode in Real Time.
 
 ### Tesla Overlay System
 
