@@ -263,6 +263,8 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 * OC Switchcraft - Overclocking suite. [Discord](https://discord.com/channels/854839758815363072/1173171845139288114), [GitHub](https://github.com/halop/OC-Switchcraft-EOS)
 * sys-clk - overclocking/underclocking system module and frontend. [GitHub](https://github.com/retronx-team/sys-clk)
 * FPSLocker - set custom FPS in games. [GitHub](https://github.com/masagrator/FPSLocker), [Patches](https://github.com/masagrator/FPSLocker-Warehouse)
+* NX-60FPS-RES-GFX-Cheats - A database of 60FPS cheats, resolution cheats, and general graphics cheats. [GitHub](https://github.com/ChanseyIsTheBest/NX-60FPS-RES-GFX-Cheats)
+* FPSLocker-Warehouse - FPSLocker patches and methodology how to update them. [GitHub](https://github.com/masagrator/FPSLocker-Warehouse)
 
 ## DNS
 
