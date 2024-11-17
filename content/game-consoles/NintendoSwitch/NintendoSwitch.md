@@ -31,6 +31,7 @@ description: "Nintendo Switch information about CFW, payloads, homebrew, modchip
 * QuickNTP - Tesla plugin to sync time with NTP servers. [GitHub](https://github.com/nedex/QuickNTP)
 * sys-ftpd - FTP server as a background service (sysmodule). [GitHub](https://github.com/cathery/sys-ftpd)
 * ReverseNX-RT - alternative version of ReverseNX that can switch between handheld and docked mode in Real Time. [GitHub](https://github.com/masagrator/ReverseNX-RT)
+* sys-botbase - sys-module that allows users to remote control their switch via sockets as well as read and write to a games memory. [GitHub](https://github.com/olliz0r/sys-botbase)
 
 ### Tesla Overlay System
 
