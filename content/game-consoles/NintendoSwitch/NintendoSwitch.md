@@ -94,6 +94,7 @@ Unoffical software
 
 * Hekate - bootloader with GUI and many features. [GitHub](https://github.com/CTCaer/hekate)
 * hekate_boot_dat -create a SX boot.dat from hekate[GitHub](https://github.com/mondul/hekate_boot_dat)
+* ArgonNX-SE - GUI payload chainloader. [GitHub](https://github.com/Storm21CH/ArgonNX-SE)
 
 ### Custom
 
