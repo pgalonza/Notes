@@ -7,6 +7,8 @@ description: "Architecture design"
 
 ## C4 Model
 
+- [C4-PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML?tab=readme-ov-file#container-diagram)
+
 ## How to create
 
 1. Соберать требования и определите границы системы

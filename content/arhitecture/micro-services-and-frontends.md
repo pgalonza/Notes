@@ -159,10 +159,12 @@ description: "Microservices and Microfrontends"
     - Граицы сервисов
     - Методы взаимодействия
         - Синхронное взаимодействие
-            - REST
+            - RESTful
             - GRPC
-        - Асинхронное ывзаимодействие
+            - OpenAPI
+        - Асинхронное взаимодействие
             - Event-Driven Architecture
+            - AsyncAPI
     - Управление данными
         - Стратегии обеспечения согласованности данных
             - Конечная согласованность
@@ -224,7 +226,11 @@ description: "Microservices and Microfrontends"
     - Database per Service
     - Service per Team
     - Event Sourcing
+    - Message Queueing
+    - Publish/Subscribe
     - CQRS
+        - Commands
+        - Queries
     - Saga
         - Типы реализации
             - Orchestration
@@ -255,7 +261,55 @@ description: "Microservices and Microfrontends"
     - Distributed Tracing
     - Audit Logging
     - API Gateway
+        - Types
+            - Монолитный
+            - Распределенный
+            - Многослойный
+            - Serveless
+        - Functions
+            - Централизация маршрутизации запросов
+            - Управление аутентификацией и авторизацией
+            - Балансировка нагрузки и распределение трафика
+            - Обеспечение безопасности
+            - Кэширование запросов
 3. Infrastructures patterns
     - Service Discovery,
     - Service Mesh
     - Service Registry
+
+## Principles
+
+- The Twelve-Factor App
+    - Codebase
+    - Dependencies
+    - Config
+    - Backing Services
+    - Build, Release, Run
+    - Processes
+    - Port Binding
+    - Concurrency
+    - Disposability
+    - Dev/Prod Parity
+    - Logs
+    - Admin Processes
+- Lightweight microservices
+    - Минимализм
+    - Независимость
+    - Быстрое время запуска
+    - Эффективное использование ресурсов
+    - Упрощение зависимостей
+    - Обеспечение изоляции
+    - Документирование и автоматизация
+- DevOps
+    - Pipeline as Code
+        - Повторяемость
+        - Гибкость
+        - Версионирование
+        - Прозрачность
+        - Масштабируемость
+        - Подверженность ошибкам
+    - Infrastructure as Code
+    - CI/CD
+        - Continuous Integration
+        - Continuous Delivery
+        - Continuous Deployment
