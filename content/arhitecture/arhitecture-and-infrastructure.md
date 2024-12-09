@@ -50,4 +50,18 @@ summary: ""
     - Backpressure
     - Curcuit Breaker
 
-
+## Observability
+- Monitoring
+    - USE
+        - Utilization
+        - Saturation
+        - Errors
+- 4 Golden Signals
+    - Latency
+    - Traffic
+    - Errors
+    - Saturation
+- RED
+    - Requests Rate
+    - Errors
+    - Duration
