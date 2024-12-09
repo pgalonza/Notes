@@ -17,3 +17,6 @@ description: "Check list for new system"
     - [ ] Analytics
     - [ ] Testers
     - [ ] Support
+- [ ] Notifications
+    - Mailing group
+- [ ] Role model and access
