@@ -34,7 +34,7 @@ Search SUID and SGID
 find / -perm /4000 -or -perm /2000 -print 2> /dev/null
 ```
 
-Search world writw files and dirs
+Search world writable files and dirs
 
 ```bash
 find / -xdev -type f \( -perm -0002 -a ! -perm -1000 \) -print
