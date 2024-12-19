@@ -1,0 +1,11 @@
+@startuml
+autonumber
+participant Client as client
+participant Server as server
+
+client -> server : ClientHello\n+key_share*\n+signature_algorithms*\n+psk_key_exchange_modes*\n+pre_shared_key*
+server -> client : ServerHello\n+key_share*\n+pre_shared_key*\n{EncryptedExtensions}\n{CertificateRequest*}\n{Certificate*}\n{CertificateVerify*}\n{Finished}\n[Application Data*]
+client -> server : {Certificate*}\n{CertificateVerify*}\n{Finished}
+client <-> server : [Application Data]
+
+@enduml

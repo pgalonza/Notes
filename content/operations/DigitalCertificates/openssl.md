@@ -6,12 +6,6 @@ description: "OpenSSL notes"
 
 {{< toc >}}
 
-- [RFC 3280](https://www.ietf.org/rfc/rfc3280.txt)
-- [RFC 5280](https://www.ietf.org/rfc/rfc5280.txt)
-- [RFC 5246](https://www.ietf.org/rfc/rfc5246.txt)
-- [RFC 8446](https://www.ietf.org/rfc/rfc8446.txt)
-- [RFC 8705](https://www.ietf.org/rfc/rfc8705.txt)
-
 Connect with cipher
 
 ```bash
