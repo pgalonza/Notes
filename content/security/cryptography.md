@@ -18,4 +18,6 @@ resources:
 - [RFC 8446](https://www.ietf.org/rfc/rfc8446.txt)
 - [RFC 8705](https://www.ietf.org/rfc/rfc8705.txt)
 
-![TLS Handshake](/site/tls-handhsake.png "TLS Handshake")
+![TLS Handshake](/files/tls-handhsake.png "TLS Handshake")
+
+[TLS Handshake PUML](/files/tls-handhsake.puml)
