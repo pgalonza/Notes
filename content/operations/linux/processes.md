@@ -109,13 +109,6 @@ Show maximum of open files
 cat /proc/sys/fs/file-max
 ```
 
-Show open files of process
-
-```bash
-ls -l /proc/<PID>/fd/
-lsof | grep <PID>
-```
-
 Show a list of user processes
 
 ```bash
@@ -125,7 +118,14 @@ lsof -u <user_name>
 Show open files of process
 
 ```bash
+ls -l /proc/<PID>/fd/
 lsof -p <pid>
+```
+
+Search network socket
+
+```bash
+grep <socker number> /proc/net/tcp
 ```
 
 Show openfiles of command
@@ -138,6 +138,13 @@ Show what process use port
 
 ```bash
 lsof -i :<port_number>
+```
+
+Show sockets of process
+
+```bash
+lsof -i -p <pid>
+lsof -i -a -p <pid>
 ```
 
 Show open files in directory
