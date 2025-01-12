@@ -65,3 +65,44 @@ summary: ""
     - Requests Rate
     - Errors
     - Duration
+
+## Сloud computing
+
+- Types
+    - Deployment Model
+        - Private Cloud
+        - Public Cloud
+        - Hybrid Cloud
+    - Service Model
+        - SaaS
+        - PaaS
+        - IaaS
+- Migration
+    - 6R Migration Strategy
+        1. Retain. Частичная миграция.
+        2. Retire. Замена части функциональности облачными решениями.
+        3. Rehost or Lift and Shift. Миграция без изменений.
+        4. Repurchase or Drop and Shop. Отказ от текущей реализации и полный переход на обланые решения.
+        5. Replatform or Lift and Reshape. Минимальные изменения для использования преимуществ облачных решений.
+        6. Refactor or Re-architect. Полная переработка текущей реализации под облачные решения.
+
+# AI
+
+1. Формирование бизнес-требований и технологического стека
+2. Сбор данных
+3. Подготовка данных
+4. Анализ данных
+5. Моделирование
+6. Оценка модели и решения
+7. Принятие решений
+8. Мониторинг
+
+CRISP-DM
+
+1. Business Understanding
+2. Data Understanding
+3. Data Preparation
+4. Data Modeling
+5. Evaluation
+6. Deployment
+

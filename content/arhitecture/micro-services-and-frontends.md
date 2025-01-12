@@ -30,7 +30,7 @@ description: "Microservices and Microfrontends"
         - Гибридная
         - Серверная композиция
             - Reverce Proxy(Nginx? HAProxy)
-            - Backend for Frontend
+            - Backend for Frontend(BFF)
                 - Подготовка данных под клиента
                 - Упрощение логики клиента
                 - Увеличение производительности
