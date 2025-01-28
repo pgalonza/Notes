@@ -24,6 +24,9 @@ paccache -ruk0
 paccache -ruk0 --cachedir ~/.cache/pikaur/pkg
 paccache -ruk0 --cachedir ~/.cache/yay/*/
 paccache -ruk0 --cachedir /var/cache/private/pikaur/pkg
+pacman -Sc
+yay -Sc
+pikaur -Sc
 rm -rf /var/cache/private/pikaur/build
 ```
 
