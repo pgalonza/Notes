@@ -6,6 +6,10 @@ description: "SSH notes"
 
 {{< toc >}}
 
+Remove all keys host from known_hosts
+
+ssh-keygen -R <host_name>
+
 ## Banner
 
 Create file
