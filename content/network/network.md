@@ -9,6 +9,12 @@ description: "Discover the world of computer networks through our concise notes.
 
 ## IPv4
 
+Special Addresses
+
+- [RFC 950](https://www.ietf.org/rfc/rfc950.txt)
+- [RFC 943](https://www.ietf.org/rfc/rfc943.txt)
+- [RFC 943](https://www.ietf.org/rfc/rfc1878.txt)
+
 IPv4 address = 4 byte = 32 bit
 Network mask = 4 byte = 32 bit
 255.255.255.0 = /24(the sum of the units in the binary system)
