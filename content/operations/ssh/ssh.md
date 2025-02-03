@@ -86,6 +86,82 @@ Add fingerprint
 ssh-keyscan -t <fingerprint type> -H <host_name> >> ~/.ssh/known_hosts
 ```
 
+## SSH Certificates
+
+### Host cetrificates
+
+Generate key pair for host Certificate Authority (CA)
+
+```bash
+ssh-keygen -t rsa -b 4096 -f <host CA key file name>_rsa_key -C "<comment>"
+```
+
+Generate ssh key pair for target host
+
+```bash
+ssh-keygen -t rsa -b 4096 -f <host key file name>_rsa_key
+```
+
+Signing the host key
+
+```bash
+ssh-keygen -s <host CA key file name>_rsa_key -I "<key ID>" -h -n "<host principals>" -V <validity interval> <host ca key file name>_rsa_key.pub
+ssh-keygen -Lf <host certificate file name>_rsa_key-cert.pub
+```
+
+Copy certificate and keys to target host
+
+```bash
+scp <host ca key file name>_rsa_key.pub <user_name>@<remote_server>:/etc/ssh
+scp <host ca key file name>_rsa_key-cert.pub <user_name>@<remote_server>:/etc/ssh
+scp <host ca key file name>_rsa_key <user_name>@<remote_server>:/etc/ssh
+```
+
+Add host certificate in sshd config __/etc/ssh/sshd_config__
+
+```text
+HostCertificate  /etc/ssh/<host ca key file name>_rsa_key-cert.pub
+```
+
+Add host CA certificate to known_hosts on user computer
+
+```text
+@cert-authority <wildcard domain> <content of pub key of Certificate Authority>
+```
+
+### User certificates
+
+Generate key pair for user Certificate Authority (CA)
+
+```bash
+ssh-keygen -t rsa -b 4096 -f <user CA key file name>_rsa_key -C "<comment>"
+```
+
+Generate ssh key pair for target user
+
+```bash
+ssh-keygen -t rsa -b 4096 -f <user key file name>_rsa_key
+```
+
+Signing the user key
+
+```bash
+ssh-keygen -s <user CA key file name>_rsa_key -I "<key ID>" -h -n "<user principals>" -V <validity interval> <user ca key file name>_rsa_key.pub
+ssh-keygen -Lf <user certificate file name>_rsa_key-cert.pub
+```
+
+Copy user user Certificate Authority (CA) to target host
+
+```bash
+scp <user ca key file name>_rsa_key.pub <user_name>@<remote_server>:/etc/ssh
+```
+
+Add user Certificate Authority (CA) in sshd config __/etc/ssh/sshd_config__
+
+```text
+TrustedUserCAKeys /etc/ssh/<user ca key file name>_rsa_key.pub
+```
+
 ## SSH Tunneling
 
 ### SOCKS-proxy
