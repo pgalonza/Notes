@@ -27,3 +27,16 @@ Sticky Bit
 ```bash
 chmod +t <folder or file name>
 ```
+
+Restore execute bit to chmod tool
+
+[Information from](https://t.me/loose_code/829)
+
+```bash
+setfacl -m u::rwx,g::rx,o::x /usr/bin/chmod
+/usr/lib64/ld-linux-x86-64.so.2 /usr/bin/chmod +x /usr/bin/chmod
+cp --attributes-only /usr/bin/ls ./new_chmod; cat /usr/bin/chmod > ./new_chmod
+install -m 755 /usr/bin/chmod ./new_chmod
+rsync --chmod=ugo+x /usr/bin/chmod ./new_chmod
+python -c "import os;os.chmod('/usr/bin/chmod', 0755)"
+```
