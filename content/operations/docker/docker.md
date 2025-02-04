@@ -66,3 +66,24 @@ docker exec -it container_name bash
 ## Cache
 
 [Optimize cache usage in builds](https://docs.docker.com/build/cache/optimize/)
+
+## Start scripts
+
+Execute commands and start more one process in container
+
+```bash
+#!/usr/bin/env bash
+
+_term() {
+  echo "Caught SIGTERM signal!"
+  <commands>
+}
+
+trap _term SIGTERM
+
+<commands>
+
+sleep infinity &
+
+wait $!
+```
