@@ -131,6 +131,8 @@ Add host CA certificate to known_hosts on user computer
 
 ### User certificates
 
+[Information from](https://goteleport.com/blog/how-to-configure-ssh-certificate-based-authentication/)
+
 Generate key pair for user Certificate Authority (CA)
 
 ```bash
