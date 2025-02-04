@@ -125,6 +125,34 @@ Move row in other table
 with <cte name> as (delete from <only> <src table> where <condition> returning *) insert into <dst table> select * from <cte name>;
 ```
 
+## Queries
+
+Drop tables in schema
+
+```sql
+DO $$ DECLARE
+rec RECORD;
+BEGIN
+FOR rec IN (SELECT tablename FROM  pg_tables where schemaname = 'data') LOOP
+EXECUTE 'DROP TABLE IF EXISTS ' || quote_ident(rec.tablename) || ' CASCADE';
+END LOOP;
+END;
+$$;
+```
+
+DROP sequences in schema
+
+```sql
+DO $$ DECLARE
+rec RECORD;
+BEGIN
+FOR rec IN (SELECT relname FROM pg_class where relkind = 'S') LOOP
+EXECUTE 'DROP SEQUENCE IF EXISTS ' || quote_ident(rec.relname) || ' CASCADE';
+END LOOP;
+END;
+$$;
+```
+
 ## Show informations
 
 Show parameters
