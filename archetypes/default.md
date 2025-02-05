@@ -5,3 +5,5 @@ draft: false
 description: "{{ replace .Name "-" " " | title }}"
 summary: ""
 ---
+
+{{< toc >}}

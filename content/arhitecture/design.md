@@ -5,6 +5,8 @@ draft: false
 description: "Architecture design"
 ---
 
+{{< toc >}}
+
 ## C4 Model
 
 - [C4-PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML?tab=readme-ov-file#container-diagram)

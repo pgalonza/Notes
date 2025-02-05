@@ -5,6 +5,7 @@ draft: false
 description: "Microservices and Microfrontends"
 ---
 
+{{< toc >}}
 
 ## MicroFrontends
 
