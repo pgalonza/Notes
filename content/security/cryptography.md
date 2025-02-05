@@ -2,8 +2,8 @@
 title: "Cryptography"
 date: 2024-12-19T01:51:38+03:00
 draft: false
-description: "Cryptography"
-summary: "This page offers concise notes on cryptography, covering key concepts, algorithms, and protocols. It serves as a quick reference for understanding encryption, hash functions, digital signatures, and key exchange methods, ideal for both students and professionals."
+description: "This page offers concise notes on cryptography, covering key concepts, algorithms, and protocols. It serves as a quick reference for understanding encryption, hash functions, digital signatures, and key exchange methods, ideal for both students and professionals."
+summary: "Cryptography"
 resources:
   - name: tls-handhsake
     src: "security/cryptography/tls-handhsake.png"
