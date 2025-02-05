@@ -219,6 +219,7 @@ description: "Microservices and Microfrontends"
     - Масштабирование
     - Обновление и улучшение
     - Вывод из эксплуатации
+- Parallel Run
 
 ## Patterns
 
