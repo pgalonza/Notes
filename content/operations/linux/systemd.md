@@ -161,3 +161,13 @@ Write load information in svf file
 ```bash
 systemd-analyze plot > graph.svf
 ```
+
+## Systemd-tmpfiles
+
+Configuration directories
+
+```text
+/usr/lib/tmpfiles.d/.conf
+/run/tmpfiles.d/.conf
+/etc/tmpfiles.d/*.conf
+```
