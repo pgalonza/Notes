@@ -54,6 +54,7 @@ description: "Tools and program notes"
 
 * **vmstat** - report virtual memory statistics.
 * **zram** -  linux kernel feature and userspace tools for creating compressible RAM-based block devices.
+* **valgrind** - instrumentation framework for building dynamic analysis tools.
 
 ## Monitoring
 
