@@ -304,6 +304,11 @@ Stderr in stdout of console, stdout in file
 <command> 2>&1 > <file>
 ```
 
+```bash
+<command> |& <command>
+<command>  2>&1 | <command>
+```
+
 Pipe
 
 ```bash
