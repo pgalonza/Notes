@@ -115,10 +115,17 @@ git checkout <from branch> <file or directory>
 
 Pull branch from another remote repository
 
-```
+```bash
 git remote add <remote label> <url>
 git pull <remote label> <remote branch name>:<new local branch name>
 ```
+
+Add commit with date
+
+```bash
+git commit -am "<>" --date "<mm>/dd/<yyyy>"
+```
+
 
 ## Create new repository
 
