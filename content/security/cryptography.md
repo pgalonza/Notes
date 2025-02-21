@@ -17,6 +17,7 @@ resources:
 - [RFC 5246](https://www.ietf.org/rfc/rfc5246.txt)
 - [RFC 8446](https://www.ietf.org/rfc/rfc8446.txt)
 - [RFC 8705](https://www.ietf.org/rfc/rfc8705.txt)
+- [RFC 6125](https://www.ietf.org/rfc/rfc6125.txt)
 
 ![TLS Handshake](/files/tls-handhsake.png "TLS Handshake")
 
