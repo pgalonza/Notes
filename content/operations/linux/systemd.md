@@ -59,6 +59,12 @@ systemctl set-property systemd-nspawn@<container name> MemoryMax=2G
 
 ## Units
 
+Unit security analyze
+
+```bash
+systemd-analyze security <unit name>
+```
+
 OOMKiller
 
 ```text
@@ -170,4 +176,24 @@ Configuration directories
 /usr/lib/tmpfiles.d/.conf
 /run/tmpfiles.d/.conf
 /etc/tmpfiles.d/*.conf
+```
+
+## Login manager
+
+Show sessions
+
+```bash
+loginctl list-sessions
+```
+
+Kill session
+
+```bash
+loginctl kill-session <session id>
+```
+
+Kill user
+
+```bash
+loginctl terminate-user <username>
 ```
