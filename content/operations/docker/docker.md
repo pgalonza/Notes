@@ -87,3 +87,11 @@ sleep infinity &
 
 wait $!
 ```
+
+## Security
+
+[gosu](https://github.com/tianon/gosu)
+
+```bash
+gosu
+```
