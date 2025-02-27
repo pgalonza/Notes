@@ -50,7 +50,7 @@ summary: ""
 ## HighLoad
 - Patterns
     - Backpressure
-    - Curcuit Breaker
+    - Circuit Breaker
 
 ## Observability
 - Monitoring
