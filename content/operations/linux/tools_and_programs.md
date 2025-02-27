@@ -44,6 +44,11 @@ description: "Tools and program notes"
 * **findmnt** - find a filesystems.
 * **setsid** - run a program in a new session.
 * **sleuthkit** - forensics tools for investigate volume and file system.
+* **comm** - compare two sorted files line by line.
+* **auditctl** - a utility to assist controlling the kernel's audit system.
+* **inotifywait** - monitor filesystem change events.
+* **getcap** - display the capabilities of a file.
+* **notify-send** - send desktop notifications.
 
 ## CPU
 
