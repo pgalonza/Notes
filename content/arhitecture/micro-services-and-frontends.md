@@ -165,6 +165,14 @@ description: "Microservices and Microfrontends"
             - OpenAPI
         - Асинхронное взаимодействие
             - Event-Driven Architecture
+                1. Анализ домена
+                2. Описание доменной модели
+                3. Декомпозиция функциональности
+                4. Моделирование потоков событий
+                5. Моделирование событий
+                6. Выбор брокера событий
+                7. Реализация и мониторинг
+                8. Тестирование и валидация
             - AsyncAPI
     - Управление данными
         - Стратегии обеспечения согласованности данных
@@ -233,6 +241,11 @@ description: "Microservices and Microfrontends"
     - CQRS
         - Commands
         - Queries
+        - Реализация
+            1. Определение команд и запросов
+            2. Реализация моделей данных
+            3. Реализация обработчиков команд и запросов
+            4. Доработка систем-потребителей для возможности интеграции с различными компонентами для отправки запросов и команд
     - Saga
         - Типы реализации
             - Orchestration
@@ -259,6 +272,8 @@ description: "Microservices and Microfrontends"
             - Реализуйте действия и компенсирующие действия
             - Логирование и мониторинг
             - Тестирование
+    - Transactional outbox
+    - Transaction log tailing
 2. Application infrastructures patterns
     - Distributed Tracing
     - Audit Logging
