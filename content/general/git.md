@@ -126,6 +126,11 @@ Add commit with date
 git commit -am "<>" --date "<mm>/dd/<yyyy>"
 ```
 
+Sort branch by date
+
+```bash
+git config --global branch.sort -committerdate
+```
 
 ## Create new repository
 
