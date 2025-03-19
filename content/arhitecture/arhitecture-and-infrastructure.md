@@ -47,12 +47,51 @@ summary: ""
         - Key-based
 - Client
 
-## HighLoad
-- Patterns
-    - Backpressure
-    - Circuit Breaker
+
+## Fault tolerance
+
+- Availability
+    - Calculation
+        - Availability = (Agreed availability time – Downtime) / Agreed availability time * 100
+    - Failover Strategy
+        - Active-Active
+        - Active-Passive (Active-Standby)
+        - Active-Cold Standby
+    - System maintenance time
+        - MTBF, mean time between failure
+        - MTTR, mean time to recovery
+            - MTTD, mean time to detect
+            - Repair time
+        - Recovery Time Objective
+    - Criticality classes
+        - Mission critical
+        - Business critical
+        - Business operational
+        - Office productivity
+    - Patterns
+        - Backpressure
+        - Circuit Breaker
+        - Rate limiting
+            - Types
+                - Blocking
+                - Trottling
+                - Prioritization
+            - Algorithms
+                - Tokens Bucket
+                - Fixed Window counter
+                - Sliding Window counter
+                - Sliding Window Log
+        - Bulkhead
+        - Transactional outbox
+            - Polling publishe
+            - Transaction log tailing
+                - Change Data Capture
+- Disaster Recovery Plan
+- Global Server Load Balancer
+
 
 ## Observability
+
 - Monitoring
     - USE
         - Utilization

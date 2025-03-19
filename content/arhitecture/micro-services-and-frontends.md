@@ -36,6 +36,7 @@ description: "Microservices and Microfrontends"
                 - Упрощение логики клиента
                 - Увеличение производительности
                 - Повышение безопасности
+            - API Composer
         - Клиентская композиция
             - Single SPA
             - Module Federation
@@ -236,6 +237,11 @@ description: "Microservices and Microfrontends"
     - Database per Service
     - Service per Team
     - Event Sourcing
+    - Stream Processing
+        - Синхронная микропакетная обработка
+        - Асинхронная микропакетная обработка
+        - Streaming-модель
+        - Модель непрерывного обновления
     - Message Queueing
     - Publish/Subscribe
     - CQRS
@@ -289,6 +295,27 @@ description: "Microservices and Microfrontends"
             - Балансировка нагрузки и распределение трафика
             - Обеспечение безопасности
             - Кэширование запросов
+    - Front-to-back
+        - Client pull
+            - Patterns
+                - Short polling
+                - Long polling
+            - Implementations
+                - REST
+                - GraphQL
+        - Server push
+            - Implementations
+                - WebSockets
+                - Server sent events
+                - GraphQL Subscriptions
+    - Back-to-back
+        - Patterns
+            - Request-Response
+            - Publish-Subscribe
+        - Implementations
+            - REST
+            - GraphQL
+            - gRPC
 3. Infrastructures patterns
     - Service Discovery,
     - Service Mesh
