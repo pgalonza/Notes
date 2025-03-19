@@ -126,3 +126,11 @@ echo options nvidia_drm modeset=1 | sudo tee /etc/modprobe.d/nvidia_drm.conf
 echo options nvidia_drm fbdev=1 | sudo tee /etc/modprobe.d/nvidia_drm.conf
 sudo mkinitcpio -v
 ```
+
+Fix keyboard loyaut in Gnome
+
+_~/.config/fcitx5/conf/wayland.conf_
+
+```text
+Allow Overriding System XKB Settings=False
+```
