@@ -132,6 +132,12 @@ Sort branch by date
 git config --global branch.sort -committerdate
 ```
 
+Store credentials
+
+```bash
+git config --global credential.helper store
+```
+
 ## Create new repository
 
 Create the folder and initialization on server
