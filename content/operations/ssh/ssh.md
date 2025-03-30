@@ -60,6 +60,12 @@ Mount local directory to remote host
 sshfs user_name@remote_serve:/remote_directory /local_directory
 ```
 
+Show control sequences
+
+```bash
+<Enter>~?
+```
+
 ## SSH Keys
 
 Generate RSA
