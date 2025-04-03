@@ -82,6 +82,7 @@ Print the locate of binary
 type -a command
 whereis command
 which command
+command -v command
 ```
 
 Show all symbols

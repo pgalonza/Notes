@@ -82,6 +82,7 @@ description: "Tools and program notes"
 ## Processes
 
 * **pidof** - find the process ID of a running program.
+* **fuser** - find processes using files or sockets.
 
 ## Environment
 
