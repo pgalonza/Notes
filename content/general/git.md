@@ -369,6 +369,34 @@ git config --global user.signingkey <Key ID>
 git config --global commit.gpgsign true
 ```
 
+## Credentials
+
+Store credentials
+
+```bash
+git config --global credential.helper store
+```
+
+Store credentials in memory
+
+```bash
+git config --global credential.helper 'cache --timeout=<time>'
+```
+
+Use script
+
+```bash
+#!/bin/bash
+
+echo username=<username>
+echo password=<password>
+```
+
+```bash
+git config --global credential.helper '<path to script>'
+```
+
+
 ## Troubleshooting
 
 ### Windows
