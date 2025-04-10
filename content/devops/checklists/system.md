@@ -39,3 +39,5 @@ description: "Check list for new system"
     - [ ] Unification of configurations
     - [ ] Services naming rules
     - [ ] Role model and access
+- [ ] Fault tolerance
+    - [ ] Disater recovery plan
