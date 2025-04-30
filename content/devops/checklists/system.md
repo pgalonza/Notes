@@ -27,6 +27,7 @@ description: "Check list for new system"
 - [ ] Deploy
     - [ ] Deploy account naming rules
     - [ ] Role model and access
+    - [ ] Certificates
 - [ ] Database
     - [ ] Database account naming rules
     - [ ] Database roles naming rules
