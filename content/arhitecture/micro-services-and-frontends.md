@@ -183,6 +183,7 @@ description: "Microservices and Microfrontends"
         - Распределённые транзакции
             - Протокол двухфазной фиксации (2 Phase Commit, 2PC)
             - Паттерн Saga
+                - Eventual Consistency
     - Стратегии развёртывания
         - Blue-Green
         - Canary
