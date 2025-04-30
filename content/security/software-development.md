@@ -102,3 +102,9 @@ summary: ""
         - Publicly available personal data
         - Personal data
         - Special categories of personal data
+
+## Data protection
+
+- Tokenization of data
+- Homomorphic encryption
+- Data Loss Prevention (DLP)
