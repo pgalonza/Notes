@@ -14,6 +14,8 @@ description: "Check list for new service"
         - [ ] Upload artifacts
     - [ ] Deploy
         - [ ] Configurations
+        - [ ] Cetificates
+        - [ ] Artifacts
     - [ ] Release strategy
     - [ ] Unit tests
     - [ ] Linters
