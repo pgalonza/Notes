@@ -58,6 +58,7 @@ Unoffical software
 
 * JKSV - JK's Save Manager Switch Edition. [GitHub](https://github.com/J-D-K/JKSV)
 * nx-hbmenu - the Nintendo Switch Homebrew Menu. [GitHub](https://github.com/switchbrew/nx-hbmenu)
+* sphaira - the Nintendo Switch Homebrew Menu. [GitHub](https://github.com/ITotalJustice/sphaira)
 * hb-appstore - Homebrew App Store. [GitHub](https://github.com/fortheusers/hb-appstore)
 * nx-hbloader - host process for loading Homebrew NROs. [GitHub](https://github.com/switchbrew/nx-hbloader)
 * 90DNS Tester - simple homebrew application to test DNS. [GitHub](https://github.com/meganukebmp/Switch_90DNS_tester/)
@@ -264,11 +265,27 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 * [EdiZon_CheatsConfigsAndScripts](https://github.com/WerWolv/EdiZon_CheatsConfigsAndScripts)
 
 ## Overcloak
+
 * OC Switchcraft - Overclocking suite. [Discord](https://discord.com/channels/854839758815363072/1173171845139288114), [GitHub](https://github.com/halop/OC-Switchcraft-EOS)
 * sys-clk - overclocking/underclocking system module and frontend. [GitHub](https://github.com/retronx-team/sys-clk)
 * FPSLocker - set custom FPS in games. [GitHub](https://github.com/masagrator/FPSLocker), [Patches](https://github.com/masagrator/FPSLocker-Warehouse)
 * NX-60FPS-RES-GFX-Cheats - A database of 60FPS cheats, resolution cheats, and general graphics cheats. [GitHub](https://github.com/ChanseyIsTheBest/NX-60FPS-RES-GFX-Cheats)
 * FPSLocker-Warehouse - FPSLocker patches and methodology how to update them. [GitHub](https://github.com/masagrator/FPSLocker-Warehouse)
+
+**Ram configuration**
+
+[Information from](https://rentry.co/mariko)
+
+| Tier | RAM ID      | Ram Clock (MHz) | VDD2(Safe) | VDDQ | Common Timings        | Super-Tight (ST) Timings |
+|------|-------------|-----------------|------------|------|-------------------------|--------------------------|
+| GOD  | NEI/NEE     | 3100-3300       | 1175 mV    | 640  | (3-3-2) 2-5-5-4-6     | (4-4-4) 3-7-6-6-6      |
+| GOD  | WT : B      | 3000-3200       | 1175 mV    | 600  | (4-4-5) 5-2-6-5-6     | (6-6-7) 7-2-6-5-6      |
+| S    | AA-MGCL / MGCR | 2933-3100   | 1175 mV    | 640  | (4-4-5) 5-5-6-7-6     | (4-4-8) 6-5-7-8-6      |
+| A    | MGCJ        | 2633-2733(3000 with 1250mv) | 1175 mV | 640  | (3-2-4) 2-4-4-4-6     | (4-3-8) 3-5-4-4-6      |
+| B    | NME         | 2500-2766       | 1175 mV    | 640  | (2-2-1) 0-1-4-3-6     | (3-3-4) 0-1-4-4-6      |
+| C    | WT : F      | 2633-2800       | 1175 mV    | 600  | (4-4-2) 5-4-6-3-6     | (5-5-4) 5-5-6-5-6      |
+| D    | AB-MGCL     | 2500            | 1175 mV    | 640  | (4-4-4) 4-4-5-6-6     | (4-4-8) 5-5-6-8-6      |
+
 
 ## DNS
 
