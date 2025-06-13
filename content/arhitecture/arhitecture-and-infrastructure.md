@@ -63,6 +63,7 @@ summary: ""
             - MTTD, mean time to detect
             - Repair time
         - Recovery Time Objective
+        - Recovery Point Objective
     - Criticality classes
         - Mission critical
         - Business critical
@@ -87,6 +88,8 @@ summary: ""
             - Transaction log tailing
                 - Change Data Capture
 - Disaster Recovery Plan
+    - Testing
+        - D&D game
 - Global Server Load Balancer
 
 
@@ -115,9 +118,18 @@ summary: ""
         - Public Cloud
         - Hybrid Cloud
     - Service Model
-        - SaaS
-        - PaaS
         - IaaS
+            - Compute
+            - Storage
+            - Network
+        - PaaS
+            - Platform
+            - Runtime
+            - Services
+        - SaaS
+            - Software
+            - Infrastructure
+            - Support
 - Migration
     - 6R Migration Strategy
         1. Retain. Частичная миграция.
@@ -147,3 +159,105 @@ CRISP-DM
 5. Evaluation
 6. Deployment
 
+
+## Data processing
+
+- OLTP(Online Transaction Processing)
+    - Problems
+        - Lost update
+        - Dirty read
+        - Non-repeatable read
+        - Phantom read
+    - Properties
+        - ACID
+            - Atomicity
+            - Consistency
+            - Isolation
+            - Durability
+        - BASE
+            - Basically Available
+            - Soft state
+            - Eventual consistency
+    - Isolation levels
+        - Read uncommitted
+        - Read committed
+        - Repeatable read
+        - Serializable
+- OLAP(Online Analytical Processing)
+    - Architecture of data warehouses
+        - Data Warehouse
+        - Data Lake
+        - Data Lakehouse
+    - Approaches to data processing
+        - ETL(Extract, Transform, Load)
+        - ELT(Extract, Load, Transform)
+    - OLAP-cube
+    - Models
+        - Bill Inmon
+        - Ralph Kimball
+        - DataVault
+        - Anchor
+    - Schema
+        - Star
+        - Snowflake
+    - Databases
+        - Columns
+            - MPP(Massive Parallel Processing)
+            - MapReduce
+            - Apache Spark
+        - Rows
+
+|Isolation levels|Lost update|Dirty read|Non-repeatable read|Phantom read|
+|---|---|---|---|---|
+|Read uncommitted|No|Yes|Yes|Yes|
+|Read committed  |No|No|Yes|Yes|
+|Repeatable read |No|No|No|Yes|
+|Serializable    |No|No|No|No|
+
+## Enterprise architecture
+
+- Business Model Canvas
+- TOGAF(Open Group Architecture Framework)
+- SAFe(Scaled Agile Framework)
+
+## Systems
+
+- ERP(Enterprise Resource Planning)
+    -  Used by CFOs and operations managers to manage enterprise resources, integrate finance, production, and logistics.
+- BPMS(Business Process Management System)
+    - Utilized by process owners and analysts to model, automate, and optimize business processes.
+- CRM(Customer Relationship Management)
+    -  Implemented by sales and marketing teams to manage customer relationships and enhance sales performance.
+- MDM(Master Data Management)
+    - Employed by data governance teams to ensure data consistency and quality across systems.
+- BI(Business Intelligence)
+    - Used by executives and decision-makers for data analysis, reporting, and strategic decision-making.
+- PLM(Product Lifecycle Management)
+    - Utilized by product development teams to manage the entire lifecycle of products.
+- PDM(Product Data Management)
+    - Implemented by engineering and design teams to manage product data and documentation.
+- MES(Manufacturing Execution System)
+    - Used by production managers to oversee and optimize manufacturing processes.
+- SCADA(Supervisory Control and Data Acquisition)
+    - Employed by plant operators and engineers to monitor and control industrial processes.
+- ABS (Automated Banking System)
+    - Utilized by bank employees and customers to process financial transactions, manage accounts, and provide banking services.
+- SCM(Supply Chain Management)
+    -  Implemented by logistics and supply chain managers to manage and optimize supply chains.
+
+## Landscape
+
+- Map
+    - Row - Business Capability
+    - Column - Organization unit
+    - Intersection - system
+
+## Change management
+
+- FURPS+
+    - Functionality
+    - Usability
+    - Reliability
+    - Performance
+    - Supportability
+    - Restrictions

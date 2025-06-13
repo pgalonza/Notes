@@ -75,88 +75,92 @@ description: "Microservices and Microfrontends"
 
 ## MicroServices
 
-- Strangler Fig
-    - Преимущества
-        - Постепенная замена монолита
-        - Снижение рисков
-        - Инкрементная доствака новых функций
-        - Решение проблемы технического долга
-    - Реализация
-        1. Определение доменной области
-            - Техники
-                - Domain-Driven Design
-                    - Области
-                        - Домен
-                        - Поддомен
-                        - Контекст
-                    - Проектирование
-                        - Стратегическое
-                            - Bounded Context
-                            - Context Map
-                        - Тактическое
-                            - Entities
-                            - Value Objects
-                            - Aggregates
-                            - Repositories
-                            - Services
-                    - Выделение доменов
-                        1. Анализ бизнеса и требований
-                        2. Выделение доменов
-                        3. Разделение на поддомены
-                        4. Определение контекстов
-                        5. Создание контекстных карт
-                        6. Итеративное уточнение
-                - Технический анализ
-                - Анализ производительности
-            - Приоритизация
-                - Бизнес-влияние
-                - Техническое влияние
-                - Клиентское влияние
-                - Методы
-                    - MoSCoW
-                        - Must have
-                        - Should have
-                        - Could have
-                        - Won't have
-                    - Матрица Эйзенхауэра
-                        - Срочно и важно
-                        - Не срочно, но важно
-                        - Срочно, но не важно
-                        - Не срочно и не важно
-                    - Модель Кано
-                        - Must-Have
-                        - Performance
-                        - Excitement
-                        - Indifferent
-                        - Reverse
-                    - Weighted Scoring Model
-                    - ICE Scoring
-                        - Impact
-                        - Confidence
-                        - Effort, ICE
-                    - Value vs. Effort
-                    - Cost of Delay
-        2. Проектирование и разработка новых сервисов
-        3. Мониторинг и верификация
-            - Application perfomance monitoring
-            - Централизованное логирование
-            - Мониторинг инфраструктуры
-            - A/B-тестирование
-            - Автоматизированное тестирование
-        4. Переклюяение трафика
-            - Маршутизация
-                - Reverc proxy
-                - API Gateway
-                - Service Mesh
-            - Anti-corruption layer (ACL)
-                - Паттерны
-                    - Facade
-                    - Adapter
-                - Преимущества
-                    - Изоляция от сложностей и проблем
-                    - Управление маршрутизацией запросо
-                    - Адапация днных под различные требования
-                    - Инкапсуляция монолитной системы
+## Monolith separation
+
+- Patterns
+    - Strangler Fig
+        - Преимущества
+            - Постепенная замена монолита
+            - Снижение рисков
+            - Инкрементная доствака новых функций
+            - Решение проблемы технического долга
+        - Реализация
+            1. Определение доменной области
+                - Техники
+                    - Domain-Driven Design
+                        - Области
+                            - Домен
+                            - Поддомен
+                            - Контекст
+                        - Проектирование
+                            - Стратегическое
+                                - Bounded Context
+                                - Context Map
+                            - Тактическое
+                                - Entities
+                                - Value Objects
+                                - Aggregates
+                                - Repositories
+                                - Services
+                        - Выделение доменов
+                            1. Анализ бизнеса и требований
+                            2. Выделение доменов
+                            3. Разделение на поддомены
+                            4. Определение контекстов
+                            5. Создание контекстных карт
+                            6. Итеративное уточнение
+                    - Технический анализ
+                    - Анализ производительности
+                - Приоритизация
+                    - Бизнес-влияние
+                    - Техническое влияние
+                    - Клиентское влияние
+                    - Методы
+                        - MoSCoW
+                            - Must have
+                            - Should have
+                            - Could have
+                            - Won't have
+                        - Матрица Эйзенхауэра
+                            - Срочно и важно
+                            - Не срочно, но важно
+                            - Срочно, но не важно
+                            - Не срочно и не важно
+                        - Модель Кано
+                            - Must-Have
+                            - Performance
+                            - Excitement
+                            - Indifferent
+                            - Reverse
+                        - Weighted Scoring Model
+                        - ICE Scoring
+                            - Impact
+                            - Confidence
+                            - Effort, ICE
+                        - Value vs. Effort
+                        - Cost of Delay
+            2. Проектирование и разработка новых сервисов
+            3. Мониторинг и верификация
+                - Application perfomance monitoring
+                - Централизованное логирование
+                - Мониторинг инфраструктуры
+                - A/B-тестирование
+                - Автоматизированное тестирование
+            4. Переклюяение трафика
+                - Маршутизация
+                    - Reverse proxy
+                    - API Gateway
+                    - Service Mesh
+                - Anti-corruption layer (ACL)
+                    - Паттерны
+                        - Facade
+                        - Adapter
+                    - Преимущества
+                        - Изоляция от сложностей и проблем
+                        - Управление маршрутизацией запросо
+                        - Адапация днных под различные требования
+                        - Инкапсуляция монолитной системы
+    - Parallel Run
 - Road Map
     - Граицы сервисов
     - Методы взаимодействия
@@ -230,7 +234,7 @@ description: "Microservices and Microfrontends"
     - Масштабирование
     - Обновление и улучшение
     - Вывод из эксплуатации
-- Parallel Run
+
 
 ## Patterns
 
@@ -357,3 +361,31 @@ description: "Microservices and Microfrontends"
         - Continuous Integration
         - Continuous Delivery
         - Continuous Deployment
+
+## Identification, Authentication, Athorization
+
+- SSO(Single Sign-On)
+    - OAuth(Open Authorization)
+        - Roles
+            - Resource owner
+            - Resource server
+            - Authorization server
+            - Client
+            - User-agent
+        - Storing the refresh tokens
+            - Server
+            - HTTP-only cookie
+            - LocalStorage
+            - WebWorker
+        - Flow
+            - Authorization code
+            - Implicit
+            - Resource owner password credentials
+            - Client credentials
+            - Device authorizatio
+        - RFC
+            - [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)
+            - [RFC 6749](https://datatracker.ietf.org/doc/rfc6749/))
+    - OpenID Connect
+    - SAML(Security Assertion Markup Language)
+    - Kerberos
