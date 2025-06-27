@@ -108,3 +108,7 @@ Show CPU caches
 ```bash
 lscpu --caches
 ```
+
+Collect all information about the system
+
+[Kaspersky collect information script](https://box.kaspersky.com/f/00a1a6d8beb24554a72d/?dl=1)

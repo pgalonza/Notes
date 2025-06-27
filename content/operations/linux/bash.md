@@ -235,6 +235,38 @@ Check syntax
 bash -n <file name>
 ```
 
+Extract binary file from bash-script
+
+_Information from Kaspersky install script_
+
+```bash
+#!/bin/bash
+
+SCRIPT_PATH=$(readlink -f "$0")
+
+SKIP_LINES=25
+BIN_SIZE=<bytes>
+
+OFFSET=$(head -n "$SKIP_LINES" "$SCRIPT_PATH" | wc -c)
+
+TMP_DIR=$(mktemp -d)
+trap 'rm -rf "$TMP_DIR"; exit 1' EXIT INT TERM
+
+echo "Extracting binary archive..."
+dd if="$SCRIPT_PATH" bs=1 skip="$OFFSET" count="$BIN_SIZE" 2>/dev/null | \
+    gzip -dc | \
+    tar xf - -C "$TMP_DIR"
+
+if [ $? -eq 0 ]; then
+    echo "Extracting OK" $TMP_DIR"
+    trap - EXIT INT TERM
+    exit 0
+else
+    echo "Error!"
+    exit 1
+fi
+```
+
 ## Variables
 
 Separator
