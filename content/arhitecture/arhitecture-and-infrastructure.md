@@ -141,14 +141,14 @@ summary: ""
 
 ## AI
 
-1. Формирование бизнес-требований и технологического стека
-2. Сбор данных
-3. Подготовка данных
-4. Анализ данных
-5. Моделирование
-6. Оценка модели и решения
-7. Принятие решений
-8. Мониторинг
+1. Business Requirements & Technology Stack Definition
+2. Data Acquisition
+3. Data Preprocessing
+4. Data Analytics
+5. Model Development
+6. Model & Solution Validation
+7. Decision Deployment
+8. Model Monitoring
 
 CRISP-DM
 
@@ -216,9 +216,15 @@ CRISP-DM
 
 ## Enterprise architecture
 
-- Business Model Canvas
 - TOGAF(Open Group Architecture Framework)
-- SAFe(Scaled Agile Framework)
+- IT Landscape map/diagram
+- Business capability map
+- Integration diagram
+- Digital Transformation Roadmap
+    - Project-based approach
+        - PRINCE2
+        - PmBook
+    - Product-based approach
 
 ## Systems
 
@@ -252,7 +258,7 @@ CRISP-DM
     - Column - Organization unit
     - Intersection - system
 
-## Change management
+## Architecture design
 
 - FURPS+
     - Functionality
@@ -261,3 +267,47 @@ CRISP-DM
     - Performance
     - Supportability
     - Restrictions
+- Use Case Flow/User Story
+    - Basic Flow
+    - Alternative Flow
+- Alternative Flow
+- BPMN
+- Mendelow Matrix
+- Business Model Canvas
+- Lean Canvas
+- SAFe(Scaled Agile Framework)
+    - Value stream
+- Stakeholders
+    - Stakeholder matrix
+        - High/Low Engagement
+        - High/Low Influence
+        - Role
+        - Tasks
+        - Requirements and expectations
+
+## Change management
+
+- Predictive Approach
+- Reactive Approach
+- Sequential Approach
+
+## Solution architecture
+
+- Architecture vision
+    - Architecture Design Record
+        - Y-statement
+            - Context
+            - Facing
+            - We decided for
+            - Neglected
+            - To achieve
+            - Accepting that
+    - Architecture Decision Log
+- Change management
+- Design thinking
+    - Empathize
+    - Define
+    - Ideate
+    - Prototype
+    - Test
+    - Storytel
