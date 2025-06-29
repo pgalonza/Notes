@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.137.0
-      THEME_VERSION: 1.5.0
+      THEME_VERSION: 1.5.1
       THEME: hugo-geekdoc
       BASEDIR: docs
       THEMEDIR: ./themes
