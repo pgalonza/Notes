@@ -125,8 +125,8 @@ OpenSSL configuration
 default_bits = 4096
 default_md = sha256
 distinguished_name = req_distinguished_name
-req_extensions = 
-x509_extensions = 
+req_extensions =
+x509_extensions = v3_req
 prompt = no
 utf8 = yes
 
