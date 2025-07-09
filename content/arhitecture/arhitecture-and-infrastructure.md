@@ -311,3 +311,162 @@ CRISP-DM
     - Prototype
     - Test
     - Storytel
+
+## Data Privacy
+
+- PII(Personally Identifiable Information)
+- PHI(Protected Health Information)
+
+- Privacy by Design (PbD)
+    - Proactive not Reactive; Preventative not Remedial
+        - Privacy Impact Assessment (PIA)
+    - Privacy as the Default Setting
+    - Privacy Embedded into Design
+    - Full Functionality ― Positive-Sum, not Zero-Sum
+    - End-to-End Security ― Full Lifecycle Protection
+    - Visibility and Transparency
+    - Respect for User Privacy
+- Privacy-enhancing technologies (PET)
+- Data Flow Management (DFM)
+    - Data Flow Diagram (DFD)
+        - Data Source
+        - Processes
+        - Data Stores
+        - Data Flows
+        - External Entities
+- Digital Rights Management (DRM)
+- Сollective knowledge
+- Data Layers
+    - Raw data
+    - Processed data
+    - Golden source
+- Data Status
+    - At Rest
+    - During Transfer Process
+    - During Use
+- Data Lineage
+    - Scope Definition and Planning
+    - Data Discovery and Inventory
+    - Data Flow Mapping
+    - Data Transformation Documentation*
+    - Metadata Management
+    - Tool Selection and Implementation
+    - Regulatory Compliance Assurance
+    - Governance Framework and Policy Establishment
+    - Continuous Improvement and Monitoring
+- Data Minimization
+- [Data Obfuscation Mechanisms](/security/software-development.md/#data-protection)
+- [Data Masking](/security/software-development.md/#data-protection)
+- Tagging data
+
+## Bottleneck Identification in Existing Solutions
+
+- Conway's law
+    - Team Functional Boundaries
+    - Cross-functional Collaboration
+    - Organizational Social Boundaries
+- Ishikawa Diagram (Fishbone Diagram) Methodology
+    - Man
+    - Machine
+    - Material
+    - Method
+    - Measurement
+    - Mother Nature
+- Metrics
+    - DORA
+        - Deployment Frequency
+        - Lead Time for Changes
+        - Change Failure Rate
+        - Time to Restore Service
+    - Mean Time to Recovery (MTTR)
+    - Error Rate
+    - Performance Metrics
+    - RTO (Recovery Time Objective) & RPO (Recovery Point Objective)
+
+## Migration Patterns
+
+- Strangler Fig
+    - Преимущества
+        - Постепенная замена монолита
+        - Снижение рисков
+        - Инкрементная доствака новых функций
+        - Решение проблемы технического долга
+    - Реализация
+        1. Определение доменной области
+            - Техники
+                - Domain-Driven Design
+                    - Области
+                        - Домен
+                        - Поддомен
+                        - Контекст
+                    - Проектирование
+                        - Стратегическое
+                            - Bounded Context
+                            - Context Map
+                        - Тактическое
+                            - Entities
+                            - Value Objects
+                            - Aggregates
+                            - Repositories
+                            - Services
+                    - Выделение доменов
+                        1. Анализ бизнеса и требований
+                        2. Выделение доменов
+                        3. Разделение на поддомены
+                        4. Определение контекстов
+                        5. Создание контекстных карт
+                        6. Итеративное уточнение
+                - Технический анализ
+                - Анализ производительности
+            - Приоритизация
+                - Бизнес-влияние
+                - Техническое влияние
+                - Клиентское влияние
+                - Методы
+                    - MoSCoW
+                        - Must have
+                        - Should have
+                        - Could have
+                        - Won't have
+                    - Матрица Эйзенхауэра
+                        - Срочно и важно
+                        - Не срочно, но важно
+                        - Срочно, но не важно
+                        - Не срочно и не важно
+                    - Модель Кано
+                        - Must-Have
+                        - Performance
+                        - Excitement
+                        - Indifferent
+                        - Reverse
+                    - Weighted Scoring Model
+                    - ICE Scoring
+                        - Impact
+                        - Confidence
+                        - Effort, ICE
+                    - Value vs. Effort
+                    - Cost of Delay
+        2. Проектирование и разработка новых сервисов
+        3. Мониторинг и верификация
+            - Application perfomance monitoring
+            - Централизованное логирование
+            - Мониторинг инфраструктуры
+            - A/B-тестирование
+            - Автоматизированное тестирование
+        4. Переклюяение трафика
+            - Маршутизация
+                - Reverse proxy
+                - API Gateway
+                - Service Mesh
+            - Anti-corruption layer (ACL)
+                - Паттерны
+                    - Facade
+                    - Adapter
+                - Преимущества
+                    - Изоляция от сложностей и проблем
+                    - Управление маршрутизацией запросо
+                    - Адапация днных под различные требования
+                    - Инкапсуляция монолитной системы
+- Parallel Run
+- High-Level Design
+- Branch by Abstraction
