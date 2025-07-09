@@ -105,9 +105,18 @@ summary: ""
 
 ## Data protection
 
-- Tokenization of data
 - Homomorphic encryption
 - Data Loss Prevention (DLP)
+- Data Obfuscation Mechanisms
+    - Tokenization of data
+    - Shuffling
+    - Zeroing/Substitution
+    - Character Scrambling
+- Data Masking
+    - Static Data Masking
+    - Dynamic Data Masking
+    - Deterministic Masking
+    - Non-Deterministic Masking
 
 ## Identity and Access Management
 
