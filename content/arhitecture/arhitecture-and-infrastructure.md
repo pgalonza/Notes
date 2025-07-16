@@ -186,8 +186,29 @@ CRISP-DM
 - OLAP(Online Analytical Processing)
     - Architecture of data warehouses
         - Data Warehouse
+            - Modern Data Warehouse
         - Data Lake
+            - Raw Data Store
         - Data Lakehouse
+            - Types of storages
+                - File storage
+                - Block storage
+                - Object storage
+                    - Amazon Simple Storage Service (S3)
+            - Metadata
+                - Apache Iceberg
+                    - Open File Formats
+                    - Open Table Formats
+                - Apache Hudi
+                - Delta Lake
+            - Catalogs
+                - Based on files
+                    - Hadoop Catalog
+                - Based on services
+                    - JDBC
+                    - Hive Metastore
+                    - Nessie
+                    - Glue
     - Approaches to data processing
         - ETL(Extract, Transform, Load)
         - ELT(Extract, Load, Transform)
@@ -206,6 +227,9 @@ CRISP-DM
             - MapReduce
             - Apache Spark
         - Rows
+- Methods
+    - Batch-Processing Engine
+    - Real-Time Processing Engine
 
 |Isolation levels|Lost update|Dirty read|Non-repeatable read|Phantom read|
 |---|---|---|---|---|
@@ -257,6 +281,60 @@ CRISP-DM
     - Row - Business Capability
     - Column - Organization unit
     - Intersection - system
+
+### Managing the technical landscape
+
+- Roadmap
+    - Types of technical debt
+        - Architectural Debt
+        - Codebase Debt
+        - Infrastructure Debt
+        - Software Quality Debt
+        - Process Debt
+        - Defect Debt
+        - Documentation Debt
+        - Intentional/Known Debt
+        - Unknown Legacy/Accidental Debt
+        - Bit Rot/Band-Aid Debt
+    - Assessment of technical debt
+        - Сost estimation
+        - Сriticality assessment
+            - Technical Debt Ration(TDR) = (cost of elimination / development cost) * 100%
+    - TIME Model
+        - Tolerate
+        - Invest
+        - Eliminate
+        - Mitigate
+    - Tech Radar
+        - Elements
+            - Quadrants
+                - Languages and Frameworks
+                - Tools
+                - Platforms & Infrastructure
+                - Methods & Patterns
+            - Rings
+                - Base
+                    - Adopt
+                    - Trial
+                    - Assess
+                    - Hold
+                - TRL (Technology Readiness Levels)
+                    - Contents
+                        1. Basic principles observed and reported
+                        2. Technology concept formulated
+                        3. Experimental proof of concept
+                        4. Technology validated in lab environment
+                    - Development
+                        5. Technology validated in relevant environment
+                        6. System/subsystem prototype demonstration in relevant environment
+                        7. System prototype demonstration in operational environment
+                        8. Actual system completed and qualified through test and demonstration
+                    - Implementation
+                        9. Actual system proven through successful mission operations
+            - Trends
+                - New
+                - Moved in/out
+                - No change
 
 ## Architecture design
 
@@ -354,6 +432,7 @@ CRISP-DM
     - Regulatory Compliance Assurance
     - Governance Framework and Policy Establishment
     - Continuous Improvement and Monitoring
+    - Data governance
 - Data Minimization
 - [Data Obfuscation Mechanisms](/security/software-development.md/#data-protection)
 - [Data Masking](/security/software-development.md/#data-protection)
@@ -446,6 +525,16 @@ CRISP-DM
                         - Effort, ICE
                     - Value vs. Effort
                     - Cost of Delay
+                    - RICE
+                        - Reach
+                        - Impact
+                        - Confidence
+                        - Effort
+                    - WSJF
+                        - Weighted
+                        - Shortest
+                        - Job
+                        - First
         2. Проектирование и разработка новых сервисов
         3. Мониторинг и верификация
             - Application perfomance monitoring
@@ -470,3 +559,23 @@ CRISP-DM
 - Parallel Run
 - High-Level Design
 - Branch by Abstraction
+
+## BigData
+
+- Characteristic
+    - Volume
+    - Velocity
+    - Variety
+    - Veracity
+    - Value
+- [Data processing](/arhitecture/arhitecture-and-infrastructure/#data-processing)
+- Data Mesh
+    - Principle
+        - Domain-Driven Data Contexts
+        - Unified Infrastructure Platform
+        - Data as a Product Mindset
+        - Self-Serve Infrastructure
+        - Federated Governance
+- Data Ops
+- [Data lineage](/arhitecture/arhitecture-and-infrastructure/#data-lineage)
+- Data Catalog
