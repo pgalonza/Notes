@@ -577,5 +577,5 @@ CRISP-DM
         - Self-Serve Infrastructure
         - Federated Governance
 - Data Ops
-- [Data lineage](/arhitecture/arhitecture-and-infrastructure/#data-lineage)
+- [Data lineage](/arhitecture/arhitecture-and-infrastructure/#data-privacy)
 - Data Catalog
