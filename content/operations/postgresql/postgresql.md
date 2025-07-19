@@ -327,7 +327,7 @@ Objects owner Role
 ```sql
 CREATE ROLE <objects_owner> WITH
 NOLOGIN
-NOSUPERUSER
+NOSUPERUSERnew_owner
 NOCREATEDB
 NOCREATEROLE
 INHERIT
@@ -408,9 +408,51 @@ GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA <schema_name>
 Ownership Assignment
 
 ```sql
-ALTER DATABASE <> OWNER TO db_owner_<>;
-ALTER SCHEMA <schema_name> OWNER TO devops;
-ALTER TABLE <table_name> OWNER TO devops;
+ALTER DATABASE <database_name> OWNER TO <database_owner>;
+ALTER SCHEMA <schema_name> OWNER TO <objects_owner>;
+DO $$
+DECLARE
+    r RECORD;
+BEGIN
+    FOR r IN (SELECT table_name FROM information_schema.tables WHERE table_schema = '<schema_name>')
+    LOOP
+        EXECUTE format('ALTER TABLE <schema_name>.%I OWNER TO <objects_owner>', r.table_name);
+    END LOOP;
+END
+$$;
+
+DO $$
+DECLARE
+    r RECORD;
+BEGIN
+    FOR r IN (SELECT c.relname, n.nspname FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace where c.relkind = 'S' AND n.nspname  = ' <schema_name>')
+    LOOP
+        EXECUTE format('ALTER SEQUENCE <schema_name>.%I OWNER TO <objects_owner>', r.relname);
+    END LOOP;
+END
+$$;
+
+DO $$
+DECLARE
+ r RECORD;
+BEGIN
+ FOR r IN (SELECT viewname FROM pg_views WHERE schemaname = '<schema_name>')
+ LOOP
+ EXECUTE format('ALTER VIEW <schema_name>.%I OWNER TO <objects_owner', r.viewname);
+ END LOOP;
+END
+$$;
+
+DO $$
+DECLARE
+ r RECORD;
+BEGIN
+ FOR r IN (SELECT proname FROM pg_proc WHERE pronamespace = '<schema_name>'::regnamespace)
+ LOOP
+ EXECUTE format('ALTER FUNCTION <schema_name>.%I OWNER TO new_owner', r.proname);
+ END LOOP;
+END
+$$;
 ```
 
 ## Functions
