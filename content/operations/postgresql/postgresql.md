@@ -295,6 +295,124 @@ Granting default permissions
 alter default privileges for role <role name> in schema <schema name> grant <statements> on <target object> on <role name>
 ```
 
+### Role model
+
+Database Owner Role
+
+```sql
+CREATE ROLE <database_owner> WITH
+NOLOGIN
+NOSUPERUSER
+NOCREATEDB
+NOCREATEROLE
+INHERIT
+NOREPLICATION
+CONNECTION LIMIT -1;
+```
+
+Database Creation
+
+```sql
+CREATE DATABASE <database_name> WITH
+OWNER = <database_owner>
+ENCODING = 'UTF8'
+TABLESPACE = pg_default
+CONNECTION LIMIT = -1
+LC_COLLATE = 'en_US.UTF-8'
+LC_CTYPE = 'en_US.UTF-8';
+```
+
+Objects owner Role
+
+```sql
+CREATE ROLE <objects_owner> WITH
+NOLOGIN
+NOSUPERUSER
+NOCREATEDB
+NOCREATEROLE
+INHERIT
+NOREPLICATION
+CONNECTION LIMIT -1;
+
+GRANT CREATE, CONNECT, TEMPORARY ON DATABASE <database_name> TO <objects_owner> ;
+```
+
+Migration User Role
+
+```sql
+CREATE ROLE <schema_migration_user> WITH
+LOGIN
+NOINHERIT
+NOSUPERUSER
+NOCREATEDB
+NOCREATEROLE
+NOREPLICATION
+CONNECTION LIMIT 10;
+
+GRANT <objects_owner> TO <schema_migration_user>;
+ALTER ROLE <schema_migration_user> SET ROLE <objects_owner>;
+GRANT CONNECT ON DATABASE <database_name> TO <schema_migration_user>;
+```
+
+Security Permissions
+
+```sql
+ALTER DEFAULT PRIVILEGES REVOKE EXECUTE ON FUNCTIONS FROM PUBLIC;
+ALTER ROLE ALL SET search_path = "$user";
+REVOKE CONNECTION ON DATABASE <database_name> FROM PUBLIC;
+REVOKE USAGE ON SCHEMA public FROM PUBLIC;
+```
+
+Application User Role
+
+```sql
+CREATE ROLE <service_user> WITH
+LOGIN
+NOINHERIT
+NOSUPERUSER
+NOCREATEDB
+NOCREATEROLE
+NOREPLICATION
+CONNECTION LIMIT 10;
+
+GRANT CONNECT, TEMPORARY ON DATABASE <database_name> TO <service_user>;
+```
+
+Schema & Access Rights
+
+```sql
+CREATE SCHEMA <schema_name> AUTHORIZATION <objects_owner>;
+GRANT USAGE ON SCHEMA <schema_name> TO <service_user>;
+
+SET ROLE devops;
+
+ALTER DEFAULT PRIVILEGES FOR ROLE <objects_owner> IN SCHEMA <schema_name>
+    GRANT SELECT, INSERT, UPDATE, DELETE ON TABLES TO <service_user>;
+ALTER DEFAULT PRIVILEGES FOR ROLE <objects_owner> IN SCHEMA <schema_name>
+    GRANT SELECT, USAGE ON SEQUENCES TO <service_user>;
+ALTER DEFAULT PRIVILEGES FOR ROLE <objects_owner> IN SCHEMA <schema_name>
+    GRANT EXECUTE ON FUNCTIONS TO <service_user>;
+ALTER DEFAULT PRIVILEGES FOR ROLE <objects_owner> IN SCHEMA <schema_name>
+    REVOKE EXECUTE ON FUNCTIONS FROM PUBLIC;
+
+RESET ROLE;
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA <schema_name
+    TO <service_user>;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA <schema_name>
+    TO <service_user>;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA <schema_name>
+    TO <service_user>;
+```
+
+Ownership Assignment
+
+```sql
+ALTER DATABASE <> OWNER TO db_owner_<>;
+ALTER SCHEMA <schema_name> OWNER TO devops;
+ALTER TABLE <table_name> OWNER TO devops;
+```
+
 ## Functions
 
 Show functions
