@@ -357,3 +357,13 @@ Show deleted files
 lsof -nP | grep '(deleted)'
 lsof -nP +L1
 ```
+
+Read stdout/stderr of running process
+
+[Information from](https://t.me/linux_read/524)
+
+```bash
+cat /proc/<PID>/fd/1 /proc/<PID>/fd/2
+cat /proc/<PID>/fd/1 > /tmp/stdout.log
+cat /proc/<PID>/fd/2 > /tmp/stderr.log
+```
