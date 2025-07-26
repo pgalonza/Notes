@@ -6,6 +6,8 @@ description: "Check list for new system"
 
 ## New system
 
+- [ ] VIP
+    - [ ] Balancer
 - [ ] DNS
     - [ ] DNS naming Rules
     - [ ] API
@@ -42,3 +44,8 @@ description: "Check list for new system"
     - [ ] Role model and access
 - [ ] Fault tolerance
     - [ ] Disater recovery plan
+- [ ] Vault
+    - [ ] Create Secret Engines
+    - [ ] Unification structure
+    - [ ] Role model and access
+- [ ] Create Gitlab group
