@@ -16,7 +16,6 @@ description: "Check list for new service"
         - [ ] Configurations
         - [ ] Cetificates
         - [ ] Artifacts
-    - [ ] Release strategy
     - [ ] Unit tests
     - [ ] Linters
     - [ ] Quality gates

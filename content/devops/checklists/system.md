@@ -53,6 +53,7 @@ description: "Check list for new system"
     - [ ] Repository naming rules
     - [ ] Flow
 - [ ] CI/CD
+    - Release strategy
 - [ ] Documectation
     - [ ] Registry
         - [ ] Technical accounts
