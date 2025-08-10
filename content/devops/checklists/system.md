@@ -26,22 +26,15 @@ description: "Check list for new system"
 - [ ] Notifications
     - [ ] Mailing group naming rules
     - [ ] Mailing group
-- [ ] Deploy
-    - [ ] Deploy account naming rules
-    - [ ] Role model and access
-    - [ ] Certificates
 - [ ] Database
     - [ ] Database account naming rules
     - [ ] Database roles naming rules
     - [ ] Database naming rules
     - [ ] Database schemas
     - [ ] Role model and access
-- [ ] Services
-    - [ ] Unification of build
-    - [ ] Unification of deploy
-    - [ ] Unification of configurations
-    - [ ] Services naming rules
-    - [ ] Role model and access
+- [ ] Role model and access
+    -  [ ] Deploy
+    -  [ ] Access to system
 - [ ] Fault tolerance
     - [ ] Disater recovery plan
 - [ ] Vault
@@ -49,11 +42,20 @@ description: "Check list for new system"
     - [ ] Unification structure
     - [ ] Role model and access
 - [ ] Arhitecture diagrams
-- [ ] VCS
-    - [ ] Repository naming rules
-    - [ ] Flow
 - [ ] CI/CD
     - Release strategy
+    - Artifact management
+    - [ ] VCS
+        - [ ] Repository naming rules
+        - [ ] Flow
+    - [ ] Services
+        - [ ] Unification of build
+        - [ ] Unification of deploy
+        - [ ] Unification of configurations
+        - [ ] Services naming rules
+    - [ ] Deploy
+        - [ ] Deploy account naming rules
+        - [ ] Certificates
 - [ ] Documectation
     - [ ] Registry
         - [ ] Technical accounts
