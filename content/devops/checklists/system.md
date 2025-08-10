@@ -48,4 +48,17 @@ description: "Check list for new system"
     - [ ] Create Secret Engines
     - [ ] Unification structure
     - [ ] Role model and access
-- [ ] Create Gitlab group
+- [ ] Arhitecture diagrams
+- [ ] VCS
+    - [ ] Repository naming rules
+    - [ ] Flow
+- [ ] CI/CD
+- [ ] Documectation
+    - [ ] Registry
+        - [ ] Technical accounts
+        - [ ] Certificates
+        - [ ] Repositories
+        - [ ] Databases
+        - [ ] LDAP Groups
+        - [ ] DNS
+    - [ ] Everything listed here
