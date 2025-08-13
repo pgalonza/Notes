@@ -115,12 +115,6 @@ shred <file_name>
 shred -zu <file_name>
 ```
 
-Set or retrieve a process's CPU affinity
-
-```bash
-taskset
-```
-
 ## TAR
 
 Create archive

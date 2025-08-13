@@ -90,7 +90,7 @@ nsenter --target <PID> <parameters> <program>
 Pressure Stall Information 10s 60s 300s
 
 ```bash
- /proc/pressure/<cpu|io|irq|memory>
+ tail -f /proc/pressure/<cpu|io|irq|memory>
 ```
 
 Hide processes (fstab)
@@ -205,7 +205,37 @@ sysctl -p
 Change process limits
 
 ```bash
-prlimit --pid PID --nofile=1024:1024
+prlimit --pid <pid> --nofile=1024:1024
+```
+
+Set or retrieve a process's CPU affinity
+
+```bash
+taskset -pc <core> <pid
+```
+
+Set SCHED_BATCH for process
+
+```bash
+chrt -b -p 0 <pid>
+```
+
+Set SCHED_BATCH for process
+
+```bash
+chrt -b <pid>
+```
+
+Set affinity to NUMA node
+
+```bash
+numactl --cpunodebind=<numa node> --membind=<numa node> <command>
+```
+
+Runs a process with CPU core affinity and I/O weight limits.
+
+```bash
+systemd-run --scope -p CPUAffinity=<> -p IOWeight=<> -- <command>
 ```
 
 ## Priority
@@ -213,7 +243,8 @@ prlimit --pid PID --nofile=1024:1024
 IO priority
 
 ```bash
-ionice -c3 coommand
+ionice -c<1-3> -n<0-7> <command>
+ionice -c<1-3> -n<0-7> -p <pid>
 ```
 
 Start with priority
@@ -366,4 +397,13 @@ Read stdout/stderr of running process
 cat /proc/<PID>/fd/1 /proc/<PID>/fd/2
 cat /proc/<PID>/fd/1 > /tmp/stdout.log
 cat /proc/<PID>/fd/2 > /tmp/stderr.log
+```
+
+## Perfomance
+
+Collects performance metrics for a specific process.
+
+```bash
+perf stat -d -p <pid> -- sleep 10
+pidstat -wstu -p <pid> 1
 ```
