@@ -85,7 +85,7 @@ Location
 ```text
 add_header X-Request-ID $request_id;
 
-    location /<path> {
+    location /<path>/ {
         proxy_pass <url>;
 
         proxy_set_header Host $http_host;
