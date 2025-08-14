@@ -87,7 +87,7 @@ summary: ""
             - Polling publishe
             - Transaction log tailing
                 - Change Data Capture
-- Disaster Recovery Plan
+- Disaster Recovery Plan (DRP)
     - Testing
         - D&D game
 - Global Server Load Balancer
@@ -434,8 +434,8 @@ CRISP-DM
     - Continuous Improvement and Monitoring
     - Data governance
 - Data Minimization
-- [Data Obfuscation Mechanisms](/security/software-development.md/#data-protection)
-- [Data Masking](/security/software-development.md/#data-protection)
+- [Data Obfuscation Mechanisms](/security/software-development/#data-protection)
+- [Data Masking](/security/software-development/#data-protection)
 - Tagging data
 
 ## Bottleneck Identification in Existing Solutions
