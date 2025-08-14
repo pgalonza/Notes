@@ -65,3 +65,5 @@ description: "Check list for new system"
         - [ ] LDAP Groups
         - [ ] DNS
     - [ ] Everything listed here
+- Disaster recovery plan
+- [Security](security/checklists/system/#new-system)
