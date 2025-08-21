@@ -6,6 +6,8 @@ aliases:
   - /operations/bash
 ---
 
+{{< toc >}}
+
 EOF
 
 ```bash
@@ -214,7 +216,7 @@ unalias -a
 command <command>
 ```
 
-Вetaching a process from a session
+Detaching a process from a session
 
 [Information from](https://t.me/bashdays/160)
 
@@ -265,6 +267,12 @@ else
     echo "Error!"
     exit 1
 fi
+```
+
+Don’t read the ~/.bashrc and /etc/bash.bashrc
+
+```bash
+bash --norc
 ```
 
 ## Variables
