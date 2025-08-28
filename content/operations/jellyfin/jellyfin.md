@@ -33,7 +33,7 @@ services:
         read_only: true
     restart: 'always'
     environment:
-      - JELLYFIN_PublishedServerUrl=http://jellyfin.evaron.local
+      - JELLYFIN_PublishedServerUrl=http://<>
     runtime: nvidia
     deploy:
       resources:
