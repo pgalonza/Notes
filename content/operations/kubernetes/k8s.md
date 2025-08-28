@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes"
+title: "K8S"
 date: 2025-07-25T00:17:34+03:00
 draft: false
 description: "Comprehensive notes covering Kubernetes architecture, deployment strategies, and advanced cluster management techniques. Dive into container orchestration, scaling practices, and best practices for production environments. Perfect for DevOps engineers and cloud architects seeking to master Kubernetes capabilities."
