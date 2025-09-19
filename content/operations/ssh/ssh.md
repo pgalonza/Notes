@@ -71,7 +71,7 @@ Show control sequences
 Generate RSA
 
 ```bash
-ssh-keygen -f ~/name_key_file_rsa -t rsa -b 2048
+ssh-keygen -f ~/name_key_file_rsa -t ed25519
 ```
 
 Generate for paramiko
