@@ -386,6 +386,32 @@ _/etc/fstab_
 tmpfs   path_to_directory        tmpfs   noatime,nodev,nosuid,size=2G          0  0
 ```
 
+## Mount
+
+Cifs
+
+```bash
+mount.cifs //host/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
+```
+
+CD-rom
+
+```bash
+mount- -o loop /opt/cd.iso /opt/repo
+```
+
+Remount with rw
+
+```bash
+mount -n -o remount,rw /dev/sdXX
+```
+
+Remount tmp with change size tmpfs
+
+```bash
+mount -t tmpfs tmpfs /tmp -o size=1G,remount,rw,nodev,nosuid
+```
+
 ## Check health
 
 Badblocks

@@ -301,26 +301,6 @@ Replace in all files
 sed -i 's/old_text/new_text/g' *
 ```
 
-## Mount
-
-Cifs
-
-```bash
-mount.cifs //host/share /mnt -o user=dmosk,domain=dmosk.local,vers=3.0
-```
-
-CD-rom
-
-```bash
-mount- -o loop /opt/cd.iso /opt/repo
-```
-
-Remount with rw
-
-```bash
-mount -n -o remount,rw /dev/sdXX
-```
-
 ## Chromium
 
 Proxy
