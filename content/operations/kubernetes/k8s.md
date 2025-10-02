@@ -8,6 +8,8 @@ summary: "Kubernetes (k8s) Notes: Advanced Cluster Management"
 
 {{< toc >}}
 
+## Kubernetes
+
 - Components
     - Master node(Control plane)
         - API Server
@@ -20,8 +22,19 @@ summary: "Kubernetes (k8s) Notes: Advanced Cluster Management"
         - Container runtime
 - Claster objects
     - Node
+      - Pod Scheduling
+        - Taints and Tolerations
+        - NodeSelector
+        - Affinity and Anti-Affinity
     - Pod
+        - Init-container
+        - Pod Topology Spread Constraints
+        - Pod Disruption Budget
     - Service
+        - ClusterIP
+        - NodePort
+        - LoadBalancer
+        - ExternalName
     - Deployment
         - Statuses
             - Progressing
@@ -29,8 +42,27 @@ summary: "Kubernetes (k8s) Notes: Advanced Cluster Management"
             - Complete
     - ConfigMap
     - Secret
+    - StatefulSet
+    - DaemonSet
+    - Ingress
+    - Job and CronJob
     - Namespace
         - default
         - kube-node-lease
         - kube-public
         - kube-system
+    - Autoscalers
+        - Horizontal Pod Autoscaler
+        - Vertical Pod Autoscaler
+        - Cluster Autoscaler
+    - ResourceQuota
+    - NetworkPolicy
+    - RBAC
+        - Role
+        - RoleBinding
+        - ClusterRole
+        - ClusterRoleBinding
+
+## Troubleshooting
+
+It is recommended not to set CPU limits to avoid performance problems.
