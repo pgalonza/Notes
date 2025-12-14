@@ -26,8 +26,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.137.0
-      THEME_VERSION: 1.6.1
+      HUGO_VERSION: 0.151.2
+      THEME_VERSION: 2.0.0
       THEME: hugo-geekdoc
       BASEDIR: docs
       THEMEDIR: ./themes
@@ -39,7 +39,7 @@ jobs:
       - name: Install Dart Sass Embedded
         run: sudo snap install dart-sass-embedded
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Create folder for template
@@ -53,7 +53,7 @@ jobs:
         run: |
           hugo --gc --minify
       - name: Archive hugo artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: hugo-artifact
           path: ./public
@@ -70,7 +70,7 @@ jobs:
         name: hugo-artifact
         path: public
     - name: rsync deployments
-      uses: burnett01/rsync-deployments@7.0.1
+      uses: burnett01/rsync-deployments@v8
       with:
         switches: -avzr --delete
         path: public/
