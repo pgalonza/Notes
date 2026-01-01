@@ -10,6 +10,19 @@ summary: "OAuth2"
 
 - [RFC 6749](https://www.ietf.org/rfc/rfc6749.txt)
 
+## Software
+
+### IAM/idP
+
+- [Keycloak](https://www.keycloak.org/)
+- [Supertokens](https://supertokens.com/)
+- [Casdoor](https://casdoor.org/)
+- [Logto](https://logto.io/)
+
+### Middleware
+
+- [oauth2-proxy](https://github.com/oauth2-signin/oauth2-proxy)
+
 ## Roles
 
 - Resource Owner
