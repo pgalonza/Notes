@@ -22,6 +22,7 @@ summary: "OAuth2"
 ### Middleware
 
 - [oauth2-proxy](https://github.com/oauth2-signin/oauth2-proxy)
+- [oathkeeper](https://github.com/ory/oathkeeper)
 
 ## Roles
 
