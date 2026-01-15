@@ -396,6 +396,27 @@ echo password=<password>
 git config --global credential.helper '<path to script>'
 ```
 
+## Worktree
+
+Create worktree
+
+```bash
+git worktree add <path> <branch>
+git worktree add --track -b <branch> <path> <remote>/<branch>
+```
+
+List worktrees
+
+```bash
+git worktree list
+```
+
+Remove worktree
+
+```bash
+git worktree remove <path>
+```
+
 
 ## Troubleshooting
 
