@@ -3,6 +3,8 @@ title: "Network"
 date: 2024-08-17T14:24:30+03:00
 draft: false
 description: "Discover the world of computer networks through our concise notes. From fundamentals to advanced topics, get valuable insights on network optimization, troubleshooting, and security."
+aliases:
+  - /networks/network/
 ---
 
 {{< toc >}}
