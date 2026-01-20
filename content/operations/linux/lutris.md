@@ -2,6 +2,8 @@
 title: "Lutris"
 draft: false
 description: "Lutris notes"
+aliases:
+  - /general/lutris/
 ---
 
 Create play file

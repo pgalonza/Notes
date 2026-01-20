@@ -2,6 +2,8 @@
 title: "Fish-shell"
 draft: false
 description: "Fish-shell notes"
+aliases:
+  - /general/fish/
 ---
 
 Executable path

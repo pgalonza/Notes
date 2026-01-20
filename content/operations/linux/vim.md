@@ -2,6 +2,8 @@
 title: "VIM"
 draft: false
 description: "VIM notes"
+aliases:
+  - /genral/vim/
 ---
 
 {{< toc >}}

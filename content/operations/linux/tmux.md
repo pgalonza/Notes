@@ -2,6 +2,8 @@
 title: TMUX
 draft: false
 description: "CLI commands for TMUX"
+aliases:
+  - /general/tmux/
 ---
 
 Run

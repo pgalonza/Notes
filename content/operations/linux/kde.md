@@ -2,6 +2,8 @@
 title: "KDE"
 draft: false
 description: "KDE notes"
+aliases:
+  - /genral/kde/
 ---
 
 Path for AppImage
