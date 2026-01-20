@@ -1,11 +1,18 @@
 ---
 title: "AI"
+date: 2026-01-19T18:35:59+03:00
 draft: false
-description: "AI"
+description: "Explore AI insights, trends, and practical applications in our curated notes — stay ahead with expert analysis on machine learning, generative AI, and ethical challenges."
+summary: "A collection of concise, up‑to‑date notes on artificial intelligence: from core algorithms and LLMs to real‑world use cases and ethical debates, updated regularly for professionals and enthusiasts."
+aliases:
+  - /development/ai/ai/
 ---
+
+{{< toc >}}
 
 
 ## NLP
+
 1. NLU (Natural Language Understanding)
 2. DM (Dialog Management)
 3. NLG (Natural Language Generation)
@@ -17,15 +24,40 @@ description: "AI"
 5. TF-IDF (term frequency-inverse document frequency)
 6. Intent recognition
 
-### LLM (Large Language Model)
-
-### Machine Learning Approaches
+## Machine Learning Approaches
 
 - Prompt Engineering
 - Zero-shot learning
 - Few-shot learning
 - Fine-tuning
 - Retrieval-Augmented Generation (RAG)
+
+## LLM (Large Language Model)
+
+### LLM Deployment Tools
+
+- [Ollama](https://ollama.com/)
+- [vLLM](https://vllm.ai/)
+- [llama.cpp](https://github.com/ggml-org/llama.cpp)
+- [LM Studio](https://lmstudio.ai/)
+- [koboldcpp](https://github.com/LostRuins/koboldcpp)
+
+### LLM UI Clients
+
+- [Cherry Studio](https://www.cherry-ai.com/)
+- [Open WebUI](https://openwebui.com/)
+- [Msty Studio](https://msty.ai)
+- [Librechat](https://www.librechat.ai)
+- [Chatbox](https://chatboxai.app)
+- [AnythingLLM](https://anythingllm.com/)
+- [GPT4All](https://www.nomic.ai/gpt4all)
+- [Jan.ai](https://www.jan.ai)
+- [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui)
+
+### Frameworks
+
+- [LangChain](https://github.com/hwchase17/langchain)
+- [Llamaindex](https://www.llamaindex.ai/)
 
 ### Prompt engineering
 
