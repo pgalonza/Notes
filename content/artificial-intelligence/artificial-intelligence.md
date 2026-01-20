@@ -1,5 +1,5 @@
 ---
-title: "AI"
+title: "Artificial intelligence"
 date: 2026-01-19T18:35:59+03:00
 draft: false
 description: "Explore AI insights, trends, and practical applications in our curated notes — stay ahead with expert analysis on machine learning, generative AI, and ethical challenges."
