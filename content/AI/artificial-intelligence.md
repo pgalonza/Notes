@@ -54,10 +54,12 @@ aliases:
 - [Jan.ai](https://www.jan.ai)
 - [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui)
 
-### Frameworks
+### Development
 
 - [LangChain](https://github.com/hwchase17/langchain)
 - [Llamaindex](https://www.llamaindex.ai/)
+- [Fastmcp](https://github.com/jlowin/fastmcp)
+- [python-sdk](https://github.com/modelcontextprotocol/python-sdk)
 
 ### Prompt engineering
 
