@@ -238,6 +238,18 @@ http {
 }
 ```
 
+### Content Security Policy
+
+Nonce
+
+```text
+sub_filter_once off;
+sub_filter_types *;
+sub_filter '<script ' '<script nonce="$request_id" ';
+
+add_header Content-Security-Policy "script-src 'self' 'nonce-$request_id'";
+```
+
 ## Locations
 
 Angular in subfolders(Tasks)
