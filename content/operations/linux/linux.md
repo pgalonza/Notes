@@ -421,3 +421,7 @@ _/etc/environment_
 ```bash
 export PYTHONPATH=/data/libraries_and_modules/python
 ```
+
+## Linux on Android
+
+- [localdesktop](https://localdesktop.github.io/)
