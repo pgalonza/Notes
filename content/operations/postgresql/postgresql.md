@@ -846,3 +846,18 @@ Show polices
 ```sql
 SELECT * FROM information_schema.policies;
 ```
+
+## Connection pooler
+
+- [odyssey](https://github.com/yandex/odyssey)
+- [pgbouncer](https://github.com/pgbouncer/pgbouncer)
+- [pgpool-II](https://github.com/pgpool/pgpool2)
+
+## Cluster
+
+- [Patroni](https://github.com/patroni/patroni)
+
+
+Example
+
+- [keycloak-postgresql-ha](https://github.com/pgalonza/keycloak-postgresql-ha)
