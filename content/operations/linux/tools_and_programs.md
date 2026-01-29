@@ -121,3 +121,9 @@ description: "Tools and program notes"
 * **fish** - friendly interactive shell.
 * **fzf** - general-purpose command-line fuzzy finder.
 * **whiptail** - display dialog boxes from shell scripts.
+
+## Android
+
+* **adb** - Android Debug Bridge.
+* **fastboot** - Android Fastboot.
+* **[scrcpy](https://github.com/Genymobile/scrcpy)** - display and control your Android device.
