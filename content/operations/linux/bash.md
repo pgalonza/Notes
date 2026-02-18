@@ -397,3 +397,9 @@ Does not execute commands
 ```bash
 set -o noexec
 ```
+
+Stop execution if error
+
+```bash
+set -euo pipefail
+```
