@@ -81,6 +81,10 @@ aliases:
 - Metaprompting: Instruct the model to reflect on its own reasoning or prompt‑design process (e.g., “Explain how you interpreted this prompt” or “Suggest improvements to this request”) — this enhances self‑awareness and helps refine future prompts.
 - Prompt Templates: Save effective prompts as reusable templates with placeholders (e.g., [TOPIC], [AUDIENCE]) — this ensures consistency, speeds up workflow, and allows quick adaptation for similar tasks.
 
+## Agents
+
+- [Agents.md](https://agents.md/) - complements this by containing the extra, sometimes detailed context coding agents need: build steps, tests, and conventions that might clutter a README or aren’t relevant to human contributors.
+
 
 ## Resources
 
