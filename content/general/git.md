@@ -138,6 +138,12 @@ Store credentials
 git config --global credential.helper store
 ```
 
+Remove file in all commits
+
+```bash
+git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch <file>' --prune-empty
+```
+
 ## Create new repository
 
 Create the folder and initialization on server
