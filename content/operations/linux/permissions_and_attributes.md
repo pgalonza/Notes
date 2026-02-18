@@ -40,3 +40,21 @@ install -m 755 /usr/bin/chmod ./new_chmod
 rsync --chmod=ugo+x /usr/bin/chmod ./new_chmod
 python -c "import os;os.chmod('/usr/bin/chmod', 0755)"
 ```
+
+## Capabilities
+
+[Information from](https://t.me/cybersec_academy/1684)
+
+
+Get all files with capabilities
+
+```bash
+getcap -r /
+```
+
+Set capabilities in systemd Unit
+
+```bash
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+```
