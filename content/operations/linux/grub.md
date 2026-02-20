@@ -2,6 +2,8 @@
 title: "Grub"
 draft: false
 description: "Grub notes"
+aliases:
+  - /operations/grub/grub/
 ---
 
 {{< toc >}}

@@ -2,6 +2,8 @@
 title: "Minikube"
 draft: false
 description: "Minicube notes"
+aliases:
+  - /operations/minikube/minikube/
 ---
 
 {{< toc >}}

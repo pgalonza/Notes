@@ -3,6 +3,8 @@ title: "Docker"
 date: 2023-07-15T00:15:06+03:00
 draft: false
 description: "Docker notes"
+aliases:
+  - /operations/docker/docker/
 ---
 
 {{< toc >}}

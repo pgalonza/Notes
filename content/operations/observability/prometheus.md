@@ -2,6 +2,8 @@
 title: "Prometheus"
 draft: false
 description: "Prometheus notes"
+aliases:
+  - /operations/prometheus/prometheus/
 ---
 
 CPU IOWAIT

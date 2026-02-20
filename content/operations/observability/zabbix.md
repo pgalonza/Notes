@@ -2,6 +2,8 @@
 title: "Zabbix"
 draft: false
 description: "Zabbix notes"
+aliases:
+  - /operations/zabbix/zabbix/
 ---
 
 {{< toc >}}

@@ -2,6 +2,8 @@
 title: "Podman"
 draft: false
 description: "Podman notes"
+aliases:
+  - /operations/podman/podman/
 ---
 
 {{< toc >}}

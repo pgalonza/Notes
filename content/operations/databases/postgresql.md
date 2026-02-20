@@ -2,6 +2,8 @@
 title: "PostgreSQL"
 draft: false
 description: "PostgreSQL commands and information"
+aliases:
+  - /operations/postgresql/postgresql/
 ---
 
 {{< toc >}}

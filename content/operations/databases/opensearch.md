@@ -4,7 +4,7 @@ date: 2024-08-24T15:00:00+03:00
 draft: false
 description: "The page with notes on OpenSearch is a valuable resource for developers and administrators looking to optimize the search experience on their websites and applications."
 aliases:
-  - /operations/lasticsearch/elasticsearch/
+  - /operations/opensearch/opensearch/
 ---
 
 ## Requests

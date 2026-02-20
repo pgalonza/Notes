@@ -2,6 +2,8 @@
 title: "Mariadb"
 draft: false
 description: "MariaDB notes"
+aliases:
+  - /operations/mariadb/mariadb/
 ---
 
 {{< toc >}}
