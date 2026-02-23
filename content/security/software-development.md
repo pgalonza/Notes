@@ -11,7 +11,11 @@ summary: ""
 
 ## Standards
 
-[Russian Federation GOST R 56939-2024](https://base.garant.ru/410749342/#:~:text=Национальный%20стандарт%20РФ%20ГОСТ%20Р,г.%20Взамен%20ГОСТ%20Р%2056939-2016)
+- Russian Federation GOST R 56939-2024 - Information protection. Secure software development. General requirements
+- Russian Federation GOST R ISO/IEC 12207-2010 - System and software engineering, Software life cycle processes(IDT)
+- Russian Federation GOST R 58412—2019
+- Russian Federation GOST R 50922-2006 - Protection of information. Basic terms and definitions
+- Russian Federation GOST R 57628-2017 - Information technology. Security techniques. Guide for the production of Protection Profiles and Security Targets
 
 
 ## Types of threats
