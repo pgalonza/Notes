@@ -190,6 +190,12 @@ Read file from physical location
 dd if=/dev/<sd*> skip=<start offset> status=none count=8
 ```
 
+Show root reserved space
+
+```bash
+tune2fs -l /dev/<device> | grep "Reserved block count"
+```
+
 ## S.M.A.R.T
 
 View
@@ -258,6 +264,16 @@ Check the file system
 
 ```bash
 fsck -CMn /dev/sda1
+```
+
+Check file system afte reboot
+
+```bash
+touch /forcefsck
+```
+
+```text
+fsck.mode=force
 ```
 
 Force check the file system
