@@ -224,6 +224,7 @@ Detaching a process from a session
 Ctrl + Z
 bg <pid>
 disown <pid>
+<command> & disown
 ```
 
 Cron sctipt template
