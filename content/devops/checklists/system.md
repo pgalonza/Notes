@@ -43,6 +43,7 @@ description: "Check list for new system"
     - [ ] Role model and access
 - [ ] Arhitecture diagrams
 - [ ] CI/CD
+    - Golden images
     - Release strategy
     - Artifact management
     - [ ] VCS
@@ -66,4 +67,5 @@ description: "Check list for new system"
         - [ ] DNS
     - [ ] Everything listed here
 - Disaster recovery plan
+- Run book
 - [Security](security/checklists/system/#new-system)
