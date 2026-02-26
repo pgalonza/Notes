@@ -43,3 +43,9 @@ Install kernel
 ```bash
 make install
 ```
+
+Show memory overcommit
+
+```bash
+cat /proc/sys/vm/overcommit_memory
+```
