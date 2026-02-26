@@ -134,3 +134,11 @@ _~/.config/fcitx5/conf/wayland.conf_
 ```text
 Allow Overriding System XKB Settings=False
 ```
+
+## Troubleshooting
+
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: failed to fulfil mount request: open /usr/lib/libEGL_nvidia.so.x.y.z: no such file or directory
+
+```bash
+nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
+```
