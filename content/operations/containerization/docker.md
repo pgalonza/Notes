@@ -90,6 +90,10 @@ sleep infinity &
 wait $!
 ```
 
+## Build images
+
+[Example](https://github.com/pgalonza/docker-build-demo)
+
 ## Security
 
 [gosu](https://github.com/tianon/gosu)
