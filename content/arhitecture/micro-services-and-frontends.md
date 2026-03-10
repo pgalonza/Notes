@@ -36,7 +36,7 @@ description: "Microservices and Microfrontends"
                 - Упрощение логики клиента
                 - Увеличение производительности
                 - Повышение безопасности
-            - API Composer
+            - API Composition
         - Клиентская композиция
             - Single SPA
             - Module Federation
