@@ -1,7 +1,8 @@
 ---
 title: "Gradle"
 draft: false
-description: "Gradle notes"
+description: "Practical Gradle notes and examples for managing dependencies, caching, and custom tasks in Java projects, including Nexus integration."
+summary: "A quick reference for Gradle build scripts, focusing on dependency resolution, custom tasks, and repository configuration for efficient Java development."
 ---
 
 Download dependencies from nexus for cashing

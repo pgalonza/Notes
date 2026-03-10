@@ -1,7 +1,8 @@
 ---
 title: User and Groups
 draft: false
-description: "CLI commands for get information about users and groups"
+description: "Essential Linux user and group management commands: creation, deletion, password policies, restricted shells, group membership, and system user setup for administrators."
+summary: "A practical reference for managing Linux users and groups, covering common tasks like adding users, setting up restricted shells, and verifying authentication integrity."
 ---
 
 {{< toc >}}

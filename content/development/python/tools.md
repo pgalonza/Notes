@@ -2,8 +2,8 @@
 title: "Tools"
 date: 2025-10-25T12:29:12+03:00
 draft: false
-description: "Tools"
-summary: "Tools for Python"
+description: "Essential Python development tools for package management, environment isolation, and project workflow optimization. Includes uv, pipx, poetry, and more."
+summary: "A curated list of modern Python tools that streamline dependency management, packaging, and development productivity."
 ---
 
 {{< toc >}}

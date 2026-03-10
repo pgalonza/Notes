@@ -1,7 +1,8 @@
 ---
 title: "Amavis"
 draft: false
-description: "Amavis notes"
+description: "Amavis configuration and tuning notes for email filtering, including performance settings and SQL maintenance scripts for cleaning the quarantine database."
+summary: "Practical Amavis tuning tips and database cleanup queries to keep your email filtering system efficient and storage under control."
 ---
 
 {{< toc >}}

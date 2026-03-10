@@ -1,7 +1,8 @@
 ---
 title: SystemD
 draft: false
-description: "CLI commands for systemd"
+description: "Comprehensive systemd guide covering service management, nspawn containers, unit security analysis, journalctl logging, systemd-analyze, and login session control for Linux administrators."
+summary: "A practical reference for systemd commands and configurations, from basic service control to advanced container management and security auditing."
 ---
 
 {{< toc >}}

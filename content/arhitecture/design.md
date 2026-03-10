@@ -2,7 +2,8 @@
 title: "Design"
 date: 2024-10-02T21:33:00+03:00
 draft: false
-description: "Architecture design"
+description: "Comprehensive guide to software architecture design using the C4 model. Learn how to create context, container, component, and deployment diagrams for effective system documentation."
+summary: "Step-by-step instructions for applying the C4 model to visualize software architecture, from high-level context to detailed deployment diagrams."
 ---
 
 {{< toc >}}

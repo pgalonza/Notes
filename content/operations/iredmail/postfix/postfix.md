@@ -1,7 +1,8 @@
 ---
 title: "Postfix"
 draft: false
-description: "Postfix notes"
+description: "Postfix mail server configuration for LDAP integration with Active Directory, including virtual mailbox maps, transport rules, and queue tuning."
+summary: "Detailed Postfix LDAP configuration files and main.cf settings to enable seamless email delivery with Active Directory authentication."
 ---
 
 {{< toc >}}

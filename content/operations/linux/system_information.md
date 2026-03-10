@@ -1,7 +1,8 @@
 ---
 title: System information
 draft: false
-description: "CLI commands for get System information"
+description: "Essential Linux system information commands: CPU, memory, block devices, kernel modules, distribution details, reboot history, and hardware topology for quick diagnostics and monitoring."
+summary: "A handy reference of command‑line tools to gather detailed system insights, from hardware topology to OS version and reboot logs."
 ---
 
 Print real and effective user and group IDs

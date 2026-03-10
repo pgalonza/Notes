@@ -1,7 +1,8 @@
 ---
 title: "Install iRedMail"
 draft: false
-description: "IredMail install instruction"
+description: "Step-by-step iRedMail installation guide for integrating with Active Directory LDAP, configuring Postfix transport maps, and verifying mailbox setup."
+summary: "A concise installation checklist for deploying iRedMail with LDAP authentication, covering Postfix configuration and connectivity tests."
 ---
 
 Check ldap connection

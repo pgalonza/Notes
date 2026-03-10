@@ -1,7 +1,8 @@
 ---
 title: "System"
 draft: false
-description: "Check list for new system"
+description: "Comprehensive checklist for deploying a new system, covering DNS, LDAP, databases, CI/CD, fault tolerance, security, and disaster recovery."
+summary: "A detailed checklist to guide the setup of a robust, secure, and maintainable system, from infrastructure and access control to documentation and monitoring."
 ---
 
 ## New system

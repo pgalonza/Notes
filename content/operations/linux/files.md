@@ -1,7 +1,8 @@
 ---
 title: "Files"
 draft: false
-description: "CLI commands for work with files"
+description: "Essential Linux file operations: encoding conversion, file type detection, ELF analysis, comparison, merging, cleaning, inode inspection, and integrity checking with md5sum for system administrators."
+summary: "A handy collection of command‑line utilities for everyday file manipulation, inspection, and verification on Linux systems."
 ---
 
 Encoding

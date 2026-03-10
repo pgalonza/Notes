@@ -2,7 +2,8 @@
 title: "Docker"
 date: 2023-07-15T00:15:06+03:00
 draft: false
-description: "Docker notes"
+description: "Practical Docker notes covering container creation from rootfs, essential commands, security best practices, caching optimization, and multi‑process startup scripts for DevOps engineers."
+summary: "A collection of Docker tips, command examples, and security configurations to streamline container management and image building."
 aliases:
   - /operations/docker/docker/
 ---

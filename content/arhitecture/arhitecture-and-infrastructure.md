@@ -2,8 +2,8 @@
 title: "Arhitecture and Infrastructure"
 date: 2024-11-30T17:20:22+03:00
 draft: false
-description: "Arhitecture and Infrastructure"
-summary: ""
+description: "Comprehensive guide to software architecture and infrastructure covering caching, fault tolerance, observability, cloud computing, data processing, enterprise systems, and migration patterns."
+summary: "A detailed reference for architects and engineers, exploring key concepts, patterns, and best practices for designing robust, scalable, and maintainable systems."
 ---
 
 {{< toc >}}

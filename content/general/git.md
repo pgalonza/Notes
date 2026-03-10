@@ -1,7 +1,8 @@
 ---
 title: "Git"
 draft: false
-description: "Git notes"
+description: "Comprehensive Git notes covering commands, workflows, repository management, and advanced techniques for version control. Essential for developers and DevOps."
+summary: "A detailed reference for Git users, from basic operations to advanced topics like SVN migration, cleaning repositories, and troubleshooting."
 ---
 
 {{< toc >}}

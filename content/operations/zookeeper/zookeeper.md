@@ -1,7 +1,8 @@
 ---
 title: "Zookeeper"
 draft: false
-description: "Zookeeper notes"
+description: "Apache ZooKeeper configuration notes for securing clusters with TLS/SSL and SASL authentication, including server and client settings."
+summary: "Step-by-step guides for enabling TLS encryption and SASL authentication in ZooKeeper, covering keystore configuration and JAAS files."
 ---
 
 {{< toc >}}

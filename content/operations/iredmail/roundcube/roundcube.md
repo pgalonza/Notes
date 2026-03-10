@@ -1,7 +1,8 @@
 ---
 title: "Roundcube"
 draft: false
-description: "Roundcube notes"
+description: "Roundcube webmail configuration notes for LDAP address book integration, plugin management, and customization of mailbox settings."
+summary: "Step-by-step guides to configure Roundcube with LDAP, manage plugins, and customize folder names for a seamless email experience."
 ---
 
 {{< toc >}}

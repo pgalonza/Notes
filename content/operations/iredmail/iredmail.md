@@ -1,7 +1,8 @@
 ---
 title: "iRedMail"
 draft: false
-description: "IredMail notes"
+description: "iRedMail administration notes covering Postfix, Dovecot, LDAP integration, and mail server configuration for secure email delivery."
+summary: "A collection of essential iRedMail commands and configuration snippets for managing mail transport, user authentication, and service ports."
 ---
 
 ```bash

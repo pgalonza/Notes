@@ -2,8 +2,8 @@
 title: "General"
 date: 2026-02-20T19:39:13+03:00
 draft: false
-description: "General"
-summary: ""
+description: "Overview of essential containerization tools and concepts, including image builders, registry utilities, and general best practices for working with containers."
+summary: "A reference page listing key container tools like skopeo, buildah, and buildkit, along with foundational knowledge for effective container management."
 ---
 
 {{< toc >}}

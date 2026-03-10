@@ -1,7 +1,8 @@
 ---
 title: "PIP"
 draft: false
-description: "Python PIP notes"
+description: "Python PIP configuration notes for using private package repositories like Nexus, including trusted-host and index-url settings."
+summary: "Quick reference for configuring pip to work with private artifact repositories, ensuring secure and efficient Python package management."
 ---
 
 Nexus

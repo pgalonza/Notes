@@ -1,7 +1,8 @@
 ---
 title: "Regexp"
 draft: false
-description: "Regexp notes"
+description: "Practical regular expression (regex) examples for IP addresses, emails, URLs, and network device configurations. Useful for scripting, log parsing, and data validation."
+summary: "A collection of ready-to-use regex patterns for common tasks, including network monitoring, email validation, and social media filtering."
 ---
 
 {{< toc >}}

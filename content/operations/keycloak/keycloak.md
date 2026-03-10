@@ -1,7 +1,8 @@
 ---
 title: "Keycloak"
 draft: false
-description: "Keycloak notes"
+description: "Keycloak identity and access management notes covering OAuth2/OpenID Connect token flows, TLS client certificate authentication, and security hardening."
+summary: "A practical guide to Keycloak administration, including token acquisition, Nginx integration, realm configuration, and Ansible automation."
 ---
 
 {{< toc >}}

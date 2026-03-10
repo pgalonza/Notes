@@ -1,7 +1,8 @@
 ---
 title: Proccess
 draft: false
-description: "CLI commands for wotk with linux proccess"
+description: "Comprehensive guide to Linux process management: monitoring, killing, namespaces, cgroups, priority tuning, file descriptor inspection, and performance analysis with tools like ps, top, strace, and perf."
+summary: "A practical reference for system administrators and developers covering essential commands and techniques for analyzing, controlling, and optimizing Linux processes."
 ---
 
 {{< toc >}}

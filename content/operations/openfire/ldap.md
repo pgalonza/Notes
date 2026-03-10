@@ -1,7 +1,8 @@
 ---
 title: "LDAP"
 draft: false
-description: "OpenFire LDAP notes"
+description: "LDAP filter examples for Openfire XMPP server integration with Active Directory, covering user and group membership queries."
+summary: "Useful LDAP search filters to configure Openfire authentication and group synchronization with Active Directory."
 ---
 
 Users in group

@@ -1,7 +1,8 @@
 ---
 title: Network
 draft: false
-description: "CLI commands for NetStat"
+description: "Comprehensive Linux networking notes covering MTU checks, port testing, VLAN/MACVLAN/bridge configuration, VRRP with Keepalived, netstat commands, and NetworkManager settings for system administrators."
+summary: "A practical reference for Linux network configuration, from basic port checks to advanced virtual interfaces and high‑availability setups using VRRP and Keepalived."
 ---
 
 {{< toc >}}

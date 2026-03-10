@@ -3,6 +3,7 @@ title: "Security"
 date: 2024-08-21T11:52:02+03:00
 draft: false
 description: "Discover essential security tips and best practices for Linux, designed to protect your server against threats and ensure its smooth operation."
+summary: "A collection of Linux security auditing commands to detect misconfigurations, exposed secrets, suspicious files, and unauthorized access for hardening your system."
 ---
 
 

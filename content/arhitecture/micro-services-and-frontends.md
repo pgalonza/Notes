@@ -2,7 +2,8 @@
 title: "Micro services and frontends"
 date: 2024-10-02T21:33:00+03:00
 draft: false
-description: "Microservices and Microfrontends"
+description: "Comprehensive guide to microservices and microfrontends architecture, covering design patterns, integration strategies, deployment, and best practices for building scalable distributed systems."
+summary: "Explore key concepts, patterns, and implementation details for microservices and microfrontends, from decomposition and communication to monitoring and security."
 ---
 
 {{< toc >}}

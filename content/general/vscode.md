@@ -1,7 +1,8 @@
 ---
 title: "Visual Studio Code"
 draft: false
-description: "VSCode(Visual Studio Code) notes"
+description: "Essential Visual Studio Code (VSCode) notes covering useful extensions, troubleshooting tips, and configuration tweaks to enhance your development workflow."
+summary: "A curated collection of VSCode extensions and solutions to common issues, helping you customize your editor for maximum productivity."
 ---
 
 {{< toc >}}

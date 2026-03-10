@@ -1,7 +1,8 @@
 ---
 title: "Openfire"
 draft: false
-description: "OpenFire notes"
+description: "Openfire XMPP server configuration notes covering DNS SRV records, memory settings, and MySQL UTF-8 encoding troubleshooting."
+summary: "Essential Openfire setup tips for reliable XMPP service, including DNS configuration and database encoding fixes."
 ---
 
 {{< toc >}}

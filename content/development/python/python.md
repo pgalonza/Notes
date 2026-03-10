@@ -1,7 +1,8 @@
 ---
 title: "Python"
 draft: false
-description: "Python notes"
+description: "Comprehensive Python notes covering syntax, libraries, best practices, and code examples for developers. Ideal for quick reference and learning advanced Python features."
+summary: "A curated collection of Python snippets, module usage, and programming tips to enhance your coding efficiency and understanding."
 ---
 
 {{< toc >}}

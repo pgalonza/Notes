@@ -1,7 +1,8 @@
 ---
 title: "Dovecot"
 draft: false
-description: "Dovecot notes"
+description: "Dovecot IMAP/POP3 server configuration notes for LDAP authentication, mailbox quotas, performance tuning, and Russian folder names."
+summary: "Detailed Dovecot configuration examples covering LDAP integration, quota management, service limits, and mailbox localization."
 ---
 
 {{< toc >}}

@@ -1,7 +1,8 @@
 ---
 title: "YAML"
 draft: false
-description: "Yaml notes"
+description: "Practical YAML examples covering multiline strings, anchors, aliases, and merge keys for configuration files and DevOps tooling."
+summary: "A concise reference for YAML syntax, focusing on advanced features like multi‑line blocks, anchor/alias reuse, and merging maps."
 ---
 
 Multiline

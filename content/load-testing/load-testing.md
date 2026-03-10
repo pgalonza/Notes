@@ -3,7 +3,7 @@ title: "Load Testing"
 date: 2025-02-05T13:59:02+03:00
 draft: false
 description: "Learn the fundamentals of load testing, its importance. Explore key metrics and best practices for optimal application performance and reliability."
-summary: ""
+summary: "An overview of load testing methodologies, profiles, and tools to ensure your applications can handle expected and peak traffic loads."
 ---
 
 {{< toc >}}

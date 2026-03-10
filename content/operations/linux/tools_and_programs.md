@@ -1,7 +1,8 @@
 ---
 title: "Tools and Programs"
 draft: false
-description: "Tools and program notes"
+description: "Comprehensive list of Linux command-line tools and utilities for system administration, monitoring, networking, and recovery tasks."
+summary: "A curated reference of essential Linux tools, from tmux and rsync to monitoring utilities and forensic software, to boost your productivity."
 ---
 
 {{< toc >}}

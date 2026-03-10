@@ -1,7 +1,8 @@
 ---
 title: "Modules"
 draft: false
-description: "Python modules notes"
+description: "Comprehensive list of Python modules and libraries for development, testing, automation, and system administration, with brief descriptions."
+summary: "A curated reference of essential Python packages, from argparse and requests to testing frameworks and networking tools, to accelerate your projects."
 ---
 
 {{< toc >}}

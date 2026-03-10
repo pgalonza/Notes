@@ -3,7 +3,7 @@ title: "Software Development"
 date: 2025-02-11T23:08:40+03:00
 draft: false
 description: "Comprehensive security best practices for developing robust software applications. From coding standards to deployment, learn how to build secure software that protects user data and maintains compliance."
-summary: ""
+summary: "Guidelines and practices for integrating security into the software development lifecycle, covering threat modeling, risk management, data classification, and access control."
 ---
 
 {{< toc >}}

@@ -1,7 +1,8 @@
 ---
 title: "Other"
 draft: false
-description: "Linux command notes"
+description: "Comprehensive collection of Linux commands for system administration, DevOps, and troubleshooting. Covers file operations, networking, process management, security, and utilities like tar, grep, sed, ffmpeg, and more."
+summary: "A handy reference of Linux command snippets, from basic file operations to advanced system tuning, suitable for daily use by sysadmins and developers."
 ---
 
 {{< toc >}}

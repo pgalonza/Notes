@@ -3,7 +3,7 @@ title: "System"
 draft: false
 date: 2025-04-10T23:00:00+03:00
 description: "Comprehensive security checklists for architecting robust and resilient systems. From infrastructure design to deployment strategies, these step-by-step guides ensure your architectural blueprint meets the highest security standards."
-summary: ""
+summary: "A thorough checklist for designing and deploying secure systems, covering access management, data protection, infrastructure hardening, incident response, and perimeter security."
 ---
 
 {{< toc >}}

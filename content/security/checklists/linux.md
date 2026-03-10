@@ -3,7 +3,7 @@ title: "Linux"
 date: 2025-04-10T00:15:59+03:00
 draft: false
 description: "Comprehensive Linux security checklist to help you fortify your system against threats. From basic configurations to advanced hardening techniques, these step-by-step guides ensure your Linux environment remains secure and compliant."
-summary: ""
+summary: "A step-by-step checklist for hardening Linux systems, covering access control, kernel security, distribution‑specific measures, and compliance with security best practices."
 ---
 
 {{< toc >}}

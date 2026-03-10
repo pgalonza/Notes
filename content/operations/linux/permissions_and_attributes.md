@@ -1,7 +1,8 @@
 ---
 title: "Permissions, flags and attributes"
 draft: false
-description: "Linux permission notes"
+description: "Linux file permissions, special flags (sticky bit), and capabilities management notes, including recovery techniques for broken chmod."
+summary: "A practical guide to Linux permission manipulation, from basic chmod to advanced capabilities and systemd integration."
 ---
 
 Change uid and gid

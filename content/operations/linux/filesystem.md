@@ -1,7 +1,8 @@
 ---
 title: "Filesystem"
 draft: false
-description: "Linux filesystem notes"
+description: "Comprehensive Linux filesystem management: disk partitioning, RAID, SMART monitoring, filesystem check/repair, resizing, mounting, and data recovery techniques for system administrators."
+summary: "A practical guide to Linux filesystem operations, from basic disk inspection to advanced recovery using tools like dd, fsck, xfs_repair, and testdisk."
 ---
 
 {{< toc >}}

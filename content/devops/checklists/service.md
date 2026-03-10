@@ -1,7 +1,8 @@
 ---
 title: "Service"
 draft: false
-description: "Check list for new service"
+description: "Comprehensive DevOps checklist for launching a new service, covering version control, CI/CD, networking, observability, databases, and security."
+summary: "A step-by-step checklist to ensure your new service is production-ready, from initial setup to monitoring and rollback strategies."
 ---
 
 ## New service

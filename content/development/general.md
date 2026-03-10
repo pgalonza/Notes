@@ -1,7 +1,8 @@
 ---
 title: "General"
 draft: false
-description: "Development notes"
+description: "General development notes covering tools, newline representations, ANSI escape codes, and API authentication examples for VKontakte."
+summary: "A miscellaneous collection of development references, from Postman usage and character encoding to terminal colors and social media API tokens."
 ---
 
 {{< toc >}}
