@@ -34,7 +34,7 @@ aliases:
 
 ## LLM (Large Language Model)
 
-### LLM Deployment Tools
+### LLM Providers
 
 - [Ollama](https://ollama.com/)
 - [vLLM](https://vllm.ai/)
@@ -60,6 +60,9 @@ aliases:
 - [Llamaindex](https://www.llamaindex.ai/)
 - [Fastmcp](https://github.com/jlowin/fastmcp)
 - [python-sdk](https://github.com/modelcontextprotocol/python-sdk)
+
+## Tools
+  - [llmft](https://github.com/AlexsJones/llmfit)
 
 ### Prompt engineering
 
