@@ -87,7 +87,7 @@ aliases:
 ## Agents
 
 - [Agents.md](https://agents.md/) - complements this by containing the extra, sometimes detailed context coding agents need: build steps, tests, and conventions that might clutter a README or aren’t relevant to human contributors.
-
+- [Soul.md](https://soul.md/) - soul document captures an AI’s identity: values, boundaries, human ties.
 
 ## Resources
 
