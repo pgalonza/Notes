@@ -145,6 +145,39 @@ Remove file in all commits
 git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch <file>' --prune-empty
 ```
 
+Show who last modified each line of a file
+
+```bash
+git blame <file name>
+```
+
+Replace objects
+
+```bash
+git replace
+```
+
+Restore removed commits
+
+```bash
+git reflog
+git log -g
+git fsck --full
+git branch <branch name> <hash of lost commit>
+```
+
+Garbage collector
+
+```bash
+git gc --full
+```
+
+Show size of repository
+
+```bash
+git count-objects -v
+```
+
 ## Create new repository
 
 Create the folder and initialization on server
