@@ -40,6 +40,10 @@ docker rm $(docker ps -a -q)
 docker rmi $(docker images -q -f dangling=true)
 ```
 
+Host config path
+
+__/var/lib/docker/containers/<ID>/hostconfig.json__
+
 ## Commands
 
 ```bash
