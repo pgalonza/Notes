@@ -133,12 +133,6 @@ Sort branch by date
 git config --global branch.sort -committerdate
 ```
 
-Store credentials
-
-```bash
-git config --global credential.helper store
-```
-
 Remove file in all commits
 
 ```bash
@@ -279,6 +273,12 @@ Resets using index
 ```bash
 git reflog
 git reset HEAD@{<index>}
+```
+
+Remove HEAD link for reset branch
+
+```bash
+git update-ref -d HEAD
 ```
 
 ## Log
