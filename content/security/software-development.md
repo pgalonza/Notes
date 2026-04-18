@@ -46,6 +46,9 @@ summary: "Guidelines and practices for integrating security into the software de
     - The amount of risk = the probability of the event * the amount of damage
     - Probability of an event = the probability of a threat * the magnitude of the vulnerability
     - ALE = SLE * ARO
+- Vulnerability registries
+    - CVE (Common Vulnerabilities and Exposures)
+    - CWE (Common Weakness Enumeration)
 - Risk analysis
     1. Идентификация активов
     2. Определение ценности активов
@@ -54,6 +57,8 @@ summary: "Guidelines and practices for integrating security into the software de
     5. Оценка вероятности реализации угроз и влияние и их влияние на бизнес
     6. Оценка стоимиости возможных негативных последствий и стоимости мер защиты
     7. Формирование конкретных, приоритизированных рекоменгдаций по выявленным рискам и методам их минимизации
+- Risk assessment
+    - CVSS (Common Vulnerability Scoring System)
 - Approaches to risk analysis
     - Qualitative analysis
         - Risk
