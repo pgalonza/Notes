@@ -14,15 +14,20 @@ openssl s_client -connect <host name> -cipher <cipher name>
 
 ## SSL/TLS
 
-Import Centos
+Import RHEL
 _/etc/pki/ca-trust/source/anchors/_
+
+_/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem_
+
 
 ```bash
 update-ca-trust
 ```
 
-Import Ubuntu
+Import Debian
 _/usr/local/share/ca-certificates/_
+
+_/etc/ssl/certs/ca-certificates.crt_
 
 ```bash
 update-ca-certificates
