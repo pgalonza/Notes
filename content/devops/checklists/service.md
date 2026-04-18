@@ -21,6 +21,21 @@ summary: "A step-by-step checklist to ensure your new service is production-read
     - [ ] Linters
     - [ ] Quality gates
     - [ ] Rollback
+    - [ ] DevSecOps
+        - [ ] Pre-commit
+            - Local checks
+        - [ ] Pre-build
+            - Secrets detection
+            - Sast
+            - Source SCA
+        - [ ] Post-build
+            - Binary SCA
+        - [ ] Test-time
+            - DAST
+            - IAST
+            - OAST
+        - [ ] Post-deploy
+            - RAST
 - [ ] Network shielding
 - [ ] Metrics
     - [ ] Version
