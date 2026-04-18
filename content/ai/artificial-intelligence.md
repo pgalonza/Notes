@@ -41,6 +41,7 @@ aliases:
 - [llama.cpp](https://github.com/ggml-org/llama.cpp)
 - [LM Studio](https://lmstudio.ai/)
 - [koboldcpp](https://github.com/LostRuins/koboldcpp)
+- [sglang](https://github.com/sgl-project/sglang)
 
 ### LLM UI Clients
 
