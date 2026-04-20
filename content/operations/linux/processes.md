@@ -102,6 +102,18 @@ Hide processes (fstab)
 proc /proc hidepid=<0-2>, gid=<group> ...
 ```
 
+Simlink on proccess
+
+```bash
+ls /proc/self
+```
+
+Root dir for process
+
+```bash
+ls /proc/self/root
+```
+
 ## Open files, sockets
 
 Show maximum of open files
