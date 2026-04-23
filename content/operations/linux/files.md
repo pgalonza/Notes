@@ -25,11 +25,13 @@ stat <file path|filesystem path>
 ```
 
 Display ELF-file information
+
 ```bash
 readelf -a <file path|filesystem path>
 ```
 
 Show header of file
+
 ```bash
 cat /usr/bin/python3.9 | hexdump -C | head
 ```
@@ -38,6 +40,7 @@ Compare files
 
 ```bash
 comm
+diff
 ```
 
 Merge files
@@ -97,4 +100,23 @@ Find changed files use md5
 ```bash
 find . -type f -exec md5sum {} \; > checklist.chk
 md5sum -c checklist.chk
+```
+
+Display in hexadecimal
+
+```bash
+hexdump -C
+xdd
+```
+
+Output starting with byte
+
+```bash
+tail -c +<number of bytes> <file name>
+```
+
+Display the assembler mnemonics for the machine instructions
+
+```bash
+objdump -d <file name>
 ```

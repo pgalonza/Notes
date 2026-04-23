@@ -66,6 +66,12 @@ Show control sequences
 <Enter>~?
 ```
 
+Set perferred authentication method
+
+```bash
+-o PreferredAuthentications=password
+```
+
 ## SSH Keys
 
 Generate RSA
