@@ -271,6 +271,7 @@ RP2040 microcontroller designed here at Raspberry Pi for load Hekate, enter in R
 * FPSLocker - set custom FPS in games. [GitHub](https://github.com/masagrator/FPSLocker), [Patches](https://github.com/masagrator/FPSLocker-Warehouse)
 * NX-60FPS-RES-GFX-Cheats - A database of 60FPS cheats, resolution cheats, and general graphics cheats. [GitHub](https://github.com/ChanseyIsTheBest/NX-60FPS-RES-GFX-Cheats)
 * FPSLocker-Warehouse - FPSLocker patches and methodology how to update them. [GitHub](https://github.com/masagrator/FPSLocker-Warehouse)
+* Horizon-OC - An open source overclocking tool forh consoles running Atmosphere custom firmware. [GitHub](https://github.com/Horizon-OC/Horizon-OC)
 
 **Ram configuration**
 
