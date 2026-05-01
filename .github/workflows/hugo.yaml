@@ -47,7 +47,7 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
         run: |
-          hugo --gc --minify
+          hugo --gc
       - name: Archive hugo artifacts
         uses: actions/upload-artifact@v6
         with:
