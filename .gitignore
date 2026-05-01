@@ -19,3 +19,5 @@ hugo.linux
 
 # Theme
 /themes/hugo-geekdoc
+
+/Agents.md
