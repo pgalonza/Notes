@@ -55,6 +55,7 @@ aliases:
 - [Jan.ai](https://www.jan.ai)
 - [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui)
 
+
 ### Development
 
 - [LangChain](https://github.com/hwchase17/langchain)
@@ -64,6 +65,8 @@ aliases:
 
 ## Tools
   - [llmft](https://github.com/AlexsJones/llmfit)
+  - [OpenCode](https://opencode.ai)
+  - [Roo Code](https://github.com/RooCodeInc/Roo-Code)
 
 ### Prompt engineering
 
