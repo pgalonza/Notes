@@ -457,6 +457,31 @@ Remove worktree
 git worktree remove <path>
 ```
 
+## LFS
+
+Install
+
+```bash
+git lfs install
+```
+
+Track file
+
+```bash
+git lfs track "<template>"
+```
+
+Migrate file
+
+```bash
+git lfs migrate import --include="<template>" --everything
+```
+
+Show tracked files
+
+```bash
+git lfs ls-files
+```
 
 ## Troubleshooting
 
