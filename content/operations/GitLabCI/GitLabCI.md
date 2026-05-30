@@ -6,7 +6,9 @@ description: "GitLab CI notes"
 
 {{< toc >}}
 
-## Add new runner for project
+## Shell executor
+
+### Add new runner for project
 
 Create runner for project
 
@@ -45,7 +47,7 @@ Start runner
 systemctl start gitlab-runner-<project_name>
 ```
 
-## Ansible
+### Ansible
 
 SSH key
 
@@ -74,7 +76,7 @@ after_script:
   - kill $(cat ssh_agent.pid)
 ```
 
-## Troubleshooting
+### Troubleshooting
 
 Skipping cache extraction due to empty cache
 _config.toml_
@@ -88,3 +90,11 @@ Value type file
 ```toml
 open(file_name, encoding='utf-8-sig')
 ```
+
+## Docker executor
+
+Capabilities
+
+- CAP_DAC_OVERRIDE
+- CAP_CHOWN
+- CAP_FOWNER
