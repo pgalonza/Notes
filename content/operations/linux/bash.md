@@ -276,6 +276,12 @@ Don’t read the ~/.bashrc and /etc/bash.bashrc
 bash --norc
 ```
 
+Home path of user
+
+```bash
+~<user>
+```
+
 ## Variables
 
 Separator
