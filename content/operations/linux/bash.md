@@ -410,3 +410,15 @@ Stop execution if error
 ```bash
 set -euo pipefail
 ```
+
+Session timeout
+
+```bash
+typeset -xr TMOUT=<>
+
+declare -xr TMOUT=<>
+
+TMOUT=<>
+readonly TMOUT
+export TMOUT
+```
