@@ -134,3 +134,10 @@ summary: "Guidelines and practices for integrating security into the software de
     - [OASIS](https://oasis.connectedcommunity.org/communities/tc-community-home2?CommunityKey=67afe552-0921-49b7-9a85-018dc7d3ef1d#CURRENT)
     - [ALFA](https://alfa.guide/abbreviatedlanguageforauthorization-alfa/)
     - [NIST](https://www.nist.gov/identity-access-management/policy-machine-and-next-generation-access-control)
+
+
+## Containers
+
+### Java
+
+- [How to build a custom Java image](https://github.com/lebmax/java-custom-container)

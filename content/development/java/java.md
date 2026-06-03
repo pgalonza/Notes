@@ -12,3 +12,26 @@ set timezone in logback
     %d{"yyyy-MM-dd HH:mm:ss.SSS", Europe/Moscow}
 </Pattern>
 ```
+
+## Tunning
+
+[Information from](https://github.com/lebmax/java-custom-container)
+
+```bash
+jdeps --ignore-missing-deps -q  \
+--recursive  \
+--multi-release 25  \
+--print-module-deps  \
+--class-path 'BOOT-INF/lib/*'  \
+target/app.jar > deps.info
+```
+
+```bash
+jlink \
+--add-modules java.base \
+--strip-debug \
+--compress zip-9 \
+--no-header-files \
+--no-man-pages \
+--output <dir>
+```
