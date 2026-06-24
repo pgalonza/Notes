@@ -65,6 +65,19 @@ docker exec -it container_name bash
 --read-only
 ```
 
+[gosu](https://github.com/tianon/gosu)
+
+```bash
+gosu
+```
+
+Get capabilities
+
+```bash
+docker inspect <container name> --format '{{.State.Pid}}'
+cat /proc/<PID>/status | grep Cap
+```
+
 ## Tools
 
 * Crane - tool for Docker containers orchestration written in Go.
@@ -98,11 +111,3 @@ wait $!
 ## Build images
 
 [Example](https://github.com/pgalonza/docker-build-demo)
-
-## Security
-
-[gosu](https://github.com/tianon/gosu)
-
-```bash
-gosu
-```
