@@ -99,7 +99,7 @@ git push --all
 Remove file from all commits
 
 ```bash
-git filter-branch --index-filter 'rm -f <file name> -- --all'
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch <file name>' -- --all
 ```
 
 Delete remote brannch
