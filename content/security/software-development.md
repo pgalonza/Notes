@@ -141,3 +141,37 @@ summary: "Guidelines and practices for integrating security into the software de
 ### Java
 
 - [How to build a custom Java image](https://github.com/lebmax/java-custom-container)
+
+## Cookies
+
+Golden session cookie. [Information from](https://edu.eversecure.ru/devsecops)
+
+```text
+Set-Cookie: session=<session id>; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=3600
+```
+
+## Web Vulnerabilities
+
+- **IDOR (Insecure Direct Object Reference)**
+    - Occurs when an application exposes direct references to internal objects (e.g., database IDs) without proper access control
+    - Example: `/api/users/123` — modifying `123` to access another user's data
+    - Mitigation: enforce authorization checks for every object access, use indirect references (UUIDs)
+
+- **Path Traversal**
+    - Attacker manipulates file paths to access files and directories outside the web root
+    - Example: `../../../etc/passwd`
+    - Mitigation: normalize and validate paths, use allowlists, avoid passing user input directly to filesystem APIs
+
+- **CSRF (Cross-Site Request Forgery)**
+    - An attacker tricks an authenticated user into executing unwanted actions on a web application
+    - Mitigation: CSRF tokens, SameSite cookies (Strict/Lax), validate Origin/Referer headers
+
+- **SSRF (Server-Side Request Forgery)**
+    - A server-side application fetches a URL supplied by the attacker, targeting internal resources
+    - Example: `?url=http://169.254.169.254/` (cloud metadata endpoint)
+    - Mitigation: allowlist of permitted URLs/domains, block private IP ranges, implement egress network policies
+
+- **Open Redirect**
+    - An application accepts a user-controlled URL and redirects without validation
+    - Example: `/redirect?url=https://evil.com`
+    - Mitigation: allowlist of permitted redirect destinations, use relative paths, avoid passing raw URLs from user input
