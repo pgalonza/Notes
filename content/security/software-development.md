@@ -169,7 +169,29 @@ Set-Cookie: session=<session id>; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Ag
 - **SSRF (Server-Side Request Forgery)**
     - A server-side application fetches a URL supplied by the attacker, targeting internal resources
     - Example: `?url=http://169.254.169.254/` (cloud metadata endpoint)
+    - **Blind SSRF** — no direct response; requires out-of-band detection via DNS/HTTP callbacks
+    - **SVG Upload** — using SVG files with external entity references to trigger server-side requests
+    - **XInclude** — XML Inclusions to include external resources during server-side XML processing
     - Mitigation: allowlist of permitted URLs/domains, block private IP ranges, implement egress network policies
+
+- **XXE (XML External Entity Injection)**
+    - Attack exploiting XML parsers that process external entities, leading to file disclosure, SSRF, or DoS
+    - **DTD (Document Type Definition)** — defines XML structure and can reference external resources
+    - **dtd-locker** — technique to lock a malicious DTD for out-of-band data exfiltration
+    - **In-Band** — extracted data returned directly in the server response
+    - **Error-Based** — data extraction through verbose XML parsing error messages
+    - **Out-of-Band (OOB)** — exfiltration via external channels (DNS, HTTP); requires an OOB collector
+    - Mitigation: disable external entity processing in XML parsers, use less complex data formats (JSON)
+
+- **NGINX Misconfiguration**
+    - **Off-by-slash** — path traversal caused by missing trailing slash in `alias` directive
+    - **Alias Traversal** — directory traversal via misconfigured `alias` block (e.g., `/static` → `/static../`)
+    - Mitigation: always add trailing slashes consistently, avoid `alias` inside regex locations, prefer `root`
+
+- **CORS Misconfiguration**
+    - Overly permissive `Access-Control-Allow-Origin` (e.g., reflecting arbitrary origins or using `*` with credentials)
+    - Allows attackers to read sensitive cross-origin responses on behalf of authenticated users
+    - Mitigation: restrict `Access-Control-Allow-Origin` to a specific allowlist, avoid reflecting `Origin` header
 
 - **Open Redirect**
     - An application accepts a user-controlled URL and redirects without validation
