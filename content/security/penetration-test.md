@@ -38,6 +38,7 @@ summary: "A curated collection of penetration testing tools and approaches based
 
 - **Ghidra** – Software reverse engineering framework developed by NSA, supporting disassembly, decompilation, and scripting.
 - **binwalk** – Firmware analysis tool for extracting embedded files and executable code from binary images.
+- **gdb** – GNU debugger for analyzing binaries, inspecting memory, disassembling code, and debugging crashes or core dumps.
 - **objdamp** – Display information from object files.
 
 ### System & Kernel Tracing
