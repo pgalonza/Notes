@@ -60,22 +60,51 @@ docker exec -it container_name bash
 
 ## Security
 
+### Security Options
+
 ```bash
 --security-opt=no-new-privileges
 --read-only
 ```
 
-[gosu](https://github.com/tianon/gosu)
+### Linux Capabilities
+
+Fine-grained privilege control by adding or dropping individual capabilities.
 
 ```bash
-gosu
+--cap-drop=ALL --cap-add=NET_BIND_SERVICE
 ```
 
-Get capabilities
+View container capabilities:
 
 ```bash
 docker inspect <container name> --format '{{.State.Pid}}'
 cat /proc/<PID>/status | grep Cap
+capsh --decode=$(grep CapEff /proc/<PID>/status | awk '{print $2}')
+```
+
+### Seccomp
+
+Seccomp (secure computing mode) filters allowed system calls. Default Docker profiles block ~50 dangerous syscalls.
+
+Use `unconfined` when a container requires blocked syscalls (e.g. systemd containers, debugging, or legacy software):
+
+```bash
+--security-opt seccomp=unconfined
+```
+
+Pass a custom profile for fine-grained control:
+
+```bash
+--security-opt seccomp=/path/to/custom-profile.json
+```
+
+### User & Privilege Drop
+
+[gosu](https://github.com/tianon/gosu)
+
+```bash
+gosu
 ```
 
 ## Tools
