@@ -8,7 +8,51 @@ aliases:
 
 {{< toc >}}
 
-EOF
+## Restore .bashrc
+
+```bash
+cp /etc/skel/{.bashrc,.bash_profile,.bash_logout} .
+```
+
+## Shebang
+
+Shebang indicate an interpreter for execution under UNIX / Linux operating systems
+
+```bash
+#!
+```
+
+```bash
+#!/bin/bash
+#!/bin/env bash
+```
+
+## Bash profile scripts
+
+* _/etc/profile.d/_
+
+## Set variables from property
+
+```bash
+#! /bin/nash
+
+function read_properties {
+  grep "${1}" <file_name>.properties|cut -d'=' -f2|tr -d '[:space:]'
+}
+
+WORK_DIR="$(dirname "$0")"
+cd $WORK_DIR
+
+export <variable_name> = $(read_properties <'parameter_name'>)
+```
+
+## Environment
+
+_/etc/environment_
+
+```bash
+export PYTHONPATH=/data/libraries_and_modules/python
+```
 
 ```bash
 < dev/null

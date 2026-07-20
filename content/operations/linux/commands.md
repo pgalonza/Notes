@@ -7,6 +7,19 @@ summary: "A handy reference of Linux command snippets, from basic file operation
 
 {{< toc >}}
 
+## Linux on Android
+
+- [localdesktop](https://localdesktop.github.io/)
+
+## Limits
+
+Get name and path byte limits
+
+```
+getconf -a | grep -i name_max
+getconf -a | grep -i path_max
+```
+
 Format the flash card
 
 ```bash

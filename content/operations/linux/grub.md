@@ -8,6 +8,19 @@ aliases:
 
 {{< toc >}}
 
+## Edit in Grub menu
+
+1. Choose edit in Grub menu
+2. Add in linux line `init=/bin/bash`
+3. Change ro to rw
+4. Remove single, splash and quiet words
+
+## Generate configuration file
+
+```bash
+grub-mkconfig -o /boot/grub2/grub.cfg
+```
+
 ## Linux kernel options
 
 Speculation protection disable

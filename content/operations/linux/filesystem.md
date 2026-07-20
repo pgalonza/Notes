@@ -7,6 +7,79 @@ summary: "A practical guide to Linux filesystem operations, from basic disk insp
 
 {{< toc >}}
 
+## Hard disk partitions
+
+```bash
+/dev/sda1 — boot
+/dev/sda2 — root (/)
+/dev/sda3 — home
+/dev/sda4 — var
+/dev/sda5 — tmp
+/dev/sda6 — swap
+```
+
+## SWAP
+
+### Create SWAP
+
+Swap file
+
+```bash
+fallocate -l 1G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+```
+
+_/etc/sysctl.conf_
+
+```text
+vm.swappiness=10
+```
+
+## FSTAB
+
+Do not allow set-user-identifier or set-group-identifier bits to take effect
+
+```text
+nosuid
+```
+
+Do not allow direct execution of any binaries on the mounted filesystem
+
+```text
+noexec
+```
+
+## CIFS
+
+```text
+//"host"/"path" /"path" cifs domain="",username="",password="",file_mode=0760,dir_mode=0760,vers=3.0,gid="" 0 0
+```
+
+Check CIFS if mount
+
+```bash
+#!/bin/sh
+RESULT=$(mount -v | grep -i -e 'type smb' -e 'type cifs')
+if [ -n "$RESULT" ]; then
+  exit
+else
+  mount -a
+fi
+```
+
+## Chroot
+
+```bash
+mount /dev/<root> /mnt
+mount /dev/<boot> /mnt/boot
+mount --bind /dev /mnt/dev
+mount --bind /sys /mnt/sys
+mount --bind /proc /mnt/proc
+chroot /mnt /bin/bash
+```
+
 ## Commands
 
 View

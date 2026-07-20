@@ -5,6 +5,21 @@ description: "Essential Linux system information commands: CPU, memory, block de
 summary: "A handy reference of command‑line tools to gather detailed system insights, from hardware topology to OS version and reboot logs."
 ---
 
+## Locale
+
+Set global
+
+```bash
+localectl set-locale <locale variable>=<locale value>
+vim /etc/locale.conf
+```
+
+Set for user
+
+```bash
+export <locale variable>=<locale value>
+```
+
 Print real and effective user and group IDs
 
 ```bash

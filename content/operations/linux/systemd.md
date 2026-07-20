@@ -7,6 +7,46 @@ summary: "A practical reference for systemd commands and configurations, from ba
 
 {{< toc >}}
 
+## Limits
+
+_/etc/systemd/system.conf_, _/etc/systemd/user.conf_,  _/etc/systemd/<systemd_unit>/override.conf_
+
+```text
+DefaultLimitNOFILE=
+```
+
+_/lib/systemd/system/<service>_, _/etc/systemd/*_, _/usr/lib/systemd/system/<service>_
+
+```text
+LimitNOFILE=
+```
+
+_override.conf_
+
+```bash
+mkdir /etc/systemd/system/service_name.service.d/
+```
+
+```ini
+[Service]
+LimitNOFILE=100000
+```
+
+Show limits
+
+```python
+import platform
+
+if 'linux' in platform.system().lower():
+    import resource  # Linux only
+
+    limit_nofile = resource.getrlimit(resource.RLIMIT_NOFILE)
+    limit_nproc = resource.getrlimit(resource.RLIMIT_NPROC)
+
+    print ('Max number of opened files allowed:', limit_nofile)
+    print ('Max number of processes allowed', limit_nproc)
+```
+
 Show problems
 
 ```bash

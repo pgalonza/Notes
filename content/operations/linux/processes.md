@@ -7,6 +7,41 @@ summary: "A practical reference for system administrators and developers coverin
 
 {{< toc >}}
 
+## Background
+
+Running some program in background
+
+```bash
+nohup <program_name> > <program_name>.out 2> <program_name>.err < /dev/null & echo -n "$!" > pid.file &
+```
+
+## Pipes
+
+Create named pipe
+
+```bash
+mkfifo <name of pipe>
+mknod <name of pipe> p
+```
+
+Write in pipe
+
+```bash
+echo <> > <pipe path>
+```
+
+Read from pipe
+
+```bash
+tail -f <pipe path>
+```
+
+Remove named pipe
+
+```bash
+unlink <pipe path>
+```
+
 ## Process Discovery
 
 Look up process by name

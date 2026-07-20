@@ -7,6 +7,38 @@ summary: "A practical reference for managing Linux users and groups, covering co
 
 {{< toc >}}
 
+## Sudoers
+
+Root without asking password
+
+```bash
+<user_name> ALL=(ALL) NOPASSWD: ALL
+```
+
+_/etc/sudoers_
+Write logs
+
+```text
+Defaults  log_host, log_year, logfile="/var/log/sudo.log"
+```
+
+Run command with sudo without password
+
+```text
+notify ALL=(ALL) NOPASSWD:path_to_command, path_to_command
+```
+
+## Reset password
+
+### Mount
+
+```bash
+sudo mount /dev/<device id> /mnt
+chroot /mnt /bin/bash
+passwd <user name>
+sudo umount -l /mnt
+```
+
 Show real and effective user and group IDs
 
 ```bash
