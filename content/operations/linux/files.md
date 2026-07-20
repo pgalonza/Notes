@@ -120,3 +120,116 @@ Display the assembler mnemonics for the machine instructions
 ```bash
 objdump -d <file name>
 ```
+
+## Search in files
+
+```bash
+find -name *.c -type f | xargs grep open
+
+grep -R open --include="*.c".
+```
+
+## Ldd
+
+Show shared object dependencies
+
+```bash
+ldd /path_to_object
+```
+
+## TAR
+
+Create archive
+
+```bash
+tar -cvpzf archive.tar.gz /forpack
+```
+
+Unpack archive
+
+```bash
+tar -xzvf archive.tar.gz
+tar -xfvj archive.tar.bz2 -C /var/www
+```
+
+View archive
+
+```bash
+tar -tf archive.tar
+```
+
+## TREE
+
+```bash
+tree -d -L 2
+```
+
+## SED
+
+Replace in all files
+
+```bash
+sed -i 's/old_text/new_text/g' *
+```
+
+## Grep
+
+Print only matching parts
+
+```bash
+grep -Eo "pattern" file | sort | uniq
+```
+
+## Cp
+
+Copy with attributes mode, ownership, timestamps
+
+```bash
+cp -rp /source /destination
+```
+
+Copy with save all parameters
+
+```bash
+cp -a /source /destination
+```
+
+Backup
+
+```bash
+cp <file name>.txt{,.bak}
+```
+
+## Shred
+
+Overwrite a file and delete
+
+```bash
+shred -zvu -n 10 file_name
+```
+
+Overwrite a file
+
+```bash
+shred -zv -n 10 file_name
+```
+
+Overwrite a partition
+
+```bash
+shred -fvz /dev/sdXX
+```
+
+## Tail
+
+Terminate tail when process over
+
+```bash
+tail -f <file name> --pid=<PID>
+```
+
+Wait when file exist
+
+```bash
+tail -f <file name> --retry
+```

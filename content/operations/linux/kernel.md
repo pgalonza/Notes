@@ -144,3 +144,97 @@ Show memory overcommit
 ```bash
 cat /proc/sys/vm/overcommit_memory
 ```
+
+## SysRq commands
+
+Unraw
+
+```
+Alt+SysRq+r
+```
+
+Terminate
+
+```
+Alt+SysRq+e
+```
+
+Kill
+
+```
+Alt+SysRq+i
+```
+
+Sync
+
+```
+Alt+SysRq+s
+```
+
+Unmount
+
+```
+Alt+SysRq+u
+```
+
+Reboot
+
+```
+Alt+SysRq+b
+```
+
+## Cache
+
+### Clean
+
+Write cache to persistent storage
+
+```bash
+sync
+```
+
+PageCache
+
+```bash
+sync; echo 1 > /proc/sys/vm/drop_caches
+```
+
+Inode and dentrie
+
+```bash
+sync; echo 2 > /proc/sys/vm/drop_caches
+sysctl -w vm.drop_caches=3
+```
+
+Inode, dentrie and PageCache
+
+```bash
+sync; echo 3 > /proc/sys/vm/drop_caches
+```
+
+Swap
+
+```bash
+swapoff -a && swapon -a
+```
+
+Percentage value controls the tendency of the kernel to reclaim
+the memory which is used for caching of directory and inode objects
+
+```bash
+echo 1000 > /proc/sys/vm/vfs_cache_pressure
+```
+
+## Entropy
+
+View the size of the entropy pool
+
+```bash
+cat /proc/sys/kernel/random/poolsize
+```
+
+View status of server's entropy
+
+```bash
+cat /proc/sys/kernel/random/entropy_avail
+```

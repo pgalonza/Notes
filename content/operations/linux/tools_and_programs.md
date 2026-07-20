@@ -128,3 +128,149 @@ summary: "A curated reference of essential Linux tools, from tmux and rsync to m
 * **adb** - Android Debug Bridge.
 * **fastboot** - Android Fastboot.
 * **[scrcpy](https://github.com/Genymobile/scrcpy)** - display and control your Android device.
+* **[localdesktop](https://localdesktop.github.io/)** - run Linux GUI apps on Android.
+
+## Utilities
+
+* **simple-http-server** - serve files via HTTP (`python -m SimpleHTTPServer` or `python3 -m http.server`).
+* **uuidgen** - create a new UUID value.
+* **nginx** - HTTP and reverse proxy server.
+* **ldconfig** - configure dynamic linker run-time bindings.
+* **man** - display system reference manual pages.
+* **tree** - display directory tree.
+
+## Chromium
+
+* **chromium** - open-source web browser.
+
+```bash
+# Proxy
+chromium --proxy-server="socks://host:9050"
+
+# Discards page
+browser://discards
+chrome://discards
+
+# Task manager
+Shift + ESC
+
+# Chrome Flags
+browser://flags/
+
+# GPU information
+browser://gpu/
+```
+
+## Ffmpeg
+
+* **ffmpeg** - multimedia framework.
+
+```bash
+# Video from RTSP
+ffmpeg -y -re -acodec pcm_s16le -rtsp_transport tcp -i rtsp:// -vcodec copy -af asetrate=22050 -acodec aac -b:a 96k -t 15 tmp/test.mp4
+
+# Screenshot from RTSP
+ffmpeg -rtsp_transport tcp -i rtsp:// -f image2 -vf fps=fps=1 -t 0.001 -ss 00:00:3 tmp/image.png
+
+# Use find
+FFMPEG_COMMAND="ffmpeg -hide_banner -loglevel error -y"
+find . -type f -name "*.mp4" -print0 | while read -r -d '' file_name; do
+    echo $file_name
+    $FFMPEG_COMMAND -nostdin -i "$file_name" <params> - | $FFMPEG_COMMAND -i - -i "$file_name" <params> "${file_name/.mp4/}-dpni_fixed.mp4"
+done
+```
+
+## Youtube-dl / yt-dlp
+
+* **youtube-dl / yt-dlp** - download videos from YouTube and other sites.
+
+```bash
+# Best video
+youtube-dl -f bestvideo+bestaudio 'url'
+
+# Best audio
+youtube-dl -f bestaudio 'url'
+
+# List of formats
+youtube-dl -F 'url'
+```
+
+## Sox
+
+* **sox** - Sound eXchange, audio processing tool.
+
+```bash
+# Convert to VoIP format
+sox -V vm-intro.wav -r 8000 -c 1 -t ul vm-intro.ulaw
+sox -V vm-intro.wav -r 8000 -c 1 -t al vm-intro.alaw
+sox -V vm-intro.wav -r 8000 -c 1 -t gsm vm-intro.gsm
+```
+
+## Benchmark
+
+* **fio** - flexible I/O tester.
+
+```bash
+# Read
+fio --name=randread --ioengine=libaio --iodepth=16 --rw=randread --bs=4k --direct=0 --size=512M --numjobs=4 --runtime=240 --group_reporting
+
+# Write
+fio --name=randwrite --ioengine=libaio --iodepth=1 --rw=randwrite --bs=4k --direct=0 --size=512M --numjobs=4 --runtime=240 --group_reporting
+
+# Read & Write
+fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=random_read_write.fio --bs=4k --iodepth=64 --size=4G --readwrite=randrw --rwmixread=75
+```
+
+## Curl
+
+* **curl** - transfer data from or to a server.
+
+```bash
+# REST API get
+curl --include --location --request GET 'https://site_name/?fields=parameter_name' --header 'Authorization: OAuth id'
+
+# Formatting JSON answer
+curl --location --request GET 'https://site_name/?fields=parameter_name' --header 'Authorization: OAuth id' | python -m json.tool
+
+# Download file
+curl --location --remote-name https://<url to file>
+```
+
+## QEMU
+
+* **qemu** - generic and open source machine emulator and virtualizer.
+
+```bash
+# LiveUSB
+qemu-system-x86_64 -hda /dev/sdX
+```
+
+## Kubectl
+
+* **kubectl** - Kubernetes command-line tool.
+
+```bash
+# Network utils
+kubectl run -it --rm --image amouat/network-utils test bash
+```
+
+## Scl
+
+* **scl** - Software Collections tool.
+
+```bash
+# Activate python environment
+scl enable rh-python<version_number> bash
+```
+
+## Man
+
+* **man** - display system reference manual pages.
+
+```bash
+# Description of the filesystem hierarchy
+man hier
+
+# ASCII table
+man ascii
+```

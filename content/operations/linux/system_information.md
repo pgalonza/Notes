@@ -128,3 +128,54 @@ lscpu --caches
 Collect all information about the system
 
 [Kaspersky collect information script](https://box.kaspersky.com/f/00a1a6d8beb24554a72d/?dl=1)
+
+## Limits
+
+Get name and path byte limits
+
+```bash
+getconf -a | grep -i name_max
+getconf -a | grep -i path_max
+```
+
+## Documentation
+
+```bash
+/usr/share/doc
+```
+
+## Time
+
+View system time
+
+```bash
+timedatectl status
+```
+
+## Memory
+
+Memory use
+
+```bash
+cat /proc/meminfo
+
+ps axo rss,comm,pid \
+| awk '{ proc_list[$2]++; proc_list[$2 "," 1] += $1; } \
+END { for (proc in proc_list) { printf("%d\t%s\n", \
+proc_list[proc "," 1],proc); }}' | sort -n | tail -n 10 | sort -rn \
+| awk '{$1/=1024;printf "%.0fMB\t",$1}{print $2}'
+```
+
+## Udevadm
+
+Show in realtime
+
+```bash
+udevadm monitor
+```
+
+Get attributes
+
+```bash
+udevadm info /dev/sdb1
+```

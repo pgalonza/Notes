@@ -370,6 +370,12 @@ Repair superblocks
 mkfs -t ext4 -n /dev/sda1
 ```
 
+Format the flash card as NTFS
+
+```bash
+mkfs -t ntfs 'Arch' -I /dev/sd*
+```
+
 * Recovery
 
 ```bash

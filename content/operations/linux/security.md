@@ -124,3 +124,82 @@ Get processes
 ```bash
 ps auxeww
 ```
+
+## HASH
+
+Take sum sha1
+
+```bash
+echo -n "actual_password_here" | sha1sum | tr [:lower:] [:upper:]
+```
+
+Take sum like shadow
+
+```bash
+python3 -c "import crypt; print(crypt.crypt('actual_password_here', '\$6\$random_salt\$'))"
+```
+
+## FAIL2BAN
+
+View
+
+```bash
+fail2ban-client status
+fail2ban-client status asterisk-udp
+```
+
+Unban
+
+```bash
+fail2ban-client set asterisk-udp unbanip ip_address
+```
+
+## IPTABLES
+
+View
+
+```bash
+iptables -n -L -v --line-numbers
+```
+
+## GPG
+
+Import key
+
+```bash
+gpg --keyserver keys.gnupg.net --recv-keys key
+```
+
+Generate key pair
+
+```bash
+gpg --full-gen-key
+```
+
+Show private keys
+
+```bash
+gpg --list-secret-keys --keyid-format LONG <email>
+```
+
+Export public key
+
+```bash
+gpg --armor --export <key_id>
+```
+
+## Keyring
+
+Get key
+
+```bash
+keyring get <service name> <username>
+```
+
+## Secret tool
+
+Get key
+
+```bash
+secret-tool lookup <attribute> <value>
+```

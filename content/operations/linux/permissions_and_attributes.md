@@ -17,6 +17,18 @@ find / -user 1005 -exec chown -h foo {} \;
 usermod -g <NEWGID> <LOGIN>
 ```
 
+Read ttyUSB0
+
+```bash
+chmod a+rw /dev/ttyUSB0
+```
+
+Cd rom access
+
+```bash
+chmod u+s /usr/bin/wodim
+```
+
 End-to-end file access without read directory
 
 ```bash
@@ -58,4 +70,98 @@ Set capabilities in systemd Unit
 ```bash
 CapabilityBoundingSet=CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_BIND_SERVICE
+```
+
+## ACL
+
+Set default permissions
+
+```bash
+setfacl -d -m u::rwx,g::r-x,o::r-x /home/test/
+```
+
+Remove default permission
+
+```bash
+setfacl -k /home/test/
+```
+
+Remove permission
+
+```bash
+setfacl -x user_name /home/test/
+```
+
+Recursive
+
+```bash
+setfacl -R
+```
+
+Remove all acl
+
+```bash
+setfacl -bn /home/test/
+```
+
+View permissions
+
+```bash
+getfacl
+```
+
+Umask
+
+```bash
+umask
+```
+
+## Chattr
+
+Make immutable
+
+```bash
+chattr +i <file name>
+```
+
+Only append
+
+```bash
+chattr +a <file name>
+```
+
+Kernel compress/decompress
+
+```bash
+chattr +c <file name>
+```
+
+Ignore when dump
+
+```bash
+chattr +d <file name>
+```
+
+Security remove
+
+```bash
+chattr +s <file name>
+```
+
+Remove with save data
+
+```bash
+chattr +u <file name>
+```
+
+Sync on disk
+
+```bash
+chattr +S <file name>
+```
+
+Show the file attributes
+
+```bash
+lsattr file_name
 ```

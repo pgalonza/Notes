@@ -495,3 +495,36 @@ tail -f /proc/pressure/io
 tail -f /proc/pressure/memory
 tail -f /proc/pressure/irq
 ```
+
+## Missing files or libraries
+
+Find missing libraries using strace
+
+```bash
+strace -eopen <application name>
+```
+
+Find missing libraries using LD_DEBUG
+
+```bash
+LD_DEBUG=files <application name>
+```
+
+Find interpreter
+
+```bash
+readelf -a /usr/bin/<application name> | grep interp
+```
+
+Debug library loading
+
+```bash
+LD_DEBUG=all /lib64/ld-linux-x86-64.so.2 <application name>
+```
+
+## Load one core
+
+```bash
+yes > /dev/null &
+perl -e 'while(1){}'
+```

@@ -219,6 +219,27 @@ Configuration directories
 /etc/tmpfiles.d/*.conf
 ```
 
+## SYSTEMCTL
+
+Systemd reload
+
+```bash
+systemctl daemon-reload
+```
+
+Restart network manager
+
+```bash
+systemctl restart NetworkManager
+```
+
+Masked/unmasked, completely disabled service
+
+```bash
+sudo systemctl mask service_name
+sudo systemctl unmask service_name
+```
+
 ## Login manager
 
 Show sessions

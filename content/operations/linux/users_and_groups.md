@@ -137,3 +137,35 @@ Remove user from group
 ```bash
 usermod -R group_name user_name
 ```
+
+## Sudo
+
+Run shell as another user
+
+```bash
+sudo -iu user_name
+sudo su - user_name command
+sudo su user_name -s "/bin/bash"
+```
+
+Execute the previous command with sudo
+
+```bash
+sudo !!
+```
+
+Write command results to file with privileges
+
+```bash
+echo 1 | sudo tee -a privileged_file > /dev/null
+```
+
+## SU
+
+Run shell as another user
+
+```bash
+su - user_name
+su -l user_name
+sudo su - user_name
+```

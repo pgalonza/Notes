@@ -54,6 +54,13 @@ _/etc/environment_
 export PYTHONPATH=/data/libraries_and_modules/python
 ```
 
+Set or clear environment variables
+
+```bash
+export var=
+export var=$var
+```
+
 ```bash
 < dev/null
 ```
@@ -324,6 +331,24 @@ Home path of user
 
 ```bash
 ~<user>
+```
+
+## Search by history
+
+```bash
+Ctrl+R
+```
+
+## Execute long command
+
+```bash
+Ctrl+X,E
+```
+
+## Terminal reinitialization
+
+```bash
+reset
 ```
 
 ## Variables

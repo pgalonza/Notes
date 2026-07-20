@@ -209,3 +209,33 @@ Network configurations
 /etc/NetworkManager/system-connections/
 
 /var/run/NetworkManager/system-connections/
+
+## DHCP
+
+Get dhcp
+
+```bash
+dhclient -v
+```
+
+## Ethtool
+
+Change interface speed
+
+```bash
+ethtool -s eth0 speed 100 duplex full
+```
+
+Create a new UUID value for interface
+
+```bash
+uuidgen eth1
+```
+
+## Nmcli
+
+Show devices
+
+```bash
+nmcli device show
+```
