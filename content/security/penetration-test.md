@@ -10,12 +10,131 @@ summary: "A curated collection of penetration testing tools and approaches based
 
 ## Tools
 
-- **Nmap** – Network mapper for host discovery, port scanning, version detection, and OS fingerprinting. Essential for initial reconnaissance.
+### Distributions
+
 - **Kali Linux (Image)** – Debian‑based distribution pre‑loaded with hundreds of security tools for penetration testing, forensics, and reverse engineering.
 - **Parrot Linux (Image)** – Security‑oriented distribution similar to Kali, with additional privacy and anonymity features.
+
+### Network Scanning & Reconnaissance
+
+- **Nmap** – Network mapper for host discovery, port scanning, version detection, and OS fingerprinting. Essential for initial reconnaissance.
+- **ncat** – Ncat (short for netcat) is a powerful and flexible command-line networking utility developed as part of the Nmap Project.
+- **socat** – Multipurpose relay tool for bidirectional data transfer between two independent data channels (files, pipes, sockets, SSL, etc.). Useful for port forwarding, proxying, and creating network connections.
+
+### Web Application Testing
+
 - **Burp Suite** – Integrated platform for web vulnerability scanning, intercepting proxies, and manual testing of web applications.
 - **ZAProxy** – Open‑source web application security scanner (OWASP ZAP) for automated finding of vulnerabilities and manual exploration.
 - **mitmproxy** – Interactive TLS‑capable intercepting HTTP proxy for debugging, testing, and security assessments.
-- **apk‑mitm** – Tool for preparing Android APK files for HTTPS inspection by bypassing certificate pinning.
+- **jwt_tool** – Command line tool for decoding, signing, and verifying JSON Web Tokens (JWTs).
+- **sqlmap** – Command line tool for extracting data from SQL databases.
+- **NoSQLMap** – Command line tool for automating SQL injection attacks on NoSQL databases.
+
+### Mobile Application Testing
+
+- **apk-mitm** – Tool for preparing Android APK files for HTTPS inspection by bypassing certificate pinning.
+
+### Reverse Engineering & Forensics
+
 - **Ghidra** – Software reverse engineering framework developed by NSA, supporting disassembly, decompilation, and scripting.
 - **binwalk** – Firmware analysis tool for extracting embedded files and executable code from binary images.
+- **objdamp** – Display information from object files.
+
+### System & Kernel Tracing
+
+- **bpftrace** – Dynamic tracing tool for Linux using eBPF; useful for kernel-level performance analysis and security monitoring (tracing syscalls, file operations, network events in real time).
+- **strace** – Linux system call tracer for debugging and monitoring system calls and signals. Helps analyze how binaries interact with the OS (file operations, network calls, process execution).
+
+### Password & Hash Analysis
+
+- **hashcat** – Command line tool for cracking hashes.
+
+## Cheats sheets
+
+- **Internal All The Things** - [Link](https://swisskyrepo.github.io/InternalAllTheThings/)
+- **GTFOBin** - [Link](https://gtfobins.org/)
+
+## Wordlists
+
+- **SecLists** - [Link](https://github.com/danielmiessler/SecLists)
+- **rockyou** - [Link](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt)
+- **Kali Linux wordlists** - [Link](https://gitlab.com/kalilinux/packages/wordlists)
+- **api-endpoints-bruteforce** - [Link](https://github.com/aleksey0xffd/api-endpoints-bruteforce)
+
+## Payloads
+
+- **PayloadsAllTheThings** - [Link](https://github.com/swisskyrepo/PayloadsAllTheThings)
+- **NoSQL injection** - [Link](https://portswigger.net/web-security/nosql-injection), [Link](https://denizhalil.com/2025/12/23/nosql-injection-attacks-mongodb-couchdb/)
+
+## Web Vulnerabilities
+
+- **IDOR (Insecure Direct Object Reference)**
+    - Occurs when an application exposes direct references to internal objects (e.g., database IDs) without proper access control
+    - Example: `/api/users/123` — modifying `123` to access another user's data
+    - Mitigation: enforce authorization checks for every object access, use indirect references (UUIDs)
+
+- **Path Traversal**
+    - Attacker manipulates file paths to access files and directories outside the web root
+    - Example: `../../../etc/passwd`
+    - Mitigation: normalize and validate paths, use allowlists, avoid passing user input directly to filesystem APIs
+
+- **CSRF (Cross-Site Request Forgery)**
+    - An attacker tricks an authenticated user into executing unwanted actions on a web application
+    - Mitigation: CSRF tokens, SameSite cookies (Strict/Lax), validate Origin/Referer headers
+
+- **SSRF (Server-Side Request Forgery)**
+    - A server-side application fetches a URL supplied by the attacker, targeting internal resources
+    - Example: `?url=http://169.254.169.254/` (cloud metadata endpoint)
+    - **Blind SSRF** — no direct response; requires out-of-band detection via DNS/HTTP callbacks
+    - **SVG Upload** — using SVG files with external entity references to trigger server-side requests
+    - **XInclude** — XML Inclusions to include external resources during server-side XML processing
+    - Mitigation: allowlist of permitted URLs/domains, block private IP ranges, implement egress network policies
+
+- **XXE (XML External Entity Injection)**
+    - Attack exploiting XML parsers that process external entities, leading to file disclosure, SSRF, or DoS
+    - **DTD (Document Type Definition)** — defines XML structure and can reference external resources
+    - **dtd-locker** — technique to lock a malicious DTD for out-of-band data exfiltration
+    - **In-Band** — extracted data returned directly in the server response
+    - **Error-Based** — data extraction through verbose XML parsing error messages
+    - **Out-of-Band (OOB)** — exfiltration via external channels (DNS, HTTP); requires an OOB collector
+    - Mitigation: disable external entity processing in XML parsers, use less complex data formats (JSON)
+
+- **NGINX Misconfiguration**
+    - **Off-by-slash** — path traversal caused by missing trailing slash in `alias` directive
+    - **Alias Traversal** — directory traversal via misconfigured `alias` block (e.g., `/static` → `/static../`)
+    - Mitigation: always add trailing slashes consistently, avoid `alias` inside regex locations, prefer `root`
+
+- **CORS Misconfiguration**
+    - Overly permissive `Access-Control-Allow-Origin` (e.g., reflecting arbitrary origins or using `*` with credentials)
+    - Allows attackers to read sensitive cross-origin responses on behalf of authenticated users
+    - Mitigation: restrict `Access-Control-Allow-Origin` to a specific allowlist, avoid reflecting `Origin` header
+
+- **Open Redirect**
+    - An application accepts a user-controlled URL and redirects without validation
+    - Example: `/redirect?url=https://evil.com`
+    - Mitigation: allowlist of permitted redirect destinations, use relative paths, avoid passing raw URLs from user input
+
+- **SQL Injection**
+    - Injecting malicious SQL queries through user input to read, modify, or delete database data
+    - **In-Band** — attacker receives results directly in the application response
+    - **In-Band Union** — using UNION operator to append attacker-controlled result sets
+    - **Error-Based** — extracting data through verbose database error messages
+    - **Blind** — no visible output; inferring data via Boolean-based or Time-based (SLEEP) conditions
+    - **Out-of-Band** — exfiltrating data through external channels (DNS, HTTP) when direct output is unavailable
+    - Mitigation: parameterized queries (prepared statements), input validation, least-privilege DB accounts
+
+- **NoSQL Injection**
+    - Injecting operators (`$ne`, `$gt`, `$regex`) or breaking query syntax in NoSQL databases (e.g., MongoDB)
+    - Example: `?username[$ne]=` — authentication bypass
+    - Mitigation: sanitize and type-check input, avoid raw query construction, use ORM query builders
+
+- **Vulnerable Dependency & Supply Chain**
+    - Using third-party libraries or components with known vulnerabilities (CVEs)
+    - **Supply Chain Attacks** — compromising dependencies during development or build pipeline (e.g., dependency confusion, typosquatting)
+    - Mitigation: SBOM (Software Bill of Materials), automated dependency scanning (Snyk, Dependabot), regular updates, vendor verification
+
+- **Crypto Failures**
+    - Weak encryption algorithms (DES, RC4), hardcoded keys, improper key management, missing encryption in transit
+    - **JWT HS256** — using a symmetric HMAC algorithm (HS256) with an asymmetric RSA public key as the secret; the attacker can forge tokens since the public key is often obtainable
+    - **JWT `none` algorithm** — JWTs with `"alg": "none"` bypass signature verification; the server accepts unsigned tokens if the implementation does not enforce a signature algorithm allowlist
+    - Mitigation: use modern algorithms (AES-256, ChaCha20), proper key rotation, enforce TLS 1.2+ for all data in transit; for JWTs: use asymmetric algorithms (RS256/ES256), validate `alg` header against an allowlist, reject `none` algorithm
