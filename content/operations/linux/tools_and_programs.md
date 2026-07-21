@@ -274,3 +274,24 @@ man hier
 # ASCII table
 man ascii
 ```
+
+## Certbot
+
+* **certbot** - automatic certificate management from Let's Encrypt.
+
+```bash
+# Create certificate
+certbot certonly --config ./certbot.ini --email <e-mail address> --work-dir </var/lib/letsencrypt> --config-dir <where save data> --domain <domain_name>
+
+# Renew certificate
+certbot renew --work-dir </var/lib/letsencrypt> --config-dir <where save data>
+```
+
+_certbot.ini_
+
+```text
+authenticator = standalone
+noninteractive = true
+agree-tos = true
+rsa-key-size = 2048
+```
