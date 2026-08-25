@@ -49,6 +49,7 @@ summary: "A curated collection of penetration testing tools and approaches based
 ### Password & Hash Analysis
 
 - **hashcat** – Command line tool for cracking hashes.
+- **john** - advanced offline password cracker.
 
 ## Cheats sheets
 
@@ -181,6 +182,30 @@ self.__init__.__globals__.__builtins__.__import__('os').popen('<command>').read(
     - **JWT HS256** — using a symmetric HMAC algorithm (HS256) with an asymmetric RSA public key as the secret; the attacker can forge tokens since the public key is often obtainable
     - **JWT `none` algorithm** — JWTs with `"alg": "none"` bypass signature verification; the server accepts unsigned tokens if the implementation does not enforce a signature algorithm allowlist
     - Mitigation: use modern algorithms (AES-256, ChaCha20), proper key rotation, enforce TLS 1.2+ for all data in transit; for JWTs: use asymmetric algorithms (RS256/ES256), validate `alg` header against an allowlist, reject `none` algorithm
+
+- **Mass Assignment**
+    - User-supplied request parameters are automatically bound to model attributes, allowing attackers to overwrite fields they shouldn't access (e.g., `role`, `is_admin`, `balance`)
+    - Example: adding `&is_admin=true` to a POST request
+    - Mitigation: allowlist writable fields, use DTOs/view models, disable auto-binding for sensitive attributes
+
+- **Log Exposure**
+    - Sensitive data (credentials, tokens, PII) is written to logs and exposed via misconfigured or publicly accessible log endpoints
+    - Example: passwords logged in plaintext, stack traces leaking internal paths or configuration
+    - Mitigation: redact/sanitize before logging, restrict log access, use structured logging with PII masking
+
+- **Log Forgery**
+    - Injecting malicious content into log records via newlines/CRLF or falsified data to forge events, mislead incident response, or hide traces
+    - Example: `%0a%0d[INFO] Login as admin` — forging a log entry through user-controlled input
+    - Mitigation: sanitize and encode log input, reject newlines in log messages, use a dedicated logging pipeline
+
+- **Loose Lips**
+    - Information disclosure through overly verbose error messages, stack traces, or excessive detail in responses ("loose lips sink ships" principle)
+    - Mitigation: generic user-facing errors, no stack traces in production, disclose the least information needed
+
+- **Failing Open**
+    - An access control grants access when it errors out or its dependency (auth service, policy engine) is unavailable — failing open instead of failing closed
+    - Example: an authorization check that returns "allow" on exception or when the auth service times out
+    - Mitigation: design to fail closed (deny by default), test error and failure paths
 
 ## Commands
 
