@@ -34,7 +34,7 @@ aliases:
 
 ## LLM (Large Language Model)
 
-### LLM Providers
+### LLM inference engines
 
 - [Ollama](https://ollama.com/)
 - [vLLM](https://vllm.ai/)
@@ -42,6 +42,8 @@ aliases:
 - [LM Studio](https://lmstudio.ai/)
 - [koboldcpp](https://github.com/LostRuins/koboldcpp)
 - [sglang](https://github.com/sgl-project/sglang)
+- [ExLlamaV2](https://github.com/turboderp-org/exllamav2)
+- [DMR](https://docs.docker.com/ai/model-runner/)
 
 ### LLM UI Clients
 
