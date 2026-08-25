@@ -239,7 +239,7 @@ mkinitcpio -p linux
 Установка grub
 
 ```bash
-pacman -S grub || efibootmgr
+pacman -S grub efibootmgr
 ```
 
 Устанавливаем загрузчик
@@ -247,7 +247,7 @@ pacman -S grub || efibootmgr
 ```bash
 grub-install --target=x86_64-efi /dev/sdx
 grub-install --recheck /dev/sdx
-grub-install --efi-directory=/boot/efi --boot-directory=/boot --bootloader-id=GRUB --target=x86_64-efi --recheck
+grub-install --efi-directory=/boot/efi --boot-directory=/boot --bootloader-id=Arch --target=x86_64-efi --recheck --removable
 ```
 
 Копипастим что-то важное
