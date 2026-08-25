@@ -172,6 +172,18 @@ Show size of repository
 git count-objects -v
 ```
 
+Search in all commits
+
+```bash
+git grep '<text>' $(git rev-list --all)
+```
+
+Show file in other branch or commit
+
+```bash
+git show <branch/commit>:<path to file>
+```
+
 ## Create new repository
 
 Create the folder and initialization on server
