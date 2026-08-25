@@ -9,6 +9,8 @@ summary: "A practical reference for managing Linux users and groups, covering co
 
 ## Sudoers
 
+[Manual](https://man7.org/linux/man-pages/man5/sudoers.5.html)
+
 Root without asking password
 
 ```bash
@@ -26,6 +28,18 @@ Run command with sudo without password
 
 ```text
 notify ALL=(ALL) NOPASSWD:path_to_command, path_to_command
+```
+
+Blocks execution of external commands (e.g., shell escape from an editor).
+
+```text
+<user_name> ALL=(ALL) NOEXEC: <command>
+```
+
+Excludes the specified command/variant from the sudoers rule.
+
+```text
+<user_name> ALL=(ALL) <command>
 ```
 
 ## Reset password
