@@ -54,6 +54,12 @@ rsync --chmod=ugo+x /usr/bin/chmod ./new_chmod
 python -c "import os;os.chmod('/usr/bin/chmod', 0755)"
 ```
 
+Get extended attributes
+
+```bash
+getfattr <file name>
+```
+
 ## Capabilities
 
 [Information from](https://t.me/cybersec_academy/1684)
