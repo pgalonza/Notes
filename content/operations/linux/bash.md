@@ -85,14 +85,6 @@ cat << EOF >> file_name
 EOF
 ```
 
-Multiline
-
-```bash
-{
-  <command>
-} > <file name>
-```
-
 PID of last process
 
 ```bash

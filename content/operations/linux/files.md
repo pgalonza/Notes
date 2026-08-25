@@ -121,6 +121,21 @@ Display the assembler mnemonics for the machine instructions
 objdump -d <file name>
 ```
 
+Multiline
+
+```bash
+{
+  <command>
+} > <file name>
+```
+
+Create file with content
+
+```bash
+echo "<content>" > <file name>
+printf "<content>" | tee <file name>
+```
+
 ## Search in files
 
 ```bash
@@ -232,4 +247,12 @@ Wait when file exist
 
 ```bash
 tail -f <file name> --retry
+```
+
+## Install
+
+Create directory
+
+```bash
+install -d <path>
 ```
