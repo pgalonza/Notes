@@ -393,6 +393,7 @@ Truncate an open file descriptor
 
 ```bash
 : > /proc/<PID>/fd/<fd number>
+truncate -s 0 /proc/<PID>/fd/<fd number>
 ```
 
 ### Inotify limits
