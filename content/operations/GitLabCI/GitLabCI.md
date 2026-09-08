@@ -76,7 +76,30 @@ after_script:
   - kill $(cat ssh_agent.pid)
 ```
 
-### Troubleshooting
+## Rules
+
+[Information from](https://edu.eversecure.ru/devsecops)
+
+Pipeline only on merge request
+
+```yaml
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH
+```
+
+## Docker executor
+
+Capabilities
+
+- CAP_DAC_OVERRIDE
+- CAP_CHOWN
+- CAP_FOWNER
+
+## Troubleshooting
 
 Skipping cache extraction due to empty cache
 _config.toml_
@@ -90,11 +113,3 @@ Value type file
 ```toml
 open(file_name, encoding='utf-8-sig')
 ```
-
-## Docker executor
-
-Capabilities
-
-- CAP_DAC_OVERRIDE
-- CAP_CHOWN
-- CAP_FOWNER
