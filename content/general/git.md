@@ -184,6 +184,12 @@ Show file in other branch or commit
 git show <branch/commit>:<path to file>
 ```
 
+Rename branch
+
+```bash
+git branch -m <current name> <target name>
+```
+
 ## Create new repository
 
 Create the folder and initialization on server
