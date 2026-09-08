@@ -59,6 +59,12 @@ Get pid
 systemctl status systemd-modules-load
 ```
 
+Show control group resource usage
+
+```bash
+systemd-cgtop -n1
+```
+
 ## Nspawn
 
 Create container system files
