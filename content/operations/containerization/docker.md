@@ -10,6 +10,8 @@ aliases:
 
 {{< toc >}}
 
+## Commands
+
 Create container from rootfs
 
 ```bash
@@ -40,22 +42,10 @@ docker rm $(docker ps -a -q)
 docker rmi $(docker images -q -f dangling=true)
 ```
 
-Host config path
-
-__/var/lib/docker/containers/<ID>/hostconfig.json__
-
-## Commands
+Show size of layers
 
 ```bash
-docker build --tag <image name> <path to rootfs>
-```
-
-```bash
-docker run --rm  --name container_name  -p 80:80 -v path_in_host:path_in_container tag/name:tag
-
-docker build -t tag/name:tag -f DockerFile .
-
-docker exec -it container_name bash
+docker history --human --format '{{.Size}}\t{{.CreatedBy}}' <image>
 ```
 
 ## Security
@@ -109,12 +99,19 @@ gosu
 
 ## Tools
 
-* Crane - tool for Docker containers orchestration written in Go.
-* Kaniko - build Container Images.
+* Crane - tool for building and managing container images, written in Go.
+* BuildKit - tool for building container images, written in Go.
+* Buildah - tool for building OCI/Docker container images without a daemon, written in Go.
 
 ## Cache
 
 [Optimize cache usage in builds](https://docs.docker.com/build/cache/optimize/)
+
+## Configs
+
+Host config path
+
+__/var/lib/docker/containers/<ID>/hostconfig.json__
 
 ## Start scripts
 
@@ -140,3 +137,28 @@ wait $!
 ## Build images
 
 [Example](https://github.com/pgalonza/docker-build-demo)
+
+## Dockerfile
+
+Here-Documents
+
+```dockerfile
+RUN <<'EOF'
+  <commands>
+EOF
+```
+```dockerfile
+COPY <<'EOF' <file name>
+  <text>
+EOF
+```
+````dockerfile
+COPY <<-EOT <file name>.sh
+  "${<variable>}"
+EOT
+```
+````dockerfile
+COPY <<-"EOT" <file name>.sh
+  echo "${<variable>}"
+EOT
+```
