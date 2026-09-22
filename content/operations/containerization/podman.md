@@ -56,3 +56,12 @@ uncomment
 ```bash
 mount_program = "/usr/bin/fuse-overlayfs"
 ```
+
+Fixing ‘potentially insufficient UIDs
+
+__/etc/subuid__, __/etc/subgid__
+
+```text
+<user name>:200000:65536
+<user name>:200000:65536
+```
