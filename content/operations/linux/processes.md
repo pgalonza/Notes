@@ -88,6 +88,12 @@ Root directory of the current process
 ls /proc/self/root
 ```
 
+Show the process owner if ps is unavailable
+
+```bash
+cat /proc/<pid>/status | grep -E 'Name|State|PPid'
+```
+
 ### PS
 
 All processes
