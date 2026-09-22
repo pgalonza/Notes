@@ -200,3 +200,14 @@ module.run_command("%s%s %s '%s'" % (root_command, systemctl, action, unit))
 ## Collections
 
 * [pgalonza.linux](https://github.com/pgalonza/linux-collection)
+
+## Trubleshooting
+
+Too many authentication failures
+
+__ansible.cfg__
+
+```ini
+[ssh_connection]
+ssh_args = -o IdentitiesOnly=yes
+```
