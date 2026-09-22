@@ -1,5 +1,5 @@
 ---
-title: "Arhitecture and Infrastructure"
+title: "Architecture and Infrastructure"
 date: 2024-11-30T17:20:22+03:00
 draft: false
 description: "Comprehensive guide to software architecture and infrastructure covering caching, fault tolerance, observability, cloud computing, data processing, enterprise systems, and migration patterns."
@@ -62,8 +62,10 @@ summary: "A detailed reference for architects and engineers, exploring key conce
         - MTTR, mean time to recovery
             - MTTD, mean time to detect
             - Repair time
-        - Recovery Time Objective
-        - Recovery Point Objective
+        - Recovery Time Objective(RTO)
+        - Recovery Point Objective(RPO)
+        - Work Recovery Time(WRT)
+        - Maximum Tolerable Period of Disruption(MTPD)
     - Criticality classes
         - Mission critical
         - Business critical
