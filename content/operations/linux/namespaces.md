@@ -159,6 +159,13 @@ echo '0 <outside_gid> 1' > /proc/self/gid_map
 echo 'deny' > /proc/self/setgroups
 ```
 
+__/etc/subuid__, __/etc/subgid__
+
+```text
+<user name>:200000:65536
+<user name>:200000:65536
+```
+
 ## Persistent namespaces
 
 Create a named network namespace that outlives the process
