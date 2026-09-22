@@ -296,3 +296,11 @@ Host *
   port 22
   IdentityFile <path_to_key>
 ```
+
+## Trubleshooting
+
+Too many authentication failures
+
+```bash
+ssh -o IdentitiesOnly=yes
+```
