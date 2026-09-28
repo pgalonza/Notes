@@ -152,13 +152,33 @@ COPY <<'EOF' <file name>
   <text>
 EOF
 ```
-````dockerfile
+```dockerfile
 COPY <<-EOT <file name>.sh
   "${<variable>}"
 EOT
 ```
-````dockerfile
+```dockerfile
 COPY <<-"EOT" <file name>.sh
   echo "${<variable>}"
 EOT
+```
+
+Multistage builder
+
+```dockerfile
+FROM <base image> AS <stage name>
+<commands>
+
+FROM <stage name or base image> AS <stage name>
+<commands>
+```
+
+```bash
+docker build --target <stage name> -t <image name> .
+```
+
+## Docker compase
+
+```bash
+docker-compose up -d -f <file name>.yml -f <file name>.yml
 ```
