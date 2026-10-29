@@ -2,8 +2,8 @@
 title: "DevSecOps"
 date: 2026-09-26T00:00:00+03:00
 draft: false
-description: "A structured overview of AppSec/DevSecOps frameworks: maturity models, SDL process frameworks, supply chain security, risk management, approaches and practices, and standards. Learn how SAMM, BSIMM, DSOMM, MS SDL, NIST SSDF, SLSA and others relate to each other."
-summary: "Systematized reference on security frameworks and practices: maturity models (SAMM, BSIMM, DSOMM, DAF), secure development lifecycle frameworks (MS SDL, NIST SSDF, BSA, SAFECode), supply chain security (SLSA, Scorecard, SBOM), risk management, approaches (Paved Road, Guardrails, Shift Left), and checklists (OWASP ASVS, Top 10, CIS Controls)."
+description: "A structured collection of notes on DevSecOps and application security: how maturity models, secure development processes, supply chain controls, threat modeling and risk management fit together."
+summary: "Reference notes on application security and DevSecOps: an overview of security frameworks, secure development lifecycle processes, supply chain protection, threat modeling methodologies, risk management and standards."
 ---
 
 {{< toc >}}
@@ -53,7 +53,7 @@ Describe how to embed security into the software development lifecycle — from 
 - Original process framework that started the AppSec industry
 - 7 components: 5 phases (Requirements → Design → Implementation → Verification → Release) + 2 cross-cutting (Training, Response)
 - Includes:
-    - Threat modeling (STRIDE)
+    - Threat modeling ([STRIDE](#stride))
     - Safe deployment process (staged release through "rings")
     - Final Security Review before release
 - [Source](https://learn.microsoft.com/en-us/compliance/assurance/assurance-microsoft-security-development-lifecycle), [Wikipedia](https://en.wikipedia.org/wiki/Microsoft_Security_Development_Lifecycle)
@@ -150,6 +150,46 @@ Relationship: SLSA defines "what the build should be", Scorecard — "how good t
 - **OWASP ASVS** (OWASP)
     - Detailed application security requirements: 3 levels (basic → standard → advanced), ~130-180 controls
     - Used for verification and pentesting
+
+### OWASP ASVS (Application Security Verification Standard)
+
+Open standard from OWASP — a detailed catalogue of security requirements and controls for verifying the security of web applications and APIs at the development and testing stages. Unlike [OWASP Top 10](#standards-and-checklists), which only names the most common risks, ASVS provides a granular checklist of verifiable requirements that an application "must meet".
+
+- **Purpose** — to serve as:
+    - A checklist for developers and architects when designing secure-by-default applications
+    - A basis for security code review, pentesting, and acceptance testing
+    - A reference for procurement and contracts (the customer can demand "ASVS Level 2 compliance")
+    - A baseline for secure CI/CD pipelines (requirements can be turned into automated tests)
+- **Structure** — the standard is divided into functional chapters, each containing numbered requirements:
+    - **V1** Architecture and Design
+    - **V2** Authentication
+    - **V3** Session Management
+    - **V4** Access Control
+    - **V5** Validation, Sanitization and Encoding
+    - **V6** Stored Cryptography
+    - **V7** Error Handling and Logging
+    - **V8** Data Protection
+    - **V9** Communications
+    - **V10** Malicious Code
+    - **V11** Business Logic
+    - **V12** Files and Resources
+    - **V13** API and Web Service
+    - **V14** Configuration
+- **Verification levels** — three cumulative levels, each inheriting the requirements of the previous one:
+    - **Level 1 — Opportunistic** — basic hygiene, the minimum that any application should meet; verifiable by penetration testing alone (no source access needed). Aligns with the OWASP Top 10.
+    - **Level 2 — Standard** — for applications handling sensitive data; requires defense-in-depth and a mix of design review, source review, and pentest.
+    - **Level 3 — Advanced** — for the highest-risk applications (finance, healthcare, critical infrastructure); full verification including architecture review, threat modeling, and deep testing of every control.
+- **How it relates to other documents**
+    - Extends and operationalizes **OWASP Top 10** by mapping each Top-10 risk to concrete ASVS requirements.
+    - Forms a pair with **OWASP MASVS** (Mobile Application Security Verification Standard) — the same approach adapted for mobile apps.
+    - Used alongside **OWASP Testing Guide (WSTG)** — ASVS says "what to verify", WSTG says "how to test it".
+    - Can be embedded into SDL (e.g., Microsoft SDL, NIST SSDF `PW` group) as the verification criteria for the "Verification" phase.
+    - Maps to **ISO/IEC 27034** trust levels and Application Security Controls (ASC), and to **NIST SSDF** `PW.6` "Review approved software components" and `RV.1` vulnerability response.
+- **Practical use**
+    - Turn each requirement into an automated test (unit, integration, or pipeline gate) — this is how ASVS becomes part of the Paved Road.
+    - Use the levels as acceptance criteria: the contract states "the application must pass ASVS L2", and the report shows which controls are met/missing.
+    - As a scope for [threat modeling](#threat-modeling): the requirements list helps check that countermeasures cover all the standard threats.
+- Current version: **ASVS 4.0.x** (the 4.0 line restructured the chapters and aligned them with the Top 10:2021). [Project page](https://owasp.org/www-project-application-security-verification-standard/), [PDF](https://github.com/OWASP/ASVS)
 - **OWASP API Security Top 10** (OWASP)
     - Top 10 API risks
 - **OWASP LLM Top 10** (OWASP)
@@ -175,6 +215,87 @@ Relationship: SLSA defines "what the build should be", Scorecard — "how good t
     - Standards for automated code quality measurement (Security, Reliability, Maintainability, Performance)
 - **MISRA C/C++** (MISRA)
     - Secure coding standards for C/C++ (embedded, automotive)
+
+## Threat modeling
+
+Structured process of finding threats, attacks, vulnerabilities, and countermeasures at the design stage — before code is written. Answers four questions:
+
+1. What are we building?
+2. What can go wrong?
+3. What are we going to do about it?
+4. Did we do a good job?
+
+- Part of Shift Left: cheaper to fix a design flaw than a shipped vulnerability
+- Not a one-off document — the model is updated when the architecture changes
+- Inputs: architecture diagrams, Data Flow Diagrams (DFD), assets, entry points, trust boundaries
+- Generic steps
+    1. Decompose the system — draw the DFD, mark trust boundaries, entry points, assets
+    2. Identify threats — per element and per data flow
+    3. Determine countermeasures — map each threat to a control (mitigate, transfer, accept, eliminate)
+    4. Assess and prioritize — rank by risk
+    5. Validate — verify the model against the implementation, track findings
+
+### STRIDE
+
+Threat classification from Microsoft; each letter maps to a violated security property and to a DFD element where it applies.
+
+- **S**poofing — impersonating a user or component → Authentication
+- **T**ampering — unauthorized modification of data or code → Integrity
+- **R**epudiation — denying that an action took place → Non-repudiation
+- **I**nformation disclosure — exposure of data to unauthorized parties → Confidentiality
+- **D**enial of service — making a resource unavailable → Availability
+- **E**levation of privilege — gaining more rights than granted → Authorization
+
+DFD mapping (which letter to consider on which element):
+
+- External entity → Spoofing, Repudiation
+- Process → all six
+- Data store → Tampering, Information disclosure, Repudiation, Denial of service
+- Data flow → Tampering, Information disclosure, Denial of service
+
+STRIDE-per-element is the practical variant: walk every DFD element and ask only the relevant letters.
+
+### DREAD
+
+Risk-rating model for already-identified threats (Microsoft, now deprecated). Each criterion is scored 1–10, the risk is the average.
+
+- **D**amage — how bad is the impact if the threat is realized?
+- **R**eproducibility — how easy is it to reproduce the attack?
+- **E**xploitability — how much skill/effort does the attack require?
+- **A**ffected users — how many users are impacted?
+- **D**iscoverability — how easy is it to find the vulnerability?
+
+Criticism: highly subjective scores, no clear thresholds, poor reproducibility between teams. Superseded by CVSS and bug bars (severity gates) in modern practice; still useful as a quick, memorable ranking heuristic.
+
+### PASTA
+
+**P**rocess for **A**ttack **S**imulation and **T**hreat **A**nalysis — risk-centric, attacker-centric methodology aligned with business objectives. Seven stages:
+
+1. Define objectives — business goals and risk appetite
+2. Define technical scope — technologies, infrastructure, dependencies
+3. Application decomposition — DFD, assets, trust boundaries
+4. Threat analysis — relevant threat actors, TTPs (ATT&CK/CAPEC)
+5. Vulnerability and weakness analysis — CVEs/CWEs, controls gaps
+6. Attack modeling and simulation — attack trees, exploitation paths
+7. Risk and impact analysis — residual risk, prioritized countermeasures
+
+Key difference from STRIDE: PASTA starts from business impact and simulates real attacker paths, so it produces better prioritization at the cost of more effort.
+
+### Other methodologies
+
+- **Trike** — risk-based, security-centric; emphasizes acceptable-risk levels and a formal requirement model
+- **VAST** — Visual, Agile, and Simple Threat modeling; scales to Agile/DevOps, two model types (application and operational)
+- **LINDDUN** — privacy threat modeling (Linkability, Identifiability, Non-repudiation, Detectability, Disclosure, Unawareness, Non-compliance)
+- **Attack trees** — hierarchical decomposition of an attacker's goal into sub-goals and steps
+- **OCTAVE** — organizational, self-directed risk/threat assessment (also listed under risk management)
+- **MITRE ATT&CK / CAPEC** — knowledge bases of adversary tactics, techniques, and attack patterns used as input for threat analysis
+
+### Tooling
+
+- Microsoft Threat Modeling Tool — DFD-based, STRIDE-per-element, free
+- OWASP Threat Dragon — open-source, DFD + STRIDE/LINDDUN, web and desktop
+- IriusRisk, ThreatModeler — commercial, threat libraries plus automation
+- pytm — "threat modeling as code" (Python, DFD from code, CI-friendly)
 
 ## Risk management
 

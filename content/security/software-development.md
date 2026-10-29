@@ -14,6 +14,11 @@ summary: "Guidelines and practices for integrating security into the software de
 - See [DevSecOps — Standards and checklists](/security/devsecops/#standards-and-checklists)
 
 
+## Threat modeling
+
+- See [DevSecOps — Threat modeling](/security/devsecops/#threat-modeling) — STRIDE, DREAD, PASTA and other methodologies
+
+
 ## Types of threats
 
 - By location
