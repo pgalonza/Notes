@@ -40,6 +40,7 @@ summary: "A curated collection of penetration testing tools and approaches based
 - **binwalk** – Firmware analysis tool for extracting embedded files and executable code from binary images.
 - **gdb** – GNU debugger for analyzing binaries, inspecting memory, disassembling code, and debugging crashes or core dumps.
 - **objdamp** – Display information from object files.
+- **radare2** - Reverse engineering framework and command-line toolset.
 
 ### System & Kernel Tracing
 
