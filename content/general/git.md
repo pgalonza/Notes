@@ -99,7 +99,8 @@ git push --all
 Remove file from all commits
 
 ```bash
-git filter-branch --index-filter 'git rm --cached --ignore-unmatch <file name>' -- --all
+git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch <file>' --prune-empty -- -all
+git filter-repo --path <file> --invert-paths
 ```
 
 Delete remote brannch
@@ -131,12 +132,6 @@ Sort branch by date
 
 ```bash
 git config --global branch.sort -committerdate
-```
-
-Remove file in all commits
-
-```bash
-git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch <file>' --prune-empty
 ```
 
 Show who last modified each line of a file
@@ -188,6 +183,12 @@ Rename branch
 
 ```bash
 git branch -m <current name> <target name>
+```
+
+Show deleted files
+
+```bash
+git log --all --diff-filter=D --name-only --pretty=format:'%h %ad %s' --date=short
 ```
 
 ## Create new repository
