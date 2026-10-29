@@ -98,6 +98,18 @@ Add fingerprint
 ssh-keyscan -t <fingerprint type> -H <host_name> >> ~/.ssh/known_hosts
 ```
 
+Show fingerprint
+
+```bash
+ssh-keygen -l -f <key file>
+```
+
+Show public key
+
+```bash
+ssh-keygen -y -f <key file>
+```
+
 ## SSH Certificates
 
 ### Host cetrificates
