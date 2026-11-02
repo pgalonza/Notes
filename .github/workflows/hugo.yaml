@@ -6,6 +6,8 @@ on:
     branches:
       - hugo
       - master
+    paths-ignore:
+      - '.github/workflows/**'
 
 permissions:
   contents: read
