@@ -68,7 +68,7 @@ jobs:
         name: hugo-artifact
         path: public
     - name: rsync deployments
-      uses: burnett01/rsync-deployments@v8
+      uses: burnett01/rsync-deployments@v9
       with:
         switches: -avzr --delete
         path: public/
