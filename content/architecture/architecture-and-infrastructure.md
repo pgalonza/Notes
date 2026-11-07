@@ -374,7 +374,7 @@ CRISP-DM
 ## Solution architecture
 
 - Architecture vision
-    - Architecture Design Record
+    - Architecture Design Record(ADR)
         - Y-statement
             - Context
             - Facing

@@ -1,4 +1,4 @@
 ---
-title: "Arhitecture"
+title: "Architecture"
 draft: false
 ---
