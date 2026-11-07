@@ -12,9 +12,9 @@ summary: "Step-by-step instructions for applying the C4 model to visualize softw
 
 - [C4-PlantUML](https://github.com/plantuml-stdlib/C4-PlantUML?tab=readme-ov-file#container-diagram)
 
-### How to create
+### How to Create
 
-1. Collect Requirements and Define System Boundaries
+1. Collect requirements and define system boundaries
 2. Create Context Diagram (Level 1)
 3. Create Container Diagram (Level 2)
 4. Create Component Diagram (Level 3)
